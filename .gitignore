@@ -38,3 +38,8 @@ next-env.d.ts
 # Edge function files (these will be deployed separately)
 stripe-checkout-function.ts
 stripe-webhook-function.ts
+
+.windsurfrules
+CLAUDE.md
+design.mdc
+default_ui_darkmode.css
