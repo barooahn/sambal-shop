@@ -34,3 +34,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Edge function files (these will be deployed separately)
+stripe-checkout-function.ts
+stripe-webhook-function.ts
