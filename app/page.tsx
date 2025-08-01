@@ -19,21 +19,7 @@ import {
 	CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import {
-	Mail,
-	MapPin,
-	Phone,
-	Instagram,
-	Facebook,
-	Twitter,
-	Flame,
-	Leaf,
-	Star,
-	ChefHat,
-	Award,
-	Heart,
-	Truck,
-} from "lucide-react";
+import { Flame, Leaf, Star, ChefHat, Award, Heart, Truck } from "lucide-react";
 
 // Add Google Fonts
 const fontImports = `
@@ -197,7 +183,7 @@ export default function Home() {
 	};
 
 	return (
-		<div className='min-h-screen bg-gradient-to-b from-cream-50 to-cream-100 font-body'>
+		<div className='bg-gradient-to-b from-cream-50 to-cream-100 font-body'>
 			{/* Hero Section */}
 			<section className='py-12 relative min-h-screen flex items-center justify-center overflow-hidden'>
 				<div className='absolute inset-0 bg-gradient-to-br from-burgundy-900/20 via-gold-600/10 to-burgundy-800/15'></div>
@@ -965,144 +951,6 @@ export default function Home() {
 					</Card>
 				</div>
 			</section>
-
-			{/* Footer */}
-			<footer className='bg-burgundy-900 text-gold-200 py-16 relative overflow-hidden border-t border-gold-600/30'>
-				<div className='absolute inset-0 bg-gradient-to-r from-burgundy-950/50 via-transparent to-burgundy-950/50'></div>
-
-				<div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-					<div className='grid md:grid-cols-4 gap-12'>
-						<div className='md:col-span-2'>
-							<h3 className='text-3xl font-bold mb-4 text-gold-300 font-brand tracking-wider'>
-								Spice Island Indonesia
-							</h3>
-							<p className='text-gold-200 mb-6 text-lg leading-relaxed font-body'>
-								Authentic Indonesian sambal from the
-								original Spice Islands, bringing bold
-								flavors and centuries of culinary
-								tradition to British kitchens.
-							</p>
-							<div className='flex space-x-4'>
-								<a
-									href='#'
-									className='w-12 h-12 bg-burgundy-800 border border-gold-600/30 rounded-full flex items-center justify-center text-gold-400 hover:text-gold-200 hover:bg-burgundy-700 transition-all duration-200'
-								>
-									<Instagram className='w-6 h-6' />
-								</a>
-								<a
-									href='#'
-									className='w-12 h-12 bg-burgundy-800 border border-gold-600/30 rounded-full flex items-center justify-center text-gold-400 hover:text-gold-200 hover:bg-burgundy-700 transition-all duration-200'
-								>
-									<Facebook className='w-6 h-6' />
-								</a>
-								<a
-									href='#'
-									className='w-12 h-12 bg-burgundy-800 border border-gold-600/30 rounded-full flex items-center justify-center text-gold-400 hover:text-gold-200 hover:bg-burgundy-700 transition-all duration-200'
-								>
-									<Twitter className='w-6 h-6' />
-								</a>
-							</div>
-						</div>
-
-						<div>
-							<h4 className='text-xl font-semibold mb-6 text-gold-300 font-brand'>
-								Quick Links
-							</h4>
-							<ul className='space-y-3 text-gold-200 font-body'>
-								<li>
-									<Link
-										href='/about'
-										className='hover:text-gold-100 transition-colors duration-200'
-									>
-										About Our Story
-									</Link>
-								</li>
-								<li>
-									<Link
-										href='/shop'
-										className='hover:text-gold-100 transition-colors duration-200'
-									>
-										Our Products
-									</Link>
-								</li>
-								<li>
-									<Link
-										href='/recipes'
-										className='hover:text-gold-100 transition-colors duration-200'
-									>
-										Recipe Ideas
-									</Link>
-								</li>
-								<li>
-									<Link
-										href='/wholesale'
-										className='hover:text-gold-100 transition-colors duration-200'
-									>
-										Wholesale Enquiries
-									</Link>
-								</li>
-							</ul>
-						</div>
-
-						<div>
-							<h4 className='text-xl font-semibold mb-6 text-gold-300 font-brand'>
-								Contact Info
-							</h4>
-							<div className='space-y-4 text-gold-200 font-body'>
-								<div className='flex items-center space-x-3'>
-									<div className='w-8 h-8 bg-burgundy-800 rounded-full flex items-center justify-center border border-gold-600/30'>
-										<Mail className='w-4 h-4 text-gold-400' />
-									</div>
-									<span>
-										hello@spiceislandindonesia.co.uk
-									</span>
-								</div>
-								<div className='flex items-center space-x-3'>
-									<div className='w-8 h-8 bg-burgundy-800 rounded-full flex items-center justify-center border border-gold-600/30'>
-										<Phone className='w-4 h-4 text-gold-400' />
-									</div>
-									<span>Coming Soon</span>
-								</div>
-								<div className='flex items-center space-x-3'>
-									<div className='w-8 h-8 bg-burgundy-800 rounded-full flex items-center justify-center border border-gold-600/30'>
-										<MapPin className='w-4 h-4 text-gold-400' />
-									</div>
-									<span>United Kingdom</span>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div className='border-t border-gold-600/30 mt-12 pt-8'>
-						<div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>
-							<p className='text-gold-300 font-body'>
-								&copy; 2024 Spice Island Indonesia. All
-								rights reserved.
-							</p>
-							<div className='flex space-x-6 text-gold-300 text-sm font-body'>
-								<Link
-									href='/privacy'
-									className='hover:text-gold-100 transition-colors'
-								>
-									Privacy Policy
-								</Link>
-								<Link
-									href='/terms'
-									className='hover:text-gold-100 transition-colors'
-								>
-									Terms of Service
-								</Link>
-								<Link
-									href='/shipping'
-									className='hover:text-gold-100 transition-colors'
-								>
-									Shipping Info
-								</Link>
-							</div>
-						</div>
-					</div>
-				</div>
-			</footer>
 		</div>
 	);
 }

@@ -1,12 +1,16 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ShoppingCart, Heart } from "lucide-react";
+import { Menu, X, ShoppingCart, Heart, User, LogOut } from "lucide-react";
+import { supabase } from "@/lib/supabase";
 
 export default function Header() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
+	const [user, setUser] = useState<any>(null);
+	const router = useRouter();
 
 	const navigation = [
 		{ name: "Home", href: "/" },
@@ -15,6 +19,31 @@ export default function Header() {
 		{ name: "Recipes", href: "/recipes" },
 		{ name: "Wholesale", href: "/wholesale" },
 	];
+
+	useEffect(() => {
+		// Get initial user
+		const getUser = async () => {
+			const {
+				data: { user },
+			} = await supabase.auth.getUser();
+			setUser(user);
+		};
+		getUser();
+
+		// Listen for auth changes
+		const {
+			data: { subscription },
+		} = supabase.auth.onAuthStateChange((event, session) => {
+			setUser(session?.user || null);
+		});
+
+		return () => subscription.unsubscribe();
+	}, []);
+
+	const handleSignOut = async () => {
+		await supabase.auth.signOut();
+		router.push("/");
+	};
 
 	return (
 		<header className='bg-white/95 backdrop-blur-sm border-b border-gold-200 sticky top-0 z-50'>
@@ -50,16 +79,45 @@ export default function Header() {
 
 					{/* Desktop CTA */}
 					<div className='hidden md:flex items-center space-x-4'>
-						<Link href='/shop'>
-							<Button
-								variant='primary'
-								size='lg'
-								className='font-elegant'
-							>
-								<ShoppingCart className='w-4 h-4 mr-2' />
-								Shop Now
-							</Button>
-						</Link>
+						{user ? (
+							<>
+								<Link href='/dashboard'>
+									<Button
+										variant='outline'
+										className='flex items-center space-x-2'
+									>
+										<User className='w-4 h-4' />
+										<span>Dashboard</span>
+									</Button>
+								</Link>
+								<Button
+									onClick={handleSignOut}
+									variant='outline'
+									className='flex items-center space-x-2'
+								>
+									<LogOut className='w-4 h-4' />
+									<span>Sign Out</span>
+								</Button>
+							</>
+						) : (
+							<>
+								<Link href='/login'>
+									<Button variant='outline'>
+										Sign In
+									</Button>
+								</Link>
+								<Link href='/shop'>
+									<Button
+										variant='primary'
+										size='lg'
+										className='font-elegant'
+									>
+										<ShoppingCart className='w-4 h-4 mr-2' />
+										Shop Now
+									</Button>
+								</Link>
+							</>
+						)}
 					</div>
 
 					{/* Mobile menu button */}
@@ -91,20 +149,71 @@ export default function Header() {
 									{item.name}
 								</Link>
 							))}
-							<div className='pt-4 pb-2'>
-								<Link href='/shop'>
-									<Button
-										variant='primary'
-										size='lg'
-										className='w-full font-elegant'
-										onClick={() =>
-											setIsMenuOpen(false)
-										}
-									>
-										<ShoppingCart className='w-4 h-4 mr-2' />
-										Shop Now
-									</Button>
-								</Link>
+							<div className='pt-4 pb-2 space-y-2'>
+								{user ? (
+									<>
+										<Link href='/dashboard'>
+											<Button
+												variant='outline'
+												className='w-full flex items-center justify-center space-x-2'
+												onClick={() =>
+													setIsMenuOpen(
+														false
+													)
+												}
+											>
+												<User className='w-4 h-4' />
+												<span>
+													Dashboard
+												</span>
+											</Button>
+										</Link>
+										<Button
+											onClick={() => {
+												handleSignOut();
+												setIsMenuOpen(
+													false
+												);
+											}}
+											variant='outline'
+											className='w-full flex items-center justify-center space-x-2'
+										>
+											<LogOut className='w-4 h-4' />
+											<span>Sign Out</span>
+										</Button>
+									</>
+								) : (
+									<>
+										<Link href='/login'>
+											<Button
+												variant='outline'
+												className='w-full'
+												onClick={() =>
+													setIsMenuOpen(
+														false
+													)
+												}
+											>
+												Sign In
+											</Button>
+										</Link>
+										<Link href='/shop'>
+											<Button
+												variant='primary'
+												size='lg'
+												className='w-full font-elegant'
+												onClick={() =>
+													setIsMenuOpen(
+														false
+													)
+												}
+											>
+												<ShoppingCart className='w-4 h-4 mr-2' />
+												Shop Now
+											</Button>
+										</Link>
+									</>
+								)}
 							</div>
 						</div>
 					</div>
