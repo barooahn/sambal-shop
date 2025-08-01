@@ -1,4 +1,4 @@
-import { Resend } from 'resend';
+import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -47,11 +47,11 @@ const getWelcomeEmailHtml = (email: string) => `
             
             <p>We're currently putting the finishing touches on our authentic Indonesian sambal collection. Stay tuned for the launch!</p>
             
-            <a href="${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/shop" class="btn">Browse Our Products</a>
+            <a href="${process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"}/shop" class="btn">Browse Our Products</a>
         </div>
         <div class="footer">
             <p>Sambal Shop - Authentic Indonesian Flavors</p>
-            <p>You can <a href="${process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'}/unsubscribe?email=${encodeURIComponent(email)}">unsubscribe</a> at any time.</p>
+            <p>You can <a href="${process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"}/unsubscribe?email=${encodeURIComponent(email)}">unsubscribe</a> at any time.</p>
         </div>
     </div>
 </body>
@@ -91,7 +91,11 @@ const getContactConfirmationHtml = (name: string) => `
 </html>
 `;
 
-const getAdminNotificationHtml = (data: { name: string; email: string; message: string }) => `
+const getAdminNotificationHtml = (data: {
+	name: string;
+	email: string;
+	message: string;
+}) => `
 <!DOCTYPE html>
 <html>
 <head>
@@ -129,64 +133,74 @@ const getAdminNotificationHtml = (data: { name: string; email: string; message: 
 
 // Email sending functions
 export async function sendWelcomeEmail(email: string) {
-  try {
-    const { data, error } = await resend.emails.send({
-      from: 'Sambal Shop <noreply@sambalshop.com>', // Replace with your domain
-      to: [email],
-      subject: '🌶️ Welcome to Sambal Shop - Your 10% Discount Inside!',
-      html: getWelcomeEmailHtml(email),
-    });
+	try {
+		const { data, error } = await resend.emails.send({
+			from: "Sambal Shop <onboarding@resend.dev>",
+			to: [email],
+			subject: "🌶️ Welcome to Sambal Shop - Your 10% Discount Inside!",
+			html: getWelcomeEmailHtml(email),
+		});
 
-    if (error) {
-      console.error('Error sending welcome email:', error);
-      return { success: false, error };
-    }
+		if (error) {
+			console.error("Error sending welcome email:", error);
+			return { success: false, error };
+		}
 
-    return { success: true, data };
-  } catch (error) {
-    console.error('Error sending welcome email:', error);
-    return { success: false, error };
-  }
+		return { success: true, data };
+	} catch (error) {
+		console.error("Error sending welcome email:", error);
+		return { success: false, error };
+	}
 }
 
-export async function sendContactConfirmationEmail(email: string, name: string) {
-  try {
-    const { data, error } = await resend.emails.send({
-      from: 'Sambal Shop <noreply@sambalshop.com>', // Replace with your domain
-      to: [email],
-      subject: 'Message Received - We\'ll be in touch soon!',
-      html: getContactConfirmationHtml(name),
-    });
+export async function sendContactConfirmationEmail(
+	email: string,
+	name: string
+) {
+	try {
+		const { data, error } = await resend.emails.send({
+			from: "Sambal Shop <onboarding@resend.dev>",
+			to: [email],
+			subject: "Message Received - We'll be in touch soon!",
+			html: getContactConfirmationHtml(name),
+		});
 
-    if (error) {
-      console.error('Error sending contact confirmation email:', error);
-      return { success: false, error };
-    }
+		if (error) {
+			console.error(
+				"Error sending contact confirmation email:",
+				error
+			);
+			return { success: false, error };
+		}
 
-    return { success: true, data };
-  } catch (error) {
-    console.error('Error sending contact confirmation email:', error);
-    return { success: false, error };
-  }
+		return { success: true, data };
+	} catch (error) {
+		console.error("Error sending contact confirmation email:", error);
+		return { success: false, error };
+	}
 }
 
-export async function sendContactNotificationEmail(data: { name: string; email: string; message: string }) {
-  try {
-    const { data: emailData, error } = await resend.emails.send({
-      from: 'Sambal Shop <noreply@sambalshop.com>', // Replace with your domain
-      to: ['barooahn@gmail.com'], // Replace with your admin email
-      subject: `New Contact Message from ${data.name}`,
-      html: getAdminNotificationHtml(data),
-    });
+export async function sendContactNotificationEmail(data: {
+	name: string;
+	email: string;
+	message: string;
+}) {
+	try {
+		const { data: emailData, error } = await resend.emails.send({
+			from: "Sambal Shop <onboarding@resend.dev>",
+			to: ["barooahn@gmail.com"], // Replace with your admin email
+			subject: `New Contact Message from ${data.name}`,
+			html: getAdminNotificationHtml(data),
+		});
 
-    if (error) {
-      console.error('Error sending admin notification email:', error);
-      return { success: false, error };
-    }
+		if (error) {
+			console.error("Error sending admin notification email:", error);
+			return { success: false, error };
+		}
 
-    return { success: true, data: emailData };
-  } catch (error) {
-    console.error('Error sending admin notification email:', error);
-    return { success: false, error };
-  }
+		return { success: true, data: emailData };
+	} catch (error) {
+		console.error("Error sending admin notification email:", error);
+		return { success: false, error };
+	}
 }
