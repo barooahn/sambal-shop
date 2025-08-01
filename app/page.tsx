@@ -1,9 +1,16 @@
 "use client";
 
 import { useState } from "react";
+import {
+	subscribeToNewsletter,
+	submitContactForm,
+	recordInterest,
+} from "@/lib/actions";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import Image from "next/image";
+import Link from "next/link";
 import {
 	Card,
 	CardContent,
@@ -51,6 +58,11 @@ export default function Home() {
 		isSubmitted: false,
 		message: "",
 	});
+	const [interestState, setInterestState] = useState({
+		isSubmitting: false,
+		isSubmitted: false,
+		message: "",
+	});
 	const [contactState, setContactState] = useState({
 		isSubmitting: false,
 		isSubmitted: false,
@@ -65,13 +77,17 @@ export default function Home() {
 			message: "",
 		});
 
-		setTimeout(() => {
+		try {
+			const result = await subscribeToNewsletter(email);
 			setNewsletterState({
 				isSubmitting: false,
 				isSubmitted: true,
-				message: "Thank you! We'll notify you when we launch.",
+				message: result.message,
 			});
-			setEmail("");
+
+			if (result.success) {
+				setEmail("");
+			}
 
 			setTimeout(() => {
 				setNewsletterState((prev) => ({
@@ -80,7 +96,60 @@ export default function Home() {
 					message: "",
 				}));
 			}, 5000);
-		}, 1000);
+		} catch (error) {
+			setNewsletterState({
+				isSubmitting: false,
+				isSubmitted: true,
+				message: "Something went wrong. Please try again later.",
+			});
+
+			setTimeout(() => {
+				setNewsletterState((prev) => ({
+					...prev,
+					isSubmitted: false,
+					message: "",
+				}));
+			}, 5000);
+		}
+	};
+
+	const handleInterestClick = async () => {
+		setInterestState({
+			isSubmitting: true,
+			isSubmitted: false,
+			message: "",
+		});
+
+		try {
+			const result = await recordInterest();
+			setInterestState({
+				isSubmitting: false,
+				isSubmitted: true,
+				message: result.message,
+			});
+
+			setTimeout(() => {
+				setInterestState((prev) => ({
+					...prev,
+					isSubmitted: false,
+					message: "",
+				}));
+			}, 5000);
+		} catch (error) {
+			setInterestState({
+				isSubmitting: false,
+				isSubmitted: true,
+				message: "Something went wrong. Please try again later.",
+			});
+
+			setTimeout(() => {
+				setInterestState((prev) => ({
+					...prev,
+					isSubmitted: false,
+					message: "",
+				}));
+			}, 5000);
+		}
 	};
 
 	const handleContactSubmit = async (e: React.FormEvent) => {
@@ -91,13 +160,17 @@ export default function Home() {
 			message: "",
 		});
 
-		setTimeout(() => {
+		try {
+			const result = await submitContactForm(contactForm);
 			setContactState({
 				isSubmitting: false,
 				isSubmitted: true,
-				message: "Thank you! We'll get back to you soon.",
+				message: result.message,
 			});
-			setContactForm({ name: "", email: "", message: "" });
+
+			if (result.success) {
+				setContactForm({ name: "", email: "", message: "" });
+			}
 
 			setTimeout(() => {
 				setContactState((prev) => ({
@@ -106,13 +179,27 @@ export default function Home() {
 					message: "",
 				}));
 			}, 5000);
-		}, 1000);
+		} catch (error) {
+			setContactState({
+				isSubmitting: false,
+				isSubmitted: true,
+				message: "Something went wrong. Please try again later.",
+			});
+
+			setTimeout(() => {
+				setContactState((prev) => ({
+					...prev,
+					isSubmitted: false,
+					message: "",
+				}));
+			}, 5000);
+		}
 	};
 
 	return (
 		<div className='min-h-screen bg-gradient-to-b from-cream-50 to-cream-100 font-body'>
 			{/* Hero Section */}
-			<section className='relative min-h-screen flex items-center justify-center overflow-hidden'>
+			<section className='py-12 relative min-h-screen flex items-center justify-center overflow-hidden'>
 				<div className='absolute inset-0 bg-gradient-to-br from-burgundy-900/20 via-gold-600/10 to-burgundy-800/15'></div>
 
 				{/* Floating decorative elements */}
@@ -154,24 +241,24 @@ export default function Home() {
 							{/* Features grid */}
 							<div className='grid sm:grid-cols-3 gap-4 mb-10'>
 								<div className='flex items-center justify-center lg:justify-start space-x-2'>
-									<div className='w-8 h-8 bg-burgundy-100 rounded-full flex items-center justify-center border border-burgundy-200'>
-										<ChefHat className='w-4 h-4 text-burgundy-700' />
+									<div className='w-8 h-8 bg-gradient-to-r from-burgundy-900 to-burgundy-800 rounded-full flex items-center justify-center border border-gold-600/30'>
+										<ChefHat className='w-4 h-4 text-gold-200' />
 									</div>
 									<span className='text-neutral-700 font-medium font-elegant'>
 										Handcrafted
 									</span>
 								</div>
 								<div className='flex items-center justify-center lg:justify-start space-x-2'>
-									<div className='w-8 h-8 bg-gold-100 rounded-full flex items-center justify-center border border-gold-200'>
-										<Award className='w-4 h-4 text-gold-700' />
+									<div className='w-8 h-8 bg-gradient-to-r from-burgundy-900 to-burgundy-800 rounded-full flex items-center justify-center border border-gold-600/30'>
+										<Award className='w-4 h-4 text-gold-200' />
 									</div>
 									<span className='text-neutral-700 font-medium font-elegant'>
 										Authentic
 									</span>
 								</div>
 								<div className='flex items-center justify-center lg:justify-start space-x-2'>
-									<div className='w-8 h-8 bg-cream-100 rounded-full flex items-center justify-center border border-cream-200'>
-										<Leaf className='w-4 h-4 text-cream-700' />
+									<div className='w-8 h-8 bg-gradient-to-r from-burgundy-900 to-burgundy-800 rounded-full flex items-center justify-center border border-gold-600/30'>
+										<Leaf className='w-4 h-4 text-gold-200' />
 									</div>
 									<span className='text-neutral-700 font-medium font-elegant'>
 										All Natural
@@ -182,20 +269,56 @@ export default function Home() {
 							{/* CTA Buttons */}
 							<div className='flex flex-col sm:flex-row gap-4 justify-center lg:justify-start'>
 								<Button
+									variant='primary'
 									size='lg'
-									className='bg-burgundy-900 hover:bg-burgundy-800 text-gold-300 px-8 py-4 text-lg font-semibold shadow-burgundy hover:shadow-luxury transform hover:-translate-y-1 transition-all duration-200 font-elegant border border-gold-600/30'
+									onClick={handleInterestClick}
+									disabled={
+										interestState.isSubmitting ||
+										interestState.isSubmitted
+									}
+									className='font-elegant'
 								>
-									<Heart className='w-5 h-5 mr-2' />
-									Join the Waitlist
+									{interestState.isSubmitting ? (
+										<>
+											<Heart className='w-5 h-5 mr-2 animate-pulse' />
+											Recording...
+										</>
+									) : interestState.isSubmitted ? (
+										<>
+											<Heart className='w-5 h-5 mr-2' />
+											Thanks! 🌶️
+										</>
+									) : (
+										<>
+											<Heart className='w-5 h-5 mr-2' />
+											Join the Waitlist
+										</>
+									)}
 								</Button>
 								<Button
-									variant='outline'
+									variant='primary'
 									size='lg'
-									className='border-2 border-burgundy-800 text-burgundy-800 hover:bg-burgundy-50 px-8 py-4 text-lg font-semibold font-elegant'
+									onClick={() => {
+										const newsletterSection =
+											document.getElementById(
+												"newsletter-signup"
+											);
+										newsletterSection?.scrollIntoView(
+											{ behavior: "smooth" }
+										);
+									}}
+									className='font-elegant'
 								>
-									Learn More
+									Get Updates
 								</Button>
 							</div>
+							{interestState.message && (
+								<div
+									className={`mt-4 text-center p-3 rounded-xl max-w-md mx-auto lg:mx-0 ${interestState.message.includes("Thanks") || interestState.message.includes("notify") ? "bg-green-50 text-green-800 border border-green-200" : "bg-red-50 text-red-800 border border-red-200"}`}
+								>
+									{interestState.message}
+								</div>
+							)}
 						</div>
 
 						{/* Right side - Product showcase */}
@@ -204,26 +327,18 @@ export default function Home() {
 								{/* Main product image */}
 								<div className='relative z-20'>
 									<div className='aspect-square rounded-3xl overflow-hidden shadow-luxury bg-gradient-to-br from-burgundy-900/10 to-gold-600/10 p-8'>
-										<div className='w-full h-full bg-burgundy-900 rounded-2xl flex items-center justify-center shadow-inner-burgundy border border-gold-600/30'>
-											<div className='text-center text-gold-300 p-6'>
-												<div className='text-gold-300 text-2xl font-bold mb-2 font-brand tracking-wider'>
-													SPICE ISLAND
-												</div>
-												<div className='text-gold-400 text-sm mb-4 font-elegant tracking-widest'>
-													INDONESIA
-												</div>
-												<div className='text-xl font-bold mb-2 font-brand text-gold-200'>
-													SAMBAL OELEK
-												</div>
-												<div className='text-sm font-script italic text-gold-400'>
-													Authentic
-													Indonesian
-													Chili Paste
-												</div>
-											</div>
+										<div className='w-full h-full rounded-2xl flex items-center justify-center'>
+											<Image
+												src='/images/Spice Island Indonesia Sambal Oelek 185g Label.png'
+												alt='Spice Island Indonesia Sambal Oelek 185g - Authentic Indonesian Chili Paste'
+												width={400}
+												height={400}
+												className='w-full h-full object-contain drop-shadow-2xl'
+												priority
+											/>
 										</div>
 									</div>
-									<div className='absolute -top-6 -right-6 bg-gold-600 text-burgundy-900 px-4 py-2 rounded-full font-bold text-lg transform rotate-12 shadow-gold border border-gold-700'>
+									<div className='absolute -top-6 -right-6 bg-gradient-to-r from-burgundy-900 to-burgundy-800 text-gold-200 px-4 py-2 rounded-full font-bold text-lg transform rotate-12 shadow-lg border border-gold-600/30'>
 										£7.49
 									</div>
 								</div>
@@ -236,7 +351,10 @@ export default function Home() {
 					</div>
 
 					{/* Newsletter signup */}
-					<div className='mt-16 max-w-md mx-auto lg:max-w-lg'>
+					<div
+						id='newsletter-signup'
+						className='mt-16 max-w-md mx-auto lg:max-w-lg'
+					>
 						<div className='bg-cream-50/95 backdrop-blur-sm rounded-3xl p-8 shadow-luxury border border-gold-200'>
 							<div className='text-center mb-6'>
 								<h3 className='text-2xl font-bold text-burgundy-900 mb-2 font-brand'>
@@ -265,7 +383,9 @@ export default function Home() {
 								/>
 								<Button
 									type='submit'
-									className='w-full bg-burgundy-900 hover:bg-burgundy-800 text-gold-300 py-4 text-lg font-semibold transition-all duration-200 shadow-burgundy hover:shadow-luxury rounded-2xl font-elegant border border-gold-600/30'
+									variant='primary'
+									size='lg'
+									className='w-full font-elegant'
 									disabled={
 										newsletterState.isSubmitting ||
 										newsletterState.isSubmitted
@@ -315,23 +435,15 @@ export default function Home() {
 						{/* Sambal Oelek */}
 						<div className='group'>
 							<div className='relative mb-6'>
-								<div className='aspect-square rounded-3xl overflow-hidden shadow-lg group-hover:shadow-luxury transition-all duration-300'>
-									<div className='w-full h-full bg-burgundy-900 flex items-center justify-center border border-gold-600/30'>
-										<div className='text-center text-gold-300 p-4'>
-											<div className='text-gold-300 text-lg font-bold mb-1 font-brand tracking-wider'>
-												SPICE ISLAND
-											</div>
-											<div className='text-gold-400 text-xs mb-3 font-elegant tracking-widest'>
-												INDONESIA
-											</div>
-											<div className='text-base font-bold mb-2 font-brand text-gold-200'>
-												SAMBAL OELEK
-											</div>
-											<div className='text-xs font-script italic text-gold-400'>
-												Authentic Indonesian
-												Chili Paste
-											</div>
-										</div>
+								<div className='aspect-square rounded-3xl overflow-hidden shadow-lg group-hover:shadow-luxury transition-all duration-300 bg-gradient-to-br from-cream-50 to-gold-50'>
+									<div className='w-full h-full flex items-center justify-center p-6'>
+										<Image
+											src='/images/Spice Island Indonesia Sambal Oelek 185g Label.png'
+											alt='Spice Island Indonesia Sambal Oelek 185g'
+											width={300}
+											height={300}
+											className='w-full h-full object-contain drop-shadow-lg'
+										/>
 									</div>
 								</div>
 								<div className='absolute -top-3 -right-3 bg-burgundy-700 text-gold-300 px-3 py-1 rounded-full text-sm font-bold font-elegant border border-gold-600'>
@@ -365,23 +477,15 @@ export default function Home() {
 						{/* Sambal Bali */}
 						<div className='group'>
 							<div className='relative mb-6'>
-								<div className='aspect-square rounded-3xl overflow-hidden shadow-lg group-hover:shadow-luxury transition-all duration-300'>
-									<div className='w-full h-full bg-burgundy-900 flex items-center justify-center border border-gold-600/30'>
-										<div className='text-center text-gold-300 p-4'>
-											<div className='text-gold-300 text-lg font-bold mb-1 font-brand tracking-wider'>
-												SPICE ISLAND
-											</div>
-											<div className='text-gold-400 text-xs mb-3 font-elegant tracking-widest'>
-												INDONESIA
-											</div>
-											<div className='text-base font-bold mb-2 font-brand text-gold-200'>
-												SAMBAL BALI
-											</div>
-											<div className='text-xs font-script italic text-gold-400'>
-												Authentic Indonesian
-												Chili Paste
-											</div>
-										</div>
+								<div className='aspect-square rounded-3xl overflow-hidden shadow-lg group-hover:shadow-luxury transition-all duration-300 bg-gradient-to-br from-cream-50 to-gold-50'>
+									<div className='w-full h-full flex items-center justify-center p-6'>
+										<Image
+											src='/images/Spice Island Indonesia Sambal Bali 185g Label.png'
+											alt='Spice Island Indonesia Sambal Bali 185g'
+											width={300}
+											height={300}
+											className='w-full h-full object-contain drop-shadow-lg'
+										/>
 									</div>
 								</div>
 							</div>
@@ -412,23 +516,15 @@ export default function Home() {
 						{/* Gift Set */}
 						<div className='group md:col-span-2 lg:col-span-1'>
 							<div className='relative mb-6'>
-								<div className='aspect-square rounded-3xl overflow-hidden shadow-lg group-hover:shadow-luxury transition-all duration-300'>
-									<div className='w-full h-full bg-burgundy-900 flex items-center justify-center border border-gold-600/30'>
-										<div className='text-center text-gold-300 p-4'>
-											<div className='text-gold-300 text-lg font-bold mb-1 font-brand tracking-wider'>
-												SPICE ISLAND
-											</div>
-											<div className='text-gold-400 text-xs mb-3 font-elegant tracking-widest'>
-												INDONESIA
-											</div>
-											<div className='text-base font-bold mb-2 font-brand text-gold-200'>
-												GIFT SET
-											</div>
-											<div className='text-xs font-script italic text-gold-400'>
-												Premium Sambal
-												Collection
-											</div>
-										</div>
+								<div className='aspect-square rounded-3xl overflow-hidden shadow-lg group-hover:shadow-luxury transition-all duration-300 bg-gradient-to-br from-cream-50 to-gold-50'>
+									<div className='w-full h-full flex items-center justify-center p-6'>
+										<Image
+											src='/images/Spice Island Indonesia Complete Packaging System Mockup.png'
+											alt='Spice Island Indonesia Complete Packaging System - Heritage Gift Set'
+											width={300}
+											height={300}
+											className='w-full h-full object-contain drop-shadow-lg'
+										/>
 									</div>
 								</div>
 							</div>
@@ -457,11 +553,62 @@ export default function Home() {
 						</div>
 					</div>
 
+					{/* Try Sample Section */}
+					<div className='text-center mb-20 max-w-4xl mx-auto'>
+						<div className='bg-gradient-to-r from-burgundy-50 to-gold-50 rounded-4xl p-12 border border-gold-200'>
+							<div className='grid md:grid-cols-2 gap-12 items-center'>
+								<div className='text-left'>
+									<h3 className='text-3xl font-bold text-burgundy-900 mb-4 font-brand'>
+										Not Sure Which to Choose?
+									</h3>
+									<p className='text-lg text-neutral-700 mb-6 font-body'>
+										Try our 75g sample size first!
+										Perfect for discovering your
+										favorite sambal before
+										committing to the full-size
+										jar.
+									</p>
+									<div className='flex items-center space-x-4 mb-6'>
+										<div className='text-2xl font-bold text-burgundy-900 font-brand'>
+											£3.99
+										</div>
+										<div className='text-sm text-neutral-600 font-body'>
+											75g sample size
+										</div>
+									</div>
+									<Button
+										variant='primary'
+										size='lg'
+										className='font-elegant'
+									>
+										Order Sample
+									</Button>
+								</div>
+								<div className='relative'>
+									<div className='aspect-square max-w-xs mx-auto rounded-3xl overflow-hidden shadow-lg bg-gradient-to-br from-cream-50 to-gold-50'>
+										<div className='w-full h-full flex items-center justify-center p-6'>
+											<Image
+												src='/images/Spice Island Indonesia Sambal Oelek 75g Sample Label.png'
+												alt='Spice Island Indonesia Sambal Oelek 75g Sample'
+												width={250}
+												height={250}
+												className='w-full h-full object-contain drop-shadow-lg'
+											/>
+										</div>
+									</div>
+									<div className='absolute -top-3 -right-3 bg-gradient-to-r from-burgundy-900 to-burgundy-800 text-gold-200 px-3 py-1 rounded-full text-sm font-bold font-elegant border border-gold-600/30 shadow-lg'>
+										Sample Size
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
 					{/* Why Choose Us */}
 					<div className='grid md:grid-cols-4 gap-8 max-w-5xl mx-auto'>
 						<div className='text-center'>
-							<div className='w-16 h-16 bg-burgundy-100 rounded-full flex items-center justify-center mx-auto mb-4 border border-burgundy-200'>
-								<ChefHat className='w-8 h-8 text-burgundy-700' />
+							<div className='w-16 h-16 bg-gradient-to-r from-burgundy-900 to-burgundy-800 rounded-full flex items-center justify-center mx-auto mb-4 border border-gold-600/30 shadow-lg'>
+								<ChefHat className='w-8 h-8 text-gold-200' />
 							</div>
 							<h4 className='font-bold text-burgundy-900 mb-2 font-brand'>
 								Handcrafted
@@ -472,8 +619,8 @@ export default function Home() {
 							</p>
 						</div>
 						<div className='text-center'>
-							<div className='w-16 h-16 bg-gold-100 rounded-full flex items-center justify-center mx-auto mb-4 border border-gold-200'>
-								<Award className='w-8 h-8 text-gold-700' />
+							<div className='w-16 h-16 bg-gradient-to-r from-burgundy-900 to-burgundy-800 rounded-full flex items-center justify-center mx-auto mb-4 border border-gold-600/30 shadow-lg'>
+								<Award className='w-8 h-8 text-gold-200' />
 							</div>
 							<h4 className='font-bold text-burgundy-900 mb-2 font-brand'>
 								Authentic
@@ -483,8 +630,8 @@ export default function Home() {
 							</p>
 						</div>
 						<div className='text-center'>
-							<div className='w-16 h-16 bg-cream-100 rounded-full flex items-center justify-center mx-auto mb-4 border border-cream-200'>
-								<Leaf className='w-8 h-8 text-cream-700' />
+							<div className='w-16 h-16 bg-gradient-to-r from-burgundy-900 to-burgundy-800 rounded-full flex items-center justify-center mx-auto mb-4 border border-gold-600/30 shadow-lg'>
+								<Leaf className='w-8 h-8 text-gold-200' />
 							</div>
 							<h4 className='font-bold text-burgundy-900 mb-2 font-brand'>
 								All Natural
@@ -495,8 +642,8 @@ export default function Home() {
 							</p>
 						</div>
 						<div className='text-center'>
-							<div className='w-16 h-16 bg-gold-100 rounded-full flex items-center justify-center mx-auto mb-4 border border-gold-200'>
-								<Truck className='w-8 h-8 text-gold-700' />
+							<div className='w-16 h-16 bg-gradient-to-r from-burgundy-900 to-burgundy-800 rounded-full flex items-center justify-center mx-auto mb-4 border border-gold-600/30 shadow-lg'>
+								<Truck className='w-8 h-8 text-gold-200' />
 							</div>
 							<h4 className='font-bold text-burgundy-900 mb-2 font-brand'>
 								Fresh Delivery
@@ -504,6 +651,87 @@ export default function Home() {
 							<p className='text-neutral-600 text-sm font-body'>
 								Direct from kitchen to your door
 							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			{/* Shipping & Packaging Section */}
+			<section className='py-24 bg-white relative overflow-hidden'>
+				<div className='absolute inset-0 bg-gradient-to-r from-burgundy-50/30 via-transparent to-gold-50/30'></div>
+
+				<div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+					<div className='grid lg:grid-cols-2 gap-16 items-center'>
+						<div className='relative'>
+							<div className='aspect-square rounded-3xl overflow-hidden shadow-luxury bg-gradient-to-br from-cream-50 to-gold-50'>
+								<div className='w-full h-full flex items-center justify-center p-8'>
+									<Image
+										src='/images/Spice Island Indonesia E-commerce Shipping Box.png'
+										alt='Spice Island Indonesia Premium Shipping Box'
+										width={500}
+										height={500}
+										className='w-full h-full object-contain drop-shadow-2xl'
+									/>
+								</div>
+							</div>
+							<div className='absolute -top-8 -left-8 w-32 h-32 bg-gradient-to-br from-burgundy-600/20 to-gold-500/20 rounded-full blur-2xl animate-float'></div>
+							<div className='absolute -bottom-8 -right-8 w-40 h-40 bg-gradient-to-br from-gold-600/20 to-burgundy-600/20 rounded-full blur-2xl animate-float delay-1000'></div>
+						</div>
+
+						<div>
+							<h2 className='text-4xl sm:text-5xl lg:text-6xl font-bold text-burgundy-900 mb-6 font-brand'>
+								Premium
+								<span className='text-gold-700 block'>
+									Packaging
+								</span>
+							</h2>
+							<div className='space-y-6 text-lg text-neutral-700 leading-relaxed mb-8 font-body'>
+								<p>
+									Every order arrives in our
+									beautifully designed shipping box,
+									ensuring your authentic Indonesian
+									sambals reach you in perfect
+									condition. Our packaging reflects
+									the premium quality and heritage of
+									our products.
+								</p>
+								<p>
+									From our kitchen to your door, we
+									take pride in every detail of your
+									unboxing experience. Each box is
+									carefully packed with love and
+									attention, making it perfect for
+									gifting or treating yourself.
+								</p>
+							</div>
+							<div className='grid grid-cols-2 gap-6'>
+								<div className='flex items-center space-x-3'>
+									<div className='w-12 h-12 bg-gradient-to-r from-burgundy-900 to-burgundy-800 rounded-full flex items-center justify-center border border-gold-600/30 shadow-lg'>
+										<Truck className='w-6 h-6 text-gold-200' />
+									</div>
+									<div>
+										<h4 className='font-bold text-burgundy-900 font-brand'>
+											Fast Shipping
+										</h4>
+										<p className='text-sm text-neutral-600 font-body'>
+											2-3 business days
+										</p>
+									</div>
+								</div>
+								<div className='flex items-center space-x-3'>
+									<div className='w-12 h-12 bg-gradient-to-r from-burgundy-900 to-burgundy-800 rounded-full flex items-center justify-center border border-gold-600/30 shadow-lg'>
+										<Award className='w-6 h-6 text-gold-200' />
+									</div>
+									<div>
+										<h4 className='font-bold text-burgundy-900 font-brand'>
+											Premium Quality
+										</h4>
+										<p className='text-sm text-neutral-600 font-body'>
+											Carefully protected
+										</p>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -519,7 +747,7 @@ export default function Home() {
 						<div className='relative'>
 							<div className='aspect-[4/3] rounded-4xl overflow-hidden shadow-luxury border border-gold-200'>
 								<img
-									src='https://images.pexels.com/photos/1630588/pexels-photo-1630588.jpeg'
+									src='/images/indonesian_vista.png'
 									alt='Indonesian spices and ingredients'
 									className='w-full h-full object-cover'
 								/>
@@ -579,23 +807,42 @@ export default function Home() {
 							</div>
 
 							<div className='flex flex-wrap gap-4 mb-8'>
-								<Badge className='bg-burgundy-100 text-burgundy-800 px-4 py-2 text-base font-elegant border border-burgundy-300'>
-									Heritage Recipes
-								</Badge>
-								<Badge className='bg-gold-100 text-gold-800 px-4 py-2 text-base font-elegant border border-gold-300'>
-									Family Tradition
-								</Badge>
-								<Badge className='bg-cream-100 text-cream-800 px-4 py-2 text-base font-elegant border border-cream-300'>
+								<Link href='/recipes'>
+									<Button
+										variant='primary'
+										size='lg'
+										className='font-elegant'
+									>
+										Heritage Recipes
+									</Button>
+								</Link>
+								<Link href='/about'>
+									<Button
+										variant='primary'
+										size='lg'
+										className='font-elegant'
+									>
+										Family Tradition
+									</Button>
+								</Link>
+								<Button
+									variant='primary'
+									size='lg'
+									className='font-elegant'
+								>
 									Small Batch
-								</Badge>
+								</Button>
 							</div>
 
-							<Button
-								size='lg'
-								className='bg-gold-600 hover:bg-gold-700 text-burgundy-900 px-8 py-4 text-lg font-semibold shadow-gold hover:shadow-luxury transform hover:-translate-y-1 transition-all duration-200 font-elegant rounded-2xl border border-gold-700'
-							>
-								Learn More About Our Heritage
-							</Button>
+							<Link href='/about'>
+								<Button
+									variant='primary'
+									size='lg'
+									className='font-elegant'
+								>
+									Learn More About Our Heritage
+								</Button>
+							</Link>
 						</div>
 					</div>
 				</div>
@@ -690,7 +937,9 @@ export default function Home() {
 								</div>
 								<Button
 									type='submit'
-									className='w-full bg-burgundy-900 hover:bg-burgundy-800 text-gold-300 py-4 text-lg font-semibold shadow-burgundy hover:shadow-luxury transform hover:-translate-y-1 transition-all duration-200 rounded-2xl font-elegant border border-gold-600/30'
+									variant='primary'
+									size='lg'
+									className='w-full font-elegant'
 									disabled={
 										contactState.isSubmitting ||
 										contactState.isSubmitted
@@ -761,36 +1010,36 @@ export default function Home() {
 							</h4>
 							<ul className='space-y-3 text-gold-200 font-body'>
 								<li>
-									<a
-										href='#'
+									<Link
+										href='/about'
 										className='hover:text-gold-100 transition-colors duration-200'
 									>
 										About Our Story
-									</a>
+									</Link>
 								</li>
 								<li>
-									<a
-										href='#'
+									<Link
+										href='/shop'
 										className='hover:text-gold-100 transition-colors duration-200'
 									>
 										Our Products
-									</a>
+									</Link>
 								</li>
 								<li>
-									<a
-										href='#'
+									<Link
+										href='/recipes'
 										className='hover:text-gold-100 transition-colors duration-200'
 									>
 										Recipe Ideas
-									</a>
+									</Link>
 								</li>
 								<li>
-									<a
-										href='#'
+									<Link
+										href='/wholesale'
 										className='hover:text-gold-100 transition-colors duration-200'
 									>
 										Wholesale Enquiries
-									</a>
+									</Link>
 								</li>
 							</ul>
 						</div>
@@ -831,24 +1080,24 @@ export default function Home() {
 								rights reserved.
 							</p>
 							<div className='flex space-x-6 text-gold-300 text-sm font-body'>
-								<a
-									href='#'
+								<Link
+									href='/privacy'
 									className='hover:text-gold-100 transition-colors'
 								>
 									Privacy Policy
-								</a>
-								<a
-									href='#'
+								</Link>
+								<Link
+									href='/terms'
 									className='hover:text-gold-100 transition-colors'
 								>
 									Terms of Service
-								</a>
-								<a
-									href='#'
+								</Link>
+								<Link
+									href='/shipping'
 									className='hover:text-gold-100 transition-colors'
 								>
 									Shipping Info
-								</a>
+								</Link>
 							</div>
 						</div>
 					</div>

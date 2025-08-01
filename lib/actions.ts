@@ -181,3 +181,43 @@ export async function unsubscribeFromNewsletter(email: string) {
 		};
 	}
 }
+
+// Record interest/like action
+export async function recordInterest() {
+	try {
+		const supabase = createClient();
+
+		// Get user's IP or create a simple identifier
+		const userAgent =
+			typeof window !== "undefined"
+				? window.navigator.userAgent
+				: "server";
+		const timestamp = new Date().toISOString();
+
+		// Create a simple identifier (in a real app, you might use IP or session)
+		const identifier = `${userAgent.slice(0, 50)}_${Date.now()}`;
+
+		// Insert interest record
+		const { error } = await supabase.from("product_interest").insert([
+			{
+				identifier,
+				source: "hero_waitlist",
+				user_agent: userAgent.slice(0, 255),
+				created_at: timestamp,
+			},
+		]);
+
+		if (error) throw error;
+
+		return {
+			success: true,
+			message: "Thanks for your interest! We'll notify you when we launch.",
+		};
+	} catch (error) {
+		console.error("Record interest error:", error);
+		return {
+			success: false,
+			message: "Something went wrong. Please try again later.",
+		};
+	}
+}
