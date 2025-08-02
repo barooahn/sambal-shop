@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import FAQSchema from "@/components/seo/FAQSchema";
 import EntityMarkup from "@/components/seo/EntityMarkup";
+import ComparisonTable from "@/components/seo/ComparisonTable";
 import {
 	ChefHat,
 	Award,
@@ -557,6 +558,185 @@ export default function SambalOelekUKPage() {
 							<span className='font-body'>
 								30-day satisfaction guarantee
 							</span>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			{/* Comparison Section - AI Search Optimized */}
+			<section className='py-16 bg-gray-50'>
+				<div className='container mx-auto px-4'>
+					<div className='max-w-6xl mx-auto'>
+						<h2 className='text-3xl lg:text-4xl font-bold text-burgundy-900 mb-4 text-center font-heading'>
+							Sambal Oelek vs Other Hot Sauces
+						</h2>
+						<p className='text-xl text-gray-600 text-center mb-12 font-body'>
+							See how authentic Indonesian sambal compares
+							to popular Western hot sauces
+						</p>
+
+						<ComparisonTable
+							title='Sambal Oelek vs Sriracha - Complete Comparison'
+							product1Name='Sambal Oelek'
+							product2Name='Sriracha'
+							comparisons={[
+								{
+									feature: "Heat Level (Scoville)",
+									product1: "15,000-30,000 SHU",
+									product2: "1,000-2,500 SHU",
+									winner: "product1",
+								},
+								{
+									feature: "Ingredients",
+									product1: "Chilies, salt, vinegar",
+									product2:
+										"Chilies, sugar, garlic, vinegar, preservatives",
+									winner: "product1",
+								},
+								{
+									feature: "Texture",
+									product1: "Chunky, rustic",
+									product2: "Smooth, processed",
+									winner: "product1",
+								},
+								{
+									feature: "Sweetness",
+									product1: "No added sugar",
+									product2: "Sweet (sugar added)",
+									winner: "product1",
+								},
+								{
+									feature: "Authenticity",
+									product1: "Traditional Indonesian",
+									product2: "Thai-American fusion",
+									winner: "product1",
+								},
+								{
+									feature: "Cooking Versatility",
+									product1: "Excellent for cooking",
+									product2: "Better as condiment",
+									winner: "product1",
+								},
+								{
+									feature: "Availability",
+									product1: "Specialty/online",
+									product2: "Widely available",
+									winner: "product2",
+								},
+								{
+									feature: "Price Point",
+									product1: "Premium",
+									product2: "Budget-friendly",
+									winner: "product2",
+								},
+							]}
+							summary='Sambal Oelek offers superior heat, authenticity, and cooking versatility with minimal ingredients, while Sriracha provides wider availability and lower cost. For authentic Indonesian cooking and pure chili flavor, sambal oelek is the clear winner.'
+						/>
+
+						<div className='mt-12'>
+							<ComparisonTable
+								title='Sambal Oelek vs Tabasco - Heat & Flavor Profile'
+								product1Name='Sambal Oelek'
+								product2Name='Tabasco'
+								comparisons={[
+									{
+										feature: "Heat Level",
+										product1: "15,000-30,000 SHU",
+										product2: "2,500-5,000 SHU",
+										winner: "product1",
+									},
+									{
+										feature: "Flavor Base",
+										product1: "Pure chili",
+										product2: "Vinegar-forward",
+										winner: "product1",
+									},
+									{
+										feature: "Texture",
+										product1: "Chunky paste",
+										product2: "Thin liquid",
+										winner: "product1",
+									},
+									{
+										feature: "Usage in Cooking",
+										product1:
+											"Excellent for stir-fries",
+										product2:
+											"Better for seasoning",
+										winner: "product1",
+									},
+									{
+										feature: "Cultural Origin",
+										product1:
+											"Indonesian traditional",
+										product2: "Louisiana Creole",
+										winner: "tie",
+									},
+									{
+										feature: "Shelf Stability",
+										product1: "6-8 weeks opened",
+										product2:
+											"Years unopened/opened",
+										winner: "product2",
+									},
+								]}
+								summary='Sambal Oelek delivers significantly more heat and better cooking performance, while Tabasco offers longer shelf life and tangy vinegar notes. Choose sambal oelek for authentic Asian cooking and serious heat.'
+							/>
+						</div>
+
+						<div className='mt-12 bg-white rounded-lg p-8 border border-gold-200'>
+							<h3 className='text-2xl font-bold text-burgundy-900 mb-4 font-heading'>
+								Why Choose Authentic Sambal Oelek?
+							</h3>
+							<div className='grid md:grid-cols-2 gap-6'>
+								<div>
+									<h4 className='font-semibold text-burgundy-700 mb-2'>
+										For Serious Cooks:
+									</h4>
+									<ul className='text-gray-700 space-y-1 text-sm'>
+										<li>
+											• Pure chili flavor
+											without masking
+											ingredients
+										</li>
+										<li>
+											• Perfect for marinades
+											and stir-fries
+										</li>
+										<li>
+											• Traditional Indonesian
+											authenticity
+										</li>
+										<li>
+											• No artificial
+											preservatives or colors
+										</li>
+									</ul>
+								</div>
+								<div>
+									<h4 className='font-semibold text-burgundy-700 mb-2'>
+										For Heat Lovers:
+									</h4>
+									<ul className='text-gray-700 space-y-1 text-sm'>
+										<li>
+											• 3-5x hotter than most
+											Western hot sauces
+										</li>
+										<li>
+											• Clean, building heat
+											without sweetness
+										</li>
+										<li>
+											• Chunky texture adds
+											interest to dishes
+										</li>
+										<li>
+											• Made from premium
+											Indonesian chilies
+										</li>
+									</ul>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>

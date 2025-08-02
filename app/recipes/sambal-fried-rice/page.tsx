@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import RecipeCard from "@/components/recipes/RecipeCard";
 import RecipeSchema from "@/components/seo/RecipeSchema";
+import HowToSchema from "@/components/seo/HowToSchema";
 
 export const metadata: Metadata = {
 	title: "Sambal Fried Rice Recipe | Authentic Indonesian Nasi Goreng | Spice Island Indonesia",
@@ -124,9 +125,55 @@ const recipe = {
 };
 
 export default function SambalFriedRicePage() {
+	// How-to steps for AI search optimization
+	const howToSteps = [
+		{
+			name: "Prepare ingredients",
+			text: "Heat oil in a large wok or frying pan over medium-high heat. Gather all ingredients and have them ready - this dish cooks quickly.",
+		},
+		{
+			name: "Cook aromatics",
+			text: "Add minced garlic and cook for 30 seconds until fragrant. Add sambal and stir for another 30 seconds to release the flavors.",
+		},
+		{
+			name: "Add rice",
+			text: "Add the cold, day-old rice to the wok. Break up any clumps and stir-fry for 3-4 minutes until heated through and slightly crispy.",
+		},
+		{
+			name: "Season the rice",
+			text: "Add soy sauce, fish sauce (if using), and a pinch of salt. Stir well to coat all the rice evenly with the seasonings.",
+		},
+		{
+			name: "Create egg well",
+			text: "Push rice to one side of the wok. Add beaten eggs to the empty space and scramble them, then mix into the rice.",
+		},
+		{
+			name: "Add vegetables",
+			text: "Add frozen peas and carrots (if using). Stir-fry for 2-3 minutes until vegetables are heated through.",
+		},
+		{
+			name: "Final seasoning",
+			text: "Taste and adjust seasoning with more sambal, soy sauce, or salt as needed. The rice should be well-coated and flavorful.",
+		},
+		{
+			name: "Garnish and serve",
+			text: "Remove from heat. Garnish with sliced green onions, cucumber slices, and fried shallots. Serve immediately while hot.",
+		},
+	];
+
 	return (
 		<div className='min-h-screen bg-gradient-to-b from-cream-50 to-cream-100'>
 			<RecipeSchema recipe={recipe} />
+			<HowToSchema
+				name='How to Make Sambal Fried Rice (Nasi Goreng)'
+				description='Learn to make authentic Indonesian sambal fried rice with this step-by-step guide. Perfect for using leftover rice with authentic sambal heat and flavor.'
+				steps={howToSteps}
+				totalTime='PT25M'
+				prepTime='PT10M'
+				cookTime='PT15M'
+				yield='4 servings'
+				category='Indonesian Main Course'
+			/>
 
 			<div className='container mx-auto px-4 py-8'>
 				<RecipeCard recipe={recipe} />
