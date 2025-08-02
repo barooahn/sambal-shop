@@ -9,8 +9,7 @@ import {
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import Breadcrumb from "@/components/shared/Breadcrumb";
-import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
-import GoogleSearchConsole from "@/components/analytics/GoogleSearchConsole";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import PerformanceOptimizer, {
 	criticalCSS,
 	criticalImages,
@@ -50,6 +49,9 @@ export const metadata: Metadata = {
 		"Discover authentic Indonesian sambal from the original Spice Islands. Handcrafted using traditional Maluku recipes, no preservatives. Premium sambal delivery across UK.",
 	keywords:
 		"Indonesian sambal, sambal oelek, sambal bali, authentic chili paste, Indonesian condiments, UK delivery, Maluku spices, traditional recipes, handcrafted sambal, spice islands indonesia, indonesian food uk, premium condiments, chili sauce uk, authentic indonesian cuisine",
+	verification: {
+		google: process.env.NEXT_PUBLIC_GSC_VERIFICATION_CODE,
+	},
 	openGraph: {
 		title: "Authentic Indonesian Sambal | Spice Island Indonesia",
 		description:
@@ -96,17 +98,9 @@ export default function RootLayout({
 }: {
 	children: React.ReactNode;
 }) {
-	const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
-	const gscVerification = process.env.NEXT_PUBLIC_GSC_VERIFICATION_CODE;
-
 	return (
 		<html lang='en'>
 			<head>
-				{gscVerification && (
-					<GoogleSearchConsole
-						verificationCode={gscVerification}
-					/>
-				)}
 				<PerformanceOptimizer
 					preloadImages={criticalImages}
 					criticalCSS={criticalCSS}
@@ -115,7 +109,7 @@ export default function RootLayout({
 			<body
 				className={`${inter.variable} ${playfair.variable} ${cormorant.variable} ${dancingScript.variable} ${inter.className}`}
 			>
-				{gaId && <GoogleAnalytics measurementId={gaId} />}
+				<GoogleAnalytics />
 				<Header />
 				<Breadcrumb />
 				<main className='min-h-screen'>{children}</main>
