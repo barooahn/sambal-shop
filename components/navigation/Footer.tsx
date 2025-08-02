@@ -1,5 +1,12 @@
 import Link from "next/link";
-import { Mail, MapPin, Phone, Instagram, Facebook, Twitter } from "lucide-react";
+import {
+	Mail,
+	MapPin,
+	Phone,
+	Instagram,
+	Facebook,
+	Twitter,
+} from "lucide-react";
 
 export default function Footer() {
 	return (
@@ -7,16 +14,16 @@ export default function Footer() {
 			<div className='absolute inset-0 bg-gradient-to-r from-burgundy-950/50 via-transparent to-burgundy-950/50'></div>
 
 			<div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-				<div className='grid md:grid-cols-4 gap-12'>
+				<div className='grid md:grid-cols-5 gap-8'>
 					<div className='md:col-span-2'>
 						<h3 className='text-3xl font-bold mb-4 text-gold-300 font-brand tracking-wider'>
 							Spice Island Indonesia
 						</h3>
 						<p className='text-gold-200 mb-6 text-lg leading-relaxed font-body'>
-							Authentic Indonesian sambal from the
-							original Spice Islands, bringing bold
-							flavors and centuries of culinary
-							tradition to British kitchens.
+							Authentic Indonesian sambal from the original
+							Spice Islands, bringing bold flavors and
+							centuries of culinary tradition to British
+							kitchens.
 						</p>
 						<div className='flex space-x-4'>
 							<a
@@ -42,15 +49,63 @@ export default function Footer() {
 
 					<div>
 						<h4 className='text-xl font-semibold mb-6 text-gold-300 font-brand'>
-							Quick Links
+							Products
 						</h4>
 						<ul className='space-y-3 font-body'>
+							<li>
+								<Link
+									href='/shop#sambal-oelek'
+									className='text-gold-200 hover:text-gold-100 transition-colors'
+								>
+									Sambal Oelek
+								</Link>
+							</li>
+							<li>
+								<Link
+									href='/shop#sambal-bali'
+									className='text-gold-200 hover:text-gold-100 transition-colors'
+								>
+									Sambal Bali
+								</Link>
+							</li>
+							<li>
+								<Link
+									href='/shop#sample-pack'
+									className='text-gold-200 hover:text-gold-100 transition-colors'
+								>
+									Sample Pack
+								</Link>
+							</li>
+							<li>
+								<Link
+									href='/shop#gift-set'
+									className='text-gold-200 hover:text-gold-100 transition-colors'
+								>
+									Gift Set
+								</Link>
+							</li>
 							<li>
 								<Link
 									href='/shop'
 									className='text-gold-200 hover:text-gold-100 transition-colors'
 								>
-									Shop Products
+									View All Products
+								</Link>
+							</li>
+						</ul>
+					</div>
+
+					<div>
+						<h4 className='text-xl font-semibold mb-6 text-gold-300 font-brand'>
+							Our Story
+						</h4>
+						<ul className='space-y-3 font-body'>
+							<li>
+								<Link
+									href='/chef'
+									className='text-gold-200 hover:text-gold-100 transition-colors'
+								>
+									Meet Chef Yossie
 								</Link>
 							</li>
 							<li>
@@ -63,10 +118,18 @@ export default function Footer() {
 							</li>
 							<li>
 								<Link
-									href='/recipes'
+									href='/authentic-vs-store-bought'
 									className='text-gold-200 hover:text-gold-100 transition-colors'
 								>
-									Recipes
+									Authentic vs Store-Bought
+								</Link>
+							</li>
+							<li>
+								<Link
+									href='/indonesian-sambal-london'
+									className='text-gold-200 hover:text-gold-100 transition-colors'
+								>
+									Indonesian Sambal in London
 								</Link>
 							</li>
 							<li>
@@ -75,6 +138,54 @@ export default function Footer() {
 									className='text-gold-200 hover:text-gold-100 transition-colors'
 								>
 									Wholesale
+								</Link>
+							</li>
+						</ul>
+					</div>
+
+					<div>
+						<h4 className='text-xl font-semibold mb-6 text-gold-300 font-brand'>
+							Cooking Guide
+						</h4>
+						<ul className='space-y-3 font-body'>
+							<li>
+								<Link
+									href='/sambal-for-stir-fry'
+									className='text-gold-200 hover:text-gold-100 transition-colors'
+								>
+									Sambal for Stir-Fry
+								</Link>
+							</li>
+							<li>
+								<Link
+									href='/sambal-eggs-breakfast'
+									className='text-gold-200 hover:text-gold-100 transition-colors'
+								>
+									Sambal Eggs Breakfast
+								</Link>
+							</li>
+							<li>
+								<Link
+									href='/sambal-noodle-sauce'
+									className='text-gold-200 hover:text-gold-100 transition-colors'
+								>
+									Sambal Noodle Sauce
+								</Link>
+							</li>
+							<li>
+								<Link
+									href='/sambal-vs-hot-sauce'
+									className='text-gold-200 hover:text-gold-100 transition-colors'
+								>
+									Sambal vs Hot Sauce
+								</Link>
+							</li>
+							<li>
+								<Link
+									href='/recipes'
+									className='text-gold-200 hover:text-gold-100 transition-colors'
+								>
+									All Recipes
 								</Link>
 							</li>
 						</ul>
@@ -99,9 +210,15 @@ export default function Footer() {
 							</div>
 							<div className='flex items-start space-x-3'>
 								<MapPin className='w-5 h-5 text-gold-400 mt-1' />
-								<span className='text-gold-200'>
-									London, United Kingdom
-								</span>
+								<div className='text-gold-200'>
+									<div>London, United Kingdom</div>
+									<div className='text-sm text-gold-300 mt-1'>
+										Mon-Fri: 9:00 AM - 6:00 PM GMT
+									</div>
+									<div className='text-sm text-gold-300'>
+										Sat: 10:00 AM - 4:00 PM GMT
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
