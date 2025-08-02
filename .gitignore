@@ -39,8 +39,9 @@ next-env.d.ts
 stripe-checkout-function.ts
 stripe-webhook-function.ts
 
+# Documentation and development files
+docs/
 .windsurfrules
 CLAUDE.md
 design.mdc
 default_ui_darkmode.css
-SEO_IMPLEMENTATION_CHECKLIST.md

@@ -12,6 +12,7 @@ export default function Home() {
 		<div className='bg-gradient-to-b from-cream-50 to-cream-100 font-body'>
 			{/* Structured Data */}
 			<StructuredData type='organization' />
+			<StructuredData type='localbusiness' />
 			<StructuredData type='product' />
 			<StructuredData type='faq' />
 			<StructuredData type='reviews' />

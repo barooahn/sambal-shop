@@ -1,7 +1,5 @@
-import Script from "next/script";
-
 interface StructuredDataProps {
-	type?: "organization" | "product" | "faq" | "reviews";
+	type?: "organization" | "product" | "faq" | "reviews" | "localbusiness";
 }
 
 export default function StructuredData({
@@ -159,6 +157,46 @@ export default function StructuredData({
 		},
 	};
 
+	// LocalBusiness Schema (template - needs real data)
+	const localBusinessData = {
+		"@context": "https://schema.org",
+		"@type": "LocalBusiness",
+		name: "Spice Island Indonesia",
+		description:
+			"Authentic Indonesian sambal from the original Spice Islands",
+		url: "https://sambal-shop.vercel.app",
+		telephone: "+44 (0) 20 1234 5678", // TODO: Replace with real phone number
+		email: "hello@spiceislandindonesia.co.uk", // TODO: Replace with real email
+		address: {
+			"@type": "PostalAddress",
+			streetAddress: "123 Spice Street", // TODO: Replace with real address
+			addressLocality: "London", // TODO: Replace with real city
+			postalCode: "SW1A 1AA", // TODO: Replace with real postcode
+			addressCountry: "GB",
+		},
+		geo: {
+			"@type": "GeoCoordinates",
+			latitude: "51.5074", // TODO: Replace with real coordinates
+			longitude: "-0.1278",
+		},
+		openingHours: [
+			"Mo-Fr 09:00-18:00", // TODO: Replace with real hours
+			"Sa 10:00-16:00",
+		],
+		priceRange: "££",
+		servesCuisine: "Indonesian",
+		paymentAccepted: "Cash, Credit Card, Debit Card, PayPal",
+		currenciesAccepted: "GBP",
+		areaServed: {
+			"@type": "Country",
+			name: "United Kingdom",
+		},
+		sameAs: [
+			"https://www.instagram.com/spiceislandindonesia", // TODO: Replace when social media is set up
+			"https://www.facebook.com/spiceislandindonesia",
+		],
+	};
+
 	const getStructuredData = () => {
 		switch (type) {
 			case "product":
@@ -167,13 +205,15 @@ export default function StructuredData({
 				return faqData;
 			case "reviews":
 				return reviewsData;
+			case "localbusiness":
+				return localBusinessData;
 			default:
 				return organizationData;
 		}
 	};
 
 	return (
-		<Script
+		<script
 			id={`structured-data-${type}`}
 			type='application/ld+json'
 			dangerouslySetInnerHTML={{

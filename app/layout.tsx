@@ -9,6 +9,12 @@ import {
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import Breadcrumb from "@/components/shared/Breadcrumb";
+import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
+import GoogleSearchConsole from "@/components/analytics/GoogleSearchConsole";
+import PerformanceOptimizer, {
+	criticalCSS,
+	criticalImages,
+} from "@/components/optimization/PerformanceOptimizer";
 
 const inter = Inter({
 	subsets: ["latin"],
@@ -38,6 +44,7 @@ const dancingScript = Dancing_Script({
 });
 
 export const metadata: Metadata = {
+	metadataBase: new URL("https://sambal-shop.vercel.app"),
 	title: "Authentic Indonesian Sambal | Spice Island Indonesia | Premium Chili Paste UK",
 	description:
 		"Discover authentic Indonesian sambal from the original Spice Islands. Handcrafted using traditional Maluku recipes, no preservatives. Premium sambal delivery across UK.",
@@ -89,11 +96,26 @@ export default function RootLayout({
 }: {
 	children: React.ReactNode;
 }) {
+	const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+	const gscVerification = process.env.NEXT_PUBLIC_GSC_VERIFICATION_CODE;
+
 	return (
 		<html lang='en'>
+			<head>
+				{gscVerification && (
+					<GoogleSearchConsole
+						verificationCode={gscVerification}
+					/>
+				)}
+				<PerformanceOptimizer
+					preloadImages={criticalImages}
+					criticalCSS={criticalCSS}
+				/>
+			</head>
 			<body
 				className={`${inter.variable} ${playfair.variable} ${cormorant.variable} ${dancingScript.variable} ${inter.className}`}
 			>
+				{gaId && <GoogleAnalytics measurementId={gaId} />}
 				<Header />
 				<Breadcrumb />
 				<main className='min-h-screen'>{children}</main>

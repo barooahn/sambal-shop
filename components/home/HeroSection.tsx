@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Flame, ChefHat, Award, Leaf, Heart } from "lucide-react";
-import Image from "next/image";
+import OptimizedImage from "@/components/optimization/OptimizedImage";
 
 export default function HeroSection() {
 	const [email, setEmail] = useState("");
@@ -234,13 +234,15 @@ export default function HeroSection() {
 							<div className='relative z-20'>
 								<div className='aspect-square rounded-3xl overflow-hidden shadow-luxury bg-gradient-to-br from-burgundy-900/10 to-gold-600/10 p-8'>
 									<div className='w-full h-full rounded-2xl flex items-center justify-center'>
-										<Image
+										<OptimizedImage
 											src='/images/Spice Island Indonesia Sambal Oelek 185g Label.png'
 											alt='Spice Island Indonesia Sambal Oelek 185g - Authentic Indonesian Chili Paste'
 											width={400}
 											height={400}
 											className='w-full h-full object-contain drop-shadow-2xl'
 											priority
+											quality={90}
+											sizes='(max-width: 768px) 100vw, 400px'
 										/>
 									</div>
 								</div>
