@@ -8,6 +8,92 @@ import { Calendar, Clock, ArrowLeft, Share2 } from "lucide-react";
 
 // Sample blog post data - in a real app, this would come from a CMS or database
 const blogPosts = {
+	"5-ways-sambal-british-cooking": {
+		title: "5 Ways to Use Indonesian Sambal in British Cooking",
+		excerpt: "Transform your favourite British dishes with authentic Indonesian sambal. From Sunday roasts to fish and chips, discover how this traditional chili paste can revolutionize your cooking.",
+		content: `
+		<p>British cuisine is experiencing a spice revolution, and Indonesian sambal is leading the charge. This isn't about replacing traditional flavors - it's about enhancing them with the complex heat and depth that only authentic sambal can provide. Here are five brilliant ways to incorporate Indonesian sambal into classic British cooking.</p>
+
+		<h2>1. Sunday Roast Revolution: Sambal-Glazed Lamb</h2>
+		<p>Transform your Sunday roast with a sambal glaze that will have your guests asking for the recipe. The key is using sambal bali, which contains aromatic spices that complement lamb beautifully.</p>
+
+		<h3>The Method:</h3>
+		<p>Mix 2 tablespoons of sambal bali with 1 tablespoon of honey, 2 tablespoons of olive oil, and fresh rosemary. Rub this mixture over your leg of lamb 30 minutes before roasting. The sambal caramelizes beautifully in the oven, creating a glossy, spiced crust that's absolutely divine.</p>
+
+		<p><strong>Why it works:</strong> The aromatic spices in sambal bali (galangal, lemongrass, kaffir lime) create a complex flavor profile that enhances rather than overwhelms the lamb. The heat builds gradually, making it accessible to all palates.</p>
+
+		<h2>2. Fish and Chips Reimagined: Sambal Mayo</h2>
+		<p>Forget mushy peas - sambal mayo is the condiment your fish and chips has been waiting for. This fusion creates the perfect balance of creamy coolness and fiery heat.</p>
+
+		<h3>The Recipe:</h3>
+		<p>Combine 4 tablespoons of good-quality mayonnaise with 1 teaspoon of sambal oelek (start small - you can always add more). Add a squeeze of lime juice and a pinch of salt. The result is a condiment that transforms ordinary chips into something extraordinary.</p>
+
+		<p><strong>Pro tip:</strong> Make extra and use it as a sandwich spread, burger sauce, or dip for roasted vegetables. It keeps in the fridge for up to a week.</p>
+
+		<h2>3. Full English Breakfast Upgrade: Sambal Baked Beans</h2>
+		<p>Elevate your full English with sambal-spiked baked beans that add warmth and complexity to the morning meal. This works particularly well with sambal bali's aromatic profile.</p>
+
+		<h3>The Technique:</h3>
+		<p>Heat a tin of good-quality baked beans in a saucepan. Stir in 1-2 teaspoons of sambal bali (depending on your heat tolerance) and a splash of Worcestershire sauce. The sambal adds depth while the familiar bean sweetness balances the heat perfectly.</p>
+
+		<p><strong>Serving suggestion:</strong> Pair with buttery scrambled eggs and crispy bacon. The richness of the eggs helps temper the heat, creating a perfectly balanced breakfast.</p>
+
+		<h2>4. Shepherd's Pie with a Spicy Twist</h2>
+		<p>Add Indonesian flair to this British classic by incorporating sambal into both the meat layer and the mashed potato topping. The result is comfort food with an exciting edge.</p>
+
+		<h3>For the Meat Layer:</h3>
+		<p>When browning your mince, add 1 tablespoon of sambal oelek along with your onions and carrots. The sambal will cook down and integrate beautifully with the traditional flavors, adding heat without overwhelming the dish.</p>
+
+		<h3>For the Potato Topping:</h3>
+		<p>Mix a small amount of sambal bali into your mashed potatoes along with butter and milk. This creates subtle heat and aromatic complexity that elevates the entire dish.</p>
+
+		<p><strong>Family-friendly tip:</strong> Keep the sambal separate and let family members add their preferred amount. This way, everyone can enjoy the dish at their comfort level.</p>
+
+		<h2>5. Ploughman's Lunch Enhancement: Sambal Cheese Toasties</h2>
+		<p>Transform the humble cheese toastie into something spectacular with a thin layer of sambal. This works brilliantly with mature cheddar and creates a perfect balance of creamy, sharp, and spicy.</p>
+
+		<h3>The Perfect Combination:</h3>
+		<p>Spread a thin layer of sambal oelek on one slice of bread, add mature cheddar cheese, and top with the second slice. Butter the outside and grill as usual. The sambal melts slightly, creating pockets of heat throughout the sandwich.</p>
+
+		<p><strong>Gourmet variation:</strong> Add sliced tomatoes and fresh basil for a more sophisticated version. The tomatoes help cool the heat while the basil adds freshness.</p>
+
+		<h2>Understanding Heat Levels for British Palates</h2>
+		<p>Indonesian sambal is significantly hotter than most British condiments. Here's how to introduce it gradually:</p>
+
+		<p><strong>Start Small:</strong> Begin with 1/4 teaspoon and build up. Authentic sambal is 3-5 times hotter than typical British hot sauces.</p>
+
+		<p><strong>Choose Your Sambal:</strong> Sambal bali is more approachable for beginners due to its aromatic spices, while sambal oelek provides pure, intense heat.</p>
+
+		<p><strong>Have Dairy Ready:</strong> Keep yogurt, milk, or ice cream nearby for your first tastings. The casein in dairy neutralizes capsaicin better than water.</p>
+
+		<h2>Where to Source Authentic Sambal</h2>
+		<p>The key to these recipes is using authentic Indonesian sambal, not mass-produced substitutes. Look for brands that list minimal ingredients - ideally just chilies, salt, and vinegar for sambal oelek, or chilies with traditional spices for sambal bali.</p>
+
+		<p>Avoid products with artificial colors, excessive preservatives, or sugar as a main ingredient. Authentic sambal should have a chunky texture and vibrant, natural color.</p>
+
+		<h2>Storage and Safety Tips</h2>
+		<p>Authentic sambal should be stored in the refrigerator and consumed within 2-3 weeks of opening. The lack of preservatives means it won't last as long as commercial hot sauces, but the flavor intensity more than compensates.</p>
+
+		<p>Always wash your hands thoroughly after handling sambal, and avoid touching your eyes. The oils can linger on surfaces, so clean cutting boards and utensils immediately after use.</p>
+
+		<h2>Building Your Spice Tolerance</h2>
+		<p>If you're new to serious heat, build your tolerance gradually. Start with tiny amounts mixed into familiar dishes. Your palate will adapt, and you'll begin to appreciate the complex flavors beneath the heat.</p>
+
+		<p>Remember: Indonesian sambal isn't just about heat - it's about flavor complexity that has been perfected over centuries. Once you understand this, you'll never go back to ordinary hot sauce.</p>
+
+		<h2>The Future of British-Indonesian Fusion</h2>
+		<p>These five applications are just the beginning. Indonesian sambal offers British cooks an opportunity to add authentic, complex heat to familiar dishes without losing their essential character.</p>
+
+		<p>As more British kitchens discover authentic Indonesian ingredients, we're seeing the emergence of a exciting new fusion cuisine that respects both traditions while creating something entirely new.</p>
+
+		<p>Start with one of these five methods, and you'll quickly discover your own creative applications. Welcome to the delicious world of British-Indonesian fusion cooking.</p>
+		`,
+		image: "/images/Spice Island Indonesia Sambal Bali 185g Label.png",
+		category: "Cooking Tips",
+		readTime: "10 min read",
+		publishDate: "2024-02-05",
+		author: "Chef Yossie & The Spice Island Team",
+	},
 	"ultimate-guide-indonesian-sambal": {
 		title: "The Ultimate Guide to Indonesian Sambal: Beyond Sriracha",
 		excerpt: "Discover the authentic world of Indonesian sambal - from traditional varieties to modern applications. Learn what makes real sambal different from Western hot sauces.",
