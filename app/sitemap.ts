@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-	const baseUrl = "https://sambal-shop.vercel.app";
+	const baseUrl = "https://spiceislandindonesia.com";
 
 	return [
 		{
