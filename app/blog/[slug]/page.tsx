@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, ArrowLeft, Share2 } from "lucide-react";
+import VoiceSearchOptimization from "@/components/seo/VoiceSearchOptimization";
 
 // Sample blog post data - in a real app, this would come from a CMS or database
 const blogPosts = {
@@ -53,6 +54,32 @@ const blogPosts = {
 					<li>• <strong>Flavor complexity:</strong> Trace minerals create unique taste profiles</li>
 				</ul>
 			</div>
+
+		<VoiceSearchOptimization
+			title="Voice Search Quick Answers"
+			quickAnswers={[
+				{
+					question: "Where do the Spice Islands come from?",
+					answer: "The Spice Islands are the Maluku Islands in Indonesia, also known as the Moluccas. They're located in the Indonesian archipelago and were the original source of nutmeg, cloves, and mace that changed world history.",
+					category: "Geography"
+				},
+				{
+					question: "Why are the Spice Islands important for sambal?",
+					answer: "The volcanic soil of the Spice Islands creates ideal growing conditions for chilies with exceptional heat and complexity. The mineral-rich earth imparts distinctive depth of flavor that cannot be replicated elsewhere.",
+					category: "History"
+				},
+				{
+					question: "What makes Spice Islands chilies special?",
+					answer: "Volcanic terroir rich in potassium and phosphorus creates chilies with intense heat levels and complex flavor compounds. The well-drained volcanic soil produces chilies with ideal moisture content for traditional grinding techniques.",
+					category: "Agriculture"
+				},
+				{
+					question: "How old is sambal making tradition?",
+					answer: "Sambal making traditions in the Spice Islands date back centuries, long before European traders arrived in 1512. Indigenous peoples developed sophisticated techniques using volcanic stone mortars that are still used today.",
+					category: "Tradition"
+				}
+			]}
+		/>
 
 			<p>The same volcanic soil that once nurtured the world's most precious spices now grows the chilies that form the foundation of <a href="/authentic-vs-store-bought" class="text-burgundy-600 hover:text-burgundy-800 underline">authentic sambal</a>. The mineral-rich earth imparts a distinctive depth of flavor that simply cannot be replicated elsewhere.</p>
 		</div>
@@ -212,6 +239,32 @@ const blogPosts = {
 		</div>
 
 		<p>Here are five brilliant ways to incorporate Indonesian sambal into classic British cooking:</p>
+
+		<VoiceSearchOptimization
+			title="Voice Search Quick Answers"
+			quickAnswers={[
+				{
+					question: "How do I use sambal in British cooking?",
+					answer: "Start with small amounts (1/4 teaspoon) and add sambal to marinades, stir-fries, or mix with mayo for dips. It works brilliantly in Sunday roast glazes, fish and chips mayo, and cheese toasties.",
+					category: "Cooking Tips"
+				},
+				{
+					question: "What is the best sambal for beginners?",
+					answer: "Sambal Bali is perfect for beginners because it has aromatic spices that balance the heat, making it less aggressive than pure chili pastes while still delivering authentic Indonesian flavor.",
+					category: "Product Recommendation"
+				},
+				{
+					question: "Can I use sambal instead of hot sauce?",
+					answer: "Yes, but sambal is much hotter than Western hot sauces. Use 1/4 the amount you would use of regular hot sauce and build up gradually. Sambal adds authentic Indonesian flavor, not just heat.",
+					category: "Substitution"
+				},
+				{
+					question: "Where can I buy authentic sambal in the UK?",
+					answer: "You can order authentic Indonesian sambal online with UK delivery. Look for traditional recipes with minimal ingredients - avoid products with artificial colors or excessive sugar.",
+					category: "Shopping"
+				}
+			]}
+		/>
 
 		<h2 id="sunday-roast" class="scroll-mt-20">1. Sunday Roast Revolution: Sambal-Glazed Lamb</h2>
 

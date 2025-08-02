@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import FAQSchema from "@/components/seo/FAQSchema";
+import EntityMarkup from "@/components/seo/EntityMarkup";
 import {
 	ChefHat,
 	Award,
@@ -72,11 +73,83 @@ export default function SambalOelekUKPage() {
 		},
 	];
 
+	// Entity data for AI search optimization
+	const entityData = [
+		{
+			name: "Sambal Oelek",
+			type: "Product" as const,
+			description:
+				"Traditional Indonesian chili paste made from fresh red chilies, salt, and vinegar",
+			properties: {
+				category: "Condiment",
+				brand: "Spice Island Indonesia",
+				manufacturer: "Chef Yossie",
+				origin: "Indonesia",
+				spiceLevel: "Hot",
+				scovilleRating: "15000-30000",
+				ingredients: ["Red Chilies", "Salt", "Vinegar"],
+				dietaryInfo: ["Gluten-Free", "Vegan", "No Preservatives"],
+			},
+		},
+		{
+			name: "Red Chilies",
+			type: "Ingredient" as const,
+			description:
+				"Fresh red chilies from the Indonesian Spice Islands, known for their intense heat and pure flavor",
+			properties: {
+				origin: "Maluku Islands, Indonesia",
+				heatLevel: "High",
+				flavorProfile: "Pure chili heat with minimal sweetness",
+			},
+		},
+		{
+			name: "Maluku Islands",
+			type: "Place" as const,
+			description:
+				"The Spice Islands of Indonesia, original source of the world's finest spices and chilies",
+			properties: {
+				country: "Indonesia",
+				coordinates: { lat: -3.2385, lng: 130.1453 },
+				knownFor:
+					"Spice production, volcanic soil, traditional sambal making",
+				climate: "Tropical volcanic",
+			},
+		},
+		{
+			name: "Chef Yossie",
+			type: "Person" as const,
+			description:
+				"Indonesian chef from Bandung specializing in traditional sambal recipes",
+			properties: {
+				jobTitle: "Traditional Indonesian Chef",
+				worksFor: "Spice Island Indonesia",
+				expertise: "Traditional sambal making, Indonesian cuisine",
+				origin: "Bandung, Indonesia",
+			},
+		},
+		{
+			name: "Spice Island Indonesia",
+			type: "Organization" as const,
+			description:
+				"UK-based company specializing in authentic Indonesian condiments and spices",
+			properties: {
+				url: "https://spiceislandindonesia.com",
+				specialty: "Authentic Indonesian sambal and spices",
+				market: "United Kingdom",
+				focus: "Traditional recipes, no preservatives",
+			},
+		},
+	];
+
 	return (
 		<div className='min-h-screen bg-gradient-to-br from-cream-50 to-cream-100'>
 			<FAQSchema
 				faqs={faqData}
 				pageTitle='Sambal Oelek UK - Frequently Asked Questions'
+			/>
+			<EntityMarkup
+				entities={entityData}
+				pageTitle='Sambal Oelek UK - Entity Information'
 			/>
 			{/* Hero Section */}
 			<section className='py-16 sm:py-24 bg-gradient-to-br from-burgundy-900 via-burgundy-800 to-burgundy-900 text-white relative overflow-hidden'>
