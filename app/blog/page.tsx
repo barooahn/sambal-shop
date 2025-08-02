@@ -23,6 +23,16 @@ export const metadata: Metadata = {
 const blogPosts = [
 	{
 		id: 1,
+		title: "The History of the Spice Islands: Where Your Sambal Comes From",
+		excerpt: "Journey back to the Maluku Islands, the original Spice Islands that changed world history. Discover the rich culinary heritage and volcanic soil that creates the perfect chilies for authentic sambal.",
+		image: "/images/indonesian_vista.png",
+		category: "Heritage Stories",
+		readTime: "12 min read",
+		publishDate: "2024-02-10",
+		slug: "spice-islands-history",
+	},
+	{
+		id: 2,
 		title: "5 Ways to Use Indonesian Sambal in British Cooking",
 		excerpt: "Transform your favourite British dishes with authentic Indonesian sambal. From Sunday roasts to fish and chips, discover how this traditional chili paste can revolutionize your cooking.",
 		image: "/images/Spice Island Indonesia Sambal Bali 185g Label.png",
@@ -32,7 +42,7 @@ const blogPosts = [
 		slug: "5-ways-sambal-british-cooking",
 	},
 	{
-		id: 2,
+		id: 3,
 		title: "The Ultimate Guide to Indonesian Sambal: Beyond Sriracha",
 		excerpt: "Discover the authentic world of Indonesian sambal - from traditional varieties to modern applications. Learn what makes real sambal different from Western hot sauces and how to use it in British cooking.",
 		image: "/images/Spice Island Indonesia Sambal Oelek 185g Label.png",
@@ -42,7 +52,7 @@ const blogPosts = [
 		slug: "ultimate-guide-indonesian-sambal",
 	},
 	{
-		id: 3,
+		id: 4,
 		title: "The Art of Traditional Sambal Making: A Journey Through the Spice Islands",
 		excerpt: "Discover the ancient techniques and secret ingredients that make authentic Indonesian sambal so special. From selecting the perfect chilies to the traditional grinding methods passed down through generations.",
 		image: "/images/indonesian_vista.png",
@@ -52,7 +62,7 @@ const blogPosts = [
 		slug: "traditional-sambal-making",
 	},
 	{
-		id: 4,
+		id: 5,
 		title: "5 Ways to Use Sambal Oelek in British Cooking",
 		excerpt: "Transform your everyday British dishes with the bold flavors of authentic Indonesian sambal. From Sunday roasts to fish and chips, discover how sambal can elevate your cooking.",
 		image: "/images/Spice Island Indonesia Sambal Oelek 185g Label.png",
@@ -62,7 +72,7 @@ const blogPosts = [
 		slug: "sambal-oelek-british-cooking",
 	},
 	{
-		id: 5,
+		id: 6,
 		title: "The History of the Spice Islands: Where Our Story Begins",
 		excerpt: "Journey back to the Maluku Islands, the original Spice Islands that changed world history. Learn about the rich culinary heritage that inspired our authentic sambal recipes.",
 		image: "/images/indonesian_vista.png",
@@ -72,7 +82,7 @@ const blogPosts = [
 		slug: "spice-islands-history",
 	},
 	{
-		id: 6,
+		id: 7,
 		title: "Sambal vs Hot Sauce: Understanding the Difference",
 		excerpt: "Not all chili condiments are created equal. Explore what makes Indonesian sambal unique compared to Western hot sauces, and why authenticity matters in Indonesian cuisine.",
 		image: "/images/Spice Island Indonesia Sambal Bali 185g Label.png",
