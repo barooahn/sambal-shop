@@ -55,8 +55,9 @@ export default function Header() {
 				},
 			],
 		},
-		{ name: "Chef's Story", href: "/chef" },
 		{ name: "Recipes", href: "/recipes" },
+		{ name: "Blog", href: "/blog" },
+		{ name: "Chef's Story", href: "/chef" },
 		{ name: "About", href: "/about" },
 		{ name: "Wholesale", href: "/wholesale" },
 	];
@@ -239,16 +240,59 @@ export default function Header() {
 					<div className='md:hidden'>
 						<div className='px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gold-200'>
 							{navigation.map((item) => (
-								<Link
-									key={item.name}
-									href={item.href}
-									className='block px-3 py-2 text-burgundy-800 hover:text-burgundy-600 hover:bg-burgundy-50 rounded-md font-medium font-body transition-colors duration-200'
-									onClick={() =>
-										setIsMenuOpen(false)
-									}
-								>
-									{item.name}
-								</Link>
+								<div key={item.name}>
+									{item.hasDropdown ? (
+										<div className='space-y-1'>
+											<Link
+												href={item.href}
+												className='block px-3 py-2 text-burgundy-800 hover:text-burgundy-600 hover:bg-burgundy-50 rounded-md font-medium font-body transition-colors duration-200'
+												onClick={() =>
+													setIsMenuOpen(
+														false
+													)
+												}
+											>
+												{item.name}
+											</Link>
+											<div className='pl-4 space-y-1'>
+												{item.dropdown?.map(
+													(
+														dropdownItem
+													) => (
+														<Link
+															key={
+																dropdownItem.name
+															}
+															href={
+																dropdownItem.href
+															}
+															className='block px-3 py-2 text-sm text-burgundy-700 hover:text-burgundy-600 hover:bg-burgundy-50 rounded-md font-body transition-colors duration-200'
+															onClick={() =>
+																setIsMenuOpen(
+																	false
+																)
+															}
+														>
+															{
+																dropdownItem.name
+															}
+														</Link>
+													)
+												)}
+											</div>
+										</div>
+									) : (
+										<Link
+											href={item.href}
+											className='block px-3 py-2 text-burgundy-800 hover:text-burgundy-600 hover:bg-burgundy-50 rounded-md font-medium font-body transition-colors duration-200'
+											onClick={() =>
+												setIsMenuOpen(false)
+											}
+										>
+											{item.name}
+										</Link>
+									)}
+								</div>
 							))}
 							<div className='pt-4 pb-2 space-y-2'>
 								{user ? (

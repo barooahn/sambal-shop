@@ -150,6 +150,22 @@ export default function Footer() {
 						<ul className='space-y-3 font-body'>
 							<li>
 								<Link
+									href='/recipes'
+									className='text-gold-200 hover:text-gold-100 transition-colors'
+								>
+									All Recipes
+								</Link>
+							</li>
+							<li>
+								<Link
+									href='/blog'
+									className='text-gold-200 hover:text-gold-100 transition-colors'
+								>
+									Blog & Guides
+								</Link>
+							</li>
+							<li>
+								<Link
 									href='/sambal-for-stir-fry'
 									className='text-gold-200 hover:text-gold-100 transition-colors'
 								>
@@ -166,26 +182,10 @@ export default function Footer() {
 							</li>
 							<li>
 								<Link
-									href='/sambal-noodle-sauce'
-									className='text-gold-200 hover:text-gold-100 transition-colors'
-								>
-									Sambal Noodle Sauce
-								</Link>
-							</li>
-							<li>
-								<Link
 									href='/sambal-vs-hot-sauce'
 									className='text-gold-200 hover:text-gold-100 transition-colors'
 								>
 									Sambal vs Hot Sauce
-								</Link>
-							</li>
-							<li>
-								<Link
-									href='/recipes'
-									className='text-gold-200 hover:text-gold-100 transition-colors'
-								>
-									All Recipes
 								</Link>
 							</li>
 						</ul>
