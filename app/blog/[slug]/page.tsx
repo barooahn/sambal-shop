@@ -12,14 +12,50 @@ const blogPosts = {
 		title: "The History of the Spice Islands: Where Your Sambal Comes From",
 		excerpt: "Journey back to the Maluku Islands, the original Spice Islands that changed world history. Discover the rich culinary heritage and volcanic soil that creates the perfect chilies for authentic sambal.",
 		content: `
-		<p>Long before Europeans knew of the Americas, before the great age of exploration, there existed a chain of volcanic islands in the Indonesian archipelago that would change the course of world history. The Maluku Islands - known to the world as the Spice Islands - were the sole source of nutmeg, cloves, and mace, spices so valuable they were literally worth their weight in gold.</p>
+		<div class="bg-gradient-to-r from-burgundy-50 to-gold-50 border-l-4 border-burgundy-500 p-6 my-8 rounded-r-lg">
+			<p class="text-lg font-semibold text-burgundy-900 mb-4">🗺️ Journey Through Time</p>
+			<p class="text-burgundy-700">Discover how volcanic islands in Indonesia created the perfect conditions for the world's most prized spices - and the authentic sambal we bring to your kitchen today.</p>
+		</div>
 
-		<p>But the Spice Islands gave the world more than just exotic seasonings. They gave us sambal - the fiery, complex chili paste that has become the soul of Indonesian cuisine and is now finding its way into kitchens across the UK.</p>
+		<p class="text-lg leading-relaxed mb-6">Long before Europeans knew of the Americas, before the great age of exploration, there existed a chain of volcanic islands in the Indonesian archipelago that would change the course of world history. The <strong>Maluku Islands</strong> - known to the world as the <em>Spice Islands</em> - were the sole source of nutmeg, cloves, and mace, spices so valuable they were literally worth their weight in gold.</p>
 
-		<h2>The Volcanic Foundation of Flavor</h2>
-		<p>The story of sambal begins with geology. The Maluku Islands sit on the Pacific Ring of Fire, where volcanic activity has created some of the most fertile soil on Earth. This volcanic terroir - rich in minerals and perfectly drained - creates ideal growing conditions for chilies that develop exceptional heat and complexity.</p>
+		<p class="text-lg leading-relaxed mb-8">But the Spice Islands gave the world more than just exotic seasonings. They gave us <a href="/shop" class="text-burgundy-600 hover:text-burgundy-800 underline font-semibold">sambal</a> - the fiery, complex chili paste that has become the soul of Indonesian cuisine and is now finding its way into kitchens across the UK.</p>
 
-		<p>The same volcanic soil that once nurtured the world's most precious spices now grows the chilies that form the foundation of authentic sambal. The mineral-rich earth imparts a distinctive depth of flavor that simply cannot be replicated elsewhere.</p>
+		<div class="bg-gradient-to-r from-burgundy-50 to-gold-50 border border-burgundy-200 rounded-lg p-6 my-8">
+			<h3 class="text-xl font-bold text-burgundy-900 mb-4">📖 In This Article</h3>
+			<div class="grid md:grid-cols-2 gap-4 text-sm">
+				<ul class="space-y-2">
+					<li>• <a href="#volcanic-foundation" class="text-burgundy-600 hover:text-burgundy-800 underline">Volcanic Foundation of Flavor</a></li>
+					<li>• <a href="#indigenous-traditions" class="text-burgundy-600 hover:text-burgundy-800 underline">Indigenous Culinary Traditions</a></li>
+					<li>• <a href="#spice-trade" class="text-burgundy-600 hover:text-burgundy-800 underline">The Spice Trade Era</a></li>
+					<li>• <a href="#science-behind" class="text-burgundy-600 hover:text-burgundy-800 underline">Science Behind Spice Islands Chilies</a></li>
+				</ul>
+				<ul class="space-y-2">
+					<li>• <a href="#traditional-making" class="text-burgundy-600 hover:text-burgundy-800 underline">Traditional Sambal Making</a></li>
+					<li>• <a href="#modern-times" class="text-burgundy-600 hover:text-burgundy-800 underline">Journey to Modern Times</a></li>
+					<li>• <a href="#uk-tradition" class="text-burgundy-600 hover:text-burgundy-800 underline">Bringing Tradition to the UK</a></li>
+					<li>• <a href="#cultural-significance" class="text-burgundy-600 hover:text-burgundy-800 underline">Cultural Significance</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<h2 id="volcanic-foundation" class="text-3xl font-bold text-burgundy-900 mb-6 scroll-mt-20">🌋 The Volcanic Foundation of Flavor</h2>
+
+		<div class="bg-white border border-gold-200 rounded-lg p-6 my-6">
+			<p class="text-lg mb-4">The story of <a href="/sambal-oelek-uk" class="text-burgundy-600 hover:text-burgundy-800 underline">sambal</a> begins with geology. The Maluku Islands sit on the Pacific Ring of Fire, where volcanic activity has created some of the most fertile soil on Earth. This volcanic terroir - rich in minerals and perfectly drained - creates ideal growing conditions for chilies that develop exceptional heat and complexity.</p>
+
+			<div class="bg-red-50 p-4 rounded-lg mb-4">
+				<h3 class="font-bold text-burgundy-800 mb-2">🔥 Why Volcanic Soil Matters</h3>
+				<ul class="space-y-2 text-gray-700">
+					<li>• <strong>Mineral-rich composition:</strong> High levels of potassium and phosphorus</li>
+					<li>• <strong>Perfect drainage:</strong> Prevents waterlogged roots</li>
+					<li>• <strong>Heat development:</strong> Stress conditions increase capsaicin production</li>
+					<li>• <strong>Flavor complexity:</strong> Trace minerals create unique taste profiles</li>
+				</ul>
+			</div>
+
+			<p>The same volcanic soil that once nurtured the world's most precious spices now grows the chilies that form the foundation of <a href="/authentic-vs-store-bought" class="text-burgundy-600 hover:text-burgundy-800 underline">authentic sambal</a>. The mineral-rich earth imparts a distinctive depth of flavor that simply cannot be replicated elsewhere.</p>
+		</div>
 
 		<h2>Before the Spice Trade: Indigenous Culinary Traditions</h2>
 		<p>Long before European ships arrived seeking nutmeg and cloves, the indigenous peoples of the Maluku Islands had developed sophisticated culinary traditions. They understood that the local chilies, when properly prepared, could preserve food in the tropical climate while adding incredible flavor.</p>
@@ -98,6 +134,59 @@ const blogPosts = {
 		<p>The next time you add sambal to your cooking, remember that you're using a condiment with a heritage stretching back to the dawn of the global spice trade. You're participating in a culinary tradition that has survived colonization, war, and globalization to bring you flavors that are truly unique in the world.</p>
 
 		<p>Welcome to the taste of the Spice Islands - where history, geography, and culinary artistry combine to create something truly extraordinary.</p>
+
+		<div class="bg-gradient-to-r from-burgundy-600 to-burgundy-800 text-white rounded-lg p-8 my-8">
+			<h2 class="text-2xl font-bold mb-4">🌶️ Experience Authentic Spice Islands Heritage</h2>
+			<p class="text-lg mb-6">Taste the volcanic terroir and centuries of tradition in every jar of our authentic sambal. Made using traditional methods with chilies from the original Spice Islands.</p>
+			<div class="flex flex-col sm:flex-row gap-4">
+				<a href="/shop" class="bg-white text-burgundy-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center">
+					Shop Authentic Sambal
+				</a>
+				<a href="/chef" class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-burgundy-600 transition-colors text-center">
+					Meet Our Indonesian Chef
+				</a>
+			</div>
+		</div>
+
+		<div class="bg-gradient-to-r from-gold-50 to-cream-50 border border-gold-200 rounded-lg p-8 my-8">
+			<h2 class="text-2xl font-bold text-burgundy-900 mb-6">🍽️ Start Cooking with Authentic Sambal</h2>
+			<div class="grid md:grid-cols-2 gap-6">
+				<div class="bg-white p-4 rounded-lg border border-gold-100">
+					<h3 class="font-bold text-burgundy-800 mb-2">
+						<a href="/recipes/sambal-chicken-stir-fry" class="hover:text-burgundy-600">Sambal Chicken Stir-Fry</a>
+					</h3>
+					<p class="text-gray-700 text-sm">Quick Indonesian-inspired dinner in 25 minutes</p>
+				</div>
+				<div class="bg-white p-4 rounded-lg border border-gold-100">
+					<h3 class="font-bold text-burgundy-800 mb-2">
+						<a href="/recipes/sambal-fried-rice" class="hover:text-burgundy-600">Nasi Goreng (Sambal Fried Rice)</a>
+					</h3>
+					<p class="text-gray-700 text-sm">Indonesia's national dish made authentic</p>
+				</div>
+				<div class="bg-white p-4 rounded-lg border border-gold-100">
+					<h3 class="font-bold text-burgundy-800 mb-2">
+						<a href="/blog/5-ways-sambal-british-cooking" class="hover:text-burgundy-600">British-Indonesian Fusion</a>
+					</h3>
+					<p class="text-gray-700 text-sm">Transform British classics with sambal</p>
+				</div>
+				<div class="bg-white p-4 rounded-lg border border-gold-100">
+					<h3 class="font-bold text-burgundy-800 mb-2">
+						<a href="/sample-pack-try-first" class="hover:text-burgundy-600">Sample Pack</a>
+					</h3>
+					<p class="text-gray-700 text-sm">Try different sambals to find your favorite</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="bg-white border border-gold-200 rounded-lg p-6 my-8">
+			<h2 class="text-xl font-bold text-burgundy-900 mb-4">📚 Continue Your Indonesian Culinary Journey</h2>
+			<div class="space-y-3">
+				<p>• <a href="/blog/5-ways-sambal-british-cooking" class="text-burgundy-600 hover:text-burgundy-800 underline">5 Ways to Use Indonesian Sambal in British Cooking</a></p>
+				<p>• <a href="/blog/ultimate-guide-indonesian-sambal" class="text-burgundy-600 hover:text-burgundy-800 underline">The Ultimate Guide to Indonesian Sambal: Beyond Sriracha</a></p>
+				<p>• <a href="/sambal-vs-sriracha" class="text-burgundy-600 hover:text-burgundy-800 underline">Sambal vs Sriracha: Understanding the Difference</a></p>
+				<p>• <a href="/authentic-vs-store-bought" class="text-burgundy-600 hover:text-burgundy-800 underline">Authentic vs Store-Bought: Why Quality Matters</a></p>
+			</div>
+		</div>
 		`,
 		image: "/images/indonesian_vista.png",
 		category: "Heritage Stories",
@@ -109,64 +198,160 @@ const blogPosts = {
 		title: "5 Ways to Use Indonesian Sambal in British Cooking",
 		excerpt: "Transform your favourite British dishes with authentic Indonesian sambal. From Sunday roasts to fish and chips, discover how this traditional chili paste can revolutionize your cooking.",
 		content: `
-		<p>British cuisine is experiencing a spice revolution, and Indonesian sambal is leading the charge. This isn't about replacing traditional flavors - it's about enhancing them with the complex heat and depth that only authentic sambal can provide. Here are five brilliant ways to incorporate Indonesian sambal into classic British cooking.</p>
+		<p>British cuisine is experiencing a spice revolution, and <a href="/sambal-bali-aromatic-spicy" class="text-burgundy-600 hover:text-burgundy-800 underline">Indonesian sambal</a> is leading the charge. This isn't about replacing traditional flavors - it's about enhancing them with the complex heat and depth that only <a href="/shop" class="text-burgundy-600 hover:text-burgundy-800 underline">authentic sambal</a> can provide.</p>
 
-		<h2>1. Sunday Roast Revolution: Sambal-Glazed Lamb</h2>
-		<p>Transform your Sunday roast with a sambal glaze that will have your guests asking for the recipe. The key is using sambal bali, which contains aromatic spices that complement lamb beautifully.</p>
+		<div class="bg-gradient-to-r from-burgundy-50 to-gold-50 border-l-4 border-burgundy-500 p-6 my-8 rounded-r-lg">
+			<p class="text-lg font-semibold text-burgundy-900 mb-2">🔥 Quick Navigation</p>
+			<ul class="space-y-1 text-burgundy-700">
+				<li>• <a href="#sunday-roast" class="hover:text-burgundy-900 underline">Sunday Roast with Sambal Glaze</a></li>
+				<li>• <a href="#fish-chips" class="hover:text-burgundy-900 underline">Fish & Chips with Sambal Mayo</a></li>
+				<li>• <a href="#full-english" class="hover:text-burgundy-900 underline">Full English with Sambal Beans</a></li>
+				<li>• <a href="#shepherds-pie" class="hover:text-burgundy-900 underline">Spicy Shepherd's Pie</a></li>
+				<li>• <a href="#cheese-toasties" class="hover:text-burgundy-900 underline">Sambal Cheese Toasties</a></li>
+			</ul>
+		</div>
 
-		<h3>The Method:</h3>
-		<p>Mix 2 tablespoons of sambal bali with 1 tablespoon of honey, 2 tablespoons of olive oil, and fresh rosemary. Rub this mixture over your leg of lamb 30 minutes before roasting. The sambal caramelizes beautifully in the oven, creating a glossy, spiced crust that's absolutely divine.</p>
+		<p>Here are five brilliant ways to incorporate Indonesian sambal into classic British cooking:</p>
 
-		<p><strong>Why it works:</strong> The aromatic spices in sambal bali (galangal, lemongrass, kaffir lime) create a complex flavor profile that enhances rather than overwhelms the lamb. The heat builds gradually, making it accessible to all palates.</p>
+		<h2 id="sunday-roast" class="scroll-mt-20">1. Sunday Roast Revolution: Sambal-Glazed Lamb</h2>
 
-		<h2>2. Fish and Chips Reimagined: Sambal Mayo</h2>
-		<p>Forget mushy peas - sambal mayo is the condiment your fish and chips has been waiting for. This fusion creates the perfect balance of creamy coolness and fiery heat.</p>
+		<div class="bg-white border border-gold-200 rounded-lg p-6 my-6">
+			<p class="text-lg mb-4">Transform your Sunday roast with a sambal glaze that will have your guests asking for the recipe. The key is using <a href="/sambal-bali-aromatic-spicy" class="text-burgundy-600 hover:text-burgundy-800 underline">sambal bali</a>, which contains aromatic spices that complement lamb beautifully.</p>
 
-		<h3>The Recipe:</h3>
-		<p>Combine 4 tablespoons of good-quality mayonnaise with 1 teaspoon of sambal oelek (start small - you can always add more). Add a squeeze of lime juice and a pinch of salt. The result is a condiment that transforms ordinary chips into something extraordinary.</p>
+			<h3 class="text-xl font-semibold text-burgundy-800 mb-3">The Method:</h3>
+			<div class="bg-cream-50 p-4 rounded-lg mb-4">
+				<p>Mix 2 tablespoons of <a href="/sambal-bali-aromatic-spicy" class="text-burgundy-600 hover:text-burgundy-800 underline">sambal bali</a> with 1 tablespoon of honey, 2 tablespoons of olive oil, and fresh rosemary. Rub this mixture over your leg of lamb 30 minutes before roasting. The sambal caramelizes beautifully in the oven, creating a glossy, spiced crust that's absolutely divine.</p>
+			</div>
 
-		<p><strong>Pro tip:</strong> Make extra and use it as a sandwich spread, burger sauce, or dip for roasted vegetables. It keeps in the fridge for up to a week.</p>
+			<p><strong>💡 Why it works:</strong> The aromatic spices in sambal bali (galangal, lemongrass, kaffir lime) create a complex flavor profile that enhances rather than overwhelms the lamb. The heat builds gradually, making it accessible to all palates.</p>
+		</div>
 
-		<h2>3. Full English Breakfast Upgrade: Sambal Baked Beans</h2>
-		<p>Elevate your full English with sambal-spiked baked beans that add warmth and complexity to the morning meal. This works particularly well with sambal bali's aromatic profile.</p>
+		<h2 id="fish-chips" class="scroll-mt-20">2. Fish and Chips Reimagined: Sambal Mayo</h2>
 
-		<h3>The Technique:</h3>
-		<p>Heat a tin of good-quality baked beans in a saucepan. Stir in 1-2 teaspoons of sambal bali (depending on your heat tolerance) and a splash of Worcestershire sauce. The sambal adds depth while the familiar bean sweetness balances the heat perfectly.</p>
+		<div class="bg-white border border-gold-200 rounded-lg p-6 my-6">
+			<p class="text-lg mb-4">Forget mushy peas - sambal mayo is the condiment your fish and chips has been waiting for. This fusion creates the perfect balance of creamy coolness and fiery heat.</p>
 
-		<p><strong>Serving suggestion:</strong> Pair with buttery scrambled eggs and crispy bacon. The richness of the eggs helps temper the heat, creating a perfectly balanced breakfast.</p>
+			<h3 class="text-xl font-semibold text-burgundy-800 mb-3">The Recipe:</h3>
+			<div class="bg-cream-50 p-4 rounded-lg mb-4">
+				<p>Combine 4 tablespoons of good-quality mayonnaise with 1 teaspoon of <a href="/sambal-oelek-uk" class="text-burgundy-600 hover:text-burgundy-800 underline">sambal oelek</a> (start small - you can always add more). Add a squeeze of lime juice and a pinch of salt. The result is a condiment that transforms ordinary chips into something extraordinary.</p>
+			</div>
 
-		<h2>4. Shepherd's Pie with a Spicy Twist</h2>
-		<p>Add Indonesian flair to this British classic by incorporating sambal into both the meat layer and the mashed potato topping. The result is comfort food with an exciting edge.</p>
+			<div class="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-r-lg">
+				<p><strong>💡 Pro tip:</strong> Make extra and use it as a sandwich spread, burger sauce, or dip for roasted vegetables. It keeps in the fridge for up to a week. <a href="/recipes/sambal-bbq-marinade" class="text-burgundy-600 hover:text-burgundy-800 underline">Try our sambal marinade recipe</a> for more fusion ideas!</p>
+			</div>
+		</div>
 
-		<h3>For the Meat Layer:</h3>
-		<p>When browning your mince, add 1 tablespoon of sambal oelek along with your onions and carrots. The sambal will cook down and integrate beautifully with the traditional flavors, adding heat without overwhelming the dish.</p>
+		<h2 id="full-english" class="scroll-mt-20">3. Full English Breakfast Upgrade: Sambal Baked Beans</h2>
 
-		<h3>For the Potato Topping:</h3>
-		<p>Mix a small amount of sambal bali into your mashed potatoes along with butter and milk. This creates subtle heat and aromatic complexity that elevates the entire dish.</p>
+		<div class="bg-white border border-gold-200 rounded-lg p-6 my-6">
+			<p class="text-lg mb-4">Elevate your full English with sambal-spiked baked beans that add warmth and complexity to the morning meal. This works particularly well with <a href="/sambal-bali-aromatic-spicy" class="text-burgundy-600 hover:text-burgundy-800 underline">sambal bali's</a> aromatic profile.</p>
 
-		<p><strong>Family-friendly tip:</strong> Keep the sambal separate and let family members add their preferred amount. This way, everyone can enjoy the dish at their comfort level.</p>
+			<h3 class="text-xl font-semibold text-burgundy-800 mb-3">The Technique:</h3>
+			<div class="bg-cream-50 p-4 rounded-lg mb-4">
+				<p>Heat a tin of good-quality baked beans in a saucepan. Stir in 1-2 teaspoons of <a href="/sambal-bali-aromatic-spicy" class="text-burgundy-600 hover:text-burgundy-800 underline">sambal bali</a> (depending on your heat tolerance) and a splash of Worcestershire sauce. The sambal adds depth while the familiar bean sweetness balances the heat perfectly.</p>
+			</div>
 
-		<h2>5. Ploughman's Lunch Enhancement: Sambal Cheese Toasties</h2>
-		<p>Transform the humble cheese toastie into something spectacular with a thin layer of sambal. This works brilliantly with mature cheddar and creates a perfect balance of creamy, sharp, and spicy.</p>
+			<div class="bg-green-50 border-l-4 border-green-400 p-4 rounded-r-lg">
+				<p><strong>🍳 Serving suggestion:</strong> Pair with buttery <a href="/recipes/sambal-scrambled-eggs" class="text-burgundy-600 hover:text-burgundy-800 underline">sambal scrambled eggs</a> and crispy bacon. The richness of the eggs helps temper the heat, creating a perfectly balanced breakfast.</p>
+			</div>
+		</div>
 
-		<h3>The Perfect Combination:</h3>
-		<p>Spread a thin layer of sambal oelek on one slice of bread, add mature cheddar cheese, and top with the second slice. Butter the outside and grill as usual. The sambal melts slightly, creating pockets of heat throughout the sandwich.</p>
+		<h2 id="shepherds-pie" class="scroll-mt-20">4. Shepherd's Pie with a Spicy Twist</h2>
 
-		<p><strong>Gourmet variation:</strong> Add sliced tomatoes and fresh basil for a more sophisticated version. The tomatoes help cool the heat while the basil adds freshness.</p>
+		<div class="bg-white border border-gold-200 rounded-lg p-6 my-6">
+			<p class="text-lg mb-4">Add Indonesian flair to this British classic by incorporating sambal into both the meat layer and the mashed potato topping. The result is comfort food with an exciting edge.</p>
 
-		<h2>Understanding Heat Levels for British Palates</h2>
-		<p>Indonesian sambal is significantly hotter than most British condiments. Here's how to introduce it gradually:</p>
+			<div class="grid md:grid-cols-2 gap-6 mb-4">
+				<div class="bg-red-50 p-4 rounded-lg">
+					<h3 class="text-xl font-semibold text-burgundy-800 mb-3">For the Meat Layer:</h3>
+					<p>When browning your mince, add 1 tablespoon of <a href="/sambal-oelek-uk" class="text-burgundy-600 hover:text-burgundy-800 underline">sambal oelek</a> along with your onions and carrots. The sambal will cook down and integrate beautifully with the traditional flavors, adding heat without overwhelming the dish.</p>
+				</div>
 
-		<p><strong>Start Small:</strong> Begin with 1/4 teaspoon and build up. Authentic sambal is 3-5 times hotter than typical British hot sauces.</p>
+				<div class="bg-yellow-50 p-4 rounded-lg">
+					<h3 class="text-xl font-semibold text-burgundy-800 mb-3">For the Potato Topping:</h3>
+					<p>Mix a small amount of <a href="/sambal-bali-aromatic-spicy" class="text-burgundy-600 hover:text-burgundy-800 underline">sambal bali</a> into your mashed potatoes along with butter and milk. This creates subtle heat and aromatic complexity that elevates the entire dish.</p>
+				</div>
+			</div>
 
-		<p><strong>Choose Your Sambal:</strong> Sambal bali is more approachable for beginners due to its aromatic spices, while sambal oelek provides pure, intense heat.</p>
+			<div class="bg-orange-50 border-l-4 border-orange-400 p-4 rounded-r-lg">
+				<p><strong>👨‍👩‍👧‍👦 Family-friendly tip:</strong> Keep the sambal separate and let family members add their preferred amount. This way, everyone can enjoy the dish at their comfort level. <a href="/sample-pack-try-first" class="text-burgundy-600 hover:text-burgundy-800 underline">Try our sample pack</a> to find your family's perfect heat level!</p>
+			</div>
+		</div>
 
-		<p><strong>Have Dairy Ready:</strong> Keep yogurt, milk, or ice cream nearby for your first tastings. The casein in dairy neutralizes capsaicin better than water.</p>
+		<h2 id="cheese-toasties" class="scroll-mt-20">5. Ploughman's Lunch Enhancement: Sambal Cheese Toasties</h2>
 
-		<h2>Where to Source Authentic Sambal</h2>
-		<p>The key to these recipes is using authentic Indonesian sambal, not mass-produced substitutes. Look for brands that list minimal ingredients - ideally just chilies, salt, and vinegar for sambal oelek, or chilies with traditional spices for sambal bali.</p>
+		<div class="bg-white border border-gold-200 rounded-lg p-6 my-6">
+			<p class="text-lg mb-4">Transform the humble cheese toastie into something spectacular with a thin layer of sambal. This works brilliantly with mature cheddar and creates a perfect balance of creamy, sharp, and spicy.</p>
 
-		<p>Avoid products with artificial colors, excessive preservatives, or sugar as a main ingredient. Authentic sambal should have a chunky texture and vibrant, natural color.</p>
+			<h3 class="text-xl font-semibold text-burgundy-800 mb-3">The Perfect Combination:</h3>
+			<div class="bg-cream-50 p-4 rounded-lg mb-4">
+				<p>Spread a thin layer of <a href="/sambal-oelek-uk" class="text-burgundy-600 hover:text-burgundy-800 underline">sambal oelek</a> on one slice of bread, add mature cheddar cheese, and top with the second slice. Butter the outside and grill as usual. The sambal melts slightly, creating pockets of heat throughout the sandwich.</p>
+			</div>
+
+			<div class="bg-purple-50 border-l-4 border-purple-400 p-4 rounded-r-lg">
+				<p><strong>🧀 Gourmet variation:</strong> Add sliced tomatoes and fresh basil for a more sophisticated version. The tomatoes help cool the heat while the basil adds freshness.</p>
+			</div>
+		</div>
+
+		<div class="bg-gradient-to-r from-burgundy-600 to-burgundy-800 text-white rounded-lg p-8 my-8">
+			<h2 class="text-2xl font-bold mb-4">Ready to Transform Your British Cooking?</h2>
+			<p class="text-lg mb-6">These five recipes are just the beginning. With authentic Indonesian sambal, you can revolutionize your entire approach to British cuisine.</p>
+			<div class="flex flex-col sm:flex-row gap-4">
+				<a href="/shop" class="bg-white text-burgundy-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center">
+					Shop Authentic Sambal
+				</a>
+				<a href="/sample-pack-try-first" class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-burgundy-600 transition-colors text-center">
+					Try Sample Pack First
+				</a>
+			</div>
+		</div>
+
+		<h2 class="text-2xl font-bold text-burgundy-900 mb-6">Understanding Heat Levels for British Palates</h2>
+
+		<div class="bg-red-50 border border-red-200 rounded-lg p-6 my-6">
+			<p class="text-lg mb-6">Indonesian sambal is significantly hotter than most British condiments. Here's how to introduce it gradually:</p>
+
+			<div class="grid md:grid-cols-3 gap-6">
+				<div class="bg-white p-4 rounded-lg border border-red-100">
+					<h3 class="font-bold text-burgundy-800 mb-2">🌶️ Start Small</h3>
+					<p>Begin with 1/4 teaspoon and build up. Authentic sambal is 3-5 times hotter than typical British hot sauces.</p>
+				</div>
+
+				<div class="bg-white p-4 rounded-lg border border-red-100">
+					<h3 class="font-bold text-burgundy-800 mb-2">🎯 Choose Your Sambal</h3>
+					<p><a href="/sambal-bali-aromatic-spicy" class="text-burgundy-600 hover:text-burgundy-800 underline">Sambal bali</a> is more approachable for beginners due to its aromatic spices, while <a href="/sambal-oelek-uk" class="text-burgundy-600 hover:text-burgundy-800 underline">sambal oelek</a> provides pure, intense heat.</p>
+				</div>
+
+				<div class="bg-white p-4 rounded-lg border border-red-100">
+					<h3 class="font-bold text-burgundy-800 mb-2">🥛 Have Dairy Ready</h3>
+					<p>Keep yogurt, milk, or ice cream nearby for your first tastings. The casein in dairy neutralizes capsaicin better than water.</p>
+				</div>
+			</div>
+		</div>
+
+		<h2 class="text-2xl font-bold text-burgundy-900 mb-6">Where to Source Authentic Sambal</h2>
+
+		<div class="bg-gradient-to-r from-gold-50 to-cream-50 border border-gold-200 rounded-lg p-6 my-6">
+			<p class="text-lg mb-4">The key to these recipes is using <a href="/authentic-vs-store-bought" class="text-burgundy-600 hover:text-burgundy-800 underline">authentic Indonesian sambal</a>, not mass-produced substitutes. Look for brands that list minimal ingredients - ideally just chilies, salt, and vinegar for <a href="/sambal-oelek-uk" class="text-burgundy-600 hover:text-burgundy-800 underline">sambal oelek</a>, or chilies with traditional spices for <a href="/sambal-bali-aromatic-spicy" class="text-burgundy-600 hover:text-burgundy-800 underline">sambal bali</a>.</p>
+
+			<div class="bg-white p-4 rounded-lg border border-gold-100 mb-4">
+				<h3 class="font-bold text-burgundy-800 mb-2">✅ What to Look For:</h3>
+				<ul class="space-y-1 text-gray-700">
+					<li>• Minimal, natural ingredients</li>
+					<li>• Chunky texture (not smooth paste)</li>
+					<li>• Vibrant, natural color</li>
+					<li>• No artificial preservatives</li>
+				</ul>
+			</div>
+
+			<div class="bg-burgundy-600 text-white p-4 rounded-lg">
+				<p class="font-semibold mb-2">🛒 Shop Authentic Sambal</p>
+				<p class="mb-3">Get genuine Indonesian sambal made with traditional methods and authentic ingredients.</p>
+				<a href="/shop" class="bg-white text-burgundy-600 px-4 py-2 rounded font-semibold hover:bg-gray-100 transition-colors">
+					Browse Our Collection
+				</a>
+			</div>
+		</div>
 
 		<h2>Storage and Safety Tips</h2>
 		<p>Authentic sambal should be stored in the refrigerator and consumed within 2-3 weeks of opening. The lack of preservatives means it won't last as long as commercial hot sauces, but the flavor intensity more than compensates.</p>
@@ -184,6 +369,51 @@ const blogPosts = {
 		<p>As more British kitchens discover authentic Indonesian ingredients, we're seeing the emergence of a exciting new fusion cuisine that respects both traditions while creating something entirely new.</p>
 
 		<p>Start with one of these five methods, and you'll quickly discover your own creative applications. Welcome to the delicious world of British-Indonesian fusion cooking.</p>
+
+		<div class="bg-gradient-to-r from-burgundy-50 to-gold-50 border border-burgundy-200 rounded-lg p-8 my-8">
+			<h2 class="text-2xl font-bold text-burgundy-900 mb-6">🍽️ Try These Related Recipes</h2>
+			<div class="grid md:grid-cols-2 gap-6">
+				<div class="bg-white p-4 rounded-lg border border-gold-100">
+					<h3 class="font-bold text-burgundy-800 mb-2">
+						<a href="/recipes/sambal-scrambled-eggs" class="hover:text-burgundy-600">Sambal Scrambled Eggs</a>
+					</h3>
+					<p class="text-gray-700 text-sm">Perfect spicy breakfast ready in 10 minutes</p>
+				</div>
+				<div class="bg-white p-4 rounded-lg border border-gold-100">
+					<h3 class="font-bold text-burgundy-800 mb-2">
+						<a href="/recipes/sambal-bbq-marinade" class="hover:text-burgundy-600">Sambal BBQ Marinade</a>
+					</h3>
+					<p class="text-gray-700 text-sm">Transform your grilling with Indonesian flavors</p>
+				</div>
+				<div class="bg-white p-4 rounded-lg border border-gold-100">
+					<h3 class="font-bold text-burgundy-800 mb-2">
+						<a href="/recipes/sambal-fried-rice" class="hover:text-burgundy-600">Sambal Fried Rice</a>
+					</h3>
+					<p class="text-gray-700 text-sm">Indonesia's national dish made easy</p>
+				</div>
+				<div class="bg-white p-4 rounded-lg border border-gold-100">
+					<h3 class="font-bold text-burgundy-800 mb-2">
+						<a href="/recipes/sambal-noodle-soup" class="hover:text-burgundy-600">Sambal Noodle Soup</a>
+					</h3>
+					<p class="text-gray-700 text-sm">Warming comfort food with coconut and spice</p>
+				</div>
+			</div>
+			<div class="text-center mt-6">
+				<a href="/recipes" class="bg-burgundy-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-burgundy-700 transition-colors">
+					View All Recipes
+				</a>
+			</div>
+		</div>
+
+		<div class="bg-white border border-gold-200 rounded-lg p-6 my-8">
+			<h2 class="text-xl font-bold text-burgundy-900 mb-4">📚 Learn More About Indonesian Cuisine</h2>
+			<div class="space-y-3">
+				<p>• <a href="/blog/spice-islands-history" class="text-burgundy-600 hover:text-burgundy-800 underline">The History of the Spice Islands: Where Your Sambal Comes From</a></p>
+				<p>• <a href="/blog/ultimate-guide-indonesian-sambal" class="text-burgundy-600 hover:text-burgundy-800 underline">The Ultimate Guide to Indonesian Sambal: Beyond Sriracha</a></p>
+				<p>• <a href="/sambal-vs-sriracha" class="text-burgundy-600 hover:text-burgundy-800 underline">Sambal vs Sriracha: Understanding the Difference</a></p>
+				<p>• <a href="/chef" class="text-burgundy-600 hover:text-burgundy-800 underline">Meet Chef Yossie: Our Indonesian Culinary Expert</a></p>
+			</div>
+		</div>
 		`,
 		image: "/images/Spice Island Indonesia Sambal Bali 185g Label.png",
 		category: "Cooking Tips",
