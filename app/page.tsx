@@ -11,6 +11,7 @@ import TestimonialsSection from "@/components/home/TestimonialsSection";
 import NewsletterSection from "@/components/home/NewsletterSection";
 import FAQSection from "@/components/home/FAQSection";
 import ContactSection from "@/components/home/ContactSection";
+import SafeImage from "@/components/ui/SafeImage";
 
 export default function Home() {
 	// General Sambal FAQ data for AI search optimization
@@ -118,79 +119,159 @@ export default function Home() {
 					pageTitle='Indonesian Sambal - Frequently Asked Questions'
 				/>
 
-				{/* Hero Section with connecting element */}
+				{/* Hero Section with ingredient connectors */}
 				<div className='relative'>
 					<HeroSection />
-					{/* Flowing connector to next section */}
-					<div className='absolute bottom-0 left-0 w-full h-16 overflow-hidden'>
-						<svg
-							viewBox='0 0 1200 120'
-							className='w-full h-full'
-						>
-							<path
-								d='M0,60 C300,100 900,20 1200,60 L1200,120 L0,120 Z'
-								fill='rgba(255,255,255,0.1)'
-								className='animate-pulse'
+					{/* Fresh Tomatoes connecting to Product section */}
+					<div className='absolute bottom-0 left-0 w-full h-32 overflow-hidden pointer-events-none'>
+						<div className='absolute bottom-8 left-1/4 w-16 h-16 transform -rotate-12'>
+							<SafeImage
+								src='/images/tomatoes-floating.png'
+								alt='Fresh Tomatoes'
+								className='w-full h-full object-contain animate-bounce drop-shadow-lg'
+								style={{
+									animationDelay: "0.5s",
+									animationDuration: "3s",
+								}}
+								fallbackSrc='https://images.pexels.com/photos/533280/pexels-photo-533280.jpeg?auto=compress&cs=tinysrgb&w=64&h=64&fit=crop'
 							/>
-						</svg>
+						</div>
+						<div className='absolute bottom-4 right-1/3 w-12 h-12 transform rotate-45'>
+							<SafeImage
+								src='/images/single-tomato.png'
+								alt='Tomato'
+								className='w-full h-full object-contain animate-pulse drop-shadow-md'
+								fallbackSrc='https://images.pexels.com/photos/533280/pexels-photo-533280.jpeg?auto=compress&cs=tinysrgb&w=48&h=48&fit=crop'
+							/>
+						</div>
+						<div className='absolute bottom-16 left-1/2 w-10 h-10 transform -rotate-6'>
+							<SafeImage
+								src='/images/cherry-tomato.png'
+								alt='Cherry Tomato'
+								className='w-full h-full object-contain animate-bounce drop-shadow-sm'
+								style={{
+									animationDelay: "1.2s",
+									animationDuration: "4s",
+								}}
+								fallbackSrc='https://images.pexels.com/photos/533280/pexels-photo-533280.jpeg?auto=compress&cs=tinysrgb&w=40&h=40&fit=crop'
+							/>
+						</div>
 					</div>
 				</div>
 
-				{/* Product Showcase Section with visual integration */}
+				{/* Product Showcase Section with spice integration */}
 				<div className='relative'>
-					{/* Background shape connecting to previous section */}
-					<div className='absolute top-0 left-0 w-full h-16'>
-						<svg
-							viewBox='0 0 1200 120'
-							className='w-full h-full'
-						>
-							<path
-								d='M0,0 C300,40 900,-40 1200,0 L1200,60 C900,100 300,20 0,60 Z'
-								fill='rgba(255,255,255,0.05)'
+					{/* Floating spices as section connectors */}
+					<div className='absolute top-0 left-0 w-full h-24 overflow-hidden pointer-events-none'>
+						<div className='absolute top-4 left-1/5 w-14 h-14 transform rotate-12'>
+							<SafeImage
+								src='/images/turmeric-powder.png'
+								alt='Turmeric Spice'
+								className='w-full h-full object-contain animate-pulse drop-shadow-lg'
+								fallbackSrc='https://images.pexels.com/photos/4198019/pexels-photo-4198019.jpeg?auto=compress&cs=tinysrgb&w=56&h=56&fit=crop'
 							/>
-						</svg>
+						</div>
+						<div className='absolute top-8 right-1/4 w-8 h-8 transform -rotate-45'>
+							<SafeImage
+								src='/images/small-spice.png'
+								alt='Spice'
+								className='w-full h-full object-contain animate-bounce drop-shadow-md'
+								style={{ animationDelay: "0.8s" }}
+								fallbackSrc='https://images.pexels.com/photos/4198019/pexels-photo-4198019.jpeg?auto=compress&cs=tinysrgb&w=32&h=32&fit=crop'
+							/>
+						</div>
 					</div>
 
 					<div className='relative pt-8'>
 						<ProductShowcase />
 					</div>
 
-					{/* Visual connector with floating elements */}
-					<div className='relative h-20 overflow-hidden'>
-						<div
-							className='absolute left-1/4 top-4 w-6 h-6 bg-red-400/40 rounded-full animate-bounce'
-							style={{ animationDelay: "0.5s" }}
-						></div>
-						<div
-							className='absolute right-1/3 top-8 w-4 h-4 bg-amber-400/40 rounded-full animate-bounce'
-							style={{ animationDelay: "1s" }}
-						></div>
-						<div
-							className='absolute left-1/2 top-2 w-5 h-5 bg-emerald-400/40 rounded-full animate-bounce'
-							style={{ animationDelay: "1.5s" }}
-						></div>
+					{/* Red chili peppers connecting to newsletter */}
+					<div className='relative h-20 overflow-hidden pointer-events-none'>
+						<div className='absolute left-1/6 top-2 w-20 h-6 transform rotate-12'>
+							<SafeImage
+								src='/images/long-red-chili.png'
+								alt='Red Chili Pepper'
+								className='w-full h-full object-contain animate-pulse drop-shadow-md'
+								fallbackSrc='https://images.pexels.com/photos/6252418/pexels-photo-6252418.jpeg?auto=compress&cs=tinysrgb&w=80&h=24&fit=crop'
+							/>
+						</div>
+						<div className='absolute right-1/5 top-8 w-16 h-4 transform -rotate-6'>
+							<SafeImage
+								src='/images/small-chili.png'
+								alt='Small Chili'
+								className='w-full h-full object-contain animate-bounce drop-shadow-sm'
+								style={{ animationDelay: "1s" }}
+								fallbackSrc='https://images.pexels.com/photos/6252418/pexels-photo-6252418.jpeg?auto=compress&cs=tinysrgb&w=64&h=16&fit=crop'
+							/>
+						</div>
+						<div className='absolute left-1/2 top-4 w-12 h-3 transform rotate-45'>
+							<SafeImage
+								src='/images/tiny-chili.png'
+								alt='Tiny Chili'
+								className='w-full h-full object-contain animate-pulse drop-shadow-xs'
+								style={{ animationDelay: "1.5s" }}
+								fallbackSrc='https://images.pexels.com/photos/6252418/pexels-photo-6252418.jpeg?auto=compress&cs=tinysrgb&w=48&h=12&fit=crop'
+							/>
+						</div>
 					</div>
 				</div>
 
-				{/* Newsletter Section with enhanced visual flow */}
+				{/* Newsletter Section with onion/shallot connectors */}
 				<div className='relative'>
 					<div className='absolute top-0 right-0 w-64 h-64 bg-gradient-to-l from-red-300/20 to-transparent rounded-full blur-3xl'></div>
+
+					{/* Shallots and onions floating around newsletter */}
+					<div className='absolute top-4 left-1/6 w-12 h-16 transform -rotate-12 pointer-events-none'>
+						<SafeImage
+							src='/images/shallot-bulb.png'
+							alt='Fresh Shallot'
+							className='w-full h-full object-contain animate-bounce drop-shadow-md'
+							style={{
+								animationDelay: "0.3s",
+								animationDuration: "4s",
+							}}
+							fallbackSrc='https://images.pexels.com/photos/4110251/pexels-photo-4110251.jpeg?auto=compress&cs=tinysrgb&w=48&h=64&fit=crop'
+						/>
+					</div>
+					<div className='absolute bottom-8 right-1/5 w-14 h-18 transform rotate-6 pointer-events-none'>
+						<SafeImage
+							src='/images/red-onion.png'
+							alt='Red Onion'
+							className='w-full h-full object-contain animate-pulse drop-shadow-lg'
+							style={{ animationDelay: "1.2s" }}
+							fallbackSrc='https://images.pexels.com/photos/4110251/pexels-photo-4110251.jpeg?auto=compress&cs=tinysrgb&w=56&h=72&fit=crop'
+						/>
+					</div>
+
 					<NewsletterSection />
 				</div>
 
-				{/* Shipping Section with interconnected design */}
+				{/* Shipping Section with garlic and ginger */}
 				<div className='relative'>
-					{/* Diagonal connecting element */}
-					<div className='absolute top-0 left-0 w-full h-24'>
-						<svg
-							viewBox='0 0 1200 120'
-							className='w-full h-full'
-						>
-							<path
-								d='M0,120 C400,40 800,80 1200,0 L1200,120 Z'
-								fill='rgba(16, 185, 129, 0.1)'
+					{/* Garlic cloves transitioning into section */}
+					<div className='absolute top-0 left-0 w-full h-24 pointer-events-none'>
+						<div className='absolute top-2 left-1/4 w-10 h-12 transform rotate-12'>
+							<SafeImage
+								src='/images/garlic-clove.png'
+								alt='Garlic Clove'
+								className='w-full h-full object-contain animate-bounce drop-shadow-md'
+								style={{
+									animationDelay: "0.8s",
+									animationDuration: "3.5s",
+								}}
+								fallbackSrc='https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=40&h=48&fit=crop'
 							/>
-						</svg>
+						</div>
+						<div className='absolute top-8 right-1/3 w-16 h-10 transform -rotate-12'>
+							<SafeImage
+								src='/images/ginger-root.png'
+								alt='Fresh Ginger'
+								className='w-full h-full object-contain animate-pulse drop-shadow-lg'
+								style={{ animationDelay: "0.4s" }}
+								fallbackSrc='https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=64&h=40&fit=crop'
+							/>
+						</div>
 					</div>
 
 					<div className='relative pt-12'>
@@ -200,27 +281,58 @@ export default function Home() {
 
 				{/* Story Section with enhanced imagery integration */}
 				<div className='relative'>
-					{/* Background imagery blend */}
-					<div className='absolute top-1/4 left-0 w-32 h-32 bg-amber-300/20 rounded-full blur-2xl'></div>
-					<div className='absolute bottom-1/4 right-0 w-40 h-40 bg-red-300/15 rounded-full blur-3xl'></div>
+					{/* Traditional mortar and pestle ingredients */}
+					<div className='absolute top-1/4 left-4 w-16 h-16 pointer-events-none'>
+						<SafeImage
+							src='/images/mortar-pestle.png'
+							alt='Traditional Mortar & Pestle'
+							className='w-full h-full object-contain animate-pulse drop-shadow-xl'
+							style={{ animationDelay: "0.6s" }}
+							fallbackSrc='https://images.pexels.com/photos/4198019/pexels-photo-4198019.jpeg?auto=compress&cs=tinysrgb&w=64&h=64&fit=crop'
+						/>
+					</div>
+					<div className='absolute bottom-1/4 right-8 w-20 h-12 transform rotate-12 pointer-events-none'>
+						<SafeImage
+							src='/images/dried-chilies.png'
+							alt='Dried Chilies'
+							className='w-full h-full object-contain animate-bounce drop-shadow-lg'
+							style={{
+								animationDelay: "1.8s",
+								animationDuration: "5s",
+							}}
+							fallbackSrc='https://images.pexels.com/photos/6252418/pexels-photo-6252418.jpeg?auto=compress&cs=tinysrgb&w=80&h=48&fit=crop'
+						/>
+					</div>
 
 					<StorySection />
 
-					{/* Flowing transition */}
-					<div className='absolute bottom-0 left-0 w-full h-16'>
-						<svg
-							viewBox='0 0 1200 120'
-							className='w-full h-full'
-						>
-							<path
-								d='M0,60 C300,0 900,120 1200,60 L1200,120 L0,120 Z'
-								fill='rgba(234, 88, 12, 0.08)'
+					{/* Palm oil and coconut transitioning to testimonials */}
+					<div className='absolute bottom-0 left-0 w-full h-16 pointer-events-none'>
+						<div className='absolute bottom-4 left-1/3 w-12 h-12 transform -rotate-6'>
+							<SafeImage
+								src='/images/coconut-half.png'
+								alt='Fresh Coconut'
+								className='w-full h-full object-contain animate-pulse drop-shadow-md'
+								style={{ animationDelay: "0.9s" }}
+								fallbackSrc='https://images.pexels.com/photos/1630588/pexels-photo-1630588.jpeg?auto=compress&cs=tinysrgb&w=48&h=48&fit=crop'
 							/>
-						</svg>
+						</div>
+						<div className='absolute bottom-2 right-1/4 w-8 h-10 transform rotate-12'>
+							<SafeImage
+								src='/images/palm-oil-drop.png'
+								alt='Palm Oil'
+								className='w-full h-full object-contain animate-bounce drop-shadow-sm'
+								style={{
+									animationDelay: "1.4s",
+									animationDuration: "3s",
+								}}
+								fallbackSrc='https://images.pexels.com/photos/1630588/pexels-photo-1630588.jpeg?auto=compress&cs=tinysrgb&w=32&h=40&fit=crop'
+							/>
+						</div>
 					</div>
 				</div>
 
-				{/* Testimonials Section */}
+				{/* Testimonials Section with final visual enhancement */}
 				<div className='relative pt-8'>
 					<TestimonialsSection />
 				</div>
