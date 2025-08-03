@@ -181,7 +181,7 @@ export default function HeroSection() {
 								<div className='aspect-square rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 bg-white/15 backdrop-blur-sm p-8'>
 									<div className='w-full h-full rounded-2xl flex items-center justify-center'>
 										<OptimizedImage
-											src='/images/Spice Island Indonesia Sambal Oelek 185g Label.png'
+											src='/images/Spice Island Indonesia Sambal Oelek 185g Label.webp'
 											alt='Spice Island Indonesia Sambal Oelek 185g - Authentic Indonesian Chili Paste'
 											width={400}
 											height={400}

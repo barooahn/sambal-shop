@@ -126,7 +126,7 @@ export default function Home() {
 					<div className='absolute bottom-0 left-0 w-full h-32 overflow-hidden pointer-events-none'>
 						<div className='absolute bottom-8 left-1/4 w-16 h-16 transform -rotate-12'>
 							<SafeImage
-								src='/images/tomatoes-floating.png'
+								src='/images/tomatoes-floating.webp'
 								alt='Fresh Tomatoes'
 								className='w-full h-full object-contain animate-bounce drop-shadow-lg'
 								style={{
@@ -138,22 +138,22 @@ export default function Home() {
 						</div>
 						<div className='absolute bottom-4 right-1/3 w-12 h-12 transform rotate-45'>
 							<SafeImage
-								src='/images/single-tomato.png'
-								alt='Tomato'
+								src='/images/long-red-chili.webp'
+								alt='Red Chili'
 								className='w-full h-full object-contain animate-pulse drop-shadow-md'
-								fallbackSrc='https://images.pexels.com/photos/533280/pexels-photo-533280.jpeg?auto=compress&cs=tinysrgb&w=48&h=48&fit=crop'
+								fallbackSrc='https://images.pexels.com/photos/6252418/pexels-photo-6252418.jpeg?auto=compress&cs=tinysrgb&w=48&h=48&fit=crop'
 							/>
 						</div>
 						<div className='absolute bottom-16 left-1/2 w-10 h-10 transform -rotate-6'>
 							<SafeImage
-								src='/images/cherry-tomato.png'
-								alt='Cherry Tomato'
+								src='/images/crushed_chili.webp'
+								alt='Crushed Chili'
 								className='w-full h-full object-contain animate-bounce drop-shadow-sm'
 								style={{
 									animationDelay: "1.2s",
 									animationDuration: "4s",
 								}}
-								fallbackSrc='https://images.pexels.com/photos/533280/pexels-photo-533280.jpeg?auto=compress&cs=tinysrgb&w=40&h=40&fit=crop'
+								fallbackSrc='https://images.pexels.com/photos/6252418/pexels-photo-6252418.jpeg?auto=compress&cs=tinysrgb&w=40&h=40&fit=crop'
 							/>
 						</div>
 					</div>
@@ -165,7 +165,7 @@ export default function Home() {
 					<div className='absolute top-0 left-0 w-full h-24 overflow-hidden pointer-events-none'>
 						<div className='absolute top-4 left-1/5 w-14 h-14 transform rotate-12'>
 							<SafeImage
-								src='/images/turmeric-powder.png'
+								src='/images/turmeric-powder.webp'
 								alt='Turmeric Spice'
 								className='w-full h-full object-contain animate-pulse drop-shadow-lg'
 								fallbackSrc='https://images.pexels.com/photos/4198019/pexels-photo-4198019.jpeg?auto=compress&cs=tinysrgb&w=56&h=56&fit=crop'
@@ -173,8 +173,8 @@ export default function Home() {
 						</div>
 						<div className='absolute top-8 right-1/4 w-8 h-8 transform -rotate-45'>
 							<SafeImage
-								src='/images/small-spice.png'
-								alt='Spice'
+								src='/images/crushed_chili.webp'
+								alt='Crushed Chili'
 								className='w-full h-full object-contain animate-bounce drop-shadow-md'
 								style={{ animationDelay: "0.8s" }}
 								fallbackSrc='https://images.pexels.com/photos/4198019/pexels-photo-4198019.jpeg?auto=compress&cs=tinysrgb&w=32&h=32&fit=crop'
@@ -190,7 +190,7 @@ export default function Home() {
 					<div className='relative h-20 overflow-hidden pointer-events-none'>
 						<div className='absolute left-1/6 top-2 w-20 h-6 transform rotate-12'>
 							<SafeImage
-								src='/images/long-red-chili.png'
+								src='/images/long-red-chili.webp'
 								alt='Red Chili Pepper'
 								className='w-full h-full object-contain animate-pulse drop-shadow-md'
 								fallbackSrc='https://images.pexels.com/photos/6252418/pexels-photo-6252418.jpeg?auto=compress&cs=tinysrgb&w=80&h=24&fit=crop'
@@ -198,8 +198,8 @@ export default function Home() {
 						</div>
 						<div className='absolute right-1/5 top-8 w-16 h-4 transform -rotate-6'>
 							<SafeImage
-								src='/images/small-chili.png'
-								alt='Small Chili'
+								src='/images/crushed_chili.webp'
+								alt='Crushed Chili'
 								className='w-full h-full object-contain animate-bounce drop-shadow-sm'
 								style={{ animationDelay: "1s" }}
 								fallbackSrc='https://images.pexels.com/photos/6252418/pexels-photo-6252418.jpeg?auto=compress&cs=tinysrgb&w=64&h=16&fit=crop'
@@ -207,8 +207,8 @@ export default function Home() {
 						</div>
 						<div className='absolute left-1/2 top-4 w-12 h-3 transform rotate-45'>
 							<SafeImage
-								src='/images/tiny-chili.png'
-								alt='Tiny Chili'
+								src='/images/turmeric-powder.webp'
+								alt='Turmeric Powder'
 								className='w-full h-full object-contain animate-pulse drop-shadow-xs'
 								style={{ animationDelay: "1.5s" }}
 								fallbackSrc='https://images.pexels.com/photos/6252418/pexels-photo-6252418.jpeg?auto=compress&cs=tinysrgb&w=48&h=12&fit=crop'
@@ -224,7 +224,7 @@ export default function Home() {
 					{/* Shallots and onions floating around newsletter */}
 					<div className='absolute top-4 left-1/6 w-12 h-16 transform -rotate-12 pointer-events-none'>
 						<SafeImage
-							src='/images/shallot-bulb.png'
+							src='/images/shallot-bulb.webp'
 							alt='Fresh Shallot'
 							className='w-full h-full object-contain animate-bounce drop-shadow-md'
 							style={{
@@ -236,8 +236,8 @@ export default function Home() {
 					</div>
 					<div className='absolute bottom-8 right-1/5 w-14 h-18 transform rotate-6 pointer-events-none'>
 						<SafeImage
-							src='/images/red-onion.png'
-							alt='Red Onion'
+							src='/images/shallot-bulb.webp'
+							alt='Shallot Bulb'
 							className='w-full h-full object-contain animate-pulse drop-shadow-lg'
 							style={{ animationDelay: "1.2s" }}
 							fallbackSrc='https://images.pexels.com/photos/4110251/pexels-photo-4110251.jpeg?auto=compress&cs=tinysrgb&w=56&h=72&fit=crop'
@@ -253,7 +253,7 @@ export default function Home() {
 					<div className='absolute top-0 left-0 w-full h-24 pointer-events-none'>
 						<div className='absolute top-2 left-1/4 w-10 h-12 transform rotate-12'>
 							<SafeImage
-								src='/images/garlic-clove.png'
+								src='/images/garlic-clove.webp'
 								alt='Garlic Clove'
 								className='w-full h-full object-contain animate-bounce drop-shadow-md'
 								style={{
@@ -265,8 +265,8 @@ export default function Home() {
 						</div>
 						<div className='absolute top-8 right-1/3 w-16 h-10 transform -rotate-12'>
 							<SafeImage
-								src='/images/ginger-root.png'
-								alt='Fresh Ginger'
+								src='/images/turmeric-powder.webp'
+								alt='Turmeric Powder'
 								className='w-full h-full object-contain animate-pulse drop-shadow-lg'
 								style={{ animationDelay: "0.4s" }}
 								fallbackSrc='https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=64&h=40&fit=crop'
@@ -284,7 +284,7 @@ export default function Home() {
 					{/* Traditional mortar and pestle ingredients */}
 					<div className='absolute top-1/4 left-4 w-16 h-16 pointer-events-none'>
 						<SafeImage
-							src='/images/mortar-pestle.png'
+							src='/images/mortar-pestle.webp'
 							alt='Traditional Mortar & Pestle'
 							className='w-full h-full object-contain animate-pulse drop-shadow-xl'
 							style={{ animationDelay: "0.6s" }}
@@ -293,8 +293,8 @@ export default function Home() {
 					</div>
 					<div className='absolute bottom-1/4 right-8 w-20 h-12 transform rotate-12 pointer-events-none'>
 						<SafeImage
-							src='/images/dried-chilies.png'
-							alt='Dried Chilies'
+							src='/images/long-red-chili.webp'
+							alt='Red Chili'
 							className='w-full h-full object-contain animate-bounce drop-shadow-lg'
 							style={{
 								animationDelay: "1.8s",
@@ -310,8 +310,8 @@ export default function Home() {
 					<div className='absolute bottom-0 left-0 w-full h-16 pointer-events-none'>
 						<div className='absolute bottom-4 left-1/3 w-12 h-12 transform -rotate-6'>
 							<SafeImage
-								src='/images/coconut-half.png'
-								alt='Fresh Coconut'
+								src='/images/shallot-bulb.webp'
+								alt='Shallot Bulb'
 								className='w-full h-full object-contain animate-pulse drop-shadow-md'
 								style={{ animationDelay: "0.9s" }}
 								fallbackSrc='https://images.pexels.com/photos/1630588/pexels-photo-1630588.jpeg?auto=compress&cs=tinysrgb&w=48&h=48&fit=crop'
@@ -319,8 +319,8 @@ export default function Home() {
 						</div>
 						<div className='absolute bottom-2 right-1/4 w-8 h-10 transform rotate-12'>
 							<SafeImage
-								src='/images/palm-oil-drop.png'
-								alt='Palm Oil'
+								src='/images/turmeric-powder.webp'
+								alt='Turmeric Powder'
 								className='w-full h-full object-contain animate-bounce drop-shadow-sm'
 								style={{
 									animationDelay: "1.4s",

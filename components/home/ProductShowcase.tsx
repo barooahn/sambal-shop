@@ -33,7 +33,7 @@ export default function ProductShowcase() {
 									{/* Subtle inner glass effect */}
 									<div className='absolute inset-4 rounded-2xl bg-gradient-to-br from-white/10 to-transparent backdrop-blur-sm'></div>
 									<Image
-										src='/images/Spice Island Indonesia Sambal Oelek 185g Label.png'
+										src='/images/Spice Island Indonesia Sambal Oelek 185g Label.webp'
 										alt='Spice Island Indonesia Sambal Oelek 185g - Pure Indonesian chili paste, handcrafted using traditional recipes'
 										width={300}
 										height={300}
@@ -89,7 +89,7 @@ export default function ProductShowcase() {
 							<div className='aspect-square rounded-3xl overflow-hidden shadow-lg group-hover:shadow-luxury transition-all duration-300 bg-gradient-to-br from-cream-50 to-gold-50'>
 								<div className='w-full h-full flex items-center justify-center p-6'>
 									<Image
-										src='/images/Spice Island Indonesia Sambal Bali 185g Label.png'
+										src='/images/Spice Island Indonesia Sambal Bali 185g Label.webp'
 										alt='Spice Island Indonesia Sambal Bali 185g - Sweet and spicy Indonesian chili paste with aromatic spices'
 										width={300}
 										height={300}
@@ -141,7 +141,7 @@ export default function ProductShowcase() {
 							<div className='aspect-square rounded-3xl overflow-hidden shadow-lg group-hover:shadow-luxury transition-all duration-300 bg-gradient-to-br from-cream-50 to-gold-50'>
 								<div className='w-full h-full flex items-center justify-center p-6'>
 									<Image
-										src='/images/Spice Island Indonesia Complete Packaging System Mockup.png'
+										src='/images/Spice Island Indonesia Complete Packaging System Mockup.webp'
 										alt='Spice Island Indonesia Heritage Gift Set - Complete packaging with two authentic Indonesian sambal varieties'
 										width={300}
 										height={300}
@@ -210,7 +210,7 @@ export default function ProductShowcase() {
 								<div className='aspect-square max-w-xs mx-auto rounded-3xl overflow-hidden shadow-lg bg-gradient-to-br from-cream-50 to-gold-50'>
 									<div className='w-full h-full flex items-center justify-center p-6'>
 										<Image
-											src='/images/Spice Island Indonesia Sambal Oelek 75g Sample Label.png'
+											src='/images/Spice Island Indonesia Sambal Oelek 75g Sample Label.webp'
 											alt='Spice Island Indonesia Sambal Oelek 75g Sample - Try before you buy, perfect for discovering authentic Indonesian flavors'
 											width={250}
 											height={250}

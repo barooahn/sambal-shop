@@ -139,8 +139,8 @@ export const criticalCSS = `
 
 // Images to preload (most critical first)
 export const criticalImages = [
-	"/images/Spice Island Indonesia Sambal Oelek 185g Label.png", // Hero image
-	"/images/Spice Island Indonesia Complete Packaging System Mockup.png", // Product showcase
+	"/images/Spice Island Indonesia Sambal Oelek 185g Label.webp", // Hero image
+	"/images/Spice Island Indonesia Complete Packaging System Mockup.webp", // Product showcase
 ];
 
 // Utility function to measure and report performance
