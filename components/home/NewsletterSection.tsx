@@ -61,9 +61,9 @@ export default function NewsletterSection() {
 	return (
 		<section
 			id='newsletter-signup'
-			className='py-24 relative overflow-hidden'
+			className='relative overflow-hidden'
 		>
-			<div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+			<div className='pt-24 relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 				<div className='text-center mb-16'>
 					<div className='flex items-center justify-center gap-2 mb-6'>
 						<Sparkles className='w-8 h-8 text-gold-600' />

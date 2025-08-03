@@ -97,3 +97,18 @@
 .font-body {
 	font-family: var(--font-inter), sans-serif;
 }
+
+/* Floating animation for ingredients */
+.animate-float {
+	animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+	0%,
+	100% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(-10px);
+	}
+}

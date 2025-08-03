@@ -5,7 +5,7 @@ import { ChefHat, Award, Leaf, Truck } from "lucide-react";
 
 export default function ProductShowcase() {
 	return (
-		<section className='py-24 relative overflow-hidden'>
+		<section className='relative overflow-hidden'>
 			<div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 				<div className='text-center mb-20'>
 					<h2 className='text-4xl sm:text-5xl lg:text-6xl font-bold text-burgundy-900 mb-6 font-brand'>

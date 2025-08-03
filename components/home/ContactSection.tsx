@@ -87,16 +87,15 @@ export default function ContactSection() {
 				</div>
 
 				{/* Clean glass morphism contact form */}
-				<div className='bg-white/20 backdrop-blur-md rounded-3xl p-8 lg:p-12 shadow-xl relative overflow-hidden hover:bg-white/25 transition-all duration-500'>
-					{/* Multi-layer glass effect */}
-					<div className='absolute inset-0 bg-gradient-to-br from-white/10 via-blue-50/20 to-indigo-50/10 backdrop-blur-sm'></div>
-					<div className='absolute inset-4 bg-gradient-to-br from-white/5 to-transparent rounded-2xl backdrop-blur-xs'></div>
+				<div className='bg-white/80 rounded-3xl p-8 lg:p-12 shadow-xl relative overflow-hidden hover:bg-white/85 transition-all duration-500 border border-white/50'>
+					{/* Subtle background gradient */}
+					<div className='absolute inset-0 bg-gradient-to-br from-white/20 via-blue-50/10 to-indigo-50/5'></div>
 
-					{/* Decorative top border with glass effect */}
-					<div className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-burgundy-600/80 via-blue-500/60 to-burgundy-600/80 backdrop-blur-sm'></div>
+					{/* Decorative top border */}
+					<div className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-burgundy-600/80 via-blue-500/60 to-burgundy-600/80'></div>
 
 					<div className='text-center mb-10 relative'>
-						<div className='inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-burgundy-500/80 to-burgundy-600/80 backdrop-blur-sm rounded-full mb-6 shadow-lg'>
+						<div className='inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-burgundy-500 to-burgundy-600 rounded-full mb-6 shadow-lg'>
 							<svg
 								className='w-8 h-8 text-white drop-shadow-sm'
 								fill='none'
@@ -155,7 +154,7 @@ export default function ContactSection() {
 											})
 										}
 										required
-										className='text-lg py-4 pl-12 pr-4 border-2 border-gold-300/50 focus:border-burgundy-600 rounded-xl font-body bg-white/80 backdrop-blur-sm shadow-sm hover:shadow-md transition-all duration-200'
+										className='text-lg py-4 pl-12 pr-4 border-2 border-gold-300/50 focus:border-burgundy-600 rounded-xl font-body bg-white/95 shadow-sm hover:shadow-md transition-all duration-200'
 									/>
 								</div>
 							</div>
@@ -191,7 +190,7 @@ export default function ContactSection() {
 											})
 										}
 										required
-										className='text-lg py-4 pl-12 pr-4 border-2 border-gold-300/50 focus:border-burgundy-600 rounded-xl font-body bg-white/80 backdrop-blur-sm shadow-sm hover:shadow-md transition-all duration-200'
+										className='text-lg py-4 pl-12 pr-4 border-2 border-gold-300/50 focus:border-burgundy-600 rounded-xl font-body bg-white/95 shadow-sm hover:shadow-md transition-all duration-200'
 									/>
 								</div>
 							</div>
@@ -226,7 +225,7 @@ export default function ContactSection() {
 										})
 									}
 									required
-									className='min-h-40 text-lg pt-4 pl-12 pr-4 pb-4 border-2 border-gold-300/50 focus:border-burgundy-600 rounded-xl font-body bg-white/80 backdrop-blur-sm shadow-sm hover:shadow-md transition-all duration-200 resize-none'
+									className='min-h-40 text-lg pt-4 pl-12 pr-4 pb-4 border-2 border-gold-300/50 focus:border-burgundy-600 rounded-xl font-body bg-white/95 shadow-sm hover:shadow-md transition-all duration-200 resize-none'
 								/>
 							</div>
 						</div>

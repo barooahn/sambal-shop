@@ -11,7 +11,191 @@ import TestimonialsSection from "@/components/home/TestimonialsSection";
 import NewsletterSection from "@/components/home/NewsletterSection";
 import FAQSection from "@/components/home/FAQSection";
 import ContactSection from "@/components/home/ContactSection";
-import SafeImage from "@/components/ui/SafeImage";
+import FloatingIngredients from "@/components/ui/FloatingIngredients";
+import { Waves, Triangle, Circle, Square } from "lucide-react";
+
+// Ingredient configurations for different sections
+const heroIngredients = [
+	{
+		src: "/images/tomatoes-floating.webp",
+		alt: "Fresh Tomatoes",
+		size: "lg" as const,
+		position: { bottom: "-50px", right: "10px" },
+		rotation: 0,
+		animationDelay: "0.5s",
+		animationDuration: "6s",
+	},
+	{
+		src: "/images/garlic-clove.webp",
+		alt: "Garlic Clove",
+		size: "md" as const,
+		position: { bottom: "-50px", left: "10px" },
+		rotation: 0,
+	},
+];
+
+const productIngredients: {
+	src: string;
+	alt: string;
+	size: "sm" | "md" | "lg";
+	position: { top?: string; bottom?: string; left?: string; right?: string };
+	rotation: number;
+	animationDelay?: string;
+	animationDuration?: string;
+	opacity?: number;
+}[] = [];
+
+const storyIngredients = [
+	{
+		src: "/images/garlic-clove.webp",
+		alt: "Garlic Clove",
+		size: "md" as const,
+		position: { bottom: "-50px", right: "10px" },
+		rotation: 0,
+		animationDelay: "0.6s",
+		animationDuration: "6s",
+	},
+	{
+		src: "/images/mortar-pestle.webp",
+		alt: "Mortar & Pestle",
+		size: "lg" as const,
+		position: { bottom: "-50px", left: "10px" },
+		rotation: 0,
+	},
+];
+
+const newsletterIngredients = [
+	{
+		src: "/images/shallot-bulb.webp",
+		alt: "Shallot",
+		size: "sm" as const,
+		position: { top: "-300px", left: "10px" },
+		rotation: 0,
+		animationDelay: "0.3s",
+		animationDuration: "5s",
+	},
+	{
+		src: "/images/long-red-chili.webp",
+		alt: "Red Chili",
+		size: "md" as const,
+		position: { top: "-300px", right: "10px" },
+		rotation: 0,
+	},
+];
+
+const transitionIngredients = [
+	{
+		src: "/images/turmeric-powder.webp",
+		alt: "Turmeric Powder",
+		size: "lg" as const,
+		position: { bottom: "-50px", left: "10px" },
+		rotation: 15,
+		animationDelay: "0.2s",
+		animationDuration: "8s",
+	},
+	{
+		src: "/images/mortar-pestle.webp",
+		alt: "Mortar & Pestle",
+		size: "md" as const,
+		position: { bottom: "-50px", right: "10px" },
+		rotation: -10,
+		animationDelay: "0.7s",
+		animationDuration: "6s",
+	},
+];
+
+const shippingIngredients = [
+	{
+		src: "/images/garlic-clove.webp",
+		alt: "Garlic Clove",
+		size: "md" as const,
+		position: { bottom: "-50px", left: "10px" },
+		rotation: 0,
+	},
+	{
+		src: "/images/turmeric-powder.webp",
+		alt: "Turmeric Powder",
+		size: "sm" as const,
+		position: { bottom: "-50px", right: "10px" },
+		rotation: 0,
+	},
+];
+
+const cookingExperienceIngredients = [
+	{
+		src: "/images/long-red-chili.webp",
+		alt: "Red Chili",
+		size: "md" as const,
+		position: { top: "-100px", left: "10px" },
+		rotation: 12,
+		animationDelay: "0.4s",
+		animationDuration: "7s",
+	},
+	{
+		src: "/images/shallot-bulb.webp",
+		alt: "Shallot",
+		size: "sm" as const,
+		position: { top: "-100px", right: "10px" },
+		rotation: -8,
+		animationDelay: "0.9s",
+		animationDuration: "5s",
+	},
+];
+
+const problemSolutionIngredients = [
+	{
+		src: "/images/mortar-pestle.webp",
+		alt: "Mortar & Pestle",
+		size: "sm" as const,
+		position: { bottom: "-50px", left: "10px" },
+		rotation: 0,
+	},
+	{
+		src: "/images/tomatoes-floating.webp",
+		alt: "Fresh Tomatoes",
+		size: "md" as const,
+		position: { bottom: "-50px", right: "10px" },
+		rotation: 0,
+	},
+];
+
+const faqIngredients = [
+	{
+		src: "/images/tomatoes-floating.webp",
+		alt: "Fresh Tomatoes",
+		size: "md" as const,
+		position: { top: "-300px", right: "10px" },
+		rotation: 0,
+	},
+	{
+		src: "/images/garlic-clove.webp",
+		alt: "Garlic Clove",
+		size: "sm" as const,
+		position: { top: "-300px", left: "10px" },
+		rotation: 0,
+	},
+];
+
+const contactIngredients = [
+	{
+		src: "/images/turmeric-powder.webp",
+		alt: "Turmeric Powder",
+		size: "lg" as const,
+		position: { top: "-100px", right: "5%" },
+		rotation: 20,
+		animationDelay: "0.6s",
+		animationDuration: "8s",
+	},
+	{
+		src: "/images/mortar-pestle.webp",
+		alt: "Mortar & Pestle",
+		size: "md" as const,
+		position: { top: "-80px", left: "8%" },
+		rotation: -15,
+		animationDelay: "1.2s",
+		animationDuration: "6s",
+	},
+];
 
 export default function Home() {
 	// General Sambal FAQ data for AI search optimization
@@ -119,220 +303,55 @@ export default function Home() {
 					pageTitle='Indonesian Sambal - Frequently Asked Questions'
 				/>
 
-				{/* Hero Section with ingredient connectors */}
+				{/* Hero Section */}
 				<div className='relative'>
 					<HeroSection />
-					{/* Fresh Tomatoes connecting to Product section */}
-					<div className='absolute bottom-0 left-0 w-full h-32 overflow-hidden pointer-events-none'>
-						<div className='absolute bottom-8 left-1/4 w-16 h-16 transform -rotate-12'>
-							<SafeImage
-								src='/images/tomatoes-floating.webp'
-								alt='Fresh Tomatoes'
-								className='w-full h-full object-contain animate-bounce drop-shadow-lg'
-								style={{
-									animationDelay: "0.5s",
-									animationDuration: "3s",
-								}}
-								fallbackSrc='https://images.pexels.com/photos/533280/pexels-photo-533280.jpeg?auto=compress&cs=tinysrgb&w=64&h=64&fit=crop'
-							/>
-						</div>
-						<div className='absolute bottom-4 right-1/3 w-12 h-12 transform rotate-45'>
-							<SafeImage
-								src='/images/long-red-chili.webp'
-								alt='Red Chili'
-								className='w-full h-full object-contain animate-pulse drop-shadow-md'
-								fallbackSrc='https://images.pexels.com/photos/6252418/pexels-photo-6252418.jpeg?auto=compress&cs=tinysrgb&w=48&h=48&fit=crop'
-							/>
-						</div>
-						<div className='absolute bottom-16 left-1/2 w-10 h-10 transform -rotate-6'>
-							<SafeImage
-								src='/images/crushed_chili.webp'
-								alt='Crushed Chili'
-								className='w-full h-full object-contain animate-bounce drop-shadow-sm'
-								style={{
-									animationDelay: "1.2s",
-									animationDuration: "4s",
-								}}
-								fallbackSrc='https://images.pexels.com/photos/6252418/pexels-photo-6252418.jpeg?auto=compress&cs=tinysrgb&w=40&h=40&fit=crop'
-							/>
-						</div>
-					</div>
+					<FloatingIngredients ingredients={heroIngredients} />
 				</div>
 
-				{/* Product Showcase Section with spice integration */}
+				{/* Product Showcase Section */}
 				<div className='relative'>
-					{/* Floating spices as section connectors */}
-					<div className='absolute top-0 left-0 w-full h-24 overflow-hidden pointer-events-none'>
-						<div className='absolute top-4 left-1/5 w-14 h-14 transform rotate-12'>
-							<SafeImage
-								src='/images/turmeric-powder.webp'
-								alt='Turmeric Spice'
-								className='w-full h-full object-contain animate-pulse drop-shadow-lg'
-								fallbackSrc='https://images.pexels.com/photos/4198019/pexels-photo-4198019.jpeg?auto=compress&cs=tinysrgb&w=56&h=56&fit=crop'
-							/>
-						</div>
-						<div className='absolute top-8 right-1/4 w-8 h-8 transform -rotate-45'>
-							<SafeImage
-								src='/images/crushed_chili.webp'
-								alt='Crushed Chili'
-								className='w-full h-full object-contain animate-bounce drop-shadow-md'
-								style={{ animationDelay: "0.8s" }}
-								fallbackSrc='https://images.pexels.com/photos/4198019/pexels-photo-4198019.jpeg?auto=compress&cs=tinysrgb&w=32&h=32&fit=crop'
-							/>
-						</div>
-					</div>
-
 					<div className='relative pt-8'>
 						<ProductShowcase />
 					</div>
-
-					{/* Red chili peppers connecting to newsletter */}
-					<div className='relative h-20 overflow-hidden pointer-events-none'>
-						<div className='absolute left-1/6 top-2 w-20 h-6 transform rotate-12'>
-							<SafeImage
-								src='/images/long-red-chili.webp'
-								alt='Red Chili Pepper'
-								className='w-full h-full object-contain animate-pulse drop-shadow-md'
-								fallbackSrc='https://images.pexels.com/photos/6252418/pexels-photo-6252418.jpeg?auto=compress&cs=tinysrgb&w=80&h=24&fit=crop'
-							/>
-						</div>
-						<div className='absolute right-1/5 top-8 w-16 h-4 transform -rotate-6'>
-							<SafeImage
-								src='/images/crushed_chili.webp'
-								alt='Crushed Chili'
-								className='w-full h-full object-contain animate-bounce drop-shadow-sm'
-								style={{ animationDelay: "1s" }}
-								fallbackSrc='https://images.pexels.com/photos/6252418/pexels-photo-6252418.jpeg?auto=compress&cs=tinysrgb&w=64&h=16&fit=crop'
-							/>
-						</div>
-						<div className='absolute left-1/2 top-4 w-12 h-3 transform rotate-45'>
-							<SafeImage
-								src='/images/turmeric-powder.webp'
-								alt='Turmeric Powder'
-								className='w-full h-full object-contain animate-pulse drop-shadow-xs'
-								style={{ animationDelay: "1.5s" }}
-								fallbackSrc='https://images.pexels.com/photos/6252418/pexels-photo-6252418.jpeg?auto=compress&cs=tinysrgb&w=48&h=12&fit=crop'
-							/>
-						</div>
-					</div>
+					<FloatingIngredients
+						ingredients={productIngredients}
+					/>
 				</div>
 
-				{/* Newsletter Section with onion/shallot connectors */}
+				{/* Newsletter Section */}
 				<div className='relative'>
 					<div className='absolute top-0 right-0 w-64 h-64 bg-gradient-to-l from-red-300/20 to-transparent rounded-full blur-3xl'></div>
-
-					{/* Shallots and onions floating around newsletter */}
-					<div className='absolute top-4 left-1/6 w-12 h-16 transform -rotate-12 pointer-events-none'>
-						<SafeImage
-							src='/images/shallot-bulb.webp'
-							alt='Fresh Shallot'
-							className='w-full h-full object-contain animate-bounce drop-shadow-md'
-							style={{
-								animationDelay: "0.3s",
-								animationDuration: "4s",
-							}}
-							fallbackSrc='https://images.pexels.com/photos/4110251/pexels-photo-4110251.jpeg?auto=compress&cs=tinysrgb&w=48&h=64&fit=crop'
-						/>
-					</div>
-					<div className='absolute bottom-8 right-1/5 w-14 h-18 transform rotate-6 pointer-events-none'>
-						<SafeImage
-							src='/images/shallot-bulb.webp'
-							alt='Shallot Bulb'
-							className='w-full h-full object-contain animate-pulse drop-shadow-lg'
-							style={{ animationDelay: "1.2s" }}
-							fallbackSrc='https://images.pexels.com/photos/4110251/pexels-photo-4110251.jpeg?auto=compress&cs=tinysrgb&w=56&h=72&fit=crop'
-						/>
-					</div>
-
 					<NewsletterSection />
+					<FloatingIngredients
+						ingredients={newsletterIngredients}
+					/>
 				</div>
 
-				{/* Shipping Section with garlic and ginger */}
-				<div className='relative'>
-					{/* Garlic cloves transitioning into section */}
-					<div className='absolute top-0 left-0 w-full h-24 pointer-events-none'>
-						<div className='absolute top-2 left-1/4 w-10 h-12 transform rotate-12'>
-							<SafeImage
-								src='/images/garlic-clove.webp'
-								alt='Garlic Clove'
-								className='w-full h-full object-contain animate-bounce drop-shadow-md'
-								style={{
-									animationDelay: "0.8s",
-									animationDuration: "3.5s",
-								}}
-								fallbackSrc='https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=40&h=48&fit=crop'
-							/>
-						</div>
-						<div className='absolute top-8 right-1/3 w-16 h-10 transform -rotate-12'>
-							<SafeImage
-								src='/images/turmeric-powder.webp'
-								alt='Turmeric Powder'
-								className='w-full h-full object-contain animate-pulse drop-shadow-lg'
-								style={{ animationDelay: "0.4s" }}
-								fallbackSrc='https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg?auto=compress&cs=tinysrgb&w=64&h=40&fit=crop'
-							/>
-						</div>
-					</div>
+				{/* Transition Ingredients between Newsletter and Shipping */}
+				<div className='relative '>
+					<FloatingIngredients
+						ingredients={transitionIngredients}
+					/>
+				</div>
 
+				{/* Shipping Section */}
+				<div className='relative'>
 					<div className='relative pt-12'>
 						<ShippingSection />
 					</div>
+					<FloatingIngredients
+						ingredients={shippingIngredients}
+					/>
 				</div>
 
-				{/* Story Section with enhanced imagery integration */}
+				{/* Story Section */}
 				<div className='relative'>
-					{/* Traditional mortar and pestle ingredients */}
-					<div className='absolute top-1/4 left-4 w-16 h-16 pointer-events-none'>
-						<SafeImage
-							src='/images/mortar-pestle.webp'
-							alt='Traditional Mortar & Pestle'
-							className='w-full h-full object-contain animate-pulse drop-shadow-xl'
-							style={{ animationDelay: "0.6s" }}
-							fallbackSrc='https://images.pexels.com/photos/4198019/pexels-photo-4198019.jpeg?auto=compress&cs=tinysrgb&w=64&h=64&fit=crop'
-						/>
-					</div>
-					<div className='absolute bottom-1/4 right-8 w-20 h-12 transform rotate-12 pointer-events-none'>
-						<SafeImage
-							src='/images/long-red-chili.webp'
-							alt='Red Chili'
-							className='w-full h-full object-contain animate-bounce drop-shadow-lg'
-							style={{
-								animationDelay: "1.8s",
-								animationDuration: "5s",
-							}}
-							fallbackSrc='https://images.pexels.com/photos/6252418/pexels-photo-6252418.jpeg?auto=compress&cs=tinysrgb&w=80&h=48&fit=crop'
-						/>
-					</div>
-
 					<StorySection />
-
-					{/* Palm oil and coconut transitioning to testimonials */}
-					<div className='absolute bottom-0 left-0 w-full h-16 pointer-events-none'>
-						<div className='absolute bottom-4 left-1/3 w-12 h-12 transform -rotate-6'>
-							<SafeImage
-								src='/images/shallot-bulb.webp'
-								alt='Shallot Bulb'
-								className='w-full h-full object-contain animate-pulse drop-shadow-md'
-								style={{ animationDelay: "0.9s" }}
-								fallbackSrc='https://images.pexels.com/photos/1630588/pexels-photo-1630588.jpeg?auto=compress&cs=tinysrgb&w=48&h=48&fit=crop'
-							/>
-						</div>
-						<div className='absolute bottom-2 right-1/4 w-8 h-10 transform rotate-12'>
-							<SafeImage
-								src='/images/turmeric-powder.webp'
-								alt='Turmeric Powder'
-								className='w-full h-full object-contain animate-bounce drop-shadow-sm'
-								style={{
-									animationDelay: "1.4s",
-									animationDuration: "3s",
-								}}
-								fallbackSrc='https://images.pexels.com/photos/1630588/pexels-photo-1630588.jpeg?auto=compress&cs=tinysrgb&w=32&h=40&fit=crop'
-							/>
-						</div>
-					</div>
+					<FloatingIngredients ingredients={storyIngredients} />
 				</div>
 
-				{/* Testimonials Section with final visual enhancement */}
+				{/* Testimonials Section */}
 				<div className='relative pt-8'>
 					<TestimonialsSection />
 				</div>
@@ -348,7 +367,7 @@ export default function Home() {
 
 					<div className='container mx-auto px-4 relative'>
 						{/* Section header with visual enhancement */}
-						<div className='text-center mb-16'>
+						<div className='text-center mb-16 relative'>
 							<div className='inline-block p-8 bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl border border-white/20'>
 								<h2 className='text-3xl lg:text-4xl font-bold text-burgundy-900 mb-4 font-heading'>
 									Transform Your Cooking Experience
@@ -359,6 +378,12 @@ export default function Home() {
 									challenges
 								</p>
 							</div>
+							{/* Floating ingredients after header */}
+							<FloatingIngredients
+								ingredients={
+									cookingExperienceIngredients
+								}
+							/>
 						</div>
 
 						<ProblemSolutionContent
@@ -432,21 +457,16 @@ export default function Home() {
 							]}
 						/>
 					</div>
+					<FloatingIngredients
+						ingredients={problemSolutionIngredients}
+					/>
 				</section>
 
 				{/* General Sambal FAQ with enhanced design */}
 				<section className='py-16 relative'>
-					{/* Visual connecting elements */}
-					<div className='absolute top-0 left-0 w-full h-20'>
-						<svg
-							viewBox='0 0 1200 120'
-							className='w-full h-full'
-						>
-							<path
-								d='M0,0 L1200,0 L1200,60 C900,100 300,20 0,60 Z'
-								fill='rgba(255,255,255,0.1)'
-							/>
-						</svg>
+					{/* Visual connecting elements with icons instead of SVG */}
+					<div className='absolute top-0 left-1/2 transform -translate-x-1/2'>
+						<Waves className='w-24 h-6 text-white/10' />
 					</div>
 
 					<div className='container mx-auto px-4 relative pt-8'>
@@ -516,25 +536,18 @@ export default function Home() {
 					</div>
 				</section>
 
-				{/* FAQ Section with visual enhancement */}
+				{/* FAQ Section */}
 				<div className='relative'>
 					<div className='absolute top-0 right-0 w-48 h-48 bg-gradient-to-l from-purple-300/20 to-transparent rounded-full blur-3xl'></div>
 					<FAQSection />
+					<FloatingIngredients ingredients={faqIngredients} />
 				</div>
 
 				{/* Contact Section with final visual flourish */}
 				<div className='relative'>
-					{/* Final connecting wave */}
-					<div className='absolute top-0 left-0 w-full h-24'>
-						<svg
-							viewBox='0 0 1200 120'
-							className='w-full h-full'
-						>
-							<path
-								d='M0,120 C300,20 900,80 1200,0 L1200,120 Z'
-								fill='rgba(59, 130, 246, 0.1)'
-							/>
-						</svg>
+					{/* Final connecting elements with icons */}
+					<div className='absolute top-0 left-1/2 transform -translate-x-1/2'>
+						<Triangle className='w-16 h-8 text-blue-100/10' />
 					</div>
 
 					{/* Background accent for contact section */}
@@ -543,6 +556,9 @@ export default function Home() {
 					<div className='relative pt-12'>
 						<ContactSection />
 					</div>
+					<FloatingIngredients
+						ingredients={contactIngredients}
+					/>
 				</div>
 			</div>
 		</div>

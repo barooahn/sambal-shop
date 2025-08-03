@@ -10,7 +10,7 @@ export default function ShippingSection() {
 						<div className='aspect-square rounded-3xl overflow-hidden shadow-luxury bg-gradient-to-br from-cream-50 to-gold-50'>
 							<div className='w-full h-full flex items-center justify-center p-8'>
 								<Image
-									src='/images/Spice Island Indonesia E-commerce Shipping Box.png'
+									src='/images/Spice Island Indonesia E-commerce Shipping Box.webp'
 									alt='Spice Island Indonesia Premium Shipping Box - Beautifully designed packaging for safe delivery of authentic Indonesian sambal'
 									width={500}
 									height={500}

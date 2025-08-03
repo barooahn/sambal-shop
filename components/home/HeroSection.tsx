@@ -91,7 +91,7 @@ export default function HeroSection() {
 						</p>
 
 						{/* Features grid */}
-						<div className='grid sm:grid-cols-3 gap-4 mb-10'>
+						<div className='grid sm:grid-cols-2 gap-4 mb-10'>
 							<div className='flex items-center justify-center lg:justify-start space-x-2'>
 								<div className='w-8 h-8 bg-gradient-to-r from-burgundy-900 to-burgundy-800 rounded-full flex items-center justify-center border border-gold-600/30'>
 									<ChefHat className='w-4 h-4 text-gold-200' />
@@ -106,14 +106,6 @@ export default function HeroSection() {
 								</div>
 								<span className='text-neutral-700 font-medium font-elegant'>
 									Authentic
-								</span>
-							</div>
-							<div className='flex items-center justify-center lg:justify-start space-x-2'>
-								<div className='w-8 h-8 bg-gradient-to-r from-burgundy-900 to-burgundy-800 rounded-full flex items-center justify-center border border-gold-600/30'>
-									<Leaf className='w-4 h-4 text-gold-200' />
-								</div>
-								<span className='text-neutral-700 font-medium font-elegant'>
-									All Natural
 								</span>
 							</div>
 						</div>
