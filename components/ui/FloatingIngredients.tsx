@@ -24,9 +24,9 @@ interface FloatingIngredientsProps {
 }
 
 const sizeClasses = {
-	sm: "w-16 h-16 md:w-20 md:h-20",
-	md: "w-20 h-20 md:w-24 md:h-24",
-	lg: "w-24 h-24 md:w-28 md:h-28",
+	sm: "w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24",
+	md: "w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28",
+	lg: "w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32",
 };
 
 export default function FloatingIngredients({
