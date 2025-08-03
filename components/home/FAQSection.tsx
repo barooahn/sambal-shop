@@ -58,9 +58,7 @@ export default function FAQSection() {
 	};
 
 	return (
-		<section className='py-24 bg-gradient-to-br from-cream-50 to-cream-100 relative overflow-hidden'>
-			<div className='absolute inset-0 bg-gradient-to-r from-burgundy-50/20 via-transparent to-gold-50/20'></div>
-
+		<section className='py-24 relative overflow-hidden'>
 			<div className='relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
 				<div className='text-center mb-16'>
 					<h2 className='text-4xl sm:text-5xl font-bold text-burgundy-900 mb-6 font-brand'>

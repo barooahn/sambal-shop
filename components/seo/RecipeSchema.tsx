@@ -1,3 +1,24 @@
+interface CookingMethod {
+	name: string;
+	description?: string;
+}
+
+interface Equipment {
+	name: string;
+	description?: string;
+	required?: boolean;
+}
+
+interface EnhancedInstruction {
+	step: number;
+	text: string;
+	timeEstimate?: string;
+	cookingMethod?: CookingMethod;
+	equipment?: Equipment[];
+	temperature?: string;
+	technique?: string;
+}
+
 interface RecipeSchemaProps {
 	recipe: {
 		name: string;
@@ -28,6 +49,15 @@ interface RecipeSchemaProps {
 		};
 		datePublished: string;
 		keywords: string[];
+		// Enhanced properties
+		cuisineType?: "Indonesian" | "Fusion" | "Traditional" | "Modern";
+		cookingMethods?: CookingMethod[];
+		equipment?: Equipment[];
+		skillLevel?: "Beginner" | "Intermediate" | "Advanced";
+		spiceLevel?: "Mild" | "Medium" | "Hot" | "Very Hot";
+		dietaryRestrictions?: string[];
+		culturalOrigin?: string;
+		enhancedInstructions?: EnhancedInstruction[];
 	};
 }
 
@@ -71,7 +101,7 @@ export default function RecipeSchema({ recipe }: RecipeSchemaProps) {
 					carbohydrateContent: recipe.nutrition.carbohydrates,
 					fatContent: recipe.nutrition.fat,
 					sodiumContent: recipe.nutrition.sodium,
-			  }
+				}
 			: undefined,
 		video: {
 			"@type": "VideoObject",
@@ -80,12 +110,53 @@ export default function RecipeSchema({ recipe }: RecipeSchemaProps) {
 			thumbnailUrl: recipe.image,
 			uploadDate: recipe.datePublished,
 		},
+		// Enhanced schema properties
+		...(recipe.cuisineType && {
+			cuisineType: recipe.cuisineType,
+			culturalContext:
+				recipe.culturalOrigin || "Indonesian Traditional Cuisine",
+		}),
+		...(recipe.cookingMethods &&
+			recipe.cookingMethods.length > 0 && {
+				cookingMethod: recipe.cookingMethods.map((method) => ({
+					"@type": "Thing",
+					name: method.name,
+					description: method.description,
+				})),
+			}),
+		...(recipe.equipment &&
+			recipe.equipment.length > 0 && {
+				tool: recipe.equipment.map((eq) => ({
+					"@type": "HowToTool",
+					name: eq.name,
+					description: eq.description,
+					requiredQuantity: eq.required ? 1 : 0,
+				})),
+			}),
+		...(recipe.skillLevel && {
+			skillLevel: recipe.skillLevel,
+			difficulty: recipe.difficulty,
+		}),
+		...(recipe.spiceLevel && {
+			spiceLevel: recipe.spiceLevel,
+			additionalProperty: {
+				"@type": "PropertyValue",
+				name: "Heat Level",
+				value: recipe.spiceLevel,
+			},
+		}),
+		...(recipe.dietaryRestrictions &&
+			recipe.dietaryRestrictions.length > 0 && {
+				suitableForDiet: recipe.dietaryRestrictions.map(
+					(diet) => `https://schema.org/${diet}Diet`
+				),
+			}),
 	};
 
 	return (
 		<script
 			id={`recipe-schema-${recipe.name.toLowerCase().replace(/\s+/g, "-")}`}
-			type="application/ld+json"
+			type='application/ld+json'
 			dangerouslySetInnerHTML={{
 				__html: JSON.stringify(recipeSchema),
 			}}

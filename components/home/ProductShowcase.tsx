@@ -5,9 +5,7 @@ import { ChefHat, Award, Leaf, Truck } from "lucide-react";
 
 export default function ProductShowcase() {
 	return (
-		<section className='py-24 bg-cream-50 relative overflow-hidden'>
-			<div className='absolute inset-0 bg-gradient-to-r from-burgundy-50/30 via-transparent to-gold-50/30'></div>
-
+		<section className='py-24 relative overflow-hidden'>
 			<div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 				<div className='text-center mb-20'>
 					<h2 className='text-4xl sm:text-5xl lg:text-6xl font-bold text-burgundy-900 mb-6 font-brand'>
@@ -24,25 +22,29 @@ export default function ProductShowcase() {
 					</p>
 				</div>
 
-				{/* Product Grid */}
+				{/* Product Grid with Glass Morphism */}
 				<div className='grid md:grid-cols-2 lg:grid-cols-3 gap-12 mb-20'>
 					{/* Sambal Oelek */}
 					<div className='group'>
 						<div className='relative mb-6'>
-							<div className='aspect-square rounded-3xl overflow-hidden shadow-lg group-hover:shadow-luxury transition-all duration-300 bg-gradient-to-br from-cream-50 to-gold-50'>
-								<div className='w-full h-full flex items-center justify-center p-6'>
+							{/* Clean glass morphism product card - no borders */}
+							<div className='aspect-square rounded-3xl overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-500 bg-white/20 backdrop-blur-md group-hover:bg-white/30'>
+								<div className='w-full h-full flex items-center justify-center p-6 relative'>
+									{/* Subtle inner glass effect */}
+									<div className='absolute inset-4 rounded-2xl bg-gradient-to-br from-white/10 to-transparent backdrop-blur-sm'></div>
 									<Image
 										src='/images/Spice Island Indonesia Sambal Oelek 185g Label.png'
 										alt='Spice Island Indonesia Sambal Oelek 185g - Pure Indonesian chili paste, handcrafted using traditional recipes'
 										width={300}
 										height={300}
-										className='w-full h-full object-contain drop-shadow-lg'
+										className='w-full h-full object-contain drop-shadow-2xl relative z-10 group-hover:scale-105 transition-transform duration-500'
 										loading='lazy'
 										sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
 									/>
 								</div>
 							</div>
-							<div className='absolute -top-3 -right-3 bg-burgundy-700 text-gold-300 px-3 py-1 rounded-full text-sm font-bold font-elegant border border-gold-600'>
+							{/* Clean glass morphism badge */}
+							<div className='absolute -top-3 -right-3 bg-burgundy-600/90 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm font-bold font-elegant shadow-lg'>
 								Most Popular
 							</div>
 						</div>

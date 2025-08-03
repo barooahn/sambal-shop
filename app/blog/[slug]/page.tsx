@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, ArrowLeft, Share2 } from "lucide-react";
 import VoiceSearchOptimization from "@/components/seo/VoiceSearchOptimization";
+import ArticleSchema from "@/components/seo/ArticleSchema";
 
 // Sample blog post data - in a real app, this would come from a CMS or database
 const blogPosts = {
@@ -620,6 +621,43 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
 	return (
 		<div className='min-h-screen bg-gradient-to-b from-cream-50 to-cream-100'>
+			<ArticleSchema
+				headline={post.title}
+				description={post.excerpt}
+				image='/images/Spice Island Indonesia Sambal Bali 185g Label.png'
+				datePublished={post.publishDate}
+				dateModified={post.publishDate}
+				author={{
+					name: post.author,
+					type: "Organization",
+					url: "https://spiceislandindonesia.com/about",
+					worksFor: "Spice Island Indonesia",
+				}}
+				publisher={{
+					name: "Spice Island Indonesia",
+					type: "Organization",
+					logo: {
+						url: "https://spiceislandindonesia.com/images/logo.png",
+						width: 200,
+						height: 60,
+					},
+				}}
+				url={`https://spiceislandindonesia.com/blog/${slug}`}
+				wordCount={
+					post.readTime ? parseInt(post.readTime) * 200 : 1500
+				}
+				articleSection='Indonesian Cuisine & Culture'
+				keywords={[
+					"Indonesian sambal",
+					"Spice Islands history",
+					"traditional recipes",
+					"authentic Indonesian cooking",
+					"sambal making techniques",
+					"Maluku Islands",
+					"volcanic soil spices",
+				]}
+				mainEntityOfPage={`https://spiceislandindonesia.com/blog/${slug}`}
+			/>
 			{/* Hero Section */}
 			<section className='py-16 bg-gradient-to-br from-burgundy-50 to-gold-50 relative overflow-hidden'>
 				<div className='absolute inset-0 bg-gradient-to-r from-burgundy-900/5 via-transparent to-gold-600/5'></div>

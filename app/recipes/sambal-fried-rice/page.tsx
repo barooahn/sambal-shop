@@ -2,6 +2,18 @@ import { Metadata } from "next";
 import RecipeCard from "@/components/recipes/RecipeCard";
 import RecipeSchema from "@/components/seo/RecipeSchema";
 import HowToSchema from "@/components/seo/HowToSchema";
+import FAQSchema from "@/components/seo/FAQSchema";
+import EnhancedRecipeInstructions from "@/components/recipes/EnhancedRecipeInstructions";
+import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
+import InternalLinkingOptimization from "@/components/seo/InternalLinkingOptimization";
+import {
+	Breadcrumb,
+	BreadcrumbList,
+	BreadcrumbItem,
+	BreadcrumbLink,
+	BreadcrumbPage,
+	BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
 
 export const metadata: Metadata = {
 	title: "Sambal Fried Rice Recipe | Authentic Indonesian Nasi Goreng | Spice Island Indonesia",
@@ -116,6 +128,60 @@ const recipe = {
 		"For vegetarian version, omit meat and add extra vegetables like carrots, peas, or bean sprouts",
 	],
 
+	// Enhanced schema properties
+	cuisineType: "Indonesian" as const,
+	cookingMethods: [
+		{
+			name: "Stir-frying",
+			description:
+				"High-heat cooking technique that quickly cooks ingredients while maintaining texture and flavor",
+		},
+		{
+			name: "Sautéing",
+			description:
+				"Quick cooking method using a small amount of oil over medium-high heat",
+		},
+		{
+			name: "Scrambling",
+			description:
+				"Gentle cooking technique for eggs to create fluffy, tender texture",
+		},
+	],
+	equipment: [
+		{
+			name: "Large wok or frying pan",
+			description:
+				"Traditional round-bottomed cooking vessel ideal for stir-frying",
+			required: true,
+		},
+		{
+			name: "Wooden spoon or wok spatula",
+			description:
+				"Essential for stirring and tossing ingredients without scratching the wok",
+			required: true,
+		},
+		{
+			name: "Sharp knife",
+			description: "For dicing ingredients and slicing garnishes",
+			required: true,
+		},
+		{
+			name: "Cutting board",
+			description: "Safe surface for food preparation",
+			required: true,
+		},
+		{
+			name: "Rice paddle",
+			description: "Helpful for breaking up rice clumps",
+			required: false,
+		},
+	],
+	skillLevel: "Beginner" as const,
+	spiceLevel: "Medium" as const,
+	dietaryRestrictions: ["GlutenFree"],
+	culturalOrigin:
+		"Indonesian Traditional Cuisine - National dish originating from Java and Sumatra regions",
+
 	variations: [
 		"Seafood Nasi Goreng: Use prawns, squid, and fish instead of chicken",
 		"Vegetable Nasi Goreng: Add diced carrots, peas, and bean sprouts",
@@ -125,6 +191,25 @@ const recipe = {
 };
 
 export default function SambalFriedRicePage() {
+	// Breadcrumb data for navigation and schema
+	const breadcrumbItems = [
+		{
+			name: "Home",
+			url: "https://spiceislandindonesia.com",
+			position: 1,
+		},
+		{
+			name: "Recipes",
+			url: "https://spiceislandindonesia.com/recipes",
+			position: 2,
+		},
+		{
+			name: "Sambal Fried Rice",
+			url: "https://spiceislandindonesia.com/recipes/sambal-fried-rice",
+			position: 3,
+		},
+	];
+
 	// How-to steps for AI search optimization
 	const howToSteps = [
 		{
@@ -161,9 +246,157 @@ export default function SambalFriedRicePage() {
 		},
 	];
 
+	// Enhanced instructions with visual indicators
+	const enhancedInstructions = [
+		{
+			step: 1,
+			text: "Heat oil in a large wok or frying pan over medium-high heat. Gather all ingredients and have them ready - this dish cooks quickly.",
+			timeEstimate: "2 min",
+			difficulty: "Easy" as const,
+			equipment: ["Large wok or frying pan", "Wooden spoon"],
+			tips: "Mise en place (everything in place) is crucial for stir-frying. Have all ingredients prepped and ready before you start cooking.",
+		},
+		{
+			step: 2,
+			text: "Add minced garlic and cook for 30 seconds until fragrant. Add sambal and stir for another 30 seconds to release the flavors.",
+			timeEstimate: "1 min",
+			difficulty: "Medium" as const,
+			equipment: ["Wooden spoon"],
+			tips: "The garlic should sizzle immediately. If it doesn't, your oil isn't hot enough.",
+			warning: "Don't let the garlic burn - it will turn bitter. Reduce heat if needed.",
+		},
+		{
+			step: 3,
+			text: "Add the cold, day-old rice to the wok. Break up any clumps and stir-fry for 3-4 minutes until heated through and slightly crispy.",
+			timeEstimate: "4 min",
+			difficulty: "Medium" as const,
+			equipment: ["Wooden spoon", "Rice paddle (optional)"],
+			tips: "Day-old rice is essential - fresh rice will become mushy. Break up clumps with your spoon before adding to prevent sticking.",
+		},
+		{
+			step: 4,
+			text: "Add soy sauce, fish sauce (if using), and a pinch of salt. Stir well to coat all the rice evenly with the seasonings.",
+			timeEstimate: "1 min",
+			difficulty: "Easy" as const,
+			equipment: ["Wooden spoon"],
+			tips: "Start with less seasoning - you can always add more. The sambal already provides salt and flavor.",
+		},
+		{
+			step: 5,
+			text: "Push rice to one side of the wok. Add beaten eggs to the empty space and scramble them, then mix into the rice.",
+			timeEstimate: "2 min",
+			difficulty: "Medium" as const,
+			equipment: ["Wooden spoon", "Spatula"],
+			tips: "This technique keeps the eggs fluffy and prevents them from becoming rubbery. Scramble quickly over high heat.",
+		},
+		{
+			step: 6,
+			text: "Add frozen peas and carrots (if using). Stir-fry for 2-3 minutes until vegetables are heated through.",
+			timeEstimate: "3 min",
+			difficulty: "Easy" as const,
+			equipment: ["Wooden spoon"],
+			tips: "Frozen vegetables work great for fried rice. They add color and nutrition without making the dish watery.",
+		},
+		{
+			step: 7,
+			text: "Taste and adjust seasoning with more sambal, soy sauce, or salt as needed. The rice should be well-coated and flavorful.",
+			timeEstimate: "1 min",
+			difficulty: "Easy" as const,
+			equipment: ["Tasting spoon"],
+			tips: "This is your chance to perfect the flavor. Each grain of rice should be coated with sauce and have a balanced taste.",
+		},
+		{
+			step: 8,
+			text: "Remove from heat. Garnish with sliced green onions, cucumber slices, and fried shallots. Serve immediately while hot.",
+			timeEstimate: "2 min",
+			difficulty: "Easy" as const,
+			equipment: ["Serving plates", "Knife", "Cutting board"],
+			tips: "The contrast of cool cucumber with hot rice is traditional. Serve immediately for the best texture and temperature.",
+		},
+	];
+
+	// Cooking FAQ data for AI search optimization
+	const cookingFAQ = [
+		{
+			question: "How do I adjust spice levels in sambal recipes?",
+			answer: "Start with 1/4 teaspoon of sambal and gradually increase to taste. You can reduce heat by adding more rice, vegetables, or a splash of coconut milk. For extra heat, add more sambal at the end of cooking. Remember that sambal heat builds, so taste as you go and let flavors develop for a minute before adding more.",
+		},
+		{
+			question: "Can I substitute sambal in recipes?",
+			answer: "While sambal is unique, you can substitute with sriracha (use 3x more for similar heat) or chili garlic sauce. However, these alternatives are sweeter and less authentic. For best results, order authentic sambal online - the flavor difference is significant and worth the investment for genuine Indonesian taste.",
+		},
+		{
+			question: "What if I can't find Indonesian ingredients?",
+			answer: "Most sambal recipes work with common UK ingredients. Use jasmine rice instead of Indonesian rice, regular soy sauce instead of kecap manis (add a pinch of brown sugar), and frozen mixed vegetables if fresh aren't available. The key is authentic sambal - this makes the biggest difference in achieving genuine Indonesian flavor.",
+		},
+		{
+			question: "How do I store leftover sambal dishes?",
+			answer: "Store leftover sambal fried rice in the refrigerator for up to 3 days in an airtight container. Reheat in a wok or large pan with a splash of oil to restore texture. The flavors actually improve overnight as the sambal penetrates the rice. For food safety, cool quickly and refrigerate within 2 hours of cooking.",
+		},
+	];
+
+	// Internal linking data for SEO optimization
+	const relatedProducts = [
+		{
+			name: "Sambal Bali - Aromatic & Spicy",
+			url: "/sambal-bali-aromatic-spicy",
+			description:
+				"Perfect for this fried rice recipe with its complex aromatic spices and medium heat level",
+			rating: 4.9,
+			price: "£7.49",
+			badge: "Best for Fried Rice",
+		},
+		{
+			name: "Sambal Oelek - Pure Heat",
+			url: "/sambal-oelek-uk",
+			description:
+				"For those who want extra heat - add a teaspoon to make this recipe fiery hot",
+			rating: 4.8,
+			price: "£7.49",
+			badge: "Extra Spicy",
+		},
+	];
+
+	const relatedRecipes = [
+		{
+			name: "Sambal Chicken Stir-Fry",
+			url: "/recipes/sambal-chicken-stir-fry",
+			description:
+				"Another quick and delicious sambal recipe perfect for weeknight dinners",
+			difficulty: "Easy" as const,
+			cookTime: "20 minutes",
+		},
+		{
+			name: "Sambal Scrambled Eggs",
+			url: "/recipes/sambal-scrambled-eggs",
+			description:
+				"Transform your breakfast with this spicy Indonesian twist on scrambled eggs",
+			difficulty: "Easy" as const,
+			cookTime: "10 minutes",
+		},
+	];
+
+	const relatedArticles = [
+		{
+			title: "The History of the Spice Islands: Where Your Sambal Comes From",
+			url: "/blog/spice-islands-history",
+			excerpt: "Discover the volcanic islands that created the perfect conditions for the world's most flavorful chilies",
+			readTime: "8 min",
+			category: "Culture & History",
+		},
+		{
+			title: "Ultimate Guide to Indonesian Sambal",
+			url: "/blog/ultimate-guide-indonesian-sambal",
+			excerpt: "Everything you need to know about Indonesia's most beloved condiment and how to use it",
+			readTime: "12 min",
+			category: "Cooking Guide",
+		},
+	];
+
 	return (
 		<div className='min-h-screen bg-gradient-to-b from-cream-50 to-cream-100'>
 			<RecipeSchema recipe={recipe} />
+			<BreadcrumbSchema items={breadcrumbItems} />
 			<HowToSchema
 				name='How to Make Sambal Fried Rice (Nasi Goreng)'
 				description='Learn to make authentic Indonesian sambal fried rice with this step-by-step guide. Perfect for using leftover rice with authentic sambal heat and flavor.'
@@ -174,9 +407,62 @@ export default function SambalFriedRicePage() {
 				yield='4 servings'
 				category='Indonesian Main Course'
 			/>
+			<FAQSchema
+				faqs={cookingFAQ}
+				pageTitle='Sambal Fried Rice Cooking - Frequently Asked Questions'
+			/>
 
 			<div className='container mx-auto px-4 py-8'>
+				{/* Breadcrumb Navigation */}
+				<div className='mb-6'>
+					<Breadcrumb>
+						<BreadcrumbList>
+							<BreadcrumbItem>
+								<BreadcrumbLink href='/'>
+									Home
+								</BreadcrumbLink>
+							</BreadcrumbItem>
+							<BreadcrumbSeparator />
+							<BreadcrumbItem>
+								<BreadcrumbLink href='/recipes'>
+									Recipes
+								</BreadcrumbLink>
+							</BreadcrumbItem>
+							<BreadcrumbSeparator />
+							<BreadcrumbItem>
+								<BreadcrumbPage>
+									Sambal Fried Rice
+								</BreadcrumbPage>
+							</BreadcrumbItem>
+						</BreadcrumbList>
+					</Breadcrumb>
+				</div>
+
 				<RecipeCard recipe={recipe} />
+
+				{/* Enhanced Interactive Recipe Instructions */}
+				<div className='max-w-4xl mx-auto mt-12'>
+					<EnhancedRecipeInstructions
+						title='Interactive Cooking Guide'
+						description="Follow along step-by-step with time estimates and chef's tips"
+						prepTime={recipe.prepTime}
+						cookTime={recipe.cookTime}
+						totalTime={recipe.totalTime}
+						servings={recipe.servings}
+						difficulty={recipe.difficulty}
+						instructions={enhancedInstructions}
+					/>
+				</div>
+
+				{/* Internal Linking for SEO */}
+				<div className='max-w-6xl mx-auto mt-16'>
+					<InternalLinkingOptimization
+						currentPage='recipe'
+						relatedProducts={relatedProducts}
+						relatedRecipes={relatedRecipes}
+						relatedArticles={relatedArticles}
+					/>
+				</div>
 
 				{/* Additional Content */}
 				<div className='max-w-4xl mx-auto mt-12 space-y-8'>

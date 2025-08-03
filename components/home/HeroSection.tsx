@@ -1,69 +1,20 @@
 "use client";
 
 import { useState } from "react";
-import { subscribeToNewsletter, recordInterest } from "@/lib/actions";
+import { recordInterest } from "@/lib/actions";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Flame, ChefHat, Award, Leaf, Heart } from "lucide-react";
 import OptimizedImage from "@/components/optimization/OptimizedImage";
+import GlassCard from "@/components/ui/GlassCard";
 
 export default function HeroSection() {
-	const [email, setEmail] = useState("");
-	const [newsletterState, setNewsletterState] = useState({
-		isSubmitting: false,
-		isSubmitted: false,
-		message: "",
-	});
 	const [interestState, setInterestState] = useState({
 		isSubmitting: false,
 		isSubmitted: false,
 		message: "",
 	});
-
-	const handleEmailSignup = async (e: React.FormEvent) => {
-		e.preventDefault();
-		setNewsletterState({
-			isSubmitting: true,
-			isSubmitted: false,
-			message: "",
-		});
-
-		try {
-			const result = await subscribeToNewsletter(email);
-			setNewsletterState({
-				isSubmitting: false,
-				isSubmitted: true,
-				message: result.message,
-			});
-
-			if (result.success) {
-				setEmail("");
-			}
-
-			setTimeout(() => {
-				setNewsletterState((prev) => ({
-					...prev,
-					isSubmitted: false,
-					message: "",
-				}));
-			}, 5000);
-		} catch (error) {
-			setNewsletterState({
-				isSubmitting: false,
-				isSubmitted: true,
-				message: "Something went wrong. Please try again later.",
-			});
-
-			setTimeout(() => {
-				setNewsletterState((prev) => ({
-					...prev,
-					isSubmitted: false,
-					message: "",
-				}));
-			}, 5000);
-		}
-	};
 
 	const handleInterestClick = async () => {
 		setInterestState({
@@ -105,23 +56,18 @@ export default function HeroSection() {
 	};
 
 	return (
-		<section className='py-12 relative min-h-screen flex items-center justify-center overflow-hidden'>
-			<div className='absolute inset-0 bg-gradient-to-br from-burgundy-900/20 via-gold-600/10 to-burgundy-800/15'></div>
-
-			{/* Floating decorative elements */}
-			<div className='absolute top-20 left-10 w-16 h-16 bg-gold-500/20 rounded-full blur-xl animate-glow'></div>
-			<div className='absolute top-40 right-20 w-20 h-20 bg-burgundy-700/20 rounded-full blur-xl animate-glow delay-1000'></div>
-			<div className='absolute bottom-40 left-20 w-12 h-12 bg-gold-600/20 rounded-full blur-xl animate-glow delay-2000'></div>
-
-			<div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+		<section className='relative min-h-screen flex items-center justify-center overflow-hidden'>
+			<div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20'>
 				<div className='grid lg:grid-cols-2 gap-12 items-center'>
 					{/* Left side - Text content */}
 					<div className='text-center lg:text-left'>
 						<div className='mb-8'>
-							<Badge className='bg-burgundy-900 text-gold-300 mb-6 px-6 py-3 text-lg font-semibold shadow-burgundy font-elegant border border-gold-600/30'>
-								<ChefHat className='w-5 h-5 mr-2' />
-								Chef Yossie's Traditional Recipes
-							</Badge>
+							<div className='inline-flex items-center space-x-2 bg-orange-100 rounded-full px-4 py-2 border border-orange-200'>
+								<ChefHat className='w-4 h-4 text-orange-600' />
+								<span className='text-gray-700 font-medium text-sm'>
+									Chef Yossie's Traditional Recipes
+								</span>
+							</div>
 						</div>
 
 						<h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold text-burgundy-900 mb-8 leading-tight font-brand'>
@@ -227,26 +173,27 @@ export default function HeroSection() {
 						)}
 					</div>
 
-					{/* Right side - Product showcase */}
+					{/* Right side - Product showcase with glass morphism */}
 					<div className='relative'>
 						<div className='relative max-w-lg mx-auto'>
-							{/* Main product image */}
+							{/* Clean product image with subtle glass effect */}
 							<div className='relative z-20'>
-								<div className='aspect-square rounded-3xl overflow-hidden shadow-luxury bg-gradient-to-br from-burgundy-900/10 to-gold-600/10 p-8'>
+								<div className='aspect-square rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-500 bg-white/15 backdrop-blur-sm p-8'>
 									<div className='w-full h-full rounded-2xl flex items-center justify-center'>
 										<OptimizedImage
 											src='/images/Spice Island Indonesia Sambal Oelek 185g Label.png'
 											alt='Spice Island Indonesia Sambal Oelek 185g - Authentic Indonesian Chili Paste'
 											width={400}
 											height={400}
-											className='w-full h-full object-contain drop-shadow-2xl'
+											className='w-full h-full object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-500'
 											priority
 											quality={90}
 											sizes='(max-width: 768px) 100vw, 400px'
 										/>
 									</div>
 								</div>
-								<div className='absolute -top-6 -right-6 bg-gradient-to-r from-burgundy-900 to-burgundy-800 text-gold-200 px-4 py-2 rounded-full font-bold text-lg transform rotate-12 shadow-lg border border-gold-600/30'>
+								{/* Clean price badge */}
+								<div className='absolute -top-6 -right-6 bg-burgundy-600/90 backdrop-blur-md text-white px-4 py-2 rounded-full font-bold text-lg transform rotate-12 shadow-lg hover:scale-110 transition-transform duration-300'>
 									£7.49
 								</div>
 							</div>
@@ -255,63 +202,6 @@ export default function HeroSection() {
 							<div className='absolute -top-8 -left-8 w-32 h-32 bg-gradient-to-br from-burgundy-600/20 to-gold-500/20 rounded-full blur-2xl animate-float'></div>
 							<div className='absolute -bottom-8 -right-8 w-40 h-40 bg-gradient-to-br from-gold-600/20 to-burgundy-600/20 rounded-full blur-2xl animate-float delay-1000'></div>
 						</div>
-					</div>
-				</div>
-
-				{/* Newsletter signup */}
-				<div
-					id='newsletter-signup'
-					className='mt-16 max-w-md mx-auto lg:max-w-lg'
-				>
-					<div className='bg-cream-50/95 backdrop-blur-sm rounded-3xl p-8 shadow-luxury border border-gold-200'>
-						<div className='text-center mb-6'>
-							<h3 className='text-2xl font-bold text-burgundy-900 mb-2 font-brand'>
-								Get Early Access
-							</h3>
-							<p className='text-neutral-600 font-body'>
-								Be first to taste authentic Indonesian
-								flavors + get 15% off your first order
-							</p>
-						</div>
-
-						<form
-							onSubmit={handleEmailSignup}
-							className='space-y-4'
-						>
-							<Input
-								type='email'
-								placeholder='Enter your email address'
-								value={email}
-								onChange={(e) =>
-									setEmail(e.target.value)
-								}
-								required
-								className='text-lg py-4 border-2 border-gold-300 focus:border-burgundy-600 rounded-2xl font-body bg-white'
-							/>
-							<Button
-								type='submit'
-								variant='primary'
-								size='lg'
-								className='w-full font-elegant'
-								disabled={
-									newsletterState.isSubmitting ||
-									newsletterState.isSubmitted
-								}
-							>
-								{newsletterState.isSubmitting
-									? "Joining..."
-									: newsletterState.isSubmitted
-										? "Welcome to the family! 🌶️"
-										: "Join the Spice Journey"}
-							</Button>
-						</form>
-
-						{newsletterState.isSubmitted &&
-							newsletterState.message && (
-								<p className='mt-4 font-medium text-burgundy-700 text-center font-body'>
-									{newsletterState.message}
-								</p>
-							)}
 					</div>
 				</div>
 			</div>

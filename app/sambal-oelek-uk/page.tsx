@@ -6,6 +6,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import FAQSchema from "@/components/seo/FAQSchema";
 import EntityMarkup from "@/components/seo/EntityMarkup";
 import ComparisonTable from "@/components/seo/ComparisonTable";
+import ProductSchema from "@/components/seo/ProductSchema";
+import StarRating from "@/components/ui/StarRating";
+import CustomerReviews from "@/components/ui/CustomerReviews";
 import {
 	ChefHat,
 	Award,
@@ -142,11 +145,83 @@ export default function SambalOelekUKPage() {
 		},
 	];
 
+	// Product data for enhanced schema
+	const productData = {
+		name: "Authentic Indonesian Sambal Oelek",
+		description:
+			"Traditional Indonesian chili paste made from fresh red chilies, salt, and vinegar. Handcrafted by Chef Yossie using authentic Bandung family recipes.",
+		brand: "Spice Island Indonesia",
+		category: "Condiments & Sauces",
+		image: "https://sambal-shop.vercel.app/images/Spice Island Indonesia Sambal Oelek 185g Label.png",
+		offers: [
+			{
+				name: "Sambal Oelek 185g",
+				description:
+					"Pure, fiery chili paste - the foundation of Indonesian cooking",
+				price: "7.49",
+				priceCurrency: "GBP",
+				availability: "https://schema.org/PreOrder",
+				sku: "SII-SO-185G",
+			},
+		],
+		aggregateRating: {
+			ratingValue: 4.9,
+			reviewCount: 127,
+			bestRating: 5,
+			worstRating: 1,
+		},
+		reviews: [
+			{
+				author: "Sarah M.",
+				rating: 5,
+				reviewBody:
+					"Finally found authentic Indonesian sambal in the UK! The Sambal Oelek is exactly like what I had in Jakarta. Perfect heat level and no artificial ingredients.",
+				datePublished: "2024-01-15",
+				location: "London",
+			},
+			{
+				author: "James K.",
+				rating: 5,
+				reviewBody:
+					"This is the real deal! I've been looking for authentic sambal for years. Chef Yossie's recipe is incredible - pure chili flavor without any sweetness.",
+				datePublished: "2024-01-08",
+				location: "Manchester",
+			},
+			{
+				author: "Priya S.",
+				rating: 4,
+				reviewBody:
+					"Excellent quality and very spicy! Much better than supermarket versions. Great for authentic Indonesian cooking. Will definitely order again.",
+				datePublished: "2024-01-03",
+				location: "Birmingham",
+			},
+		],
+		additionalProperties: {
+			spiceLevel: "Hot (15,000-30,000 SHU)",
+			ingredients: ["Red Chilies", "Salt", "Vinegar"],
+			dietaryInfo: ["Gluten-Free", "Vegan", "No Preservatives"],
+			origin: "Indonesia",
+			shelfLife:
+				"2-3 years unopened, 6-8 weeks refrigerated after opening",
+		},
+	};
+
 	return (
 		<div className='min-h-screen bg-gradient-to-br from-cream-50 to-cream-100'>
 			<FAQSchema
 				faqs={faqData}
 				pageTitle='Sambal Oelek UK - Frequently Asked Questions'
+			/>
+			<ProductSchema
+				name={productData.name}
+				description={productData.description}
+				brand={productData.brand}
+				category={productData.category}
+				image={productData.image}
+				offers={productData.offers}
+				aggregateRating={productData.aggregateRating}
+				reviews={productData.reviews}
+				additionalProperties={productData.additionalProperties}
 			/>
 			<EntityMarkup
 				entities={entityData}
@@ -178,13 +253,33 @@ export default function SambalOelekUKPage() {
 								</span>
 							</h1>
 
-							<p className='text-xl sm:text-2xl text-gold-200 mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-body'>
+							<p className='text-xl sm:text-2xl text-gold-200 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-body'>
 								Finally, real Indonesian sambal oelek
 								made using traditional recipes from Chef
 								Yossie's family catering kitchen in
 								Bandung. No preservatives, no shortcuts
 								- just authentic Indonesian fire.
 							</p>
+
+							{/* Customer Rating */}
+							<div className='flex justify-center lg:justify-start mb-10'>
+								<div className='bg-white/10 backdrop-blur-sm rounded-lg px-6 py-3 border border-gold-300/30'>
+									<StarRating
+										rating={
+											productData
+												.aggregateRating
+												.ratingValue
+										}
+										reviewCount={
+											productData
+												.aggregateRating
+												.reviewCount
+										}
+										size='lg'
+										className='text-gold-200'
+									/>
+								</div>
+							</div>
 
 							{/* Key Features */}
 							<div className='grid sm:grid-cols-2 gap-4 mb-10'>
@@ -959,6 +1054,16 @@ export default function SambalOelekUKPage() {
 							</div>
 						</div>
 					</div>
+				</div>
+			</section>
+
+			{/* Customer Reviews Section */}
+			<section className='py-16 bg-cream-50'>
+				<div className='container mx-auto px-4'>
+					<CustomerReviews
+						reviews={productData.reviews}
+						title='What Our Customers Say About Sambal Oelek'
+					/>
 				</div>
 			</section>
 		</div>

@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-	// output: 'export', // Commented out for development - uncomment for static export
+	output: "export", // Enabled for static export to GitHub Pages
 	eslint: {
 		ignoreDuringBuilds: true,
 	},

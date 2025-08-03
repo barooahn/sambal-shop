@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, ChefHat } from "lucide-react";
+import GlassCard from "@/components/ui/GlassCard";
 
 export const metadata: Metadata = {
 	title: "Indonesian Cuisine Blog | Spice Island Indonesia | Authentic Recipes & Stories",
@@ -145,7 +146,10 @@ export default function BlogPage() {
 
 					{/* Featured Post */}
 					<div className='mb-16'>
-						<Card className='overflow-hidden shadow-luxury border border-gold-200 bg-gradient-to-br from-cream-50 to-cream-100 rounded-3xl'>
+						<GlassCard
+							variant='subtle'
+							className='overflow-hidden rounded-3xl'
+						>
 							<div className='grid lg:grid-cols-2 gap-0'>
 								<div className='relative aspect-[4/3] lg:aspect-auto'>
 									<Image
@@ -201,7 +205,7 @@ export default function BlogPage() {
 									</Link>
 								</div>
 							</div>
-						</Card>
+						</GlassCard>
 					</div>
 
 					{/* Blog Grid */}

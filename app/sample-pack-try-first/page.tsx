@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
+import GlassCard from "@/components/ui/GlassCard";
 import {
 	ChefHat,
 	Award,
@@ -167,8 +168,11 @@ export default function SamplePackTryFirstPage() {
 					</div>
 
 					<div className='grid md:grid-cols-2 gap-8 max-w-4xl mx-auto'>
-						<Card className='border-gold-200 shadow-lg hover:shadow-xl transition-shadow'>
-							<CardContent className='p-8'>
+						<GlassCard
+							variant='subtle'
+							className='hover:shadow-xl transition-shadow'
+						>
+							<div className='p-8'>
 								<div className='text-center mb-6'>
 									<div className='w-16 h-16 bg-gradient-to-r from-burgundy-600 to-burgundy-500 rounded-full flex items-center justify-center mx-auto mb-4'>
 										<Package className='w-8 h-8 text-white' />
@@ -203,11 +207,14 @@ export default function SamplePackTryFirstPage() {
 										preservatives
 									</li>
 								</ul>
-							</CardContent>
-						</Card>
+							</div>
+						</GlassCard>
 
-						<Card className='border-gold-200 shadow-lg hover:shadow-xl transition-shadow'>
-							<CardContent className='p-8'>
+						<GlassCard
+							variant='subtle'
+							className='hover:shadow-xl transition-shadow'
+						>
+							<div className='p-8'>
 								<div className='text-center mb-6'>
 									<div className='w-16 h-16 bg-gradient-to-r from-burgundy-600 to-burgundy-500 rounded-full flex items-center justify-center mx-auto mb-4'>
 										<Heart className='w-8 h-8 text-white' />
@@ -241,8 +248,8 @@ export default function SamplePackTryFirstPage() {
 										and galangal
 									</li>
 								</ul>
-							</CardContent>
-						</Card>
+							</div>
+						</GlassCard>
 					</div>
 				</div>
 			</section>
@@ -262,8 +269,11 @@ export default function SamplePackTryFirstPage() {
 					</div>
 
 					<div className='grid md:grid-cols-3 gap-8'>
-						<Card className='border-gold-200 shadow-lg hover:shadow-xl transition-shadow'>
-							<CardContent className='p-8 text-center'>
+						<GlassCard
+							variant='subtle'
+							className='hover:shadow-xl transition-shadow'
+						>
+							<div className='p-8 text-center'>
 								<div className='w-16 h-16 bg-gradient-to-r from-burgundy-600 to-burgundy-500 rounded-full flex items-center justify-center mx-auto mb-6'>
 									<Shield className='w-8 h-8 text-white' />
 								</div>
@@ -276,11 +286,14 @@ export default function SamplePackTryFirstPage() {
 									jars. Perfect for cautious food
 									explorers.
 								</p>
-							</CardContent>
-						</Card>
+							</div>
+						</GlassCard>
 
-						<Card className='border-gold-200 shadow-lg hover:shadow-xl transition-shadow'>
-							<CardContent className='p-8 text-center'>
+						<GlassCard
+							variant='subtle'
+							className='hover:shadow-xl transition-shadow'
+						>
+							<div className='p-8 text-center'>
 								<div className='w-16 h-16 bg-gradient-to-r from-burgundy-600 to-burgundy-500 rounded-full flex items-center justify-center mx-auto mb-6'>
 									<Heart className='w-8 h-8 text-white' />
 								</div>
@@ -293,11 +306,14 @@ export default function SamplePackTryFirstPage() {
 									both to discover your Indonesian
 									sambal soulmate.
 								</p>
-							</CardContent>
-						</Card>
+							</div>
+						</GlassCard>
 
-						<Card className='border-gold-200 shadow-lg hover:shadow-xl transition-shadow'>
-							<CardContent className='p-8 text-center'>
+						<GlassCard
+							variant='subtle'
+							className='hover:shadow-xl transition-shadow'
+						>
+							<div className='p-8 text-center'>
 								<div className='w-16 h-16 bg-gradient-to-r from-burgundy-600 to-burgundy-500 rounded-full flex items-center justify-center mx-auto mb-6'>
 									<Gift className='w-8 h-8 text-white' />
 								</div>
@@ -310,8 +326,8 @@ export default function SamplePackTryFirstPage() {
 									thoughtful and shows you care about
 									their preferences.
 								</p>
-							</CardContent>
-						</Card>
+							</div>
+						</GlassCard>
 					</div>
 				</div>
 			</section>
