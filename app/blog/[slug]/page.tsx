@@ -585,6 +585,12 @@ interface BlogPostPageProps {
 	}>;
 }
 
+export async function generateStaticParams() {
+	return Object.keys(blogPosts).map((slug) => ({
+		slug,
+	}));
+}
+
 export async function generateMetadata({
 	params,
 }: BlogPostPageProps): Promise<Metadata> {
