@@ -9,7 +9,7 @@ import {
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import Breadcrumb from "@/components/shared/Breadcrumb";
-import GoogleAnalytics from "@/components/GoogleAnalytics";
+import ThirdPartyScripts from "@/components/optimization/ThirdPartyScripts";
 import PerformanceOptimizer, {
 	criticalCSS,
 	criticalImages,
@@ -109,7 +109,11 @@ export default function RootLayout({
 			<body
 				className={`${inter.variable} ${playfair.variable} ${cormorant.variable} ${dancingScript.variable} ${inter.className}`}
 			>
-				<GoogleAnalytics />
+				<ThirdPartyScripts
+					measurementId={
+						process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
+					}
+				/>
 				<Header />
 				<Breadcrumb />
 				<main className='min-h-screen'>{children}</main>

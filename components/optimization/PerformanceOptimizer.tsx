@@ -36,15 +36,15 @@ export default function PerformanceOptimizer({
 				/>
 			)}
 
-			{/* Performance monitoring script */}
+			{/* Lightweight performance monitoring - loads after critical rendering */}
 			<Script
 				id='performance-monitor'
-				strategy='afterInteractive'
+				strategy='lazyOnload'
 				dangerouslySetInnerHTML={{
 					__html: `
-            // Monitor Core Web Vitals
+            // Lightweight Core Web Vitals monitoring without external library
             function sendToAnalytics(metric) {
-              // Send to Google Analytics if available
+              // Send to Google Analytics if available (after it loads)
               if (typeof gtag !== 'undefined') {
                 gtag('event', metric.name, {
                   event_category: 'Web Vitals',
@@ -53,35 +53,76 @@ export default function PerformanceOptimizer({
                   non_interaction: true,
                 });
               }
-              
+
               // Log to console in development
               if (typeof window !== 'undefined' && window.location.hostname === 'localhost') {
                 console.log('Core Web Vital:', metric);
               }
             }
 
-            // Load web-vitals library and measure
-            import('https://unpkg.com/web-vitals@3/dist/web-vitals.js').then(({ onCLS, onFID, onFCP, onLCP, onTTFB }) => {
-              onCLS(sendToAnalytics);
-              onFID(sendToAnalytics);
-              onFCP(sendToAnalytics);
-              onLCP(sendToAnalytics);
-              onTTFB(sendToAnalytics);
-            }).catch(err => {
-              console.warn('Failed to load web-vitals:', err);
-            });
+            // Lightweight CWV measurement without external dependencies
+            function measureCWV() {
+              // Measure LCP
+              if ('PerformanceObserver' in window) {
+                try {
+                  new PerformanceObserver((list) => {
+                    const entries = list.getEntries();
+                    const lastEntry = entries[entries.length - 1];
+                    sendToAnalytics({
+                      name: 'LCP',
+                      value: lastEntry.startTime,
+                      id: 'lcp-' + Math.random().toString(36).substr(2, 9)
+                    });
+                  }).observe({ entryTypes: ['largest-contentful-paint'] });
+
+                  // Measure FCP
+                  new PerformanceObserver((list) => {
+                    const entries = list.getEntries();
+                    const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
+                    if (fcpEntry) {
+                      sendToAnalytics({
+                        name: 'FCP',
+                        value: fcpEntry.startTime,
+                        id: 'fcp-' + Math.random().toString(36).substr(2, 9)
+                      });
+                    }
+                  }).observe({ entryTypes: ['paint'] });
+
+                  // Measure CLS
+                  let clsValue = 0;
+                  new PerformanceObserver((list) => {
+                    for (const entry of list.getEntries()) {
+                      if (!entry.hadRecentInput) {
+                        clsValue += entry.value;
+                      }
+                    }
+                    sendToAnalytics({
+                      name: 'CLS',
+                      value: clsValue,
+                      id: 'cls-' + Math.random().toString(36).substr(2, 9)
+                    });
+                  }).observe({ entryTypes: ['layout-shift'] });
+                } catch (e) {
+                  console.warn('Performance monitoring failed:', e);
+                }
+              }
+            }
+
+            // Start measuring after a delay to not impact initial load
+            setTimeout(measureCWV, 1000);
           `,
 				}}
 			/>
 
-			{/* Resource hints for external domains */}
-			<link rel='dns-prefetch' href='//fonts.googleapis.com' />
-			<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+			{/* Resource hints for critical external domains only */}
+			<link rel='preconnect' href='https://fonts.googleapis.com' />
 			<link
 				rel='preconnect'
 				href='https://fonts.gstatic.com'
 				crossOrigin=''
 			/>
+			{/* DNS prefetch for analytics (loaded later) */}
+			<link rel='dns-prefetch' href='//www.googletagmanager.com' />
 		</>
 	);
 }

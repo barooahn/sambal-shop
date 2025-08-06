@@ -1,6 +1,7 @@
 "use client";
 
 import Script from "next/script";
+import { useEffect, useState } from "react";
 
 interface GoogleAnalyticsProps {
 	measurementId: string;
@@ -9,21 +10,82 @@ interface GoogleAnalyticsProps {
 export default function GoogleAnalytics({
 	measurementId,
 }: GoogleAnalyticsProps) {
-	if (!measurementId) {
+	const [shouldLoad, setShouldLoad] = useState(false);
+
+	useEffect(() => {
+		// Wait for LCP and FCP to complete before loading analytics
+		const loadAnalytics = () => {
+			// Check if LCP has occurred
+			if ("PerformanceLongTaskObserver" in window) {
+				// Use requestIdleCallback if available, otherwise setTimeout
+				const scheduleLoad = () => {
+					if ("requestIdleCallback" in window) {
+						requestIdleCallback(() => setShouldLoad(true), {
+							timeout: 3000,
+						});
+					} else {
+						setTimeout(() => setShouldLoad(true), 2000);
+					}
+				};
+
+				// Wait for LCP
+				if ("PerformanceObserver" in window) {
+					try {
+						const observer = new PerformanceObserver(
+							(list) => {
+								const entries = list.getEntries();
+								const lcpEntry = entries.find(
+									(entry) =>
+										entry.entryType ===
+										"largest-contentful-paint"
+								);
+								if (lcpEntry) {
+									observer.disconnect();
+									scheduleLoad();
+								}
+							}
+						);
+						observer.observe({
+							entryTypes: ["largest-contentful-paint"],
+						});
+
+						// Fallback timeout in case LCP doesn't fire
+						setTimeout(() => {
+							observer.disconnect();
+							scheduleLoad();
+						}, 4000);
+					} catch (e) {
+						// Fallback if PerformanceObserver fails
+						scheduleLoad();
+					}
+				} else {
+					scheduleLoad();
+				}
+			} else {
+				// Fallback for older browsers
+				setTimeout(() => setShouldLoad(true), 3000);
+			}
+		};
+
+		// Start the loading process after component mounts
+		loadAnalytics();
+	}, []);
+
+	if (!measurementId || !shouldLoad) {
 		return null;
 	}
 
 	return (
 		<>
-			{/* Google Analytics gtag.js */}
+			{/* Google Analytics gtag.js - Loaded after LCP */}
 			<Script
 				src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}
-				strategy='afterInteractive'
+				strategy='lazyOnload'
 				id='google-analytics-script'
 			/>
 			<Script
 				id='google-analytics-config'
-				strategy='afterInteractive'
+				strategy='lazyOnload'
 				dangerouslySetInnerHTML={{
 					__html: `
             window.dataLayer = window.dataLayer || [];
@@ -35,6 +97,9 @@ export default function GoogleAnalytics({
               send_page_view: true,
               // Performance optimizations
               transport_type: 'beacon',
+              anonymize_ip: true,
+              allow_google_signals: false,
+              allow_ad_personalization_signals: false,
               custom_map: {
                 'custom_parameter_1': 'page_category'
               }
@@ -119,14 +184,4 @@ export const trackExternalLink = (url: string, linkText?: string) => {
 	trackEvent("external_link_click", "outbound", linkText || url);
 };
 
-// Declare gtag function for TypeScript
-declare global {
-	interface Window {
-		gtag: (
-			command: "config" | "event" | "js",
-			targetId: string | Date,
-			config?: Record<string, any>
-		) => void;
-		dataLayer: any[];
-	}
-}
+// Declare gtag function for TypeScript (removed to avoid conflicts)

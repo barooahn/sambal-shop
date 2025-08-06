@@ -1,10 +1,52 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ChefHat, Award, Heart, Star, Flame, MapPin } from "lucide-react";
 import OptimizedImage from "@/components/optimization/OptimizedImage";
+import { Skeleton } from "@/components/ui/skeleton";
+
+// Custom loading skeleton for Sambal Bali product
+function SambalBaliSkeleton() {
+	return (
+		<div className='relative max-w-[280px] sm:max-w-sm lg:max-w-lg mx-auto lg:mx-0'>
+			<div className='relative z-20 group'>
+				{/* Main skeleton container */}
+				<div className='w-full aspect-square bg-gradient-to-br from-orange-100 to-red-100 rounded-lg shadow-2xl flex flex-col items-center justify-center p-8'>
+					{/* Product skeleton */}
+					<Skeleton className='w-3/4 h-3/4 rounded-lg bg-gradient-to-br from-orange-200 to-red-200 mb-4' />
+
+					{/* Loading text */}
+					<div className='text-center'>
+						<div className='text-orange-600 font-semibold text-sm lg:text-base mb-2 animate-pulse'>
+							Loading Sambal Bali...
+						</div>
+						<div className='flex justify-center space-x-1'>
+							<div className='w-2 h-2 bg-orange-500 rounded-full animate-bounce'></div>
+							<div
+								className='w-2 h-2 bg-red-500 rounded-full animate-bounce'
+								style={{ animationDelay: "0.1s" }}
+							></div>
+							<div
+								className='w-2 h-2 bg-orange-500 rounded-full animate-bounce'
+								style={{ animationDelay: "0.2s" }}
+							></div>
+						</div>
+					</div>
+				</div>
+
+				{/* Price badge skeleton */}
+				<div className='absolute -top-2 -right-2 lg:-top-4 lg:-right-4 z-30'>
+					<Skeleton className='w-16 h-8 lg:w-20 lg:h-10 rounded-full bg-gradient-to-br from-orange-300 to-red-300' />
+				</div>
+			</div>
+
+			{/* Background glow */}
+			<div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-60 lg:w-80 h-60 lg:h-80 bg-gradient-radial from-orange-600/10 via-red-600/5 to-transparent rounded-full blur-3xl'></div>
+		</div>
+	);
+}
 
 export default function HeroSection() {
 	const [interestState, setInterestState] = useState({
@@ -12,6 +54,16 @@ export default function HeroSection() {
 		isSubmitted: false,
 		message: "",
 	});
+	const [imageLoaded, setImageLoaded] = useState(false);
+
+	// Simulate loading delay for demonstration
+	useEffect(() => {
+		const timer = setTimeout(() => {
+			setImageLoaded(true);
+		}, 2000); // Show skeleton for 2 seconds
+
+		return () => clearTimeout(timer);
+	}, []);
 
 	const handleInterestClick = async () => {
 		setInterestState({
@@ -235,31 +287,35 @@ export default function HeroSection() {
 
 					{/* Product showcase - moved to bottom on mobile */}
 					<div className='relative order-2 lg:order-1 pb-6 lg:pb-0'>
-						<div className='relative max-w-[280px] sm:max-w-sm lg:max-w-lg mx-auto lg:mx-0'>
-							{/* Main product image */}
-							<div className='relative z-20 group'>
-								<OptimizedImage
-									src='/images/optimized/sambal-bali-md.webp'
-									alt='Spice Island Indonesia Sambal Bali - Authentic Indonesian Chili Paste'
-									width={320}
-									height={320}
-									className='w-full h-auto object-cover drop-shadow-2xl hover:scale-105 transition-transform duration-700 ease-out'
-									priority
-									quality={85}
-									sizes='(max-width: 640px) 280px, (max-width: 768px) 320px, 400px'
-								/>
+						{!imageLoaded ? (
+							<SambalBaliSkeleton />
+						) : (
+							<div className='relative max-w-[280px] sm:max-w-sm lg:max-w-lg mx-auto lg:mx-0'>
+								{/* Main product image */}
+								<div className='relative z-20 group'>
+									<OptimizedImage
+										src='/images/optimized/sambal-bali-md.webp'
+										alt='Spice Island Indonesia Sambal Bali - Authentic Indonesian Chili Paste'
+										width={320}
+										height={320}
+										className='w-full h-auto object-cover drop-shadow-2xl hover:scale-105 transition-transform duration-700 ease-out'
+										priority
+										quality={85}
+										sizes='(max-width: 640px) 280px, (max-width: 768px) 320px, 400px'
+									/>
 
-								{/* Elegant price badge */}
-								<div className='absolute -top-2 -right-2 lg:-top-4 lg:-right-4 z-30'>
-									<div className='bg-gradient-to-br from-amber-400 via-orange-500 to-red-600 text-white px-3 lg:px-4 py-1 lg:py-2 rounded-full font-bold text-sm lg:text-lg shadow-2xl border-2 border-white/20 backdrop-blur-sm transform rotate-12 hover:rotate-0 hover:scale-110 transition-all duration-500'>
-										£7.49
+									{/* Elegant price badge */}
+									<div className='absolute -top-2 -right-2 lg:-top-4 lg:-right-4 z-30'>
+										<div className='bg-gradient-to-br from-amber-400 via-orange-500 to-red-600 text-white px-3 lg:px-4 py-1 lg:py-2 rounded-full font-bold text-sm lg:text-lg shadow-2xl border-2 border-white/20 backdrop-blur-sm transform rotate-12 hover:rotate-0 hover:scale-110 transition-all duration-500'>
+											£7.49
+										</div>
 									</div>
 								</div>
-							</div>
 
-							{/* Subtle background glow */}
-							<div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-60 lg:w-80 h-60 lg:h-80 bg-gradient-radial from-orange-600/10 via-red-600/5 to-transparent rounded-full blur-3xl'></div>
-						</div>
+								{/* Subtle background glow */}
+								<div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-60 lg:w-80 h-60 lg:h-80 bg-gradient-radial from-orange-600/10 via-red-600/5 to-transparent rounded-full blur-3xl'></div>
+							</div>
+						)}
 					</div>
 				</div>
 			</div>
