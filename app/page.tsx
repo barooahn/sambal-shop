@@ -17,19 +17,19 @@ import { Waves, Triangle, Circle, Square } from "lucide-react";
 // Ingredient configurations for different sections
 const heroIngredients = [
 	{
-		src: "/images/tomatoes-floating.webp",
+		src: "/images/optimized/tomatoes-floating-md.webp",
 		alt: "Fresh Tomatoes",
 		size: "lg" as const,
-		position: { bottom: "-50px", right: "10px" },
+		position: { bottom: "-50px", right: "60px" },
 		rotation: 0,
 		animationDelay: "0.5s",
 		animationDuration: "6s",
 	},
 	{
-		src: "/images/garlic-clove.webp",
+		src: "/images/optimized/garlic-clove-sm.webp",
 		alt: "Garlic Clove",
 		size: "md" as const,
-		position: { bottom: "-50px", left: "10px" },
+		position: { bottom: "-50px", left: "60px" },
 		rotation: 0,
 	},
 ];
@@ -47,57 +47,57 @@ const productIngredients: {
 
 const storyIngredients = [
 	{
-		src: "/images/garlic-clove.webp",
+		src: "/images/optimized/garlic-clove-sm.webp",
 		alt: "Garlic Clove",
 		size: "md" as const,
-		position: { bottom: "-50px", right: "10px" },
+		position: { bottom: "-50px", right: "60px" },
 		rotation: 0,
 		animationDelay: "0.6s",
 		animationDuration: "6s",
 	},
 	{
-		src: "/images/mortar-pestle.webp",
+		src: "/images/optimized/mortar-pestle-md.webp",
 		alt: "Mortar & Pestle",
 		size: "lg" as const,
-		position: { bottom: "-50px", left: "10px" },
+		position: { bottom: "-50px", left: "60px" },
 		rotation: 0,
 	},
 ];
 
 const newsletterIngredients = [
 	{
-		src: "/images/shallot-bulb.webp",
+		src: "/images/optimized/shallot-bulb-xs.webp",
 		alt: "Shallot",
 		size: "sm" as const,
-		position: { top: "-300px", left: "10px" },
+		position: { top: "-300px", left: "60px" },
 		rotation: 0,
 		animationDelay: "0.3s",
 		animationDuration: "5s",
 	},
 	{
-		src: "/images/long-red-chili.webp",
+		src: "/images/optimized/long-red-chili-sm.webp",
 		alt: "Red Chili",
 		size: "md" as const,
-		position: { top: "-300px", right: "10px" },
+		position: { top: "-300px", right: "60px" },
 		rotation: 0,
 	},
 ];
 
 const transitionIngredients = [
 	{
-		src: "/images/turmeric-powder.webp",
+		src: "/images/optimized/turmeric-powder-md.webp",
 		alt: "Turmeric Powder",
 		size: "lg" as const,
-		position: { bottom: "-50px", left: "10px" },
+		position: { bottom: "-50px", left: "60px" },
 		rotation: 15,
 		animationDelay: "0.2s",
 		animationDuration: "8s",
 	},
 	{
-		src: "/images/mortar-pestle.webp",
+		src: "/images/optimized/mortar-pestle-sm.webp",
 		alt: "Mortar & Pestle",
 		size: "md" as const,
-		position: { bottom: "-50px", right: "10px" },
+		position: { bottom: "-50px", right: "60px" },
 		rotation: -10,
 		animationDelay: "0.7s",
 		animationDuration: "6s",
@@ -106,36 +106,36 @@ const transitionIngredients = [
 
 const shippingIngredients = [
 	{
-		src: "/images/garlic-clove.webp",
+		src: "/images/optimized/garlic-clove-sm.webp",
 		alt: "Garlic Clove",
 		size: "md" as const,
-		position: { bottom: "-50px", left: "10px" },
+		position: { bottom: "-50px", left: "60px" },
 		rotation: 0,
 	},
 	{
-		src: "/images/turmeric-powder.webp",
+		src: "/images/optimized/turmeric-powder-xs.webp",
 		alt: "Turmeric Powder",
 		size: "sm" as const,
-		position: { bottom: "-50px", right: "10px" },
+		position: { bottom: "-50px", right: "60px" },
 		rotation: 0,
 	},
 ];
 
 const cookingExperienceIngredients = [
 	{
-		src: "/images/long-red-chili.webp",
+		src: "/images/optimized/long-red-chili-sm.webp",
 		alt: "Red Chili",
 		size: "md" as const,
-		position: { top: "-100px", left: "10px" },
+		position: { top: "-100px", left: "60px" },
 		rotation: 12,
 		animationDelay: "0.4s",
 		animationDuration: "7s",
 	},
 	{
-		src: "/images/shallot-bulb.webp",
+		src: "/images/optimized/shallot-bulb-xs.webp",
 		alt: "Shallot",
 		size: "sm" as const,
-		position: { top: "-100px", right: "10px" },
+		position: { top: "-100px", right: "60px" },
 		rotation: -8,
 		animationDelay: "0.9s",
 		animationDuration: "5s",
@@ -144,41 +144,41 @@ const cookingExperienceIngredients = [
 
 const problemSolutionIngredients = [
 	{
-		src: "/images/mortar-pestle.webp",
+		src: "/images/optimized/mortar-pestle-xs.webp",
 		alt: "Mortar & Pestle",
 		size: "sm" as const,
-		position: { bottom: "-50px", left: "10px" },
+		position: { bottom: "-50px", left: "60px" },
 		rotation: 0,
 	},
 	{
-		src: "/images/tomatoes-floating.webp",
+		src: "/images/optimized/tomatoes-floating-sm.webp",
 		alt: "Fresh Tomatoes",
 		size: "md" as const,
-		position: { bottom: "-50px", right: "10px" },
+		position: { bottom: "-50px", right: "60px" },
 		rotation: 0,
 	},
 ];
 
 const faqIngredients = [
 	{
-		src: "/images/tomatoes-floating.webp",
+		src: "/images/optimized/tomatoes-floating-sm.webp",
 		alt: "Fresh Tomatoes",
 		size: "md" as const,
-		position: { top: "-300px", right: "10px" },
+		position: { top: "-300px", right: "60px" },
 		rotation: 0,
 	},
 	{
-		src: "/images/garlic-clove.webp",
+		src: "/images/optimized/garlic-clove-xs.webp",
 		alt: "Garlic Clove",
 		size: "sm" as const,
-		position: { top: "-300px", left: "10px" },
+		position: { top: "-300px", left: "60px" },
 		rotation: 0,
 	},
 ];
 
 const contactIngredients = [
 	{
-		src: "/images/turmeric-powder.webp",
+		src: "/images/optimized/turmeric-powder-md.webp",
 		alt: "Turmeric Powder",
 		size: "lg" as const,
 		position: { top: "-100px", right: "5%" },
@@ -187,7 +187,7 @@ const contactIngredients = [
 		animationDuration: "8s",
 	},
 	{
-		src: "/images/mortar-pestle.webp",
+		src: "/images/optimized/mortar-pestle-sm.webp",
 		alt: "Mortar & Pestle",
 		size: "md" as const,
 		position: { top: "-80px", left: "8%" },
@@ -220,42 +220,6 @@ export default function Home() {
 
 	return (
 		<div className='font-body min-h-screen relative overflow-hidden'>
-			{/* Enhanced Dynamic Background with Visual Flow */}
-			<div className='fixed inset-0 z-0'>
-				{/* Base gradient */}
-				<div className='absolute inset-0 bg-gradient-to-br from-purple-200 via-orange-200 to-blue-200'></div>
-
-				{/* Animated flowing elements */}
-				<div className='absolute top-20 left-10 w-32 h-32 bg-red-300/30 rounded-full blur-xl animate-pulse'></div>
-				<div
-					className='absolute top-1/3 right-20 w-48 h-48 bg-amber-300/20 rounded-full blur-2xl animate-bounce'
-					style={{ animationDuration: "8s" }}
-				></div>
-				<div
-					className='absolute bottom-1/4 left-1/4 w-40 h-40 bg-emerald-300/25 rounded-full blur-xl animate-pulse'
-					style={{ animationDelay: "2s" }}
-				></div>
-				<div
-					className='absolute bottom-10 right-10 w-28 h-28 bg-rose-300/30 rounded-full blur-lg animate-bounce'
-					style={{
-						animationDuration: "6s",
-						animationDelay: "1s",
-					}}
-				></div>
-
-				{/* Subtle pattern overlay */}
-				<div className='absolute inset-0 opacity-10'>
-					<div
-						className='w-full h-full'
-						style={{
-							backgroundImage: `radial-gradient(circle at 25% 25%, rgba(220, 38, 38, 0.1) 0%, transparent 50%),
-										radial-gradient(circle at 75% 75%, rgba(234, 88, 12, 0.1) 0%, transparent 50%),
-										radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.1) 0%, transparent 50%)`,
-						}}
-					></div>
-				</div>
-			</div>
-
 			{/* Content with proper z-index */}
 			<div className='relative z-10'>
 				{/* Structured Data */}
@@ -368,7 +332,7 @@ export default function Home() {
 					<div className='container mx-auto px-4 relative'>
 						{/* Section header with visual enhancement */}
 						<div className='text-center mb-16 relative'>
-							<div className='inline-block p-8 bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl border border-white/20'>
+							<div className='inline-block p-8 bg-white/80 backdrop-blur-sm rounded-sm shadow-xl border border-white/20'>
 								<h2 className='text-3xl lg:text-4xl font-bold text-burgundy-900 mb-4 font-heading'>
 									Transform Your Cooking Experience
 								</h2>
@@ -473,7 +437,7 @@ export default function Home() {
 						<div className='max-w-4xl mx-auto'>
 							{/* Enhanced section header */}
 							<div className='text-center mb-16'>
-								<div className='inline-block p-8 bg-white/90 backdrop-blur-sm rounded-3xl shadow-2xl border border-white/30'>
+								<div className='inline-block p-8 bg-white/90 backdrop-blur-sm rounded-sm shadow-2xl border border-white/30'>
 									<h2 className='text-3xl lg:text-4xl font-bold text-burgundy-900 mb-4 font-heading'>
 										About Indonesian Sambal
 									</h2>
@@ -489,7 +453,7 @@ export default function Home() {
 								{/* Enhanced FAQ items with better visual flow */}
 								{generalSambalFAQ.map((faq, index) => (
 									<div key={index} className='group'>
-										<div className='bg-white/80 backdrop-blur-sm rounded-2xl p-8 border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1'>
+										<div className='bg-white/80 backdrop-blur-sm rounded-sm p-8 border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1'>
 											{/* Visual accent */}
 											<div className='flex items-start space-x-4'>
 												<div className='flex-shrink-0 w-12 h-12 bg-gradient-to-br from-red-500 to-amber-500 rounded-full flex items-center justify-center text-white font-bold text-lg'>

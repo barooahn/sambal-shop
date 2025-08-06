@@ -101,7 +101,7 @@ export default function SambalVsSrirachaPage() {
 			{/* Quick Answer Section */}
 			<section className='py-16 bg-white'>
 				<div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
-					<div className='bg-gradient-to-r from-burgundy-50 to-gold-50 rounded-3xl p-8 border border-gold-200'>
+					<div className='bg-gradient-to-r from-burgundy-50 to-gold-50 rounded-sm p-8 border border-gold-200'>
 						<h2 className='text-3xl font-bold text-burgundy-900 mb-6 font-brand text-center'>
 							The Quick Answer
 						</h2>
@@ -147,7 +147,7 @@ export default function SambalVsSrirachaPage() {
 
 					<div className='grid lg:grid-cols-2 gap-8'>
 						{/* Sambal Card */}
-						<Card className='shadow-luxury border border-gold-200 bg-gradient-to-br from-cream-50 to-cream-100 overflow-hidden rounded-2xl'>
+						<Card className='shadow-luxury border border-gold-200 bg-gradient-to-br from-cream-50 to-cream-100 overflow-hidden rounded-sm'>
 							<CardContent className='p-8'>
 								<div className='text-center mb-6'>
 									<div className='w-32 h-32 mx-auto mb-4 relative'>
@@ -259,7 +259,7 @@ export default function SambalVsSrirachaPage() {
 						</Card>
 
 						{/* Sriracha Card */}
-						<Card className='shadow-luxury border border-neutral-200 bg-gradient-to-br from-neutral-50 to-neutral-100 overflow-hidden rounded-2xl'>
+						<Card className='shadow-luxury border border-neutral-200 bg-gradient-to-br from-neutral-50 to-neutral-100 overflow-hidden rounded-sm'>
 							<CardContent className='p-8'>
 								<div className='text-center mb-6'>
 									<div className='w-32 h-32 mx-auto mb-4 bg-red-100 rounded-full flex items-center justify-center'>
@@ -373,7 +373,7 @@ export default function SambalVsSrirachaPage() {
 
 					<div className='grid lg:grid-cols-2 gap-12'>
 						{/* Use Sambal When */}
-						<div className='bg-gradient-to-br from-burgundy-50 to-gold-50 rounded-3xl p-8 border border-gold-200'>
+						<div className='bg-gradient-to-br from-burgundy-50 to-gold-50 rounded-sm p-8 border border-gold-200'>
 							<h3 className='text-3xl font-bold text-burgundy-900 mb-6 font-brand'>
 								Choose Sambal When:
 							</h3>
@@ -432,7 +432,7 @@ export default function SambalVsSrirachaPage() {
 						</div>
 
 						{/* Use Sriracha When */}
-						<div className='bg-gradient-to-br from-neutral-50 to-neutral-100 rounded-3xl p-8 border border-neutral-200'>
+						<div className='bg-gradient-to-br from-neutral-50 to-neutral-100 rounded-sm p-8 border border-neutral-200'>
 							<h3 className='text-3xl font-bold text-neutral-900 mb-6 font-brand'>
 								Choose Sriracha When:
 							</h3>
@@ -493,7 +493,7 @@ export default function SambalVsSrirachaPage() {
 					<h2 className='text-4xl sm:text-5xl font-bold mb-6 font-brand'>
 						Chef Yossie's Recommendation
 					</h2>
-					<div className='bg-gradient-to-r from-burgundy-800/50 to-burgundy-700/50 rounded-3xl p-8 mb-8 border border-gold-600/30'>
+					<div className='bg-gradient-to-r from-burgundy-800/50 to-burgundy-700/50 rounded-sm p-8 mb-8 border border-gold-600/30'>
 						<blockquote className='text-xl sm:text-2xl text-gold-200 font-body italic leading-relaxed mb-4'>
 							"Both have their place, but if you're serious
 							about cooking authentic Asian food, start

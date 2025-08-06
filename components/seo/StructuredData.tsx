@@ -10,7 +10,7 @@ export default function StructuredData({
 		"@type": "Organization",
 		name: "Spice Island Indonesia",
 		url: "https://sambal-shop.vercel.app",
-		logo: "https://sambal-shop.vercel.app/images/logo.png",
+		logo: "https://sambal-shop.vercel.app/images/optimized/logo-lg.webp",
 		description:
 			"Authentic Indonesian sambal from the original Spice Islands",
 		address: {

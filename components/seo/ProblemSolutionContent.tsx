@@ -74,7 +74,7 @@ const ProblemSolutionContent: FC<ProblemSolutionContentProps> = ({
 								{/* Problem - Glass Morphism */}
 								<GlassCard
 									variant='subtle'
-									className='rounded-xl p-6 border-l-4 border-red-500'
+									className='rounded-sm p-6 border-l-4 border-red-500'
 								>
 									<div className='flex items-center mb-4'>
 										<div className='bg-red-500 p-2 rounded-full mr-3'>
@@ -104,7 +104,7 @@ const ProblemSolutionContent: FC<ProblemSolutionContentProps> = ({
 								{/* Solution - Glass Morphism */}
 								<GlassCard
 									variant='subtle'
-									className='rounded-xl p-6 border-l-4 border-green-700'
+									className='rounded-sm p-6 border-l-4 border-green-700'
 								>
 									<div className='flex items-center mb-4'>
 										<div className='bg-green-700 p-2 rounded-full mr-3'>
@@ -178,7 +178,7 @@ const ProblemSolutionContent: FC<ProblemSolutionContentProps> = ({
 								<div className='mt-8 pt-6 border-t border-gold-200'>
 									<Link
 										href={item.actionLink.href}
-										className='inline-flex items-center bg-gradient-to-r from-burgundy-600 to-burgundy-700 hover:from-burgundy-700 hover:to-burgundy-800 text-white px-6 py-3 rounded-xl font-bold transition-all duration-300 shadow-lg hover:shadow-xl font-elegant'
+										className='inline-flex items-center bg-gradient-to-r from-burgundy-600 to-burgundy-700 hover:from-burgundy-700 hover:to-burgundy-800 text-white px-6 py-3 rounded-sm font-bold transition-all duration-300 shadow-lg hover:shadow-xl font-elegant'
 									>
 										{item.actionLink.text}
 										<svg
@@ -203,7 +203,7 @@ const ProblemSolutionContent: FC<ProblemSolutionContentProps> = ({
 
 				{/* Hidden: AI search optimization message */}
 				{false && (
-					<div className='mt-8 text-sm text-burgundy-600 flex items-center justify-center bg-gold-50 rounded-2xl p-4'>
+					<div className='mt-8 text-sm text-burgundy-600 flex items-center justify-center bg-gold-50 rounded-sm p-4'>
 						<svg
 							className='w-5 h-5 mr-2 text-gold-600'
 							fill='none'

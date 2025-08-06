@@ -77,10 +77,10 @@ export default function ChefPage() {
 						</div>
 
 						<div className='relative'>
-							<div className='aspect-square rounded-3xl overflow-hidden shadow-luxury border border-gold-200 bg-gradient-to-br from-cream-50 to-gold-50'>
+							<div className='aspect-square rounded-sm overflow-hidden shadow-luxury border border-gold-200 bg-gradient-to-br from-cream-50 to-gold-50'>
 								<div className='w-full h-full flex items-center justify-center p-8'>
 									{/* Placeholder for chef photo */}
-									<div className='w-full h-full bg-gradient-to-br from-burgundy-100 to-gold-100 rounded-2xl flex items-center justify-center'>
+									<div className='w-full h-full bg-gradient-to-br from-burgundy-100 to-gold-100 rounded-sm flex items-center justify-center'>
 										<ChefHat className='w-32 h-32 text-burgundy-600' />
 									</div>
 								</div>
@@ -207,7 +207,7 @@ export default function ChefPage() {
 						</div>
 
 						<div className='relative'>
-							<div className='aspect-[4/3] rounded-4xl overflow-hidden shadow-luxury border border-gold-200'>
+							<div className='aspect-[4/3] rounded-sm overflow-hidden shadow-luxury border border-gold-200'>
 								{/* Placeholder for family catering photo */}
 								<div className='w-full h-full bg-gradient-to-br from-burgundy-50 to-gold-50 flex items-center justify-center'>
 									<div className='text-center'>
@@ -236,7 +236,7 @@ export default function ChefPage() {
 						</span>
 					</h2>
 
-					<div className='bg-gradient-to-r from-burgundy-50 to-gold-50 rounded-3xl p-8 mb-12 border border-gold-200'>
+					<div className='bg-gradient-to-r from-burgundy-50 to-gold-50 rounded-sm p-8 mb-12 border border-gold-200'>
 						<blockquote className='text-xl sm:text-2xl text-burgundy-800 font-body italic leading-relaxed'>
 							"In my mother's catering kitchen, I learned
 							that authentic Indonesian flavors don't have

@@ -128,7 +128,7 @@ export default function SambalScrambledEggsPage() {
 				{/* Additional Content */}
 				<div className='max-w-4xl mx-auto mt-12 space-y-8'>
 					{/* About This Recipe */}
-					<section className='bg-white rounded-2xl shadow-sm border border-gold-200 p-8'>
+					<section className='bg-white rounded-sm shadow-sm border border-gold-200 p-8'>
 						<h2 className='text-2xl font-bold text-burgundy-900 mb-4 font-heading'>
 							About This Recipe
 						</h2>
@@ -155,7 +155,7 @@ export default function SambalScrambledEggsPage() {
 					</section>
 
 					{/* Perfect Scrambled Eggs Technique */}
-					<section className='bg-gradient-to-br from-burgundy-50 to-gold-50 rounded-2xl shadow-sm border border-gold-200 p-8'>
+					<section className='bg-gradient-to-br from-burgundy-50 to-gold-50 rounded-sm shadow-sm border border-gold-200 p-8'>
 						<h2 className='text-2xl font-bold text-burgundy-900 mb-4 font-heading'>
 							Perfect Scrambled Eggs Technique
 						</h2>
@@ -207,7 +207,7 @@ export default function SambalScrambledEggsPage() {
 					</section>
 
 					{/* Heat Level Guide */}
-					<section className='bg-white rounded-2xl shadow-sm border border-gold-200 p-8'>
+					<section className='bg-white rounded-sm shadow-sm border border-gold-200 p-8'>
 						<h2 className='text-2xl font-bold text-burgundy-900 mb-4 font-heading'>
 							Adjusting the Heat Level
 						</h2>
@@ -248,7 +248,7 @@ export default function SambalScrambledEggsPage() {
 					</section>
 
 					{/* Serving Suggestions */}
-					<section className='bg-gradient-to-br from-gold-50 to-cream-50 rounded-2xl shadow-sm border border-gold-200 p-8'>
+					<section className='bg-gradient-to-br from-gold-50 to-cream-50 rounded-sm shadow-sm border border-gold-200 p-8'>
 						<h2 className='text-2xl font-bold text-burgundy-900 mb-4 font-heading'>
 							Serving Suggestions
 						</h2>
@@ -303,7 +303,7 @@ export default function SambalScrambledEggsPage() {
 					</section>
 
 					{/* Nutritional Benefits */}
-					<section className='bg-white rounded-2xl shadow-sm border border-gold-200 p-8'>
+					<section className='bg-white rounded-sm shadow-sm border border-gold-200 p-8'>
 						<h2 className='text-2xl font-bold text-burgundy-900 mb-4 font-heading'>
 							Why This Makes a Great Breakfast
 						</h2>

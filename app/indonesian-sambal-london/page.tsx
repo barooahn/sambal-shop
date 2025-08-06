@@ -375,7 +375,7 @@ export default function IndonesianSambalLondonPage() {
 						</div>
 
 						<div className='relative'>
-							<div className='aspect-[4/3] max-w-md mx-auto relative rounded-2xl overflow-hidden'>
+							<div className='aspect-[4/3] max-w-md mx-auto relative rounded-sm overflow-hidden'>
 								<Image
 									src='/images/chef-yossie-cooking.jpg'
 									alt='Chef Yossie bringing Indonesian flavors to London'

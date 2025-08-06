@@ -152,7 +152,7 @@ export default function SambalNoodleSoupPage() {
 				{/* Additional Content */}
 				<div className='max-w-4xl mx-auto mt-12 space-y-8'>
 					{/* About This Recipe */}
-					<section className='bg-white rounded-2xl shadow-sm border border-gold-200 p-8'>
+					<section className='bg-white rounded-sm shadow-sm border border-gold-200 p-8'>
 						<h2 className='text-2xl font-bold text-burgundy-900 mb-4 font-heading'>
 							About This Recipe
 						</h2>
@@ -180,7 +180,7 @@ export default function SambalNoodleSoupPage() {
 					</section>
 
 					{/* Ingredient Spotlight */}
-					<section className='bg-gradient-to-br from-burgundy-50 to-gold-50 rounded-2xl shadow-sm border border-gold-200 p-8'>
+					<section className='bg-gradient-to-br from-burgundy-50 to-gold-50 rounded-sm shadow-sm border border-gold-200 p-8'>
 						<h2 className='text-2xl font-bold text-burgundy-900 mb-4 font-heading'>
 							Key Ingredients & Their Roles
 						</h2>
@@ -241,7 +241,7 @@ export default function SambalNoodleSoupPage() {
 					</section>
 
 					{/* Cooking Techniques */}
-					<section className='bg-white rounded-2xl shadow-sm border border-gold-200 p-8'>
+					<section className='bg-white rounded-sm shadow-sm border border-gold-200 p-8'>
 						<h2 className='text-2xl font-bold text-burgundy-900 mb-4 font-heading'>
 							Essential Cooking Techniques
 						</h2>
@@ -279,7 +279,7 @@ export default function SambalNoodleSoupPage() {
 					</section>
 
 					{/* Noodle Options */}
-					<section className='bg-gradient-to-br from-gold-50 to-cream-50 rounded-2xl shadow-sm border border-gold-200 p-8'>
+					<section className='bg-gradient-to-br from-gold-50 to-cream-50 rounded-sm shadow-sm border border-gold-200 p-8'>
 						<h2 className='text-2xl font-bold text-burgundy-900 mb-4 font-heading'>
 							Choosing the Right Noodles
 						</h2>
@@ -321,7 +321,7 @@ export default function SambalNoodleSoupPage() {
 					</section>
 
 					{/* Serving & Storage */}
-					<section className='bg-white rounded-2xl shadow-sm border border-gold-200 p-8'>
+					<section className='bg-white rounded-sm shadow-sm border border-gold-200 p-8'>
 						<h2 className='text-2xl font-bold text-burgundy-900 mb-4 font-heading'>
 							Serving & Storage Tips
 						</h2>

@@ -19,7 +19,7 @@ export default function GlassCard({
 	blur = "md",
 }: GlassCardProps) {
 	const baseClasses = "relative overflow-hidden transition-all duration-500";
-	
+
 	const variantClasses = {
 		default: "bg-white/20 backdrop-blur-md",
 		subtle: "bg-white/10 backdrop-blur-sm",
@@ -29,17 +29,17 @@ export default function GlassCard({
 
 	const blurClasses = {
 		sm: "backdrop-blur-sm",
-		md: "backdrop-blur-md", 
+		md: "backdrop-blur-md",
 		lg: "backdrop-blur-lg",
 		xl: "backdrop-blur-xl",
 	};
 
-	const hoverClasses = hover 
-		? "hover:bg-white/25 hover:border-white/40 hover:shadow-2xl hover:scale-[1.02]" 
+	const hoverClasses = hover
+		? "hover:bg-white/25 hover:border-white/40 hover:shadow-2xl hover:scale-[1.02]"
 		: "";
 
-	const borderClasses = border 
-		? "border border-white/20 shadow-xl" 
+	const borderClasses = border
+		? "border border-white/20 shadow-xl"
 		: "shadow-lg";
 
 	return (
@@ -54,13 +54,11 @@ export default function GlassCard({
 			)}
 		>
 			{/* Multi-layer glass effect */}
-			<div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-white/10 backdrop-blur-xs" />
-			<div className="absolute inset-2 bg-gradient-to-br from-white/3 to-transparent rounded-inherit backdrop-blur-xs" />
-			
+			<div className='absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-white/10 backdrop-blur-xs' />
+			<div className='absolute inset-2 bg-gradient-to-br from-white/3 to-transparent rounded-inherit backdrop-blur-xs' />
+
 			{/* Content */}
-			<div className="relative z-10">
-				{children}
-			</div>
+			<div className='relative z-10'>{children}</div>
 		</div>
 	);
 }
@@ -85,8 +83,9 @@ export function GlassButton({
 	disabled = false,
 	type = "button",
 }: GlassButtonProps) {
-	const baseClasses = "relative overflow-hidden transition-all duration-300 font-medium backdrop-blur-md border border-white/20 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed";
-	
+	const baseClasses =
+		"relative overflow-hidden transition-all duration-300 font-medium backdrop-blur-md border border-white/20 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed";
+
 	const variantClasses = {
 		primary: "bg-burgundy-500/80 hover:bg-burgundy-600/80 text-white",
 		secondary: "bg-white/20 hover:bg-white/30 text-gray-800",
@@ -95,8 +94,8 @@ export function GlassButton({
 
 	const sizeClasses = {
 		sm: "px-4 py-2 text-sm rounded-lg",
-		md: "px-6 py-3 text-base rounded-xl",
-		lg: "px-8 py-4 text-lg rounded-2xl",
+		md: "px-6 py-3 text-base rounded-sm",
+		lg: "px-8 py-4 text-lg rounded-sm",
 	};
 
 	return (
@@ -112,10 +111,10 @@ export function GlassButton({
 			)}
 		>
 			{/* Glass effect overlay */}
-			<div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent" />
-			
+			<div className='absolute inset-0 bg-gradient-to-br from-white/10 to-transparent' />
+
 			{/* Content */}
-			<span className="relative z-10 flex items-center justify-center gap-2">
+			<span className='relative z-10 flex items-center justify-center gap-2'>
 				{children}
 			</span>
 		</button>
@@ -141,7 +140,7 @@ export function GlassInput({
 	required = false,
 }: GlassInputProps) {
 	return (
-		<div className="relative">
+		<div className='relative'>
 			<input
 				type={type}
 				placeholder={placeholder}
@@ -149,14 +148,14 @@ export function GlassInput({
 				onChange={onChange}
 				required={required}
 				className={cn(
-					"w-full px-4 py-3 bg-white/20 backdrop-blur-md border border-white/20 rounded-xl",
+					"w-full px-4 py-3 bg-white/20 backdrop-blur-md border border-white/20 rounded-sm",
 					"placeholder-gray-500 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-white/40",
 					"transition-all duration-300 shadow-lg hover:shadow-xl hover:bg-white/25",
 					className
 				)}
 			/>
 			{/* Glass effect overlay */}
-			<div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-xl pointer-events-none" />
+			<div className='absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-sm pointer-events-none' />
 		</div>
 	);
 }

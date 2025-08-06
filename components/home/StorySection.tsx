@@ -12,7 +12,7 @@ export default function StorySection() {
 			<div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 				<div className='grid lg:grid-cols-2 gap-16 items-center'>
 					<div className='relative'>
-						<div className='aspect-[4/3] rounded-4xl overflow-hidden shadow-luxury border border-gold-200'>
+						<div className='aspect-[4/3] rounded-sm overflow-hidden shadow-luxury border border-gold-200'>
 							<Image
 								src='/images/indonesian_vista.png'
 								alt='Indonesian spices and ingredients'
@@ -22,7 +22,7 @@ export default function StorySection() {
 								sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw'
 							/>
 						</div>
-						<div className='absolute inset-0 bg-gradient-to-t from-burgundy-900/20 to-transparent rounded-4xl'></div>
+						<div className='absolute inset-0 bg-gradient-to-t from-burgundy-900/20 to-transparent rounded-sm'></div>
 
 						{/* Floating badges */}
 						<div className='absolute -top-4 -left-4 bg-cream-50 rounded-full p-4 shadow-gold animate-float border border-gold-300'>

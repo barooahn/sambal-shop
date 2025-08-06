@@ -139,8 +139,8 @@ export default function SambalForStirFryPage() {
 						{/* Right side - Product Image */}
 						<div className='relative'>
 							<div className='relative max-w-lg mx-auto'>
-								<div className='aspect-square rounded-3xl overflow-hidden shadow-luxury bg-gradient-to-br from-burgundy-900/10 to-gold-600/10 p-8'>
-									<div className='w-full h-full rounded-2xl flex items-center justify-center'>
+								<div className='aspect-square rounded-sm overflow-hidden shadow-luxury bg-gradient-to-br from-burgundy-900/10 to-gold-600/10 p-8'>
+									<div className='w-full h-full rounded-sm flex items-center justify-center'>
 										<Image
 											src='/images/Spice Island Indonesia Sambal Oelek 185g Label.png'
 											alt='Authentic Indonesian Sambal Oelek - Perfect for stir-frying'
@@ -183,7 +183,7 @@ export default function SambalForStirFryPage() {
 
 					<div className='grid lg:grid-cols-3 gap-8'>
 						{/* High Heat Stability */}
-						<Card className='shadow-luxury border border-gold-200 bg-gradient-to-br from-cream-50 to-cream-100 overflow-hidden rounded-2xl'>
+						<Card className='shadow-luxury border border-gold-200 bg-gradient-to-br from-cream-50 to-cream-100 overflow-hidden rounded-sm'>
 							<CardContent className='p-8 text-center'>
 								<div className='w-16 h-16 bg-gradient-to-r from-burgundy-900 to-burgundy-800 rounded-full flex items-center justify-center mx-auto mb-6'>
 									<Flame className='w-8 h-8 text-gold-300' />
@@ -210,7 +210,7 @@ export default function SambalForStirFryPage() {
 						</Card>
 
 						{/* Pure Flavor */}
-						<Card className='shadow-luxury border border-gold-200 bg-gradient-to-br from-cream-50 to-cream-100 overflow-hidden rounded-2xl'>
+						<Card className='shadow-luxury border border-gold-200 bg-gradient-to-br from-cream-50 to-cream-100 overflow-hidden rounded-sm'>
 							<CardContent className='p-8 text-center'>
 								<div className='w-16 h-16 bg-gradient-to-r from-gold-600 to-gold-500 rounded-full flex items-center justify-center mx-auto mb-6'>
 									<Star className='w-8 h-8 text-burgundy-900' />
@@ -235,7 +235,7 @@ export default function SambalForStirFryPage() {
 						</Card>
 
 						{/* Professional Consistency */}
-						<Card className='shadow-luxury border border-gold-200 bg-gradient-to-br from-cream-50 to-cream-100 overflow-hidden rounded-2xl'>
+						<Card className='shadow-luxury border border-gold-200 bg-gradient-to-br from-cream-50 to-cream-100 overflow-hidden rounded-sm'>
 							<CardContent className='p-8 text-center'>
 								<div className='w-16 h-16 bg-gradient-to-r from-burgundy-700 to-burgundy-600 rounded-full flex items-center justify-center mx-auto mb-6'>
 									<ChefHat className='w-8 h-8 text-gold-300' />
@@ -352,7 +352,7 @@ export default function SambalForStirFryPage() {
 								</div>
 							</div>
 
-							<div className='mt-8 p-6 bg-gradient-to-r from-burgundy-50 to-gold-50 rounded-2xl border border-gold-200'>
+							<div className='mt-8 p-6 bg-gradient-to-r from-burgundy-50 to-gold-50 rounded-sm border border-gold-200'>
 								<h4 className='font-bold text-burgundy-900 mb-3 font-brand'>
 									Chef Yossie's Pro Tip:
 								</h4>
@@ -367,7 +367,7 @@ export default function SambalForStirFryPage() {
 						</div>
 
 						<div className='relative'>
-							<div className='aspect-[4/3] rounded-4xl overflow-hidden shadow-luxury border border-gold-200'>
+							<div className='aspect-[4/3] rounded-sm overflow-hidden shadow-luxury border border-gold-200'>
 								<Image
 									src='/images/indonesian_vista.png'
 									alt='Indonesian cooking ingredients and spices'
@@ -404,7 +404,7 @@ export default function SambalForStirFryPage() {
 
 					<div className='grid md:grid-cols-3 gap-8'>
 						{/* Recipe 1 */}
-						<Card className='shadow-luxury border border-gold-200 bg-gradient-to-br from-cream-50 to-cream-100 overflow-hidden rounded-2xl'>
+						<Card className='shadow-luxury border border-gold-200 bg-gradient-to-br from-cream-50 to-cream-100 overflow-hidden rounded-sm'>
 							<CardContent className='p-6'>
 								<h3 className='text-xl font-bold text-burgundy-900 mb-3 font-brand'>
 									Sambal Chicken Stir-Fry
@@ -428,7 +428,7 @@ export default function SambalForStirFryPage() {
 						</Card>
 
 						{/* Recipe 2 */}
-						<Card className='shadow-luxury border border-gold-200 bg-gradient-to-br from-cream-50 to-cream-100 overflow-hidden rounded-2xl'>
+						<Card className='shadow-luxury border border-gold-200 bg-gradient-to-br from-cream-50 to-cream-100 overflow-hidden rounded-sm'>
 							<CardContent className='p-6'>
 								<h3 className='text-xl font-bold text-burgundy-900 mb-3 font-brand'>
 									Sambal Beef & Broccoli
@@ -452,7 +452,7 @@ export default function SambalForStirFryPage() {
 						</Card>
 
 						{/* Recipe 3 */}
-						<Card className='shadow-luxury border border-gold-200 bg-gradient-to-br from-cream-50 to-cream-100 overflow-hidden rounded-2xl'>
+						<Card className='shadow-luxury border border-gold-200 bg-gradient-to-br from-cream-50 to-cream-100 overflow-hidden rounded-sm'>
 							<CardContent className='p-6'>
 								<h3 className='text-xl font-bold text-burgundy-900 mb-3 font-brand'>
 									Vegetarian Sambal Noodles

@@ -88,7 +88,7 @@ export default function ShippingPage() {
 						{shippingOptions.map((option, index) => (
 							<div
 								key={index}
-								className='bg-cream-50 rounded-3xl p-8 border border-gold-200 text-center'
+								className='bg-cream-50 rounded-sm p-8 border border-gold-200 text-center'
 							>
 								<div className='w-16 h-16 bg-burgundy-100 rounded-full flex items-center justify-center mx-auto mb-6 border border-burgundy-200'>
 									<option.icon className='w-8 h-8 text-burgundy-700' />
@@ -116,7 +116,7 @@ export default function ShippingPage() {
 				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<div className='grid lg:grid-cols-2 gap-16 items-center'>
 						<div className='relative'>
-							<div className='aspect-square rounded-3xl overflow-hidden shadow-luxury bg-gradient-to-br from-cream-50 to-gold-50'>
+							<div className='aspect-square rounded-sm overflow-hidden shadow-luxury bg-gradient-to-br from-cream-50 to-gold-50'>
 								<div className='w-full h-full flex items-center justify-center p-8'>
 									<Image
 										src='/images/Spice Island Indonesia E-commerce Shipping Box.webp'
@@ -198,12 +198,12 @@ export default function ShippingPage() {
 					</div>
 
 					<div className='max-w-4xl mx-auto'>
-						<div className='bg-cream-50 rounded-3xl p-8 border border-gold-200'>
+						<div className='bg-cream-50 rounded-sm p-8 border border-gold-200'>
 							<div className='grid md:grid-cols-2 gap-6'>
 								{deliveryAreas.map((area, index) => (
 									<div
 										key={index}
-										className='flex items-center justify-between p-4 bg-white rounded-2xl border border-gold-200'
+										className='flex items-center justify-between p-4 bg-white rounded-sm border border-gold-200'
 									>
 										<div className='flex items-center space-x-3'>
 											<MapPin
@@ -249,7 +249,7 @@ export default function ShippingPage() {
 					</div>
 
 					<div className='space-y-6'>
-						<div className='bg-white rounded-3xl p-8 border border-gold-200'>
+						<div className='bg-white rounded-sm p-8 border border-gold-200'>
 							<h3 className='text-xl font-bold text-burgundy-900 mb-4 font-brand'>
 								When will my order be dispatched?
 							</h3>
@@ -261,7 +261,7 @@ export default function ShippingPage() {
 							</p>
 						</div>
 
-						<div className='bg-white rounded-3xl p-8 border border-gold-200'>
+						<div className='bg-white rounded-sm p-8 border border-gold-200'>
 							<h3 className='text-xl font-bold text-burgundy-900 mb-4 font-brand'>
 								Do you offer tracking?
 							</h3>
@@ -273,7 +273,7 @@ export default function ShippingPage() {
 							</p>
 						</div>
 
-						<div className='bg-white rounded-3xl p-8 border border-gold-200'>
+						<div className='bg-white rounded-sm p-8 border border-gold-200'>
 							<h3 className='text-xl font-bold text-burgundy-900 mb-4 font-brand'>
 								What if I'm not home for delivery?
 							</h3>
@@ -285,7 +285,7 @@ export default function ShippingPage() {
 							</p>
 						</div>
 
-						<div className='bg-white rounded-3xl p-8 border border-gold-200'>
+						<div className='bg-white rounded-sm p-8 border border-gold-200'>
 							<h3 className='text-xl font-bold text-burgundy-900 mb-4 font-brand'>
 								Are there any additional charges?
 							</h3>

@@ -643,7 +643,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 					name: "Spice Island Indonesia",
 					type: "Organization",
 					logo: {
-						url: "https://spiceislandindonesia.com/images/logo.png",
+						url: "https://sambal-shop.vercel.app/images/optimized/logo-lg.webp",
 						width: 200,
 						height: 60,
 					},
@@ -715,7 +715,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 			<article className='py-16'>
 				<div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
 					{/* Featured Image */}
-					<div className='relative aspect-[16/9] rounded-3xl overflow-hidden shadow-luxury mb-12'>
+					<div className='relative aspect-[16/9] rounded-sm overflow-hidden shadow-luxury mb-12'>
 						<Image
 							src={post.image}
 							alt={post.title}
@@ -726,7 +726,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 					</div>
 
 					{/* Article Body */}
-					<Card className='shadow-luxury border border-gold-200 bg-gradient-to-br from-cream-50 to-cream-100 rounded-3xl overflow-hidden'>
+					<Card className='shadow-luxury border border-gold-200 bg-gradient-to-br from-cream-50 to-cream-100 rounded-sm overflow-hidden'>
 						<CardContent className='p-8 lg:p-12'>
 							<div
 								className='prose prose-lg max-w-none font-body text-neutral-700 leading-relaxed'
@@ -746,7 +746,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 					</Card>
 
 					{/* Author Bio */}
-					<Card className='mt-12 shadow-lg border border-gold-200 bg-gradient-to-br from-burgundy-50 to-gold-50 rounded-2xl'>
+					<Card className='mt-12 shadow-lg border border-gold-200 bg-gradient-to-br from-burgundy-50 to-gold-50 rounded-sm'>
 						<CardContent className='p-8'>
 							<div className='flex items-center gap-4'>
 								<div className='w-16 h-16 bg-gradient-to-r from-burgundy-900 to-burgundy-800 rounded-full flex items-center justify-center border border-gold-600/30'>

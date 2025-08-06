@@ -131,7 +131,7 @@ export default function RecipesPage() {
 						{recipes.map((recipe) => (
 							<div
 								key={recipe.id}
-								className='bg-white rounded-3xl shadow-lg overflow-hidden border border-gold-200 hover:shadow-luxury transition-all duration-300'
+								className='bg-white rounded-sm shadow-lg overflow-hidden border border-gold-200 hover:shadow-luxury transition-all duration-300'
 							>
 								<div className='aspect-[4/3] overflow-hidden relative'>
 									<Image
@@ -195,7 +195,7 @@ export default function RecipesPage() {
 								</span>
 							</h2>
 							<div className='space-y-6 text-lg text-neutral-700 leading-relaxed font-body'>
-								<div className='bg-cream-50 rounded-2xl p-6 border border-gold-200'>
+								<div className='bg-cream-50 rounded-sm p-6 border border-gold-200'>
 									<h3 className='font-bold text-burgundy-900 mb-2 font-brand'>
 										Start Small
 									</h3>
@@ -207,7 +207,7 @@ export default function RecipesPage() {
 										away.
 									</p>
 								</div>
-								<div className='bg-cream-50 rounded-2xl p-6 border border-gold-200'>
+								<div className='bg-cream-50 rounded-sm p-6 border border-gold-200'>
 									<h3 className='font-bold text-burgundy-900 mb-2 font-brand'>
 										Perfect Pairings
 									</h3>
@@ -219,7 +219,7 @@ export default function RecipesPage() {
 										rice dishes.
 									</p>
 								</div>
-								<div className='bg-cream-50 rounded-2xl p-6 border border-gold-200'>
+								<div className='bg-cream-50 rounded-sm p-6 border border-gold-200'>
 									<h3 className='font-bold text-burgundy-900 mb-2 font-brand'>
 										Storage Tips
 									</h3>
@@ -234,7 +234,7 @@ export default function RecipesPage() {
 							</div>
 						</div>
 						<div className='relative'>
-							<div className='aspect-square rounded-3xl overflow-hidden shadow-luxury border border-gold-200'>
+							<div className='aspect-square rounded-sm overflow-hidden shadow-luxury border border-gold-200'>
 								<img
 									src='https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg'
 									alt='Cooking with sambal'

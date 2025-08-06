@@ -59,10 +59,7 @@ export default function NewsletterSection() {
 	};
 
 	return (
-		<section
-			id='newsletter-signup'
-			className='relative overflow-hidden'
-		>
+		<section id='newsletter-signup' className='relative overflow-hidden'>
 			<div className='pt-24 relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 				<div className='text-center mb-16'>
 					<div className='flex items-center justify-center gap-2 mb-6'>
@@ -86,10 +83,10 @@ export default function NewsletterSection() {
 
 				<div className='max-w-6xl mx-auto'>
 					{/* Clean glass morphism container */}
-					<div className='bg-white/20 backdrop-blur-md rounded-3xl p-6 lg:p-12 shadow-xl relative overflow-hidden hover:bg-white/25 transition-all duration-500'>
+					<div className='bg-white/20 backdrop-blur-md rounded-sm p-6 lg:p-12 shadow-xl relative overflow-hidden hover:bg-white/25 transition-all duration-500'>
 						{/* Multi-layer glass effect */}
 						<div className='absolute inset-0 bg-gradient-to-br from-white/10 via-blue-50/20 to-indigo-50/10 backdrop-blur-sm'></div>
-						<div className='absolute inset-4 bg-gradient-to-br from-white/5 to-transparent rounded-2xl backdrop-blur-xs'></div>
+						<div className='absolute inset-4 bg-gradient-to-br from-white/5 to-transparent rounded-sm backdrop-blur-xs'></div>
 
 						<div className='relative'>
 							<div className='grid lg:grid-cols-2 gap-8 lg:gap-12 items-stretch'>
@@ -108,7 +105,7 @@ export default function NewsletterSection() {
 
 									<div className='space-y-4'>
 										{/* Clean glass morphism benefit cards */}
-										<div className='flex items-start gap-4 p-6 bg-white/25 backdrop-blur-md rounded-2xl hover:bg-white/35 transition-all duration-300 shadow-lg'>
+										<div className='flex items-start gap-4 p-6 bg-white/25 backdrop-blur-md rounded-sm hover:bg-white/35 transition-all duration-300 shadow-lg'>
 											<div className='w-14 h-14 bg-gradient-to-r from-burgundy-500/80 to-burgundy-600/80 backdrop-blur-sm rounded-full flex items-center justify-center flex-shrink-0 shadow-lg'>
 												<Gift className='w-7 h-7 text-white drop-shadow-sm' />
 											</div>
@@ -128,7 +125,7 @@ export default function NewsletterSection() {
 											</div>
 										</div>
 
-										<div className='flex items-start gap-4 p-6 bg-white/25 backdrop-blur-md rounded-2xl hover:bg-white/35 transition-all duration-300 shadow-lg'>
+										<div className='flex items-start gap-4 p-6 bg-white/25 backdrop-blur-md rounded-sm hover:bg-white/35 transition-all duration-300 shadow-lg'>
 											<div className='w-14 h-14 bg-gradient-to-r from-burgundy-500/80 to-burgundy-600/80 backdrop-blur-sm rounded-full flex items-center justify-center flex-shrink-0 shadow-lg'>
 												<Star className='w-7 h-7 text-white drop-shadow-sm' />
 											</div>
@@ -150,7 +147,7 @@ export default function NewsletterSection() {
 											</div>
 										</div>
 
-										<div className='flex items-start gap-4 p-6 bg-white/25 backdrop-blur-md rounded-2xl hover:bg-white/35 transition-all duration-300 shadow-lg'>
+										<div className='flex items-start gap-4 p-6 bg-white/25 backdrop-blur-md rounded-sm hover:bg-white/35 transition-all duration-300 shadow-lg'>
 											<div className='w-14 h-14 bg-gradient-to-r from-burgundy-500/80 to-burgundy-600/80 backdrop-blur-sm rounded-full flex items-center justify-center flex-shrink-0 shadow-lg'>
 												<Mail className='w-7 h-7 text-white drop-shadow-sm' />
 											</div>
@@ -177,7 +174,7 @@ export default function NewsletterSection() {
 
 								{/* Right side - Form */}
 								<div className='flex flex-col justify-center'>
-									<div className='bg-gradient-to-br from-burgundy-900 to-burgundy-800 rounded-2xl p-8 text-white shadow-xl h-full flex flex-col justify-center'>
+									<div className='bg-gradient-to-br from-burgundy-900 to-burgundy-800 rounded-sm p-8 text-white shadow-xl h-full flex flex-col justify-center'>
 										<div className='text-center mb-6'>
 											<h4 className='text-2xl font-bold mb-2 font-brand text-gold-200'>
 												Ready to Start?
@@ -217,14 +214,14 @@ export default function NewsletterSection() {
 														)
 													}
 													required
-													className='text-lg py-4 px-6 border-2 border-gold-300/30 focus:border-gold-300 rounded-xl font-body bg-white/10 backdrop-blur-sm text-white placeholder:text-white/60 transition-colors duration-200 w-full'
+													className='text-lg py-4 px-6 border-2 border-gold-300/30 focus:border-gold-300 rounded-sm font-body bg-white/10 backdrop-blur-sm text-white placeholder:text-white/60 transition-colors duration-200 w-full'
 												/>
 											</div>
 
 											<Button
 												type='submit'
 												size='lg'
-												className='w-full bg-gradient-to-r from-gold-600 to-gold-500 hover:from-gold-500 hover:to-gold-400 text-burgundy-900 font-bold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 font-elegant'
+												className='w-full bg-gradient-to-r from-gold-600 to-gold-500 hover:from-gold-500 hover:to-gold-400 text-burgundy-900 font-bold py-4 px-8 rounded-sm shadow-lg hover:shadow-xl transition-all duration-300 font-elegant'
 												disabled={
 													newsletterState.isSubmitting ||
 													newsletterState.isSubmitted

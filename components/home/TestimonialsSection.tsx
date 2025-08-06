@@ -94,7 +94,7 @@ export default function TestimonialsSection() {
 					{testimonials.map((testimonial, index) => (
 						<Card
 							key={index}
-							className='shadow-lg border border-gold-200 bg-gradient-to-br from-cream-50 to-cream-100 overflow-hidden rounded-2xl hover:shadow-luxury transition-all duration-300 group'
+							className='shadow-lg border border-gold-200 bg-gradient-to-br from-cream-50 to-cream-100 overflow-hidden rounded-sm hover:shadow-luxury transition-all duration-300 group'
 						>
 							<CardContent className='p-6'>
 								<div className='flex items-start justify-between mb-4'>

@@ -133,7 +133,7 @@ export default function SambalBaliPage() {
 						</div>
 
 						<div className='relative'>
-							<div className='bg-gradient-to-br from-red-100 to-orange-100 rounded-3xl p-8'>
+							<div className='bg-gradient-to-br from-red-100 to-orange-100 rounded-sm p-8'>
 								<OptimizedImage
 									src='/images/Spice Island Indonesia Sambal Bali 185g Label.png'
 									alt='Spice Island Indonesia Sambal Bali 185g - Aromatic spicy Indonesian chili paste with traditional spices'
@@ -241,7 +241,7 @@ export default function SambalBaliPage() {
 					</div>
 
 					<div className='grid md:grid-cols-2 lg:grid-cols-4 gap-6'>
-						<div className='bg-white p-6 rounded-xl shadow-sm'>
+						<div className='bg-white p-6 rounded-sm shadow-sm'>
 							<div className='text-2xl mb-3'>🍖</div>
 							<h3 className='font-bold mb-2'>
 								Grilled Meats
@@ -253,7 +253,7 @@ export default function SambalBaliPage() {
 							</p>
 						</div>
 
-						<div className='bg-white p-6 rounded-xl shadow-sm'>
+						<div className='bg-white p-6 rounded-sm shadow-sm'>
 							<div className='text-2xl mb-3'>🍚</div>
 							<h3 className='font-bold mb-2'>
 								Rice Dishes
@@ -265,7 +265,7 @@ export default function SambalBaliPage() {
 							</p>
 						</div>
 
-						<div className='bg-white p-6 rounded-xl shadow-sm'>
+						<div className='bg-white p-6 rounded-sm shadow-sm'>
 							<div className='text-2xl mb-3'>🥘</div>
 							<h3 className='font-bold mb-2'>
 								Curry Base
@@ -277,7 +277,7 @@ export default function SambalBaliPage() {
 							</p>
 						</div>
 
-						<div className='bg-white p-6 rounded-xl shadow-sm'>
+						<div className='bg-white p-6 rounded-sm shadow-sm'>
 							<div className='text-2xl mb-3'>🥙</div>
 							<h3 className='font-bold mb-2'>
 								Dipping Sauce
@@ -306,7 +306,7 @@ export default function SambalBaliPage() {
 
 					<div className='max-w-4xl mx-auto'>
 						<div className='grid md:grid-cols-2 gap-8'>
-							<div className='bg-red-50 p-6 rounded-xl'>
+							<div className='bg-red-50 p-6 rounded-sm'>
 								<h3 className='text-xl font-bold mb-4 text-red-800'>
 									Sambal Bali (This Product)
 								</h3>
@@ -329,7 +329,7 @@ export default function SambalBaliPage() {
 								</ul>
 							</div>
 
-							<div className='bg-gray-50 p-6 rounded-xl'>
+							<div className='bg-gray-50 p-6 rounded-sm'>
 								<h3 className='text-xl font-bold mb-4 text-gray-800'>
 									Sambal Oelek
 								</h3>
@@ -377,7 +377,7 @@ export default function SambalBaliPage() {
 					</div>
 
 					<div className='grid md:grid-cols-2 gap-8 max-w-4xl mx-auto'>
-						<div className='bg-white p-6 rounded-xl shadow-sm'>
+						<div className='bg-white p-6 rounded-sm shadow-sm'>
 							<div className='flex items-center mb-4'>
 								<div className='flex text-yellow-400'>
 									{"★".repeat(5)}
@@ -399,7 +399,7 @@ export default function SambalBaliPage() {
 							</div>
 						</div>
 
-						<div className='bg-white p-6 rounded-xl shadow-sm'>
+						<div className='bg-white p-6 rounded-sm shadow-sm'>
 							<div className='flex items-center mb-4'>
 								<div className='flex text-yellow-400'>
 									{"★".repeat(5)}

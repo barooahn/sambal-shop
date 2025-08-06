@@ -405,7 +405,7 @@ export default function SamplePackTryFirstPage() {
 						condiment. Risk-free, authentic, delicious.
 					</p>
 
-					<div className='bg-burgundy-800/50 rounded-2xl p-8 mb-10 border border-gold-600/30'>
+					<div className='bg-burgundy-800/50 rounded-sm p-8 mb-10 border border-gold-600/30'>
 						<div className='flex items-center justify-center mb-4'>
 							<Package className='w-8 h-8 text-gold-300 mr-3' />
 							<span className='text-2xl font-bold text-gold-300 font-brand'>

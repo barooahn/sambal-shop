@@ -14,11 +14,15 @@ import {
 	ChevronDown,
 } from "lucide-react";
 import { supabase } from "@/lib/supabase";
+import OptimizedImage from "@/components/optimization/OptimizedImage";
 
 export default function Header() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const [isProductsOpen, setIsProductsOpen] = useState(false);
 	const [user, setUser] = useState<any>(null);
+	const [hoverTimeout, setHoverTimeout] = useState<NodeJS.Timeout | null>(
+		null
+	);
 	const router = useRouter();
 
 	const navigation = [
@@ -87,17 +91,41 @@ export default function Header() {
 		router.push("/");
 	};
 
+	const handleMouseEnter = () => {
+		if (hoverTimeout) {
+			clearTimeout(hoverTimeout);
+			setHoverTimeout(null);
+		}
+		setIsProductsOpen(true);
+	};
+
+	const handleMouseLeave = () => {
+		const timeout = setTimeout(() => {
+			setIsProductsOpen(false);
+		}, 150); // Small delay to allow moving to dropdown
+		setHoverTimeout(timeout);
+	};
+
 	return (
 		<header className='bg-white/95 backdrop-blur-sm border-b border-gold-200 sticky top-0 z-50'>
 			<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 				<div className='flex justify-between items-center h-16'>
 					{/* Logo */}
 					<Link href='/' className='flex items-center space-x-2'>
-						<div className='w-10 h-10 bg-burgundy-900 rounded-full flex items-center justify-center'>
-							<Heart className='w-6 h-6 text-gold-300' />
+						<div className='relative w-10 h-10 sm:w-10 sm:h-10'>
+							<OptimizedImage
+								src='/images/optimized/logo-xs.webp'
+								alt='Spice Island Indonesia Logo'
+								width={40}
+								height={40}
+								className='w-full h-full object-contain'
+								priority
+								quality={85}
+								sizes='(max-width: 640px) 32px, 40px'
+							/>
 						</div>
-						<div className='hidden sm:block'>
-							<div className='text-xl font-bold text-burgundy-900 font-brand'>
+						<div className='block'>
+							<div className='text-sm sm:text-xl font-bold text-burgundy-900 font-brand'>
 								Spice Island
 							</div>
 							<div className='text-xs text-gold-700 font-elegant tracking-wider'>
@@ -113,11 +141,11 @@ export default function Header() {
 								{item.hasDropdown ? (
 									<div
 										className='relative'
-										onMouseEnter={() =>
-											setIsProductsOpen(true)
+										onMouseEnter={
+											handleMouseEnter
 										}
-										onMouseLeave={() =>
-											setIsProductsOpen(false)
+										onMouseLeave={
+											handleMouseLeave
 										}
 									>
 										<button className='flex items-center space-x-1 text-burgundy-800 hover:text-burgundy-600 font-medium font-body transition-colors duration-200'>
@@ -126,7 +154,7 @@ export default function Header() {
 										</button>
 
 										{isProductsOpen && (
-											<div className='absolute top-full left-0 mt-2 w-80 bg-white rounded-2xl shadow-luxury border border-gold-200 p-6 z-50'>
+											<div className='absolute top-full left-0 w-80 bg-white rounded-sm shadow-luxury border border-gold-200 p-6 z-50'>
 												<div className='space-y-4'>
 													{item.dropdown?.map(
 														(
@@ -146,7 +174,7 @@ export default function Header() {
 																	)
 																}
 															>
-																<div className='flex items-start space-x-3 p-3 rounded-xl hover:bg-gradient-to-r hover:from-burgundy-50 hover:to-gold-50 transition-all duration-200'>
+																<div className='flex items-start space-x-3 p-3 rounded-sm hover:bg-gradient-to-r hover:from-burgundy-50 hover:to-gold-50 transition-all duration-200'>
 																	<div className='flex-1'>
 																		<h4 className='font-bold text-burgundy-900 group-hover:text-burgundy-700 font-brand'>
 																			{

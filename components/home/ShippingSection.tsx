@@ -7,8 +7,8 @@ export default function ShippingSection() {
 			<div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 				<div className='grid lg:grid-cols-2 gap-16 items-center'>
 					<div className='relative'>
-						<div className='aspect-square rounded-3xl overflow-hidden shadow-luxury bg-gradient-to-br from-cream-50 to-gold-50'>
-							<div className='w-full h-full flex items-center justify-center p-8'>
+						<div className='aspect-square rounded-sm overflow-hidden shadow-luxury bg-gradient-to-br from-cream-50 to-gold-50'>
+							<div className='w-full h-full flex items-center justify-center p-2'>
 								<Image
 									src='/images/Spice Island Indonesia E-commerce Shipping Box.webp'
 									alt='Spice Island Indonesia Premium Shipping Box - Beautifully designed packaging for safe delivery of authentic Indonesian sambal'

@@ -138,10 +138,10 @@ export default function SambalBaliSweetSpicyPage() {
 							<div className='relative w-full max-w-md mx-auto'>
 								<div className='absolute inset-0 bg-gradient-to-r from-gold-600/30 to-gold-400/30 rounded-full blur-3xl'></div>
 								<Image
-									src='/images/Spice Island Indonesia Sambal Oelek 185g Label.png'
+									src='/images/optimized/Spice Island Indonesia Sambal Oelek 185g Label-responsive.webp'
 									alt='Authentic Indonesian Sambal Bali 185g jar - Sweet Spicy'
-									width={400}
-									height={400}
+									width={664}
+									height={364}
 									className='relative z-10 w-full h-auto drop-shadow-2xl'
 									priority
 								/>
@@ -278,7 +278,7 @@ export default function SambalBaliSweetSpicyPage() {
 						</div>
 
 						<div className='relative'>
-							<div className='bg-gradient-to-br from-burgundy-100 to-gold-100 rounded-2xl p-8'>
+							<div className='bg-gradient-to-br from-burgundy-100 to-gold-100 rounded-sm p-8'>
 								<div className='text-center'>
 									<div className='w-24 h-24 bg-gradient-to-r from-burgundy-600 to-burgundy-500 rounded-full flex items-center justify-center mx-auto mb-6'>
 										<ChefHat className='w-12 h-12 text-white' />

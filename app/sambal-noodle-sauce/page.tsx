@@ -431,7 +431,7 @@ export default function SambalNoodleSaucePage() {
 				<div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<div className='grid lg:grid-cols-2 gap-12 items-center'>
 						<div className='relative'>
-							<div className='aspect-[4/3] max-w-md mx-auto relative rounded-2xl overflow-hidden'>
+							<div className='aspect-[4/3] max-w-md mx-auto relative rounded-sm overflow-hidden'>
 								<Image
 									src='/images/chef-yossie-cooking.jpg'
 									alt='Chef Yossie preparing Indonesian noodle dishes'

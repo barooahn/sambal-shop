@@ -28,15 +28,15 @@ export default function ProductShowcase() {
 					<div className='group'>
 						<div className='relative mb-6'>
 							{/* Clean glass morphism product card - no borders */}
-							<div className='aspect-square rounded-3xl overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-500 bg-white/20 backdrop-blur-md group-hover:bg-white/30'>
-								<div className='w-full h-full flex items-center justify-center p-6 relative'>
+							<div className='aspect-square rounded-sm overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-500 bg-white/20 backdrop-blur-md group-hover:bg-white/30'>
+								<div className='w-full h-full flex items-center justify-center p-2 relative'>
 									{/* Subtle inner glass effect */}
-									<div className='absolute inset-4 rounded-2xl bg-gradient-to-br from-white/10 to-transparent backdrop-blur-sm'></div>
+									<div className='absolute inset-4 rounded-sm bg-gradient-to-br from-white/10 to-transparent backdrop-blur-sm'></div>
 									<Image
-										src='/images/Spice Island Indonesia Sambal Oelek 185g Label.webp'
+										src='/images/optimized/Spice Island Indonesia Sambal Oelek 185g Label-responsive.webp'
 										alt='Spice Island Indonesia Sambal Oelek 185g - Pure Indonesian chili paste, handcrafted using traditional recipes'
-										width={300}
-										height={300}
+										width={664}
+										height={364}
 										className='w-full h-full object-contain drop-shadow-2xl relative z-10 group-hover:scale-105 transition-transform duration-500'
 										loading='lazy'
 										sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
@@ -86,8 +86,8 @@ export default function ProductShowcase() {
 					{/* Sambal Bali */}
 					<div className='group'>
 						<div className='relative mb-6'>
-							<div className='aspect-square rounded-3xl overflow-hidden shadow-lg group-hover:shadow-luxury transition-all duration-300 bg-gradient-to-br from-cream-50 to-gold-50'>
-								<div className='w-full h-full flex items-center justify-center p-6'>
+							<div className='aspect-square rounded-sm overflow-hidden shadow-lg group-hover:shadow-luxury transition-all duration-300 bg-gradient-to-br from-cream-50 to-gold-50'>
+								<div className='w-full h-full flex items-center justify-center p-2'>
 									<Image
 										src='/images/Spice Island Indonesia Sambal Bali 185g Label.webp'
 										alt='Spice Island Indonesia Sambal Bali 185g - Sweet and spicy Indonesian chili paste with aromatic spices'
@@ -138,13 +138,13 @@ export default function ProductShowcase() {
 					{/* Gift Set */}
 					<div className='group md:col-span-2 lg:col-span-1'>
 						<div className='relative mb-6'>
-							<div className='aspect-square rounded-3xl overflow-hidden shadow-lg group-hover:shadow-luxury transition-all duration-300 bg-gradient-to-br from-cream-50 to-gold-50'>
-								<div className='w-full h-full flex items-center justify-center p-6'>
+							<div className='aspect-square rounded-sm overflow-hidden shadow-lg group-hover:shadow-luxury transition-all duration-300 bg-gradient-to-br from-cream-50 to-gold-50'>
+								<div className='w-full h-full flex items-center justify-center p-2'>
 									<Image
-										src='/images/Spice Island Indonesia Complete Packaging System Mockup.webp'
+										src='/images/optimized/Spice Island Indonesia Complete Packaging System Mockup-responsive.webp'
 										alt='Spice Island Indonesia Heritage Gift Set - Complete packaging with two authentic Indonesian sambal varieties'
-										width={300}
-										height={300}
+										width={664}
+										height={364}
 										className='w-full h-full object-contain drop-shadow-lg'
 										loading='lazy'
 										sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
@@ -178,7 +178,7 @@ export default function ProductShowcase() {
 
 				{/* Try Sample Section */}
 				<div className='text-center mb-20 max-w-4xl mx-auto'>
-					<div className='bg-gradient-to-r from-burgundy-50 to-gold-50 rounded-4xl p-12 border border-gold-200'>
+					<div className='bg-gradient-to-r from-burgundy-50 to-gold-50 rounded-sm p-12 border border-gold-200'>
 						<div className='grid md:grid-cols-2 gap-12 items-center'>
 							<div className='text-left'>
 								<h3 className='text-3xl font-bold text-burgundy-900 mb-4 font-brand'>
@@ -207,8 +207,8 @@ export default function ProductShowcase() {
 								</Button>
 							</div>
 							<div className='relative'>
-								<div className='aspect-square max-w-xs mx-auto rounded-3xl overflow-hidden shadow-lg bg-gradient-to-br from-cream-50 to-gold-50'>
-									<div className='w-full h-full flex items-center justify-center p-6'>
+								<div className='aspect-square max-w-xs mx-auto rounded-sm overflow-hidden shadow-lg bg-gradient-to-br from-cream-50 to-gold-50'>
+									<div className='w-full h-full flex items-center justify-center p-2'>
 										<Image
 											src='/images/Spice Island Indonesia Sambal Oelek 75g Sample Label.webp'
 											alt='Spice Island Indonesia Sambal Oelek 75g Sample - Try before you buy, perfect for discovering authentic Indonesian flavors'

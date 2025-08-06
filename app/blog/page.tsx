@@ -148,7 +148,7 @@ export default function BlogPage() {
 					<div className='mb-16'>
 						<GlassCard
 							variant='subtle'
-							className='overflow-hidden rounded-3xl'
+							className='overflow-hidden rounded-sm'
 						>
 							<div className='grid lg:grid-cols-2 gap-0'>
 								<div className='relative aspect-[4/3] lg:aspect-auto'>
@@ -213,7 +213,7 @@ export default function BlogPage() {
 						{blogPosts.slice(1).map((post) => (
 							<Card
 								key={post.id}
-								className='overflow-hidden shadow-lg border border-gold-200 bg-gradient-to-br from-cream-50 to-cream-100 rounded-2xl hover:shadow-luxury transition-all duration-300 group'
+								className='overflow-hidden shadow-lg border border-gold-200 bg-gradient-to-br from-cream-50 to-cream-100 rounded-sm hover:shadow-luxury transition-all duration-300 group'
 							>
 								<div className='relative aspect-[4/3]'>
 									<Image
@@ -272,7 +272,7 @@ export default function BlogPage() {
 
 					{/* Newsletter CTA */}
 					<div className='mt-16 text-center'>
-						<Card className='max-w-2xl mx-auto shadow-luxury border border-gold-200 bg-gradient-to-br from-burgundy-50 to-gold-50 rounded-3xl overflow-hidden'>
+						<Card className='max-w-2xl mx-auto shadow-luxury border border-gold-200 bg-gradient-to-br from-burgundy-50 to-gold-50 rounded-sm overflow-hidden'>
 							<CardHeader className='pb-6'>
 								<div className='w-16 h-16 bg-gradient-to-r from-burgundy-900 to-burgundy-800 rounded-full flex items-center justify-center mx-auto mb-4 border border-gold-600/30'>
 									<ChefHat className='w-8 h-8 text-gold-200' />

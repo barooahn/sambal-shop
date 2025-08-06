@@ -87,7 +87,7 @@ export default function ContactSection() {
 				</div>
 
 				{/* Clean glass morphism contact form */}
-				<div className='bg-white/80 rounded-3xl p-8 lg:p-12 shadow-xl relative overflow-hidden hover:bg-white/85 transition-all duration-500 border border-white/50'>
+				<div className='bg-white/80 rounded-sm p-8 lg:p-12 shadow-xl relative overflow-hidden hover:bg-white/85 transition-all duration-500 border border-white/50'>
 					{/* Subtle background gradient */}
 					<div className='absolute inset-0 bg-gradient-to-br from-white/20 via-blue-50/10 to-indigo-50/5'></div>
 
@@ -154,7 +154,7 @@ export default function ContactSection() {
 											})
 										}
 										required
-										className='text-lg py-4 pl-12 pr-4 border-2 border-gold-300/50 focus:border-burgundy-600 rounded-xl font-body bg-white/95 shadow-sm hover:shadow-md transition-all duration-200'
+										className='text-lg py-4 pl-12 pr-4 border-2 border-gold-300/50 focus:border-burgundy-600 rounded-sm font-body bg-white/95 shadow-sm hover:shadow-md transition-all duration-200'
 									/>
 								</div>
 							</div>
@@ -190,7 +190,7 @@ export default function ContactSection() {
 											})
 										}
 										required
-										className='text-lg py-4 pl-12 pr-4 border-2 border-gold-300/50 focus:border-burgundy-600 rounded-xl font-body bg-white/95 shadow-sm hover:shadow-md transition-all duration-200'
+										className='text-lg py-4 pl-12 pr-4 border-2 border-gold-300/50 focus:border-burgundy-600 rounded-sm font-body bg-white/95 shadow-sm hover:shadow-md transition-all duration-200'
 									/>
 								</div>
 							</div>
@@ -225,7 +225,7 @@ export default function ContactSection() {
 										})
 									}
 									required
-									className='min-h-40 text-lg pt-4 pl-12 pr-4 pb-4 border-2 border-gold-300/50 focus:border-burgundy-600 rounded-xl font-body bg-white/95 shadow-sm hover:shadow-md transition-all duration-200 resize-none'
+									className='min-h-40 text-lg pt-4 pl-12 pr-4 pb-4 border-2 border-gold-300/50 focus:border-burgundy-600 rounded-sm font-body bg-white/95 shadow-sm hover:shadow-md transition-all duration-200 resize-none'
 								/>
 							</div>
 						</div>
@@ -233,7 +233,7 @@ export default function ContactSection() {
 							<Button
 								type='submit'
 								size='lg'
-								className='w-full bg-gradient-to-r from-burgundy-900 to-burgundy-800 hover:from-burgundy-800 hover:to-burgundy-700 text-gold-200 font-bold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gold-600/30 font-elegant text-lg'
+								className='w-full bg-gradient-to-r from-burgundy-900 to-burgundy-800 hover:from-burgundy-800 hover:to-burgundy-700 text-gold-200 font-bold py-4 px-8 rounded-sm shadow-lg hover:shadow-xl transition-all duration-300 border border-gold-600/30 font-elegant text-lg'
 								disabled={
 									contactState.isSubmitting ||
 									contactState.isSubmitted
@@ -296,7 +296,7 @@ export default function ContactSection() {
 					</form>
 
 					{contactState.isSubmitted && contactState.message && (
-						<div className='mt-8 p-6 bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-xl shadow-sm'>
+						<div className='mt-8 p-6 bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 rounded-sm shadow-sm'>
 							<div className='flex items-center justify-center'>
 								<div className='bg-green-500 rounded-full p-2 mr-3'>
 									<svg

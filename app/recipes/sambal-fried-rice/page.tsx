@@ -467,7 +467,7 @@ export default function SambalFriedRicePage() {
 				{/* Additional Content */}
 				<div className='max-w-4xl mx-auto mt-12 space-y-8'>
 					{/* About This Recipe */}
-					<section className='bg-white rounded-2xl shadow-sm border border-gold-200 p-8'>
+					<section className='bg-white rounded-sm shadow-sm border border-gold-200 p-8'>
 						<h2 className='text-2xl font-bold text-burgundy-900 mb-4 font-heading'>
 							About This Recipe
 						</h2>
@@ -496,7 +496,7 @@ export default function SambalFriedRicePage() {
 					</section>
 
 					{/* Chef's Tips */}
-					<section className='bg-gradient-to-br from-burgundy-50 to-gold-50 rounded-2xl shadow-sm border border-gold-200 p-8'>
+					<section className='bg-gradient-to-br from-burgundy-50 to-gold-50 rounded-sm shadow-sm border border-gold-200 p-8'>
 						<h2 className='text-2xl font-bold text-burgundy-900 mb-4 font-heading'>
 							Chef's Tips for Perfect Nasi Goreng
 						</h2>
@@ -548,7 +548,7 @@ export default function SambalFriedRicePage() {
 					</section>
 
 					{/* Serving Suggestions */}
-					<section className='bg-white rounded-2xl shadow-sm border border-gold-200 p-8'>
+					<section className='bg-white rounded-sm shadow-sm border border-gold-200 p-8'>
 						<h2 className='text-2xl font-bold text-burgundy-900 mb-4 font-heading'>
 							Traditional Serving Style
 						</h2>

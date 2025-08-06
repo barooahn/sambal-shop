@@ -447,7 +447,7 @@ export default function GiftSetIndonesianPage() {
 						</div>
 
 						<div className='relative'>
-							<div className='bg-gradient-to-br from-burgundy-100 to-gold-100 rounded-2xl p-8'>
+							<div className='bg-gradient-to-br from-burgundy-100 to-gold-100 rounded-sm p-8'>
 								<div className='text-center'>
 									<div className='w-24 h-24 bg-gradient-to-r from-burgundy-600 to-burgundy-500 rounded-full flex items-center justify-center mx-auto mb-6'>
 										<Gift className='w-12 h-12 text-white' />

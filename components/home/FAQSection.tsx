@@ -77,7 +77,7 @@ export default function FAQSection() {
 					{faqs.map((faq, index) => (
 						<Card
 							key={index}
-							className='shadow-lg border border-gold-200 bg-gradient-to-br from-cream-50 to-cream-100 overflow-hidden rounded-2xl hover:shadow-luxury transition-all duration-300'
+							className='shadow-lg border border-gold-200 bg-gradient-to-br from-cream-50 to-cream-100 overflow-hidden rounded-sm hover:shadow-luxury transition-all duration-300'
 						>
 							<CardContent className='p-0'>
 								<button

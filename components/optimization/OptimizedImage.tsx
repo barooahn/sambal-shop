@@ -23,8 +23,8 @@ export default function OptimizedImage({
 	height,
 	priority = false,
 	className = "",
-	sizes = "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw",
-	quality = 85,
+	sizes = "(max-width: 640px) 320px, (max-width: 768px) 384px, (max-width: 1024px) 512px, 640px",
+	quality = 75, // Reduced from 85 for better compression
 	placeholder = "empty",
 	blurDataURL,
 }: OptimizedImageProps) {

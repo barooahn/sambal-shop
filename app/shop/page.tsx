@@ -35,7 +35,7 @@ export default function ShopPage() {
 					))}
 				</div>
 
-				<div className='mt-12 text-center bg-white rounded-2xl p-8 shadow-lg border border-gold-200'>
+				<div className='mt-12 text-center bg-white rounded-sm p-8 shadow-lg border border-gold-200'>
 					<h3 className='text-2xl font-semibold text-burgundy-900 mb-4 font-brand'>
 						Ready to Experience Chef Sari's Sambal?
 					</h3>

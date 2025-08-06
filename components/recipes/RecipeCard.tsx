@@ -79,17 +79,17 @@ export default function RecipeCard({
 
 			<GlassCard
 				variant='subtle'
-				className='overflow-hidden rounded-2xl'
+				className='overflow-hidden rounded-sm'
 			>
 				{/* Recipe Image */}
 				<div className='relative aspect-[4/3]'>
 					<OptimizedImage
 						src={recipe.image}
 						alt={`${recipe.name} - Indonesian recipe with sambal`}
-						width={400}
-						height={300}
+						width={320}
+						height={240}
 						className='w-full h-full object-cover'
-						quality={90}
+						quality={80}
 						sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
 					/>
 					<div className='absolute top-4 left-4'>

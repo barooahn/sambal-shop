@@ -130,7 +130,7 @@ export default function SambalBBQMarinadePage() {
 				{/* Additional Content */}
 				<div className='max-w-4xl mx-auto mt-12 space-y-8'>
 					{/* About This Recipe */}
-					<section className='bg-white rounded-2xl shadow-sm border border-gold-200 p-8'>
+					<section className='bg-white rounded-sm shadow-sm border border-gold-200 p-8'>
 						<h2 className='text-2xl font-bold text-burgundy-900 mb-4 font-heading'>
 							About This Marinade
 						</h2>
@@ -158,7 +158,7 @@ export default function SambalBBQMarinadePage() {
 					</section>
 
 					{/* Marinating Guide */}
-					<section className='bg-gradient-to-br from-burgundy-50 to-gold-50 rounded-2xl shadow-sm border border-gold-200 p-8'>
+					<section className='bg-gradient-to-br from-burgundy-50 to-gold-50 rounded-sm shadow-sm border border-gold-200 p-8'>
 						<h2 className='text-2xl font-bold text-burgundy-900 mb-4 font-heading'>
 							Marinating Times & Tips
 						</h2>
@@ -214,7 +214,7 @@ export default function SambalBBQMarinadePage() {
 					</section>
 
 					{/* Grilling Instructions */}
-					<section className='bg-white rounded-2xl shadow-sm border border-gold-200 p-8'>
+					<section className='bg-white rounded-sm shadow-sm border border-gold-200 p-8'>
 						<h2 className='text-2xl font-bold text-burgundy-900 mb-4 font-heading'>
 							Perfect Grilling Technique
 						</h2>
@@ -242,7 +242,7 @@ export default function SambalBBQMarinadePage() {
 					</section>
 
 					{/* Best Meat Pairings */}
-					<section className='bg-gradient-to-br from-gold-50 to-cream-50 rounded-2xl shadow-sm border border-gold-200 p-8'>
+					<section className='bg-gradient-to-br from-gold-50 to-cream-50 rounded-sm shadow-sm border border-gold-200 p-8'>
 						<h2 className='text-2xl font-bold text-burgundy-900 mb-4 font-heading'>
 							Best Meat Pairings
 						</h2>

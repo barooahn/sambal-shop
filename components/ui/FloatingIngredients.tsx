@@ -24,9 +24,9 @@ interface FloatingIngredientsProps {
 }
 
 const sizeClasses = {
-	sm: "w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24",
-	md: "w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28",
-	lg: "w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32",
+	sm: "w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20", // Reduced sizes
+	md: "w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24", // Reduced sizes
+	lg: "w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28", // Reduced sizes
 };
 
 export default function FloatingIngredients({
@@ -35,8 +35,14 @@ export default function FloatingIngredients({
 }: FloatingIngredientsProps) {
 	return (
 		<div
-			className={`absolute inset-0 pointer-events-none overflow-visible ${className}`}
-			style={{ zIndex: -200 }}
+			className={`absolute pointer-events-none overflow-visible ${className}`}
+			style={{
+				zIndex: 15,
+				left: "-50px",
+				right: "-50px",
+				top: "-20px",
+				bottom: "-20px",
+			}}
 		>
 			{ingredients.map((ingredient, index) => (
 				<div
@@ -45,7 +51,7 @@ export default function FloatingIngredients({
 					style={{
 						...ingredient.position,
 						transform: `rotate(${ingredient.rotation}deg)`,
-						opacity: ingredient.opacity || 0.8,
+						opacity: ingredient.opacity || 1.0,
 					}}
 				>
 					<SafeImage

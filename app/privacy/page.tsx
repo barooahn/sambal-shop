@@ -19,7 +19,7 @@ export default function PrivacyPage() {
 			{/* Content Section */}
 			<section className='py-24'>
 				<div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
-					<div className='bg-white rounded-3xl p-8 lg:p-12 shadow-luxury border border-gold-200'>
+					<div className='bg-white rounded-sm p-8 lg:p-12 shadow-luxury border border-gold-200'>
 						<div className='prose prose-lg max-w-none'>
 							<p className='text-neutral-600 mb-8 font-body'>
 								<strong>Last updated:</strong> January
@@ -247,7 +247,7 @@ export default function PrivacyPage() {
 											policy, please contact us
 											at:
 										</p>
-										<div className='bg-cream-50 rounded-2xl p-6 border border-gold-200'>
+										<div className='bg-cream-50 rounded-sm p-6 border border-gold-200'>
 											<p>
 												<strong>
 													Email:

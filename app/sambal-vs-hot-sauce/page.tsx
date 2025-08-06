@@ -145,7 +145,7 @@ export default function SambalVsHotSaucePage() {
 					</div>
 
 					<div className='overflow-x-auto'>
-						<table className='w-full border-collapse bg-white rounded-2xl shadow-lg overflow-hidden'>
+						<table className='w-full border-collapse bg-white rounded-sm shadow-lg overflow-hidden'>
 							<thead>
 								<tr className='bg-gradient-to-r from-burgundy-900 to-burgundy-800 text-white'>
 									<th className='p-6 text-left font-brand text-xl'>
@@ -403,7 +403,7 @@ export default function SambalVsHotSaucePage() {
 				<div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<div className='grid lg:grid-cols-2 gap-12 items-center'>
 						<div className='relative'>
-							<div className='aspect-[4/3] max-w-md mx-auto relative rounded-2xl overflow-hidden'>
+							<div className='aspect-[4/3] max-w-md mx-auto relative rounded-sm overflow-hidden'>
 								<Image
 									src='/images/chef-yossie-cooking.jpg'
 									alt='Chef Yossie preparing traditional Indonesian sambal'

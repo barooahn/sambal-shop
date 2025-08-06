@@ -67,14 +67,14 @@ export default function AboutPage() {
 							</div>
 						</div>
 						<div className='relative'>
-							<div className='aspect-[4/3] rounded-4xl overflow-hidden shadow-luxury border border-gold-200'>
+							<div className='aspect-[4/3] rounded-sm overflow-hidden shadow-luxury border border-gold-200'>
 								<img
 									src='https://images.pexels.com/photos/1630588/pexels-photo-1630588.jpeg'
 									alt='Indonesian spices and ingredients'
 									className='w-full h-full object-cover'
 								/>
 							</div>
-							<div className='absolute inset-0 bg-gradient-to-t from-burgundy-900/20 to-transparent rounded-4xl'></div>
+							<div className='absolute inset-0 bg-gradient-to-t from-burgundy-900/20 to-transparent rounded-sm'></div>
 						</div>
 					</div>
 				</div>
@@ -94,7 +94,7 @@ export default function AboutPage() {
 					</div>
 
 					<div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
-						<div className='text-center bg-white rounded-3xl p-8 shadow-lg border border-gold-200'>
+						<div className='text-center bg-white rounded-sm p-8 shadow-lg border border-gold-200'>
 							<div className='w-16 h-16 bg-burgundy-100 rounded-full flex items-center justify-center mx-auto mb-6 border border-burgundy-200'>
 								<ChefHat className='w-8 h-8 text-burgundy-700' />
 							</div>
@@ -107,7 +107,7 @@ export default function AboutPage() {
 							</p>
 						</div>
 
-						<div className='text-center bg-white rounded-3xl p-8 shadow-lg border border-gold-200'>
+						<div className='text-center bg-white rounded-sm p-8 shadow-lg border border-gold-200'>
 							<div className='w-16 h-16 bg-gold-100 rounded-full flex items-center justify-center mx-auto mb-6 border border-gold-200'>
 								<Award className='w-8 h-8 text-gold-700' />
 							</div>
@@ -120,7 +120,7 @@ export default function AboutPage() {
 							</p>
 						</div>
 
-						<div className='text-center bg-white rounded-3xl p-8 shadow-lg border border-gold-200'>
+						<div className='text-center bg-white rounded-sm p-8 shadow-lg border border-gold-200'>
 							<div className='w-16 h-16 bg-cream-100 rounded-full flex items-center justify-center mx-auto mb-6 border border-cream-200'>
 								<Leaf className='w-8 h-8 text-cream-700' />
 							</div>
@@ -133,7 +133,7 @@ export default function AboutPage() {
 							</p>
 						</div>
 
-						<div className='text-center bg-white rounded-3xl p-8 shadow-lg border border-gold-200'>
+						<div className='text-center bg-white rounded-sm p-8 shadow-lg border border-gold-200'>
 							<div className='w-16 h-16 bg-burgundy-100 rounded-full flex items-center justify-center mx-auto mb-6 border border-burgundy-200'>
 								<Heart className='w-8 h-8 text-burgundy-700' />
 							</div>
@@ -154,7 +154,7 @@ export default function AboutPage() {
 				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<div className='grid lg:grid-cols-2 gap-16 items-center'>
 						<div className='relative'>
-							<div className='aspect-square rounded-3xl overflow-hidden shadow-luxury bg-gradient-to-br from-cream-50 to-gold-50'>
+							<div className='aspect-square rounded-sm overflow-hidden shadow-luxury bg-gradient-to-br from-cream-50 to-gold-50'>
 								<div className='w-full h-full flex items-center justify-center p-8'>
 									<Image
 										src='/images/Spice Island Indonesia Complete Packaging System Mockup.png'

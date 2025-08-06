@@ -343,8 +343,8 @@ export default function SambalOelekUKPage() {
 						{/* Right side - Product Image */}
 						<div className='relative'>
 							<div className='relative max-w-lg mx-auto'>
-								<div className='aspect-square rounded-3xl overflow-hidden shadow-luxury bg-gradient-to-br from-burgundy-900/10 to-gold-600/10 p-8'>
-									<div className='w-full h-full rounded-2xl flex items-center justify-center'>
+								<div className='aspect-square rounded-sm overflow-hidden shadow-luxury bg-gradient-to-br from-burgundy-900/10 to-gold-600/10 p-8'>
+									<div className='w-full h-full rounded-sm flex items-center justify-center'>
 										<Image
 											src='/images/Spice Island Indonesia Sambal Oelek 185g Label.png'
 											alt='Authentic Indonesian Sambal Oelek 185g - Pure chili paste made by Chef Yossie'
@@ -511,7 +511,7 @@ export default function SambalOelekUKPage() {
 				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<div className='grid lg:grid-cols-2 gap-16 items-center'>
 						<div className='relative'>
-							<div className='aspect-[4/3] rounded-4xl overflow-hidden shadow-luxury border border-gold-200'>
+							<div className='aspect-[4/3] rounded-sm overflow-hidden shadow-luxury border border-gold-200'>
 								<Image
 									src='/images/indonesian_vista.png'
 									alt='Indonesian spices and ingredients from Bandung'
