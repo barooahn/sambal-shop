@@ -11,16 +11,20 @@ export default function PerformanceOptimizer({
 }: PerformanceOptimizerProps) {
 	return (
 		<>
-			{/* Preload critical resources */}
+			{/* Preload critical resources - LCP optimized */}
 			{preloadImages.map((src, index) => (
 				<link
 					key={index}
 					rel='preload'
 					as='image'
 					href={src}
-					// Add fetchpriority for the most important image (usually hero)
-					{...(index === 0 && {
+					// Add fetchpriority for LCP images (first two are LCP candidates)
+					{...(index <= 1 && {
 						fetchPriority: "high" as const,
+					})}
+					// Add media query for responsive images
+					{...(src.includes("hero-image") && {
+						media: "(min-width: 768px)",
 					})}
 				/>
 			))}
@@ -127,40 +131,42 @@ export default function PerformanceOptimizer({
 	);
 }
 
-// Critical CSS for above-the-fold content
+// Critical CSS for above-the-fold content - Optimized for LCP
 export const criticalCSS = `
-  /* Critical styles for hero section */
+  /* Critical styles for hero section - Prevent layout shift */
   .hero-section {
     min-height: 100vh;
     display: flex;
     align-items: center;
     background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
   }
-  
-  /* Critical typography */
+
+  /* Critical typography - Prevent FOUT */
   .hero-title {
     font-size: clamp(2rem, 5vw, 4rem);
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 1rem;
+    font-display: swap;
   }
-  
-  /* Critical layout */
+
+  /* Critical layout - Prevent CLS */
   .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
   }
-  
-  /* Prevent layout shift */
+
+  /* Prevent layout shift for images */
   .image-placeholder {
     background-color: #f3f4f6;
     display: flex;
     align-items: center;
     justify-content: center;
+    aspect-ratio: 1;
   }
-  
-  /* Critical button styles */
+
+  /* Critical button styles - Above fold */
   .cta-button {
     display: inline-flex;
     align-items: center;
@@ -171,18 +177,33 @@ export const criticalCSS = `
     font-weight: 600;
     text-decoration: none;
     transition: background-color 0.2s;
+    will-change: transform;
   }
-  
+
   .cta-button:hover {
     background-color: #b91c1c;
   }
+
+  /* Prevent layout shift for hero images */
+  .hero-image-container {
+    aspect-ratio: 1;
+    width: 100%;
+    max-width: 320px;
+    position: relative;
+  }
+
+  /* Critical font loading */
+  @font-face {
+    font-family: 'Inter';
+    font-display: swap;
+  }
 `;
 
-// Images to preload (most critical first)
+// Images to preload (LCP critical first)
 export const criticalImages = [
-	"/images/optimized/logo-xs.webp", // Logo - always visible
-	"/images/optimized/hero-image-xl.webp", // Hero image
-	"/images/optimized/sambal-bali-md.webp", // Product showcase
+	"/images/optimized/hero-image-xl.webp", // Hero background - LCP candidate
+	"/images/optimized/sambal-bali-md.webp", // Hero product - LCP candidate
+	"/images/optimized/logo-xs.webp", // Logo - always visible but smaller
 ];
 
 // Utility function to measure and report performance

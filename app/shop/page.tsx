@@ -5,11 +5,11 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 export const metadata = {
-	title: "Chef Sari's Premium Sambal Collection | Authentic Indonesian Chili Paste UK",
+	title: "Chef Yossie's Premium Sambal Collection | Authentic Indonesian Chili Paste UK",
 	description:
-		"Shop Chef Sari's professional-grade Indonesian sambal collection. Traditional Bandung recipes crafted with commercial kitchen precision. Authentic West Java flavors delivered across the UK.",
+		"Shop Chef Yossie's professional-grade Indonesian sambal collection. Traditional Bandung recipes crafted with commercial kitchen precision. Authentic West Java flavors delivered across the UK.",
 	keywords:
-		"Indonesian sambal UK, Chef Sari sambal, Bandung recipes, West Java chili paste, professional Indonesian condiments, authentic sambal oelek, Indonesian chef UK",
+		"Indonesian sambal UK, Chef Yossie sambal, Bandung recipes, West Java chili paste, professional Indonesian condiments, authentic sambal oelek, Indonesian chef UK",
 };
 
 export default function ShopPage() {
@@ -19,7 +19,7 @@ export default function ShopPage() {
 				<div className='text-center mb-12'>
 					<ShoppingBag className='w-12 h-12 mx-auto mb-4 text-burgundy-600' />
 					<h1 className='text-4xl sm:text-5xl font-bold text-burgundy-900 mb-4 font-brand'>
-						Chef Sari's Premium Sambal Collection
+						Chef Yossie's Premium Sambal Collection
 					</h1>
 					<p className='text-xl text-neutral-600 max-w-3xl mx-auto font-body'>
 						Professional-grade Indonesian sambal crafted with
@@ -37,7 +37,7 @@ export default function ShopPage() {
 
 				<div className='mt-12 text-center bg-white rounded-sm p-8 shadow-lg border border-gold-200'>
 					<h3 className='text-2xl font-semibold text-burgundy-900 mb-4 font-brand'>
-						Ready to Experience Chef Sari's Sambal?
+						Ready to Experience Chef Yossie's Sambal?
 					</h3>
 					<p className='text-neutral-600 mb-6 font-body'>
 						Professional-grade Indonesian sambal crafted with
@@ -60,7 +60,7 @@ export default function ShopPage() {
 								size='lg'
 								className='font-elegant border-burgundy-600 text-burgundy-600 hover:bg-burgundy-600 hover:text-white'
 							>
-								Meet Chef Sari
+								Meet Chef Yossie
 							</Button>
 						</Link>
 					</div>

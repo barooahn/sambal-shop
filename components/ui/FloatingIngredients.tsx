@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import SafeImage from "./SafeImage";
 
 interface IngredientConfig {
@@ -33,6 +34,22 @@ export default function FloatingIngredients({
 	ingredients,
 	className = "",
 }: FloatingIngredientsProps) {
+	const [shouldRender, setShouldRender] = useState(false);
+
+	// Delay rendering of decorative ingredients until after LCP
+	useEffect(() => {
+		const timer = setTimeout(() => {
+			setShouldRender(true);
+		}, 1500); // Wait 1.5 seconds to not interfere with LCP
+
+		return () => clearTimeout(timer);
+	}, []);
+
+	// Don't render anything until after delay
+	if (!shouldRender) {
+		return null;
+	}
+
 	return (
 		<div
 			className={`absolute pointer-events-none overflow-visible ${className}`}

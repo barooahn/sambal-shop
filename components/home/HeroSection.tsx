@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ChefHat, Award, Heart, Star, Flame, MapPin } from "lucide-react";
-import OptimizedImage from "@/components/optimization/OptimizedImage";
 import { Skeleton } from "@/components/ui/skeleton";
 
 // Custom loading skeleton for Sambal Bali product
@@ -107,7 +106,7 @@ export default function HeroSection() {
 
 	return (
 		<section className='relative min-h-screen flex items-center justify-center overflow-hidden'>
-			{/* Background Image */}
+			{/* Background Image - Optimized for LCP */}
 			<div className='absolute inset-0 z-0'>
 				<Image
 					src='/images/optimized/hero-image-xl.webp'
@@ -115,8 +114,11 @@ export default function HeroSection() {
 					fill
 					className='object-cover'
 					priority
-					quality={65}
+					fetchPriority='high'
+					quality={75}
 					sizes='100vw'
+					placeholder='blur'
+					blurDataURL='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k='
 				/>
 				{/* Dark overlay for text readability */}
 				<div className='absolute inset-0 bg-black/50'></div>
@@ -293,15 +295,18 @@ export default function HeroSection() {
 							<div className='relative max-w-[280px] sm:max-w-sm lg:max-w-lg mx-auto lg:mx-0'>
 								{/* Main product image */}
 								<div className='relative z-20 group'>
-									<OptimizedImage
+									<Image
 										src='/images/optimized/sambal-bali-md.webp'
 										alt='Spice Island Indonesia Sambal Bali - Authentic Indonesian Chili Paste'
 										width={320}
 										height={320}
 										className='w-full h-auto object-cover drop-shadow-2xl hover:scale-105 transition-transform duration-700 ease-out'
 										priority
+										fetchPriority='high'
 										quality={85}
 										sizes='(max-width: 640px) 280px, (max-width: 768px) 320px, 400px'
+										placeholder='blur'
+										blurDataURL='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k='
 									/>
 
 									{/* Elegant price badge */}
