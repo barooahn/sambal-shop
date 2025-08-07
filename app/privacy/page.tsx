@@ -231,7 +231,8 @@ export default function PrivacyPage() {
 											you of any changes by
 											posting the new policy on
 											this page and updating
-											the "Last updated" date.
+											the &quot;Last
+											updated&quot; date.
 										</p>
 									</div>
 								</section>
