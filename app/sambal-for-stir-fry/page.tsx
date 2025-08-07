@@ -193,8 +193,8 @@ export default function SambalForStirFryPage() {
 								</h3>
 								<p className='text-neutral-700 leading-relaxed font-body mb-6'>
 									Unlike sugar-based sauces (like
-									sriracha), sambal won&apos;t burn or
-									turn bitter at the high
+									sriracha), sambal won&apos;t burn
+									or turn bitter at the high
 									temperatures needed for proper
 									stir-frying.
 								</p>
@@ -357,11 +357,12 @@ export default function SambalForStirFryPage() {
 									Chef Yossie&apos;s Pro Tip:
 								</h4>
 								<p className='text-burgundy-800 font-body italic'>
-									"Start with less than you think you
-									need. Sambal&apos;s heat builds as it
-									cooks, and you can always add more.
-									The goal is balanced heat that
-									enhances, not overwhelms."
+									&quot;Start with less than you
+									think you need. Sambal&apos;s heat
+									builds as it cooks, and you can
+									always add more. The goal is
+									balanced heat that enhances, not
+									overwhelms.&quot;
 								</p>
 							</div>
 						</div>
@@ -499,8 +500,8 @@ export default function SambalForStirFryPage() {
 						</span>
 					</h2>
 					<p className='text-xl text-gold-200 mb-8 font-body'>
-						Join hundreds of home cooks who&apos;ve discovered the
-						secret to restaurant-quality stir-fries
+						Join hundreds of home cooks who&apos;ve discovered
+						the secret to restaurant-quality stir-fries
 					</p>
 
 					<div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>

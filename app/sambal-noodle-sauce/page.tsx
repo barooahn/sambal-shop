@@ -68,7 +68,8 @@ export default function SambalNoodleSaucePage() {
 								Stop settling for bland noodles!
 								<strong className='text-gold-300'>
 									{" "}
-									Chef Yossie&apos;s traditional sambal
+									Chef Yossie&apos;s traditional
+									sambal
 								</strong>
 								creates restaurant-quality Asian noodle
 								dishes in your own kitchen.
@@ -362,9 +363,9 @@ export default function SambalNoodleSaucePage() {
 											Complex Heat Profile
 										</h4>
 										<p className='text-gray-600'>
-											Builds gradually, doesn&apos;t
-											overpower delicate noodle
-											flavors
+											Builds gradually,
+											doesn&apos;t overpower
+											delicate noodle flavors
 										</p>
 									</div>
 								</div>
@@ -450,8 +451,8 @@ export default function SambalNoodleSaucePage() {
 							</Badge>
 
 							<h2 className='text-3xl sm:text-4xl font-bold text-burgundy-900 mb-6 font-brand'>
-								Authentic Mie Goreng from Chef Yossie&apos;s
-								Kitchen
+								Authentic Mie Goreng from Chef
+								Yossie&apos;s Kitchen
 							</h2>
 
 							<p className='text-xl text-gray-700 mb-6 font-elegant leading-relaxed'>
@@ -491,12 +492,12 @@ export default function SambalNoodleSaucePage() {
 
 							<blockquote className='border-l-4 border-gold-600 pl-6 mb-8'>
 								<p className='text-lg italic text-gray-700 mb-4'>
-									"This recipe fed hundreds of
+									&quot;This recipe fed hundreds of
 									satisfied customers in my catering
 									business. The secret is using real
 									sambal - it creates layers of
 									flavor that packet seasonings
-									simply cannot match."
+									simply cannot match.&quot;
 								</p>
 								<cite className='text-gold-600 font-brand text-lg'>
 									— Chef Yossie, Bandung-born

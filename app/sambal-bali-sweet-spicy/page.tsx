@@ -238,21 +238,21 @@ export default function SambalBaliSweetSpicyPage() {
 							</h2>
 
 							<p className='text-lg text-neutral-600 mb-6 font-body'>
-								"Growing up in Bandung, I learned this
-								Sambal Bali recipe from my grandmother
-								who ran a small warung. The secret is in
-								the balance - enough sweetness to
-								welcome new palates, enough heat to
-								satisfy spice lovers."
+								&quot;Growing up in Bandung, I learned
+								this Sambal Bali recipe from my
+								grandmother who ran a small warung. The
+								secret is in the balance - enough
+								sweetness to welcome new palates, enough
+								heat to satisfy spice lovers.&quot;
 							</p>
 
 							<p className='text-lg text-neutral-600 mb-8 font-body'>
-								"In my professional catering kitchen,
-								this became our most requested
+								&quot;In my professional catering
+								kitchen, this became our most requested
 								condiment. British clients loved how it
 								added Indonesian authenticity without
-								overwhelming heat. Now I'm bringing that
-								same recipe to UK homes."
+								overwhelming heat. Now I&apos;m bringing
+								that same recipe to UK homes.&quot;
 							</p>
 
 							<div className='flex flex-col sm:flex-row gap-4'>
@@ -324,9 +324,9 @@ export default function SambalBaliSweetSpicyPage() {
 							Perfect For These Occasions
 						</h2>
 						<p className='text-xl text-neutral-600 max-w-3xl mx-auto font-body'>
-							Sambal Bali&apos;s balanced flavor profile makes
-							it incredibly versatile for British cooking
-							and entertaining.
+							Sambal Bali&apos;s balanced flavor profile
+							makes it incredibly versatile for British
+							cooking and entertaining.
 						</p>
 					</div>
 
@@ -386,9 +386,9 @@ export default function SambalBaliSweetSpicyPage() {
 					</h2>
 
 					<p className='text-xl text-gold-200 mb-10 max-w-2xl mx-auto font-body'>
-						Join hundreds of UK customers who&apos;ve discovered
-						the perfect balance of Indonesian heat and
-						sweetness in Chef Yossie&apos;s Sambal Bali.
+						Join hundreds of UK customers who&apos;ve
+						discovered the perfect balance of Indonesian heat
+						and sweetness in Chef Yossie&apos;s Sambal Bali.
 					</p>
 
 					<div className='flex flex-col sm:flex-row gap-4 justify-center'>
