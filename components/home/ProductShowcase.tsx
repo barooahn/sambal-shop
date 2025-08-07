@@ -34,7 +34,7 @@ export default function ProductShowcase() {
 									<div className='absolute inset-4 rounded-sm bg-gradient-to-br from-white/10 to-transparent backdrop-blur-sm'></div>
 									<Image
 										src='/images/optimized/Spice Island Indonesia Sambal Oelek 185g Label-responsive.webp'
-										alt='Spice Island Indonesia Sambal Oelek 185g - Pure Indonesian chili paste, handcrafted using traditional recipes'
+										alt='Authentic Indonesian Sambal Oelek 185g - UK Delivery - Chef Yossie Traditional Recipe - Buy Online London Manchester'
 										width={664}
 										height={364}
 										className='w-full h-full object-contain drop-shadow-2xl relative z-10 group-hover:scale-105 transition-transform duration-500'
@@ -90,7 +90,7 @@ export default function ProductShowcase() {
 								<div className='w-full h-full flex items-center justify-center p-2'>
 									<Image
 										src='/images/Spice Island Indonesia Sambal Bali 185g Label.webp'
-										alt='Spice Island Indonesia Sambal Bali 185g - Sweet and spicy Indonesian chili paste with aromatic spices'
+										alt='Authentic Indonesian Sambal Bali 185g - UK Delivery - Aromatic Spicy Chili Paste - Birmingham Edinburgh Manchester Delivery'
 										width={300}
 										height={300}
 										className='w-full h-full object-contain drop-shadow-lg'

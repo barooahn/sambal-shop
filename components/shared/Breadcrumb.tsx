@@ -51,7 +51,7 @@ export default function Breadcrumb() {
 						return (
 							<li key={item.href} className="flex items-center">
 								{index === 0 ? (
-									<Home className="w-4 h-4 text-burgundy-600" />
+									<Home className="w-4 h-4 mr-1 text-burgundy-600" />
 								) : (
 									<ChevronRight className="w-4 h-4 text-neutral-400 mx-2" />
 								)}

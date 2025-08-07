@@ -43,38 +43,38 @@ const dancingScript = Dancing_Script({
 });
 
 export const metadata: Metadata = {
-	metadataBase: new URL("https://sambal-shop.vercel.app"),
-	title: "Authentic Indonesian Sambal | Spice Island Indonesia | Premium Chili Paste UK",
+	metadataBase: new URL("https://spiceislandindonesia.com"),
+	title: "Indonesian Sambal UK | Authentic Delivery London Manchester Birmingham | Spice Island Indonesia",
 	description:
-		"Discover authentic Indonesian sambal from the original Spice Islands. Handcrafted using traditional Maluku recipes, no preservatives. Premium sambal delivery across UK.",
+		"UK's premier Indonesian sambal supplier. Authentic traditional chili paste from the Spice Islands, delivered nationwide. Shop sambal oelek, sambal bali & gift sets with free UK delivery over £25.",
 	keywords:
-		"Indonesian sambal, sambal oelek, sambal bali, authentic chili paste, Indonesian condiments, UK delivery, Maluku spices, traditional recipes, handcrafted sambal, spice islands indonesia, indonesian food uk, premium condiments, chili sauce uk, authentic indonesian cuisine",
+		"Indonesian sambal UK, sambal oelek UK, sambal bali UK, authentic chili paste UK, Indonesian condiments UK delivery, traditional sambal London, sambal delivery Manchester, Indonesian food Birmingham, premium condiments UK, sambal Edinburgh, authentic indonesian cuisine UK, Chef Yossie sambal",
 	verification: {
 		google: process.env.NEXT_PUBLIC_GSC_VERIFICATION_CODE,
 	},
 	openGraph: {
-		title: "Authentic Indonesian Sambal | Spice Island Indonesia",
+		title: "Indonesian Sambal UK | Authentic Delivery | Spice Island Indonesia",
 		description:
-			"Handcrafted sambal from the original Spice Islands. Traditional recipes, premium quality, UK delivery.",
+			"UK's premier Indonesian sambal supplier. Traditional recipes by Chef Yossie, nationwide delivery. Authentic sambal oelek & sambal bali.",
 		type: "website",
 		images: [
 			{
-				url: "/images/Spice Island Indonesia Sambal Oelek 185g Label.png",
+				url: "/images/Spice Island Indonesia Sambal Oelek 185g Label.webp",
 				width: 400,
 				height: 400,
-				alt: "Spice Island Indonesia Sambal Oelek 185g - Authentic Indonesian Chili Paste",
+				alt: "Authentic Indonesian Sambal Oelek 185g - UK Delivery - Chef Yossie Traditional Recipe",
 			},
 		],
 		locale: "en_GB",
-		siteName: "Spice Island Indonesia",
+		siteName: "Spice Island Indonesia UK",
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "Authentic Indonesian Sambal | Spice Island Indonesia",
+		title: "Indonesian Sambal UK | Authentic Delivery | Spice Island Indonesia",
 		description:
-			"Handcrafted sambal from the original Spice Islands. Traditional recipes, premium quality, UK delivery.",
+			"UK's premier Indonesian sambal supplier. Traditional recipes by Chef Yossie, nationwide delivery. Authentic sambal oelek & sambal bali.",
 		images: [
-			"/images/Spice Island Indonesia Sambal Oelek 185g Label.png",
+			"/images/Spice Island Indonesia Sambal Oelek 185g Label.webp",
 		],
 	},
 	robots: {
@@ -89,7 +89,11 @@ export const metadata: Metadata = {
 		},
 	},
 	alternates: {
-		canonical: "https://sambal-shop.vercel.app",
+		canonical: "https://spiceislandindonesia.com",
+		languages: {
+			'en-GB': 'https://spiceislandindonesia.com',
+			'en': 'https://spiceislandindonesia.com'
+		}
 	},
 };
 

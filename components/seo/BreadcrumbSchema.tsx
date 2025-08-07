@@ -20,8 +20,8 @@ const BreadcrumbSchema: FC<BreadcrumbSchemaProps> = ({ items }) => {
 			"name": item.name,
 			"item": {
 				"@type": "WebPage",
-				"@id": item.url,
-				"url": item.url
+				"@id": `https://spiceislandindonesia.com${item.url}`,
+				"url": `https://spiceislandindonesia.com${item.url}`
 			}
 		}))
 	};

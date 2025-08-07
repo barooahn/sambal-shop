@@ -21,7 +21,7 @@ const faqs: FAQItem[] = [
 	},
 	{
 		question:
-			"What&apos;s the difference between sambal oelek and sambal bali?",
+			"What's the difference between sambal oelek and sambal bali?",
 		answer: "Sambal Oelek is pure chili paste made primarily from chilies, salt, and vinegar - it's the foundation of Indonesian cooking and perfect for <a href='/sambal-for-stir-fry' class='text-burgundy-700 hover:text-burgundy-900 font-semibold underline decoration-gold-600'>marinades and stir-fries</a>. Sambal Bali includes aromatic spices like garlic, shallots, and palm sugar, creating a sweet-spicy profile that complements grilled meats and rice dishes beautifully. <a href='/sambal-oelek-uk' class='text-burgundy-700 hover:text-burgundy-900 font-semibold underline decoration-gold-600'>Learn more about our authentic sambal oelek</a>.",
 	},
 	{
@@ -30,7 +30,7 @@ const faqs: FAQItem[] = [
 	},
 	{
 		question: "Are your sambals suitable for vegetarians and vegans?",
-		answer: "Absolutely! Our sambals are made with all-natural ingredients and contain no animal products. They&apos;re suitable for both vegetarians and vegans. We also use no preservatives, artificial colors, or artificial flavors - just pure, authentic Indonesian ingredients.",
+		answer: "Absolutely! Our sambals are made with all-natural ingredients and contain no animal products. They're suitable for both vegetarians and vegans. We also use no preservatives, artificial colors, or artificial flavors - just pure, authentic Indonesian ingredients.",
 	},
 	{
 		question: "How should I store sambal and how long does it last?",
@@ -38,11 +38,11 @@ const faqs: FAQItem[] = [
 	},
 	{
 		question: "What dishes can I use sambal with?",
-		answer: "Sambal is incredibly versatile! Use it as a condiment with rice dishes, noodles, and grilled meats. It&apos;s perfect for marinades, stir-fries, and adding heat to soups. Many customers love it with eggs, pizza, and even as a dip for chips. Start with small amounts and adjust to your heat preference.",
+		answer: "Sambal is incredibly versatile! Use it as a condiment with rice dishes, noodles, and grilled meats. It's perfect for marinades, stir-fries, and adding heat to soups. Many customers love it with eggs, pizza, and even as a dip for chips. Start with small amounts and adjust to your heat preference.",
 	},
 	{
 		question: "Can I try before buying a full jar?",
-		answer: "Yes! We offer 75g sample sizes for £3.99 - perfect for discovering your favorite sambal before committing to the full 185g jar. This is especially great if you&apos;re new to Indonesian cuisine or want to try multiple varieties.",
+		answer: "Yes! We offer 75g sample sizes for £3.99 - perfect for discovering your favorite sambal before committing to the full 185g jar. This is especially great if you're new to Indonesian cuisine or want to try multiple varieties.",
 	},
 ];
 

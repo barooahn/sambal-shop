@@ -110,7 +110,7 @@ export default function HeroSection() {
 			<div className='absolute inset-0 z-0'>
 				<Image
 					src='/images/optimized/hero-image-xl.webp'
-					alt='Fresh Indonesian ingredients including chilies, shallots, and spices'
+					alt='Premium Indonesian spices imported to UK - authentic Indonesian cooking ingredients available London Manchester Birmingham'
 					fill
 					className='object-cover'
 					priority
@@ -157,7 +157,7 @@ export default function HeroSection() {
 							</div>
 						</div>
 
-						{/* Main headline with mobile-optimized typography */}
+						{/* Main headline with UK market optimization */}
 						<h1 className='text-3xl sm:text-4xl lg:text-7xl font-light text-white mb-2 lg:mb-4 leading-tight tracking-tight'>
 							<span className='block font-light text-white/90'>
 								Professional
@@ -166,7 +166,7 @@ export default function HeroSection() {
 								Indonesian
 							</span>
 							<span className='block font-bold bg-gradient-to-r from-amber-300 via-orange-300 to-red-300 bg-clip-text text-transparent'>
-								Sambal
+								Sambal UK
 							</span>
 						</h1>
 

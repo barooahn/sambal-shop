@@ -36,31 +36,31 @@ export default function Footer() {
 
 					<div>
 						<h4 className='text-xl font-semibold mb-6 text-gold-300 font-brand'>
-							Products
+							Indonesian Sambal UK
 						</h4>
 						<ul className='space-y-3 font-body'>
 							<li>
 								<Link
-									href='/shop#sambal-oelek'
+									href='/sambal-oelek-uk'
 									className='text-gold-200 hover:text-gold-100 transition-colors'
 								>
-									Sambal Oelek
+									Sambal Oelek UK
 								</Link>
 							</li>
 							<li>
 								<Link
-									href='/shop#sambal-bali'
+									href='/sambal-bali-aromatic-spicy'
 									className='text-gold-200 hover:text-gold-100 transition-colors'
 								>
-									Sambal Bali
+									Sambal Bali UK
 								</Link>
 							</li>
 							<li>
 								<Link
-									href='/shop#sample-pack'
+									href='/sample-pack-try-first'
 									className='text-gold-200 hover:text-gold-100 transition-colors'
 								>
-									Sample Pack
+									Try Sample Pack UK
 								</Link>
 							</li>
 							<li>
@@ -76,7 +76,7 @@ export default function Footer() {
 									href='/shop'
 									className='text-gold-200 hover:text-gold-100 transition-colors'
 								>
-									View All Products
+									Shop All Indonesian Sambal UK
 								</Link>
 							</li>
 						</ul>
@@ -132,15 +132,31 @@ export default function Footer() {
 
 					<div>
 						<h4 className='text-xl font-semibold mb-6 text-gold-300 font-brand'>
-							Cooking Guide
+							UK Delivery & Recipes
 						</h4>
 						<ul className='space-y-3 font-body'>
+							<li>
+								<Link
+									href='/indonesian-sambal-london'
+									className='text-gold-200 hover:text-gold-100 transition-colors'
+								>
+									London Delivery
+								</Link>
+							</li>
+							<li>
+								<Link
+									href='/sambal-delivery-manchester'
+									className='text-gold-200 hover:text-gold-100 transition-colors'
+								>
+									Manchester Delivery
+								</Link>
+							</li>
 							<li>
 								<Link
 									href='/recipes'
 									className='text-gold-200 hover:text-gold-100 transition-colors'
 								>
-									All Recipes
+									Indonesian Recipes UK
 								</Link>
 							</li>
 							<li>

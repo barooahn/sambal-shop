@@ -31,7 +31,6 @@ const LocalSEOSchema: FC<LocalSEOSchemaProps> = ({
 		"name": businessName,
 		"description": description,
 		"url": "https://spiceislandindonesia.com",
-		"telephone": "+44-XXX-XXX-XXXX", // Placeholder
 		"email": "info@spiceislandindonesia.com",
 		"foundingDate": "2024",
 		"founder": {
@@ -89,11 +88,15 @@ const LocalSEOSchema: FC<LocalSEOSchemaProps> = ({
 				}
 			]
 		},
+		"priceRange": "££",
+		"servesCuisine": "Indonesian",
+		"paymentAccepted": "Credit Card, PayPal, Bank Transfer",
+		"currenciesAccepted": "GBP",
 		"potentialAction": [
 			{
 				"@type": "OrderAction",
 				"target": "https://spiceislandindonesia.com/shop",
-				"deliveryMethod": "https://schema.org/DeliveryModeDirectDownload"
+				"deliveryMethod": "https://schema.org/ParcelService"
 			},
 			{
 				"@type": "SearchAction",

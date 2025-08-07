@@ -9,10 +9,10 @@ export default function StructuredData({
 		"@context": "https://schema.org",
 		"@type": "Organization",
 		name: "Spice Island Indonesia",
-		url: "https://sambal-shop.vercel.app",
-		logo: "https://sambal-shop.vercel.app/images/optimized/logo-lg.webp",
+		url: "https://spiceislandindonesia.com",
+		logo: "https://spiceislandindonesia.com/images/optimized/logo-lg.webp",
 		description:
-			"Authentic Indonesian sambal from the original Spice Islands",
+			"UK's premier Indonesian sambal supplier. Authentic traditional chili paste from the original Spice Islands, delivered nationwide",
 		address: {
 			"@type": "PostalAddress",
 			addressCountry: "GB",
@@ -48,7 +48,7 @@ export default function StructuredData({
 				priceCurrency: "GBP",
 				availability: "https://schema.org/PreOrder",
 				itemCondition: "https://schema.org/NewCondition",
-				image: "https://sambal-shop.vercel.app/images/Spice Island Indonesia Sambal Oelek 185g Label.png",
+				image: "https://spiceislandindonesia.com/images/Spice Island Indonesia Sambal Oelek 185g Label.webp",
 			},
 			{
 				"@type": "Offer",
@@ -58,7 +58,7 @@ export default function StructuredData({
 				priceCurrency: "GBP",
 				availability: "https://schema.org/PreOrder",
 				itemCondition: "https://schema.org/NewCondition",
-				image: "https://sambal-shop.vercel.app/images/Spice Island Indonesia Sambal Bali 185g Label.png",
+				image: "https://spiceislandindonesia.com/images/Spice Island Indonesia Sambal Bali 185g Label.webp",
 			},
 			{
 				"@type": "Offer",
@@ -68,7 +68,7 @@ export default function StructuredData({
 				priceCurrency: "GBP",
 				availability: "https://schema.org/PreOrder",
 				itemCondition: "https://schema.org/NewCondition",
-				image: "https://sambal-shop.vercel.app/images/Spice Island Indonesia Complete Packaging System Mockup.png",
+				image: "https://spiceislandindonesia.com/images/Spice Island Indonesia Complete Packaging System Mockup.webp",
 			},
 		],
 		aggregateRating: {

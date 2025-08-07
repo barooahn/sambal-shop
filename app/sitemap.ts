@@ -3,8 +3,7 @@ import { MetadataRoute } from "next";
 export const dynamic = "force-static";
 
 // Get the base URL from environment or default
-const baseUrl =
-	process.env.NEXT_PUBLIC_SITE_URL || "https://spiceislandindonesia.com";
+const baseUrl = "https://spiceislandindonesia.com";
 
 // Define all static routes with their priorities and change frequencies
 const staticRoutes = [

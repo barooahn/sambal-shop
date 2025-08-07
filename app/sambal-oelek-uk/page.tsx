@@ -22,22 +22,22 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-	title: "Authentic Indonesian Sambal Oelek UK | Chef Yossie&apos;s Traditional Recipe | Spice Island Indonesia",
+	title: "Buy Sambal Oelek UK | Authentic Indonesian Chili Paste Delivery | Chef Yossie Traditional Recipe",
 	description:
-		"Buy authentic Indonesian sambal oelek made by Bandung-born Chef Yossie using traditional family recipes. Pure chili paste, no preservatives. UK delivery available.",
+		"Authentic Indonesian sambal oelek delivered across UK. Traditional recipe by Chef Yossie - pure chili paste, no preservatives. Order online: London, Manchester, Edinburgh delivery available.",
 	keywords:
-		"sambal oelek UK, authentic Indonesian sambal, buy sambal oelek, Indonesian chili paste, traditional sambal recipe, Chef Yossie sambal, Indonesian condiments UK, sambal oelek delivery",
+		"buy sambal oelek UK, sambal oelek delivery London, authentic Indonesian sambal Manchester, Indonesian chili paste UK, traditional sambal recipe Birmingham, Chef Yossie sambal Edinburgh, Indonesian condiments UK delivery, sambal oelek online UK",
 	openGraph: {
-		title: "Authentic Indonesian Sambal Oelek UK | Chef Yossie&apos;s Traditional Recipe",
+		title: "Buy Sambal Oelek UK | Authentic Indonesian Chili Paste Delivery",
 		description:
-			"Pure, fiery Indonesian chili paste made by professional chef using traditional Bandung recipes. No preservatives, authentic taste.",
+			"UK's premier Indonesian sambal oelek delivery. Traditional recipe by Chef Yossie - pure chili paste made in UK, delivered London Manchester Birmingham.",
 		type: "website",
 		images: [
 			{
-				url: "https://sambal-shop.vercel.app/images/Spice Island Indonesia Sambal Oelek 185g Label.png",
+				url: "https://spiceislandindonesia.com/images/Spice Island Indonesia Sambal Oelek 185g Label.webp",
 				width: 400,
 				height: 400,
-				alt: "Authentic Indonesian Sambal Oelek 185g jar",
+				alt: "Authentic Indonesian Sambal Oelek 185g - UK Delivery - Chef Yossie Traditional Recipe",
 			},
 		],
 	},
@@ -246,10 +246,10 @@ export default function SambalOelekUKPage() {
 									Authentic Indonesian
 								</span>
 								<span className='text-gold-300 block mb-2'>
-									Sambal Oelek
+									Sambal Oelek UK
 								</span>
 								<span className='text-gold-200 text-2xl sm:text-3xl lg:text-4xl font-script italic'>
-									Made in UK by Bandung Chef
+									Traditional Recipe - UK Delivery
 								</span>
 							</h1>
 

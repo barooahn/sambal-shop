@@ -16,21 +16,21 @@ const testimonials: Testimonial[] = [
 		name: "Sarah M.",
 		location: "London",
 		rating: 5,
-		review: "Finally found authentic Indonesian sambal in the UK! The Sambal Oelek is exactly like what I had in Jakarta. Chef Yossie&apos;s recipes are the real deal - you can taste the traditional methods in every jar.",
+		review: "Finally found authentic Indonesian sambal in the UK! The Sambal Oelek is exactly like what I had in Jakarta. Chef Yossie's recipes are the real deal - you can taste the traditional methods in every jar.",
 		product: "Sambal Oelek",
 	},
 	{
 		name: "James P.",
 		location: "Manchester",
 		rating: 5,
-		review: "As someone who lived in Indonesia for 3 years, I can confirm this is authentic. The heat level is perfect and the flavour is complex. Best sambal I&apos;ve found in the UK by far!",
+		review: "As someone who lived in Indonesia for 3 years, I can confirm this is authentic. The heat level is perfect and the flavour is complex. Best sambal I've found in the UK by far!",
 		product: "Sambal Bali",
 	},
 	{
 		name: "Priya K.",
 		location: "Birmingham",
 		rating: 5,
-		review: "Ordered the Heritage Gift Set for my Indonesian friend&apos;s birthday. She was amazed by the quality and said it reminded her of home. The packaging is beautiful too!",
+		review: "Ordered the Heritage Gift Set for my Indonesian friend's birthday. She was amazed by the quality and said it reminded her of home. The packaging is beautiful too!",
 		product: "Heritage Gift Set",
 	},
 	{
@@ -44,7 +44,7 @@ const testimonials: Testimonial[] = [
 		name: "Emma T.",
 		location: "Cardiff",
 		rating: 5,
-		review: "Chef Yossie&apos;s story drew me in, but the taste kept me coming back. This is restaurant-quality sambal that I can enjoy at home. The 75g sample was perfect to try first!",
+		review: "Chef Yossie's story drew me in, but the taste kept me coming back. This is restaurant-quality sambal that I can enjoy at home. The 75g sample was perfect to try first!",
 		product: "Sample Size",
 	},
 	{
