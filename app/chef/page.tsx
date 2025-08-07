@@ -34,9 +34,9 @@ export default function ChefPage() {
 									Meet Chef Yossie
 								</h1>
 								<p className='text-xl sm:text-2xl text-gold-200 mb-8 leading-relaxed font-body'>
-									From Bandung&apos;s bustling catering
-									kitchens to handcrafted artisan
-									production in the UK
+									From Bandung&apos;s bustling
+									catering kitchens to handcrafted
+									artisan production in the UK
 								</p>
 							</div>
 
@@ -116,9 +116,9 @@ export default function ChefPage() {
 							</h3>
 							<p className='text-neutral-700 leading-relaxed font-body'>
 								Born and raised in Bandung, West Java -
-								Indonesia&apos;s culinary capital known for
-								its incredible street food culture and
-								traditional Sundanese cuisine. Chef
+								Indonesia&apos;s culinary capital known
+								for its incredible street food culture
+								and traditional Sundanese cuisine. Chef
 								Yossie grew up surrounded by the rich
 								food heritage of the region.
 							</p>
@@ -133,12 +133,12 @@ export default function ChefPage() {
 								Professional Training
 							</h3>
 							<p className='text-neutral-700 leading-relaxed font-body'>
-								Trained in her mother&apos;s busy catering
-								kitchen, serving hundreds daily. Here
-								she learned the art of scaling
-								traditional recipes while maintaining
-								authentic flavors - a skill that sets
-								her apart from home cooks.
+								Trained in her mother&apos;s busy
+								catering kitchen, serving hundreds
+								daily. Here she learned the art of
+								scaling traditional recipes while
+								maintaining authentic flavors - a skill
+								that sets her apart from home cooks.
 							</p>
 						</div>
 
@@ -236,12 +236,13 @@ export default function ChefPage() {
 
 					<div className='bg-gradient-to-r from-burgundy-50 to-gold-50 rounded-sm p-8 mb-12 border border-gold-200'>
 						<blockquote className='text-xl sm:text-2xl text-burgundy-800 font-body italic leading-relaxed'>
-							"In my mother&apos;s catering kitchen, I learned
-							that authentic Indonesian flavors don&apos;t have
-							to be compromised when cooking at scale.
-							Every jar I make today carries that same
-							commitment to professional consistency and
-							traditional authenticity."
+							&quot;In my mother&apos;s catering kitchen, I
+							learned that authentic Indonesian flavors
+							don&apos;t have to be compromised when
+							cooking at scale. Every jar I make today
+							carries that same commitment to professional
+							consistency and traditional
+							authenticity.&quot;
 						</blockquote>
 						<cite className='text-burgundy-600 font-brand text-lg mt-4 block'>
 							— Chef Yossie

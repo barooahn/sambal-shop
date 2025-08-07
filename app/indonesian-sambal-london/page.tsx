@@ -69,7 +69,8 @@ export default function IndonesianSambalLondonPage() {
 								London!
 								<strong className='text-gold-300'>
 									{" "}
-									Chef Yossie&apos;s traditional recipes
+									Chef Yossie&apos;s traditional
+									recipes
 								</strong>
 								delivered to your door across all London
 								boroughs. No more settling for
@@ -226,8 +227,9 @@ export default function IndonesianSambalLondonPage() {
 							Sambal
 						</h2>
 						<p className='text-xl text-gray-700 font-elegant max-w-3xl mx-auto'>
-							London&apos;s diverse food scene demands authentic
-							flavors, not mass-produced imitations.
+							London&apos;s diverse food scene demands
+							authentic flavors, not mass-produced
+							imitations.
 						</p>
 					</div>
 
@@ -243,8 +245,8 @@ export default function IndonesianSambalLondonPage() {
 									Multicultural Capital
 								</h3>
 								<p className='text-gray-600'>
-									London&apos;s Indonesian community and
-									food lovers deserve access to
+									London&apos;s Indonesian community
+									and food lovers deserve access to
 									authentic flavors, not watered-down
 									supermarket versions.
 								</p>
@@ -262,8 +264,8 @@ export default function IndonesianSambalLondonPage() {
 									Foodie Culture
 								</h3>
 								<p className='text-gray-600'>
-									London&apos;s sophisticated food scene
-									appreciates quality and
+									London&apos;s sophisticated food
+									scene appreciates quality and
 									authenticity. Our sambal meets the
 									high standards of discerning London
 									palates.
@@ -359,13 +361,14 @@ export default function IndonesianSambalLondonPage() {
 
 							<blockquote className='border-l-4 border-gold-600 pl-6 mt-8'>
 								<p className='text-lg italic text-gray-700 mb-4'>
-									"When I first moved to London, I
-									couldn&apos;t find sambal that tasted
-									like home. That&apos;s why I started
-									making my own - to bring authentic
-									Indonesian flavors to London&apos;s
-									Indonesian community and anyone who
-									appreciates real taste."
+									&quot;When I first moved to London,
+									I couldn&apos;t find sambal that
+									tasted like home. That&apos;s why I
+									started making my own - to bring
+									authentic Indonesian flavors to
+									London&apos;s Indonesian community
+									and anyone who appreciates real
+									taste.&quot;
 								</p>
 								<cite className='text-gold-600 font-brand text-lg'>
 									— Chef Yossie, Bandung-born
@@ -399,9 +402,9 @@ export default function IndonesianSambalLondonPage() {
 						</h2>
 						<p className='text-xl text-gray-700 font-elegant max-w-3xl mx-auto'>
 							We understand London life is fast-paced.
-							That&apos;s why we&apos;ve optimized our delivery to
-							get authentic sambal to you quickly and
-							safely.
+							That&apos;s why we&apos;ve optimized our
+							delivery to get authentic sambal to you
+							quickly and safely.
 						</p>
 					</div>
 
@@ -467,8 +470,9 @@ export default function IndonesianSambalLondonPage() {
 							Popular Delivery Areas in London
 						</h2>
 						<p className='text-xl text-gray-700 font-elegant'>
-							We&apos;re proud to serve Indonesian sambal lovers
-							across London&apos;s most vibrant neighborhoods.
+							We&apos;re proud to serve Indonesian sambal
+							lovers across London&apos;s most vibrant
+							neighborhoods.
 						</p>
 					</div>
 
@@ -514,10 +518,10 @@ export default function IndonesianSambalLondonPage() {
 					</h2>
 
 					<p className='text-xl sm:text-2xl mb-8 text-cream-100 font-elegant leading-relaxed max-w-3xl mx-auto'>
-						Join hundreds of satisfied London customers who&apos;ve
-						discovered the difference authentic Indonesian
-						sambal makes. Order today for fast London
-						delivery.
+						Join hundreds of satisfied London customers
+						who&apos;ve discovered the difference authentic
+						Indonesian sambal makes. Order today for fast
+						London delivery.
 					</p>
 
 					<div className='flex items-center justify-center space-x-8 mb-8'>
