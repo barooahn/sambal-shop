@@ -68,10 +68,12 @@ export default function AboutPage() {
 						</div>
 						<div className='relative'>
 							<div className='aspect-[4/3] rounded-sm overflow-hidden shadow-luxury border border-gold-200'>
-								<img
+								<Image
 									src='https://images.pexels.com/photos/1630588/pexels-photo-1630588.jpeg'
 									alt='Indonesian spices and ingredients'
 									className='w-full h-full object-cover'
+									width={800}
+									height={600}
 								/>
 							</div>
 							<div className='absolute inset-0 bg-gradient-to-t from-burgundy-900/20 to-transparent rounded-sm'></div>

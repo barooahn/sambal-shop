@@ -161,11 +161,12 @@ export default function SambalChickenStirFryPage() {
 									to authentic Indonesian cooking.
 									The key to this dish is using
 									genuine sambal oelek - not a
-									substitute or Western "chili garlic
-									sauce." Authentic sambal oelek
-									provides the clean, intense heat
-									and complex flavor that makes
-									Indonesian cuisine so distinctive.
+									substitute or Western &quot;chili
+									garlic sauce.&quot; Authentic
+									sambal oelek provides the clean,
+									intense heat and complex flavor
+									that makes Indonesian cuisine so
+									distinctive.
 								</p>
 
 								<h3 className='text-xl font-bold text-burgundy-900 mt-6 mb-3'>
@@ -197,8 +198,8 @@ export default function SambalChickenStirFryPage() {
 										Indonesian stir-frying
 										requires very high heat to
 										achieve the characteristic
-										"wok hei" (breath of the wok)
-										flavor.
+										&quot;wok hei&quot; (breath of
+										the wok) flavor.
 									</li>
 									<li>
 										<strong>

@@ -203,8 +203,8 @@ export default function RecipesPage() {
 										Sambal is potent! Start with a
 										small amount and add more to
 										taste. You can always add more
-										heat, but you can&apos;t take it
-										away.
+										heat, but you can&apos;t take
+										it away.
 									</p>
 								</div>
 								<div className='bg-cream-50 rounded-sm p-6 border border-gold-200'>
@@ -235,10 +235,12 @@ export default function RecipesPage() {
 						</div>
 						<div className='relative'>
 							<div className='aspect-square rounded-sm overflow-hidden shadow-luxury border border-gold-200'>
-								<img
+								<Image
 									src='https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg'
 									alt='Cooking with sambal'
 									className='w-full h-full object-cover'
+									width={400}
+									height={400}
 								/>
 							</div>
 						</div>
