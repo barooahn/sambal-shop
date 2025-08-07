@@ -93,37 +93,56 @@ function fixUnescapedEntities(content) {
 	return processedLines.join("\n");
 }
 
-// Main function to process all files
-function fixLintingErrors() {
+// Function to fix a specific file
+function fixSpecificFile(filePath) {
+	try {
+		console.log(`🔧 Processing: ${filePath}`);
+		const originalContent = fs.readFileSync(filePath, "utf8");
+		const fixedContent = fixUnescapedEntities(originalContent);
+
+		if (originalContent !== fixedContent) {
+			fs.writeFileSync(filePath, fixedContent, "utf8");
+			console.log(`✅ Fixed: ${filePath}`);
+			return true;
+		} else {
+			console.log(`ℹ️  No changes needed: ${filePath}`);
+			return false;
+		}
+	} catch (error) {
+		console.error(`❌ Error processing ${filePath}:`, error.message);
+		return false;
+	}
+}
+
+// Main function to process all files or a specific file
+function fixLintingErrors(specificFile = null) {
+	if (specificFile) {
+		// Fix a specific file
+		const fixed = fixSpecificFile(specificFile);
+		if (fixed) {
+			console.log('\n📝 Run "yarn lint" to verify the fixes');
+		}
+		return;
+	}
+
+	// Fix all files
 	console.log("🔍 Finding TypeScript and TSX files...");
-
 	const files = findFiles("./app").concat(findFiles("./components"));
-
 	console.log(`📁 Found ${files.length} files to process`);
 
 	let totalFixed = 0;
-
 	files.forEach((filePath) => {
-		try {
-			const originalContent = fs.readFileSync(filePath, "utf8");
-			const fixedContent = fixUnescapedEntities(originalContent);
-
-			if (originalContent !== fixedContent) {
-				fs.writeFileSync(filePath, fixedContent, "utf8");
-				console.log(`✅ Fixed: ${filePath}`);
-				totalFixed++;
-			}
-		} catch (error) {
-			console.error(`❌ Error processing ${filePath}:`, error.message);
+		if (fixSpecificFile(filePath)) {
+			totalFixed++;
 		}
 	});
 
 	console.log(`\n🎉 Completed! Fixed ${totalFixed} files`);
-
 	if (totalFixed > 0) {
 		console.log('\n📝 Run "yarn lint" to verify the fixes');
 	}
 }
 
 // Run the script
-fixLintingErrors();
+const specificFile = process.argv[2];
+fixLintingErrors(specificFile);

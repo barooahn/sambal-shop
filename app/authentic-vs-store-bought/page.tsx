@@ -446,7 +446,8 @@ export default function AuthenticVsStoreBoughtPage() {
 							</Badge>
 
 							<h2 className='text-3xl sm:text-4xl font-bold text-burgundy-900 mb-6 font-brand'>
-								"I Can Taste the Difference Immediately"
+								&quot;I Can Taste the Difference
+								Immediately&quot;
 							</h2>
 
 							<p className='text-xl text-gray-700 mb-6 font-elegant leading-relaxed'>
