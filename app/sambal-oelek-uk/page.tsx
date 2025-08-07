@@ -374,15 +374,16 @@ export default function SambalOelekUKPage() {
 				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<div className='text-center mb-16'>
 						<h2 className='text-4xl sm:text-5xl font-bold text-burgundy-900 mb-6 font-brand'>
-							Why Most "Indonesian" Sambal
+							Why Most &quot;Indonesian&quot; Sambal
 							<span className='text-gold-700 block'>
 								Disappoints True Food Lovers
 							</span>
 						</h2>
 						<p className='text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed font-body'>
-							You&apos;ve tried the mass-produced versions. You
-							know they&apos;re missing something. Here&apos;s why
-							our sambal oelek is different.
+							You&apos;ve tried the mass-produced versions.
+							You know they&apos;re missing something.
+							Here&apos;s why our sambal oelek is
+							different.
 						</p>
 					</div>
 
@@ -543,8 +544,8 @@ export default function SambalOelekUKPage() {
 								<p>
 									Born and raised in{" "}
 									<strong>Bandung, West Java</strong>{" "}
-									- Indonesia&apos;s culinary capital -
-									Chef Yossie learned the art of
+									- Indonesia&apos;s culinary capital
+									- Chef Yossie learned the art of
 									sambal making in her mother&apos;s
 									bustling catering kitchen.
 								</p>
@@ -616,8 +617,9 @@ export default function SambalOelekUKPage() {
 						</span>
 					</h2>
 					<p className='text-xl text-gold-200 mb-8 font-body'>
-						Join hundreds of UK customers who&apos;ve discovered
-						the difference professional-made sambal makes
+						Join hundreds of UK customers who&apos;ve
+						discovered the difference professional-made sambal
+						makes
 					</p>
 
 					<div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
@@ -859,15 +861,16 @@ export default function SambalOelekUKPage() {
 									Sambal oelek is a traditional
 									Indonesian chili paste made from
 									fresh red chilies, salt, and
-									vinegar. It&apos;s the foundation of
-									Indonesian cuisine - a pure, fiery
-									condiment that delivers authentic
-									heat without artificial flavors or
-									preservatives. Unlike Western hot
-									sauces, sambal oelek has a chunky
-									texture and focuses on the natural
-									flavor of chilies rather than
-									masking it with sugar or additives.
+									vinegar. It&apos;s the foundation
+									of Indonesian cuisine - a pure,
+									fiery condiment that delivers
+									authentic heat without artificial
+									flavors or preservatives. Unlike
+									Western hot sauces, sambal oelek
+									has a chunky texture and focuses on
+									the natural flavor of chilies
+									rather than masking it with sugar
+									or additives.
 								</p>
 							</div>
 
@@ -911,10 +914,10 @@ export default function SambalOelekUKPage() {
 									authentic to Indonesian cuisine,
 									while sriracha is sweeter and
 									milder. Think of sambal oelek as
-									the "raw" chili experience -
-									perfect for cooking and adding
-									authentic Indonesian heat to any
-									dish.
+									the &quot;raw&quot; chili
+									experience - perfect for cooking
+									and adding authentic Indonesian
+									heat to any dish.
 								</p>
 							</div>
 

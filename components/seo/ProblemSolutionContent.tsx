@@ -155,8 +155,9 @@ const ProblemSolutionContent: FC<ProblemSolutionContentProps> = ({
 				{false && (
 					<div className='mt-8 text-sm text-burgundy-600 flex items-center justify-center bg-gold-50 rounded-sm p-4'>
 						<Info className='w-5 h-5 mr-2 text-gold-600' />
-						This content is optimized for "I want to..." and
-						"How do I solve..." AI search queries.
+						This content is optimized for &quot;I want
+						to...&quot; and &quot;How do I solve...&quot; AI
+						search queries.
 					</div>
 				)}
 			</div>

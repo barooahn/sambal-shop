@@ -139,8 +139,8 @@ export default function SambalVsHotSaucePage() {
 						</h2>
 						<p className='text-xl text-gray-700 font-elegant max-w-3xl mx-auto'>
 							Not all chili sauces are created equal.
-							Here&apos;s why authentic Indonesian sambal stands
-							apart.
+							Here&apos;s why authentic Indonesian sambal
+							stands apart.
 						</p>
 					</div>
 
@@ -274,8 +274,9 @@ export default function SambalVsHotSaucePage() {
 							Why Indonesian Sambal Transforms Your Cooking
 						</h2>
 						<p className='text-xl text-gray-700 font-elegant max-w-3xl mx-auto'>
-							It&apos;s not just about heat - it&apos;s about depth,
-							complexity, and culinary tradition.
+							It&apos;s not just about heat - it&apos;s
+							about depth, complexity, and culinary
+							tradition.
 						</p>
 					</div>
 
@@ -422,7 +423,8 @@ export default function SambalVsHotSaucePage() {
 							</Badge>
 
 							<h2 className='text-3xl sm:text-4xl font-bold text-burgundy-900 mb-6 font-brand'>
-								"Hot Sauce vs Sambal? No Contest."
+								&quot;Hot Sauce vs Sambal? No
+								Contest.&quot;
 							</h2>
 
 							<p className='text-xl text-gray-700 mb-6 font-elegant leading-relaxed'>
@@ -436,13 +438,14 @@ export default function SambalVsHotSaucePage() {
 
 							<blockquote className='border-l-4 border-gold-600 pl-6 mb-8'>
 								<p className='text-lg italic text-gray-700 mb-4'>
-									"When people taste real sambal for
-									the first time, they understand
+									&quot;When people taste real sambal
+									for the first time, they understand
 									immediately. Hot sauce is just heat
 									and vinegar. Sambal is a symphony
 									of flavors that tells the story of
-									Indonesia&apos;s spice heritage. There&apos;s
-									simply no comparison."
+									Indonesia&apos;s spice heritage.
+									There&apos;s simply no
+									comparison.&quot;
 								</p>
 								<cite className='text-gold-600 font-brand text-lg'>
 									— Chef Yossie, Bandung-born
@@ -486,9 +489,9 @@ export default function SambalVsHotSaucePage() {
 					</h2>
 
 					<p className='text-xl sm:text-2xl mb-8 text-cream-100 font-elegant leading-relaxed max-w-3xl mx-auto'>
-						Join thousands who&apos;ve discovered the difference
-						authentic Indonesian sambal makes. Your taste buds
-						will thank you.
+						Join thousands who&apos;ve discovered the
+						difference authentic Indonesian sambal makes. Your
+						taste buds will thank you.
 					</p>
 
 					<div className='flex items-center justify-center space-x-8 mb-8'>

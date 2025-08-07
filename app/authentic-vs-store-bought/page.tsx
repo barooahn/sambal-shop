@@ -455,21 +455,21 @@ export default function AuthenticVsStoreBoughtPage() {
 								professional catering taught her to
 								recognize authentic Indonesian flavors
 								instantly. She&apos;s shocked by what UK
-								stores call "sambal."
+								stores call &quot;sambal.&quot;
 							</p>
 
 							<blockquote className='border-l-4 border-gold-600 pl-6 mb-8'>
 								<p className='text-lg italic text-gray-700 mb-4'>
-									"When I first tried store-bought
-									'sambal' in the UK, I was
-									heartbroken. It tasted nothing like
-									the sambal my grandmother taught me
-									to make. That&apos;s why I started
-									making authentic sambal here - to
-									preserve the real flavors of
-									Indonesia for people who deserve
-									better than mass-produced
-									imitations."
+									&quot;When I first tried
+									store-bought &apos;sambal&apos; in
+									the UK, I was heartbroken. It
+									tasted nothing like the sambal my
+									grandmother taught me to make.
+									That&apos;s why I started making
+									authentic sambal here - to preserve
+									the real flavors of Indonesia for
+									people who deserve better than
+									mass-produced imitations.&quot;
 								</p>
 								<cite className='text-gold-600 font-brand text-lg'>
 									— Chef Yossie, Bandung-born
@@ -520,7 +520,7 @@ export default function AuthenticVsStoreBoughtPage() {
 						<div className='grid md:grid-cols-3 gap-6 text-center'>
 							<div>
 								<h3 className='text-lg font-bold text-gray-900 mb-2'>
-									Store-Bought "Sambal"
+									Store-Bought &quot;Sambal&quot;
 								</h3>
 								<div className='text-3xl font-bold text-red-600 mb-2'>
 									£3-5

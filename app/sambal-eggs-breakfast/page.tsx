@@ -457,20 +457,22 @@ export default function SambalEggsBreakfastPage() {
 
 							<p className='text-xl text-gray-700 mb-6 font-elegant leading-relaxed'>
 								In Indonesia, we start every day with
-								sambal. Chef Yossie shares her family&apos;s
-								traditional breakfast combinations that
-								have energized generations.
+								sambal. Chef Yossie shares her
+								family&apos;s traditional breakfast
+								combinations that have energized
+								generations.
 							</p>
 
 							<blockquote className='border-l-4 border-gold-600 pl-6 mb-8'>
 								<p className='text-lg italic text-gray-700 mb-4'>
-									"In my family&apos;s catering business,
-									breakfast was never boring. We
-									always had fresh sambal on the
-									table. A little with eggs, a dab on
-									toast - it transforms everything.
-									Now I want to share this Indonesian
-									breakfast tradition with the UK."
+									&quot;In my family&apos;s catering
+									business, breakfast was never
+									boring. We always had fresh sambal
+									on the table. A little with eggs, a
+									dab on toast - it transforms
+									everything. Now I want to share
+									this Indonesian breakfast tradition
+									with the UK.&quot;
 								</p>
 								<cite className='text-gold-600 font-brand text-lg'>
 									— Chef Yossie, Bandung-born
@@ -483,13 +485,13 @@ export default function SambalEggsBreakfastPage() {
 									Chef&apos;s Quick Breakfast Recipe:
 								</h4>
 								<p className='text-gray-700 text-sm leading-relaxed'>
-									"Scramble 2 eggs with a teaspoon of
-									sambal oelek, serve on buttered
-									toast with sliced tomato. In
-									Indonesia, we call this 'telur
-									bumbu' - it&apos;s comfort food that
-									gives you energy for the whole
-									day."
+									&quot;Scramble 2 eggs with a
+									teaspoon of sambal oelek, serve on
+									buttered toast with sliced tomato.
+									In Indonesia, we call this
+									&apos;telur bumbu&apos; - it&apos;s
+									comfort food that gives you energy
+									for the whole day.&quot;
 								</p>
 							</div>
 

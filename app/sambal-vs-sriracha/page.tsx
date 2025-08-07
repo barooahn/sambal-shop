@@ -404,8 +404,8 @@ export default function SambalVsSrirachaPage() {
 									<CheckCircle className='w-6 h-6 text-green-600 mt-1' />
 									<p className='text-neutral-700 font-body'>
 										<strong>Stir-frying</strong> -
-										Doesn&apos;t burn like sugar-based
-										sauces
+										Doesn&apos;t burn like
+										sugar-based sauces
 									</p>
 								</div>
 								<div className='flex items-start space-x-3'>
@@ -495,11 +495,12 @@ export default function SambalVsSrirachaPage() {
 					</h2>
 					<div className='bg-gradient-to-r from-burgundy-800/50 to-burgundy-700/50 rounded-sm p-8 mb-8 border border-gold-600/30'>
 						<blockquote className='text-xl sm:text-2xl text-gold-200 font-body italic leading-relaxed mb-4'>
-							"Both have their place, but if you&apos;re serious
-							about cooking authentic Asian food, start
-							with real sambal. It&apos;s the foundation of
-							Indonesian cuisine and will transform your
-							cooking in ways sriracha simply can't."
+							&quot;Both have their place, but if
+							you&apos;re serious about cooking authentic
+							Asian food, start with real sambal. It&apos;s
+							the foundation of Indonesian cuisine and will
+							transform your cooking in ways sriracha
+							simply can&apos;t.&quot;
 						</blockquote>
 						<cite className='text-gold-300 font-brand text-lg'>
 							— Chef Yossie, Bandung-born Indonesian Chef

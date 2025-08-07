@@ -53,8 +53,9 @@ export default function TermsPage() {
 											Permission is granted to
 											temporarily download one
 											copy of the materials on
-											Spice Island Indonesia&apos;s
-											website for personal,
+											Spice Island
+											Indonesia&apos;s website
+											for personal,
 											non-commercial transitory
 											viewing only.
 										</p>
@@ -158,9 +159,10 @@ export default function TermsPage() {
 											The materials on Spice
 											Island Indonesia&apos;s
 											website are provided on
-											an 'as is' basis. We make
-											no warranties, expressed
-											or implied, and hereby
+											an &apos;as is&apos;
+											basis. We make no
+											warranties, expressed or
+											implied, and hereby
 											disclaim all other
 											warranties including
 											implied warranties of
