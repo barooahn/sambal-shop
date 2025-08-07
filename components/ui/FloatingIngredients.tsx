@@ -3,16 +3,25 @@
 import { useState, useEffect } from "react";
 import SafeImage from "./SafeImage";
 
+interface ResponsivePosition {
+	top?: string;
+	bottom?: string;
+	left?: string;
+	right?: string;
+}
+
 interface IngredientConfig {
 	src: string;
 	alt: string;
 	size: "sm" | "md" | "lg";
-	position: {
-		top?: string;
-		bottom?: string;
-		left?: string;
-		right?: string;
-	};
+	position:
+		| ResponsivePosition
+		| {
+				mobile?: ResponsivePosition;
+				tablet?: ResponsivePosition;
+				desktop?: ResponsivePosition;
+				default?: ResponsivePosition;
+		  };
 	rotation: number;
 	animationDelay?: string;
 	animationDuration?: string;
@@ -25,9 +34,70 @@ interface FloatingIngredientsProps {
 }
 
 const sizeClasses = {
-	sm: "w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20", // Reduced sizes
-	md: "w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24", // Reduced sizes
-	lg: "w-20 h-20 md:w-24 md:h-24 lg:w-28 lg:h-28", // Reduced sizes
+	sm: "w-20 h-20 md:w-24 md:h-24 lg:w-32 lg:h-32 xl:w-40 xl:h-40", // Even larger sizes
+	md: "w-24 h-24 md:w-32 md:h-32 lg:w-44 lg:h-44 xl:w-52 xl:h-52", // Even larger sizes
+	lg: "w-28 h-28 md:w-40 md:h-40 lg:w-56 lg:h-56 xl:w-64 xl:h-64", // Even larger sizes
+};
+
+// Custom hook for responsive positioning
+const useResponsivePosition = (position: IngredientConfig["position"]) => {
+	const [currentPosition, setCurrentPosition] = useState<ResponsivePosition>(
+		{}
+	);
+
+	useEffect(() => {
+		// If it's a simple position object, use it directly
+		if (
+			"top" in position ||
+			"bottom" in position ||
+			"left" in position ||
+			"right" in position
+		) {
+			setCurrentPosition(position as ResponsivePosition);
+			return;
+		}
+
+		// Handle responsive positioning
+		const responsivePosition = position as {
+			mobile?: ResponsivePosition;
+			tablet?: ResponsivePosition;
+			desktop?: ResponsivePosition;
+			default?: ResponsivePosition;
+		};
+
+		const updatePosition = () => {
+			const width = window.innerWidth;
+			let newPosition: ResponsivePosition = {};
+
+			if (width < 768 && responsivePosition.mobile) {
+				newPosition = responsivePosition.mobile;
+			} else if (width < 1024 && responsivePosition.tablet) {
+				newPosition = responsivePosition.tablet;
+			} else if (width >= 1024 && responsivePosition.desktop) {
+				newPosition = responsivePosition.desktop;
+			} else if (responsivePosition.default) {
+				newPosition = responsivePosition.default;
+			} else {
+				// Fallback to first available position
+				newPosition =
+					responsivePosition.mobile ||
+					responsivePosition.tablet ||
+					responsivePosition.desktop ||
+					{};
+			}
+
+			setCurrentPosition(newPosition);
+		};
+
+		// Set initial position
+		updatePosition();
+
+		// Add resize listener
+		window.addEventListener("resize", updatePosition);
+		return () => window.removeEventListener("resize", updatePosition);
+	}, [position]);
+
+	return currentPosition;
 };
 
 export default function FloatingIngredients({
@@ -62,23 +132,39 @@ export default function FloatingIngredients({
 			}}
 		>
 			{ingredients.map((ingredient, index) => (
-				<div
-					key={index}
-					className={`absolute ${sizeClasses[ingredient.size]} transform`}
-					style={{
-						...ingredient.position,
-						transform: `rotate(${ingredient.rotation}deg)`,
-						opacity: ingredient.opacity || 1.0,
-					}}
-				>
-					<SafeImage
-						src={ingredient.src}
-						alt={ingredient.alt}
-						className='w-full h-full object-contain drop-shadow-md'
-						fallbackSrc='https://images.pexels.com/photos/4198019/pexels-photo-4198019.jpeg?auto=compress&cs=tinysrgb&w=64&h=64&fit=crop'
-					/>
-				</div>
+				<ResponsiveIngredient key={index} ingredient={ingredient} />
 			))}
+		</div>
+	);
+}
+
+// Component for individual responsive ingredient
+function ResponsiveIngredient({
+	ingredient,
+}: {
+	ingredient: IngredientConfig;
+}) {
+	const position = useResponsivePosition(ingredient.position);
+
+	return (
+		<div
+			className={`absolute ${sizeClasses[ingredient.size]} transform`}
+			style={{
+				...position,
+				transform: `rotate(${ingredient.rotation}deg)`,
+				opacity: ingredient.opacity || 1.0,
+			}}
+		>
+			<SafeImage
+				src={ingredient.src}
+				alt={ingredient.alt}
+				className='w-full h-full object-contain drop-shadow-lg smooth-rendering'
+				style={{
+					backfaceVisibility: "hidden",
+					transform: "translateZ(0)",
+				}}
+				fallbackSrc='https://images.pexels.com/photos/4198019/pexels-photo-4198019.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop'
+			/>
 		</div>
 	);
 }

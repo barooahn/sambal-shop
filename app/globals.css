@@ -2,6 +2,118 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+	.smooth-rendering {
+		image-rendering: -webkit-optimize-contrast;
+		image-rendering: high-quality;
+		image-rendering: smooth;
+		-ms-interpolation-mode: bicubic;
+	}
+
+	/* Elegant Batik Pattern Background */
+	.batik-pattern {
+		background-image:
+			/* Flowing curved lines - main batik motif */
+			linear-gradient(
+				135deg,
+				transparent 30%,
+				rgba(139, 69, 19, 0.03) 35%,
+				rgba(139, 69, 19, 0.06) 40%,
+				rgba(139, 69, 19, 0.03) 45%,
+				transparent 50%
+			),
+			linear-gradient(
+				45deg,
+				transparent 40%,
+				rgba(184, 134, 11, 0.02) 45%,
+				rgba(184, 134, 11, 0.04) 50%,
+				rgba(184, 134, 11, 0.02) 55%,
+				transparent 60%
+			),
+			/* Large organic paisley-like shapes */
+				radial-gradient(
+					ellipse 40px 80px at 20% 30%,
+					transparent 60%,
+					rgba(127, 29, 29, 0.015) 70%,
+					rgba(127, 29, 29, 0.03) 80%,
+					rgba(127, 29, 29, 0.015) 90%,
+					transparent 100%
+				),
+			radial-gradient(
+				ellipse 60px 30px at 80% 70%,
+				transparent 50%,
+				rgba(139, 69, 19, 0.02) 60%,
+				rgba(139, 69, 19, 0.04) 75%,
+				rgba(139, 69, 19, 0.02) 85%,
+				transparent 100%
+			),
+			/* Subtle wave-like patterns */
+				linear-gradient(
+					90deg,
+					transparent 48%,
+					rgba(184, 134, 11, 0.008) 49%,
+					rgba(184, 134, 11, 0.015) 50%,
+					rgba(184, 134, 11, 0.008) 51%,
+					transparent 52%
+				);
+
+		background-size:
+			200px 200px,
+			180px 180px,
+			300px 400px,
+			400px 300px,
+			150px 150px;
+
+		background-position:
+			0 0,
+			50px 50px,
+			0 0,
+			100px 100px,
+			25px 25px;
+	}
+
+	/* Clean Subtle Batik Pattern */
+	.batik-pattern-subtle {
+		background-image:
+			/* Gentle flowing lines */
+			linear-gradient(
+				120deg,
+				transparent 45%,
+				rgba(139, 69, 19, 0.015) 48%,
+				rgba(139, 69, 19, 0.025) 50%,
+				rgba(139, 69, 19, 0.015) 52%,
+				transparent 55%
+			),
+			linear-gradient(
+				60deg,
+				transparent 47%,
+				rgba(184, 134, 11, 0.01) 49%,
+				rgba(184, 134, 11, 0.02) 50%,
+				rgba(184, 134, 11, 0.01) 51%,
+				transparent 53%
+			),
+			/* Very large, soft organic shapes */
+				radial-gradient(
+					ellipse 80px 120px at 30% 40%,
+					transparent 70%,
+					rgba(127, 29, 29, 0.008) 80%,
+					rgba(127, 29, 29, 0.015) 90%,
+					rgba(127, 29, 29, 0.008) 95%,
+					transparent 100%
+				);
+
+		background-size:
+			250px 250px,
+			200px 200px,
+			500px 600px;
+
+		background-position:
+			0 0,
+			75px 75px,
+			0 0;
+	}
+}
+
 :root {
 	--foreground-rgb: 0, 0, 0;
 	--background-start-rgb: 214, 219, 220;

@@ -12,24 +12,32 @@ import NewsletterSection from "@/components/home/NewsletterSection";
 import FAQSection from "@/components/home/FAQSection";
 import ContactSection from "@/components/home/ContactSection";
 import FloatingIngredients from "@/components/ui/FloatingIngredients";
-import { Waves, Triangle, Circle, Square } from "lucide-react";
+import { Waves, Triangle } from "lucide-react";
 
 // Ingredient configurations for different sections
 const heroIngredients = [
 	{
-		src: "/images/optimized/tomatoes-floating-md.webp",
-		alt: "Fresh Tomatoes",
-		size: "lg" as const,
-		position: { bottom: "-50px", right: "60px" },
+		src: "/images/optimized/long-red-chili-xl.webp",
+		alt: "Fresh Red Chili",
+		size: "md" as const,
+		position: {
+			mobile: { bottom: "-30px", right: "60px" },
+			tablet: { bottom: "-50px", right: "60px" },
+			desktop: { bottom: "-80px", right: "60px" },
+		},
 		rotation: 0,
 		animationDelay: "0.5s",
 		animationDuration: "6s",
 	},
 	{
-		src: "/images/optimized/garlic-clove-sm.webp",
+		src: "/images/optimized/garlic-clove-xl.webp",
 		alt: "Garlic Clove",
-		size: "md" as const,
-		position: { bottom: "-50px", left: "60px" },
+		size: "sm" as const,
+		position: {
+			mobile: { bottom: "-30px", left: "50px" },
+			tablet: { bottom: "-30px", left: "40px" },
+			desktop: { bottom: "-70px", left: "60px" },
+		},
 		rotation: 0,
 	},
 ];
@@ -47,58 +55,66 @@ const productIngredients: {
 
 const storyIngredients = [
 	{
-		src: "/images/optimized/garlic-clove-sm.webp",
+		src: "/images/optimized/garlic-clove-xl.webp",
 		alt: "Garlic Clove",
 		size: "md" as const,
-		position: { bottom: "-50px", right: "60px" },
+		position: {
+			mobile: { bottom: "-30px", right: "60px" },
+			tablet: { bottom: "-40px", right: "60px" },
+			desktop: { bottom: "-50px", right: "60px" },
+		},
 		rotation: 0,
 		animationDelay: "0.6s",
 		animationDuration: "6s",
 	},
 	{
-		src: "/images/optimized/mortar-pestle-md.webp",
+		src: "/images/optimized/mortar-pestle-xl.webp",
 		alt: "Mortar & Pestle",
 		size: "lg" as const,
-		position: { bottom: "-50px", left: "60px" },
+		position: {
+			mobile: { bottom: "-30px", left: "40px" },
+			tablet: { bottom: "-40px", left: "50px" },
+			desktop: { bottom: "-50px", left: "50px" },
+		},
 		rotation: 0,
 	},
 ];
 
 const newsletterIngredients = [
 	{
-		src: "/images/optimized/shallot-bulb-xs.webp",
+		src: "/images/optimized/shallot-bulb-lg.webp",
 		alt: "Shallot",
-		size: "sm" as const,
-		position: { top: "-300px", left: "60px" },
+		size: "md" as const,
+		position: { top: "-290px", left: "60px" },
 		rotation: 0,
 		animationDelay: "0.3s",
 		animationDuration: "5s",
 	},
 	{
-		src: "/images/optimized/long-red-chili-sm.webp",
+		src: "/images/optimized/long-red-chili-xl.webp",
 		alt: "Red Chili",
 		size: "md" as const,
-		position: { top: "-300px", right: "60px" },
+		position: { top: "-290px", right: "60px" },
 		rotation: 0,
 	},
 ];
 
 const transitionIngredients = [
 	{
-		src: "/images/optimized/turmeric-powder-md.webp",
+		src: "/images/optimized/turmeric-powder-xl.webp",
 		alt: "Turmeric Powder",
-		size: "lg" as const,
-		position: { bottom: "-50px", left: "60px" },
-		rotation: 15,
+		size: "md" as const,
+		position: { bottom: "-100px", left: "60px" },
+		rotation: 0,
 		animationDelay: "0.2s",
 		animationDuration: "8s",
 	},
 	{
-		src: "/images/optimized/mortar-pestle-sm.webp",
+		src: "/images/optimized/mortar-pestle-xl.webp",
 		alt: "Mortar & Pestle",
 		size: "md" as const,
-		position: { bottom: "-50px", right: "60px" },
-		rotation: -10,
+		position: { bottom: "-100px", right: "60px" },
+		rotation: 0,
 		animationDelay: "0.7s",
 		animationDuration: "6s",
 	},
@@ -106,14 +122,14 @@ const transitionIngredients = [
 
 const shippingIngredients = [
 	{
-		src: "/images/optimized/garlic-clove-sm.webp",
+		src: "/images/optimized/garlic-clove-xl.webp",
 		alt: "Garlic Clove",
 		size: "md" as const,
 		position: { bottom: "-50px", left: "60px" },
 		rotation: 0,
 	},
 	{
-		src: "/images/optimized/turmeric-powder-xs.webp",
+		src: "/images/optimized/turmeric-powder-lg.webp",
 		alt: "Turmeric Powder",
 		size: "sm" as const,
 		position: { bottom: "-50px", right: "60px" },
@@ -123,20 +139,20 @@ const shippingIngredients = [
 
 const cookingExperienceIngredients = [
 	{
-		src: "/images/optimized/long-red-chili-sm.webp",
+		src: "/images/optimized/long-red-chili-xl.webp",
 		alt: "Red Chili",
 		size: "md" as const,
 		position: { top: "-100px", left: "60px" },
-		rotation: 12,
+		rotation: 0,
 		animationDelay: "0.4s",
 		animationDuration: "7s",
 	},
 	{
-		src: "/images/optimized/shallot-bulb-xs.webp",
+		src: "/images/optimized/shallot-bulb-lg.webp",
 		alt: "Shallot",
 		size: "sm" as const,
 		position: { top: "-100px", right: "60px" },
-		rotation: -8,
+		rotation: 0,
 		animationDelay: "0.9s",
 		animationDuration: "5s",
 	},
@@ -144,14 +160,14 @@ const cookingExperienceIngredients = [
 
 const problemSolutionIngredients = [
 	{
-		src: "/images/optimized/mortar-pestle-xs.webp",
+		src: "/images/optimized/mortar-pestle-lg.webp",
 		alt: "Mortar & Pestle",
 		size: "sm" as const,
 		position: { bottom: "-50px", left: "60px" },
 		rotation: 0,
 	},
 	{
-		src: "/images/optimized/tomatoes-floating-sm.webp",
+		src: "/images/optimized/tomatoes-floating-xl.webp",
 		alt: "Fresh Tomatoes",
 		size: "md" as const,
 		position: { bottom: "-50px", right: "60px" },
@@ -161,37 +177,37 @@ const problemSolutionIngredients = [
 
 const faqIngredients = [
 	{
-		src: "/images/optimized/tomatoes-floating-sm.webp",
+		src: "/images/optimized/tomatoes-floating-xl.webp",
 		alt: "Fresh Tomatoes",
 		size: "md" as const,
-		position: { top: "-300px", right: "60px" },
+		position: { top: "-50px", right: "60px" },
 		rotation: 0,
 	},
 	{
-		src: "/images/optimized/garlic-clove-xs.webp",
+		src: "/images/optimized/garlic-clove-lg.webp",
 		alt: "Garlic Clove",
 		size: "sm" as const,
-		position: { top: "-300px", left: "60px" },
+		position: { top: "-50px", left: "60px" },
 		rotation: 0,
 	},
 ];
 
 const contactIngredients = [
 	{
-		src: "/images/optimized/turmeric-powder-md.webp",
+		src: "/images/optimized/turmeric-powder-xl.webp",
 		alt: "Turmeric Powder",
 		size: "lg" as const,
-		position: { top: "-100px", right: "5%" },
-		rotation: 20,
+		position: { top: "-100px", right: "60px" },
+		rotation: 0,
 		animationDelay: "0.6s",
 		animationDuration: "8s",
 	},
 	{
-		src: "/images/optimized/mortar-pestle-sm.webp",
+		src: "/images/optimized/mortar-pestle-xl.webp",
 		alt: "Mortar & Pestle",
 		size: "md" as const,
-		position: { top: "-80px", left: "8%" },
-		rotation: -15,
+		position: { top: "-80px", left: "60px" },
+		rotation: 0,
 		animationDelay: "1.2s",
 		animationDuration: "6s",
 	},
@@ -329,6 +345,12 @@ export default function Home() {
 						style={{ animationDelay: "3s" }}
 					></div>
 
+							{/* Floating ingredients after header */}
+							<FloatingIngredients
+								ingredients={
+									cookingExperienceIngredients
+								}
+							/>
 					<div className='container mx-auto px-4 relative'>
 						{/* Section header with visual enhancement */}
 						<div className='text-center mb-16 relative'>
@@ -342,12 +364,6 @@ export default function Home() {
 									challenges
 								</p>
 							</div>
-							{/* Floating ingredients after header */}
-							<FloatingIngredients
-								ingredients={
-									cookingExperienceIngredients
-								}
-							/>
 						</div>
 
 						<ProblemSolutionContent

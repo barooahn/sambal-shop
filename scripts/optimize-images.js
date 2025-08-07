@@ -50,15 +50,16 @@ const IMAGE_CONFIGS = {
 		quality: 80,
 	},
 
-	// Floating ingredients - small, optimized, preserve aspect ratio
+	// Floating ingredients - higher resolution for desktop display
 	ingredient: {
 		sizes: [
-			{ width: 128, suffix: "-lg" },
-			{ width: 96, suffix: "-md" },
-			{ width: 64, suffix: "-sm" },
-			{ width: 48, suffix: "-xs" },
+			{ width: 320, suffix: "-xl" }, // For large desktop displays
+			{ width: 256, suffix: "-lg" }, // For desktop displays
+			{ width: 192, suffix: "-md" }, // For tablet displays
+			{ width: 128, suffix: "-sm" }, // For mobile displays
+			{ width: 96, suffix: "-xs" }, // For small mobile displays
 		],
-		quality: 75,
+		quality: 85, // Higher quality for better clarity
 	},
 
 	// Logo images - preserve aspect ratio, multiple sizes for responsive design

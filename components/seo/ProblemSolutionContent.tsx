@@ -1,6 +1,14 @@
 import { FC } from "react";
 import Link from "next/link";
 import GlassCard from "@/components/ui/GlassCard";
+import {
+	Lightbulb,
+	AlertTriangle,
+	CheckCircle,
+	Info,
+	Check,
+	ChevronRight,
+} from "lucide-react";
 
 interface ProblemSolution {
 	problem: string;
@@ -32,19 +40,7 @@ const ProblemSolutionContent: FC<ProblemSolutionContentProps> = ({
 			<div className='relative'>
 				<div className='flex items-center mb-8'>
 					<div className='bg-gradient-to-r from-burgundy-600 to-burgundy-700 p-3 rounded-full mr-4 shadow-lg'>
-						<svg
-							className='w-6 h-6 text-gold-200'
-							fill='none'
-							stroke='currentColor'
-							viewBox='0 0 24 24'
-						>
-							<path
-								strokeLinecap='round'
-								strokeLinejoin='round'
-								strokeWidth={2}
-								d='M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z'
-							/>
-						</svg>
+						<Lightbulb className='w-6 h-6 text-gold-200' />
 					</div>
 					<div className='flex-1'>
 						<h3 className='text-2xl lg:text-3xl font-bold text-burgundy-900 font-brand'>
@@ -78,19 +74,7 @@ const ProblemSolutionContent: FC<ProblemSolutionContentProps> = ({
 								>
 									<div className='flex items-center mb-4'>
 										<div className='bg-red-500 p-2 rounded-full mr-3'>
-											<svg
-												className='w-4 h-4 text-white'
-												fill='none'
-												stroke='currentColor'
-												viewBox='0 0 24 24'
-											>
-												<path
-													strokeLinecap='round'
-													strokeLinejoin='round'
-													strokeWidth={2}
-													d='M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z'
-												/>
-											</svg>
+											<AlertTriangle className='w-4 h-4 text-white' />
 										</div>
 										<h4 className='text-lg font-bold text-red-900 font-heading'>
 											Problem
@@ -108,19 +92,7 @@ const ProblemSolutionContent: FC<ProblemSolutionContentProps> = ({
 								>
 									<div className='flex items-center mb-4'>
 										<div className='bg-green-700 p-2 rounded-full mr-3'>
-											<svg
-												className='w-4 h-4 text-white'
-												fill='none'
-												stroke='currentColor'
-												viewBox='0 0 24 24'
-											>
-												<path
-													strokeLinecap='round'
-													strokeLinejoin='round'
-													strokeWidth={2}
-													d='M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'
-												/>
-											</svg>
+											<CheckCircle className='w-4 h-4 text-white' />
 										</div>
 										<h4 className='text-lg font-bold text-green-800 font-heading'>
 											Solution
@@ -148,17 +120,7 @@ const ProblemSolutionContent: FC<ProblemSolutionContentProps> = ({
 															className='flex items-start'
 														>
 															<div className='bg-green-700 rounded-full p-1 mr-3 mt-0.5 flex-shrink-0'>
-																<svg
-																	className='w-3 h-3 text-white'
-																	fill='currentColor'
-																	viewBox='0 0 20 20'
-																>
-																	<path
-																		fillRule='evenodd'
-																		d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'
-																		clipRule='evenodd'
-																	/>
-																</svg>
+																<Check className='w-3 h-3 text-white' />
 															</div>
 															<span className='font-body'>
 																{
@@ -181,19 +143,7 @@ const ProblemSolutionContent: FC<ProblemSolutionContentProps> = ({
 										className='inline-flex items-center bg-gradient-to-r from-burgundy-600 to-burgundy-700 hover:from-burgundy-700 hover:to-burgundy-800 text-white px-6 py-3 rounded-sm font-bold transition-all duration-300 shadow-lg hover:shadow-xl font-elegant'
 									>
 										{item.actionLink.text}
-										<svg
-											className='w-5 h-5 ml-2'
-											fill='none'
-											stroke='currentColor'
-											viewBox='0 0 24 24'
-										>
-											<path
-												strokeLinecap='round'
-												strokeLinejoin='round'
-												strokeWidth={2}
-												d='M9 5l7 7-7 7'
-											/>
-										</svg>
+										<ChevronRight className='w-5 h-5 ml-2' />
 									</Link>
 								</div>
 							)}
@@ -204,19 +154,7 @@ const ProblemSolutionContent: FC<ProblemSolutionContentProps> = ({
 				{/* Hidden: AI search optimization message */}
 				{false && (
 					<div className='mt-8 text-sm text-burgundy-600 flex items-center justify-center bg-gold-50 rounded-sm p-4'>
-						<svg
-							className='w-5 h-5 mr-2 text-gold-600'
-							fill='none'
-							stroke='currentColor'
-							viewBox='0 0 24 24'
-						>
-							<path
-								strokeLinecap='round'
-								strokeLinejoin='round'
-								strokeWidth={2}
-								d='M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z'
-							/>
-						</svg>
+						<Info className='w-5 h-5 mr-2 text-gold-600' />
 						This content is optimized for "I want to..." and
 						"How do I solve..." AI search queries.
 					</div>

@@ -77,13 +77,15 @@ export default function ChefPage() {
 						</div>
 
 						<div className='relative'>
-							<div className='aspect-square rounded-sm overflow-hidden shadow-luxury border border-gold-200 bg-gradient-to-br from-cream-50 to-gold-50'>
-								<div className='w-full h-full flex items-center justify-center p-8'>
-									{/* Placeholder for chef photo */}
-									<div className='w-full h-full bg-gradient-to-br from-burgundy-100 to-gold-100 rounded-sm flex items-center justify-center'>
-										<ChefHat className='w-32 h-32 text-burgundy-600' />
-									</div>
-								</div>
+							<div className='aspect-square rounded-sm overflow-hidden shadow-luxury border border-gold-200'>
+								<Image
+									src='/images/chef-yossie.webp'
+									alt='Chef Yossie - Professional Indonesian Chef from Bandung'
+									fill
+									className='object-cover'
+									priority
+									sizes='(max-width: 768px) 100vw, 50vw'
+								/>
 							</div>
 						</div>
 					</div>
@@ -208,18 +210,14 @@ export default function ChefPage() {
 
 						<div className='relative'>
 							<div className='aspect-[4/3] rounded-sm overflow-hidden shadow-luxury border border-gold-200'>
-								{/* Placeholder for family catering photo */}
-								<div className='w-full h-full bg-gradient-to-br from-burgundy-50 to-gold-50 flex items-center justify-center'>
-									<div className='text-center'>
-										<Users className='w-24 h-24 text-burgundy-400 mx-auto mb-4' />
-										<p className='text-burgundy-600 font-body'>
-											Family Catering Kitchen
-										</p>
-										<p className='text-burgundy-500 text-sm font-body'>
-											Bandung, Indonesia
-										</p>
-									</div>
-								</div>
+								<Image
+									src='/images/cantering-indonesia.webp'
+									alt='Family catering kitchen in Bandung, Indonesia - where Chef Yossie learned traditional Indonesian cooking'
+									fill
+									className='object-cover'
+									loading='lazy'
+									sizes='(max-width: 768px) 100vw, 50vw'
+								/>
 							</div>
 						</div>
 					</div>
