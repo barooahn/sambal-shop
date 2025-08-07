@@ -43,17 +43,17 @@ export default function StorySection() {
 
 						<div className='space-y-6 text-lg text-neutral-700 leading-relaxed mb-8 font-body'>
 							<p>
-								Chef Yossie's journey begins in{" "}
+								Chef Yossie&apos;s journey begins in{" "}
 								<Link
 									href='/chef'
 									className='text-burgundy-700 hover:text-burgundy-900 font-semibold underline decoration-gold-600 hover:decoration-burgundy-900 transition-colors'
 								>
 									Bandung, West Java
 								</Link>{" "}
-								– Indonesia's culinary capital, where
-								she trained in her mother's bustling
-								catering kitchen. Here she learned to
-								prepare{" "}
+								– Indonesia&apos;s culinary capital,
+								where she trained in her mother&apos;s
+								bustling catering kitchen. Here she
+								learned to prepare{" "}
 								<Link
 									href='/recipes'
 									className='text-burgundy-700 hover:text-burgundy-900 font-semibold underline decoration-gold-600 hover:decoration-burgundy-900 transition-colors'
