@@ -387,11 +387,11 @@ export default function SambalBaliPage() {
 								</span>
 							</div>
 							<p className='text-gray-700 mb-4'>
-								"The aromatic spices in this sambal are
-								incredible! I use it as a marinade for
-								chicken and the flavor is so much more
-								complex than any hot sauce I&apos;ve tried.
-								Authentic taste."
+								&quot;The aromatic spices in this sambal
+								are incredible! I use it as a marinade
+								for chicken and the flavor is so much
+								more complex than any hot sauce
+								I&apos;ve tried. Authentic taste.&quot;
 							</p>
 							<div className='text-sm text-gray-600'>
 								<strong>James P.</strong> - Manchester,
@@ -409,10 +409,11 @@ export default function SambalBaliPage() {
 								</span>
 							</div>
 							<p className='text-gray-700 mb-4'>
-								"Perfect heat level for me - not too
-								overwhelming but still has a good kick.
-								The spices make it so much more
-								interesting than regular chili sauce."
+								&quot;Perfect heat level for me - not
+								too overwhelming but still has a good
+								kick. The spices make it so much more
+								interesting than regular chili
+								sauce.&quot;
 							</p>
 							<div className='text-sm text-gray-600'>
 								<strong>David L.</strong> - Edinburgh,
@@ -489,11 +490,12 @@ export default function SambalBaliPage() {
 									lemongrass, and kaffir lime leaves.
 									Unlike simple chili pastes, Sambal
 									Bali offers complex layers of
-									flavor - it&apos;s spicy, aromatic, and
-									slightly sweet. This traditional
-									recipe from Bali creates a more
-									sophisticated heat that enhances
-									rather than overwhelms your dishes.
+									flavor - it&apos;s spicy, aromatic,
+									and slightly sweet. This
+									traditional recipe from Bali
+									creates a more sophisticated heat
+									that enhances rather than
+									overwhelms your dishes.
 								</p>
 							</div>
 
@@ -540,11 +542,12 @@ export default function SambalBaliPage() {
 									sweetened. The galangal and
 									lemongrass create subtle sweet
 									notes that balance the heat
-									beautifully. It&apos;s less aggressive
-									than pure chili pastes while still
-									delivering authentic Indonesian
-									heat - perfect for those who want
-									complex flavor with their spice.
+									beautifully. It&apos;s less
+									aggressive than pure chili pastes
+									while still delivering authentic
+									Indonesian heat - perfect for those
+									who want complex flavor with their
+									spice.
 								</p>
 							</div>
 
@@ -594,10 +597,10 @@ export default function SambalBaliPage() {
 									(mix with oil and soy sauce),
 									stir-fry ingredient, or finishing
 									sauce. Start with 1 teaspoon in
-									recipes and adjust to taste. It&apos;s
-									excellent in marinades for
-									grilling, mixed into fried rice, or
-									as a condiment for roasted
+									recipes and adjust to taste.
+									It&apos;s excellent in marinades
+									for grilling, mixed into fried
+									rice, or as a condiment for roasted
 									vegetables. The aromatic spices
 									make it perfect for slow-cooked
 									dishes where flavors can develop.

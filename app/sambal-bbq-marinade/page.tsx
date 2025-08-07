@@ -70,10 +70,10 @@ export default function SambalBBQMarinadePage() {
 
 							<p className='text-xl sm:text-2xl text-gold-200 mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-body'>
 								Discover the secret to Indonesian-style
-								BBQ with Chef Yossie&apos;s authentic sambal
-								marinades. Transform ordinary grilling
-								into extraordinary Indonesian culinary
-								experiences.
+								BBQ with Chef Yossie&apos;s authentic
+								sambal marinades. Transform ordinary
+								grilling into extraordinary Indonesian
+								culinary experiences.
 							</p>
 
 							{/* Key Features */}
@@ -423,14 +423,15 @@ export default function SambalBBQMarinadePage() {
 							</Badge>
 
 							<h2 className='text-3xl sm:text-4xl font-bold text-burgundy-900 mb-6 font-brand'>
-								Chef Yossie&apos;s Indonesian BBQ Secrets
+								Chef Yossie&apos;s Indonesian BBQ
+								Secrets
 							</h2>
 
 							<p className='text-lg text-neutral-600 mb-6 font-body'>
-								"In my catering kitchen, we served
+								&quot;In my catering kitchen, we served
 								Indonesian BBQ to hundreds of British
 								clients. These techniques ensure perfect
-								results every time."
+								results every time.&quot;
 							</p>
 
 							<ul className='space-y-4 mb-8'>
