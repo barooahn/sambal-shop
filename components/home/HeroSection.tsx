@@ -77,7 +77,7 @@ export default function HeroSection() {
 			setInterestState({
 				isSubmitting: false,
 				isSubmitted: true,
-				message: "Thanks! We&apos;ll notify you when Chef Yossie&apos;s sambal is ready! 🌶️",
+				message: "Welcome to the UK VIP list! You'll be first to try Chef Yossie's authentic sambal! 🇬🇧🌶️",
 			});
 
 			setTimeout(() => {
@@ -158,7 +158,7 @@ export default function HeroSection() {
 						</div>
 
 						{/* Main headline with UK market optimization */}
-						<h1 className='text-3xl sm:text-4xl lg:text-7xl font-light text-white mb-2 lg:mb-4 leading-tight tracking-tight'>
+						<h1 className='voice-hero-title text-3xl sm:text-4xl lg:text-7xl font-light text-white mb-2 lg:mb-4 leading-tight tracking-tight'>
 							<span className='block font-light text-white/90'>
 								Professional
 							</span>
@@ -178,15 +178,15 @@ export default function HeroSection() {
 						</div>
 
 						{/* Description */}
-						<p className='text-sm lg:text-lg text-white/90 mb-4 lg:mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed font-light px-2 lg:px-0'>
+						<p className='voice-product-description text-sm lg:text-lg text-white/90 mb-4 lg:mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed font-light px-2 lg:px-0'>
 							Meet Chef Yossie - born in Bandung, trained
 							in her mother&apos;s catering kitchen, now
 							bringing{" "}
 							<span className='text-amber-300 font-medium'>
 								professional-grade Indonesian sambal
 							</span>{" "}
-							to British homes across London, Manchester,
-							Birmingham, and nationwide.
+							<span className='voice-location-info'>to British homes across London, Manchester,
+							Birmingham, and nationwide.</span>
 						</p>
 
 						{/* Features with mobile-optimized design */}
@@ -235,14 +235,14 @@ export default function HeroSection() {
 										<>
 											<Heart className='w-4 lg:w-5 h-4 lg:h-5' />
 											<span className='text-sm lg:text-base'>
-												Thanks! 🌶️
+												UK VIP List! 🇬🇧🌶️
 											</span>
 										</>
 									) : (
 										<>
 											<Heart className='w-4 lg:w-5 h-4 lg:h-5 group-hover:animate-bounce' />
 											<span className='text-sm lg:text-base'>
-												Join the Waitlist
+												Join UK Preview List
 											</span>
 										</>
 									)}

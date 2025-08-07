@@ -77,15 +77,17 @@ export default function ChefPage() {
 						</div>
 
 						<div className='relative'>
-							<div className='aspect-square rounded-sm overflow-hidden shadow-luxury border border-gold-200'>
-								<Image
-									src='/images/chef-yossie.webp'
-									alt='Chef Yossie - Professional Indonesian Chef from Bandung'
-									fill
-									className='object-cover'
-									priority
-									sizes='(max-width: 768px) 100vw, 50vw'
-								/>
+							<div className='aspect-square rounded-lg shadow-luxury p-3 bg-gradient-to-br from-yellow-400 via-amber-400 to-yellow-500'>
+								<div className='w-full h-full rounded-lg overflow-hidden'>
+									<Image
+										src='/images/chef-yossie.webp'
+										alt='Chef Yossie - Professional Indonesian Chef from Bandung'
+										fill
+										className='object-cover'
+										priority
+										sizes='(max-width: 768px) 100vw, 50vw'
+									/>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -209,15 +211,17 @@ export default function ChefPage() {
 						</div>
 
 						<div className='relative'>
-							<div className='aspect-[4/3] rounded-sm overflow-hidden shadow-luxury border border-gold-200'>
-								<Image
-									src='/images/cantering-indonesia.webp'
-									alt='Family catering kitchen in Bandung, Indonesia - where Chef Yossie learned traditional Indonesian cooking'
-									fill
-									className='object-cover'
-									loading='lazy'
-									sizes='(max-width: 768px) 100vw, 50vw'
-								/>
+							<div className='aspect-[4/3] rounded-lg shadow-luxury p-3 bg-gradient-to-br from-yellow-400 via-amber-400 to-yellow-500'>
+								<div className='w-full h-full rounded-lg overflow-hidden'>
+									<Image
+										src='/images/cantering-indonesia.webp'
+										alt='Family catering kitchen in Bandung, Indonesia - where Chef Yossie learned traditional Indonesian cooking'
+										fill
+										className='object-cover'
+										loading='lazy'
+										sizes='(max-width: 768px) 100vw, 50vw'
+									/>
+								</div>
 							</div>
 						</div>
 					</div>

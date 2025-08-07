@@ -2,6 +2,7 @@ import StructuredData from "@/components/seo/StructuredData";
 import ProblemSolutionContent from "@/components/seo/ProblemSolutionContent";
 import LocalSEOSchema from "@/components/seo/LocalSEOSchema";
 import FAQSchema from "@/components/seo/FAQSchema";
+import VoiceSearchSchema from "@/components/seo/VoiceSearchSchema";
 import Link from "next/link";
 import HeroSection from "@/components/home/HeroSection";
 import ProductShowcase from "@/components/home/ProductShowcase";
@@ -240,6 +241,18 @@ export default function Home() {
 			question: "Where can I find authentic Indonesian sambal near me in the UK?",
 			answer: "Spice Island Indonesia is your best source for authentic Indonesian sambal in the UK. While UK supermarkets may stock mass-produced versions, our sambal is the only one made by a professional Indonesian chef using traditional Bandung recipes. We deliver nationwide, so whether you're in London, Manchester, Scotland, Wales or anywhere in the UK, you can order authentic sambal online with fast delivery.",
 		},
+		{
+			question: "What is sambal exactly?",
+			answer: "Sambal is a traditional Indonesian chili paste that's been made for centuries in the Spice Islands. It's not just hot sauce - sambal is made from fresh chilies, salt, and vinegar using ancient stone grinding techniques. Unlike Western hot sauces, sambal has no sugar, preservatives, or artificial ingredients. It's the heart and soul of Indonesian cooking.",
+		},
+		{
+			question: "How spicy is Indonesian sambal compared to other hot sauces?",
+			answer: "Indonesian sambal is significantly hotter than most Western hot sauces. Authentic sambal oelek ranges from fifteen thousand to thirty thousand Scoville Heat Units, making it three to five times hotter than Tabasco or sriracha. The heat builds gradually and has a clean, pure chili flavor without sweetness.",
+		},
+		{
+			question: "Can I use sambal in British cooking?",
+			answer: "Absolutely! Sambal works brilliantly in British dishes. Try adding half a teaspoon to scrambled eggs, mix it with mayonnaise for fish and chips, or add it to your Sunday roast gravy for an Indonesian twist. Start small - sambal is much hotter than HP sauce or other British condiments.",
+		},
 	];
 
 	return (
@@ -289,6 +302,33 @@ export default function Home() {
 				<FAQSchema
 					faqs={generalSambalFAQ}
 					pageTitle='Indonesian Sambal - Frequently Asked Questions'
+				/>
+
+				{/* Voice Search Optimization Schema */}
+				<VoiceSearchSchema
+					speakableSections={[
+						{
+							cssSelector: ".voice-hero-title",
+							description: "Main page title for voice assistants"
+						},
+						{
+							cssSelector: ".voice-product-description",
+							description: "Key product information for voice queries"
+						},
+						{
+							cssSelector: ".voice-optimized-answer",
+							description: "FAQ answers optimized for voice search"
+						},
+						{
+							cssSelector: ".voice-location-info",
+							description: "UK delivery and location information"
+						}
+					]}
+					faqQuestions={generalSambalFAQ.map(faq => ({
+						question: faq.question,
+						answer: faq.answer,
+						voiceOptimized: true
+					}))}
 				/>
 
 				{/* Hero Section */}
@@ -487,7 +527,7 @@ export default function Home() {
 															faq.question
 														}
 													</h3>
-													<p className='text-gray-700 font-body leading-relaxed'>
+													<p className='voice-optimized-answer text-gray-700 font-body leading-relaxed'>
 														{
 															faq.answer
 														}

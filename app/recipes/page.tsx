@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Clock, Users, ChefHat, Heart } from "lucide-react";
 
@@ -13,6 +14,7 @@ export default function RecipesPage() {
 			serves: "4",
 			difficulty: "Easy",
 			image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg",
+			slug: "sambal-fried-rice",
 			ingredients: [
 				"3 cups cooked rice (preferably day-old)",
 				"2 tbsp Spice Island Sambal Oelek",
@@ -42,6 +44,7 @@ export default function RecipesPage() {
 			serves: "4",
 			difficulty: "Medium",
 			image: "https://images.pexels.com/photos/2338407/pexels-photo-2338407.jpeg",
+			slug: "sambal-chicken-stir-fry",
 			ingredients: [
 				"8 chicken thighs, skin-on",
 				"3 tbsp Spice Island Sambal Bali",
@@ -71,6 +74,7 @@ export default function RecipesPage() {
 			serves: "2",
 			difficulty: "Easy",
 			image: "https://images.pexels.com/photos/1907244/pexels-photo-1907244.jpeg",
+			slug: "sambal-noodle-soup",
 			ingredients: [
 				"200g fresh egg noodles",
 				"2 tbsp Spice Island Sambal Oelek",
@@ -90,6 +94,63 @@ export default function RecipesPage() {
 				"Stir in sambal, oyster sauce, and sesame oil",
 				"Toss everything together for 2-3 minutes",
 				"Garnish with fresh coriander and serve",
+			],
+		},
+		{
+			id: 4,
+			title: "Sambal Scrambled Eggs",
+			description:
+				"Elevate your breakfast with spicy Indonesian-style scrambled eggs",
+			time: "10 mins",
+			serves: "2",
+			difficulty: "Easy",
+			image: "https://images.pexels.com/photos/824635/pexels-photo-824635.jpeg",
+			slug: "sambal-scrambled-eggs",
+			ingredients: [
+				"6 large eggs",
+				"1 tbsp Spice Island Sambal Oelek",
+				"2 tbsp butter",
+				"2 shallots, finely chopped",
+				"Salt and pepper to taste",
+				"Fresh chives for garnish",
+			],
+			instructions: [
+				"Beat eggs with salt and pepper in a bowl",
+				"Heat butter in a non-stick pan over low heat",
+				"Add shallots and cook until fragrant",
+				"Pour in beaten eggs and cook gently",
+				"Stir in sambal oelek when eggs are almost set",
+				"Remove from heat and garnish with chives",
+				"Serve immediately with toast",
+			],
+		},
+		{
+			id: 5,
+			title: "Sambal BBQ Marinade",
+			description:
+				"Transform your barbecue with this spicy Indonesian-inspired marinade",
+			time: "30 mins prep + 2 hours marinating",
+			serves: "4-6",
+			difficulty: "Easy",
+			image: "https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg",
+			slug: "sambal-bbq-marinade",
+			ingredients: [
+				"3 tbsp Spice Island Sambal Bali",
+				"2 tbsp brown sugar",
+				"3 tbsp soy sauce",
+				"2 tbsp lime juice",
+				"2 cloves garlic, minced",
+				"1 tsp grated ginger",
+				"1 kg chicken pieces or beef",
+			],
+			instructions: [
+				"Mix all marinade ingredients in a bowl",
+				"Add meat and coat thoroughly",
+				"Marinate in fridge for at least 2 hours",
+				"Preheat barbecue to medium-high heat",
+				"Cook meat, basting with remaining marinade",
+				"Cook until internal temperature is safe",
+				"Rest for 5 minutes before serving",
 			],
 		},
 	];
@@ -173,9 +234,11 @@ export default function RecipesPage() {
 										</div>
 									</div>
 
-									<Button className='w-full bg-burgundy-900 hover:bg-burgundy-800 text-gold-300 font-elegant'>
-										View Full Recipe
-									</Button>
+									<Link href={`/recipes/${recipe.slug}`}>
+										<Button className='w-full bg-burgundy-900 hover:bg-burgundy-800 text-gold-300 font-elegant'>
+											View Full Recipe
+										</Button>
+									</Link>
 								</div>
 							</div>
 						))}

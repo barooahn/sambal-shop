@@ -71,13 +71,11 @@ export default function NewsletterSection() {
 					</div>
 
 					<h2 className='text-4xl sm:text-5xl lg:text-6xl font-bold text-burgundy-900 mb-6 font-brand'>
-						Get Early Access
+						Be First in the UK
 					</h2>
 
 					<p className='text-xl lg:text-2xl text-neutral-600 max-w-3xl mx-auto leading-relaxed font-body'>
-						Be the first to taste authentic Indonesian flavors
-						and get exclusive access to our premium sambal
-						collection
+						Join 500+ UK food lovers waiting for Chef Yossie's authentic Indonesian sambal. Be the first to experience professional-grade chili paste delivered to London, Manchester, Birmingham & nationwide.
 					</p>
 				</div>
 
@@ -94,10 +92,10 @@ export default function NewsletterSection() {
 								<div className='space-y-6'>
 									<div className='text-center lg:text-left'>
 										<h3 className='text-3xl lg:text-4xl font-bold text-burgundy-900 mb-4 font-brand'>
-											Join the Spice Journey
+											UK Exclusive Preview
 										</h3>
 										<p className='text-xl text-neutral-600 font-body'>
-											Subscribe to our
+											Get VIP access to the UK's most authentic Indonesian sambal. Subscribe to our
 											newsletter and unlock
 											exclusive benefits
 										</p>
@@ -111,16 +109,10 @@ export default function NewsletterSection() {
 											</div>
 											<div>
 												<h4 className='text-xl font-bold text-burgundy-900 mb-2 font-heading'>
-													15% Off First
-													Order
+													UK Exclusive: 25% Off First Order
 												</h4>
 												<p className='text-neutral-600 font-body'>
-													Exclusive
-													discount code
-													delivered to
-													your inbox
-													immediately
-													after signup
+													Special launch discount for UK customers only. Plus free delivery to London, Manchester, Birmingham & nationwide.
 												</p>
 											</div>
 										</div>
@@ -131,18 +123,10 @@ export default function NewsletterSection() {
 											</div>
 											<div>
 												<h4 className='text-xl font-bold text-burgundy-900 mb-2 font-heading'>
-													Early Access to
-													New Products
+													Priority Access - UK Launch
 												</h4>
 												<p className='text-neutral-600 font-body'>
-													Be first to try
-													new sambal
-													varieties and
-													limited
-													editions before
-													they&apos;re
-													available to
-													the public
+													Be among the first 100 UK customers to taste Chef Yossie's professional-grade sambal. Skip the waiting list with VIP email access.
 												</p>
 											</div>
 										</div>
@@ -153,19 +137,10 @@ export default function NewsletterSection() {
 											</div>
 											<div>
 												<h4 className='text-xl font-bold text-burgundy-900 mb-2 font-heading'>
-													Authentic
-													Indonesian
-													Recipes
+													British-Indonesian Recipe Guide
 												</h4>
 												<p className='text-neutral-600 font-body'>
-													Traditional
-													recipes and
-													cooking tips
-													from Chef
-													Yossie,
-													straight from
-													her family
-													kitchen
+													Free recipe collection adapting traditional Indonesian dishes for British kitchens. UK supermarket ingredients included.
 												</p>
 											</div>
 										</div>
@@ -177,12 +152,10 @@ export default function NewsletterSection() {
 									<div className='bg-gradient-to-br from-burgundy-900 to-burgundy-800 rounded-sm p-8 text-white shadow-xl h-full flex flex-col justify-center'>
 										<div className='text-center mb-6'>
 											<h4 className='text-2xl font-bold mb-2 font-brand text-gold-200'>
-												Ready to Start?
+												Join the UK Preview List
 											</h4>
 											<p className='text-burgundy-100 font-body'>
-												Join 2,500+ spice
-												lovers already on
-												the journey
+												Join 500+ UK food lovers waiting for authentic Indonesian sambal
 											</p>
 										</div>
 
@@ -202,7 +175,7 @@ export default function NewsletterSection() {
 												<Input
 													id='newsletter-email'
 													type='email'
-													placeholder='Enter your email address'
+													placeholder='your.email@example.co.uk'
 													value={email}
 													onChange={(
 														e
@@ -237,16 +210,12 @@ export default function NewsletterSection() {
 												) : newsletterState.isSubmitted ? (
 													<>
 														<Star className='w-5 h-5 mr-2' />
-														Welcome to
-														the
-														Family! 🌶️
+														You're on the UK VIP List! 🇬🇧🌶️
 													</>
 												) : (
 													<>
 														<Mail className='w-5 h-5 mr-2' />
-														Join the
-														Spice
-														Journey
+														Get UK Exclusive Access
 													</>
 												)}
 											</Button>

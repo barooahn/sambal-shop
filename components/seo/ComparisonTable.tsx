@@ -2,33 +2,30 @@ import { FC } from "react";
 import { Info, BarChart3 } from "lucide-react";
 
 interface ComparisonItem {
-	feature: string;
-	product1: string;
-	product2: string;
-	winner?: "product1" | "product2" | "tie";
+	category: string;
+	sambal: string;
+	hpSauce: string;
+	winner?: "sambal" | "hpSauce" | "context";
+	explanation?: string;
 }
 
 interface ComparisonTableProps {
 	title: string;
-	product1Name: string;
-	product2Name: string;
-	comparisons: ComparisonItem[];
+	items: ComparisonItem[];
 	summary?: string;
 }
 
 const ComparisonTable: FC<ComparisonTableProps> = ({
 	title,
-	product1Name,
-	product2Name,
-	comparisons,
+	items,
 	summary,
 }) => {
-	const getWinnerStyle = (winner?: string, isProduct1?: boolean) => {
+	const getWinnerStyle = (winner?: string, isSambal?: boolean) => {
 		if (!winner) return "";
-		if (winner === "tie") return "bg-yellow-50 border-yellow-200";
+		if (winner === "context") return "bg-yellow-50 border-yellow-200";
 		if (
-			(winner === "product1" && isProduct1) ||
-			(winner === "product2" && !isProduct1)
+			(winner === "sambal" && isSambal) ||
+			(winner === "hpSauce" && !isSambal)
 		) {
 			return "bg-green-50 border-green-200 font-semibold";
 		}
@@ -52,31 +49,31 @@ const ComparisonTable: FC<ComparisonTableProps> = ({
 					<thead>
 						<tr className='bg-gray-50'>
 							<th className='border border-gray-200 px-4 py-3 text-left font-semibold text-gray-900'>
-								Feature
+								Category
 							</th>
-							<th className='border border-gray-200 px-4 py-3 text-center font-semibold text-burgundy-600'>
-								{product1Name}
+							<th className='border border-gray-200 px-4 py-3 text-center font-semibold text-red-600'>
+								Indonesian Sambal
 							</th>
-							<th className='border border-gray-200 px-4 py-3 text-center font-semibold text-burgundy-600'>
-								{product2Name}
+							<th className='border border-gray-200 px-4 py-3 text-center font-semibold text-brown-600'>
+								HP Sauce
 							</th>
 						</tr>
 					</thead>
 					<tbody>
-						{comparisons.map((item, index) => (
+						{items.map((item, index) => (
 							<tr key={index} className='hover:bg-gray-50'>
 								<td className='border border-gray-200 px-4 py-3 font-medium text-gray-900'>
-									{item.feature}
+									{item.category}
 								</td>
 								<td
-									className={`border border-gray-200 px-4 py-3 text-center ${getWinnerStyle(item.winner, true)}`}
+									className={`border border-gray-200 px-4 py-3 text-sm ${getWinnerStyle(item.winner, true)}`}
 								>
-									{item.product1}
+									{item.sambal}
 								</td>
 								<td
-									className={`border border-gray-200 px-4 py-3 text-center ${getWinnerStyle(item.winner, false)}`}
+									className={`border border-gray-200 px-4 py-3 text-sm ${getWinnerStyle(item.winner, false)}`}
 								>
-									{item.product2}
+									{item.hpSauce}
 								</td>
 							</tr>
 						))}

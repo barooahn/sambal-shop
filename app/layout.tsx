@@ -10,6 +10,7 @@ import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
 import Breadcrumb from "@/components/shared/Breadcrumb";
 import ThirdPartyScripts from "@/components/optimization/ThirdPartyScripts";
+import UKExitIntentPopup from "@/components/optimization/UKExitIntentPopup";
 import PerformanceOptimizer, {
 	criticalCSS,
 	criticalImages,
@@ -122,6 +123,7 @@ export default function RootLayout({
 				<Breadcrumb />
 				<main className='min-h-screen'>{children}</main>
 				<Footer />
+				<UKExitIntentPopup />
 			</body>
 		</html>
 	);
