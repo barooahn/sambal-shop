@@ -49,7 +49,7 @@ export default function GoogleAnalytics({
 							entryTypes: ["largest-contentful-paint"],
 						});
 
-						// Fallback timeout in case LCP doesn't fire
+						// Fallback timeout in case LCP doesn&apos;t fire
 						setTimeout(() => {
 							observer.disconnect();
 							scheduleLoad();

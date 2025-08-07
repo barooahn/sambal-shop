@@ -6,7 +6,7 @@ import Link from "next/link";
 export const metadata = {
 	title: "Meet Chef Yossie | Bandung-Born Indonesian Chef | Spice Island Indonesia",
 	description:
-		"Meet Chef Yossie, born in Bandung and trained in her mother's catering kitchen. Now bringing professional-grade Indonesian sambal and West Java recipes to British homes.",
+		"Meet Chef Yossie, born in Bandung and trained in her mother&apos;s catering kitchen. Now bringing professional-grade Indonesian sambal and West Java recipes to British homes.",
 	keywords:
 		"Indonesian chef UK, Bandung chef, West Java cuisine, Sundanese cooking, professional sambal maker, Indonesian catering recipes, authentic Indonesian chef",
 };
@@ -34,7 +34,7 @@ export default function ChefPage() {
 									Meet Chef Yossie
 								</h1>
 								<p className='text-xl sm:text-2xl text-gold-200 mb-8 leading-relaxed font-body'>
-									From Bandung's bustling catering
+									From Bandung&apos;s bustling catering
 									kitchens to handcrafted artisan
 									production in the UK
 								</p>
@@ -71,7 +71,7 @@ export default function ChefPage() {
 									size='lg'
 									className='font-elegant'
 								>
-									Try Chef Yossie's Sambal
+									Try Chef Yossie&apos;s Sambal
 								</Button>
 							</Link>
 						</div>
@@ -92,7 +92,7 @@ export default function ChefPage() {
 				</div>
 			</section>
 
-			{/* Chef's Journey */}
+			{/* Chef&apos;s Journey */}
 			<section className='py-24 bg-white'>
 				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<div className='text-center mb-16'>
@@ -116,7 +116,7 @@ export default function ChefPage() {
 							</h3>
 							<p className='text-neutral-700 leading-relaxed font-body'>
 								Born and raised in Bandung, West Java -
-								Indonesia's culinary capital known for
+								Indonesia&apos;s culinary capital known for
 								its incredible street food culture and
 								traditional Sundanese cuisine. Chef
 								Yossie grew up surrounded by the rich
@@ -133,7 +133,7 @@ export default function ChefPage() {
 								Professional Training
 							</h3>
 							<p className='text-neutral-700 leading-relaxed font-body'>
-								Trained in her mother's busy catering
+								Trained in her mother&apos;s busy catering
 								kitchen, serving hundreds daily. Here
 								she learned the art of scaling
 								traditional recipes while maintaining
@@ -175,12 +175,12 @@ export default function ChefPage() {
 							</h2>
 							<div className='space-y-6 text-lg text-neutral-700 leading-relaxed font-body'>
 								<p>
-									Chef Yossie's culinary journey
-									began in her mother's bustling
+									Chef Yossie&apos;s culinary journey
+									began in her mother&apos;s bustling
 									catering kitchen in Bandung, where
 									traditional Indonesian recipes were
 									prepared for hundreds of guests
-									daily. This wasn't just home
+									daily. This wasn&apos;t just home
 									cooking - it was professional-grade
 									Indonesian cuisine at scale.
 								</p>
@@ -236,8 +236,8 @@ export default function ChefPage() {
 
 					<div className='bg-gradient-to-r from-burgundy-50 to-gold-50 rounded-sm p-8 mb-12 border border-gold-200'>
 						<blockquote className='text-xl sm:text-2xl text-burgundy-800 font-body italic leading-relaxed'>
-							"In my mother's catering kitchen, I learned
-							that authentic Indonesian flavors don't have
+							"In my mother&apos;s catering kitchen, I learned
+							that authentic Indonesian flavors don&apos;t have
 							to be compromised when cooking at scale.
 							Every jar I make today carries that same
 							commitment to professional consistency and
@@ -307,7 +307,7 @@ export default function ChefPage() {
 								size='lg'
 								className='font-elegant'
 							>
-								Shop Chef Yossie's Sambal
+								Shop Chef Yossie&apos;s Sambal
 							</Button>
 						</Link>
 						<Link href='/recipes'>

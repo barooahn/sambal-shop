@@ -34,21 +34,63 @@ function findFiles(dir, extensions = [".tsx", ".ts"]) {
 	return results;
 }
 
-// Function to fix unescaped entities in JSX
+// Function to fix unescaped entities in JSX text content only
 function fixUnescapedEntities(content) {
 	let fixed = content;
 
-	// Simple replacements for common patterns
-	// Fix apostrophes in common contractions
-	fixed = fixed.replace(/(\w+)'(s|t|re|ve|ll|d)\b/g, "$1&apos;$2");
+	// Split content into lines for safer processing
+	const lines = fixed.split("\n");
+	const processedLines = lines.map((line) => {
+		// Skip lines that look like imports, exports, or TypeScript interfaces
+		if (
+			line.trim().startsWith("import ") ||
+			line.trim().startsWith("export ") ||
+			line.trim().startsWith("interface ") ||
+			line.trim().startsWith("type ") ||
+			line.includes("className=") ||
+			line.includes("href=") ||
+			line.includes("src=") ||
+			line.includes("alt=") ||
+			line.includes("placeholder=")
+		) {
+			return line;
+		}
 
-	// Fix standalone apostrophes in text
-	fixed = fixed.replace(/(\s|>)'(\s)/g, "$1&apos;$2");
+		// Only process lines that appear to be JSX text content
+		// Look for text between > and < that contains quotes or apostrophes
+		let processedLine = line;
 
-	// Fix quotes around words (but not in attributes)
-	fixed = fixed.replace(/(\s|>)"([^"<>]*?)"(\s|<)/g, "$1&quot;$2&quot;$3");
+		// Fix common contractions in JSX text
+		processedLine = processedLine.replace(
+			/(\w+)'(s|t|re|ve|ll|d)(\s|<|$)/g,
+			"$1&apos;$2$3"
+		);
 
-	return fixed;
+		// Fix standalone apostrophes in JSX text (but not in attributes)
+		if (!line.includes("=") && line.includes("'")) {
+			processedLine = processedLine.replace(
+				/(\s|>)'(\s|<)/g,
+				"$1&apos;$2"
+			);
+		}
+
+		// Fix quotes in JSX text content (very conservative)
+		if (
+			!line.includes("=") &&
+			line.includes('"') &&
+			line.includes(">") &&
+			line.includes("<")
+		) {
+			processedLine = processedLine.replace(
+				/(\s|>)"([^"<>=]*?)"(\s|<)/g,
+				"$1&quot;$2&quot;$3"
+			);
+		}
+
+		return processedLine;
+	});
+
+	return processedLines.join("\n");
 }
 
 // Main function to process all files

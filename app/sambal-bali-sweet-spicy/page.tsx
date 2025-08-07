@@ -17,13 +17,13 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-	title: "Sweet Spicy Indonesian Sambal Bali UK | Chef Yossie's Aromatic Recipe | Spice Island Indonesia",
+	title: "Sweet Spicy Indonesian Sambal Bali UK | Chef Yossie&apos;s Aromatic Recipe | Spice Island Indonesia",
 	description:
 		"Buy authentic sweet spicy Indonesian Sambal Bali made by Bandung-born Chef Yossie. Perfect balance of heat and sweetness with aromatic spices. UK delivery available.",
 	keywords:
 		"sambal bali UK, sweet spicy Indonesian sambal, buy sambal bali, Indonesian sweet chili sauce, aromatic sambal recipe, Chef Yossie sambal bali, Indonesian condiments UK, sambal bali delivery",
 	openGraph: {
-		title: "Sweet Spicy Indonesian Sambal Bali UK | Chef Yossie's Aromatic Recipe",
+		title: "Sweet Spicy Indonesian Sambal Bali UK | Chef Yossie&apos;s Aromatic Recipe",
 		description:
 			"Perfect balance of sweet heat and aromatic spices. Traditional Balinese-style sambal made by professional Indonesian chef.",
 		type: "website",
@@ -70,7 +70,7 @@ export default function SambalBaliSweetSpicyPage() {
 							<p className='text-xl sm:text-2xl text-gold-200 mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-body'>
 								Experience the perfect balance of sweet
 								heat and aromatic spices in Chef
-								Yossie's Sambal Bali. Traditional
+								Yossie&apos;s Sambal Bali. Traditional
 								Balinese-style recipe with palm sugar,
 								galangal, and secret spice blend.
 							</p>
@@ -178,7 +178,7 @@ export default function SambalBaliSweetSpicyPage() {
 								<p className='text-neutral-600 font-body'>
 									Palm sugar and aromatic spices
 									create a complex flavor profile
-									that's spicy but approachable,
+									that&apos;s spicy but approachable,
 									perfect for those new to Indonesian
 									cuisine.
 								</p>
@@ -222,14 +222,14 @@ export default function SambalBaliSweetSpicyPage() {
 				</div>
 			</section>
 
-			{/* Chef's Story Section */}
+			{/* Chef&apos;s Story Section */}
 			<section className='py-16 sm:py-20 bg-gradient-to-br from-cream-50 to-cream-100'>
 				<div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<div className='grid lg:grid-cols-2 gap-12 items-center'>
 						<div>
 							<Badge className='bg-burgundy-100 text-burgundy-800 mb-6 px-4 py-2 font-semibold'>
 								<ChefHat className='w-4 h-4 mr-2' />
-								Chef Yossie's Story
+								Chef Yossie&apos;s Story
 							</Badge>
 
 							<h2 className='text-3xl sm:text-4xl font-bold text-burgundy-900 mb-6 font-brand'>
@@ -324,7 +324,7 @@ export default function SambalBaliSweetSpicyPage() {
 							Perfect For These Occasions
 						</h2>
 						<p className='text-xl text-neutral-600 max-w-3xl mx-auto font-body'>
-							Sambal Bali's balanced flavor profile makes
+							Sambal Bali&apos;s balanced flavor profile makes
 							it incredibly versatile for British cooking
 							and entertaining.
 						</p>
@@ -386,9 +386,9 @@ export default function SambalBaliSweetSpicyPage() {
 					</h2>
 
 					<p className='text-xl text-gold-200 mb-10 max-w-2xl mx-auto font-body'>
-						Join hundreds of UK customers who've discovered
+						Join hundreds of UK customers who&apos;ve discovered
 						the perfect balance of Indonesian heat and
-						sweetness in Chef Yossie's Sambal Bali.
+						sweetness in Chef Yossie&apos;s Sambal Bali.
 					</p>
 
 					<div className='flex flex-col sm:flex-row gap-4 justify-center'>

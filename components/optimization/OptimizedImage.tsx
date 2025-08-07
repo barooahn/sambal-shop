@@ -39,7 +39,7 @@ export default function OptimizedImage({
 			originalSrc.includes(".jpeg")
 		) {
 			// In production, you would have WebP versions
-			// For now, we'll use Next.js automatic optimization
+			// For now, we&apos;ll use Next.js automatic optimization
 			return originalSrc;
 		}
 		return originalSrc;

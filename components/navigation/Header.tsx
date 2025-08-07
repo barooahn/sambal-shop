@@ -61,7 +61,7 @@ export default function Header() {
 		},
 		{ name: "Recipes", href: "/recipes" },
 		{ name: "Blog", href: "/blog" },
-		{ name: "Chef's Story", href: "/chef" },
+		{ name: "Chef&apos;s Story", href: "/chef" },
 		{ name: "About", href: "/about" },
 		{ name: "Wholesale", href: "/wholesale" },
 	];

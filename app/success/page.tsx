@@ -88,7 +88,7 @@ function SuccessPageContent() {
 											Order Processing
 										</p>
 										<p className='text-sm text-gray-600'>
-											We'll prepare your sambal
+											We&apos;ll prepare your sambal
 											with care using our
 											traditional methods
 										</p>
@@ -105,7 +105,7 @@ function SuccessPageContent() {
 											Shipping Notification
 										</p>
 										<p className='text-sm text-gray-600'>
-											You'll receive tracking
+											You&apos;ll receive tracking
 											information via email
 											within 1-2 business days
 										</p>

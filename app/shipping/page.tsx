@@ -266,10 +266,10 @@ export default function ShippingPage() {
 								Do you offer tracking?
 							</h3>
 							<p className='text-neutral-700 font-body'>
-								Yes! You'll receive a tracking number
+								Yes! You&apos;ll receive a tracking number
 								via email once your order is dispatched.
 								You can track your package through our
-								delivery partner's website.
+								delivery partner&apos;s website.
 							</p>
 						</div>
 

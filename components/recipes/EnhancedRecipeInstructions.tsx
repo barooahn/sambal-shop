@@ -241,7 +241,7 @@ const EnhancedRecipeInstructions: FC<EnhancedRecipeInstructionsProps> = ({
 							🎉 Recipe Complete!
 						</h3>
 						<p className='text-green-700'>
-							Congratulations! You've successfully made{" "}
+							Congratulations! You&apos;ve successfully made{" "}
 							{title}. Enjoy your delicious creation!
 						</p>
 					</div>

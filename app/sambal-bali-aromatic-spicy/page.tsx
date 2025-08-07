@@ -34,7 +34,7 @@ export default function SambalBaliPage() {
 	const faqData = [
 		{
 			question: "What is sambal bali?",
-			answer: "Sambal Bali is an aromatic Indonesian chili paste that combines fresh chilies with traditional spices like galangal, lemongrass, and kaffir lime leaves. Unlike simple chili pastes, Sambal Bali offers complex layers of flavor - it's spicy, aromatic, and slightly sweet. This traditional recipe from Bali creates a more sophisticated heat that enhances rather than overwhelms your dishes.",
+			answer: "Sambal Bali is an aromatic Indonesian chili paste that combines fresh chilies with traditional spices like galangal, lemongrass, and kaffir lime leaves. Unlike simple chili pastes, Sambal Bali offers complex layers of flavor - it&apos;s spicy, aromatic, and slightly sweet. This traditional recipe from Bali creates a more sophisticated heat that enhances rather than overwhelms your dishes.",
 		},
 		{
 			question: "What makes sambal bali different from sambal oelek?",
@@ -42,15 +42,15 @@ export default function SambalBaliPage() {
 		},
 		{
 			question: "Is sambal bali sweeter than other sambals?",
-			answer: "Sambal Bali has natural sweetness from aromatic spices and traditional preparation methods, but it's not artificially sweetened. The galangal and lemongrass create subtle sweet notes that balance the heat beautifully. It's less aggressive than pure chili pastes while still delivering authentic Indonesian heat - perfect for those who want complex flavor with their spice.",
+			answer: "Sambal Bali has natural sweetness from aromatic spices and traditional preparation methods, but it&apos;s not artificially sweetened. The galangal and lemongrass create subtle sweet notes that balance the heat beautifully. It&apos;s less aggressive than pure chili pastes while still delivering authentic Indonesian heat - perfect for those who want complex flavor with their spice.",
 		},
 		{
 			question: "What dishes work best with sambal bali?",
-			answer: "Sambal Bali excels with grilled meats, marinades, and traditional Indonesian dishes like satay and rendang. It's perfect for BBQ marinades, stir-fries, and any dish where you want aromatic complexity. Try it with chicken, beef, seafood, or vegetables. The aromatic spices make it ideal for fusion cooking and elevating Western dishes with Indonesian flavors.",
+			answer: "Sambal Bali excels with grilled meats, marinades, and traditional Indonesian dishes like satay and rendang. It&apos;s perfect for BBQ marinades, stir-fries, and any dish where you want aromatic complexity. Try it with chicken, beef, seafood, or vegetables. The aromatic spices make it ideal for fusion cooking and elevating Western dishes with Indonesian flavors.",
 		},
 		{
 			question: "How do I use sambal bali in cooking?",
-			answer: "Use Sambal Bali as a marinade base (mix with oil and soy sauce), stir-fry ingredient, or finishing sauce. Start with 1 teaspoon in recipes and adjust to taste. It's excellent in marinades for grilling, mixed into fried rice, or as a condiment for roasted vegetables. The aromatic spices make it perfect for slow-cooked dishes where flavors can develop.",
+			answer: "Use Sambal Bali as a marinade base (mix with oil and soy sauce), stir-fry ingredient, or finishing sauce. Start with 1 teaspoon in recipes and adjust to taste. It&apos;s excellent in marinades for grilling, mixed into fried rice, or as a condiment for roasted vegetables. The aromatic spices make it perfect for slow-cooked dishes where flavors can develop.",
 		},
 		{
 			question: "Where can I buy authentic sambal bali in the UK?",
@@ -390,7 +390,7 @@ export default function SambalBaliPage() {
 								"The aromatic spices in this sambal are
 								incredible! I use it as a marinade for
 								chicken and the flavor is so much more
-								complex than any hot sauce I've tried.
+								complex than any hot sauce I&apos;ve tried.
 								Authentic taste."
 							</p>
 							<div className='text-sm text-gray-600'>
@@ -489,7 +489,7 @@ export default function SambalBaliPage() {
 									lemongrass, and kaffir lime leaves.
 									Unlike simple chili pastes, Sambal
 									Bali offers complex layers of
-									flavor - it's spicy, aromatic, and
+									flavor - it&apos;s spicy, aromatic, and
 									slightly sweet. This traditional
 									recipe from Bali creates a more
 									sophisticated heat that enhances
@@ -536,11 +536,11 @@ export default function SambalBaliPage() {
 									Sambal Bali has natural sweetness
 									from aromatic spices and
 									traditional preparation methods,
-									but it's not artificially
+									but it&apos;s not artificially
 									sweetened. The galangal and
 									lemongrass create subtle sweet
 									notes that balance the heat
-									beautifully. It's less aggressive
+									beautifully. It&apos;s less aggressive
 									than pure chili pastes while still
 									delivering authentic Indonesian
 									heat - perfect for those who want
@@ -558,7 +558,7 @@ export default function SambalBaliPage() {
 									Sambal Bali excels with grilled
 									meats, marinades, and traditional
 									Indonesian dishes like satay and
-									rendang. It's perfect for{" "}
+									rendang. It&apos;s perfect for{" "}
 									<Link
 										href='/recipes/sambal-bbq-marinade'
 										className='text-burgundy-600 hover:text-burgundy-800 underline'
@@ -594,7 +594,7 @@ export default function SambalBaliPage() {
 									(mix with oil and soy sauce),
 									stir-fry ingredient, or finishing
 									sauce. Start with 1 teaspoon in
-									recipes and adjust to taste. It's
+									recipes and adjust to taste. It&apos;s
 									excellent in marinades for
 									grilling, mixed into fried rice, or
 									as a condiment for roasted

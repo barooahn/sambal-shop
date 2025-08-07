@@ -90,7 +90,7 @@ export default function ContactForm({
 						Contact Us
 					</h3>
 					<p className='text-lg text-neutral-600 font-body'>
-						Send us a message and we'll get back to you within
+						Send us a message and we&apos;ll get back to you within
 						24 hours
 					</p>
 				</div>

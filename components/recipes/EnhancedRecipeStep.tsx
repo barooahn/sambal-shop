@@ -103,14 +103,14 @@ const EnhancedRecipeStep: FC<EnhancedRecipeStepProps> = ({
 						</div>
 					)}
 
-					{/* Chef's Tip */}
+					{/* Chef&apos;s Tip */}
 					{instruction.tips && (
 						<div className="bg-gold-50 border border-gold-200 rounded-md p-3 mb-3">
 							<div className="flex items-start gap-2">
 								<ChefHat className="w-4 h-4 text-gold-600 mt-0.5 flex-shrink-0" />
 								<div>
 									<h5 className="text-sm font-semibold text-gold-800 mb-1">
-										Chef's Tip:
+										Chef&apos;s Tip:
 									</h5>
 									<p className="text-sm text-gold-700">
 										{instruction.tips}

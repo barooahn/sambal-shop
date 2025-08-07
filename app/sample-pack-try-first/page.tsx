@@ -21,7 +21,7 @@ import {
 export const metadata = {
 	title: "Try Indonesian Sambal Sample Pack UK | Taste Before You Buy | Spice Island Indonesia",
 	description:
-		"Try authentic Indonesian sambal before committing to full jars. Chef Yossie's sample pack includes Sambal Oelek and Sambal Bali. Perfect introduction to Indonesian flavors.",
+		"Try authentic Indonesian sambal before committing to full jars. Chef Yossie&apos;s sample pack includes Sambal Oelek and Sambal Bali. Perfect introduction to Indonesian flavors.",
 	keywords:
 		"Indonesian sambal samples UK, try sambal first, sambal sample pack, taste test Indonesian condiments, Chef Yossie samples, Indonesian food trial, sambal tasting set UK",
 	openGraph: {
@@ -71,7 +71,7 @@ export default function SamplePackTryFirstPage() {
 
 							<p className='text-xl sm:text-2xl text-gold-200 mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-body'>
 								New to Indonesian sambal? Start your
-								journey with Chef Yossie's sample pack.
+								journey with Chef Yossie&apos;s sample pack.
 								Try both Sambal Oelek and Sambal Bali in
 								perfect tasting portions before choosing
 								your favorites.
@@ -100,7 +100,7 @@ export default function SamplePackTryFirstPage() {
 										<ChefHat className='w-4 h-4 text-burgundy-900' />
 									</div>
 									<span className='text-gold-200 font-medium font-elegant'>
-										Chef Yossie's Recipes
+										Chef Yossie&apos;s Recipes
 									</span>
 								</div>
 								<div className='flex items-center justify-center lg:justify-start space-x-3'>
@@ -153,12 +153,12 @@ export default function SamplePackTryFirstPage() {
 				</div>
 			</section>
 
-			{/* What's Included Section */}
+			{/* What&apos;s Included Section */}
 			<section className='py-16 sm:py-20 bg-white'>
 				<div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<div className='text-center mb-16'>
 						<h2 className='text-3xl sm:text-4xl font-bold text-burgundy-900 mb-6 font-brand'>
-							What's in Your Sample Pack
+							What&apos;s in Your Sample Pack
 						</h2>
 						<p className='text-xl text-neutral-600 max-w-3xl mx-auto font-body'>
 							Two perfectly sized portions to discover your
@@ -263,7 +263,7 @@ export default function SamplePackTryFirstPage() {
 						</h2>
 						<p className='text-xl text-neutral-600 max-w-3xl mx-auto font-body'>
 							Indonesian sambal is unlike any condiment
-							you've tried. Our sample pack ensures you
+							you&apos;ve tried. Our sample pack ensures you
 							find your perfect match.
 						</p>
 					</div>
@@ -322,7 +322,7 @@ export default function SamplePackTryFirstPage() {
 								</h3>
 								<p className='text-neutral-600 font-body'>
 									Introducing friends to Indonesian
-									cuisine? Start with samples - it's
+									cuisine? Start with samples - it&apos;s
 									thoughtful and shows you care about
 									their preferences.
 								</p>

@@ -306,7 +306,7 @@ export default function RecipeCard({
 							{/* Recipe Notes */}
 							<div className='bg-gold-50 border border-gold-200 rounded-lg p-4'>
 								<h4 className='font-bold text-burgundy-900 mb-2 font-brand'>
-									Chef's Tips
+									Chef&apos;s Tips
 								</h4>
 								<p className='text-sm text-gray-700 font-body'>
 									For best results, use authentic

@@ -77,7 +77,7 @@ export default function HeroSection() {
 			setInterestState({
 				isSubmitting: false,
 				isSubmitted: true,
-				message: "Thanks! We'll notify you when Chef Yossie's sambal is ready! 🌶️",
+				message: "Thanks! We&apos;ll notify you when Chef Yossie&apos;s sambal is ready! 🌶️",
 			});
 
 			setTimeout(() => {
@@ -142,7 +142,7 @@ export default function HeroSection() {
 								<div className='flex items-center justify-center space-x-2 lg:space-x-3'>
 									<ChefHat className='w-3 lg:w-5 h-3 lg:h-5 text-orange-600' />
 									<span className='text-gray-800 font-semibold text-xs lg:text-sm tracking-wide'>
-										Chef Yossie's Traditional
+										Chef Yossie&apos;s Traditional
 										Recipes
 									</span>
 									<div className='hidden sm:flex space-x-1'>
@@ -180,7 +180,7 @@ export default function HeroSection() {
 						{/* Description */}
 						<p className='text-sm lg:text-lg text-white/90 mb-4 lg:mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed font-light px-2 lg:px-0'>
 							Meet Chef Yossie - born in Bandung, trained
-							in her mother's catering kitchen, now
+							in her mother&apos;s catering kitchen, now
 							bringing{" "}
 							<span className='text-amber-300 font-medium'>
 								professional-grade Indonesian sambal

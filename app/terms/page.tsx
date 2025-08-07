@@ -53,7 +53,7 @@ export default function TermsPage() {
 											Permission is granted to
 											temporarily download one
 											copy of the materials on
-											Spice Island Indonesia's
+											Spice Island Indonesia&apos;s
 											website for personal,
 											non-commercial transitory
 											viewing only.
@@ -156,7 +156,7 @@ export default function TermsPage() {
 									<div className='text-neutral-700 font-body space-y-4'>
 										<p>
 											The materials on Spice
-											Island Indonesia's
+											Island Indonesia&apos;s
 											website are provided on
 											an 'as is' basis. We make
 											no warranties, expressed

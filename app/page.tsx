@@ -218,11 +218,11 @@ export default function Home() {
 	const generalSambalFAQ = [
 		{
 			question: "What is Indonesian sambal?",
-			answer: "Indonesian sambal is a traditional chili-based condiment that's the heart and soul of Indonesian cuisine. Unlike Western hot sauces, sambal is made with fresh ingredients using ancient techniques passed down through generations. It's not just about heat - it's about complex flavor layers that enhance every dish. From the volcanic soils of the Spice Islands comes this authentic taste that transforms ordinary meals into extraordinary culinary experiences.",
+			answer: "Indonesian sambal is a traditional chili-based condiment that&apos;s the heart and soul of Indonesian cuisine. Unlike Western hot sauces, sambal is made with fresh ingredients using ancient techniques passed down through generations. It&apos;s not just about heat - it&apos;s about complex flavor layers that enhance every dish. From the volcanic soils of the Spice Islands comes this authentic taste that transforms ordinary meals into extraordinary culinary experiences.",
 		},
 		{
 			question: "Where does sambal come from?",
-			answer: "Sambal originates from the Indonesian archipelago, particularly the Maluku Islands (Spice Islands), where volcanic soil creates ideal conditions for growing the world's most flavorful chilies. The tradition dates back centuries, long before European traders arrived in 1512. Each region of Indonesia has developed its own unique sambal varieties, with techniques refined over generations using traditional stone mortars and time-honored recipes.",
+			answer: "Sambal originates from the Indonesian archipelago, particularly the Maluku Islands (Spice Islands), where volcanic soil creates ideal conditions for growing the world&apos;s most flavorful chilies. The tradition dates back centuries, long before European traders arrived in 1512. Each region of Indonesia has developed its own unique sambal varieties, with techniques refined over generations using traditional stone mortars and time-honored recipes.",
 		},
 		{
 			question: "Is sambal healthy?",
@@ -230,7 +230,7 @@ export default function Home() {
 		},
 		{
 			question: "Can I buy authentic sambal in the UK?",
-			answer: "Absolutely! We're proud to bring authentic Indonesian sambal to the UK market. Made by Chef Yossie using traditional Bandung family recipes, our sambal is crafted with the same techniques used in Indonesia for generations. We deliver throughout the UK with proper packaging to maintain freshness. Unlike mass-produced alternatives found in supermarkets, our sambal contains no artificial ingredients and captures the true taste of Indonesia.",
+			answer: "Absolutely! We&apos;re proud to bring authentic Indonesian sambal to the UK market. Made by Chef Yossie using traditional Bandung family recipes, our sambal is crafted with the same techniques used in Indonesia for generations. We deliver throughout the UK with proper packaging to maintain freshness. Unlike mass-produced alternatives found in supermarkets, our sambal contains no artificial ingredients and captures the true taste of Indonesia.",
 		},
 	];
 
@@ -371,9 +371,9 @@ export default function Home() {
 							subtitle='How authentic Indonesian sambal solves your kitchen problems'
 							problems={[
 								{
-									problem: "I want to add heat to my cooking but don't like artificial flavors or excessive sweetness in Western hot sauces.",
+									problem: "I want to add heat to my cooking but don&apos;t like artificial flavors or excessive sweetness in Western hot sauces.",
 									solution:
-										"Authentic sambal oelek contains only chilies, salt, and vinegar - no artificial colors, preservatives, or added sugar. You get pure chili heat that enhances rather than masks your food's natural flavors.",
+										"Authentic sambal oelek contains only chilies, salt, and vinegar - no artificial colors, preservatives, or added sugar. You get pure chili heat that enhances rather than masks your food&apos;s natural flavors.",
 									benefits: [
 										"No artificial ingredients or preservatives",
 										"Pure chili flavor without sweetness",
@@ -389,7 +389,7 @@ export default function Home() {
 								{
 									problem: "I'm new to spicy food but want to explore Indonesian flavors without overwhelming heat.",
 									solution:
-										"Sambal Bali offers complex aromatic spices (galangal, lemongrass, kaffir lime) that balance the heat beautifully. It's milder than pure chili pastes while delivering authentic Indonesian flavor complexity.",
+										"Sambal Bali offers complex aromatic spices (galangal, lemongrass, kaffir lime) that balance the heat beautifully. It&apos;s milder than pure chili pastes while delivering authentic Indonesian flavor complexity.",
 									benefits: [
 										"Aromatic spices balance the heat",
 										"Perfect introduction to Indonesian cuisine",
@@ -403,7 +403,7 @@ export default function Home() {
 									category: "Beginner-Friendly",
 								},
 								{
-									problem: "I want to cook authentic Asian dishes but can't find quality Indonesian ingredients in UK stores.",
+									problem: "I want to cook authentic Asian dishes but can&apos;t find quality Indonesian ingredients in UK stores.",
 									solution:
 										"We deliver authentic Indonesian sambal throughout the UK, made by Chef Yossie using traditional Bandung family recipes. No need to compromise with inferior substitutes or artificial products.",
 									benefits: [

@@ -53,7 +53,7 @@ export default function FeedbackPage() {
 
 		try {
 			// Here you would send the data to your backend/database
-			// For now, we'll simulate an API call
+			// For now, we&apos;ll simulate an API call
 			await new Promise((resolve) => setTimeout(resolve, 1500));
 
 			console.log("Feedback submitted:", formData);

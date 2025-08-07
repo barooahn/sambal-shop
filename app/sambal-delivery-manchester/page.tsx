@@ -56,7 +56,7 @@ export default function ManchesterDeliveryPage() {
 		{
 			name: "Sambal Bali - Aromatic & Spicy",
 			url: "/sambal-bali-aromatic-spicy",
-			description: "Perfect for Manchester's diverse food scene - aromatic spices with authentic heat",
+			description: "Perfect for Manchester&apos;s diverse food scene - aromatic spices with authentic heat",
 			rating: 4.9,
 			price: "£7.49",
 			badge: "Most Popular"
@@ -64,7 +64,7 @@ export default function ManchesterDeliveryPage() {
 		{
 			name: "Sambal Oelek - Pure Heat",
 			url: "/sambal-oelek-uk",
-			description: "Traditional Indonesian chili paste - perfect for Manchester's spice lovers",
+			description: "Traditional Indonesian chili paste - perfect for Manchester&apos;s spice lovers",
 			rating: 4.8,
 			price: "£7.49",
 			badge: "Authentic"

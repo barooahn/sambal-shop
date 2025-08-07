@@ -97,15 +97,15 @@ export default function StructuredData({
 				name: "How spicy is Indonesian sambal compared to other hot sauces?",
 				acceptedAnswer: {
 					"@type": "Answer",
-					text: "Our Sambal Oelek rates 5/5 on our heat scale, significantly hotter than most Western hot sauces. It's made with pure chilies and delivers authentic Indonesian heat levels that Indonesian cuisine is known for.",
+					text: "Our Sambal Oelek rates 5/5 on our heat scale, significantly hotter than most Western hot sauces. It&apos;s made with pure chilies and delivers authentic Indonesian heat levels that Indonesian cuisine is known for.",
 				},
 			},
 			{
 				"@type": "Question",
-				name: "What's the difference between sambal oelek and sambal bali?",
+				name: "What&apos;s the difference between sambal oelek and sambal bali?",
 				acceptedAnswer: {
 					"@type": "Answer",
-					text: "Sambal Oelek is pure chili paste made primarily from chilies, salt, and vinegar - it's the foundation of Indonesian cooking. Sambal Bali includes aromatic spices and has a sweet-spicy profile that complements grilled meats beautifully.",
+					text: "Sambal Oelek is pure chili paste made primarily from chilies, salt, and vinegar - it&apos;s the foundation of Indonesian cooking. Sambal Bali includes aromatic spices and has a sweet-spicy profile that complements grilled meats beautifully.",
 				},
 			},
 			{
@@ -121,7 +121,7 @@ export default function StructuredData({
 				name: "Are your sambals suitable for vegetarians and vegans?",
 				acceptedAnswer: {
 					"@type": "Answer",
-					text: "Yes, our sambals are made with all-natural ingredients and contain no animal products. They're suitable for both vegetarians and vegans, and contain no preservatives or artificial ingredients.",
+					text: "Yes, our sambals are made with all-natural ingredients and contain no animal products. They&apos;re suitable for both vegetarians and vegans, and contain no preservatives or artificial ingredients.",
 				},
 			},
 		],

@@ -21,13 +21,13 @@ import {
 export const metadata = {
 	title: "Indonesian Sambal Delivery London | Authentic Chili Paste London UK | Spice Island Indonesia",
 	description:
-		"Get authentic Indonesian sambal delivered across London! Chef Yossie's traditional recipes available with fast London delivery. Perfect for Indonesian food lovers in the capital.",
+		"Get authentic Indonesian sambal delivered across London! Chef Yossie&apos;s traditional recipes available with fast London delivery. Perfect for Indonesian food lovers in the capital.",
 	keywords:
 		"Indonesian sambal London, sambal delivery London, authentic Indonesian food London, Indonesian condiments London, Chef Yossie London, sambal oelek London, Indonesian chili paste London delivery",
 	openGraph: {
 		title: "Indonesian Sambal Delivery London | Authentic Chili Paste London UK",
 		description:
-			"Authentic Indonesian sambal delivered across London. Traditional recipes from Chef Yossie, perfect for London's Indonesian food scene.",
+			"Authentic Indonesian sambal delivered across London. Traditional recipes from Chef Yossie, perfect for London&apos;s Indonesian food scene.",
 		type: "website",
 		images: [
 			{
@@ -69,7 +69,7 @@ export default function IndonesianSambalLondonPage() {
 								London!
 								<strong className='text-gold-300'>
 									{" "}
-									Chef Yossie's traditional recipes
+									Chef Yossie&apos;s traditional recipes
 								</strong>
 								delivered to your door across all London
 								boroughs. No more settling for
@@ -226,7 +226,7 @@ export default function IndonesianSambalLondonPage() {
 							Sambal
 						</h2>
 						<p className='text-xl text-gray-700 font-elegant max-w-3xl mx-auto'>
-							London's diverse food scene demands authentic
+							London&apos;s diverse food scene demands authentic
 							flavors, not mass-produced imitations.
 						</p>
 					</div>
@@ -243,7 +243,7 @@ export default function IndonesianSambalLondonPage() {
 									Multicultural Capital
 								</h3>
 								<p className='text-gray-600'>
-									London's Indonesian community and
+									London&apos;s Indonesian community and
 									food lovers deserve access to
 									authentic flavors, not watered-down
 									supermarket versions.
@@ -262,7 +262,7 @@ export default function IndonesianSambalLondonPage() {
 									Foodie Culture
 								</h3>
 								<p className='text-gray-600'>
-									London's sophisticated food scene
+									London&apos;s sophisticated food scene
 									appreciates quality and
 									authenticity. Our sambal meets the
 									high standards of discerning London
@@ -300,7 +300,7 @@ export default function IndonesianSambalLondonPage() {
 						<div>
 							<Badge className='bg-burgundy-100 text-burgundy-800 font-elegant mb-6 text-sm px-4 py-2'>
 								<Heart className='w-4 h-4 mr-2' />
-								For London's Indonesian Community
+								For London&apos;s Indonesian Community
 							</Badge>
 
 							<h2 className='text-3xl sm:text-4xl font-bold text-burgundy-900 mb-6 font-brand'>
@@ -360,10 +360,10 @@ export default function IndonesianSambalLondonPage() {
 							<blockquote className='border-l-4 border-gold-600 pl-6 mt-8'>
 								<p className='text-lg italic text-gray-700 mb-4'>
 									"When I first moved to London, I
-									couldn't find sambal that tasted
-									like home. That's why I started
+									couldn&apos;t find sambal that tasted
+									like home. That&apos;s why I started
 									making my own - to bring authentic
-									Indonesian flavors to London's
+									Indonesian flavors to London&apos;s
 									Indonesian community and anyone who
 									appreciates real taste."
 								</p>
@@ -399,7 +399,7 @@ export default function IndonesianSambalLondonPage() {
 						</h2>
 						<p className='text-xl text-gray-700 font-elegant max-w-3xl mx-auto'>
 							We understand London life is fast-paced.
-							That's why we've optimized our delivery to
+							That&apos;s why we&apos;ve optimized our delivery to
 							get authentic sambal to you quickly and
 							safely.
 						</p>
@@ -467,8 +467,8 @@ export default function IndonesianSambalLondonPage() {
 							Popular Delivery Areas in London
 						</h2>
 						<p className='text-xl text-gray-700 font-elegant'>
-							We're proud to serve Indonesian sambal lovers
-							across London's most vibrant neighborhoods.
+							We&apos;re proud to serve Indonesian sambal lovers
+							across London&apos;s most vibrant neighborhoods.
 						</p>
 					</div>
 
@@ -477,7 +477,7 @@ export default function IndonesianSambalLondonPage() {
 							"Shoreditch & Hoxton",
 							"Clapham & Brixton",
 							"Notting Hill & Kensington",
-							"Camden & King's Cross",
+							"Camden & King&apos;s Cross",
 							"Greenwich & Blackheath",
 							"Richmond & Twickenham",
 							"Canary Wharf & Docklands",
@@ -514,7 +514,7 @@ export default function IndonesianSambalLondonPage() {
 					</h2>
 
 					<p className='text-xl sm:text-2xl mb-8 text-cream-100 font-elegant leading-relaxed max-w-3xl mx-auto'>
-						Join hundreds of satisfied London customers who've
+						Join hundreds of satisfied London customers who&apos;ve
 						discovered the difference authentic Indonesian
 						sambal makes. Order today for fast London
 						delivery.

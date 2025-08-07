@@ -55,7 +55,7 @@ function UnsubscribeForm() {
 						Unsubscribe from Newsletter
 					</CardTitle>
 					<CardDescription>
-						We're sorry to see you go! You can unsubscribe
+						We&apos;re sorry to see you go! You can unsubscribe
 						from our newsletter below.
 					</CardDescription>
 				</CardHeader>

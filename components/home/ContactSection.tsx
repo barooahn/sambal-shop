@@ -13,7 +13,7 @@ export default function ContactSection() {
 					</h2>
 					<p className='text-xl text-neutral-600 max-w-2xl mx-auto font-body'>
 						Have questions about our sambals or want to learn
-						more about Indonesian cuisine? We'd love to hear
+						more about Indonesian cuisine? We&apos;d love to hear
 						from you.
 					</p>
 				</div>

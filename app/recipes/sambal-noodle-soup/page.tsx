@@ -126,7 +126,7 @@ const recipe = {
 	},
 
 	tips: [
-		"Don't boil coconut milk vigorously as it may curdle - keep at a gentle simmer",
+		"Don&apos;t boil coconut milk vigorously as it may curdle - keep at a gentle simmer",
 		"Bruise lemongrass with the back of a knife to release more flavor",
 		"Fresh kaffir lime leaves are ideal, but lime zest works as a substitute",
 		"Adjust spice level by varying the amount of sambal - start with less and add more",
@@ -161,7 +161,7 @@ export default function SambalNoodleSoupPage() {
 								This Indonesian noodle soup combines the
 								warming comfort of a hearty broth with
 								the complex heat and aromatics of
-								authentic sambal. It's inspired by
+								authentic sambal. It&apos;s inspired by
 								traditional Indonesian soup dishes like
 								soto and laksa, but simplified for home
 								cooking while maintaining authentic
@@ -259,7 +259,7 @@ export default function SambalNoodleSoupPage() {
 								<strong>Blooming the Sambal:</strong>{" "}
 								Cook the sambal briefly in oil to
 								release its oils and deepen the flavors.
-								Don't let it burn - this would create
+								Don&apos;t let it burn - this would create
 								bitterness.
 							</p>
 							<p>

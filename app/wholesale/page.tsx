@@ -103,7 +103,7 @@ export default function WholesalePage() {
 							Why Partner With Us?
 						</h2>
 						<p className='text-xl text-neutral-600 max-w-3xl mx-auto font-body'>
-							We're committed to supporting our wholesale
+							We&apos;re committed to supporting our wholesale
 							partners with premium products and
 							exceptional service
 						</p>
@@ -205,7 +205,7 @@ export default function WholesalePage() {
 										Thank You!
 									</h4>
 									<p className='text-green-600 font-body'>
-										We've received your wholesale
+										We&apos;ve received your wholesale
 										enquiry and will get back to
 										you within 24 hours.
 									</p>

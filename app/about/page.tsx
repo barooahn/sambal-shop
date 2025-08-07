@@ -187,8 +187,8 @@ export default function AboutPage() {
 									Indonesian communities.
 								</p>
 								<p>
-									We're not just selling sambal –
-									we're sharing a piece of Indonesian
+									We&apos;re not just selling sambal –
+									we&apos;re sharing a piece of Indonesian
 									culture, one delicious spoonful at
 									a time.
 								</p>

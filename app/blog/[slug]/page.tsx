@@ -16,7 +16,7 @@ const blogPosts = {
 		content: `
 		<div class="bg-gradient-to-r from-burgundy-50 to-gold-50 border-l-4 border-burgundy-500 p-6 my-8 rounded-r-lg">
 			<p class="text-lg font-semibold text-burgundy-900 mb-4">🗺️ Journey Through Time</p>
-			<p class="text-burgundy-700">Discover how volcanic islands in Indonesia created the perfect conditions for the world's most prized spices - and the authentic sambal we bring to your kitchen today.</p>
+			<p class="text-burgundy-700">Discover how volcanic islands in Indonesia created the perfect conditions for the world&apos;s most prized spices - and the authentic sambal we bring to your kitchen today.</p>
 		</div>
 
 		<p class="text-lg leading-relaxed mb-6">Long before Europeans knew of the Americas, before the great age of exploration, there existed a chain of volcanic islands in the Indonesian archipelago that would change the course of world history. The <strong>Maluku Islands</strong> - known to the world as the <em>Spice Islands</em> - were the sole source of nutmeg, cloves, and mace, spices so valuable they were literally worth their weight in gold.</p>
@@ -61,7 +61,7 @@ const blogPosts = {
 			quickAnswers={[
 				{
 					question: "Where do the Spice Islands come from?",
-					answer: "The Spice Islands are the Maluku Islands in Indonesia, also known as the Moluccas. They're located in the Indonesian archipelago and were the original source of nutmeg, cloves, and mace that changed world history.",
+					answer: "The Spice Islands are the Maluku Islands in Indonesia, also known as the Moluccas. They&apos;re located in the Indonesian archipelago and were the original source of nutmeg, cloves, and mace that changed world history.",
 					category: "Geography"
 				},
 				{
@@ -103,7 +103,7 @@ const blogPosts = {
 		<h2>The Science Behind Spice Islands Chilies</h2>
 		<p>Modern food science has revealed why Spice Islands chilies are so exceptional. The volcanic soil contains high levels of potassium, phosphorus, and trace minerals that affect capsaicin development - the compound responsible for chili heat.</p>
 
-		<p>But it's not just about heat. The same minerals that create intense capsaicin also promote the development of complex flavor compounds. This is why authentic Spice Islands sambal has layers of flavor beneath the heat - earthy, fruity, and slightly sweet notes that mass-produced alternatives simply cannot match.</p>
+		<p>But it&apos;s not just about heat. The same minerals that create intense capsaicin also promote the development of complex flavor compounds. This is why authentic Spice Islands sambal has layers of flavor beneath the heat - earthy, fruity, and slightly sweet notes that mass-produced alternatives simply cannot match.</p>
 
 		<h3>The Terroir Effect</h3>
 		<p>Like wine grapes, chilies express their terroir - the unique combination of soil, climate, and geography that creates distinctive flavors. The Spice Islands terroir produces chilies with:</p>
@@ -117,7 +117,7 @@ const blogPosts = {
 		<h2>Traditional Sambal Making: An Art Form</h2>
 		<p>In the Spice Islands, sambal making is considered an art form passed down through generations. The process begins before dawn, when experienced makers select chilies by touch, smell, and appearance. Only the finest specimens - those with perfect ripeness and no blemishes - are chosen.</p>
 
-		<p>The grinding process using traditional cobek (volcanic stone mortar and pestle) is almost meditative. The rhythm must be steady, the pressure consistent. Too fast, and the chilies release bitter compounds. Too slow, and the essential oils don't properly integrate.</p>
+		<p>The grinding process using traditional cobek (volcanic stone mortar and pestle) is almost meditative. The rhythm must be steady, the pressure consistent. Too fast, and the chilies release bitter compounds. Too slow, and the essential oils don&apos;t properly integrate.</p>
 
 		<h3>The Role of Women in Sambal Tradition</h3>
 		<p>Traditionally, sambal making was the domain of women, who guarded family recipes jealously. Mothers would teach daughters not just the techniques, but how to judge chili quality, how to adjust for seasonal variations, and how to balance heat with flavor.</p>
@@ -142,12 +142,12 @@ const blogPosts = {
 		<h3>Preserving Heritage in Every Jar</h3>
 		<p>Each jar of authentic Spice Islands sambal contains not just chilies, salt, and vinegar, but centuries of culinary heritage. The techniques used today are essentially unchanged from those developed by the indigenous peoples of the Maluku Islands hundreds of years ago.</p>
 
-		<p>This connection to history is what separates authentic sambal from mass-produced alternatives. When you taste real Spice Islands sambal, you're experiencing flavors that have been refined over centuries, techniques that have been passed down through generations.</p>
+		<p>This connection to history is what separates authentic sambal from mass-produced alternatives. When you taste real Spice Islands sambal, you&apos;re experiencing flavors that have been refined over centuries, techniques that have been passed down through generations.</p>
 
 		<h2>The Cultural Significance of Sambal</h2>
-		<p>In Indonesian culture, sambal is more than just a condiment - it's a symbol of hospitality, tradition, and regional identity. Different islands, different families, different occasions call for different sambals. The variety is extraordinary, with some estimates suggesting over 300 distinct regional variations.</p>
+		<p>In Indonesian culture, sambal is more than just a condiment - it&apos;s a symbol of hospitality, tradition, and regional identity. Different islands, different families, different occasions call for different sambals. The variety is extraordinary, with some estimates suggesting over 300 distinct regional variations.</p>
 
-		<p>But all authentic sambals trace their lineage back to the Spice Islands, where the perfect combination of volcanic soil, tropical climate, and centuries of refinement created the world's finest chili pastes.</p>
+		<p>But all authentic sambals trace their lineage back to the Spice Islands, where the perfect combination of volcanic soil, tropical climate, and centuries of refinement created the world&apos;s finest chili pastes.</p>
 
 		<h2>Sustainability and the Future</h2>
 		<p>Today, sustainable farming practices in the Spice Islands ensure that traditional chili varieties are preserved for future generations. Small-scale farmers use methods that have been proven over centuries, avoiding the industrial agriculture that can diminish flavor complexity.</p>
@@ -155,11 +155,11 @@ const blogPosts = {
 		<p>This commitment to sustainability ensures that the unique terroir of the Spice Islands continues to produce exceptional chilies, maintaining the quality that has made this region famous for over 500 years.</p>
 
 		<h2>Tasting History</h2>
-		<p>When you taste authentic Spice Islands sambal, you're not just experiencing heat and flavor - you're tasting history. You're connecting with centuries of culinary tradition, with the volcanic soil that nurtured civilizations, with the indigenous knowledge that created one of the world's great condiments.</p>
+		<p>When you taste authentic Spice Islands sambal, you&apos;re not just experiencing heat and flavor - you&apos;re tasting history. You&apos;re connecting with centuries of culinary tradition, with the volcanic soil that nurtured civilizations, with the indigenous knowledge that created one of the world&apos;s great condiments.</p>
 
 		<p>This is why authenticity matters. This is why traditional methods matter. This is why the Spice Islands remain the gold standard for sambal production, just as they were the gold standard for spice production 500 years ago.</p>
 
-		<p>The next time you add sambal to your cooking, remember that you're using a condiment with a heritage stretching back to the dawn of the global spice trade. You're participating in a culinary tradition that has survived colonization, war, and globalization to bring you flavors that are truly unique in the world.</p>
+		<p>The next time you add sambal to your cooking, remember that you&apos;re using a condiment with a heritage stretching back to the dawn of the global spice trade. You&apos;re participating in a culinary tradition that has survived colonization, war, and globalization to bring you flavors that are truly unique in the world.</p>
 
 		<p>Welcome to the taste of the Spice Islands - where history, geography, and culinary artistry combine to create something truly extraordinary.</p>
 
@@ -189,7 +189,7 @@ const blogPosts = {
 					<h3 class="font-bold text-burgundy-800 mb-2">
 						<a href="/recipes/sambal-fried-rice" class="hover:text-burgundy-600">Nasi Goreng (Sambal Fried Rice)</a>
 					</h3>
-					<p class="text-gray-700 text-sm">Indonesia's national dish made authentic</p>
+					<p class="text-gray-700 text-sm">Indonesia&apos;s national dish made authentic</p>
 				</div>
 				<div class="bg-white p-4 rounded-lg border border-gold-100">
 					<h3 class="font-bold text-burgundy-800 mb-2">
@@ -310,7 +310,7 @@ const blogPosts = {
 			</div>
 		</div>
 
-		<h2 id="shepherds-pie" class="scroll-mt-20">4. Shepherd's Pie with a Spicy Twist</h2>
+		<h2 id="shepherds-pie" class="scroll-mt-20">4. Shepherd&apos;s Pie with a Spicy Twist</h2>
 
 		<div class="bg-white border border-gold-200 rounded-lg p-6 my-6">
 			<p class="text-lg mb-4">Add Indonesian flair to this British classic by incorporating sambal into both the meat layer and the mashed potato topping. The result is comfort food with an exciting edge.</p>
@@ -332,7 +332,7 @@ const blogPosts = {
 			</div>
 		</div>
 
-		<h2 id="cheese-toasties" class="scroll-mt-20">5. Ploughman's Lunch Enhancement: Sambal Cheese Toasties</h2>
+		<h2 id="cheese-toasties" class="scroll-mt-20">5. Ploughman&apos;s Lunch Enhancement: Sambal Cheese Toasties</h2>
 
 		<div class="bg-white border border-gold-200 rounded-lg p-6 my-6">
 			<p class="text-lg mb-4">Transform the humble cheese toastie into something spectacular with a thin layer of sambal. This works brilliantly with mature cheddar and creates a perfect balance of creamy, sharp, and spicy.</p>
@@ -363,7 +363,7 @@ const blogPosts = {
 		<h2 class="text-2xl font-bold text-burgundy-900 mb-6">Understanding Heat Levels for British Palates</h2>
 
 		<div class="bg-red-50 border border-red-200 rounded-lg p-6 my-6">
-			<p class="text-lg mb-6">Indonesian sambal is significantly hotter than most British condiments. Here's how to introduce it gradually:</p>
+			<p class="text-lg mb-6">Indonesian sambal is significantly hotter than most British condiments. Here&apos;s how to introduce it gradually:</p>
 
 			<div class="grid md:grid-cols-3 gap-6">
 				<div class="bg-white p-4 rounded-lg border border-red-100">
@@ -408,21 +408,21 @@ const blogPosts = {
 		</div>
 
 		<h2>Storage and Safety Tips</h2>
-		<p>Authentic sambal should be stored in the refrigerator and consumed within 2-3 weeks of opening. The lack of preservatives means it won't last as long as commercial hot sauces, but the flavor intensity more than compensates.</p>
+		<p>Authentic sambal should be stored in the refrigerator and consumed within 2-3 weeks of opening. The lack of preservatives means it won&apos;t last as long as commercial hot sauces, but the flavor intensity more than compensates.</p>
 
 		<p>Always wash your hands thoroughly after handling sambal, and avoid touching your eyes. The oils can linger on surfaces, so clean cutting boards and utensils immediately after use.</p>
 
 		<h2>Building Your Spice Tolerance</h2>
-		<p>If you're new to serious heat, build your tolerance gradually. Start with tiny amounts mixed into familiar dishes. Your palate will adapt, and you'll begin to appreciate the complex flavors beneath the heat.</p>
+		<p>If you&apos;re new to serious heat, build your tolerance gradually. Start with tiny amounts mixed into familiar dishes. Your palate will adapt, and you&apos;ll begin to appreciate the complex flavors beneath the heat.</p>
 
-		<p>Remember: Indonesian sambal isn't just about heat - it's about flavor complexity that has been perfected over centuries. Once you understand this, you'll never go back to ordinary hot sauce.</p>
+		<p>Remember: Indonesian sambal isn&apos;t just about heat - it&apos;s about flavor complexity that has been perfected over centuries. Once you understand this, you&apos;ll never go back to ordinary hot sauce.</p>
 
 		<h2>The Future of British-Indonesian Fusion</h2>
 		<p>These five applications are just the beginning. Indonesian sambal offers British cooks an opportunity to add authentic, complex heat to familiar dishes without losing their essential character.</p>
 
-		<p>As more British kitchens discover authentic Indonesian ingredients, we're seeing the emergence of a exciting new fusion cuisine that respects both traditions while creating something entirely new.</p>
+		<p>As more British kitchens discover authentic Indonesian ingredients, we&apos;re seeing the emergence of a exciting new fusion cuisine that respects both traditions while creating something entirely new.</p>
 
-		<p>Start with one of these five methods, and you'll quickly discover your own creative applications. Welcome to the delicious world of British-Indonesian fusion cooking.</p>
+		<p>Start with one of these five methods, and you&apos;ll quickly discover your own creative applications. Welcome to the delicious world of British-Indonesian fusion cooking.</p>
 
 		<div class="bg-gradient-to-r from-burgundy-50 to-gold-50 border border-burgundy-200 rounded-lg p-8 my-8">
 			<h2 class="text-2xl font-bold text-burgundy-900 mb-6">🍽️ Try These Related Recipes</h2>
@@ -443,7 +443,7 @@ const blogPosts = {
 					<h3 class="font-bold text-burgundy-800 mb-2">
 						<a href="/recipes/sambal-fried-rice" class="hover:text-burgundy-600">Sambal Fried Rice</a>
 					</h3>
-					<p class="text-gray-700 text-sm">Indonesia's national dish made easy</p>
+					<p class="text-gray-700 text-sm">Indonesia&apos;s national dish made easy</p>
 				</div>
 				<div class="bg-white p-4 rounded-lg border border-gold-100">
 					<h3 class="font-bold text-burgundy-800 mb-2">
@@ -479,7 +479,7 @@ const blogPosts = {
 		title: "The Ultimate Guide to Indonesian Sambal: Beyond Sriracha",
 		excerpt: "Discover the authentic world of Indonesian sambal - from traditional varieties to modern applications. Learn what makes real sambal different from Western hot sauces.",
 		content: `
-		<p>If you think Sriracha is spicy, wait until you discover authentic Indonesian sambal. This isn't just another hot sauce - it's a culinary tradition that spans centuries, with each variety telling a unique story from the Indonesian archipelago. From the volcanic islands of Maluku to the bustling markets of Jakarta, sambal is the fiery soul of Indonesian cuisine.</p>
+		<p>If you think Sriracha is spicy, wait until you discover authentic Indonesian sambal. This isn&apos;t just another hot sauce - it&apos;s a culinary tradition that spans centuries, with each variety telling a unique story from the Indonesian archipelago. From the volcanic islands of Maluku to the bustling markets of Jakarta, sambal is the fiery soul of Indonesian cuisine.</p>
 
 		<h2>What Makes Sambal Different from Hot Sauce?</h2>
 		<p>While Western hot sauces focus on vinegar and preservatives, authentic Indonesian sambal is built on three simple principles: fresh chilies, minimal ingredients, and maximum flavor. The texture is chunky rather than smooth, the heat is complex rather than one-dimensional, and the flavor profile changes with each variety.</p>
@@ -489,17 +489,17 @@ const blogPosts = {
 		<h2>The Essential Sambal Varieties Every Food Lover Should Know</h2>
 
 		<h3>Sambal Oelek: The Foundation</h3>
-		<p>Think of sambal oelek as the mother of all sambals. Made with just fresh red chilies, salt, and a touch of vinegar, it's the purest expression of chili heat. The name "oelek" comes from the Indonesian word for the stone mortar and pestle used to grind the chilies.</p>
+		<p>Think of sambal oelek as the mother of all sambals. Made with just fresh red chilies, salt, and a touch of vinegar, it&apos;s the purest expression of chili heat. The name &quot;oelek&quot; comes from the Indonesian word for the stone mortar and pestle used to grind the chilies.</p>
 
-		<p>In Indonesian cooking, sambal oelek isn't just a condiment - it's a cooking ingredient. Use it as the base for stir-fries, marinades, and curry pastes. The heat level is intense (think 4-5 out of 5), but the flavor is clean and bright.</p>
+		<p>In Indonesian cooking, sambal oelek isn&apos;t just a condiment - it&apos;s a cooking ingredient. Use it as the base for stir-fries, marinades, and curry pastes. The heat level is intense (think 4-5 out of 5), but the flavor is clean and bright.</p>
 
 		<h3>Sambal Bali: The Aromatic</h3>
-		<p>If sambal oelek is fire, sambal bali is fire with finesse. This variety includes aromatic ingredients like galangal, lemongrass, and kaffir lime leaves, creating a complex flavor profile that's perfect for grilled meats and seafood.</p>
+		<p>If sambal oelek is fire, sambal bali is fire with finesse. This variety includes aromatic ingredients like galangal, lemongrass, and kaffir lime leaves, creating a complex flavor profile that&apos;s perfect for grilled meats and seafood.</p>
 
 		<p>The heat level is more moderate (3 out of 5), making it accessible to those building their spice tolerance. The aromatic spices make it particularly good with British BBQ - try it as a marinade for chicken or lamb.</p>
 
 		<h3>Sambal Terasi: The Umami Bomb</h3>
-		<p>This variety includes terasi (shrimp paste), adding a deep umami flavor that transforms simple rice dishes into something extraordinary. It's an acquired taste for Western palates, but once you understand it, you'll crave its complex, savory heat.</p>
+		<p>This variety includes terasi (shrimp paste), adding a deep umami flavor that transforms simple rice dishes into something extraordinary. It&apos;s an acquired taste for Western palates, but once you understand it, you&apos;ll crave its complex, savory heat.</p>
 
 		<h2>How to Use Sambal in British Cooking</h2>
 
@@ -510,24 +510,24 @@ const blogPosts = {
 		<p>Forget mushy peas - try sambal oelek mixed with mayonnaise as a dipping sauce for your chips. The clean heat and chunky texture provide the perfect contrast to crispy batter and fluffy potatoes.</p>
 
 		<h3>Breakfast Game Changer</h3>
-		<p>A small spoonful of sambal in scrambled eggs creates an Indonesian-British fusion that's become popular in London's trendy cafes. Start with just a tiny amount - sambal is much hotter than you expect.</p>
+		<p>A small spoonful of sambal in scrambled eggs creates an Indonesian-British fusion that&apos;s become popular in London&apos;s trendy cafes. Start with just a tiny amount - sambal is much hotter than you expect.</p>
 
 		<h2>Building Your Spice Tolerance</h2>
-		<p>Indonesian sambal is significantly hotter than most Western condiments. Here's how to build your tolerance safely:</p>
+		<p>Indonesian sambal is significantly hotter than most Western condiments. Here&apos;s how to build your tolerance safely:</p>
 
 		<p><strong>Start Small:</strong> Begin with a tiny amount - literally the tip of a teaspoon. Authentic sambal is 3-10 times hotter than Tabasco.</p>
 
 		<p><strong>Have Dairy Ready:</strong> Keep yogurt or milk nearby for your first tastings. The casein in dairy products neutralizes capsaicin better than water.</p>
 
-		<p><strong>Build Gradually:</strong> Increase the amount slowly over several weeks. Your tolerance will improve, and you'll start to appreciate the complex flavors beneath the heat.</p>
+		<p><strong>Build Gradually:</strong> Increase the amount slowly over several weeks. Your tolerance will improve, and you&apos;ll start to appreciate the complex flavors beneath the heat.</p>
 
 		<h2>The Health Benefits of Authentic Sambal</h2>
-		<p>Unlike processed hot sauces loaded with preservatives, authentic sambal offers genuine health benefits. Fresh chilies are packed with vitamin C, capsaicin (which may boost metabolism), and antioxidants. The minimal ingredient list means you're getting pure nutrition without artificial additives.</p>
+		<p>Unlike processed hot sauces loaded with preservatives, authentic sambal offers genuine health benefits. Fresh chilies are packed with vitamin C, capsaicin (which may boost metabolism), and antioxidants. The minimal ingredient list means you&apos;re getting pure nutrition without artificial additives.</p>
 
 		<h2>Storing and Serving Sambal</h2>
-		<p>Authentic sambal should be stored in the refrigerator and consumed within 2-3 weeks of opening. The lack of preservatives means it won't last as long as commercial hot sauces, but the flavor intensity more than makes up for the shorter shelf life.</p>
+		<p>Authentic sambal should be stored in the refrigerator and consumed within 2-3 weeks of opening. The lack of preservatives means it won&apos;t last as long as commercial hot sauces, but the flavor intensity more than makes up for the shorter shelf life.</p>
 
-		<p>Serve sambal in small amounts - a little goes a very long way. In Indonesia, it's common to have several varieties on the table, allowing diners to choose their preferred heat level and flavor profile.</p>
+		<p>Serve sambal in small amounts - a little goes a very long way. In Indonesia, it&apos;s common to have several varieties on the table, allowing diners to choose their preferred heat level and flavor profile.</p>
 
 		<h2>Where to Find Authentic Sambal in the UK</h2>
 		<p>While you can find mass-produced versions in supermarkets, authentic sambal made with traditional methods is harder to source. Look for brands that list minimal ingredients, avoid artificial preservatives, and ideally are made by Indonesian producers who understand the traditional techniques.</p>
@@ -535,9 +535,9 @@ const blogPosts = {
 		<p>The best authentic sambal will have a chunky texture, vibrant color, and an ingredient list you can pronounce. Avoid anything with artificial colors, excessive preservatives, or sugar as a main ingredient.</p>
 
 		<h2>Making the Switch from Sriracha</h2>
-		<p>If you're a Sriracha lover ready to explore authentic Indonesian flavors, start with sambal bali. Its aromatic spices provide a bridge between familiar flavors and traditional Indonesian heat. Once you've adjusted to the intensity, try sambal oelek for the pure chili experience.</p>
+		<p>If you&apos;re a Sriracha lover ready to explore authentic Indonesian flavors, start with sambal bali. Its aromatic spices provide a bridge between familiar flavors and traditional Indonesian heat. Once you&apos;ve adjusted to the intensity, try sambal oelek for the pure chili experience.</p>
 
-		<p>Remember: this isn't just about heat - it's about discovering a completely different approach to spicy food. Indonesian sambal offers complexity, tradition, and flavors that have been perfected over centuries. Welcome to the real world of Indonesian spice.</p>
+		<p>Remember: this isn&apos;t just about heat - it&apos;s about discovering a completely different approach to spicy food. Indonesian sambal offers complexity, tradition, and flavors that have been perfected over centuries. Welcome to the real world of Indonesian spice.</p>
 		`,
 		image: "/images/Spice Island Indonesia Sambal Oelek 185g Label.png",
 		category: "Food Education",
@@ -557,7 +557,7 @@ const blogPosts = {
 		<p>We look for chilies that are firm to the touch, with a deep red color that speaks of perfect ripeness. The skin should have a slight sheen, and when you hold them close, the aroma should be clean and fiery, without any hint of mustiness.</p>
 
 		<h2>Traditional Grinding Techniques</h2>
-		<p>The cobek (stone mortar and pestle) is the heart of sambal making. Made from volcanic rock, these tools have been passed down through generations, each one seasoned by countless batches of sambal. The grinding technique is crucial - it's not just about crushing the chilies, but about releasing their essential oils and creating the perfect texture.</p>
+		<p>The cobek (stone mortar and pestle) is the heart of sambal making. Made from volcanic rock, these tools have been passed down through generations, each one seasoned by countless batches of sambal. The grinding technique is crucial - it&apos;s not just about crushing the chilies, but about releasing their essential oils and creating the perfect texture.</p>
 
 		<p>The rhythm of grinding is almost meditative. Start with the hardest ingredients - garlic and shallots if making sambal bali - then add the chilies gradually. The motion should be firm but controlled, allowing the volcanic stone to break down the cell walls and release maximum flavor.</p>
 
@@ -567,9 +567,9 @@ const blogPosts = {
 		<p>Each family guards their exact proportions jealously, but the principle remains the same: balance. Heat without nuance is just pain - true sambal should tell a story with every spoonful.</p>
 
 		<h2>Preserving Tradition in Modern Times</h2>
-		<p>As we bring these traditional recipes to the UK, we face the challenge of maintaining authenticity while meeting modern food safety standards. Every jar of our sambal is still made using traditional methods, but we've adapted our processes to ensure consistency and safety without compromising flavor.</p>
+		<p>As we bring these traditional recipes to the UK, we face the challenge of maintaining authenticity while meeting modern food safety standards. Every jar of our sambal is still made using traditional methods, but we&apos;ve adapted our processes to ensure consistency and safety without compromising flavor.</p>
 
-		<p>We source our chilies directly from trusted farmers in Indonesia, flash-freeze them at peak ripeness, and transport them to our UK facility where they're processed using the same techniques our ancestors used centuries ago.</p>
+		<p>We source our chilies directly from trusted farmers in Indonesia, flash-freeze them at peak ripeness, and transport them to our UK facility where they&apos;re processed using the same techniques our ancestors used centuries ago.</p>
 		`,
 		image: "/images/indonesian_vista.png",
 		category: "Traditional Recipes",

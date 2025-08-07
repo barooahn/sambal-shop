@@ -12,7 +12,7 @@ interface BreadcrumbItem {
 export default function Breadcrumb() {
 	const pathname = usePathname();
 	
-	// Don't show breadcrumbs on homepage
+	// Don&apos;t show breadcrumbs on homepage
 	if (pathname === "/") return null;
 	
 	const pathSegments = pathname.split("/").filter(Boolean);

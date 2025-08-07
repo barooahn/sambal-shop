@@ -52,7 +52,7 @@ export default function SambalVsSrirachaPage() {
 					<div className='text-center'>
 						<Badge className='bg-burgundy-800 text-gold-300 mb-6 px-6 py-3 text-lg font-semibold border border-gold-600/30'>
 							<ChefHat className='w-5 h-5 mr-2' />
-							Professional Chef's Guide
+							Professional Chef&apos;s Guide
 						</Badge>
 
 						<h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold mb-8 leading-tight font-brand'>
@@ -68,7 +68,7 @@ export default function SambalVsSrirachaPage() {
 						</h1>
 
 						<p className='text-xl sm:text-2xl text-gold-200 mb-10 max-w-4xl mx-auto leading-relaxed font-body'>
-							As a professional Indonesian chef, I'll
+							As a professional Indonesian chef, I&apos;ll
 							explain the key differences between authentic
 							sambal and Thai sriracha - and why it matters
 							for your cooking.
@@ -366,7 +366,7 @@ export default function SambalVsSrirachaPage() {
 						<h2 className='text-4xl sm:text-5xl font-bold text-burgundy-900 mb-6 font-brand'>
 							When to Use Which?
 							<span className='text-gold-700 block'>
-								Chef Yossie's Recommendations
+								Chef Yossie&apos;s Recommendations
 							</span>
 						</h2>
 					</div>
@@ -404,7 +404,7 @@ export default function SambalVsSrirachaPage() {
 									<CheckCircle className='w-6 h-6 text-green-600 mt-1' />
 									<p className='text-neutral-700 font-body'>
 										<strong>Stir-frying</strong> -
-										Doesn't burn like sugar-based
+										Doesn&apos;t burn like sugar-based
 										sauces
 									</p>
 								</div>
@@ -487,17 +487,17 @@ export default function SambalVsSrirachaPage() {
 				</div>
 			</section>
 
-			{/* Chef's Recommendation CTA */}
+			{/* Chef&apos;s Recommendation CTA */}
 			<section className='py-24 bg-gradient-to-r from-burgundy-900 to-burgundy-800 text-white'>
 				<div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
 					<h2 className='text-4xl sm:text-5xl font-bold mb-6 font-brand'>
-						Chef Yossie's Recommendation
+						Chef Yossie&apos;s Recommendation
 					</h2>
 					<div className='bg-gradient-to-r from-burgundy-800/50 to-burgundy-700/50 rounded-sm p-8 mb-8 border border-gold-600/30'>
 						<blockquote className='text-xl sm:text-2xl text-gold-200 font-body italic leading-relaxed mb-4'>
-							"Both have their place, but if you're serious
+							"Both have their place, but if you&apos;re serious
 							about cooking authentic Asian food, start
-							with real sambal. It's the foundation of
+							with real sambal. It&apos;s the foundation of
 							Indonesian cuisine and will transform your
 							cooking in ways sriracha simply can't."
 						</blockquote>

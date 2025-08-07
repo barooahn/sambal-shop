@@ -20,7 +20,7 @@ import {
 export const metadata = {
 	title: "Indonesian BBQ Sauce & Marinade UK | Sambal for Grilling | Spice Island Indonesia",
 	description:
-		"Transform your BBQ with authentic Indonesian sambal marinade. Chef Yossie's traditional recipes perfect for chicken, pork, beef, and vegetables. Elevate your grilling game.",
+		"Transform your BBQ with authentic Indonesian sambal marinade. Chef Yossie&apos;s traditional recipes perfect for chicken, pork, beef, and vegetables. Elevate your grilling game.",
 	keywords:
 		"Indonesian BBQ sauce UK, sambal marinade, Indonesian grilling sauce, BBQ marinade UK, authentic Indonesian BBQ, sambal for grilling, Chef Yossie marinade, spicy BBQ sauce",
 	openGraph: {
@@ -70,7 +70,7 @@ export default function SambalBBQMarinadePage() {
 
 							<p className='text-xl sm:text-2xl text-gold-200 mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-body'>
 								Discover the secret to Indonesian-style
-								BBQ with Chef Yossie's authentic sambal
+								BBQ with Chef Yossie&apos;s authentic sambal
 								marinades. Transform ordinary grilling
 								into extraordinary Indonesian culinary
 								experiences.
@@ -232,7 +232,7 @@ export default function SambalBBQMarinadePage() {
 				<div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<div className='text-center mb-16'>
 						<h2 className='text-3xl sm:text-4xl font-bold text-burgundy-900 mb-6 font-brand'>
-							Chef Yossie's BBQ Recipes
+							Chef Yossie&apos;s BBQ Recipes
 						</h2>
 						<p className='text-xl text-neutral-600 max-w-3xl mx-auto font-body'>
 							Professional techniques from Indonesian
@@ -412,7 +412,7 @@ export default function SambalBBQMarinadePage() {
 				</div>
 			</section>
 
-			{/* Chef's BBQ Tips Section */}
+			{/* Chef&apos;s BBQ Tips Section */}
 			<section className='py-16 sm:py-20 bg-gradient-to-br from-cream-50 to-cream-100'>
 				<div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<div className='grid lg:grid-cols-2 gap-12 items-center'>
@@ -423,7 +423,7 @@ export default function SambalBBQMarinadePage() {
 							</Badge>
 
 							<h2 className='text-3xl sm:text-4xl font-bold text-burgundy-900 mb-6 font-brand'>
-								Chef Yossie's Indonesian BBQ Secrets
+								Chef Yossie&apos;s Indonesian BBQ Secrets
 							</h2>
 
 							<p className='text-lg text-neutral-600 mb-6 font-body'>
@@ -544,7 +544,7 @@ export default function SambalBBQMarinadePage() {
 					</h2>
 
 					<p className='text-xl text-gold-200 mb-10 max-w-2xl mx-auto font-body'>
-						Join hundreds of UK grill masters who've
+						Join hundreds of UK grill masters who&apos;ve
 						discovered the secret to Indonesian-style BBQ.
 						Your guests will be asking for the recipe.
 					</p>

@@ -46,7 +46,7 @@ const useResponsivePosition = (position: IngredientConfig["position"]) => {
 	);
 
 	useEffect(() => {
-		// If it's a simple position object, use it directly
+		// If it&apos;s a simple position object, use it directly
 		if (
 			"top" in position ||
 			"bottom" in position ||
@@ -115,7 +115,7 @@ export default function FloatingIngredients({
 		return () => clearTimeout(timer);
 	}, []);
 
-	// Don't render anything until after delay
+	// Don&apos;t render anything until after delay
 	if (!shouldRender) {
 		return null;
 	}

@@ -202,7 +202,7 @@ export default function SambalChickenStirFryPage() {
 									</li>
 									<li>
 										<strong>
-											Don't Overcook the
+											Don&apos;t Overcook the
 											Vegetables:
 										</strong>{" "}
 										They should retain some crunch

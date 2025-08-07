@@ -205,7 +205,7 @@ export default function PrivacyPage() {
 
 								<section>
 									<h2 className='text-2xl font-bold text-burgundy-900 mb-4 font-brand'>
-										7. Children's Privacy
+										7. Children&apos;s Privacy
 									</h2>
 									<div className='text-neutral-700 font-body space-y-4'>
 										<p>

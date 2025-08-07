@@ -130,7 +130,7 @@ export default function ProductShowcase() {
 								href='/sambal-bali-sweet-spicy'
 								className='text-sm text-burgundy-700 hover:text-burgundy-900 font-medium underline decoration-gold-600 hover:decoration-burgundy-900 transition-colors'
 							>
-								Discover Sambal Bali's unique flavor →
+								Discover Sambal Bali&apos;s unique flavor →
 							</Link>
 						</div>
 					</div>

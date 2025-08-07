@@ -5,7 +5,7 @@ import RecipeSchema from "@/components/seo/RecipeSchema";
 export const metadata: Metadata = {
 	title: "Spicy Sambal Scrambled Eggs Recipe | Indonesian Breakfast | Spice Island Indonesia",
 	description:
-		"Elevate your breakfast with spicy sambal scrambled eggs. A quick, protein-rich Indonesian-inspired breakfast that's ready in 10 minutes with incredible flavor.",
+		"Elevate your breakfast with spicy sambal scrambled eggs. A quick, protein-rich Indonesian-inspired breakfast that&apos;s ready in 10 minutes with incredible flavor.",
 	keywords:
 		"sambal scrambled eggs, spicy eggs recipe, Indonesian breakfast, sambal eggs, quick breakfast recipe, protein breakfast",
 	openGraph: {
@@ -84,7 +84,7 @@ const recipe = {
 		},
 		{
 			step: 7,
-			text: "Remove from heat while eggs are still slightly underdone - they'll continue cooking from residual heat.",
+			text: "Remove from heat while eggs are still slightly underdone - they&apos;ll continue cooking from residual heat.",
 		},
 		{
 			step: 8,
@@ -102,7 +102,7 @@ const recipe = {
 	},
 
 	tips: [
-		"Start with less sambal and add more to taste - you can always add heat but can't take it away",
+		"Start with less sambal and add more to taste - you can always add heat but can&apos;t take it away",
 		"Use medium-low heat to prevent the eggs from cooking too quickly and becoming rubbery",
 		"The key to creamy scrambled eggs is removing them from heat while still slightly underdone",
 		"Sambal Oelek works best here for pure heat, but Sambal Bali adds aromatic complexity",
@@ -138,7 +138,7 @@ export default function SambalScrambledEggsPage() {
 								scrambled egg into something
 								extraordinary by incorporating authentic
 								Indonesian sambal. The result is a
-								breakfast that's not only quick and
+								breakfast that&apos;s not only quick and
 								nutritious but also incredibly flavorful
 								and satisfying.
 							</p>

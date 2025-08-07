@@ -95,7 +95,7 @@ const staticRoutes = [
 	{ route: "/terms", priority: 0.3, changeFrequency: "yearly" as const },
 ];
 
-// Blog posts (add new ones here as they're created)
+// Blog posts (add new ones here as they&apos;re created)
 const blogPosts = [
 	{ slug: "spice-islands-history", date: "2024-02-10" },
 	{ slug: "5-ways-sambal-british-cooking", date: "2024-02-05" },
@@ -103,7 +103,7 @@ const blogPosts = [
 	{ slug: "traditional-sambal-making", date: "2024-01-15" },
 ];
 
-// Recipe pages (add new ones here as they're created)
+// Recipe pages (add new ones here as they&apos;re created)
 const recipes = [
 	{ slug: "sambal-chicken-stir-fry", date: "2024-02-01" },
 	{ slug: "sambal-fried-rice", date: "2024-02-12" },

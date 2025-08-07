@@ -21,7 +21,7 @@ import {
 export const metadata = {
 	title: "Authentic Asian Noodle Sauce UK | Indonesian Sambal for Noodles | Spice Island Indonesia",
 	description:
-		"Transform your noodle dishes with authentic Indonesian sambal! Perfect sauce for ramen, stir-fry noodles, and Asian dishes. Chef Yossie's traditional recipes create restaurant-quality flavor at home.",
+		"Transform your noodle dishes with authentic Indonesian sambal! Perfect sauce for ramen, stir-fry noodles, and Asian dishes. Chef Yossie&apos;s traditional recipes create restaurant-quality flavor at home.",
 	keywords:
 		"Asian noodle sauce UK, Indonesian sambal for noodles, authentic noodle sauce, sambal noodles, spicy noodle sauce, Chef Yossie noodle sauce, Indonesian noodle condiment, Asian cooking sauce UK",
 	openGraph: {
@@ -68,7 +68,7 @@ export default function SambalNoodleSaucePage() {
 								Stop settling for bland noodles!
 								<strong className='text-gold-300'>
 									{" "}
-									Chef Yossie's traditional sambal
+									Chef Yossie&apos;s traditional sambal
 								</strong>
 								creates restaurant-quality Asian noodle
 								dishes in your own kitchen.
@@ -362,7 +362,7 @@ export default function SambalNoodleSaucePage() {
 											Complex Heat Profile
 										</h4>
 										<p className='text-gray-600'>
-											Builds gradually, doesn't
+											Builds gradually, doesn&apos;t
 											overpower delicate noodle
 											flavors
 										</p>
@@ -426,7 +426,7 @@ export default function SambalNoodleSaucePage() {
 				</div>
 			</section>
 
-			{/* Chef's Noodle Recipe Section */}
+			{/* Chef&apos;s Noodle Recipe Section */}
 			<section className='py-16 bg-gradient-to-br from-cream-50 to-cream-100'>
 				<div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<div className='grid lg:grid-cols-2 gap-12 items-center'>
@@ -446,11 +446,11 @@ export default function SambalNoodleSaucePage() {
 						<div>
 							<Badge className='bg-burgundy-100 text-burgundy-800 font-elegant mb-6 text-sm px-4 py-2'>
 								<ChefHat className='w-4 h-4 mr-2' />
-								Chef's Secret Recipe
+								Chef&apos;s Secret Recipe
 							</Badge>
 
 							<h2 className='text-3xl sm:text-4xl font-bold text-burgundy-900 mb-6 font-brand'>
-								Authentic Mie Goreng from Chef Yossie's
+								Authentic Mie Goreng from Chef Yossie&apos;s
 								Kitchen
 							</h2>
 
@@ -463,7 +463,7 @@ export default function SambalNoodleSaucePage() {
 
 							<div className='bg-white rounded-lg p-6 border border-gold-200 mb-8'>
 								<h4 className='font-bold text-burgundy-900 mb-3 font-elegant'>
-									Chef's 5-Minute Mie Goreng:
+									Chef&apos;s 5-Minute Mie Goreng:
 								</h4>
 								<ol className='text-gray-700 text-sm leading-relaxed space-y-2'>
 									<li>

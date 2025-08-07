@@ -107,7 +107,7 @@ const recipe = {
 		"Reserve some marinade before adding raw meat for basting during cooking",
 		"For extra heat, add 1-2 teaspoons of Sambal Oelek along with the Sambal Bali",
 		"The marinade works excellently with chicken thighs, which stay juicier than breasts",
-		"Don't marinate seafood for too long as the acid will start to 'cook' the fish",
+		"Don&apos;t marinate seafood for too long as the acid will start to 'cook' the fish",
 		"For vegetarian option, use this marinade on firm tofu, tempeh, or vegetables",
 	],
 
@@ -150,7 +150,7 @@ export default function SambalBBQMarinadePage() {
 								marinade balances sweet, spicy, salty,
 								and umami flavors in the traditional
 								Indonesian way. The result is meat
-								that's beautifully caramelized on the
+								that&apos;s beautifully caramelized on the
 								outside and incredibly flavorful
 								throughout.
 							</p>

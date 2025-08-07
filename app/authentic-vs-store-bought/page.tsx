@@ -28,7 +28,7 @@ export const metadata = {
 	openGraph: {
 		title: "Authentic vs Store-Bought Sambal: Real Indonesian vs Mass-Produced",
 		description:
-			"The shocking truth about mass-produced sambal vs authentic Indonesian recipes. Discover what you're really buying.",
+			"The shocking truth about mass-produced sambal vs authentic Indonesian recipes. Discover what you&apos;re really buying.",
 		type: "website",
 		images: [
 			{
@@ -67,13 +67,13 @@ export default function AuthenticVsStoreBoughtPage() {
 
 							<p className='text-xl sm:text-2xl mb-8 text-cream-100 font-elegant leading-relaxed'>
 								Most "Indonesian" sambal in UK stores
-								isn't Indonesian at all. Discover why
+								isn&apos;t Indonesian at all. Discover why
 								<strong className='text-gold-300'>
 									{" "}
-									Chef Yossie's traditional recipes
+									Chef Yossie&apos;s traditional recipes
 								</strong>
 								create flavors that mass-produced brands
-								simply can't match.
+								simply can&apos;t match.
 							</p>
 
 							<div className='flex items-center justify-center lg:justify-start mb-8 space-x-4'>
@@ -135,7 +135,7 @@ export default function AuthenticVsStoreBoughtPage() {
 				<div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<div className='text-center mb-12'>
 						<h2 className='text-3xl sm:text-4xl font-bold text-burgundy-900 mb-6 font-brand'>
-							What's Really in Store-Bought "Sambal"?
+							What&apos;s Really in Store-Bought "Sambal"?
 						</h2>
 						<p className='text-xl text-gray-700 font-elegant max-w-3xl mx-auto'>
 							The shocking truth about what passes for
@@ -222,7 +222,7 @@ export default function AuthenticVsStoreBoughtPage() {
 										Authentic Indonesian Sambal
 									</h3>
 									<p className='text-green-700 font-elegant'>
-										Chef Yossie's Traditional
+										Chef Yossie&apos;s Traditional
 										Method
 									</p>
 								</div>
@@ -417,7 +417,7 @@ export default function AuthenticVsStoreBoughtPage() {
 				</div>
 			</section>
 
-			{/* Chef's Perspective Section */}
+			{/* Chef&apos;s Perspective Section */}
 			<section className='py-16 bg-white'>
 				<div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<div className='grid lg:grid-cols-2 gap-12 items-center'>
@@ -445,10 +445,10 @@ export default function AuthenticVsStoreBoughtPage() {
 							</h2>
 
 							<p className='text-xl text-gray-700 mb-6 font-elegant leading-relaxed'>
-								Chef Yossie's 20+ years in professional
+								Chef Yossie&apos;s 20+ years in professional
 								catering taught her to recognize
 								authentic Indonesian flavors instantly.
-								She's shocked by what UK stores call
+								She&apos;s shocked by what UK stores call
 								"sambal."
 							</p>
 
@@ -458,7 +458,7 @@ export default function AuthenticVsStoreBoughtPage() {
 									'sambal' in the UK, I was
 									heartbroken. It tasted nothing like
 									the sambal my grandmother taught me
-									to make. That's why I started
+									to make. That&apos;s why I started
 									making authentic sambal here - to
 									preserve the real flavors of
 									Indonesia for people who deserve
@@ -478,7 +478,7 @@ export default function AuthenticVsStoreBoughtPage() {
 										size='lg'
 										className='font-elegant'
 									>
-										Read Chef's Full Story
+										Read Chef&apos;s Full Story
 									</Button>
 								</Link>
 								<Link href='/shop'>
@@ -527,7 +527,7 @@ export default function AuthenticVsStoreBoughtPage() {
 							</div>
 							<div className='border-l border-r border-gray-200 px-6'>
 								<h3 className='text-lg font-bold text-burgundy-900 mb-2'>
-									Chef Yossie's Authentic
+									Chef Yossie&apos;s Authentic
 								</h3>
 								<div className='text-3xl font-bold text-green-600 mb-2'>
 									£7.49
@@ -566,9 +566,9 @@ export default function AuthenticVsStoreBoughtPage() {
 					</h2>
 
 					<p className='text-xl sm:text-2xl mb-8 text-cream-100 font-elegant leading-relaxed max-w-3xl mx-auto'>
-						Don't settle for mass-produced imitations.
+						Don&apos;t settle for mass-produced imitations.
 						Experience what real Indonesian sambal tastes like
-						with Chef Yossie's traditional recipes.
+						with Chef Yossie&apos;s traditional recipes.
 					</p>
 
 					<div className='flex items-center justify-center space-x-8 mb-8'>

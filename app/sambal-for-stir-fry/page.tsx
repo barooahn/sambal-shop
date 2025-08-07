@@ -83,7 +83,7 @@ export default function SambalForStirFryPage() {
 										<Flame className='w-4 h-4 text-burgundy-900' />
 									</div>
 									<span className='text-gold-200 font-medium font-elegant'>
-										Won't Burn at High Heat
+										Won&apos;t Burn at High Heat
 									</span>
 								</div>
 								<div className='flex items-center justify-center lg:justify-start space-x-3'>
@@ -193,7 +193,7 @@ export default function SambalForStirFryPage() {
 								</h3>
 								<p className='text-neutral-700 leading-relaxed font-body mb-6'>
 									Unlike sugar-based sauces (like
-									sriracha), sambal won't burn or
+									sriracha), sambal won&apos;t burn or
 									turn bitter at the high
 									temperatures needed for proper
 									stir-frying.
@@ -201,7 +201,7 @@ export default function SambalForStirFryPage() {
 								<div className='bg-burgundy-50 rounded-lg p-4 border border-burgundy-200'>
 									<p className='text-sm text-burgundy-800 font-body'>
 										<strong>Chef Tip:</strong>{" "}
-										Sambal's pure chili base
+										Sambal&apos;s pure chili base
 										maintains flavor integrity
 										even at 200°C+
 									</p>
@@ -273,7 +273,7 @@ export default function SambalForStirFryPage() {
 							</span>
 						</h2>
 						<p className='text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed font-body'>
-							Chef Yossie's professional technique for
+							Chef Yossie&apos;s professional technique for
 							perfect results
 						</p>
 					</div>
@@ -354,11 +354,11 @@ export default function SambalForStirFryPage() {
 
 							<div className='mt-8 p-6 bg-gradient-to-r from-burgundy-50 to-gold-50 rounded-sm border border-gold-200'>
 								<h4 className='font-bold text-burgundy-900 mb-3 font-brand'>
-									Chef Yossie's Pro Tip:
+									Chef Yossie&apos;s Pro Tip:
 								</h4>
 								<p className='text-burgundy-800 font-body italic'>
 									"Start with less than you think you
-									need. Sambal's heat builds as it
+									need. Sambal&apos;s heat builds as it
 									cooks, and you can always add more.
 									The goal is balanced heat that
 									enhances, not overwhelms."
@@ -499,7 +499,7 @@ export default function SambalForStirFryPage() {
 						</span>
 					</h2>
 					<p className='text-xl text-gold-200 mb-8 font-body'>
-						Join hundreds of home cooks who've discovered the
+						Join hundreds of home cooks who&apos;ve discovered the
 						secret to restaurant-quality stir-fries
 					</p>
 

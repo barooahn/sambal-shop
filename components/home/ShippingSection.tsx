@@ -43,7 +43,7 @@ export default function ShippingSection() {
 							<p>
 								From our kitchen to your door across the
 								UK, we take pride in every detail of
-								your unboxing experience. Whether you're
+								your unboxing experience. Whether you&apos;re
 								in London, Edinburgh, Cardiff, or
 								anywhere in between, each box is
 								carefully packed with love and

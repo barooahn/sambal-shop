@@ -22,13 +22,13 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-	title: "Authentic Indonesian Sambal Oelek UK | Chef Yossie's Traditional Recipe | Spice Island Indonesia",
+	title: "Authentic Indonesian Sambal Oelek UK | Chef Yossie&apos;s Traditional Recipe | Spice Island Indonesia",
 	description:
 		"Buy authentic Indonesian sambal oelek made by Bandung-born Chef Yossie using traditional family recipes. Pure chili paste, no preservatives. UK delivery available.",
 	keywords:
 		"sambal oelek UK, authentic Indonesian sambal, buy sambal oelek, Indonesian chili paste, traditional sambal recipe, Chef Yossie sambal, Indonesian condiments UK, sambal oelek delivery",
 	openGraph: {
-		title: "Authentic Indonesian Sambal Oelek UK | Chef Yossie's Traditional Recipe",
+		title: "Authentic Indonesian Sambal Oelek UK | Chef Yossie&apos;s Traditional Recipe",
 		description:
 			"Pure, fiery Indonesian chili paste made by professional chef using traditional Bandung recipes. No preservatives, authentic taste.",
 		type: "website",
@@ -48,7 +48,7 @@ export default function SambalOelekUKPage() {
 	const faqData = [
 		{
 			question: "What is sambal oelek?",
-			answer: "Sambal oelek is a traditional Indonesian chili paste made from fresh red chilies, salt, and vinegar. It's the foundation of Indonesian cuisine - a pure, fiery condiment that delivers authentic heat without artificial flavors or preservatives. Unlike Western hot sauces, sambal oelek has a chunky texture and focuses on the natural flavor of chilies rather than masking it with sugar or additives.",
+			answer: "Sambal oelek is a traditional Indonesian chili paste made from fresh red chilies, salt, and vinegar. It&apos;s the foundation of Indonesian cuisine - a pure, fiery condiment that delivers authentic heat without artificial flavors or preservatives. Unlike Western hot sauces, sambal oelek has a chunky texture and focuses on the natural flavor of chilies rather than masking it with sugar or additives.",
 		},
 		{
 			question: "How spicy is sambal oelek?",
@@ -56,12 +56,12 @@ export default function SambalOelekUKPage() {
 		},
 		{
 			question:
-				"What's the difference between sambal oelek and sriracha?",
-			answer: "Sambal oelek is pure chili paste with minimal ingredients (chilies, salt, vinegar), while sriracha contains sugar, garlic, and thickeners. Sambal oelek has a chunky, rustic texture versus sriracha's smooth consistency. Sambal oelek is hotter and more authentic to Indonesian cuisine, while sriracha is sweeter and milder.",
+				"What&apos;s the difference between sambal oelek and sriracha?",
+			answer: "Sambal oelek is pure chili paste with minimal ingredients (chilies, salt, vinegar), while sriracha contains sugar, garlic, and thickeners. Sambal oelek has a chunky, rustic texture versus sriracha&apos;s smooth consistency. Sambal oelek is hotter and more authentic to Indonesian cuisine, while sriracha is sweeter and milder.",
 		},
 		{
 			question: "How do I use sambal oelek in cooking?",
-			answer: "Sambal oelek is incredibly versatile. Use it as a condiment (mix with mayo for spicy dips), cooking ingredient (add to stir-fries, marinades, soups), or table sauce. Start with 1/2 teaspoon in recipes and adjust to taste. It's perfect for fried rice, scrambled eggs, marinades, and any dish needing authentic Indonesian heat.",
+			answer: "Sambal oelek is incredibly versatile. Use it as a condiment (mix with mayo for spicy dips), cooking ingredient (add to stir-fries, marinades, soups), or table sauce. Start with 1/2 teaspoon in recipes and adjust to taste. It&apos;s perfect for fried rice, scrambled eggs, marinades, and any dish needing authentic Indonesian heat.",
 		},
 		{
 			question: "How long does sambal oelek last?",
@@ -69,7 +69,7 @@ export default function SambalOelekUKPage() {
 		},
 		{
 			question: "Is sambal oelek gluten-free and vegan?",
-			answer: "Yes! Authentic sambal oelek is naturally gluten-free and vegan. Our traditional recipe contains only chilies, salt, and vinegar - no wheat, dairy, or animal products. It's also free from artificial colors, preservatives, and MSG.",
+			answer: "Yes! Authentic sambal oelek is naturally gluten-free and vegan. Our traditional recipe contains only chilies, salt, and vinegar - no wheat, dairy, or animal products. It&apos;s also free from artificial colors, preservatives, and MSG.",
 		},
 		{
 			question: "Can I buy authentic sambal oelek in the UK?",
@@ -110,7 +110,7 @@ export default function SambalOelekUKPage() {
 			name: "Maluku Islands",
 			type: "Place" as const,
 			description:
-				"The Spice Islands of Indonesia, original source of the world's finest spices and chilies",
+				"The Spice Islands of Indonesia, original source of the world&apos;s finest spices and chilies",
 			properties: {
 				country: "Indonesia",
 				coordinates: { lat: -3.2385, lng: 130.1453 },
@@ -183,7 +183,7 @@ export default function SambalOelekUKPage() {
 				author: "James K.",
 				rating: 5,
 				reviewBody:
-					"This is the real deal! I've been looking for authentic sambal for years. Chef Yossie's recipe is incredible - pure chili flavor without any sweetness.",
+					"This is the real deal! I&apos;ve been looking for authentic sambal for years. Chef Yossie&apos;s recipe is incredible - pure chili flavor without any sweetness.",
 				datePublished: "2024-01-08",
 				location: "Manchester",
 			},
@@ -238,7 +238,7 @@ export default function SambalOelekUKPage() {
 						<div className='text-center lg:text-left'>
 							<Badge className='bg-burgundy-800 text-gold-300 mb-6 px-6 py-3 text-lg font-semibold border border-gold-600/30'>
 								<ChefHat className='w-5 h-5 mr-2' />
-								Chef Yossie's Traditional Recipe
+								Chef Yossie&apos;s Traditional Recipe
 							</Badge>
 
 							<h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold mb-8 leading-tight font-brand'>
@@ -256,7 +256,7 @@ export default function SambalOelekUKPage() {
 							<p className='text-xl sm:text-2xl text-gold-200 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-body'>
 								Finally, real Indonesian sambal oelek
 								made using traditional recipes from Chef
-								Yossie's family catering kitchen in
+								Yossie&apos;s family catering kitchen in
 								Bandung. No preservatives, no shortcuts
 								- just authentic Indonesian fire.
 							</p>
@@ -380,8 +380,8 @@ export default function SambalOelekUKPage() {
 							</span>
 						</h2>
 						<p className='text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed font-body'>
-							You've tried the mass-produced versions. You
-							know they're missing something. Here's why
+							You&apos;ve tried the mass-produced versions. You
+							know they&apos;re missing something. Here&apos;s why
 							our sambal oelek is different.
 						</p>
 					</div>
@@ -451,7 +451,7 @@ export default function SambalOelekUKPage() {
 						{/* Solutions */}
 						<div>
 							<h3 className='text-3xl font-bold text-burgundy-900 mb-8 font-brand'>
-								Chef Yossie's Authentic Solution:
+								Chef Yossie&apos;s Authentic Solution:
 							</h3>
 							<div className='space-y-6'>
 								<div className='flex items-start space-x-4'>
@@ -543,9 +543,9 @@ export default function SambalOelekUKPage() {
 								<p>
 									Born and raised in{" "}
 									<strong>Bandung, West Java</strong>{" "}
-									- Indonesia's culinary capital -
+									- Indonesia&apos;s culinary capital -
 									Chef Yossie learned the art of
-									sambal making in her mother's
+									sambal making in her mother&apos;s
 									bustling catering kitchen.
 								</p>
 								<p>
@@ -598,7 +598,7 @@ export default function SambalOelekUKPage() {
 									size='lg'
 									className='font-elegant'
 								>
-									Read Chef Yossie's Full Story
+									Read Chef Yossie&apos;s Full Story
 								</Button>
 							</Link>
 						</div>
@@ -616,7 +616,7 @@ export default function SambalOelekUKPage() {
 						</span>
 					</h2>
 					<p className='text-xl text-gold-200 mb-8 font-body'>
-						Join hundreds of UK customers who've discovered
+						Join hundreds of UK customers who&apos;ve discovered
 						the difference professional-made sambal makes
 					</p>
 
@@ -859,7 +859,7 @@ export default function SambalOelekUKPage() {
 									Sambal oelek is a traditional
 									Indonesian chili paste made from
 									fresh red chilies, salt, and
-									vinegar. It's the foundation of
+									vinegar. It&apos;s the foundation of
 									Indonesian cuisine - a pure, fiery
 									condiment that delivers authentic
 									heat without artificial flavors or
@@ -896,7 +896,7 @@ export default function SambalOelekUKPage() {
 							{/* FAQ Item 3 */}
 							<div className='bg-cream-50 rounded-lg p-6 border border-gold-200'>
 								<h3 className='text-xl font-bold text-burgundy-900 mb-3 font-brand'>
-									What's the difference between
+									What&apos;s the difference between
 									sambal oelek and sriracha?
 								</h3>
 								<p className='text-gray-700 font-body leading-relaxed'>
@@ -906,7 +906,7 @@ export default function SambalOelekUKPage() {
 									contains sugar, garlic, and
 									thickeners. Sambal oelek has a
 									chunky, rustic texture versus
-									sriracha's smooth consistency.
+									sriracha&apos;s smooth consistency.
 									Sambal oelek is hotter and more
 									authentic to Indonesian cuisine,
 									while sriracha is sweeter and
@@ -932,7 +932,7 @@ export default function SambalOelekUKPage() {
 									stir-fries, marinades, soups), or
 									table sauce. Start with 1/2
 									teaspoon in recipes and adjust to
-									taste. It's perfect for{" "}
+									taste. It&apos;s perfect for{" "}
 									<Link
 										href='/recipes/sambal-fried-rice'
 										className='text-burgundy-600 hover:text-burgundy-800 underline'
@@ -949,8 +949,8 @@ export default function SambalOelekUKPage() {
 									</Link>
 									, marinades, and any dish needing
 									authentic Indonesian heat. Unlike
-									other hot sauces, it won't add
-									sweetness or change the dish's
+									other hot sauces, it won&apos;t add
+									sweetness or change the dish&apos;s
 									flavor profile.
 								</p>
 							</div>
@@ -988,7 +988,7 @@ export default function SambalOelekUKPage() {
 									Our traditional recipe contains
 									only chilies, salt, and vinegar -
 									no wheat, dairy, or animal
-									products. It's also free from
+									products. It&apos;s also free from
 									artificial colors, preservatives,
 									and MSG. Perfect for those with
 									dietary restrictions who want to

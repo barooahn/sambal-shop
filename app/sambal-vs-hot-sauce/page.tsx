@@ -139,7 +139,7 @@ export default function SambalVsHotSaucePage() {
 						</h2>
 						<p className='text-xl text-gray-700 font-elegant max-w-3xl mx-auto'>
 							Not all chili sauces are created equal.
-							Here's why authentic Indonesian sambal stands
+							Here&apos;s why authentic Indonesian sambal stands
 							apart.
 						</p>
 					</div>
@@ -274,7 +274,7 @@ export default function SambalVsHotSaucePage() {
 							Why Indonesian Sambal Transforms Your Cooking
 						</h2>
 						<p className='text-xl text-gray-700 font-elegant max-w-3xl mx-auto'>
-							It's not just about heat - it's about depth,
+							It&apos;s not just about heat - it&apos;s about depth,
 							complexity, and culinary tradition.
 						</p>
 					</div>
@@ -441,7 +441,7 @@ export default function SambalVsHotSaucePage() {
 									immediately. Hot sauce is just heat
 									and vinegar. Sambal is a symphony
 									of flavors that tells the story of
-									Indonesia's spice heritage. There's
+									Indonesia&apos;s spice heritage. There&apos;s
 									simply no comparison."
 								</p>
 								<cite className='text-gold-600 font-brand text-lg'>
@@ -486,7 +486,7 @@ export default function SambalVsHotSaucePage() {
 					</h2>
 
 					<p className='text-xl sm:text-2xl mb-8 text-cream-100 font-elegant leading-relaxed max-w-3xl mx-auto'>
-						Join thousands who've discovered the difference
+						Join thousands who&apos;ve discovered the difference
 						authentic Indonesian sambal makes. Your taste buds
 						will thank you.
 					</p>

@@ -48,7 +48,7 @@ export default function ContactPage() {
 						<p className='text-xl lg:text-2xl text-neutral-600 max-w-3xl mx-auto font-body leading-relaxed'>
 							Have questions about our authentic Indonesian
 							sambals? Want to learn more about our
-							products or need cooking advice? We'd love to
+							products or need cooking advice? We&apos;d love to
 							hear from you.
 						</p>
 					</div>

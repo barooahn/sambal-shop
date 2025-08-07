@@ -140,7 +140,7 @@ export default function NewsletterSection() {
 													varieties and
 													limited
 													editions before
-													they're
+													they&apos;re
 													available to
 													the public
 												</p>

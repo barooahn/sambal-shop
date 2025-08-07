@@ -21,7 +21,7 @@ import {
 export const metadata = {
 	title: "Indonesian Food Gift Set UK | Authentic Sambal Gift Box | Spice Island Indonesia",
 	description:
-		"Perfect Indonesian food gift set featuring Chef Yossie's authentic sambal collection. Beautifully packaged with recipe cards. Ideal for food lovers, birthdays, and special occasions.",
+		"Perfect Indonesian food gift set featuring Chef Yossie&apos;s authentic sambal collection. Beautifully packaged with recipe cards. Ideal for food lovers, birthdays, and special occasions.",
 	keywords:
 		"Indonesian food gifts UK, sambal gift set, Indonesian condiment gift box, Chef Yossie gift set, authentic Indonesian food gifts, spicy food lover gifts, unique food gifts UK",
 	openGraph: {
@@ -72,7 +72,7 @@ export default function GiftSetIndonesianPage() {
 
 							<p className='text-xl sm:text-2xl text-gold-200 mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-body'>
 								Give the gift of authentic Indonesian
-								cuisine with Chef Yossie's beautifully
+								cuisine with Chef Yossie&apos;s beautifully
 								curated sambal collection. Perfect for
 								birthdays, holidays, or introducing
 								someone special to Indonesian flavors.
@@ -93,7 +93,7 @@ export default function GiftSetIndonesianPage() {
 										<ChefHat className='w-4 h-4 text-burgundy-900' />
 									</div>
 									<span className='text-gold-200 font-medium font-elegant'>
-										Chef's Recipe Cards
+										Chef&apos;s Recipe Cards
 									</span>
 								</div>
 								<div className='flex items-center justify-center lg:justify-start space-x-3'>
@@ -154,12 +154,12 @@ export default function GiftSetIndonesianPage() {
 				</div>
 			</section>
 
-			{/* What's Included Section */}
+			{/* What&apos;s Included Section */}
 			<section className='py-16 sm:py-20 bg-white'>
 				<div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<div className='text-center mb-16'>
 						<h2 className='text-3xl sm:text-4xl font-bold text-burgundy-900 mb-6 font-brand'>
-							What's in the Gift Set
+							What&apos;s in the Gift Set
 						</h2>
 						<p className='text-xl text-neutral-600 max-w-3xl mx-auto font-body'>
 							A carefully curated collection of authentic
@@ -209,7 +209,7 @@ export default function GiftSetIndonesianPage() {
 									Recipe Cards
 								</h3>
 								<p className='text-neutral-600 text-sm font-body'>
-									Chef Yossie's favorite recipes and
+									Chef Yossie&apos;s favorite recipes and
 									serving suggestions
 								</p>
 							</CardContent>
@@ -241,7 +241,7 @@ export default function GiftSetIndonesianPage() {
 							Perfect Gift For
 						</h2>
 						<p className='text-xl text-neutral-600 max-w-3xl mx-auto font-body'>
-							Whether they're culinary adventurers or
+							Whether they&apos;re culinary adventurers or
 							Indonesian cuisine lovers, this gift set
 							brings authentic flavors and cultural
 							discovery.
@@ -380,7 +380,7 @@ export default function GiftSetIndonesianPage() {
 							</h2>
 
 							<p className='text-lg text-neutral-600 mb-6 font-body'>
-								This isn't just a food gift - it's a
+								This isn&apos;t just a food gift - it&apos;s a
 								cultural experience. Recipients discover
 								authentic Indonesian flavors while
 								learning about traditional recipes and
@@ -401,7 +401,7 @@ export default function GiftSetIndonesianPage() {
 									<CheckCircle className='w-6 h-6 text-burgundy-600 mr-3 flex-shrink-0 mt-0.5' />
 									<span className='text-neutral-600 font-body'>
 										<strong>Memorable:</strong>{" "}
-										Unique gift they'll remember
+										Unique gift they&apos;ll remember
 										and use for months
 									</span>
 								</li>

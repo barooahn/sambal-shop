@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 	openGraph: {
 		title: "Authentic Sambal Fried Rice Recipe - Indonesian Nasi Goreng",
 		description:
-			"Transform leftover rice into Indonesia's national dish with authentic sambal. Easy 20-minute recipe with step-by-step instructions.",
+			"Transform leftover rice into Indonesia&apos;s national dish with authentic sambal. Easy 20-minute recipe with step-by-step instructions.",
 		images: ["/images/Spice Island Indonesia Sambal Bali 185g Label.png"],
 		type: "article",
 	},
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 const recipe = {
 	name: "Sambal Fried Rice (Nasi Goreng)",
 	description:
-		"Indonesia's beloved national dish - a perfect way to transform leftover rice into something spectacular with the heat and complexity of authentic sambal.",
+		"Indonesia&apos;s beloved national dish - a perfect way to transform leftover rice into something spectacular with the heat and complexity of authentic sambal.",
 	image: "/images/Spice Island Indonesia Sambal Bali 185g Label.png",
 	prepTime: "PT10M",
 	cookTime: "PT15M",
@@ -121,9 +121,9 @@ const recipe = {
 	},
 
 	tips: [
-		"Day-old rice works best as it's drier and won't become mushy",
+		"Day-old rice works best as it&apos;s drier and won&apos;t become mushy",
 		"Keep the heat high throughout cooking for the best 'wok hei' (breath of the wok) flavor",
-		"Don't overcrowd the wok - cook in batches if necessary",
+		"Don&apos;t overcrowd the wok - cook in batches if necessary",
 		"Sambal Bali works perfectly here due to its aromatic spices that complement the other ingredients",
 		"For vegetarian version, omit meat and add extra vegetables like carrots, peas, or bean sprouts",
 	],
@@ -262,8 +262,8 @@ export default function SambalFriedRicePage() {
 			timeEstimate: "1 min",
 			difficulty: "Medium" as const,
 			equipment: ["Wooden spoon"],
-			tips: "The garlic should sizzle immediately. If it doesn't, your oil isn't hot enough.",
-			warning: "Don't let the garlic burn - it will turn bitter. Reduce heat if needed.",
+			tips: "The garlic should sizzle immediately. If it doesn't, your oil isn&apos;t hot enough.",
+			warning: "Don&apos;t let the garlic burn - it will turn bitter. Reduce heat if needed.",
 		},
 		{
 			step: 3,
@@ -326,8 +326,8 @@ export default function SambalFriedRicePage() {
 			answer: "While sambal is unique, you can substitute with sriracha (use 3x more for similar heat) or chili garlic sauce. However, these alternatives are sweeter and less authentic. For best results, order authentic sambal online - the flavor difference is significant and worth the investment for genuine Indonesian taste.",
 		},
 		{
-			question: "What if I can't find Indonesian ingredients?",
-			answer: "Most sambal recipes work with common UK ingredients. Use jasmine rice instead of Indonesian rice, regular soy sauce instead of kecap manis (add a pinch of brown sugar), and frozen mixed vegetables if fresh aren't available. The key is authentic sambal - this makes the biggest difference in achieving genuine Indonesian flavor.",
+			question: "What if I can&apos;t find Indonesian ingredients?",
+			answer: "Most sambal recipes work with common UK ingredients. Use jasmine rice instead of Indonesian rice, regular soy sauce instead of kecap manis (add a pinch of brown sugar), and frozen mixed vegetables if fresh aren&apos;t available. The key is authentic sambal - this makes the biggest difference in achieving genuine Indonesian flavor.",
 		},
 		{
 			question: "How do I store leftover sambal dishes?",
@@ -380,14 +380,14 @@ export default function SambalFriedRicePage() {
 		{
 			title: "The History of the Spice Islands: Where Your Sambal Comes From",
 			url: "/blog/spice-islands-history",
-			excerpt: "Discover the volcanic islands that created the perfect conditions for the world's most flavorful chilies",
+			excerpt: "Discover the volcanic islands that created the perfect conditions for the world&apos;s most flavorful chilies",
 			readTime: "8 min",
 			category: "Culture & History",
 		},
 		{
 			title: "Ultimate Guide to Indonesian Sambal",
 			url: "/blog/ultimate-guide-indonesian-sambal",
-			excerpt: "Everything you need to know about Indonesia's most beloved condiment and how to use it",
+			excerpt: "Everything you need to know about Indonesia&apos;s most beloved condiment and how to use it",
 			readTime: "12 min",
 			category: "Cooking Guide",
 		},
@@ -444,7 +444,7 @@ export default function SambalFriedRicePage() {
 				<div className='max-w-4xl mx-auto mt-12'>
 					<EnhancedRecipeInstructions
 						title='Interactive Cooking Guide'
-						description="Follow along step-by-step with time estimates and chef's tips"
+						description="Follow along step-by-step with time estimates and chef&apos;s tips"
 						prepTime={recipe.prepTime}
 						cookTime={recipe.cookTime}
 						totalTime={recipe.totalTime}
@@ -473,7 +473,7 @@ export default function SambalFriedRicePage() {
 						</h2>
 						<div className='prose prose-lg max-w-none text-gray-700 font-body'>
 							<p>
-								Nasi Goreng is Indonesia's national dish
+								Nasi Goreng is Indonesia&apos;s national dish
 								and one of the most beloved fried rice
 								recipes in the world. This version uses
 								authentic Sambal Bali to create the
@@ -495,10 +495,10 @@ export default function SambalFriedRicePage() {
 						</div>
 					</section>
 
-					{/* Chef's Tips */}
+					{/* Chef&apos;s Tips */}
 					<section className='bg-gradient-to-br from-burgundy-50 to-gold-50 rounded-sm shadow-sm border border-gold-200 p-8'>
 						<h2 className='text-2xl font-bold text-burgundy-900 mb-4 font-heading'>
-							Chef's Tips for Perfect Nasi Goreng
+							Chef&apos;s Tips for Perfect Nasi Goreng
 						</h2>
 						<div className='grid md:grid-cols-2 gap-6'>
 							<div>
@@ -537,7 +537,7 @@ export default function SambalFriedRicePage() {
 										• Have all ingredients prepped
 										before starting
 									</li>
-									<li>• Don't overcrowd the wok</li>
+									<li>• Don&apos;t overcrowd the wok</li>
 									<li>
 										• Taste and adjust seasoning
 										at the end

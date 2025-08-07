@@ -203,7 +203,7 @@ export default function RecipesPage() {
 										Sambal is potent! Start with a
 										small amount and add more to
 										taste. You can always add more
-										heat, but you can't take it
+										heat, but you can&apos;t take it
 										away.
 									</p>
 								</div>

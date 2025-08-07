@@ -104,7 +104,7 @@ export default function UKDeliveryPage() {
 		{
 			title: "The History of the Spice Islands: Where Your Sambal Comes From",
 			url: "/blog/spice-islands-history",
-			excerpt: "Discover the volcanic islands that created the perfect conditions for the world's most flavorful chilies",
+			excerpt: "Discover the volcanic islands that created the perfect conditions for the world&apos;s most flavorful chilies",
 			readTime: "8 min",
 			category: "Culture & History"
 		},
@@ -304,7 +304,7 @@ export default function UKDeliveryPage() {
 							🇮🇩 Bringing Indonesia to Britain
 						</h2>
 						<p className='text-xl text-gray-600 font-body'>
-							We're proud to be the UK's premier source for authentic Indonesian sambal, 
+							We&apos;re proud to be the UK&apos;s premier source for authentic Indonesian sambal, 
 							bridging the gap between traditional Indonesian cuisine and British kitchens.
 						</p>
 					</div>
@@ -314,7 +314,7 @@ export default function UKDeliveryPage() {
 							<CardContent className='p-8'>
 								<h3 className='text-xl font-bold text-burgundy-900 mb-4'>🌶️ Authentic Recipes</h3>
 								<p className='text-gray-700 mb-4'>
-									Our sambal is made using traditional recipes from Chef Yossie's family in Bandung, Indonesia. 
+									Our sambal is made using traditional recipes from Chef Yossie&apos;s family in Bandung, Indonesia. 
 									No shortcuts, no artificial ingredients - just authentic Indonesian flavors.
 								</p>
 								<p className='text-gray-700'>

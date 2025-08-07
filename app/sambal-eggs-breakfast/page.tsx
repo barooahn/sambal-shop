@@ -21,7 +21,7 @@ import {
 export const metadata = {
 	title: "Spicy Breakfast Condiment UK | Indonesian Sambal for Eggs & Morning Meals | Spice Island Indonesia",
 	description:
-		"Transform your breakfast with authentic Indonesian sambal! Perfect with eggs, avocado toast, and morning dishes. Chef Yossie's traditional recipes add complex heat to start your day right.",
+		"Transform your breakfast with authentic Indonesian sambal! Perfect with eggs, avocado toast, and morning dishes. Chef Yossie&apos;s traditional recipes add complex heat to start your day right.",
 	keywords:
 		"spicy breakfast condiment UK, sambal for eggs, Indonesian breakfast sauce, spicy morning condiment, sambal with eggs, breakfast chili sauce, Chef Yossie breakfast sambal, spicy egg sauce UK",
 	openGraph: {
@@ -68,7 +68,7 @@ export default function SambalEggsBreakfastPage() {
 								Tired of boring breakfast? Add
 								<strong className='text-gold-300'>
 									{" "}
-									Chef Yossie's authentic sambal
+									Chef Yossie&apos;s authentic sambal
 								</strong>
 								to eggs, avocado toast, and morning
 								dishes for complex flavors that wake up
@@ -427,7 +427,7 @@ export default function SambalEggsBreakfastPage() {
 				</div>
 			</section>
 
-			{/* Chef's Breakfast Tips Section */}
+			{/* Chef&apos;s Breakfast Tips Section */}
 			<section className='py-16 bg-gradient-to-br from-cream-50 to-cream-100'>
 				<div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<div className='grid lg:grid-cols-2 gap-12 items-center'>
@@ -447,7 +447,7 @@ export default function SambalEggsBreakfastPage() {
 						<div>
 							<Badge className='bg-burgundy-100 text-burgundy-800 font-elegant mb-6 text-sm px-4 py-2'>
 								<ChefHat className='w-4 h-4 mr-2' />
-								Chef's Tips
+								Chef&apos;s Tips
 							</Badge>
 
 							<h2 className='text-3xl sm:text-4xl font-bold text-burgundy-900 mb-6 font-brand'>
@@ -457,14 +457,14 @@ export default function SambalEggsBreakfastPage() {
 
 							<p className='text-xl text-gray-700 mb-6 font-elegant leading-relaxed'>
 								In Indonesia, we start every day with
-								sambal. Chef Yossie shares her family's
+								sambal. Chef Yossie shares her family&apos;s
 								traditional breakfast combinations that
 								have energized generations.
 							</p>
 
 							<blockquote className='border-l-4 border-gold-600 pl-6 mb-8'>
 								<p className='text-lg italic text-gray-700 mb-4'>
-									"In my family's catering business,
+									"In my family&apos;s catering business,
 									breakfast was never boring. We
 									always had fresh sambal on the
 									table. A little with eggs, a dab on
@@ -480,14 +480,14 @@ export default function SambalEggsBreakfastPage() {
 
 							<div className='bg-white rounded-lg p-6 border border-gold-200'>
 								<h4 className='font-bold text-burgundy-900 mb-3 font-elegant'>
-									Chef's Quick Breakfast Recipe:
+									Chef&apos;s Quick Breakfast Recipe:
 								</h4>
 								<p className='text-gray-700 text-sm leading-relaxed'>
 									"Scramble 2 eggs with a teaspoon of
 									sambal oelek, serve on buttered
 									toast with sliced tomato. In
 									Indonesia, we call this 'telur
-									bumbu' - it's comfort food that
+									bumbu' - it&apos;s comfort food that
 									gives you energy for the whole
 									day."
 								</p>
