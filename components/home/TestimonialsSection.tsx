@@ -107,7 +107,7 @@ export default function TestimonialsSection() {
 								</div>
 
 								<p className='text-neutral-700 leading-relaxed mb-6 font-body italic'>
-									"{testimonial.review}"
+									&quot;{testimonial.review}&quot;
 								</p>
 
 								<div className='border-t border-gold-200 pt-4'>

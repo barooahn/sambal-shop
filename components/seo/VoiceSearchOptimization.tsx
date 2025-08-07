@@ -35,7 +35,7 @@ const VoiceSearchOptimization: FC<VoiceSearchOptimizationProps> = ({
 						className='bg-white p-4 rounded-lg border border-blue-100'
 					>
 						<h4 className='font-semibold text-blue-900 mb-2 text-sm'>
-							🎤 "{qa.question}"
+							🎤 &quot;{qa.question}&quot;
 						</h4>
 						<p className='text-gray-700 text-sm leading-relaxed'>
 							{qa.answer}
