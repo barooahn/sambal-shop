@@ -66,11 +66,13 @@ export default function AuthenticVsStoreBoughtPage() {
 							</h1>
 
 							<p className='text-xl sm:text-2xl mb-8 text-cream-100 font-elegant leading-relaxed'>
-								Most "Indonesian" sambal in UK stores
-								isn&apos;t Indonesian at all. Discover why
+								Most &quot;Indonesian&quot; sambal in UK
+								stores isn&apos;t Indonesian at all.
+								Discover why
 								<strong className='text-gold-300'>
 									{" "}
-									Chef Yossie&apos;s traditional recipes
+									Chef Yossie&apos;s traditional
+									recipes
 								</strong>
 								create flavors that mass-produced brands
 								simply can&apos;t match.
@@ -135,11 +137,13 @@ export default function AuthenticVsStoreBoughtPage() {
 				<div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<div className='text-center mb-12'>
 						<h2 className='text-3xl sm:text-4xl font-bold text-burgundy-900 mb-6 font-brand'>
-							What&apos;s Really in Store-Bought "Sambal"?
+							What&apos;s Really in Store-Bought
+							&quot;Sambal&quot;?
 						</h2>
 						<p className='text-xl text-gray-700 font-elegant max-w-3xl mx-auto'>
 							The shocking truth about what passes for
-							"Indonesian sambal" in UK supermarkets.
+							&quot;Indonesian sambal&quot; in UK
+							supermarkets.
 						</p>
 					</div>
 
@@ -190,9 +194,9 @@ export default function AuthenticVsStoreBoughtPage() {
 								</h3>
 								<p className='text-yellow-700'>
 									Often made in Europe or Asia with
-									"Indonesian-style" recipes that
-									bear no resemblance to authentic
-									sambal.
+									&quot;Indonesian-style&quot;
+									recipes that bear no resemblance to
+									authentic sambal.
 								</p>
 							</CardContent>
 						</Card>
@@ -321,7 +325,8 @@ export default function AuthenticVsStoreBoughtPage() {
 										<X className='w-8 h-8 text-red-600' />
 									</div>
 									<h3 className='text-2xl font-bold text-red-800 font-brand'>
-										Store-Bought "Sambal"
+										Store-Bought
+										&quot;Sambal&quot;
 									</h3>
 									<p className='text-red-700 font-elegant'>
 										Mass-Produced Imitation
@@ -445,11 +450,11 @@ export default function AuthenticVsStoreBoughtPage() {
 							</h2>
 
 							<p className='text-xl text-gray-700 mb-6 font-elegant leading-relaxed'>
-								Chef Yossie&apos;s 20+ years in professional
-								catering taught her to recognize
-								authentic Indonesian flavors instantly.
-								She&apos;s shocked by what UK stores call
-								"sambal."
+								Chef Yossie&apos;s 20+ years in
+								professional catering taught her to
+								recognize authentic Indonesian flavors
+								instantly. She&apos;s shocked by what UK
+								stores call "sambal."
 							</p>
 
 							<blockquote className='border-l-4 border-gold-600 pl-6 mb-8'>

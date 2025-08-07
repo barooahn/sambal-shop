@@ -37,14 +37,14 @@ export default function AboutPage() {
 							<div className='space-y-6 text-lg text-neutral-700 leading-relaxed font-body'>
 								<p>
 									Our journey begins in the Maluku
-									Islands – the original "Spice
-									Islands" that once drew traders
-									from around the world in search of
-									precious spices. For generations,
-									our family has perfected the art of
-									sambal making, preserving ancient
-									recipes passed down through the
-									centuries.
+									Islands – the original &quot;Spice
+									Islands&quot; that once drew
+									traders from around the world in
+									search of precious spices. For
+									generations, our family has
+									perfected the art of sambal making,
+									preserving ancient recipes passed
+									down through the centuries.
 								</p>
 								<p>
 									Each jar of our sambal tells a
@@ -187,10 +187,10 @@ export default function AboutPage() {
 									Indonesian communities.
 								</p>
 								<p>
-									We&apos;re not just selling sambal –
-									we&apos;re sharing a piece of Indonesian
-									culture, one delicious spoonful at
-									a time.
+									We&apos;re not just selling sambal
+									– we&apos;re sharing a piece of
+									Indonesian culture, one delicious
+									spoonful at a time.
 								</p>
 							</div>
 							<div className='mt-8'>
