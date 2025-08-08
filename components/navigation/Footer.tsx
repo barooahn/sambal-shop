@@ -3,8 +3,9 @@ import { Instagram, Facebook } from "lucide-react";
 
 export default function Footer() {
 	return (
-		<footer className='bg-burgundy-900 text-gold-200 py-16 relative overflow-hidden border-t border-gold-600/30'>
-			<div className='absolute inset-0 bg-gradient-to-r from-burgundy-950/50 via-transparent to-burgundy-950/50'></div>
+		<footer className='bg-neutral-900 text-gold-200 py-16 relative overflow-hidden border-t border-gold-600/30'>
+			{/* Batik-inspired overlay */}
+			<div className='absolute inset-0 pointer-events-none opacity-20 batik-pattern-subtle'></div>
 
 			<div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 				<div className='grid md:grid-cols-5 gap-8'>
@@ -216,6 +217,19 @@ export default function Footer() {
 								</Link>
 							</li>
 						</ul>
+					</div>
+				</div>
+
+				{/* Trust strip */}
+				<div className='mt-12 mb-8 grid grid-cols-1 sm:grid-cols-3 gap-4 text-center'>
+					<div className='rounded-xl border border-gold-600/30 px-4 py-3 bg-neutral-800/60'>
+						Small-batch • Made in the UK
+					</div>
+					<div className='rounded-xl border border-gold-600/30 px-4 py-3 bg-neutral-800/60'>
+						No preservatives • Vegan
+					</div>
+					<div className='rounded-xl border border-gold-600/30 px-4 py-3 bg-neutral-800/60'>
+						Free UK delivery over £25
 					</div>
 				</div>
 

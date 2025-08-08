@@ -1,10 +1,11 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import { ChefHat, Award, Heart, Star, Flame, MapPin } from "lucide-react";
+
+import { ChefHat, Award, Heart, Star, Flame } from "lucide-react";
 import { Skeleton } from "@/components/ui/skeleton";
+import { toast } from "sonner";
 
 // Custom loading skeleton for Sambal Bali product
 function SambalBaliSkeleton() {
@@ -55,53 +56,53 @@ export default function HeroSection() {
 	});
 	const [imageLoaded, setImageLoaded] = useState(false);
 
-	// Simulate loading delay for demonstration
-	useEffect(() => {
-		const timer = setTimeout(() => {
-			setImageLoaded(true);
-		}, 2000); // Show skeleton for 2 seconds
-
-		return () => clearTimeout(timer);
-	}, []);
-
 	const handleInterestClick = async () => {
 		setInterestState({
 			isSubmitting: true,
 			isSubmitted: false,
 			message: "",
 		});
-
 		try {
-			// Simulate API call
-			await new Promise((resolve) => setTimeout(resolve, 1500));
+			const { recordInterest } = await import("@/lib/actions");
+			const result = await recordInterest({ source: "hero_waitlist" });
 			setInterestState({
 				isSubmitting: false,
 				isSubmitted: true,
-				message: "Welcome to the UK VIP list! You'll be first to try Chef Yossie's authentic sambal! 🇬🇧🌶️",
+				message:
+					result.message ||
+					"Thanks for your interest! We'll notify you when we launch.",
 			});
-
-			setTimeout(() => {
-				setInterestState((prev) => ({
-					...prev,
-					isSubmitted: false,
-					message: "",
-				}));
-			}, 5000);
+			// Track GA event
+			try {
+				const { trackEvent } = await import(
+					"@/components/analytics/GoogleAnalytics"
+				);
+				trackEvent(
+					"interest_recorded",
+					"product_engagement",
+					"hero_waitlist"
+				);
+			} catch {}
+			// Toast confirmation
+			toast.success(
+				"Interest recorded — you’re on the UK VIP list! 🇬🇧🌶️"
+			);
 		} catch (error) {
 			setInterestState({
 				isSubmitting: false,
 				isSubmitted: true,
 				message: "Something went wrong. Please try again later.",
 			});
-
-			setTimeout(() => {
-				setInterestState((prev) => ({
-					...prev,
-					isSubmitted: false,
-					message: "",
-				}));
-			}, 5000);
+			toast.error("Couldn’t record your interest. Please try again.");
 		}
+
+		setTimeout(() => {
+			setInterestState((prev) => ({
+				...prev,
+				isSubmitted: false,
+				message: "",
+			}));
+		}, 4000);
 	};
 
 	return (
@@ -109,19 +110,33 @@ export default function HeroSection() {
 			{/* Background Image - Optimized for LCP */}
 			<div className='absolute inset-0 z-0'>
 				<Image
+					src='/images/optimized/hero-image-sm.webp'
+					alt='Premium Indonesian spices imported to UK - authentic Indonesian cooking ingredients available London Manchester Birmingham'
+					fill
+					className='object-cover block sm:hidden'
+					fetchPriority='high'
+				/>
+				<Image
+					src='/images/optimized/hero-image-md.webp'
+					alt='Premium Indonesian spices imported to UK - authentic Indonesian cooking ingredients available London Manchester Birmingham'
+					fill
+					className='object-cover hidden sm:block md:hidden'
+					fetchPriority='high'
+				/>
+				<Image
+					src='/images/optimized/hero-image-lg.webp'
+					alt='Premium Indonesian spices imported to UK - authentic Indonesian cooking ingredients available London Manchester Birmingham'
+					fill
+					className='object-cover hidden md:block lg:hidden'
+					fetchPriority='high'
+				/>
+				<Image
 					src='/images/optimized/hero-image-xl.webp'
 					alt='Premium Indonesian spices imported to UK - authentic Indonesian cooking ingredients available London Manchester Birmingham'
 					fill
-					className='object-cover'
-					priority
+					className='object-cover hidden lg:block'
 					fetchPriority='high'
-					quality={75}
-					sizes='100vw'
-					placeholder='blur'
-					blurDataURL='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k='
 				/>
-				{/* Dark overlay for text readability */}
-				<div className='absolute inset-0 bg-black/50'></div>
 			</div>
 
 			{/* Subtle grain texture overlay */}
@@ -132,10 +147,10 @@ export default function HeroSection() {
 				}}
 			></div>
 
-			<div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-20'>
-				<div className='flex flex-col lg:grid lg:grid-cols-2 gap-6 lg:gap-16 items-center min-h-[calc(100vh-4rem)] lg:min-h-0'>
+			<div className='relative z-10 max-w-7xl mx-auto px-3 sm:px-5 lg:px-8 py-6 sm:py-8 lg:py-12 translate-y-0 sm:-translate-y-4 lg:-translate-y-6'>
+				<div className='flex flex-col lg:grid lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-16 items-center'>
 					{/* Mobile/Tablet - Text content first */}
-					<div className='text-center lg:text-left order-1 lg:order-2 pt-4 lg:pt-0'>
+					<div className='text-center lg:text-left order-1 lg:order-2 pt-2 sm:pt-0'>
 						{/* Chef badge */}
 						<div className='mb-4 lg:mb-6 inline-block'>
 							<div className='bg-white/90 backdrop-blur-sm rounded-full px-3 lg:px-6 py-1.5 lg:py-3 border border-orange-200/50 shadow-xl'>
@@ -158,7 +173,7 @@ export default function HeroSection() {
 						</div>
 
 						{/* Main headline with UK market optimization */}
-						<h1 className='voice-hero-title text-3xl sm:text-4xl lg:text-7xl font-light text-white mb-2 lg:mb-4 leading-tight tracking-tight'>
+						<h1 className='voice-hero-title mobile-text-shadow text-3xl sm:text-4xl lg:text-7xl font-light text-white mb-2 lg:mb-4 leading-tight tracking-tight'>
 							<span className='block font-light text-white/90'>
 								Professional
 							</span>
@@ -178,15 +193,17 @@ export default function HeroSection() {
 						</div>
 
 						{/* Description */}
-						<p className='voice-product-description text-sm lg:text-lg text-white/90 mb-4 lg:mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed font-light px-2 lg:px-0'>
+						<p className='voice-product-description mobile-text-shadow text-sm lg:text-lg text-white/90 mb-4 lg:mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed font-light px-2 lg:px-0'>
 							Meet Chef Yossie - born in Bandung, trained
 							in her mother&apos;s catering kitchen, now
 							bringing{" "}
 							<span className='text-amber-300 font-medium'>
 								professional-grade Indonesian sambal
 							</span>{" "}
-							<span className='voice-location-info'>to British homes across London, Manchester,
-							Birmingham, and nationwide.</span>
+							<span className='voice-location-info'>
+								to British homes across London,
+								Manchester, Birmingham, and nationwide.
+							</span>
 						</p>
 
 						{/* Features with mobile-optimized design */}
@@ -214,12 +231,13 @@ export default function HeroSection() {
 						{/* CTA Buttons with mobile optimization */}
 						<div className='flex flex-col gap-2.5 lg:gap-4 px-2 lg:px-0'>
 							<button
+								aria-label='Join UK Preview List'
 								onClick={handleInterestClick}
 								disabled={
 									interestState.isSubmitting ||
 									interestState.isSubmitted
 								}
-								className='group relative overflow-hidden bg-gradient-to-r from-amber-500 via-orange-600 to-red-600 hover:from-amber-400 hover:via-orange-500 hover:to-red-500 text-white font-semibold py-3 lg:py-4 px-6 lg:px-8 rounded-lg shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed border border-white/20 w-full'
+								className='group relative overflow-hidden bg-gradient-to-r from-amber-500 via-orange-600 to-red-600 hover:from-amber-400 hover:via-orange-500 hover:to-red-500 text-white font-semibold py-3 lg:py-4 px-6 lg:px-8 rounded-lg shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed border border-white/20 w-full min-h-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent'
 							>
 								<div className='absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
 								<div className='relative flex items-center justify-center space-x-2 lg:space-x-3'>
@@ -250,6 +268,7 @@ export default function HeroSection() {
 							</button>
 
 							<button
+								aria-label='Get Updates'
 								onClick={() => {
 									const newsletterSection =
 										document.getElementById(
@@ -259,7 +278,7 @@ export default function HeroSection() {
 										behavior: "smooth",
 									});
 								}}
-								className='group bg-white/10 backdrop-blur-md hover:bg-white/20 text-white font-semibold py-3 lg:py-4 px-6 lg:px-8 rounded-lg border border-white/30 hover:border-amber-300/50 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 w-full'
+								className='group bg-white/10 backdrop-blur-md hover:bg-white/20 text-white font-semibold py-3 lg:py-4 px-6 lg:px-8 rounded-lg border border-white/30 hover:border-amber-300/50 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 w-full min-h-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent'
 							>
 								<span className='group-hover:text-amber-300 transition-colors duration-300 text-sm lg:text-base'>
 									Get Updates
@@ -288,39 +307,36 @@ export default function HeroSection() {
 					</div>
 
 					{/* Product showcase - moved to bottom on mobile */}
-					<div className='relative order-2 lg:order-1 pb-6 lg:pb-0'>
-						{!imageLoaded ? (
-							<SambalBaliSkeleton />
-						) : (
-							<div className='relative max-w-[280px] sm:max-w-sm lg:max-w-lg mx-auto lg:mx-0'>
-								{/* Main product image */}
-								<div className='relative z-20 group'>
-									<Image
-										src='/images/optimized/sambal-bali-md.webp'
-										alt='Spice Island Indonesia Sambal Bali - Authentic Indonesian Chili Paste'
-										width={320}
-										height={320}
-										className='w-full h-auto object-cover drop-shadow-2xl hover:scale-105 transition-transform duration-700 ease-out'
-										priority
-										fetchPriority='high'
-										quality={85}
-										sizes='(max-width: 640px) 280px, (max-width: 768px) 320px, 400px'
-										placeholder='blur'
-										blurDataURL='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k='
-									/>
+					<div className='relative order-2 lg:order-1 pb-4 sm:pb-2 lg:pb-0'>
+						<div className='relative max-w-[280px] sm:max-w-sm lg:max-w-lg mx-auto lg:mx-0'>
+							{/* Main product image */}
+							<div className='relative z-20 group'>
+								<Image
+									src='/images/optimized/sambal-bali-md.webp'
+									alt='Spice Island Indonesia Sambal Bali - Authentic Indonesian Chili Paste'
+									width={320}
+									height={320}
+									className='w-full h-auto object-cover drop-shadow-2xl hover:scale-105 transition-transform duration-700 ease-out'
+									priority
+									fetchPriority='high'
+									quality={85}
+									sizes='(max-width: 640px) 280px, (max-width: 768px) 320px, 400px'
+									placeholder='blur'
+									blurDataURL='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k='
+									onLoad={() => setImageLoaded(true)}
+								/>
 
-									{/* Elegant price badge */}
-									<div className='absolute -top-2 -right-2 lg:-top-4 lg:-right-4 z-30'>
-										<div className='bg-gradient-to-br from-amber-400 via-orange-500 to-red-600 text-white px-3 lg:px-4 py-1 lg:py-2 rounded-full font-bold text-sm lg:text-lg shadow-2xl border-2 border-white/20 backdrop-blur-sm transform rotate-12 hover:rotate-0 hover:scale-110 transition-all duration-500'>
-											£7.49
-										</div>
+								{/* Elegant price badge */}
+								<div className='absolute -top-2 -right-2 lg:-top-4 lg:-right-4 z-30'>
+									<div className='bg-gradient-to-br from-amber-400 via-orange-500 to-red-600 text-white px-3 lg:px-4 py-1 lg:py-2 rounded-full font-bold text-sm lg:text-lg shadow-2xl border-2 border-white/20 backdrop-blur-sm transform rotate-12 hover:rotate-0 hover:scale-110 transition-all duration-500'>
+										£7.49
 									</div>
 								</div>
-
-								{/* Subtle background glow */}
-								<div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-60 lg:w-80 h-60 lg:h-80 bg-gradient-radial from-orange-600/10 via-red-600/5 to-transparent rounded-full blur-3xl'></div>
 							</div>
-						)}
+
+							{/* Subtle background glow */}
+							<div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-60 lg:w-80 h-60 lg:h-80 bg-gradient-radial from-orange-600/10 via-red-600/5 to-transparent rounded-full blur-3xl'></div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -331,6 +347,11 @@ export default function HeroSection() {
 						circle,
 						var(--tw-gradient-stops)
 					);
+				}
+				@media (max-width: 639px) {
+					.mobile-text-shadow {
+						text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+					}
 				}
 			`}</style>
 		</section>

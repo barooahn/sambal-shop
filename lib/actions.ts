@@ -98,14 +98,45 @@ export async function unsubscribeFromNewsletter(email: string) {
 	}
 }
 
-// Record interest/like action
-export async function recordInterest() {
+// Record interest/like action (Supabase insert)
+export async function recordInterest({
+	source = "hero_waitlist",
+}: { source?: string } = {}) {
 	try {
-		// For static export, we'll simulate success
-		console.log("Interest recorded from user");
+		const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+		const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
-		// Simulate API delay
-		await new Promise((resolve) => setTimeout(resolve, 800));
+		if (!supabaseUrl || !supabaseKey) {
+			console.warn(
+				"Supabase env vars missing; falling back to simulated success"
+			);
+			await new Promise((resolve) => setTimeout(resolve, 500));
+			return {
+				success: true,
+				message: "Thanks for your interest! We'll notify you when we launch.",
+			};
+		}
+
+		const { createClient } = await import("@supabase/supabase-js");
+		const supabase = createClient(supabaseUrl, supabaseKey);
+
+		const identifier = `anon_${Date.now()}`;
+		const userAgent =
+			typeof navigator !== "undefined"
+				? navigator.userAgent
+				: "server";
+
+		const { error } = await supabase
+			.from("product_interest")
+			.insert([{ identifier, source, user_agent: userAgent }]);
+
+		if (error) {
+			console.error("Record interest error:", error);
+			return {
+				success: false,
+				message: "Unable to record interest right now.",
+			};
+		}
 
 		return {
 			success: true,

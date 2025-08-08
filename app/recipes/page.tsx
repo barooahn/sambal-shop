@@ -13,7 +13,7 @@ export default function RecipesPage() {
 			time: "15 mins",
 			serves: "4",
 			difficulty: "Easy",
-			image: "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg",
+			image: "/images/sambal-fried-rice.webp",
 			slug: "sambal-fried-rice",
 			ingredients: [
 				"3 cups cooked rice (preferably day-old)",
@@ -37,13 +37,13 @@ export default function RecipesPage() {
 		},
 		{
 			id: 2,
-			title: "Sambal Glazed Chicken",
+			title: "Sambal Chicken Stir-Fry",
 			description:
-				"Juicy chicken thighs with a sticky, spicy sambal glaze",
-			time: "45 mins",
+				"Fiery Indonesian chicken stir-fry with authentic sambal heat and aromatic spices",
+			time: "20 mins",
 			serves: "4",
-			difficulty: "Medium",
-			image: "https://images.pexels.com/photos/2338407/pexels-photo-2338407.jpeg",
+			difficulty: "Easy",
+			image: "/images/sambal-chicken-stir-fry.webp",
 			slug: "sambal-chicken-stir-fry",
 			ingredients: [
 				"8 chicken thighs, skin-on",
@@ -67,13 +67,13 @@ export default function RecipesPage() {
 		},
 		{
 			id: 3,
-			title: "Spicy Sambal Noodles",
+			title: "Sambal Noodle Soup",
 			description:
-				"Quick and satisfying noodles with vegetables and our signature sambal",
-			time: "20 mins",
-			serves: "2",
-			difficulty: "Easy",
-			image: "https://images.pexels.com/photos/1907244/pexels-photo-1907244.jpeg",
+				"Soul-warming Indonesian noodle soup with rich coconut broth and authentic sambal",
+			time: "45 mins",
+			serves: "4",
+			difficulty: "Medium",
+			image: "/images/sambal-noodle-soup.webp",
 			slug: "sambal-noodle-soup",
 			ingredients: [
 				"200g fresh egg noodles",
@@ -104,7 +104,7 @@ export default function RecipesPage() {
 			time: "10 mins",
 			serves: "2",
 			difficulty: "Easy",
-			image: "https://images.pexels.com/photos/824635/pexels-photo-824635.jpeg",
+			image: "/images/sambal-scrambled-eggs.webp",
 			slug: "sambal-scrambled-eggs",
 			ingredients: [
 				"6 large eggs",
@@ -132,7 +132,7 @@ export default function RecipesPage() {
 			time: "30 mins prep + 2 hours marinating",
 			serves: "4-6",
 			difficulty: "Easy",
-			image: "https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg",
+			image: "/images/sambal-bbq-marinade.webp",
 			slug: "sambal-bbq-marinade",
 			ingredients: [
 				"3 tbsp Spice Island Sambal Bali",
@@ -299,7 +299,7 @@ export default function RecipesPage() {
 						<div className='relative'>
 							<div className='aspect-square rounded-sm overflow-hidden shadow-luxury border border-gold-200'>
 								<Image
-									src='https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg'
+									src='/images/sambal-fried-rice.webp'
 									alt='Cooking with sambal'
 									className='w-full h-full object-cover'
 									width={400}

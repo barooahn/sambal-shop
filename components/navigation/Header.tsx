@@ -4,21 +4,14 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import {
-	Menu,
-	X,
-	ShoppingCart,
-	Heart,
-	User,
-	LogOut,
-	ChevronDown,
-} from "lucide-react";
+import { Menu, X, ShoppingCart, User, LogOut, ChevronDown } from "lucide-react";
 import { supabase } from "@/lib/supabase";
 import OptimizedImage from "@/components/optimization/OptimizedImage";
 
 export default function Header() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const [isProductsOpen, setIsProductsOpen] = useState(false);
+	const [isScrolled, setIsScrolled] = useState(false);
 	const [user, setUser] = useState<any>(null);
 	const [hoverTimeout, setHoverTimeout] = useState<NodeJS.Timeout | null>(
 		null
@@ -86,6 +79,14 @@ export default function Header() {
 		return () => subscription.unsubscribe();
 	}, []);
 
+	// Collapse micro-bar and add gold accent on scroll
+	useEffect(() => {
+		const onScroll = () => setIsScrolled(window.scrollY > 10);
+		onScroll();
+		window.addEventListener("scroll", onScroll);
+		return () => window.removeEventListener("scroll", onScroll);
+	}, []);
+
 	const handleSignOut = async () => {
 		await supabase.auth.signOut();
 		router.push("/");
@@ -103,11 +104,32 @@ export default function Header() {
 		const timeout = setTimeout(() => {
 			setIsProductsOpen(false);
 		}, 150); // Small delay to allow moving to dropdown
+
 		setHoverTimeout(timeout);
 	};
 
 	return (
-		<header className='bg-white/95 backdrop-blur-sm border-b border-gold-200 sticky top-0 z-50'>
+		<header
+			className={`sticky top-0 z-50 backdrop-blur-sm transition-all duration-300 ${isScrolled ? "bg-cream-50/80 border-b border-gold-300 shadow-gold" : "bg-cream-50/95 border-b border-gold-200"}`}
+		>
+			{/* Top micro-bar */}
+			<div
+				className={`overflow-hidden bg-burgundy-900 text-gold-200 text-xs font-body transition-[height,opacity] duration-300 ${isScrolled ? "h-0 opacity-0" : "h-9 opacity-100"}`}
+			>
+				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-9 flex items-center'>
+					<div className='flex items-center gap-6 overflow-x-auto whitespace-nowrap w-full no-scrollbar'>
+						<span className='flex items-center gap-1.5'>
+							Free UK delivery over £25
+						</span>
+						<span className='flex items-center gap-1.5'>
+							30-day returns
+						</span>
+						<span className='flex items-center gap-1.5'>
+							Small-batch quality
+						</span>
+					</div>
+				</div>
+			</div>
 			<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 				<div className='flex justify-between items-center h-16'>
 					{/* Logo */}
@@ -124,11 +146,11 @@ export default function Header() {
 								sizes='(max-width: 640px) 32px, 40px'
 							/>
 						</div>
-						<div className='block'>
-							<div className='text-sm sm:text-xl font-bold text-burgundy-900 font-brand'>
+						<div className='block leading-none'>
+							<div className='text-sm sm:text-xl font-bold text-burgundy-900 font-logo'>
 								Spice Island
 							</div>
-							<div className='text-xs text-gold-700 font-elegant tracking-wider'>
+							<div className='text-[10px] sm:text-xs text-gold-700 font-elegant tracking-[0.28em]'>
 								INDONESIA
 							</div>
 						</div>

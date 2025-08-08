@@ -5,6 +5,7 @@ import {
 	Playfair_Display,
 	Cormorant_Garamond,
 	Dancing_Script,
+	Cinzel,
 } from "next/font/google";
 import Header from "@/components/navigation/Header";
 import Footer from "@/components/navigation/Footer";
@@ -15,6 +16,7 @@ import PerformanceOptimizer, {
 	criticalCSS,
 	criticalImages,
 } from "@/components/optimization/PerformanceOptimizer";
+import { Toaster } from "sonner";
 
 const inter = Inter({
 	subsets: ["latin"],
@@ -41,6 +43,13 @@ const dancingScript = Dancing_Script({
 	variable: "--font-dancing",
 	display: "swap",
 	weight: ["400", "500", "600", "700"],
+});
+
+const cinzel = Cinzel({
+	subsets: ["latin"],
+	variable: "--font-logo",
+	display: "swap",
+	weight: ["400", "500", "600", "700", "800", "900"],
 });
 
 export const metadata: Metadata = {
@@ -92,9 +101,9 @@ export const metadata: Metadata = {
 	alternates: {
 		canonical: "https://spiceislandindonesia.com",
 		languages: {
-			'en-GB': 'https://spiceislandindonesia.com',
-			'en': 'https://spiceislandindonesia.com'
-		}
+			"en-GB": "https://spiceislandindonesia.com",
+			en: "https://spiceislandindonesia.com",
+		},
 	},
 };
 
@@ -112,7 +121,7 @@ export default function RootLayout({
 				/>
 			</head>
 			<body
-				className={`${inter.variable} ${playfair.variable} ${cormorant.variable} ${dancingScript.variable} ${inter.className}`}
+				className={`${inter.variable} ${playfair.variable} ${cormorant.variable} ${dancingScript.variable} ${cinzel.variable} ${inter.className}`}
 			>
 				<ThirdPartyScripts
 					measurementId={

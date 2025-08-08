@@ -74,8 +74,9 @@ const EnhancedRecipeInstructions: FC<EnhancedRecipeInstructionsProps> = ({
 		if (!completedSteps.includes(stepNumber)) {
 			setCompletedSteps([...completedSteps, stepNumber]);
 		}
+		// Advance to the next step if not on the last step
 		if (stepNumber < instructions.length) {
-			setCurrentStep(stepNumber);
+			setCurrentStep(stepNumber + 1);
 		}
 	};
 

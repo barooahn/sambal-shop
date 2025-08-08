@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 		title: "Authentic Sambal Fried Rice Recipe - Indonesian Nasi Goreng",
 		description:
 			"Transform leftover rice into Indonesia&apos;s national dish with authentic sambal. Easy 20-minute recipe with step-by-step instructions.",
-		images: ["/images/Spice Island Indonesia Sambal Bali 185g Label.png"],
+		images: ["/images/sambal-fried-rice.webp"],
 		type: "article",
 	},
 };
@@ -34,7 +34,7 @@ const recipe = {
 	name: "Sambal Fried Rice (Nasi Goreng)",
 	description:
 		"Indonesia&apos;s beloved national dish - a perfect way to transform leftover rice into something spectacular with the heat and complexity of authentic sambal.",
-	image: "/images/Spice Island Indonesia Sambal Bali 185g Label.png",
+	image: "/images/sambal-fried-rice.webp",
 	prepTime: "PT10M",
 	cookTime: "PT15M",
 	totalTime: "PT25M",
@@ -441,7 +441,7 @@ export default function SambalFriedRicePage() {
 				<RecipeCard recipe={recipe} />
 
 				{/* Enhanced Interactive Recipe Instructions */}
-				<div className='max-w-4xl mx-auto mt-12'>
+				<div className='max-w-4xl mx-auto mt-8'>
 					<EnhancedRecipeInstructions
 						title='Interactive Cooking Guide'
 						description="Follow along step-by-step with time estimates and chef&apos;s tips"
@@ -455,7 +455,7 @@ export default function SambalFriedRicePage() {
 				</div>
 
 				{/* Internal Linking for SEO */}
-				<div className='max-w-6xl mx-auto mt-16'>
+				<div className='max-w-6xl mx-auto mt-12'>
 					<InternalLinkingOptimization
 						currentPage='recipe'
 						relatedProducts={relatedProducts}
@@ -465,7 +465,7 @@ export default function SambalFriedRicePage() {
 				</div>
 
 				{/* Additional Content */}
-				<div className='max-w-4xl mx-auto mt-12 space-y-8'>
+				<div className='max-w-4xl mx-auto mt-10 space-y-8'>
 					{/* About This Recipe */}
 					<section className='bg-white rounded-sm shadow-sm border border-gold-200 p-8'>
 						<h2 className='text-2xl font-bold text-burgundy-900 mb-4 font-heading'>

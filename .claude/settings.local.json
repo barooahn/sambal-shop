@@ -5,7 +5,10 @@
       "Bash(cp:*)",
       "Bash(npm run build:*)",
       "Bash(yarn build)",
-      "Bash(timeout 30 yarn build)"
+      "Bash(timeout 30 yarn build)",
+      "Bash(find:*)",
+      "Bash(mv:*)",
+      "Bash(sed:*)"
     ],
     "deny": []
   }
