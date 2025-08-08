@@ -3,7 +3,7 @@ import { Instagram, Facebook } from "lucide-react";
 
 export default function Footer() {
 	return (
-		<footer className='bg-neutral-900 text-gold-200 py-16 relative overflow-hidden border-t border-gold-600/30'>
+		<footer className='bg-neutral-900 text-gold-100 py-16 relative overflow-hidden border-t border-gold-600/30'>
 			{/* Batik-inspired overlay */}
 			<div className='absolute inset-0 pointer-events-none opacity-20 batik-pattern-subtle'></div>
 
@@ -43,7 +43,7 @@ export default function Footer() {
 							<li>
 								<Link
 									href='/sambal-oelek-uk'
-									className='text-gold-200 hover:text-gold-100 transition-colors'
+									className='text-gold-100 hover:underline underline-offset-4 transition-colors'
 								>
 									Sambal Oelek UK
 								</Link>
@@ -51,7 +51,7 @@ export default function Footer() {
 							<li>
 								<Link
 									href='/sambal-bali-aromatic-spicy'
-									className='text-gold-200 hover:text-gold-100 transition-colors'
+									className='text-gold-100 hover:underline underline-offset-4 transition-colors'
 								>
 									Sambal Bali UK
 								</Link>
@@ -59,7 +59,7 @@ export default function Footer() {
 							<li>
 								<Link
 									href='/sample-pack-try-first'
-									className='text-gold-200 hover:text-gold-100 transition-colors'
+									className='text-gold-100 hover:underline underline-offset-4 transition-colors'
 								>
 									Try Sample Pack UK
 								</Link>
@@ -67,7 +67,7 @@ export default function Footer() {
 							<li>
 								<Link
 									href='/shop#gift-set'
-									className='text-gold-200 hover:text-gold-100 transition-colors'
+									className='text-gold-100 hover:underline underline-offset-4 transition-colors'
 								>
 									Gift Set
 								</Link>
@@ -75,7 +75,7 @@ export default function Footer() {
 							<li>
 								<Link
 									href='/shop'
-									className='text-gold-200 hover:text-gold-100 transition-colors'
+									className='text-gold-100 hover:underline underline-offset-4 transition-colors'
 								>
 									Shop All Indonesian Sambal UK
 								</Link>

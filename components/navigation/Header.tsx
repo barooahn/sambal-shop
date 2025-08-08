@@ -112,9 +112,15 @@ export default function Header() {
 		<header
 			className={`sticky top-0 z-50 backdrop-blur-sm transition-all duration-300 ${isScrolled ? "bg-cream-50/80 border-b border-gold-300 shadow-gold" : "bg-cream-50/95 border-b border-gold-200"}`}
 		>
+			<a
+				href='#main-content'
+				className='sr-only focus:not-sr-only absolute left-2 top-2 z-[60] bg-white text-burgundy-900 px-3 py-2 rounded-sm shadow focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-burgundy-600 focus-visible:ring-offset-2'
+			>
+				Skip to content
+			</a>
 			{/* Top micro-bar */}
 			<div
-				className={`overflow-hidden bg-burgundy-900 text-gold-200 text-xs font-body transition-[height,opacity] duration-300 ${isScrolled ? "h-0 opacity-0" : "h-9 opacity-100"}`}
+				className={`overflow-hidden bg-burgundy-900 text-gold-100 text-xs font-body transition-[height,opacity] duration-300 ${isScrolled ? "h-0 opacity-0" : "h-9 opacity-100"}`}
 			>
 				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-9 flex items-center'>
 					<div className='flex items-center gap-6 overflow-x-auto whitespace-nowrap w-full no-scrollbar'>
@@ -150,14 +156,17 @@ export default function Header() {
 							<div className='text-sm sm:text-xl font-bold text-burgundy-900 font-logo'>
 								Spice Island
 							</div>
-							<div className='text-[10px] sm:text-xs text-gold-700 font-elegant tracking-[0.28em]'>
+							<div className='text-[10px] sm:text-xs text-gold-800 font-elegant tracking-[0.28em]'>
 								INDONESIA
 							</div>
 						</div>
 					</Link>
 
 					{/* Desktop Navigation */}
-					<nav className='hidden md:flex space-x-8'>
+					<nav
+						className='hidden md:flex space-x-8'
+						aria-label='Primary'
+					>
 						{navigation.map((item) => (
 							<div key={item.name} className='relative'>
 								{item.hasDropdown ? (
@@ -176,7 +185,11 @@ export default function Header() {
 										</button>
 
 										{isProductsOpen && (
-											<div className='absolute top-full left-0 w-80 bg-white rounded-sm shadow-luxury border border-gold-200 p-6 z-50'>
+											<div
+												id='products-menu'
+												role='menu'
+												className='absolute top-full left-0 w-80 bg-white rounded-sm shadow-luxury border border-gold-200 p-6 z-50'
+											>
 												<div className='space-y-4'>
 													{item.dropdown?.map(
 														(
@@ -189,7 +202,7 @@ export default function Header() {
 																href={
 																	dropdownItem.href
 																}
-																className='block group'
+																className='block group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-burgundy-600 focus-visible:ring-offset-2 rounded-sm'
 																onClick={() =>
 																	setIsProductsOpen(
 																		false
@@ -203,7 +216,7 @@ export default function Header() {
 																				dropdownItem.name
 																			}
 																		</h4>
-																		<p className='text-sm text-neutral-600 font-body'>
+																		<p className='text-sm text-neutral-700 font-body'>
 																			{
 																				dropdownItem.description
 																			}
@@ -274,8 +287,13 @@ export default function Header() {
 
 					{/* Mobile menu button */}
 					<button
+						aria-label={
+							isMenuOpen ? "Close menu" : "Open menu"
+						}
+						aria-expanded={isMenuOpen}
+						aria-controls='mobile-menu'
 						onClick={() => setIsMenuOpen(!isMenuOpen)}
-						className='md:hidden p-2 rounded-md text-burgundy-800 hover:text-burgundy-600 hover:bg-burgundy-50 transition-colors duration-200'
+						className='md:hidden p-2 rounded-md text-burgundy-800 hover:text-burgundy-600 hover:bg-burgundy-50 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-burgundy-600 focus-visible:ring-offset-2'
 					>
 						{isMenuOpen ? (
 							<X className='w-6 h-6' />
