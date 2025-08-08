@@ -9,8 +9,7 @@ import FAQSchema from "@/components/seo/FAQSchema";
 
 export const metadata: Metadata = {
 	title: "The Art of Traditional Sambal Making: A Journey Through the Spice Islands | Spice Island Indonesia",
-	description:
-		"Discover the ancient techniques and principles behind authentic Indonesian sambal — from chili selection to stone-grinding methods.",
+	description: excerpt,
 	keywords: [
 		"traditional sambal making",
 		"Indonesian sambal",

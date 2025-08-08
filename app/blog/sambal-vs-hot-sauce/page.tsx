@@ -20,8 +20,7 @@ import ArticleSchema from "@/components/seo/ArticleSchema";
 
 export const metadata: Metadata = {
 	title: "Sambal vs Hot Sauce: Understanding the Difference | Complete Guide | Spice Island Indonesia",
-	description:
-		"Discover what makes Indonesian sambal unique compared to Western hot sauces. Learn about ingredients, production methods, flavors, and why authenticity matters in Indonesian cuisine.",
+	description: excerpt,
 	keywords:
 		"sambal vs hot sauce, Indonesian sambal difference, authentic sambal ingredients, sambal oelek vs hot sauce, Indonesian condiments UK, traditional sambal vs Western sauces, sambal authenticity guide",
 	openGraph: {

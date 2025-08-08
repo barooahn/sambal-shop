@@ -1,4 +1,7 @@
 import { Metadata } from "next";
+export const excerpt =
+	"Master authentic Indonesian cooking in your British kitchen. Complete guide with traditional recipes, UK ingredient substitutions, shopping tips & cultural insights from Chef Yossie.";
+
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -17,8 +20,7 @@ import ArticleSchema from "@/components/seo/ArticleSchema";
 
 export const metadata: Metadata = {
 	title: "Indonesian Cooking Guide for British Kitchens | Complete Beginner's Guide | Spice Island Indonesia",
-	description:
-		"Master authentic Indonesian cooking in your British kitchen. Complete guide with traditional recipes, UK ingredient substitutions, shopping tips & cultural insights from Chef Yossie.",
+	description: excerpt,
 	keywords:
 		"Indonesian cooking UK, Indonesian recipes British kitchen, sambal recipes UK, Indonesian spices UK, Asian cooking guide Britain, authentic Indonesian food UK, Indonesian cuisine London, traditional Indonesian cooking",
 	openGraph: {

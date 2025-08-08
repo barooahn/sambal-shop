@@ -9,8 +9,7 @@ import FAQSchema from "@/components/seo/FAQSchema";
 
 export const metadata: Metadata = {
 	title: "The History of the Spice Islands: Where Your Sambal Comes From | Spice Island Indonesia",
-	description:
-		"Journey back to Indonesia's Maluku Islands — the original Spice Islands — and discover how volcanic terroir shaped the chilies behind authentic sambal.",
+	description: excerpt,
 	keywords: [
 		"Spice Islands history",
 		"Maluku",
