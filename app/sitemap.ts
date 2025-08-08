@@ -96,10 +96,17 @@ const staticRoutes = [
 
 // Blog posts (add new ones here as they&apos;re created)
 const blogPosts = [
+	{ slug: "sambal-vs-hp-sauce", date: "2025-01-08" },
+	{ slug: "indonesian-cooking-guide-british-kitchens", date: "2025-01-08" },
+	{ slug: "indonesian-spice-levels-british-palates", date: "2025-01-08" },
+	{ slug: "indonesian-ingredients-uk-shopping-guide", date: "2025-01-07" },
 	{ slug: "spice-islands-history", date: "2024-02-10" },
-	{ slug: "5-ways-sambal-british-cooking", date: "2024-02-05" },
+	{ slug: "sambal-british-classics", date: "2024-02-05" },
 	{ slug: "ultimate-guide-indonesian-sambal", date: "2024-02-01" },
 	{ slug: "traditional-sambal-making", date: "2024-01-15" },
+	{ slug: "spice-islands-to-your-kitchen", date: "2024-01-05" },
+	{ slug: "sambal-vs-hot-sauce", date: "2024-01-01" },
+	{ slug: "indonesian-food-culture-context", date: "2025-01-08" },
 ];
 
 // Recipe pages (add new ones here as they&apos;re created)

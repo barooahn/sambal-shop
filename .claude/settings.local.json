@@ -8,7 +8,12 @@
       "Bash(timeout 30 yarn build)",
       "Bash(find:*)",
       "Bash(mv:*)",
-      "Bash(sed:*)"
+      "Bash(sed:*)",
+      "Bash(npm run optimize-images:*)",
+      "Bash(npm run optimize-blog:*)",
+      "Bash(rg:*)",
+      "Bash(timeout 30 npm run build)",
+      "Bash(timeout:*)"
     ],
     "deny": []
   }

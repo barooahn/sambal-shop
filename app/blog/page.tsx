@@ -53,10 +53,20 @@ const blogPosts = [
 		slug: "indonesian-spice-levels-british-palates",
 	},
 	{
+		id: 11,
+		title: "Essential Indonesian Ingredients: UK Shopping Guide",
+		excerpt: "Complete shopping guide for Indonesian ingredients in the UK. Find authentic sambal, spices, and pantry essentials at supermarkets, Asian shops, and online stores with money-saving tips.",
+		image: "/images/blog/ingredients-shopping-guide.webp",
+		category: "Cooking Guide",
+		readTime: "12 min read",
+		publishDate: "2025-01-07",
+		slug: "indonesian-ingredients-uk-shopping-guide",
+	},
+	{
 		id: 4,
 		title: "The History of the Spice Islands: Where Your Sambal Comes From",
 		excerpt: "Journey back to the Maluku Islands, the original Spice Islands that changed world history. Discover the rich culinary heritage and volcanic soil that creates the perfect chilies for authentic sambal.",
-		image: "/images/optimized/indonesian_vista-lg.webp",
+		image: "/images/blog/spice-islands-history.webp",
 		category: "Heritage Stories",
 		readTime: "12 min read",
 		publishDate: "2024-02-10",
@@ -64,19 +74,19 @@ const blogPosts = [
 	},
 	{
 		id: 5,
-		title: "5 Ways to Use Indonesian Sambal in British Cooking",
-		excerpt: "Transform your favourite British dishes with authentic Indonesian sambal. From Sunday roasts to fish and chips, discover how this traditional chili paste can revolutionize your cooking.",
-		image: "/images/Spice Island Indonesia Sambal Bali 185g Label.webp",
+		title: "Transform British Classics with Indonesian Sambal: 8 Creative Ways",
+		excerpt: "Revolutionize your favourite British dishes with authentic Indonesian sambal. From Sunday roasts to fish and chips, discover how traditional sambal elevates classic British cooking with bold, complex flavors.",
+		image: "/images/blog/sambal-british-fusion.webp",
 		category: "Cooking Tips",
-		readTime: "10 min read",
+		readTime: "12 min read",
 		publishDate: "2024-02-05",
-		slug: "5-ways-sambal-british-cooking",
+		slug: "sambal-british-classics",
 	},
 	{
 		id: 6,
 		title: "The Ultimate Guide to Indonesian Sambal: Beyond Sriracha",
 		excerpt: "Discover the authentic world of Indonesian sambal - from traditional varieties to modern applications. Learn what makes real sambal different from Western hot sauces and how to use it in British cooking.",
-		image: "/images/Spice Island Indonesia Sambal Oelek 185g Label.webp",
+		image: "/images/blog/ultimate-sambal-guide.webp",
 		category: "Food Education",
 		readTime: "12 min read",
 		publishDate: "2024-02-01",
@@ -86,7 +96,7 @@ const blogPosts = [
 		id: 7,
 		title: "The Art of Traditional Sambal Making: A Journey Through the Spice Islands",
 		excerpt: "Discover the ancient techniques and secret ingredients that make authentic Indonesian sambal so special. From selecting the perfect chilies to the traditional grinding methods passed down through generations.",
-		image: "/images/optimized/indonesian_vista-lg.webp",
+		image: "/images/blog/traditional-sambal-making.webp",
 		category: "Traditional Recipes",
 		readTime: "8 min read",
 		publishDate: "2024-01-15",
@@ -94,29 +104,29 @@ const blogPosts = [
 	},
 	{
 		id: 8,
-		title: "5 Ways to Use Sambal Oelek in British Cooking",
-		excerpt: "Transform your everyday British dishes with the bold flavors of authentic Indonesian sambal. From Sunday roasts to fish and chips, discover how sambal can elevate your cooking.",
-		image: "/images/Spice Island Indonesia Sambal Oelek 185g Label.webp",
-		category: "Cooking Tips",
-		readTime: "6 min read",
+		title: "Mastering Indonesian Heat: A Guide to Spice Levels and Flavor Building",
+		excerpt: "Learn to navigate Indonesian heat levels with confidence. Discover how to build spice tolerance, balance heat with flavor, and create authentic Indonesian dishes that suit British palates.",
+		image: "/images/blog/indonesian-spice-mastery.webp",
+		category: "Cooking Guide",
+		readTime: "9 min read",
 		publishDate: "2024-01-10",
-		slug: "sambal-oelek-british-cooking",
+		slug: "mastering-indonesian-heat",
 	},
 	{
 		id: 9,
-		title: "The History of the Spice Islands: Where Our Story Begins",
-		excerpt: "Journey back to the Maluku Islands, the original Spice Islands that changed world history. Learn about the rich culinary heritage that inspired our authentic sambal recipes.",
-		image: "/images/optimized/indonesian_vista-lg.webp",
+		title: "Our Journey from the Spice Islands to Your Kitchen",
+		excerpt: "Discover how traditional Indonesian spice knowledge from the historic Maluku Islands inspired our authentic sambal recipes, bringing centuries-old culinary wisdom to modern British kitchens.",
+		image: "/images/blog/spice-islands-heritage.webp",
 		category: "Heritage Stories",
 		readTime: "10 min read",
 		publishDate: "2024-01-05",
-		slug: "spice-islands-history",
+		slug: "spice-islands-to-your-kitchen",
 	},
 	{
 		id: 10,
 		title: "Sambal vs Hot Sauce: Understanding the Difference",
 		excerpt: "Not all chili condiments are created equal. Explore what makes Indonesian sambal unique compared to Western hot sauces, and why authenticity matters in Indonesian cuisine.",
-		image: "/images/Spice Island Indonesia Sambal Bali 185g Label.webp",
+		image: "/images/blog/sambal-vs-hot-sauce-comparison.webp",
 		category: "Food Education",
 		readTime: "5 min read",
 		publishDate: "2024-01-01",
@@ -182,7 +192,7 @@ export default function BlogPage() {
 							className='overflow-hidden rounded-sm'
 						>
 							<div className='grid lg:grid-cols-2 gap-0'>
-								<div className='relative aspect-[4/3] lg:aspect-auto'>
+								<div className='relative aspect-[16/9] lg:aspect-auto'>
 									<Image
 										src={blogPosts[0].image}
 										alt={blogPosts[0].title}
@@ -246,7 +256,7 @@ export default function BlogPage() {
 								key={post.id}
 								className='overflow-hidden shadow-lg border border-gold-200 bg-gradient-to-br from-cream-50 to-cream-100 rounded-sm hover:shadow-luxury transition-all duration-300 group'
 							>
-								<div className='relative aspect-[4/3]'>
+								<div className='relative aspect-[16/9]'>
 									<Image
 										src={post.image}
 										alt={post.title}
