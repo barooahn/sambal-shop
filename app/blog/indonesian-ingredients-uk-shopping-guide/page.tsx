@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-export const excerpt =
+const excerpt =
 	"Complete shopping guide for Indonesian ingredients in the UK. Find authentic sambal, spices, and pantry essentials at supermarkets, Asian shops, and online stores with money-saving tips.";
 
 import Link from "next/link";

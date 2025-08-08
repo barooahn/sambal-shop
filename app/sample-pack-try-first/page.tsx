@@ -31,7 +31,7 @@ export const metadata = {
 		type: "website",
 		images: [
 			{
-				url: "https://sambal-shop.vercel.app/images/Spice Island Indonesia Sambal Oelek 185g Label.png",
+				url: "https://spiceislandindonesia.com/images/Spice Island Indonesia Sambal Oelek 185g Label.png",
 				width: 400,
 				height: 400,
 				alt: "Indonesian Sambal Sample Pack - Try before you buy",
@@ -71,10 +71,10 @@ export default function SamplePackTryFirstPage() {
 
 							<p className='text-xl sm:text-2xl text-gold-200 mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-body'>
 								New to Indonesian sambal? Start your
-								journey with Chef Yossie&apos;s sample pack.
-								Try both Sambal Oelek and Sambal Bali in
-								perfect tasting portions before choosing
-								your favorites.
+								journey with Chef Yossie&apos;s sample
+								pack. Try both Sambal Oelek and Sambal
+								Bali in perfect tasting portions before
+								choosing your favorites.
 							</p>
 
 							{/* Key Features */}
@@ -263,8 +263,8 @@ export default function SamplePackTryFirstPage() {
 						</h2>
 						<p className='text-xl text-neutral-600 max-w-3xl mx-auto font-body'>
 							Indonesian sambal is unlike any condiment
-							you&apos;ve tried. Our sample pack ensures you
-							find your perfect match.
+							you&apos;ve tried. Our sample pack ensures
+							you find your perfect match.
 						</p>
 					</div>
 
@@ -322,9 +322,9 @@ export default function SamplePackTryFirstPage() {
 								</h3>
 								<p className='text-neutral-600 font-body'>
 									Introducing friends to Indonesian
-									cuisine? Start with samples - it&apos;s
-									thoughtful and shows you care about
-									their preferences.
+									cuisine? Start with samples -
+									it&apos;s thoughtful and shows you
+									care about their preferences.
 								</p>
 							</div>
 						</GlassCard>

@@ -643,7 +643,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 					name: "Spice Island Indonesia",
 					type: "Organization",
 					logo: {
-						url: "https://sambal-shop.vercel.app/images/optimized/logo-lg.webp",
+						url: "https://spiceislandindonesia.com/images/optimized/logo-lg.webp",
 						width: 200,
 						height: 60,
 					},

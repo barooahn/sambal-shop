@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-export const excerpt =
+const excerpt =
 	"Not all chili condiments are created equal. Explore what makes Indonesian sambal unique compared to Western hot sauces, and why authenticity matters in Indonesian cuisine.";
 
 import Image from "next/image";

@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-export const excerpt =
+const excerpt =
 	"Revolutionize your favourite British dishes with authentic Indonesian sambal. From Sunday roasts to fish and chips, discover how traditional sambal elevates classic British cooking with bold, complex flavors.";
 
 import Image from "next/image";

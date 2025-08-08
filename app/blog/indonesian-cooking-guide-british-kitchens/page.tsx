@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-export const excerpt =
+const excerpt =
 	"Master authentic Indonesian cooking in your British kitchen. Complete guide with traditional recipes, UK ingredient substitutions, shopping tips & cultural insights from Chef Yossie.";
 
 import Image from "next/image";

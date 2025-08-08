@@ -152,7 +152,7 @@ export default function SambalOelekUKPage() {
 			"Traditional Indonesian chili paste made from fresh red chilies, salt, and vinegar. Handcrafted by Chef Yossie using authentic Bandung family recipes.",
 		brand: "Spice Island Indonesia",
 		category: "Condiments & Sauces",
-		image: "https://sambal-shop.vercel.app/images/Spice Island Indonesia Sambal Oelek 185g Label.png",
+		image: "https://spiceislandindonesia.com/images/Spice Island Indonesia Sambal Oelek 185g Label.png",
 		offers: [
 			{
 				name: "Sambal Oelek 185g",
@@ -680,56 +680,64 @@ export default function SambalOelekUKPage() {
 									sambal: "15,000-30,000 SHU",
 									hpSauce: "1,000-2,500 SHU",
 									winner: "sambal",
-									explanation: "Sambal oelek provides significantly more heat"
+									explanation:
+										"Sambal oelek provides significantly more heat",
 								},
 								{
 									category: "Ingredients",
 									sambal: "Chilies, salt, vinegar",
 									hpSauce: "Chilies, sugar, garlic, vinegar, preservatives",
 									winner: "sambal",
-									explanation: "Sambal uses only natural ingredients"
+									explanation:
+										"Sambal uses only natural ingredients",
 								},
 								{
 									category: "Texture",
 									sambal: "Chunky, rustic",
 									hpSauce: "Smooth, processed",
 									winner: "sambal",
-									explanation: "Traditional texture shows authenticity"
+									explanation:
+										"Traditional texture shows authenticity",
 								},
 								{
 									category: "Sweetness",
 									sambal: "No added sugar",
 									hpSauce: "Sweet (sugar added)",
 									winner: "sambal",
-									explanation: "Pure chili flavor without sweetness"
+									explanation:
+										"Pure chili flavor without sweetness",
 								},
 								{
 									category: "Authenticity",
 									sambal: "Traditional Indonesian",
 									hpSauce: "Thai-American fusion",
 									winner: "sambal",
-									explanation: "Authentic Indonesian tradition"
+									explanation:
+										"Authentic Indonesian tradition",
 								},
 								{
 									category: "Cooking Versatility",
 									sambal: "Excellent for cooking",
 									hpSauce: "Better as condiment",
 									winner: "sambal",
-									explanation: "Works both as ingredient and condiment"
+									explanation:
+										"Works both as ingredient and condiment",
 								},
 								{
 									category: "Availability",
 									sambal: "Specialty/online",
 									hpSauce: "Widely available",
 									winner: "context",
-									explanation: "Depends on location preference"
+									explanation:
+										"Depends on location preference",
 								},
 								{
 									category: "Price Point",
 									sambal: "Premium",
 									hpSauce: "Budget-friendly",
 									winner: "context",
-									explanation: "Depends on budget priorities"
+									explanation:
+										"Depends on budget priorities",
 								},
 							]}
 							summary='Sambal Oelek offers superior heat, authenticity, and cooking versatility with minimal ingredients, while Sriracha provides wider availability and lower cost. For authentic Indonesian cooking and pure chili flavor, sambal oelek is the clear winner.'
@@ -744,42 +752,48 @@ export default function SambalOelekUKPage() {
 										sambal: "15,000-30,000 SHU",
 										hpSauce: "2,500-5,000 SHU",
 										winner: "sambal",
-										explanation: "Sambal oelek provides significantly more heat"
+										explanation:
+											"Sambal oelek provides significantly more heat",
 									},
 									{
 										category: "Flavor Base",
 										sambal: "Pure chili",
 										hpSauce: "Vinegar-forward",
 										winner: "sambal",
-										explanation: "Pure chili flavor without masking vinegar"
+										explanation:
+											"Pure chili flavor without masking vinegar",
 									},
 									{
 										category: "Texture",
 										sambal: "Chunky paste",
 										hpSauce: "Thin liquid",
 										winner: "sambal",
-										explanation: "Traditional paste texture better for cooking"
+										explanation:
+											"Traditional paste texture better for cooking",
 									},
 									{
 										category: "Usage in Cooking",
 										sambal: "Excellent for stir-fries",
 										hpSauce: "Better for seasoning",
 										winner: "sambal",
-										explanation: "Works as both ingredient and condiment"
+										explanation:
+											"Works as both ingredient and condiment",
 									},
 									{
 										category: "Cultural Origin",
 										sambal: "Indonesian traditional",
 										hpSauce: "Louisiana Creole",
 										winner: "context",
-										explanation: "Both have authentic cultural heritage"
+										explanation:
+											"Both have authentic cultural heritage",
 									},
 									{
 										category: "Shelf Stability",
 										sambal: "6-8 weeks opened",
 										hpSauce: "Years unopened/opened",
 										winner: "context",
-										explanation: "Depends on usage frequency"
+										explanation:
+											"Depends on usage frequency",
 									},
 								]}
 								summary='Sambal Oelek delivers significantly more heat and better cooking performance, while Tabasco offers longer shelf life and tangy vinegar notes. Choose sambal oelek for authentic Asian cooking and serious heat.'

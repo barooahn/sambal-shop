@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-export const excerpt =
+const excerpt =
 	"Discover how traditional Indonesian spice knowledge from the historic Maluku Islands inspired our authentic sambal recipes, bringing centuries-old culinary wisdom to modern British kitchens.";
 
 import Image from "next/image";

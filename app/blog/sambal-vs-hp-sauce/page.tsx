@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-export const excerpt =
+const excerpt =
 	"A professional chef's honest comparison of Indonesia's ancient sambal tradition against Britain's beloved HP Sauce. Discover why sambal is quietly revolutionizing British kitchens.";
 
 import Image from "next/image";

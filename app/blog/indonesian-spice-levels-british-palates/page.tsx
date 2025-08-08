@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-export const excerpt =
+const excerpt =
 	"Navigate Indonesian heat levels safely. Learn to build spice tolerance, adjust traditional recipes for British tastes, and discover complex flavors behind the fire.";
 
 import Image from "next/image";

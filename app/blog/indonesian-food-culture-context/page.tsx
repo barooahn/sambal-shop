@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-export const excerpt =
+const excerpt =
 	"Learn the cultural significance behind Indonesian dishes, proper etiquette, meal structure, and how to respectfully appreciate Indonesian culinary traditions in British kitchens.";
 
 import Image from "next/image";
