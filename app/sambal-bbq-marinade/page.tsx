@@ -30,7 +30,7 @@ export const metadata = {
 		type: "website",
 		images: [
 			{
-				url: "https://sambal-shop.vercel.app/images/Spice Island Indonesia Sambal Oelek 185g Label.png",
+				url: "https://spiceislandindonesia.com/images/Spice Island Indonesia Sambal Oelek 185g Label.png",
 				width: 400,
 				height: 400,
 				alt: "Indonesian Sambal BBQ Marinade - Authentic Grilling Sauce",

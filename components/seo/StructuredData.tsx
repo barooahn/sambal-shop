@@ -164,7 +164,7 @@ export default function StructuredData({
 		name: "Spice Island Indonesia",
 		description:
 			"Authentic Indonesian sambal from the original Spice Islands",
-		url: "https://sambal-shop.vercel.app",
+		url: "https://spiceislandindonesia.com",
 		telephone: "+44 (0) 20 1234 5678", // TODO: Replace with real phone number
 		email: "hello@spiceislandindonesia.co.uk", // TODO: Replace with real email
 		address: {

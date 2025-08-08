@@ -99,10 +99,10 @@ export const metadata: Metadata = {
 		},
 	},
 	alternates: {
-		canonical: "https://spiceislandindonesia.com",
+		canonical: "https://spiceislandindonesia.com/",
 		languages: {
-			"en-GB": "https://spiceislandindonesia.com",
-			en: "https://spiceislandindonesia.com",
+			"en-GB": "https://spiceislandindonesia.com/",
+			en: "https://spiceislandindonesia.com/",
 		},
 	},
 };
