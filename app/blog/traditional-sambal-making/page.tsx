@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+export const excerpt =
+	"Discover the ancient techniques and secret ingredients that make authentic Indonesian sambal so special. From selecting the perfect chilies to the traditional grinding methods passed down through generations.";
+
 import Image from "next/image";
 import Link from "next/link";
 import ArticleSchema from "@/components/seo/ArticleSchema";
@@ -42,6 +45,23 @@ const faqData = [
 	{
 		question: "Why is sambal kept simple?",
 		answer: "Minimal ingredients preserve the chili’s natural character, texture, and aroma. Simplicity reveals quality.",
+	},
+	,
+	{
+		question: "How fine should the grind be?",
+		answer: "Aim for a coarse, rustic paste with visible chili flecks. Too smooth and the mouthfeel becomes saucy rather than clingy.",
+	},
+	{
+		question: "Can I use a food processor?",
+		answer: "In a pinch, pulse briefly and avoid long blends. A stone mortar breaks cells differently and preserves texture and aroma.",
+	},
+	{
+		question: "How do I control bitterness?",
+		answer: "Grind steadily without overheating. Add acidity gradually and taste often. If bitterness creeps in, round with fat (egg, coconut milk) in the dish, not sugar in the sambal.",
+	},
+	{
+		question: "How long does homemade sambal keep?",
+		answer: "Refrigerated in a clean jar, 2–4 weeks. Always use a clean spoon and consider a thin layer of neutral oil on top to reduce oxidation.",
 	},
 ];
 

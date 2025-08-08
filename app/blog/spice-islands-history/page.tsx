@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+export const excerpt =
+	"Journey back to the Maluku Islands, the original Spice Islands that changed world history. Discover the rich culinary heritage and volcanic soil that creates the perfect chilies for authentic sambal.";
+
 import Image from "next/image";
 import Link from "next/link";
 import ArticleSchema from "@/components/seo/ArticleSchema";
@@ -42,6 +45,23 @@ const faqData = [
 	{
 		question: "Why does volcanic soil matter for chilies?",
 		answer: "Volcanic soils rich in minerals help chilies develop complex capsaicinoids and flavor compounds — foundational to authentic sambal.",
+	},
+	,
+	{
+		question: "What made nutmeg and cloves so valuable?",
+		answer: "Scarcity, medicinal beliefs, and preservation power. Control of these spices shaped trade routes and global politics for centuries.",
+	},
+	{
+		question: "What does ‘terroir’ mean for chilies?",
+		answer: "Just like wine, soil and climate shape chili flavor and heat development. Maluku’s volcanic soils build clean heat and complexity.",
+	},
+	{
+		question: "How is sambal connected to Spice Islands history?",
+		answer: "Indigenous techniques from Maluku informed grinding, preservation and minimal-ingredient philosophy that define authentic sambal today.",
+	},
+	{
+		question: "How can I taste this heritage at home?",
+		answer: "Use small amounts of authentic sambal in simple dishes and focus on aroma and mouthfeel first. Let heat build gradually.",
 	},
 ];
 
