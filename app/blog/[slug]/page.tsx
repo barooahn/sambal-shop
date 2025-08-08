@@ -209,10 +209,10 @@ const blogPosts = {
 		<div class="bg-white border border-gold-200 rounded-lg p-6 my-8">
 			<h2 class="text-xl font-bold text-burgundy-900 mb-4">📚 Continue Your Indonesian Culinary Journey</h2>
 			<div class="space-y-3">
-				<p>• <a href="/blog/5-ways-sambal-british-cooking" class="text-burgundy-600 hover:text-burgundy-800 underline">5 Ways to Use Indonesian Sambal in British Cooking</a></p>
+				<p>• <a href="/blog/spice-islands-to-your-kitchen" class="text-burgundy-600 hover:text-burgundy-800 underline">Our Journey from the Spice Islands to Your Kitchen</a></p>
+				<p>• <a href="/blog/sambal-vs-hot-sauce" class="text-burgundy-600 hover:text-burgundy-800 underline">Sambal vs Hot Sauce: Understanding the Difference</a></p>
 				<p>• <a href="/blog/ultimate-guide-indonesian-sambal" class="text-burgundy-600 hover:text-burgundy-800 underline">The Ultimate Guide to Indonesian Sambal: Beyond Sriracha</a></p>
 				<p>• <a href="/sambal-vs-sriracha" class="text-burgundy-600 hover:text-burgundy-800 underline">Sambal vs Sriracha: Understanding the Difference</a></p>
-				<p>• <a href="/authentic-vs-store-bought" class="text-burgundy-600 hover:text-burgundy-800 underline">Authentic vs Store-Bought: Why Quality Matters</a></p>
 			</div>
 		</div>
 		`,
@@ -462,10 +462,10 @@ const blogPosts = {
 		<div class="bg-white border border-gold-200 rounded-lg p-6 my-8">
 			<h2 class="text-xl font-bold text-burgundy-900 mb-4">📚 Learn More About Indonesian Cuisine</h2>
 			<div class="space-y-3">
+				<p>• <a href="/blog/spice-islands-to-your-kitchen" class="text-burgundy-600 hover:text-burgundy-800 underline">Our Journey from the Spice Islands to Your Kitchen</a></p>
+				<p>• <a href="/blog/sambal-vs-hot-sauce" class="text-burgundy-600 hover:text-burgundy-800 underline">Sambal vs Hot Sauce: Understanding the Difference</a></p>
 				<p>• <a href="/blog/spice-islands-history" class="text-burgundy-600 hover:text-burgundy-800 underline">The History of the Spice Islands: Where Your Sambal Comes From</a></p>
 				<p>• <a href="/blog/ultimate-guide-indonesian-sambal" class="text-burgundy-600 hover:text-burgundy-800 underline">The Ultimate Guide to Indonesian Sambal: Beyond Sriracha</a></p>
-				<p>• <a href="/sambal-vs-sriracha" class="text-burgundy-600 hover:text-burgundy-800 underline">Sambal vs Sriracha: Understanding the Difference</a></p>
-				<p>• <a href="/chef" class="text-burgundy-600 hover:text-burgundy-800 underline">Meet Chef Yossie: Our Indonesian Culinary Expert</a></p>
 			</div>
 		</div>
 		`,

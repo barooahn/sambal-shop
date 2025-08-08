@@ -144,6 +144,18 @@ const categories = [
 ];
 
 export default function BlogPage() {
+	const prioritizedSlugs = [
+		"spice-islands-to-your-kitchen",
+		"sambal-vs-hot-sauce",
+	];
+	const postsExceptFeatured = blogPosts.slice(1);
+	const prioritized = postsExceptFeatured.filter((p) =>
+		prioritizedSlugs.includes(p.slug)
+	);
+	const others = postsExceptFeatured.filter(
+		(p) => !prioritizedSlugs.includes(p.slug)
+	);
+	const reorderedGridPosts = [...prioritized, ...others];
 	return (
 		<div className='min-h-screen bg-gradient-to-b from-cream-50 to-cream-100'>
 			{/* Hero Section */}
@@ -251,7 +263,7 @@ export default function BlogPage() {
 
 					{/* Blog Grid */}
 					<div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
-						{blogPosts.slice(1).map((post) => (
+						{reorderedGridPosts.map((post) => (
 							<Card
 								key={post.id}
 								className='overflow-hidden shadow-lg border border-gold-200 bg-gradient-to-br from-cream-50 to-cream-100 rounded-sm hover:shadow-luxury transition-all duration-300 group'
