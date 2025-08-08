@@ -50,6 +50,17 @@ const IMAGE_CONFIGS = {
 		quality: 80,
 	},
 
+	// Blog images - 16:9 aspect ratio for modern blog layouts
+	blog: {
+		sizes: [
+			{ width: 1200, height: 675, suffix: "-lg" }, // Large desktop
+			{ width: 800, height: 450, suffix: "-md" }, // Medium screens
+			{ width: 640, height: 360, suffix: "-sm" }, // Small screens
+			{ width: 400, height: 225, suffix: "-xs" }, // Mobile
+		],
+		quality: 75, // Good balance of quality and file size for blog images
+	},
+
 	// Floating ingredients - higher resolution for desktop display
 	ingredient: {
 		sizes: [
@@ -80,9 +91,23 @@ const getImageType = (filename) => {
 
 	if (lower.includes("logo")) return "logo";
 	if (lower.includes("hero")) return "hero";
+	
+	// Blog images - specific patterns for blog content (16:9 aspect ratio)
+	if (
+		lower.includes("cooking-guide") ||
+		lower.includes("spice-mastery") ||
+		lower.includes("british-fusion") ||
+		lower.includes("hot-sauce-comparison") ||
+		lower.includes("spice-islands") ||
+		lower.includes("traditional-sambal") ||
+		lower.includes("ultimate-sambal-guide") ||
+		lower.includes("blog") ||
+		lower.includes("guide")
+	) return "blog";
+	
 	if (lower.includes("sambal") || lower.includes("product"))
 		return "product";
-	if (lower.includes("recipe") || lower.includes("blog")) return "recipe";
+	if (lower.includes("recipe")) return "recipe";
 	if (
 		lower.includes("floating") ||
 		lower.includes("chili") ||
@@ -176,9 +201,75 @@ async function processImages() {
 	console.log("3. Test the images on your website");
 }
 
-// Run the script
-if (require.main === module) {
-	processImages().catch(console.error);
+// Specialized function to process blog images from the blog directory
+async function processBlogImages() {
+	const blogDir = path.join(process.cwd(), "public", "images", "blog");
+	const outputDir = path.join(
+		process.cwd(),
+		"public",
+		"images",
+		"optimized"
+	);
+
+	// Create output directory if it doesn't exist
+	if (!fs.existsSync(outputDir)) {
+		fs.mkdirSync(outputDir, { recursive: true });
+	}
+
+	// Get all blog image files
+	const files = fs
+		.readdirSync(blogDir)
+		.filter((file) => /\.(jpg|jpeg|png|webp)$/i.test(file));
+
+	console.log(`Found ${files.length} blog images to optimize...\n`);
+
+	// Target blog images for optimization
+	const targetImages = [
+		'indonesian-cooking-guide-hero.webp',
+		'indonesian-spice-mastery.webp',
+		'sambal-british-fusion.webp',
+		'sambal-vs-hot-sauce-comparison.webp',
+		'spice-islands-heritage.webp',
+		'spice-islands-history.webp',
+		'traditional-sambal-making.webp',
+		'ultimate-sambal-guide.webp'
+	];
+
+	let processedCount = 0;
+
+	for (const file of files) {
+		// Only process the target blog images or all if no specific targets
+		if (targetImages.length === 0 || targetImages.includes(file)) {
+			const inputPath = path.join(blogDir, file);
+			const imageType = "blog"; // Force blog type for all images in blog directory
+			
+			await optimizeImage(inputPath, outputDir, imageType);
+			processedCount++;
+			console.log(""); // Empty line for readability
+		}
+	}
+
+	console.log(`✅ Blog image optimization complete! Processed ${processedCount} images.`);
+	console.log(`\nOptimized images saved to: ${outputDir}`);
+	console.log("\nBlog images processed:");
+	targetImages.forEach(img => {
+		if (files.includes(img)) {
+			console.log(`  ✓ ${img} -> 4 responsive sizes (lg, md, sm, xs)`);
+		} else {
+			console.log(`  ⚠ ${img} - not found`);
+		}
+	});
 }
 
-module.exports = { optimizeImage, processImages, IMAGE_CONFIGS };
+// Run the script
+if (require.main === module) {
+	const args = process.argv.slice(2);
+	
+	if (args.includes('--blog')) {
+		processBlogImages().catch(console.error);
+	} else {
+		processImages().catch(console.error);
+	}
+}
+
+module.exports = { optimizeImage, processImages, processBlogImages, IMAGE_CONFIGS };

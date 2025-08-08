@@ -82,12 +82,12 @@ export default function RecipeCard({
 				className='overflow-hidden rounded-sm'
 			>
 				{/* Recipe Image */}
-				<div className='relative aspect-[4/3]'>
+				<div className='relative aspect-[16/9]'>
 					<OptimizedImage
 						src={recipe.image}
 						alt={`${recipe.name} - Indonesian recipe with sambal`}
-						width={320}
-						height={240}
+						width={640}
+						height={360}
 						className='w-full h-full object-cover'
 						quality={80}
 						sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'

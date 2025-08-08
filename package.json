@@ -10,7 +10,8 @@
 		"test": "vitest",
 		"test:ui": "vitest --ui",
 		"test:run": "vitest run",
-		"optimize-images": "node scripts/optimize-images.js"
+		"optimize-images": "node scripts/optimize-images.js",
+		"optimize-blog": "node scripts/optimize-images.js --blog"
 	},
 	"dependencies": {
 		"@hookform/resolvers": "^3.9.0",

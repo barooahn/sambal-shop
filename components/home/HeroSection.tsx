@@ -70,7 +70,7 @@ export default function HeroSection() {
 				isSubmitted: true,
 				message:
 					result.message ||
-					"Thanks for your interest! We'll notify you when we launch.",
+					"Thanks — we’ll notify you when we launch in the UK.",
 			});
 			// Track GA event
 			try {
@@ -231,7 +231,7 @@ export default function HeroSection() {
 						{/* CTA Buttons with mobile optimization */}
 						<div className='flex flex-col gap-2.5 lg:gap-4 px-2 lg:px-0'>
 							<button
-								aria-label='Join UK Preview List'
+								aria-label='Join UK waiting list'
 								onClick={handleInterestClick}
 								disabled={
 									interestState.isSubmitting ||
@@ -260,7 +260,7 @@ export default function HeroSection() {
 										<>
 											<Heart className='w-4 lg:w-5 h-4 lg:h-5 group-hover:animate-bounce' />
 											<span className='text-sm lg:text-base'>
-												Join UK Preview List
+												Join UK waiting list
 											</span>
 										</>
 									)}
@@ -268,7 +268,7 @@ export default function HeroSection() {
 							</button>
 
 							<button
-								aria-label='Get Updates'
+								aria-label='Get UK Updates'
 								onClick={() => {
 									const newsletterSection =
 										document.getElementById(
@@ -281,7 +281,7 @@ export default function HeroSection() {
 								className='group bg-white/10 backdrop-blur-md hover:bg-white/20 text-white font-semibold py-3 lg:py-4 px-6 lg:px-8 rounded-lg border border-white/30 hover:border-amber-300/50 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 w-full min-h-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent'
 							>
 								<span className='group-hover:text-amber-300 transition-colors duration-300 text-sm lg:text-base'>
-									Get Updates
+									Get UK Updates
 								</span>
 							</button>
 						</div>
@@ -310,13 +310,16 @@ export default function HeroSection() {
 					<div className='relative order-2 lg:order-1 pb-4 sm:pb-2 lg:pb-0'>
 						<div className='relative max-w-[280px] sm:max-w-sm lg:max-w-lg mx-auto lg:mx-0'>
 							{/* Main product image */}
+							{/* Show skeleton until image loads */}
+							{!imageLoaded && <SambalBaliSkeleton />}
+
 							<div className='relative z-20 group'>
 								<Image
 									src='/images/optimized/sambal-bali-md.webp'
 									alt='Spice Island Indonesia Sambal Bali - Authentic Indonesian Chili Paste'
 									width={320}
 									height={320}
-									className='w-full h-auto object-cover drop-shadow-2xl hover:scale-105 transition-transform duration-700 ease-out'
+									className={`w-full h-auto object-cover drop-shadow-2xl hover:scale-105 transition-transform duration-700 ease-out transition-opacity duration-500 ${imageLoaded ? "opacity-100" : "opacity-0"}`}
 									priority
 									fetchPriority='high'
 									quality={85}
@@ -327,11 +330,13 @@ export default function HeroSection() {
 								/>
 
 								{/* Elegant price badge */}
-								<div className='absolute -top-2 -right-2 lg:-top-4 lg:-right-4 z-30'>
-									<div className='bg-gradient-to-br from-amber-400 via-orange-500 to-red-600 text-white px-3 lg:px-4 py-1 lg:py-2 rounded-full font-bold text-sm lg:text-lg shadow-2xl border-2 border-white/20 backdrop-blur-sm transform rotate-12 hover:rotate-0 hover:scale-110 transition-all duration-500'>
-										£7.49
+								{imageLoaded && (
+									<div className='absolute -top-2 -right-2 lg:-top-4 lg:-right-4 z-30'>
+										<div className='bg-gradient-to-br from-amber-400 via-orange-500 to-red-600 text-white px-3 lg:px-4 py-1 lg:py-2 rounded-full font-bold text-sm lg:text-lg shadow-2xl border-2 border-white/20 backdrop-blur-sm transform rotate-12 hover:rotate-0 hover:scale-110 transition-all duration-500'>
+											£7.49
+										</div>
 									</div>
-								</div>
+								)}
 							</div>
 
 							{/* Subtle background glow */}
