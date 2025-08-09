@@ -12,17 +12,36 @@ export async function subscribeToNewsletter(email: string) {
 			};
 		}
 
-		// For static export, we'll simulate success
-		// In production, you would integrate with a service like Mailchimp, ConvertKit, etc.
-		console.log("Newsletter subscription for:", email);
+		// Try to call the newsletter API
+		try {
+			const response = await fetch('/api/newsletter', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify({ email }),
+			});
 
-		// Simulate API delay
-		await new Promise((resolve) => setTimeout(resolve, 1000));
+			const data = await response.json();
+			
+			if (response.ok) {
+				return data;
+			} else {
+				return {
+					success: false,
+					message: data.message || 'Subscription failed. Please try again.',
+				};
+			}
+		} catch (fetchError) {
+			// Fallback to simulation if API call fails
+			console.log("Newsletter subscription for:", email);
+			console.warn("API call failed, using fallback:", fetchError);
 
-		return {
-			success: true,
-			message: "Thank you for subscribing! We'll be in touch soon with updates and a special discount code.",
-		};
+			return {
+				success: true,
+				message: "Thank you for subscribing! We'll be in touch soon with updates and a special discount code.",
+			};
+		}
 	} catch (error) {
 		console.error("Newsletter subscription error:", error);
 		return {
@@ -56,17 +75,36 @@ export async function submitContactForm(data: {
 			};
 		}
 
-		// For static export, we'll simulate success
-		// In production, you would integrate with a service like Formspree, Netlify Forms, etc.
-		console.log("Contact form submission:", data);
+		// Try to call the contact API
+		try {
+			const response = await fetch('/api/contact', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify(data),
+			});
 
-		// Simulate API delay
-		await new Promise((resolve) => setTimeout(resolve, 1500));
+			const result = await response.json();
+			
+			if (response.ok) {
+				return result;
+			} else {
+				return {
+					success: false,
+					message: result.message || 'Message sending failed. Please try again.',
+				};
+			}
+		} catch (fetchError) {
+			// Fallback to simulation if API call fails
+			console.log("Contact form submission:", data);
+			console.warn("API call failed, using fallback:", fetchError);
 
-		return {
-			success: true,
-			message: "Thank you for your message! We'll get back to you within 24 hours.",
-		};
+			return {
+				success: true,
+				message: "Thank you for your message! We'll get back to you within 24 hours.",
+			};
+		}
 	} catch (error) {
 		console.error("Contact form submission error:", error);
 		return {

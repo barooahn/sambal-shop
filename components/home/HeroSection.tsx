@@ -63,8 +63,15 @@ export default function HeroSection() {
 			message: "",
 		});
 		try {
-			const { recordInterest } = await import("@/lib/actions");
-			const result = await recordInterest({ source: "hero_waitlist" });
+			const res = await fetch("/api/interest", {
+				method: "POST",
+				headers: { "Content-Type": "application/json" },
+				body: JSON.stringify({ source: "hero_waitlist" }),
+			});
+			if (!res.ok) {
+				throw new Error("Failed to record interest");
+			}
+			const result = await res.json();
 			setInterestState({
 				isSubmitting: false,
 				isSubmitted: true,
@@ -72,13 +79,13 @@ export default function HeroSection() {
 					result.message ||
 					"Thanks — we’ll notify you when we launch in the UK.",
 			});
-			// Track GA event
+			// Track GA event (click/recorded)
 			try {
 				const { trackEvent } = await import(
 					"@/components/analytics/GoogleAnalytics"
 				);
 				trackEvent(
-					"interest_recorded",
+					"hero_interest_click",
 					"product_engagement",
 					"hero_waitlist"
 				);
