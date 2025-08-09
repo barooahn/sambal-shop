@@ -69,11 +69,13 @@ export default function AboutPage() {
 						<div className='relative'>
 							<div className='aspect-[4/3] rounded-sm overflow-hidden shadow-luxury border border-gold-200'>
 								<Image
-									src='https://images.pexels.com/photos/1630588/pexels-photo-1630588.jpeg'
-									alt='Indonesian spices and ingredients'
+									src='/images/optimized/chili-farming-scene-xl.webp'
+									alt='Crystal clear Indonesian chili farming in the volcanic Maluku Islands'
 									className='w-full h-full object-cover'
 									width={800}
 									height={600}
+									sizes='(max-width: 768px) 100vw, 50vw'
+									priority
 								/>
 							</div>
 							<div className='absolute inset-0 bg-gradient-to-t from-burgundy-900/20 to-transparent rounded-sm'></div>
@@ -93,6 +95,32 @@ export default function AboutPage() {
 							Every jar reflects our commitment to
 							authenticity, quality, and tradition
 						</p>
+					</div>
+
+					{/* Traditional Process Image */}
+					<div className='mb-16'>
+						<div className='relative max-w-4xl mx-auto'>
+							<div className='aspect-[16/9] rounded-sm overflow-hidden shadow-luxury border border-gold-200'>
+								<Image
+									src='/images/optimized/traditional-sambal-making-process-lg.webp'
+									alt='Traditional Indonesian sambal preparation with mortar and pestle'
+									className='w-full h-full object-cover'
+									width={1200}
+									height={675}
+									sizes='(max-width: 768px) 100vw, 80vw'
+								/>
+							</div>
+							<div className='absolute inset-0 bg-gradient-to-t from-burgundy-900/30 to-transparent rounded-sm'></div>
+							<div className='absolute bottom-6 left-6 text-white'>
+								<p className='text-lg font-semibold font-body'>
+									Traditional sambal making with
+									cobek (stone mortar)
+								</p>
+								<p className='text-sm text-gold-200 font-body'>
+									Preserving centuries-old techniques
+								</p>
+							</div>
+						</div>
 					</div>
 
 					<div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
@@ -156,17 +184,17 @@ export default function AboutPage() {
 				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<div className='grid lg:grid-cols-2 gap-16 items-center'>
 						<div className='relative'>
-							<div className='aspect-square rounded-sm overflow-hidden shadow-luxury bg-gradient-to-br from-cream-50 to-gold-50'>
-								<div className='w-full h-full flex items-center justify-center p-8'>
-									<Image
-										src='/images/Spice Island Indonesia Complete Packaging System Mockup.png'
-										alt='Spice Island Indonesia Product Range'
-										width={500}
-										height={500}
-										className='w-full h-full object-contain drop-shadow-2xl'
-									/>
-								</div>
+							<div className='aspect-[4/3] rounded-sm overflow-hidden shadow-luxury border border-gold-200'>
+								<Image
+									src='/images/optimized/traditional-indonesian-chili-farming-xl.webp'
+									alt='Traditional Indonesian chili farming supporting local communities'
+									className='w-full h-full object-cover'
+									width={800}
+									height={600}
+									sizes='(max-width: 768px) 100vw, 50vw'
+								/>
 							</div>
+							<div className='absolute inset-0 bg-gradient-to-t from-burgundy-900/20 to-transparent rounded-sm'></div>
 						</div>
 						<div>
 							<h2 className='text-4xl sm:text-5xl font-bold text-burgundy-900 mb-6 font-brand'>

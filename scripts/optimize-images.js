@@ -25,7 +25,7 @@ const IMAGE_CONFIGS = {
 			{ width: 768, height: 432, suffix: "-md" },
 			{ width: 640, height: 360, suffix: "-sm" },
 		],
-		quality: 65, // Reduced from 80 to 65 for better compression
+		quality: 82, // Increased from 65 to 82 for better clarity on detailed photos
 	},
 
 	// Product images - preserve aspect ratio, higher compression + responsive sizes
@@ -91,7 +91,7 @@ const getImageType = (filename) => {
 
 	if (lower.includes("logo")) return "logo";
 	if (lower.includes("hero")) return "hero";
-	
+
 	// Blog images - specific patterns for blog content (16:9 aspect ratio)
 	if (
 		lower.includes("cooking-guide") ||
@@ -103,8 +103,9 @@ const getImageType = (filename) => {
 		lower.includes("ultimate-sambal-guide") ||
 		lower.includes("blog") ||
 		lower.includes("guide")
-	) return "blog";
-	
+	)
+		return "blog";
+
 	if (lower.includes("sambal") || lower.includes("product"))
 		return "product";
 	if (lower.includes("recipe")) return "recipe";
@@ -225,14 +226,14 @@ async function processBlogImages() {
 
 	// Target blog images for optimization
 	const targetImages = [
-		'indonesian-cooking-guide-hero.webp',
-		'indonesian-spice-mastery.webp',
-		'sambal-british-fusion.webp',
-		'sambal-vs-hot-sauce-comparison.webp',
-		'spice-islands-heritage.webp',
-		'spice-islands-history.webp',
-		'traditional-sambal-making.webp',
-		'ultimate-sambal-guide.webp'
+		"indonesian-cooking-guide-hero.webp",
+		"indonesian-spice-mastery.webp",
+		"sambal-british-fusion.webp",
+		"sambal-vs-hot-sauce-comparison.webp",
+		"spice-islands-heritage.webp",
+		"spice-islands-history.webp",
+		"traditional-sambal-making.webp",
+		"ultimate-sambal-guide.webp",
 	];
 
 	let processedCount = 0;
@@ -242,17 +243,19 @@ async function processBlogImages() {
 		if (targetImages.length === 0 || targetImages.includes(file)) {
 			const inputPath = path.join(blogDir, file);
 			const imageType = "blog"; // Force blog type for all images in blog directory
-			
+
 			await optimizeImage(inputPath, outputDir, imageType);
 			processedCount++;
 			console.log(""); // Empty line for readability
 		}
 	}
 
-	console.log(`✅ Blog image optimization complete! Processed ${processedCount} images.`);
+	console.log(
+		`✅ Blog image optimization complete! Processed ${processedCount} images.`
+	);
 	console.log(`\nOptimized images saved to: ${outputDir}`);
 	console.log("\nBlog images processed:");
-	targetImages.forEach(img => {
+	targetImages.forEach((img) => {
 		if (files.includes(img)) {
 			console.log(`  ✓ ${img} -> 4 responsive sizes (lg, md, sm, xs)`);
 		} else {
@@ -264,12 +267,17 @@ async function processBlogImages() {
 // Run the script
 if (require.main === module) {
 	const args = process.argv.slice(2);
-	
-	if (args.includes('--blog')) {
+
+	if (args.includes("--blog")) {
 		processBlogImages().catch(console.error);
 	} else {
 		processImages().catch(console.error);
 	}
 }
 
-module.exports = { optimizeImage, processImages, processBlogImages, IMAGE_CONFIGS };
+module.exports = {
+	optimizeImage,
+	processImages,
+	processBlogImages,
+	IMAGE_CONFIGS,
+};
