@@ -9,6 +9,9 @@ interface ProductOffer {
 	image?: string;
 	sku?: string;
 	url?: string; // Landing page for the offer (helps Merchant listings)
+	priceValidUntil?: string; // ISO date string
+	shippingDetails?: any; // OfferShippingDetails | OfferShippingDetails[]
+	hasMerchantReturnPolicy?: any; // MerchantReturnPolicy
 }
 
 interface ProductReview {
@@ -68,6 +71,10 @@ const ProductSchema: FC<ProductSchemaProps> = ({
 			image: offer.image,
 			sku: offer.sku,
 			url: offer.url,
+			priceValidUntil: offer.priceValidUntil,
+			shippingDetails: offer.shippingDetails,
+			hasMerchantReturnPolicy: offer.hasMerchantReturnPolicy,
+
 			seller: {
 				"@type": "Organization",
 				name: brand,

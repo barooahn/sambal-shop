@@ -241,6 +241,35 @@ export default function SambalOelekUKPage() {
 				availability: "https://schema.org/InStock",
 				sku: "SII-SO-185G",
 				url: "https://spiceislandindonesia.com/sambal-oelek-uk",
+				priceValidUntil: "2026-12-31",
+				shippingDetails: [
+					{
+						"@type": "OfferShippingDetails",
+						shippingRate: {
+							"@type": "MonetaryAmount",
+							value: 0,
+							currency: "GBP",
+						},
+						eligibleTransactionVolume: {
+							"@type": "PriceSpecification",
+							minPrice: 20,
+							priceCurrency: "GBP",
+						},
+						shippingDestination: {
+							"@type": "DefinedRegion",
+							addressCountry: "GB",
+						},
+					},
+				],
+				hasMerchantReturnPolicy: {
+					"@type": "MerchantReturnPolicy",
+					applicableCountry: "GB",
+					returnPolicyCategory:
+						"https://schema.org/MerchantReturnFiniteReturnWindow",
+					merchantReturnDays: 14,
+					returnMethod: "https://schema.org/ReturnByMail",
+					returnFees: "https://schema.org/FreeReturn",
+				},
 			},
 		],
 		aggregateRating: {
