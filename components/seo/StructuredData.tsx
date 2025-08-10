@@ -38,6 +38,34 @@ export default function StructuredData({
 			"@type": "Brand",
 			name: "Spice Island Indonesia",
 		},
+		image: [
+			"https://spiceislandindonesia.com/images/Spice Island Indonesia Sambal Oelek 185g Label.webp",
+			"https://spiceislandindonesia.com/images/Spice Island Indonesia Sambal Bali 185g Label.webp",
+			"https://spiceislandindonesia.com/images/Spice Island Indonesia Complete Packaging System Mockup.webp",
+		],
+		// Basic shipping and return policy info to improve Merchant eligibility
+		shippingDetails: {
+			"@type": "OfferShippingDetails",
+			shippingRate: {
+				"@type": "MonetaryAmount",
+				value: 0,
+				currency: "GBP",
+			},
+			shippingDestination: {
+				"@type": "DefinedRegion",
+				addressCountry: "GB",
+			},
+		},
+		hasMerchantReturnPolicy: {
+			"@type": "MerchantReturnPolicy",
+			applicableCountry: "GB",
+			returnPolicyCategory:
+				"https://schema.org/MerchantReturnFiniteReturnWindow",
+			merchantReturnDays: 14,
+			returnMethod: "https://schema.org/ReturnByMail",
+			returnFees: "https://schema.org/FreeReturn",
+		},
+
 		offers: [
 			{
 				"@type": "Offer",
@@ -49,6 +77,7 @@ export default function StructuredData({
 				availability: "https://schema.org/PreOrder",
 				itemCondition: "https://schema.org/NewCondition",
 				image: "https://spiceislandindonesia.com/images/Spice Island Indonesia Sambal Oelek 185g Label.webp",
+				url: "https://spiceislandindonesia.com/sambal-oelek-uk",
 			},
 			{
 				"@type": "Offer",
@@ -59,6 +88,7 @@ export default function StructuredData({
 				availability: "https://schema.org/PreOrder",
 				itemCondition: "https://schema.org/NewCondition",
 				image: "https://spiceislandindonesia.com/images/Spice Island Indonesia Sambal Bali 185g Label.webp",
+				url: "https://spiceislandindonesia.com/sambal-bali-sweet-spicy",
 			},
 			{
 				"@type": "Offer",
@@ -69,14 +99,15 @@ export default function StructuredData({
 				availability: "https://schema.org/PreOrder",
 				itemCondition: "https://schema.org/NewCondition",
 				image: "https://spiceislandindonesia.com/images/Spice Island Indonesia Complete Packaging System Mockup.webp",
+				url: "https://spiceislandindonesia.com/gift-set-indonesian",
 			},
 		],
 		aggregateRating: {
 			"@type": "AggregateRating",
-			ratingValue: "4.9",
-			reviewCount: "150",
-			bestRating: "5",
-			worstRating: "1",
+			ratingValue: 4.9,
+			reviewCount: 150,
+			bestRating: 5,
+			worstRating: 1,
 		},
 	};
 
@@ -150,10 +181,10 @@ export default function StructuredData({
 		],
 		aggregateRating: {
 			"@type": "AggregateRating",
-			ratingValue: "4.9",
-			reviewCount: "150",
-			bestRating: "5",
-			worstRating: "1",
+			ratingValue: 4.9,
+			reviewCount: 150,
+			bestRating: 5,
+			worstRating: 1,
 		},
 	};
 

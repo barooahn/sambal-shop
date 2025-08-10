@@ -56,7 +56,7 @@ export const metadata: Metadata = {
 	metadataBase: new URL("https://spiceislandindonesia.com"),
 	title: "Indonesian Sambal UK | Authentic Delivery London Manchester Birmingham | Spice Island Indonesia",
 	description:
-		"UK's premier Indonesian sambal supplier. Authentic traditional chili paste from the Spice Islands, delivered nationwide. Shop sambal oelek, sambal bali & gift sets with free UK delivery over £25.",
+		"UK's premier Indonesian sambal supplier. Authentic traditional chili paste from the Spice Islands, delivered nationwide. Shop sambal oelek, sambal bali & gift sets with free UK delivery over £20.",
 	keywords:
 		"Indonesian sambal UK, sambal oelek UK, sambal bali UK, authentic chili paste UK, Indonesian condiments UK delivery, traditional sambal London, sambal delivery Manchester, Indonesian food Birmingham, premium condiments UK, sambal Edinburgh, authentic indonesian cuisine UK, Chef Yossie sambal",
 	verification: {

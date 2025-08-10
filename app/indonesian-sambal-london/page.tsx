@@ -210,7 +210,7 @@ export default function IndonesianSambalLondonPage() {
 					<div className='text-center mt-8'>
 						<p className='text-gray-600 font-elegant'>
 							<strong>Free delivery</strong> on orders over
-							£25 • <strong>Next-day delivery</strong>{" "}
+							£20 • <strong>Next-day delivery</strong>{" "}
 							available •<strong>Same-day delivery</strong>{" "}
 							in Central London zones
 						</p>

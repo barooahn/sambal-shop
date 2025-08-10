@@ -11,10 +11,11 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import GlassCard from "@/components/ui/GlassCard";
-import { Flame, Leaf, Star, ShoppingCart, Loader2 } from "lucide-react";
+import { Flame, Leaf, Star, ShoppingCart, Loader2, Bell } from "lucide-react";
 import { Product } from "@/src/stripe-config";
 import { supabase } from "@/lib/supabase";
 import { useRouter } from "next/navigation";
+import { toast } from "sonner";
 
 interface ProductCardProps {
 	product: Product;
@@ -23,7 +24,10 @@ interface ProductCardProps {
 
 export function ProductCard({ product, user }: ProductCardProps) {
 	const [loading, setLoading] = useState(false);
+	const [joining, setJoining] = useState(false);
 	const router = useRouter();
+
+	const SALES_ENABLED = process.env.NEXT_PUBLIC_SALES_ENABLED === "true";
 
 	const handlePurchase = async () => {
 		if (!user) {
@@ -77,6 +81,34 @@ export function ProductCard({ product, user }: ProductCardProps) {
 		}
 	};
 
+	const handleJoinWaitlist = async () => {
+		try {
+			setJoining(true);
+			const res = await fetch("/api/interest", {
+				method: "POST",
+				headers: { "Content-Type": "application/json" },
+				body: JSON.stringify({ source: "shop_waitlist" }),
+			});
+			const result = await res.json();
+			if (!res.ok || result?.success === false) {
+				throw new Error(
+					result?.message || "Failed to record interest"
+				);
+			}
+			toast.success(
+				result.message ||
+					"Interest recorded — you’re on the UK VIP list! 🇬🇧🌶️"
+			);
+		} catch (err: any) {
+			toast.error(
+				err?.message ||
+					"We couldn't record your interest right now. Please try again later."
+			);
+		} finally {
+			setJoining(false);
+		}
+	};
+
 	return (
 		<GlassCard
 			variant='subtle'
@@ -87,10 +119,21 @@ export function ProductCard({ product, user }: ProductCardProps) {
 					<CardTitle className='text-xl font-bold text-gray-900'>
 						{product.name}
 					</CardTitle>
-					<Badge className='bg-red-600 text-white'>
-						<Flame className='w-3 h-3 mr-1' />
-						Hot
-					</Badge>
+					<div className='flex items-center gap-2'>
+						<Badge className='bg-red-600 text-white'>
+							<Flame className='w-3 h-3 mr-1' />
+							Hot
+						</Badge>
+						{SALES_ENABLED ? (
+							<Badge className='bg-emerald-600 text-white hidden sm:inline-flex'>
+								Free over £20
+							</Badge>
+						) : (
+							<Badge className='bg-amber-600 text-white hidden sm:inline-flex'>
+								Coming Soon
+							</Badge>
+						)}
+					</div>
 				</div>
 				<div className='text-2xl font-bold text-red-600 mb-2'>
 					{product.price}
@@ -162,23 +205,43 @@ export function ProductCard({ product, user }: ProductCardProps) {
 					</div>
 				</div>
 
-				<Button
-					onClick={handlePurchase}
-					disabled={loading}
-					className='w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 mt-6'
-				>
-					{loading ? (
-						<>
-							<Loader2 className='w-4 h-4 mr-2 animate-spin' />
-							Processing...
-						</>
-					) : (
-						<>
-							<ShoppingCart className='w-4 h-4 mr-2' />
-							Buy Now
-						</>
-					)}
-				</Button>
+				{SALES_ENABLED ? (
+					<Button
+						onClick={handlePurchase}
+						disabled={loading}
+						className='w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 mt-6'
+					>
+						{loading ? (
+							<>
+								<Loader2 className='w-4 h-4 mr-2 animate-spin' />
+								Processing...
+							</>
+						) : (
+							<>
+								<ShoppingCart className='w-4 h-4 mr-2' />
+								Buy Now
+							</>
+						)}
+					</Button>
+				) : (
+					<Button
+						onClick={handleJoinWaitlist}
+						disabled={joining}
+						className='w-full bg-amber-600 hover:bg-amber-700 text-white font-semibold py-3 mt-6'
+					>
+						{joining ? (
+							<>
+								<Loader2 className='w-4 h-4 mr-2 animate-spin' />
+								Joining...
+							</>
+						) : (
+							<>
+								<Bell className='w-4 h-4 mr-2' />
+								Join Waitlist
+							</>
+						)}
+					</Button>
+				)}
 			</CardContent>
 		</GlassCard>
 	);

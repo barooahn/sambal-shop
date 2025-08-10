@@ -17,6 +17,7 @@ export default function Header() {
 		null
 	);
 	const router = useRouter();
+	const SALES_ENABLED = process.env.NEXT_PUBLIC_SALES_ENABLED === "true";
 
 	const navigation = [
 		{ name: "Home", href: "/" },
@@ -125,7 +126,7 @@ export default function Header() {
 				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-9 flex items-center'>
 					<div className='flex items-center gap-6 overflow-x-auto whitespace-nowrap w-full no-scrollbar'>
 						<span className='flex items-center gap-1.5'>
-							Free UK delivery over £25
+							Free UK delivery over £20
 						</span>
 						<span className='flex items-center gap-1.5'>
 							30-day returns
@@ -278,7 +279,9 @@ export default function Header() {
 										className='font-elegant'
 									>
 										<ShoppingCart className='w-4 h-4 mr-2' />
-										Shop Now
+										{SALES_ENABLED
+											? "Shop Now"
+											: "Coming Soon"}
 									</Button>
 								</Link>
 							</>
@@ -422,7 +425,9 @@ export default function Header() {
 												}
 											>
 												<ShoppingCart className='w-4 h-4 mr-2' />
-												Shop Now
+												{SALES_ENABLED
+													? "Shop Now"
+													: "Coming Soon"}
 											</Button>
 										</Link>
 									</>

@@ -17,6 +17,7 @@ import {
 	Gift,
 	Users,
 } from "lucide-react";
+import ProductSchema from "@/components/seo/ProductSchema";
 
 export const metadata = {
 	title: "Indonesian Food Gift Set UK | Authentic Sambal Gift Box | Spice Island Indonesia",
@@ -37,6 +38,109 @@ export const metadata = {
 				alt: "Indonesian Food Gift Set - Authentic Sambal Collection",
 			},
 		],
+	},
+};
+
+// Product schema for Gift Set
+const productData = {
+	name: "Indonesian Sambal Gift Set",
+	description:
+		"Beautifully packaged gift set with Sambal Oelek and Sambal Bali plus recipe cards. Authentic Indonesian flavors by Chef Yossie.",
+	brand: "Spice Island Indonesia",
+	category: "Gift Sets",
+	image: "https://spiceislandindonesia.com/images/Spice Island Indonesia Complete Packaging System Mockup.webp",
+	shippingDetails: [
+		{
+			"@type": "OfferShippingDetails",
+			shippingRate: {
+				"@type": "MonetaryAmount",
+				value: 0,
+				currency: "GBP",
+			},
+			eligibleTransactionVolume: {
+				"@type": "PriceSpecification",
+				minPrice: 20,
+				priceCurrency: "GBP",
+			},
+			shippingDestination: {
+				"@type": "DefinedRegion",
+				addressCountry: "GB",
+			},
+			deliveryTime: {
+				"@type": "ShippingDeliveryTime",
+				handlingTime: {
+					"@type": "QuantitativeValue",
+					minValue: 0,
+					maxValue: 1,
+					unitCode: "d",
+				},
+				transitTime: {
+					"@type": "QuantitativeValue",
+					minValue: 2,
+					maxValue: 4,
+					unitCode: "d",
+				},
+			},
+		},
+		{
+			"@type": "OfferShippingDetails",
+			shippingRate: {
+				"@type": "MonetaryAmount",
+				value: 3.45,
+				currency: "GBP",
+			},
+			eligibleTransactionVolume: {
+				"@type": "PriceSpecification",
+				maxPrice: 19.99,
+				priceCurrency: "GBP",
+			},
+			shippingDestination: {
+				"@type": "DefinedRegion",
+				addressCountry: "GB",
+			},
+			deliveryTime: {
+				"@type": "ShippingDeliveryTime",
+				handlingTime: {
+					"@type": "QuantitativeValue",
+					minValue: 0,
+					maxValue: 1,
+					unitCode: "d",
+				},
+				transitTime: {
+					"@type": "QuantitativeValue",
+					minValue: 2,
+					maxValue: 4,
+					unitCode: "d",
+				},
+			},
+		},
+	],
+	hasMerchantReturnPolicy: {
+		"@type": "MerchantReturnPolicy",
+		applicableCountry: "GB",
+		returnPolicyCategory:
+			"https://schema.org/MerchantReturnFiniteReturnWindow",
+		merchantReturnDays: 14,
+		returnMethod: "https://schema.org/ReturnByMail",
+		returnFees: "https://schema.org/ReturnShippingFees",
+	},
+	offers: [
+		{
+			name: "Heritage Sambal Gift Set",
+			description:
+				"Two 185g sambals + recipe cards in premium gift box",
+			price: "19.99",
+			priceCurrency: "GBP",
+			availability: "https://schema.org/InStock",
+			sku: "SII-GIFT-SET",
+			url: "https://spiceislandindonesia.com/gift-set-indonesian",
+		},
+	],
+	aggregateRating: {
+		ratingValue: 4.9,
+		reviewCount: 52,
+		bestRating: 5,
+		worstRating: 1,
 	},
 };
 
@@ -71,11 +175,32 @@ export default function GiftSetIndonesianPage() {
 							</h1>
 
 							<p className='text-xl sm:text-2xl text-gold-200 mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-body'>
+								{/* Product Schema for Merchant listings */}
+								<ProductSchema
+									name={productData.name}
+									description={
+										productData.description
+									}
+									brand={productData.brand}
+									category={productData.category}
+									image={productData.image}
+									offers={productData.offers}
+									aggregateRating={
+										productData.aggregateRating
+									}
+									additionalProperties={{
+										shippingDetails:
+											productData.shippingDetails,
+										hasMerchantReturnPolicy:
+											productData.hasMerchantReturnPolicy,
+									}}
+								/>
 								Give the gift of authentic Indonesian
-								cuisine with Chef Yossie&apos;s beautifully
-								curated sambal collection. Perfect for
-								birthdays, holidays, or introducing
-								someone special to Indonesian flavors.
+								cuisine with Chef Yossie&apos;s
+								beautifully curated sambal collection.
+								Perfect for birthdays, holidays, or
+								introducing someone special to
+								Indonesian flavors.
 							</p>
 
 							{/* Key Features */}
@@ -209,8 +334,8 @@ export default function GiftSetIndonesianPage() {
 									Recipe Cards
 								</h3>
 								<p className='text-neutral-600 text-sm font-body'>
-									Chef Yossie&apos;s favorite recipes and
-									serving suggestions
+									Chef Yossie&apos;s favorite recipes
+									and serving suggestions
 								</p>
 							</CardContent>
 						</Card>
@@ -380,12 +505,12 @@ export default function GiftSetIndonesianPage() {
 							</h2>
 
 							<p className='text-lg text-neutral-600 mb-6 font-body'>
-								This isn&apos;t just a food gift - it&apos;s a
-								cultural experience. Recipients discover
-								authentic Indonesian flavors while
-								learning about traditional recipes and
-								cooking techniques from a professional
-								chef.
+								This isn&apos;t just a food gift -
+								it&apos;s a cultural experience.
+								Recipients discover authentic Indonesian
+								flavors while learning about traditional
+								recipes and cooking techniques from a
+								professional chef.
 							</p>
 
 							<ul className='space-y-4 mb-8'>
@@ -401,8 +526,8 @@ export default function GiftSetIndonesianPage() {
 									<CheckCircle className='w-6 h-6 text-burgundy-600 mr-3 flex-shrink-0 mt-0.5' />
 									<span className='text-neutral-600 font-body'>
 										<strong>Memorable:</strong>{" "}
-										Unique gift they&apos;ll remember
-										and use for months
+										Unique gift they&apos;ll
+										remember and use for months
 									</span>
 								</li>
 								<li className='flex items-start'>

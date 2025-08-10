@@ -229,7 +229,7 @@ export default function Footer() {
 						No preservatives • Vegan
 					</div>
 					<div className='rounded-xl border border-gold-600/30 px-4 py-3 bg-neutral-800/60'>
-						Free UK delivery over £25
+						Free UK delivery over £20
 					</div>
 				</div>
 
@@ -257,6 +257,12 @@ export default function Footer() {
 								className='hover:text-gold-100 transition-colors'
 							>
 								Shipping Info
+							</Link>
+							<Link
+								href='/returns'
+								className='hover:text-gold-100 transition-colors'
+							>
+								Returns Policy
 							</Link>
 						</div>
 					</div>

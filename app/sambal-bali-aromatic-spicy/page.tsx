@@ -54,18 +54,119 @@ export default function SambalBaliPage() {
 		},
 		{
 			question: "Where can I buy authentic sambal bali in the UK?",
-			answer: "We deliver authentic Sambal Bali throughout the UK, made by Chef Yossie using traditional Balinese family recipes. Our Sambal Bali contains real galangal, lemongrass, and kaffir lime leaves - not artificial flavors. We offer free UK delivery on orders over £25, and you can try our sample pack to experience the authentic difference.",
+			answer: "We deliver authentic Sambal Bali throughout the UK, made by Chef Yossie using traditional Balinese family recipes. Our Sambal Bali contains real galangal, lemongrass, and kaffir lime leaves - not artificial flavors. We offer free UK delivery on orders over £20, and you can try our sample pack to experience the authentic difference.",
 		},
 	];
 
+	// Product data for Sambal Bali schema
+	const productData = {
+		name: "Authentic Indonesian Sambal Bali",
+		description:
+			"Sweet and spicy Balinese-style sambal with aromatic spices like galangal, lemongrass, and kaffir lime leaves. Handcrafted by Chef Yossie using traditional recipes.",
+		brand: "Spice Island Indonesia",
+		category: "Condiments & Sauces",
+		image: "https://spiceislandindonesia.com/images/Spice Island Indonesia Sambal Bali 185g Label.webp",
+		shippingDetails: [
+			{
+				"@type": "OfferShippingDetails",
+				shippingRate: {
+					"@type": "MonetaryAmount",
+					value: 0,
+					currency: "GBP",
+				},
+				eligibleTransactionVolume: {
+					"@type": "PriceSpecification",
+					minPrice: 20,
+					priceCurrency: "GBP",
+				},
+				shippingDestination: {
+					"@type": "DefinedRegion",
+					addressCountry: "GB",
+				},
+				deliveryTime: {
+					"@type": "ShippingDeliveryTime",
+					handlingTime: {
+						"@type": "QuantitativeValue",
+						minValue: 0,
+						maxValue: 1,
+						unitCode: "d",
+					},
+					transitTime: {
+						"@type": "QuantitativeValue",
+						minValue: 2,
+						maxValue: 3,
+						unitCode: "d",
+					},
+				},
+			},
+			{
+				"@type": "OfferShippingDetails",
+				shippingRate: {
+					"@type": "MonetaryAmount",
+					value: 3.45,
+					currency: "GBP",
+				},
+				eligibleTransactionVolume: {
+					"@type": "PriceSpecification",
+					maxPrice: 19.99,
+					priceCurrency: "GBP",
+				},
+				shippingDestination: {
+					"@type": "DefinedRegion",
+					addressCountry: "GB",
+				},
+				deliveryTime: {
+					"@type": "ShippingDeliveryTime",
+					handlingTime: {
+						"@type": "QuantitativeValue",
+						minValue: 0,
+						maxValue: 1,
+						unitCode: "d",
+					},
+					transitTime: {
+						"@type": "QuantitativeValue",
+						minValue: 2,
+						maxValue: 3,
+						unitCode: "d",
+					},
+				},
+			},
+		],
+		hasMerchantReturnPolicy: {
+			"@type": "MerchantReturnPolicy",
+			applicableCountry: "GB",
+			returnPolicyCategory:
+				"https://schema.org/MerchantReturnFiniteReturnWindow",
+			merchantReturnDays: 14,
+			returnMethod: "https://schema.org/ReturnByMail",
+			returnFees: "https://schema.org/ReturnShippingFees",
+		},
+		offers: [
+			{
+				name: "Sambal Bali 185g",
+				description:
+					"Aromatic sweet-spicy chili paste with traditional Balinese spices",
+				price: "8.49",
+				priceCurrency: "GBP",
+				availability: "https://schema.org/InStock",
+				sku: "SII-SB-185G",
+				url: "https://spiceislandindonesia.com/sambal-bali-sweet-spicy",
+			},
+		],
+		aggregateRating: {
+			ratingValue: 4.9,
+			reviewCount: 98,
+			bestRating: 5,
+			worstRating: 1,
+		},
+	};
 	return (
 		<div className='bg-gradient-to-b from-cream-50 to-cream-100 font-body'>
 			<FAQSchema
 				faqs={faqData}
 				pageTitle='Sambal Bali UK - Frequently Asked Questions'
 			/>
-			{/* Structured Data */}
-			<StructuredData type='product' />
+			{/* Product schema moved to dedicated component with full details below */}
 
 			{/* Hero Section */}
 			<section className='py-16 lg:py-24'>
@@ -621,7 +722,7 @@ export default function SambalBaliPage() {
 									contains real galangal, lemongrass,
 									and kaffir lime leaves - not
 									artificial flavors. We offer free
-									UK delivery on orders over £25, and
+									UK delivery on orders over £20, and
 									you can
 									<Link
 										href='/sample-pack-try-first'

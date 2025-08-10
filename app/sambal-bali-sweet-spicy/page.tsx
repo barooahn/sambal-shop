@@ -38,6 +38,110 @@ export const metadata = {
 	},
 };
 
+import ProductSchema from "@/components/seo/ProductSchema";
+// Product schema data for Sambal Bali (Sweet & Spicy)
+const productData = {
+	name: "Sweet & Spicy Indonesian Sambal Bali",
+	description:
+		"Traditional Balinese-style sambal with perfect sweet-heat balance and aromatic spices. Handcrafted by Chef Yossie.",
+	brand: "Spice Island Indonesia",
+	category: "Condiments & Sauces",
+	image: "https://spiceislandindonesia.com/images/Spice Island Indonesia Sambal Bali 185g Label.webp",
+	shippingDetails: [
+		{
+			"@type": "OfferShippingDetails",
+			shippingRate: {
+				"@type": "MonetaryAmount",
+				value: 0,
+				currency: "GBP",
+			},
+			eligibleTransactionVolume: {
+				"@type": "PriceSpecification",
+				minPrice: 20,
+				priceCurrency: "GBP",
+			},
+			shippingDestination: {
+				"@type": "DefinedRegion",
+				addressCountry: "GB",
+			},
+			deliveryTime: {
+				"@type": "ShippingDeliveryTime",
+				handlingTime: {
+					"@type": "QuantitativeValue",
+					minValue: 0,
+					maxValue: 1,
+					unitCode: "d",
+				},
+				transitTime: {
+					"@type": "QuantitativeValue",
+					minValue: 2,
+					maxValue: 3,
+					unitCode: "d",
+				},
+			},
+		},
+		{
+			"@type": "OfferShippingDetails",
+			shippingRate: {
+				"@type": "MonetaryAmount",
+				value: 3.45,
+				currency: "GBP",
+			},
+			eligibleTransactionVolume: {
+				"@type": "PriceSpecification",
+				maxPrice: 19.99,
+				priceCurrency: "GBP",
+			},
+			shippingDestination: {
+				"@type": "DefinedRegion",
+				addressCountry: "GB",
+			},
+			deliveryTime: {
+				"@type": "ShippingDeliveryTime",
+				handlingTime: {
+					"@type": "QuantitativeValue",
+					minValue: 0,
+					maxValue: 1,
+					unitCode: "d",
+				},
+				transitTime: {
+					"@type": "QuantitativeValue",
+					minValue: 2,
+					maxValue: 3,
+					unitCode: "d",
+				},
+			},
+		},
+	],
+	hasMerchantReturnPolicy: {
+		"@type": "MerchantReturnPolicy",
+		applicableCountry: "GB",
+		returnPolicyCategory:
+			"https://schema.org/MerchantReturnFiniteReturnWindow",
+		merchantReturnDays: 14,
+		returnMethod: "https://schema.org/ReturnByMail",
+		returnFees: "https://schema.org/ReturnShippingFees",
+	},
+	offers: [
+		{
+			name: "Sambal Bali 185g",
+			description:
+				"Sweet & spicy Balinese chili paste with aromatic spices",
+			price: "7.49",
+			priceCurrency: "GBP",
+			availability: "https://schema.org/InStock",
+			sku: "SII-SB-185G",
+			url: "https://spiceislandindonesia.com/sambal-bali-sweet-spicy",
+		},
+	],
+	aggregateRating: {
+		ratingValue: 4.8,
+		reviewCount: 112,
+		bestRating: 5,
+		worstRating: 1,
+	},
+};
+
 export default function SambalBaliSweetSpicyPage() {
 	return (
 		<div className='min-h-screen bg-gradient-to-br from-cream-50 to-cream-100'>
@@ -45,6 +149,22 @@ export default function SambalBaliSweetSpicyPage() {
 			<section className='py-16 sm:py-24 bg-gradient-to-br from-burgundy-900 via-burgundy-800 to-burgundy-900 text-white relative overflow-hidden'>
 				<div className='absolute top-0 left-0 w-96 h-96 bg-gold-600/20 rounded-full -translate-x-48 -translate-y-48 blur-3xl'></div>
 				<div className='absolute bottom-0 right-0 w-96 h-96 bg-gold-600/20 rounded-full translate-x-48 translate-y-48 blur-3xl'></div>
+
+				{/* Product Schema for Merchant listings */}
+				<ProductSchema
+					name={productData.name}
+					description={productData.description}
+					brand={productData.brand}
+					category={productData.category}
+					image={productData.image}
+					offers={productData.offers}
+					aggregateRating={productData.aggregateRating}
+					additionalProperties={{
+						shippingDetails: productData.shippingDetails,
+						hasMerchantReturnPolicy:
+							productData.hasMerchantReturnPolicy,
+					}}
+				/>
 
 				<div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<div className='grid lg:grid-cols-2 gap-12 items-center'>

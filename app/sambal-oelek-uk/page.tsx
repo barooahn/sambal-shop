@@ -73,7 +73,7 @@ export default function SambalOelekUKPage() {
 		},
 		{
 			question: "Can I buy authentic sambal oelek in the UK?",
-			answer: "Yes! We deliver authentic Indonesian sambal oelek throughout the UK. Our sambal is made by Chef Yossie using traditional Bandung family recipes - the same methods used in Indonesia for generations. We offer free UK delivery on orders over £25.",
+			answer: "Yes! We deliver authentic Indonesian sambal oelek throughout the UK. Our sambal is made by Chef Yossie using traditional Bandung family recipes - the same methods used in Indonesia for generations. We offer free UK delivery on orders over £20.",
 		},
 	];
 
@@ -153,6 +153,84 @@ export default function SambalOelekUKPage() {
 		brand: "Spice Island Indonesia",
 		category: "Condiments & Sauces",
 		image: "https://spiceislandindonesia.com/images/Spice Island Indonesia Sambal Oelek 185g Label.png",
+		// Merchant-friendly additions
+		shippingDetails: [
+			{
+				"@type": "OfferShippingDetails",
+				// Free shipping on orders £20+
+				shippingRate: {
+					"@type": "MonetaryAmount",
+					value: 0,
+					currency: "GBP",
+				},
+				eligibleTransactionVolume: {
+					"@type": "PriceSpecification",
+					minPrice: 20,
+					priceCurrency: "GBP",
+				},
+				shippingDestination: {
+					"@type": "DefinedRegion",
+					addressCountry: "GB",
+				},
+				deliveryTime: {
+					"@type": "ShippingDeliveryTime",
+					handlingTime: {
+						"@type": "QuantitativeValue",
+						minValue: 0,
+						maxValue: 1,
+						unitCode: "d",
+					},
+					transitTime: {
+						"@type": "QuantitativeValue",
+						minValue: 2,
+						maxValue: 3,
+						unitCode: "d",
+					},
+				},
+			},
+			{
+				"@type": "OfferShippingDetails",
+				// Standard Royal Mail 48 Tracked (under £20)
+				shippingRate: {
+					"@type": "MonetaryAmount",
+					value: 3.45,
+					currency: "GBP",
+				},
+				eligibleTransactionVolume: {
+					"@type": "PriceSpecification",
+					maxPrice: 19.99,
+					priceCurrency: "GBP",
+				},
+				shippingDestination: {
+					"@type": "DefinedRegion",
+					addressCountry: "GB",
+				},
+				deliveryTime: {
+					"@type": "ShippingDeliveryTime",
+					handlingTime: {
+						"@type": "QuantitativeValue",
+						minValue: 0,
+						maxValue: 1,
+						unitCode: "d",
+					},
+					transitTime: {
+						"@type": "QuantitativeValue",
+						minValue: 2,
+						maxValue: 3,
+						unitCode: "d",
+					},
+				},
+			},
+		],
+		hasMerchantReturnPolicy: {
+			"@type": "MerchantReturnPolicy",
+			applicableCountry: "GB",
+			returnPolicyCategory:
+				"https://schema.org/MerchantReturnFiniteReturnWindow",
+			merchantReturnDays: 14,
+			returnMethod: "https://schema.org/ReturnByMail",
+			returnFees: "https://schema.org/ReturnShippingFees",
+		},
 		offers: [
 			{
 				name: "Sambal Oelek 185g",
@@ -160,8 +238,9 @@ export default function SambalOelekUKPage() {
 					"Pure, fiery chili paste - the foundation of Indonesian cooking",
 				price: "7.49",
 				priceCurrency: "GBP",
-				availability: "https://schema.org/PreOrder",
+				availability: "https://schema.org/InStock",
 				sku: "SII-SO-185G",
+				url: "https://spiceislandindonesia.com/sambal-oelek-uk",
 			},
 		],
 		aggregateRating: {
@@ -647,7 +726,7 @@ export default function SambalOelekUKPage() {
 						<div className='flex items-center space-x-2'>
 							<Truck className='w-5 h-5' />
 							<span className='font-body'>
-								Free UK delivery over £25
+								Free UK delivery over £20
 							</span>
 						</div>
 						<div className='flex items-center space-x-2'>
@@ -1033,7 +1112,7 @@ export default function SambalOelekUKPage() {
 									family recipes - the same methods
 									used in Indonesia for generations.
 									We offer free UK delivery on orders
-									over £25, and you can
+									over £20, and you can
 									<Link
 										href='/sample-pack-try-first'
 										className='text-burgundy-600 hover:text-burgundy-800 underline'

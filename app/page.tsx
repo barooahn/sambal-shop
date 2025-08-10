@@ -234,11 +234,13 @@ export default function Home() {
 			answer: "Absolutely! We're the UK's premier Indonesian sambal supplier. Made by Chef Yossie using traditional Bandung family recipes, our sambal is crafted with the same techniques used in Indonesia for generations. We deliver throughout the UK including London, Manchester, Birmingham, Edinburgh with proper packaging to maintain freshness. Unlike mass-produced alternatives found in UK supermarkets, our sambal contains no artificial ingredients and captures the true taste of Indonesia.",
 		},
 		{
-			question: "Do you deliver Indonesian sambal to London and Manchester?",
-			answer: "Yes! We deliver authentic Indonesian sambal throughout the UK with next-day delivery available to London, Manchester, Birmingham, Edinburgh and all major cities. Free UK delivery on orders over £25. Our sambal is carefully packaged to maintain freshness during transport, ensuring you receive restaurant-quality Indonesian condiments at your door.",
+			question:
+				"Do you deliver Indonesian sambal to London and Manchester?",
+			answer: "Yes! We deliver authentic Indonesian sambal throughout the UK with next-day delivery available to London, Manchester, Birmingham, Edinburgh and all major cities. Free UK delivery on orders over £20. Our sambal is carefully packaged to maintain freshness during transport, ensuring you receive restaurant-quality Indonesian condiments at your door.",
 		},
 		{
-			question: "Where can I find authentic Indonesian sambal near me in the UK?",
+			question:
+				"Where can I find authentic Indonesian sambal near me in the UK?",
 			answer: "Spice Island Indonesia is your best source for authentic Indonesian sambal in the UK. While UK supermarkets may stock mass-produced versions, our sambal is the only one made by a professional Indonesian chef using traditional Bandung recipes. We deliver nationwide, so whether you're in London, Manchester, Scotland, Wales or anywhere in the UK, you can order authentic sambal online with fast delivery.",
 		},
 		{
@@ -246,7 +248,8 @@ export default function Home() {
 			answer: "Sambal is a traditional Indonesian chili paste that's been made for centuries in the Spice Islands. It's not just hot sauce - sambal is made from fresh chilies, salt, and vinegar using ancient stone grinding techniques. Unlike Western hot sauces, sambal has no sugar, preservatives, or artificial ingredients. It's the heart and soul of Indonesian cooking.",
 		},
 		{
-			question: "How spicy is Indonesian sambal compared to other hot sauces?",
+			question:
+				"How spicy is Indonesian sambal compared to other hot sauces?",
 			answer: "Indonesian sambal is significantly hotter than most Western hot sauces. Authentic sambal oelek ranges from fifteen thousand to thirty thousand Scoville Heat Units, making it three to five times hotter than Tabasco or sriracha. The heat builds gradually and has a clean, pure chili flavor without sweetness.",
 		},
 		{
@@ -259,11 +262,11 @@ export default function Home() {
 		<div className='font-body min-h-screen relative overflow-hidden'>
 			{/* Content with proper z-index */}
 			<div className='relative z-10'>
-				{/* Structured Data */}
+				{/* Structured Data (keep single instances to avoid duplicates) */}
 				<StructuredData type='organization' />
 				<StructuredData type='localbusiness' />
 				<StructuredData type='product' />
-				<StructuredData type='faq' />
+				{/* FAQ schema is injected below via <FAQSchema /> to avoid duplication */}
 				<StructuredData type='reviews' />
 
 				{/* Local SEO Schema for AI Search */}
@@ -309,25 +312,29 @@ export default function Home() {
 					speakableSections={[
 						{
 							cssSelector: ".voice-hero-title",
-							description: "Main page title for voice assistants"
+							description:
+								"Main page title for voice assistants",
 						},
 						{
 							cssSelector: ".voice-product-description",
-							description: "Key product information for voice queries"
+							description:
+								"Key product information for voice queries",
 						},
 						{
 							cssSelector: ".voice-optimized-answer",
-							description: "FAQ answers optimized for voice search"
+							description:
+								"FAQ answers optimized for voice search",
 						},
 						{
 							cssSelector: ".voice-location-info",
-							description: "UK delivery and location information"
-						}
+							description:
+								"UK delivery and location information",
+						},
 					]}
-					faqQuestions={generalSambalFAQ.map(faq => ({
+					faqQuestions={generalSambalFAQ.map((faq) => ({
 						question: faq.question,
 						answer: faq.answer,
-						voiceOptimized: true
+						voiceOptimized: true,
 					}))}
 				/>
 

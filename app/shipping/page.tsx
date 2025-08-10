@@ -11,10 +11,10 @@ import {
 export default function ShippingPage() {
 	const shippingOptions = [
 		{
-			name: "Standard Delivery",
-			time: "3-5 business days",
-			cost: "£4.99",
-			description: "Reliable delivery to your door",
+			name: "Standard Delivery (Royal Mail 48 Tracked)",
+			time: "2-3 business days",
+			cost: "£3.45",
+			description: "Tracked delivery to your door",
 			icon: Truck,
 		},
 		{
@@ -26,9 +26,9 @@ export default function ShippingPage() {
 		},
 		{
 			name: "Free Delivery",
-			time: "3-5 business days",
-			cost: "Free on orders over £35",
-			description: "No delivery charge on qualifying orders",
+			time: "2-3 business days",
+			cost: "Free on orders over £20",
+			description: "Automatically applied at checkout",
 			icon: Package,
 		},
 	];

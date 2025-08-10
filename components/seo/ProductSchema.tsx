@@ -8,6 +8,7 @@ interface ProductOffer {
 	availability: string;
 	image?: string;
 	sku?: string;
+	url?: string; // Landing page for the offer (helps Merchant listings)
 }
 
 interface ProductReview {
@@ -43,68 +44,69 @@ const ProductSchema: FC<ProductSchemaProps> = ({
 	offers,
 	aggregateRating,
 	reviews = [],
-	additionalProperties = {}
+	additionalProperties = {},
 }) => {
 	const schemaData = {
 		"@context": "https://schema.org",
 		"@type": "Product",
-		"name": name,
-		"description": description,
-		"brand": {
+		name: name,
+		description: description,
+		brand: {
 			"@type": "Brand",
-			"name": brand
+			name: brand,
 		},
-		"category": category,
-		"image": image,
-		"offers": offers.map(offer => ({
+		category: category,
+		image: image,
+		offers: offers.map((offer) => ({
 			"@type": "Offer",
-			"name": offer.name,
-			"description": offer.description,
-			"price": offer.price,
-			"priceCurrency": offer.priceCurrency,
-			"availability": offer.availability,
-			"itemCondition": "https://schema.org/NewCondition",
-			"image": offer.image,
-			"sku": offer.sku,
-			"seller": {
+			name: offer.name,
+			description: offer.description,
+			price: offer.price,
+			priceCurrency: offer.priceCurrency,
+			availability: offer.availability,
+			itemCondition: "https://schema.org/NewCondition",
+			image: offer.image,
+			sku: offer.sku,
+			url: offer.url,
+			seller: {
 				"@type": "Organization",
-				"name": brand
-			}
+				name: brand,
+			},
 		})),
-		"aggregateRating": {
+		aggregateRating: {
 			"@type": "AggregateRating",
-			"ratingValue": aggregateRating.ratingValue.toString(),
-			"reviewCount": aggregateRating.reviewCount.toString(),
-			"bestRating": aggregateRating.bestRating.toString(),
-			"worstRating": aggregateRating.worstRating.toString()
+			ratingValue: aggregateRating.ratingValue.toString(),
+			reviewCount: aggregateRating.reviewCount.toString(),
+			bestRating: aggregateRating.bestRating.toString(),
+			worstRating: aggregateRating.worstRating.toString(),
 		},
-		"review": reviews.map(review => ({
+		review: reviews.map((review) => ({
 			"@type": "Review",
-			"author": {
+			author: {
 				"@type": "Person",
-				"name": review.author
+				name: review.author,
 			},
-			"reviewRating": {
+			reviewRating: {
 				"@type": "Rating",
-				"ratingValue": review.rating.toString(),
-				"bestRating": "5",
-				"worstRating": "1"
+				ratingValue: review.rating.toString(),
+				bestRating: "5",
+				worstRating: "1",
 			},
-			"reviewBody": review.reviewBody,
-			"datePublished": review.datePublished
+			reviewBody: review.reviewBody,
+			datePublished: review.datePublished,
 		})),
-		"manufacturer": {
+		manufacturer: {
 			"@type": "Organization",
-			"name": brand
+			name: brand,
 		},
-		...additionalProperties
+		...additionalProperties,
 	};
 
 	return (
 		<script
-			type="application/ld+json"
+			type='application/ld+json'
 			dangerouslySetInnerHTML={{
-				__html: JSON.stringify(schemaData, null, 2)
+				__html: JSON.stringify(schemaData, null, 2),
 			}}
 		/>
 	);

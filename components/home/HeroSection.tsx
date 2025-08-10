@@ -341,6 +341,18 @@ export default function HeroSection() {
 									<div className='absolute -top-2 -right-2 lg:-top-4 lg:-right-4 z-30'>
 										<div className='bg-gradient-to-br from-amber-400 via-orange-500 to-red-600 text-white px-3 lg:px-4 py-1 lg:py-2 rounded-full font-bold text-sm lg:text-lg shadow-2xl border-2 border-white/20 backdrop-blur-sm transform rotate-12 hover:rotate-0 hover:scale-110 transition-all duration-500'>
 											£7.49
+											{/* Removed: duplicate delivery badge now shown in micro header */}
+											{/* Hide delivery badge; it's shown in micro header */}
+											{false && (
+												<div className='absolute -bottom-3 left-0'>
+													<span className='hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-600 text-white text-[10px] sm:text-xs lg:text-sm font-semibold shadow-md whitespace-nowrap'>
+														Free UK
+														delivery
+														over £20
+													</span>
+												</div>
+											)}
+											{/* end removed badge */}
 										</div>
 									</div>
 								)}
