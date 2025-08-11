@@ -174,12 +174,12 @@ export default function GiftSetPage() {
 			/>
 
 			{/* Hero Section */}
-			<section className='py-16 sm:py-24 bg-gradient-to-br from-purple-900 via-indigo-800 to-purple-900 text-white relative overflow-hidden'>
-				<div className='absolute top-0 left-0 w-96 h-96 bg-indigo-600/20 rounded-full -translate-x-48 -translate-y-48 blur-3xl'></div>
-				<div className='absolute bottom-0 right-0 w-96 h-96 bg-purple-600/20 rounded-full translate-x-48 translate-y-48 blur-3xl'></div>
+			<section className='py-16 sm:py-20 lg:py-14 bg-gradient-to-br from-purple-900 via-indigo-800 to-purple-900 text-white relative overflow-hidden'>
+				<div className='absolute top-0 left-0 w-72 h-72 lg:w-80 lg:h-80 bg-indigo-600/20 rounded-full -translate-x-48 -translate-y-48 blur-3xl'></div>
+				<div className='absolute bottom-0 right-0 w-72 h-72 lg:w-80 lg:h-80 bg-purple-600/20 rounded-full translate-x-48 translate-y-48 blur-3xl'></div>
 
 				<div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-					<div className='grid lg:grid-cols-2 gap-12 items-center'>
+					<div className='grid lg:grid-cols-2 lg:gap-8 items-center'>
 						{/* Left side - Content */}
 						<div className='text-center lg:text-left'>
 							<Badge className='bg-purple-800 text-indigo-300 mb-6 px-6 py-3 text-lg font-semibold border border-indigo-600/30'>
@@ -187,7 +187,7 @@ export default function GiftSetPage() {
 								Perfect for Food Lovers
 							</Badge>
 
-							<h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold mb-8 leading-tight font-brand'>
+							<h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight font-brand'>
 								<span className='text-white block mb-2'>
 									Indonesian Sambal
 								</span>
