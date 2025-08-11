@@ -13,72 +13,21 @@ import { Badge } from "@/components/ui/badge";
 import GlassCard from "@/components/ui/GlassCard";
 import { Flame, Leaf, Star, ShoppingCart, Loader2, Bell } from "lucide-react";
 import { Product } from "@/src/stripe-config";
-import { supabase } from "@/lib/supabase";
-import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 
 interface ProductCardProps {
 	product: Product;
-	user?: any;
 }
 
-export function ProductCard({ product, user }: ProductCardProps) {
+export function ProductCard({ product }: ProductCardProps) {
 	const [loading, setLoading] = useState(false);
 	const [joining, setJoining] = useState(false);
-	const router = useRouter();
 
 	const SALES_ENABLED = process.env.NEXT_PUBLIC_SALES_ENABLED === "true";
 
 	const handlePurchase = async () => {
-		if (!user) {
-			router.push("/login");
-			return;
-		}
-
-		setLoading(true);
-
-		try {
-			const {
-				data: { session },
-			} = await supabase.auth.getSession();
-
-			if (!session) {
-				router.push("/login");
-				return;
-			}
-
-			const response = await fetch(
-				`${process.env.NEXT_PUBLIC_SUPABASE_URL}/functions/v1/stripe-checkout`,
-				{
-					method: "POST",
-					headers: {
-						Authorization: `Bearer ${session.access_token}`,
-						"Content-Type": "application/json",
-					},
-					body: JSON.stringify({
-						price_id: product.priceId,
-						success_url: `${window.location.origin}/success?session_id={CHECKOUT_SESSION_ID}`,
-						cancel_url: `${window.location.origin}/shop`,
-						mode: product.mode,
-					}),
-				}
-			);
-
-			const data = await response.json();
-
-			if (data.error) {
-				throw new Error(data.error);
-			}
-
-			if (data.url) {
-				window.location.href = data.url;
-			}
-		} catch (error) {
-			console.error("Error creating checkout session:", error);
-			alert("Failed to start checkout. Please try again.");
-		} finally {
-			setLoading(false);
-		}
+		// For static export, redirect to external checkout or show message
+		toast.error("Checkout is currently unavailable. Please join our waitlist for updates!");
 	};
 
 	const handleJoinWaitlist = async () => {

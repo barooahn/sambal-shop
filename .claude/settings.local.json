@@ -23,7 +23,8 @@
       "Bash(git add:*)",
       "Bash(yarn lint)",
       "Bash(rm:*)",
-      "Bash(npx tsc:*)"
+      "Bash(npx tsc:*)",
+      "Bash(yarn add stripe)"
     ],
     "deny": []
   }
