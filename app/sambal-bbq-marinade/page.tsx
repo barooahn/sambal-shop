@@ -48,7 +48,7 @@ export default function SambalBBQMarinadePage() {
 				<div className='absolute bottom-0 right-0 w-96 h-96 bg-gold-600/20 rounded-full translate-x-48 translate-y-48 blur-3xl'></div>
 
 				<div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-					<div className='grid lg:grid-cols-2 gap-12 items-center'>
+					<div className='grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] lg:gap-6 items-center'>
 						{/* Left side - Content */}
 						<div className='text-center lg:text-left'>
 							<Badge className='bg-burgundy-800 text-gold-300 mb-6 px-6 py-3 text-lg font-semibold border border-gold-600/30'>
@@ -56,14 +56,14 @@ export default function SambalBBQMarinadePage() {
 								Transform Your BBQ Game
 							</Badge>
 
-							<h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold mb-8 leading-tight font-brand'>
+							<h1 className='text-4xl sm:text-5xl lg:text-5xl font-bold mb-6 leading-tight font-brand'>
 								<span className='text-white block mb-2'>
 									Indonesian BBQ
 								</span>
 								<span className='text-gold-300 block mb-2'>
 									Marinade Magic
 								</span>
-								<span className='text-gold-200 text-2xl sm:text-3xl lg:text-4xl font-script italic'>
+								<span className='text-gold-200 text-2xl sm:text-3xl lg:text-3xl font-script italic'>
 									Authentic Sambal for Grilling
 								</span>
 							</h1>
@@ -112,12 +112,12 @@ export default function SambalBBQMarinadePage() {
 								</div>
 							</div>
 
-							<div className='flex flex-col sm:flex-row gap-4 justify-center lg:justify-start'>
+							<div className='flex flex-col sm:flex-row gap-3 justify-center lg:justify-start'>
 								<Link href='/shop'>
 									<Button
 										variant='primary'
 										size='lg'
-										className='font-elegant text-lg px-8 py-4'
+										className='font-elegant text-lg px-6 py-3'
 									>
 										Get BBQ Sambal - £7.49
 									</Button>
@@ -126,7 +126,7 @@ export default function SambalBBQMarinadePage() {
 									<Button
 										variant='outline'
 										size='lg'
-										className='font-elegant border-gold-300 text-gold-300 hover:bg-gold-300 hover:text-burgundy-900 text-lg px-8 py-4'
+										className='font-elegant border-gold-300 text-gold-300 hover:bg-gold-300 hover:text-burgundy-900 text-lg px-6 py-3'
 									>
 										See BBQ Recipes
 									</Button>
@@ -136,14 +136,14 @@ export default function SambalBBQMarinadePage() {
 
 						{/* Right side - Product Image */}
 						<div className='relative'>
-							<div className='relative w-full max-w-md mx-auto'>
+							<div className='relative w-full lg:max-w-none ml-auto max-h-[60vh] flex items-center justify-end'>
 								<div className='absolute inset-0 bg-gradient-to-r from-gold-600/30 to-gold-400/30 rounded-full blur-3xl'></div>
 								<Image
 									src='/images/Spice Island Indonesia Sambal Oelek 185g Label.png'
 									alt='Indonesian Sambal BBQ Marinade - Authentic Grilling Sauce'
 									width={400}
 									height={400}
-									className='relative z-10 w-full h-auto drop-shadow-2xl'
+									className='relative z-10 w-auto h-auto max-h-[60vh] object-contain drop-shadow-2xl'
 									priority
 								/>
 							</div>

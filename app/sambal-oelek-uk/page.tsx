@@ -368,7 +368,7 @@ export default function SambalOelekUKPage() {
 				<div className='absolute bottom-0 right-0 w-72 h-72 lg:w-80 lg:h-80 bg-gold-600/20 rounded-full translate-x-48 translate-y-48 blur-3xl'></div>
 
 				<div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-					<div className='grid lg:grid-cols-2 lg:gap-8 items-center'>
+					<div className='grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] lg:gap-6 items-center'>
 						{/* Left side - Content */}
 						<div className='text-center lg:text-left'>
 							<Badge className='bg-burgundy-800 text-gold-300 mb-6 px-6 py-3 text-lg font-semibold border border-gold-600/30'>
@@ -376,20 +376,20 @@ export default function SambalOelekUKPage() {
 								Chef Yossie&apos;s Traditional Recipe
 							</Badge>
 
-							<h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight font-brand'>
+							<h1 className='text-4xl sm:text-5xl lg:text-5xl font-bold mb-6 leading-tight font-brand'>
 								<span className='text-white block mb-2'>
 									Authentic Indonesian
 								</span>
 								<span className='text-gold-300 block mb-2'>
 									Sambal Oelek UK
 								</span>
-								<span className='text-gold-200 text-2xl sm:text-3xl lg:text-4xl font-script italic'>
+								<span className='text-gold-200 text-2xl sm:text-3xl lg:text-3xl font-script italic'>
 									Traditional Recipe - UK Delivery
 								</span>
 							</h1>
 
-							<div className='space-y-6 mb-8 max-w-2xl mx-auto lg:mx-0'>
-								<p className='text-xl sm:text-2xl text-gold-200 leading-relaxed font-body'>
+							<div className='space-y-4 mb-6 max-w-2xl mx-auto lg:mx-0'>
+								<p className='text-lg sm:text-xl text-gold-200 leading-relaxed font-body'>
 									Finally,{" "}
 									<strong className='text-gold-100'>
 										real Indonesian sambal oelek
@@ -429,7 +429,7 @@ export default function SambalOelekUKPage() {
 							</div>
 
 							{/* Key Features */}
-							<div className='grid sm:grid-cols-2 gap-3 mb-6'>
+							<div className='grid sm:grid-cols-2 gap-2 mb-4'>
 								<div className='flex items-center justify-center lg:justify-start space-x-3'>
 									<div className='w-8 h-8 bg-gradient-to-r from-gold-600 to-gold-500 rounded-full flex items-center justify-center'>
 										<ChefHat className='w-4 h-4 text-burgundy-900' />
@@ -465,12 +465,12 @@ export default function SambalOelekUKPage() {
 							</div>
 
 							{/* CTA Buttons */}
-							<div className='flex flex-col sm:flex-row gap-4 justify-center lg:justify-start'>
+							<div className='flex flex-col sm:flex-row gap-3 justify-center lg:justify-start'>
 								<Link href='/shop'>
 									<Button
 										variant='primary'
 										size='lg'
-										className='font-elegant text-lg px-8 py-4'
+										className='font-elegant text-lg px-6 py-3'
 									>
 										Order Sambal Oelek Now - £7.49
 									</Button>
@@ -479,7 +479,7 @@ export default function SambalOelekUKPage() {
 									<Button
 										variant='outline'
 										size='lg'
-										className='font-elegant border-gold-300 text-gold-300 hover:bg-gold-300 hover:text-burgundy-900 text-lg px-8 py-4'
+										className='font-elegant border-gold-300 text-gold-300 hover:bg-gold-300 hover:text-burgundy-900 text-lg px-6 py-3'
 									>
 										Try Sample First - £2.99
 									</Button>
@@ -489,15 +489,15 @@ export default function SambalOelekUKPage() {
 
 						{/* Right side - Product Image */}
 						<div className='relative'>
-							<div className='relative max-w-lg mx-auto max-h-[55vh] flex items-center justify-center'>
-								<div className='aspect-square rounded-sm overflow-hidden shadow-luxury bg-gradient-to-br from-burgundy-900/10 to-gold-600/10 p-8'>
+							<div className='relative w-full lg:max-w-none ml-auto max-h-[60vh] flex items-center justify-end'>
+								<div className='aspect-square rounded-sm overflow-hidden shadow-luxury bg-gradient-to-br from-burgundy-900/10 to-gold-600/10 p-6'>
 									<div className='w-full h-full rounded-sm flex items-center justify-center'>
 										<Image
 											src='/images/optimized/Spice Island Indonesia Sambal Oelek 185g Label-lg.webp'
 											alt='Authentic Indonesian Sambal Oelek 185g - Pure chili paste made by Chef Yossie'
 											width={400}
 											height={400}
-											className='w-auto h-auto max-h-[55vh] object-contain drop-shadow-2xl'
+											className='w-auto h-auto max-h-[60vh] object-contain drop-shadow-2xl'
 											priority
 											sizes='(max-width: 768px) 100vw, 50vw'
 										/>

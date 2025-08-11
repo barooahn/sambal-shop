@@ -201,7 +201,7 @@ export default function SambalGorengUKPage() {
 				<div className='absolute bottom-0 right-0 w-72 h-72 lg:w-80 lg:h-80 bg-amber-600/20 rounded-full translate-x-48 translate-y-48 blur-3xl'></div>
 
 				<div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-					<div className='grid lg:grid-cols-2 lg:gap-8 items-center'>
+					<div className='grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] lg:gap-6 items-center'>
 						{/* Left side - Content */}
 						<div className='text-center lg:text-left'>
 							<Badge className='bg-amber-800 text-orange-300 mb-6 px-6 py-3 text-lg font-semibold border border-orange-600/30'>
@@ -209,20 +209,20 @@ export default function SambalGorengUKPage() {
 								Traditional Javanese Recipe
 							</Badge>
 
-							<h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight font-brand'>
+							<h1 className='text-4xl sm:text-5xl lg:text-5xl font-bold mb-6 leading-tight font-brand'>
 								<span className='text-white block mb-2'>
 									Authentic Indonesian
 								</span>
 								<span className='text-orange-300 block mb-2'>
 									Sambal Goreng UK
 								</span>
-								<span className='text-orange-200 text-2xl sm:text-3xl lg:text-4xl font-script italic'>
+								<span className='text-orange-200 text-2xl sm:text-3xl lg:text-3xl font-script italic'>
 									Sweet & Spicy Fried Chili Paste
 								</span>
 							</h1>
 
-							<div className='space-y-6 mb-8 max-w-2xl mx-auto lg:mx-0'>
-								<p className='text-xl sm:text-2xl text-orange-200 leading-relaxed font-body'>
+							<div className='space-y-4 mb-6 max-w-2xl mx-auto lg:mx-0'>
+								<p className='text-lg sm:text-xl text-orange-200 leading-relaxed font-body'>
 									Experience the{" "}
 									<strong className='text-orange-100'>
 										soul of Indonesian cooking
@@ -265,7 +265,7 @@ export default function SambalGorengUKPage() {
 							</div>
 
 							{/* Key Features */}
-							<div className='grid sm:grid-cols-2 gap-3 mb-6'>
+							<div className='grid sm:grid-cols-2 gap-2 mb-4'>
 								<div className='flex items-center justify-center lg:justify-start space-x-3'>
 									<div className='w-8 h-8 bg-gradient-to-r from-orange-600 to-orange-500 rounded-full flex items-center justify-center'>
 										<Flame className='w-4 h-4 text-amber-900' />
@@ -301,12 +301,12 @@ export default function SambalGorengUKPage() {
 							</div>
 
 							{/* CTA Buttons */}
-							<div className='flex flex-col sm:flex-row gap-4 justify-center lg:justify-start'>
+							<div className='flex flex-col sm:flex-row gap-3 justify-center lg:justify-start'>
 								<Link href='/shop'>
 									<Button
 										variant='primary'
 										size='lg'
-										className='font-elegant text-lg px-8 py-4 bg-orange-600 hover:bg-orange-500'
+										className='font-elegant text-lg px-6 py-3 bg-orange-600 hover:bg-orange-500'
 									>
 										Order Sambal Goreng Now -
 										£8.99
@@ -316,7 +316,7 @@ export default function SambalGorengUKPage() {
 									<Button
 										variant='outline'
 										size='lg'
-										className='font-elegant border-orange-300 text-orange-300 hover:bg-orange-300 hover:text-amber-900 text-lg px-8 py-4'
+										className='font-elegant border-orange-300 text-orange-300 hover:bg-orange-300 hover:text-amber-900 text-lg px-6 py-3'
 									>
 										Try Sample First - £3.49
 									</Button>
@@ -326,15 +326,15 @@ export default function SambalGorengUKPage() {
 
 						{/* Right side - Product Image */}
 						<div className='relative'>
-							<div className='relative max-w-lg mx-auto max-h-[55vh] flex items-center justify-center'>
-								<div className='aspect-square rounded-sm overflow-hidden shadow-luxury bg-gradient-to-br from-amber-900/10 to-orange-600/10 p-8'>
+							<div className='relative w-full lg:max-w-none ml-auto max-h-[60vh] flex items-center justify-end'>
+								<div className='rounded-sm shadow-luxury bg-gradient-to-br from-amber-900/10 to-orange-600/10 p-4'>
 									<div className='w-full h-full rounded-sm flex items-center justify-center'>
 										<Image
 											src='/images/optimized/sambal-goreng-lg.webp'
 											alt='Authentic Indonesian Sambal Goreng - Sweet & Spicy Fried Chili Paste by Chef Yossie'
 											width={400}
 											height={400}
-											className='w-auto h-auto max-h-[55vh] object-contain drop-shadow-2xl'
+											className='w-auto h-auto max-h-[60vh] object-contain drop-shadow-2xl'
 											priority
 											sizes='(max-width: 768px) 100vw, 50vw'
 										/>
