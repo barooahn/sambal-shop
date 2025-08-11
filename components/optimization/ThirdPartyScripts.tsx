@@ -13,40 +13,49 @@ export default function ThirdPartyScripts({
 	const [scriptsReady, setScriptsReady] = useState(false);
 
 	useEffect(() => {
-		// Wait for critical rendering to complete before loading third-party scripts
+		// Aggressive lazy loading for GA - wait for user interaction or extended idle time
 		const loadThirdPartyScripts = () => {
-			// Check if page is interactive and LCP has likely occurred
-			if (document.readyState === "complete") {
-				// Use requestIdleCallback to load during idle time
-				if ("requestIdleCallback" in window) {
-					requestIdleCallback(() => setScriptsReady(true), {
-						timeout: 5000,
-					});
-				} else {
-					setTimeout(() => setScriptsReady(true), 3000);
+			let hasLoaded = false;
+			
+			const loadScripts = () => {
+				if (!hasLoaded) {
+					hasLoaded = true;
+					setScriptsReady(true);
 				}
-			} else {
-				// Wait for load event
-				window.addEventListener(
-					"load",
-					() => {
-						setTimeout(() => {
-							if ("requestIdleCallback" in window) {
-								requestIdleCallback(
-									() => setScriptsReady(true),
-									{ timeout: 5000 }
-								);
-							} else {
-								setTimeout(
-									() => setScriptsReady(true),
-									2000
-								);
-							}
-						}, 1000);
-					},
-					{ once: true }
+			};
+			
+			// Load on user interaction (faster for engaged users)
+			const interactionEvents = ['mousedown', 'keydown', 'scroll', 'touchstart'];
+			const handleInteraction = () => {
+				loadScripts();
+				interactionEvents.forEach(event => 
+					document.removeEventListener(event, handleInteraction)
 				);
-			}
+			};
+			
+			// Add interaction listeners
+			interactionEvents.forEach(event => 
+				document.addEventListener(event, handleInteraction, { passive: true, once: true })
+			);
+			
+			// Fallback: load after extended delay for non-interactive users
+			const fallbackTimeout = setTimeout(() => {
+				if (document.readyState === "complete") {
+					if ("requestIdleCallback" in window) {
+						requestIdleCallback(loadScripts, { timeout: 10000 });
+					} else {
+						setTimeout(loadScripts, 5000);
+					}
+				}
+			}, 10000); // Wait 10 seconds before loading for non-interactive users
+			
+			// Cleanup
+			return () => {
+				clearTimeout(fallbackTimeout);
+				interactionEvents.forEach(event => 
+					document.removeEventListener(event, handleInteraction)
+				);
+			};
 		};
 
 		loadThirdPartyScripts();

@@ -113,36 +113,48 @@ export default function HeroSection() {
 	};
 
 	return (
-		<section className='relative min-h-screen flex items-center justify-center overflow-hidden'>
-			{/* Background Image - Optimized for LCP */}
+		<section className='relative flex items-center justify-center overflow-hidden' style={{ minHeight: '100vh' }}>
+			{/* Background Image - Optimized for LCP with fixed dimensions to prevent CLS */}
 			<div className='absolute inset-0 z-0'>
 				<Image
 					src='/images/optimized/hero-image-sm.webp'
 					alt='Premium Indonesian spices imported to UK - authentic Indonesian cooking ingredients available London Manchester Birmingham'
-					fill
-					className='object-cover block sm:hidden'
+					width={768}
+					height={1024}
+					className='object-cover w-full h-full block sm:hidden'
 					fetchPriority='high'
+					sizes='(max-width: 640px) 100vw, 0px'
+					quality={85}
 				/>
 				<Image
 					src='/images/optimized/hero-image-md.webp'
 					alt='Premium Indonesian spices imported to UK - authentic Indonesian cooking ingredients available London Manchester Birmingham'
-					fill
-					className='object-cover hidden sm:block md:hidden'
+					width={1024}
+					height={768}
+					className='object-cover w-full h-full hidden sm:block md:hidden'
 					fetchPriority='high'
+					sizes='(min-width: 640px) and (max-width: 768px) 100vw, 0px'
+					quality={85}
 				/>
 				<Image
 					src='/images/optimized/hero-image-lg.webp'
 					alt='Premium Indonesian spices imported to UK - authentic Indonesian cooking ingredients available London Manchester Birmingham'
-					fill
-					className='object-cover hidden md:block lg:hidden'
+					width={1200}
+					height={800}
+					className='object-cover w-full h-full hidden md:block lg:hidden'
 					fetchPriority='high'
+					sizes='(min-width: 768px) and (max-width: 1024px) 100vw, 0px'
+					quality={85}
 				/>
 				<Image
 					src='/images/optimized/hero-image-xl.webp'
 					alt='Premium Indonesian spices imported to UK - authentic Indonesian cooking ingredients available London Manchester Birmingham'
-					fill
-					className='object-cover hidden lg:block'
+					width={1920}
+					height={1080}
+					className='object-cover w-full h-full hidden lg:block'
 					fetchPriority='high'
+					sizes='(min-width: 1024px) 100vw, 0px'
+					quality={85}
 				/>
 			</div>
 
