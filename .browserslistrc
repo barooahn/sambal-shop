@@ -1,11 +1,9 @@
-# Modern browsers only - aggressive modern targeting
-> 0.5% and last 1 version
+# Modern browsers - balanced approach for development
+> 0.5%
+last 2 versions
 not dead
-not ie > 0
-not op_mini all
-not and_uc > 0
-not chrome < 91
-not firefox < 90
-not safari < 14
-not edge < 91
-supports es6-module
+not ie 11
+chrome >= 88
+firefox >= 85
+safari >= 14
+edge >= 88

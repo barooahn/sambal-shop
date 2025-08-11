@@ -123,6 +123,7 @@ export default function HeroSection() {
 					height={1024}
 					className='object-cover w-full h-full block sm:hidden'
 					priority
+					fetchPriority='high'
 					sizes='(max-width: 640px) 100vw, 0px'
 					quality={85}
 				/>
@@ -133,6 +134,7 @@ export default function HeroSection() {
 					height={768}
 					className='object-cover w-full h-full hidden sm:block md:hidden'
 					priority
+					fetchPriority='high'
 					sizes='(min-width: 640px) and (max-width: 768px) 100vw, 0px'
 					quality={85}
 				/>
@@ -143,6 +145,7 @@ export default function HeroSection() {
 					height={800}
 					className='object-cover w-full h-full hidden md:block lg:hidden'
 					priority
+					fetchPriority='high'
 					sizes='(min-width: 768px) and (max-width: 1024px) 100vw, 0px'
 					quality={85}
 				/>
@@ -153,6 +156,7 @@ export default function HeroSection() {
 					height={1080}
 					className='object-cover w-full h-full hidden lg:block'
 					priority
+					fetchPriority='high'
 					sizes='(min-width: 1024px) 100vw, 0px'
 					quality={85}
 				/>
@@ -170,10 +174,10 @@ export default function HeroSection() {
 				<div className='flex flex-col lg:grid lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-16 items-center'>
 					{/* Mobile/Tablet - Text content first */}
 					<div className='text-center lg:text-left order-1 lg:order-2 pt-2 sm:pt-0'>
-						{/* Chef badge */}
+						{/* Chef badge - explicit dimensions to prevent layout shift */}
 						<div className='mb-4 lg:mb-6 inline-block'>
-							<div className='bg-white/90 backdrop-blur-sm rounded-full px-3 lg:px-6 py-1.5 lg:py-3 border border-orange-200/50 shadow-xl'>
-								<div className='flex items-center justify-center space-x-2 lg:space-x-3'>
+							<div className='bg-white/90 backdrop-blur-sm rounded-full px-3 lg:px-6 py-1.5 lg:py-3 border border-orange-200/50 shadow-xl' style={{ minHeight: '32px', minWidth: '280px' }}>
+								<div className='flex items-center justify-center space-x-2 lg:space-x-3' style={{ height: '20px' }}>
 									<ChefHat className='w-3 lg:w-5 h-3 lg:h-5 text-orange-600' />
 									<span className='text-gray-800 font-semibold text-xs lg:text-sm tracking-wide'>
 										Chef Yossie&apos;s Traditional

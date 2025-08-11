@@ -89,13 +89,13 @@ export default function ProductShowcase() {
 							<div className='aspect-square rounded-sm overflow-hidden shadow-lg group-hover:shadow-luxury transition-all duration-300 bg-gradient-to-br from-cream-50 to-gold-50'>
 								<div className='w-full h-full flex items-center justify-center p-2'>
 									<Image
-										src='/images/Spice Island Indonesia Sambal Bali 185g Label.webp'
+										src='/images/optimized/Spice Island Indonesia Sambal Bali 185g Label-md.webp'
 										alt='Authentic Indonesian Sambal Bali 185g - UK Delivery - Aromatic Spicy Chili Paste - Birmingham Edinburgh Manchester Delivery'
-										width={300}
-										height={300}
+										width={400}
+										height={400}
 										className='w-full h-full object-contain drop-shadow-lg'
 										loading='lazy'
-										sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+										sizes='(max-width: 768px) 300px, (max-width: 1200px) 350px, 400px'
 									/>
 								</div>
 							</div>
@@ -141,13 +141,13 @@ export default function ProductShowcase() {
 							<div className='aspect-square rounded-sm overflow-hidden shadow-lg group-hover:shadow-luxury transition-all duration-300 bg-gradient-to-br from-cream-50 to-gold-50'>
 								<div className='w-full h-full flex items-center justify-center p-2'>
 									<Image
-										src='/images/optimized/Spice Island Indonesia Complete Packaging System Mockup-responsive.webp'
+										src='/images/optimized/Spice Island Indonesia Complete Packaging System Mockup-md.webp'
 										alt='Spice Island Indonesia Heritage Gift Set - Complete packaging with two authentic Indonesian sambal varieties'
-										width={664}
-										height={364}
+										width={400}
+										height={400}
 										className='w-full h-full object-contain drop-shadow-lg'
 										loading='lazy'
-										sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+										sizes='(max-width: 768px) 300px, (max-width: 1200px) 350px, 400px'
 									/>
 								</div>
 							</div>

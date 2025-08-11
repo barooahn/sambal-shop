@@ -157,6 +157,71 @@ export default function RootLayout({
 					as='script'
 				/>
 				
+				{/* Critical CSS inlining to prevent render blocking */}
+				<style dangerouslySetInnerHTML={{
+					__html: `
+						/* Critical above-the-fold CSS */
+						body { font-family: var(--font-inter) !important; margin: 0; padding: 0; }
+						.hero-section { min-height: 100vh !important; }
+						.header { position: sticky !important; top: 0; z-index: 50; }
+						.loading-placeholder { height: 96px; background: #f5f5f5; }
+						
+						/* Critical layout styles - avoid !important on display/visibility */
+						.relative { position: relative !important; }
+						.absolute { position: absolute !important; }
+						.items-center { align-items: center !important; }
+						.justify-center { justify-content: center !important; }
+						.w-full { width: 100% !important; }
+						.h-full { height: 100% !important; }
+						.object-cover { object-fit: cover !important; }
+						
+						/* Critical display classes - avoid overriding responsive grid/flex */
+						@media (max-width: 1023px) {
+							.flex { display: flex !important; }
+						}
+						
+						/* Typography */
+						.text-center { text-align: center !important; }
+						.font-semibold { font-weight: 600 !important; }
+						.text-xs { font-size: 0.75rem !important; }
+						.text-sm { font-size: 0.875rem !important; }
+						
+						/* Spacing */
+						.mb-4 { margin-bottom: 1rem !important; }
+						.mb-6 { margin-bottom: 1.5rem !important; }
+						.px-3 { padding-left: 0.75rem; padding-right: 0.75rem !important; }
+						.py-1-5 { padding-top: 0.375rem; padding-bottom: 0.375rem !important; }
+						
+						/* Hero background container */
+						.hero-bg { position: absolute; inset: 0; z-index: 0; }
+						.hero-content { position: relative; z-index: 10; }
+						
+						/* Ensure responsive visibility works */
+						@media (max-width: 639px) {
+							.sm\\:hidden { display: none !important; }
+							.block { display: block !important; }
+						}
+						@media (min-width: 640px) {
+							.hidden { display: none !important; }
+							.sm\\:block { display: block !important; }
+						}
+						@media (min-width: 640px) and (max-width: 767px) {
+							.md\\:hidden { display: none !important; }
+						}
+						@media (min-width: 768px) {
+							.sm\\:block.md\\:hidden { display: none !important; }
+							.md\\:block { display: block !important; }
+						}
+						@media (min-width: 768px) and (max-width: 1023px) {
+							.lg\\:hidden { display: none !important; }
+						}
+						@media (min-width: 1024px) {
+							.md\\:block.lg\\:hidden { display: none !important; }
+							.lg\\:block { display: block !important; }
+						}
+					`
+				}} />
+				
 				<PerformanceOptimizer
 					preloadImages={criticalImages}
 					criticalCSS={criticalCSS}
