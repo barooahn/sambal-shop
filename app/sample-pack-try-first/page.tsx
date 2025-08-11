@@ -44,12 +44,12 @@ export default function SamplePackTryFirstPage() {
 	return (
 		<div className='min-h-screen bg-gradient-to-br from-cream-50 to-cream-100'>
 			{/* Hero Section */}
-			<section className='py-16 sm:py-24 bg-gradient-to-br from-burgundy-900 via-burgundy-800 to-burgundy-900 text-white relative overflow-hidden'>
-				<div className='absolute top-0 left-0 w-96 h-96 bg-gold-600/20 rounded-full -translate-x-48 -translate-y-48 blur-3xl'></div>
-				<div className='absolute bottom-0 right-0 w-96 h-96 bg-gold-600/20 rounded-full translate-x-48 translate-y-48 blur-3xl'></div>
+			<section className='py-16 sm:py-20 lg:py-14 bg-gradient-to-br from-burgundy-900 via-burgundy-800 to-burgundy-900 text-white relative overflow-hidden'>
+				<div className='absolute top-0 left-0 w-72 h-72 lg:w-80 lg:h-80 bg-gold-600/20 rounded-full -translate-x-48 -translate-y-48 blur-3xl'></div>
+				<div className='absolute bottom-0 right-0 w-72 h-72 lg:w-80 lg:h-80 bg-gold-600/20 rounded-full translate-x-48 translate-y-48 blur-3xl'></div>
 
 				<div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-					<div className='grid lg:grid-cols-2 gap-12 items-center'>
+					<div className='grid lg:grid-cols-2 lg:gap-8 items-center'>
 						{/* Left side - Content */}
 						<div className='text-center lg:text-left'>
 							<Badge className='bg-burgundy-800 text-gold-300 mb-6 px-6 py-3 text-lg font-semibold border border-gold-600/30'>
@@ -57,19 +57,19 @@ export default function SamplePackTryFirstPage() {
 								Risk-Free Tasting Experience
 							</Badge>
 
-							<h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold mb-8 leading-tight font-brand'>
+							<h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight font-brand'>
 								<span className='text-white block mb-2'>
 									Try Indonesian Sambal
 								</span>
 								<span className='text-gold-300 block mb-2'>
 									Sample Pack
 								</span>
-								<span className='text-gold-200 text-2xl sm:text-3xl lg:text-4xl font-script italic'>
+								<span className='text-gold-200 text-2xl sm:text-3xl lg:text-3xl font-script italic'>
 									Taste Before You Commit
 								</span>
 							</h1>
 
-							<p className='text-xl sm:text-2xl text-gold-200 mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-body'>
+							<p className='text-xl sm:text-2xl text-gold-200 mb-6 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-body'>
 								New to Indonesian sambal? Start your
 								journey with Chef Yossie&apos;s sample
 								pack. Try both Sambal Oelek and Sambal
@@ -78,7 +78,7 @@ export default function SamplePackTryFirstPage() {
 							</p>
 
 							{/* Key Features */}
-							<div className='grid sm:grid-cols-2 gap-4 mb-10'>
+							<div className='grid sm:grid-cols-2 gap-3 mb-6'>
 								<div className='flex items-center justify-center lg:justify-start space-x-3'>
 									<div className='w-8 h-8 bg-gradient-to-r from-gold-600 to-gold-500 rounded-full flex items-center justify-center'>
 										<Package className='w-4 h-4 text-burgundy-900' />
@@ -137,14 +137,14 @@ export default function SamplePackTryFirstPage() {
 
 						{/* Right side - Product Image */}
 						<div className='relative'>
-							<div className='relative w-full max-w-md mx-auto'>
+							<div className='relative w-full max-w-md mx-auto max-h-[55vh] flex items-center justify-center'>
 								<div className='absolute inset-0 bg-gradient-to-r from-gold-600/30 to-gold-400/30 rounded-full blur-3xl'></div>
 								<Image
 									src='/images/optimized/sambal-sample-lg.webp'
 									alt='Indonesian Sambal Sample Pack - Sambal Goreng 45g jar'
 									width={400}
 									height={400}
-									className='relative z-10 w-full h-auto drop-shadow-2xl'
+									className='relative z-10 w-auto h-auto max-h-[55vh] object-contain drop-shadow-2xl'
 									priority
 								/>
 							</div>
