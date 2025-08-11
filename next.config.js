@@ -12,7 +12,8 @@ const nextConfig = {
 	},
 	// Performance optimizations for bundle splitting
 	experimental: {
-		optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
+		optimizePackageImports: ['lucide-react', '@radix-ui/react-icons', 'next'],
+		optimizeCss: false,
 	},
 	// Webpack optimizations for static export
 	webpack: (config, { isServer }) => {

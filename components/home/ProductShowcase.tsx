@@ -33,13 +33,13 @@ export default function ProductShowcase() {
 									{/* Subtle inner glass effect */}
 									<div className='absolute inset-4 rounded-sm bg-gradient-to-br from-white/10 to-transparent backdrop-blur-sm'></div>
 									<Image
-										src='/images/optimized/Spice Island Indonesia Sambal Oelek 185g Label-responsive.webp'
+										src='/images/optimized/Spice Island Indonesia Sambal Oelek 185g Label-md.webp'
 										alt='Authentic Indonesian Sambal Oelek 185g - UK Delivery - Chef Yossie Traditional Recipe - Buy Online London Manchester'
-										width={664}
-										height={364}
+										width={400}
+										height={400}
 										className='w-full h-full object-contain drop-shadow-2xl relative z-10 group-hover:scale-105 transition-transform duration-500'
 										loading='lazy'
-										sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+										sizes='(max-width: 768px) 300px, (max-width: 1200px) 350px, 400px'
 									/>
 								</div>
 							</div>

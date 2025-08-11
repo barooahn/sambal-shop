@@ -18,7 +18,7 @@ import { Waves, Triangle } from "lucide-react";
 // Ingredient configurations for different sections
 const heroIngredients = [
 	{
-		src: "/images/optimized/long-red-chili-xl.webp",
+		src: "/images/optimized/long-red-chili-sm.webp",
 		alt: "Fresh Red Chili",
 		size: "md" as const,
 		position: {
@@ -31,7 +31,7 @@ const heroIngredients = [
 		animationDuration: "6s",
 	},
 	{
-		src: "/images/optimized/garlic-clove-xl.webp",
+		src: "/images/optimized/garlic-clove-sm.webp",
 		alt: "Garlic Clove",
 		size: "sm" as const,
 		position: {
@@ -56,7 +56,7 @@ const productIngredients: {
 
 const storyIngredients = [
 	{
-		src: "/images/optimized/garlic-clove-xl.webp",
+		src: "/images/optimized/garlic-clove-sm.webp",
 		alt: "Garlic Clove",
 		size: "md" as const,
 		position: {
@@ -92,7 +92,7 @@ const newsletterIngredients = [
 		animationDuration: "5s",
 	},
 	{
-		src: "/images/optimized/long-red-chili-xl.webp",
+		src: "/images/optimized/long-red-chili-sm.webp",
 		alt: "Red Chili",
 		size: "md" as const,
 		position: { top: "-290px", right: "60px" },
@@ -123,7 +123,7 @@ const transitionIngredients = [
 
 const shippingIngredients = [
 	{
-		src: "/images/optimized/garlic-clove-xl.webp",
+		src: "/images/optimized/garlic-clove-sm.webp",
 		alt: "Garlic Clove",
 		size: "md" as const,
 		position: { bottom: "-50px", left: "60px" },
@@ -140,7 +140,7 @@ const shippingIngredients = [
 
 const cookingExperienceIngredients = [
 	{
-		src: "/images/optimized/long-red-chili-xl.webp",
+		src: "/images/optimized/long-red-chili-sm.webp",
 		alt: "Red Chili",
 		size: "md" as const,
 		position: { top: "-100px", left: "60px" },

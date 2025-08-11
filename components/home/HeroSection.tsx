@@ -122,7 +122,7 @@ export default function HeroSection() {
 					width={768}
 					height={1024}
 					className='object-cover w-full h-full block sm:hidden'
-					fetchPriority='high'
+					priority
 					sizes='(max-width: 640px) 100vw, 0px'
 					quality={85}
 				/>
@@ -132,7 +132,7 @@ export default function HeroSection() {
 					width={1024}
 					height={768}
 					className='object-cover w-full h-full hidden sm:block md:hidden'
-					fetchPriority='high'
+					priority
 					sizes='(min-width: 640px) and (max-width: 768px) 100vw, 0px'
 					quality={85}
 				/>
@@ -142,7 +142,7 @@ export default function HeroSection() {
 					width={1200}
 					height={800}
 					className='object-cover w-full h-full hidden md:block lg:hidden'
-					fetchPriority='high'
+					priority
 					sizes='(min-width: 768px) and (max-width: 1024px) 100vw, 0px'
 					quality={85}
 				/>
@@ -152,7 +152,7 @@ export default function HeroSection() {
 					width={1920}
 					height={1080}
 					className='object-cover w-full h-full hidden lg:block'
-					fetchPriority='high'
+					priority
 					sizes='(min-width: 1024px) 100vw, 0px'
 					quality={85}
 				/>
