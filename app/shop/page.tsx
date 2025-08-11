@@ -1,4 +1,4 @@
-import { ProductCard } from "@/components/product-card";
+// import { ProductCard } from "@/components/product-card";
 import { products } from "@/src/stripe-config";
 import {
 	ShoppingBag,
@@ -6,7 +6,7 @@ import {
 	Flame,
 	Sparkles,
 	Zap,
-	ArrowRight,
+	// ArrowRight,
 	Info,
 	Bell,
 } from "lucide-react";
@@ -284,7 +284,7 @@ export default function ShopPage() {
 					</div>
 
 					<div className='grid md:grid-cols-2 xl:grid-cols-4 gap-12'>
-						{enhancedProducts.map((product, index) => {
+						{enhancedProducts.map((product) => {
 							const colorClasses = getColorClasses(
 								product.color
 							);
@@ -386,7 +386,7 @@ export default function ShopPage() {
 												<Button
 													variant='outline'
 													size='sm'
-													className='w-full font-elegant mb-2 border-neutral-300 hover:bg-neutral-50'
+													className='w-full font-elegant mb-2 border-neutral-300'
 												>
 													<Info className='w-4 h-4 mr-2' />
 													Full Details &
@@ -394,17 +394,7 @@ export default function ShopPage() {
 												</Button>
 											</Link>
 
-											{/* Original ProductCard for purchase functionality */}
-											{product.id !==
-												"sample-pack" && (
-												<div className='mt-4'>
-													<ProductCard
-														product={
-															product
-														}
-													/>
-												</div>
-											)}
+											{/* Removed embedded ProductCard to avoid duplicate content. Purchase handled on product detail pages. */}
 
 											{/* Sample pack custom button */}
 											{product.id ===
