@@ -196,7 +196,7 @@ export default function SambalBaliSweetSpicyPage() {
 				/>
 
 				<div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-					<div className='grid lg:grid-cols-2 lg:gap-8 items-center'>
+					<div className='grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] lg:gap-6 items-center'>
 						{/* Left side - Content */}
 						<div className='text-center lg:text-left'>
 							<Badge className='bg-burgundy-800 text-gold-300 mb-6 px-6 py-3 text-lg font-semibold border border-gold-600/30'>
@@ -204,19 +204,19 @@ export default function SambalBaliSweetSpicyPage() {
 								Sweet Meets Spicy Perfection
 							</Badge>
 
-							<h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight font-brand'>
+							<h1 className='text-4xl sm:text-5xl lg:text-5xl font-bold mb-6 leading-tight font-brand'>
 								<span className='text-white block mb-2'>
 									Sweet Spicy
 								</span>
 								<span className='text-gold-300 block mb-2'>
 									Sambal Bali
 								</span>
-								<span className='text-gold-200 text-2xl sm:text-3xl lg:text-4xl font-script italic'>
+								<span className='text-gold-200 text-2xl sm:text-3xl lg:text-3xl font-script italic'>
 									Aromatic Indonesian Perfection
 								</span>
 							</h1>
 
-							<p className='text-xl sm:text-2xl text-gold-200 mb-6 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-body'>
+							<p className='text-lg sm:text-xl text-gold-200 mb-4 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-body'>
 								Experience the perfect balance of sweet
 								heat and aromatic spices in Chef
 								Yossie&apos;s Sambal Bali. Traditional
@@ -225,7 +225,7 @@ export default function SambalBaliSweetSpicyPage() {
 							</p>
 
 							{/* Key Features */}
-							<div className='grid sm:grid-cols-2 gap-3 mb-6'>
+							<div className='grid sm:grid-cols-2 gap-2 mb-4'>
 								<div className='flex items-center justify-center lg:justify-start space-x-3'>
 									<div className='w-8 h-8 bg-gradient-to-r from-gold-600 to-gold-500 rounded-full flex items-center justify-center'>
 										<Heart className='w-4 h-4 text-burgundy-900' />
@@ -260,12 +260,12 @@ export default function SambalBaliSweetSpicyPage() {
 								</div>
 							</div>
 
-							<div className='flex flex-col sm:flex-row gap-4 justify-center lg:justify-start'>
+							<div className='flex flex-col sm:flex-row gap-3 justify-center lg:justify-start'>
 								<Link href='/shop'>
 									<Button
 										variant='primary'
 										size='lg'
-										className='font-elegant text-lg px-8 py-4'
+										className='font-elegant text-lg px-6 py-3'
 									>
 										Order Sambal Bali - £7.49
 									</Button>
@@ -274,7 +274,7 @@ export default function SambalBaliSweetSpicyPage() {
 									<Button
 										variant='outline'
 										size='lg'
-										className='font-elegant border-gold-300 text-gold-300 hover:bg-gold-300 hover:text-burgundy-900 text-lg px-8 py-4'
+										className='font-elegant border-gold-300 text-gold-300 hover:bg-gold-300 hover:text-burgundy-900 text-lg px-6 py-3'
 									>
 										Try Sample Pack First
 									</Button>
@@ -284,14 +284,14 @@ export default function SambalBaliSweetSpicyPage() {
 
 						{/* Right side - Product Image */}
 						<div className='relative'>
-							<div className='relative w-full max-w-md mx-auto max-h-[55vh] flex items-center justify-center'>
+							<div className='relative w-full lg:max-w-none ml-auto max-h-[60vh] flex items-center justify-end'>
 								<div className='absolute inset-0 bg-gradient-to-r from-gold-600/30 to-gold-400/30 rounded-full blur-3xl'></div>
 								<Image
 									src='/images/optimized/Spice Island Indonesia Sambal Oelek 185g Label-responsive.webp'
 									alt='Authentic Indonesian Sambal Bali 185g jar - Sweet Spicy'
 									width={664}
 									height={364}
-									className='relative z-10 w-auto h-auto max-h-[55vh] object-contain drop-shadow-2xl'
+									className='relative z-10 w-auto h-auto max-h-[60vh] object-contain drop-shadow-2xl'
 									priority
 								/>
 							</div>

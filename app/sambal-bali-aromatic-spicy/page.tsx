@@ -182,7 +182,7 @@ export default function SambalBaliAromaticSpicyPage() {
 				<div className='absolute bottom-0 right-0 w-72 h-72 lg:w-80 lg:h-80 bg-green-900/20 rounded-full translate-x-48 translate-y-48 blur-3xl'></div>
 
 				<div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-					<div className='grid lg:grid-cols-2 lg:gap-8 items-center'>
+					<div className='grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] lg:gap-6 items-center'>
 						{/* Left side - Content */}
 						<div className='text-center lg:text-left'>
 							<Badge className='bg-gray-900 text-slate-300 mb-6 px-6 py-3 text-lg font-semibold border border-slate-600/30'>
@@ -190,20 +190,20 @@ export default function SambalBaliAromaticSpicyPage() {
 								Authentic Balinese Recipe
 							</Badge>
 
-							<h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight font-brand'>
+							<h1 className='text-4xl sm:text-5xl lg:text-5xl font-bold mb-6 leading-tight font-brand'>
 								<span className='text-white block mb-2'>
 									Authentic Indonesian
 								</span>
 								<span className='text-slate-300 block mb-2'>
 									Sambal Bali UK
 								</span>
-								<span className='text-white text-2xl sm:text-3xl lg:text-4xl font-script italic'>
+								<span className='text-white text-2xl sm:text-3xl lg:text-3xl font-script italic'>
 									Aromatic Spicy Chili Paste
 								</span>
 							</h1>
 
-							<div className='space-y-6 mb-8 max-w-2xl mx-auto lg:mx-0'>
-								<p className='text-xl sm:text-2xl text-white leading-relaxed font-body'>
+							<div className='space-y-4 mb-6 max-w-2xl mx-auto lg:mx-0'>
+								<p className='text-lg sm:text-xl text-white leading-relaxed font-body'>
 									Discover the{" "}
 									<strong className='text-slate-100'>
 										sophisticated aromatics
@@ -247,7 +247,7 @@ export default function SambalBaliAromaticSpicyPage() {
 							</div>
 
 							{/* Key Features */}
-							<div className='grid sm:grid-cols-2 gap-3 mb-6'>
+							<div className='grid sm:grid-cols-2 gap-2 mb-4'>
 								<div className='flex items-center justify-center lg:justify-start space-x-3'>
 									<div className='w-8 h-8 bg-gradient-to-r from-slate-700 to-slate-600 rounded-full flex items-center justify-center'>
 										<Sparkles className='w-4 h-4 text-white' />
@@ -283,12 +283,12 @@ export default function SambalBaliAromaticSpicyPage() {
 							</div>
 
 							{/* CTA Buttons */}
-							<div className='flex flex-col sm:flex-row gap-4 justify-center lg:justify-start'>
+							<div className='flex flex-col sm:flex-row gap-3 justify-center lg:justify-start'>
 								<Link href='/shop'>
 									<Button
 										variant='primary'
 										size='lg'
-										className='font-elegant text-lg px-8 py-4 bg-green-700 hover:bg-green-600 text-white'
+										className='font-elegant text-lg px-6 py-3 bg-green-700 hover:bg-green-600 text-white'
 									>
 										Order Sambal Bali Now - £8.49
 									</Button>
@@ -297,7 +297,7 @@ export default function SambalBaliAromaticSpicyPage() {
 									<Button
 										variant='outline'
 										size='lg'
-										className='font-elegant border-green-400 text-green-400 hover:bg-green-400 hover:text-white text-lg px-8 py-4'
+										className='font-elegant border-green-400 text-green-400 hover:bg-green-400 hover:text-white text-lg px-6 py-3'
 									>
 										Try Sample First - £3.49
 									</Button>
@@ -307,15 +307,15 @@ export default function SambalBaliAromaticSpicyPage() {
 
 						{/* Right side - Product Image */}
 						<div className='relative'>
-							<div className='relative max-w-lg mx-auto max-h-[55vh] flex items-center justify-center'>
-								<div className='aspect-square rounded-sm overflow-hidden shadow-luxury bg-gradient-to-br from-emerald-900/10 to-teal-600/10 p-8'>
+							<div className='relative w-full lg:max-w-none ml-auto max-h-[60vh] flex items-center justify-end'>
+								<div className='aspect-square rounded-sm overflow-hidden shadow-luxury bg-gradient-to-br from-emerald-900/10 to-teal-600/10 p-6'>
 									<div className='w-full h-full rounded-sm flex items-center justify-center'>
 										<Image
 											src='/images/optimized/Spice Island Indonesia Sambal Bali 185g Label-lg.webp'
 											alt='Authentic Indonesian Sambal Bali 185g - Aromatic Chili Paste with Galangal & Lemongrass by Chef Yossie'
 											width={400}
 											height={400}
-											className='w-auto h-auto max-h-[55vh] object-contain drop-shadow-2xl'
+											className='w-auto h-auto max-h-[60vh] object-contain drop-shadow-2xl'
 											priority
 											sizes='(max-width: 768px) 100vw, 50vw'
 										/>

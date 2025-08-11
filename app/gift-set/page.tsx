@@ -179,7 +179,7 @@ export default function GiftSetPage() {
 				<div className='absolute bottom-0 right-0 w-72 h-72 lg:w-80 lg:h-80 bg-purple-600/20 rounded-full translate-x-48 translate-y-48 blur-3xl'></div>
 
 				<div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-					<div className='grid lg:grid-cols-2 lg:gap-8 items-center'>
+					<div className='grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] lg:gap-6 items-center'>
 						{/* Left side - Content */}
 						<div className='text-center lg:text-left'>
 							<Badge className='bg-purple-800 text-indigo-300 mb-6 px-6 py-3 text-lg font-semibold border border-indigo-600/30'>
@@ -187,20 +187,20 @@ export default function GiftSetPage() {
 								Perfect for Food Lovers
 							</Badge>
 
-							<h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight font-brand'>
+							<h1 className='text-4xl sm:text-5xl lg:text-5xl font-bold mb-6 leading-tight font-brand'>
 								<span className='text-white block mb-2'>
 									Indonesian Sambal
 								</span>
 								<span className='text-indigo-300 block mb-2'>
 									Gift Set Collection
 								</span>
-								<span className='text-indigo-200 text-2xl sm:text-3xl lg:text-4xl font-script italic'>
+								<span className='text-indigo-200 text-2xl sm:text-3xl lg:text-3xl font-script italic'>
 									Complete Authentic Experience
 								</span>
 							</h1>
 
-							<div className='space-y-6 mb-8 max-w-2xl mx-auto lg:mx-0'>
-								<p className='text-xl sm:text-2xl text-indigo-200 leading-relaxed font-body'>
+							<div className='space-y-4 mb-6 max-w-2xl mx-auto lg:mx-0'>
+								<p className='text-lg sm:text-xl text-indigo-200 leading-relaxed font-body'>
 									The{" "}
 									<strong className='text-indigo-100'>
 										perfect gift
@@ -221,7 +221,7 @@ export default function GiftSetPage() {
 							</div>
 
 							{/* Customer Rating */}
-							<div className='flex justify-center lg:justify-start mb-10'>
+							<div className='flex justify-center lg:justify-start mb-6'>
 								<div className='bg-white/10 backdrop-blur-sm rounded-lg px-6 py-3 border border-indigo-300/30'>
 									<StarRating
 										rating={
@@ -241,7 +241,7 @@ export default function GiftSetPage() {
 							</div>
 
 							{/* Key Features */}
-							<div className='grid sm:grid-cols-2 gap-4 mb-10'>
+							<div className='grid sm:grid-cols-2 gap-2 mb-6'>
 								<div className='flex items-center justify-center lg:justify-start space-x-3'>
 									<div className='w-8 h-8 bg-gradient-to-r from-indigo-600 to-indigo-500 rounded-full flex items-center justify-center'>
 										<Package className='w-4 h-4 text-purple-900' />
@@ -301,8 +301,8 @@ export default function GiftSetPage() {
 
 						{/* Right side - Product Image */}
 						<div className='relative'>
-							<div className='relative max-w-lg mx-auto'>
-								<div className='aspect-square rounded-sm overflow-hidden shadow-luxury bg-gradient-to-br from-purple-900/10 to-indigo-600/10 p-8'>
+							<div className='relative w-full lg:max-w-none ml-auto max-h-[60vh] flex items-center justify-end'>
+								<div className='aspect-square rounded-sm overflow-hidden shadow-luxury bg-gradient-to-br from-purple-900/10 to-indigo-600/10 p-6'>
 									<div className='w-full h-full rounded-sm flex items-center justify-center'>
 										<Image
 											src='/images/Spice Island Indonesia Complete Packaging System Mockup.webp'
