@@ -61,26 +61,32 @@ export default function ThirdPartyScripts({
 			{/* Google Analytics - Only load when ready */}
 			{measurementId && (
 				<>
+					{/* Inline minimal gtag to reduce external script size */}
 					<Script
-						src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}
+						id='google-analytics-inline'
 						strategy='lazyOnload'
-						id='google-analytics-script'
-						onLoad={() => {
-							// Initialize GA after script loads
-							window.dataLayer = window.dataLayer || [];
-							function gtag(...args: any[]) {
-								window.dataLayer.push(args);
-							}
-							gtag("js", new Date());
-							gtag("config", measurementId, {
-								page_title: document.title,
-								page_location: window.location.href,
-								send_page_view: true,
-								transport_type: "beacon",
-								anonymize_ip: true,
-								allow_google_signals: false,
-								allow_ad_personalization_signals: false,
-							});
+						dangerouslySetInnerHTML={{
+							__html: `
+								(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+								new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+								j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+								'https://www.googletagmanager.com/gtag/js?id='+i+dl;f.parentNode.insertBefore(j,f);
+								})(window,document,'script','dataLayer','${measurementId}');
+
+								window.dataLayer = window.dataLayer || [];
+								function gtag(){dataLayer.push(arguments);}
+								gtag('js', new Date());
+								gtag('config', '${measurementId}', {
+									page_title: document.title,
+									page_location: window.location.href,
+									send_page_view: true,
+									transport_type: 'beacon',
+									anonymize_ip: true,
+									allow_google_signals: false,
+									allow_ad_personalization_signals: false,
+									cookie_flags: 'SameSite=None;Secure'
+								});
+							`,
 						}}
 					/>
 				</>
