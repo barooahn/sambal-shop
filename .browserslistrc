@@ -1,0 +1,9 @@
+# Modern browsers only - remove legacy JavaScript support
+> 0.2% and last 2 versions
+not dead
+not ie <= 11
+not op_mini all
+not and_uc < 12.12
+not chrome < 60
+not firefox < 55
+not safari < 10.1

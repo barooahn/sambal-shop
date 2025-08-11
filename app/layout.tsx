@@ -124,11 +124,12 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<head>
-				{/* Critical Resource Hints */}
+				{/* Critical Resource Hints - DNS resolution early */}
 				<link rel='dns-prefetch' href='//fonts.googleapis.com' />
 				<link rel='dns-prefetch' href='//www.googletagmanager.com' />
 				<link rel='dns-prefetch' href='//www.google-analytics.com' />
 				
+				{/* Early connection establishment */}
 				<link
 					rel='preconnect'
 					href='https://fonts.googleapis.com'
@@ -145,7 +146,7 @@ export default function RootLayout({
 					crossOrigin='anonymous'
 				/>
 				
-				{/* Preload critical Next.js chunks */}
+				{/* Preload critical Next.js chunks - updated chunk names */}
 				<link
 					rel='modulepreload'
 					href='/_next/static/chunks/4bd1b696-602635ee57868870.js'
@@ -153,9 +154,25 @@ export default function RootLayout({
 				/>
 				<link
 					rel='modulepreload'
-					href='/_next/static/chunks/5964-1a8fca11ddc9a9d0.js'
+					href='/_next/static/chunks/vendors-4536d55bd1ebd6cc.js'
 					as='script'
 				/>
+				<link
+					rel='prefetch'
+					href='/_next/static/chunks/ui-components-86411e93ed2f716d.js'
+					as='script'
+				/>
+				
+				{/* Critical CSS inlining */}
+				<style dangerouslySetInnerHTML={{
+					__html: `
+						/* Critical above-the-fold CSS */
+						body { font-family: var(--font-inter); }
+						.hero-section { min-height: 60vh; }
+						.header { position: sticky; top: 0; z-index: 50; }
+						.loading-placeholder { height: 96px; background: #f5f5f5; }
+					`
+				}} />
 				
 				<PerformanceOptimizer
 					preloadImages={criticalImages}

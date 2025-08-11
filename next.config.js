@@ -4,6 +4,9 @@ const nextConfig = {
 	eslint: {
 		ignoreDuringBuilds: true,
 	},
+	compiler: {
+		removeConsole: process.env.NODE_ENV === 'production',
+	},
 	images: {
 		unoptimized: true, // Keep for static export, but we'll optimize manually
 		deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
@@ -14,12 +17,15 @@ const nextConfig = {
 	experimental: {
 		optimizePackageImports: ['lucide-react', '@radix-ui/react-icons'],
 	},
+	serverExternalPackages: ['sharp'],
 	// Webpack optimizations for static export
 	webpack: (config, { isServer }) => {
 		if (!isServer) {
-			// Optimize client-side bundle splitting
+			// Optimize client-side bundle splitting and tree shaking
 			config.optimization = {
 				...config.optimization,
+				usedExports: true,
+				sideEffects: false,
 				splitChunks: {
 					...config.optimization.splitChunks,
 					cacheGroups: {
@@ -31,6 +37,8 @@ const nextConfig = {
 							priority: 10,
 							chunks: 'all',
 							enforce: true,
+							minSize: 20000,
+							maxSize: 200000,
 						},
 						// Separate chunk for UI components
 						ui: {
@@ -39,6 +47,7 @@ const nextConfig = {
 							priority: 20,
 							chunks: 'all',
 							enforce: true,
+							minSize: 10000,
 						},
 						// Analytics and optimization as separate chunk
 						analytics: {
@@ -52,6 +61,16 @@ const nextConfig = {
 				},
 			};
 		}
+		
+		// Enable tree shaking for better unused code elimination
+		config.resolve = {
+			...config.resolve,
+			alias: {
+				...config.resolve.alias,
+				// Ensure ESM modules for better tree shaking
+			}
+		};
+		
 		return config;
 	},
 };

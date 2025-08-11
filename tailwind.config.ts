@@ -7,6 +7,10 @@ module.exports = {
 		"./app/**/*.{ts,tsx}",
 		"./src/**/*.{ts,tsx}",
 	],
+	// CSS optimization
+	corePlugins: {
+		preflight: true,
+	},
 	prefix: "",
 	theme: {
 		container: {
