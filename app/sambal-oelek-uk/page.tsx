@@ -19,14 +19,18 @@ import {
 	MapPin,
 	Heart,
 	CheckCircle,
+	Flame,
+	Leaf,
+	Utensils,
+	Timer,
 } from "lucide-react";
 
 export const metadata = {
-	title: "Buy Sambal Oelek UK | Authentic Indonesian Chili Paste Delivery | Chef Yossie Traditional Recipe",
+	title: "Authentic Sambal Oelek UK | Premium Indonesian Chili Paste | Chef Yossie Traditional Recipe | 25,000 SHU Heat",
 	description:
-		"Authentic Indonesian sambal oelek delivered across UK. Traditional recipe by Chef Yossie - pure chili paste, no preservatives. Order online: London, Manchester, Edinburgh delivery available.",
+		"Experience authentic sambal oelek made by Chef Yossie using traditional Bandung family recipes. Premium Indonesian chili paste with 25,000 Scoville heat - pure chilies, salt & vinegar only. Free UK delivery over £20. Perfect for stir-fries, marinades & authentic Indonesian cooking.",
 	keywords:
-		"buy sambal oelek UK, sambal oelek delivery London, authentic Indonesian sambal Manchester, Indonesian chili paste UK, traditional sambal recipe Birmingham, Chef Yossie sambal Edinburgh, Indonesian condiments UK delivery, sambal oelek online UK",
+		"authentic sambal oelek UK, traditional Indonesian chili paste, Chef Yossie sambal, Bandung recipe sambal, premium Indonesian condiments UK, 25000 scoville sambal, pure chili paste UK, Indonesian cooking ingredients, sambal oelek delivery London Manchester Birmingham Edinburgh, authentic Indonesian food UK, traditional sambal recipe, volcanic chili Indonesia",
 	openGraph: {
 		title: "Buy Sambal Oelek UK | Authentic Indonesian Chili Paste Delivery",
 		description:
@@ -336,6 +340,20 @@ export default function SambalOelekUKPage() {
 				pageTitle='Sambal Oelek UK - Entity Information'
 			/>
 			{/* Hero Section */}
+
+				{/* Sticky purchase bar (mobile) */}
+				<div className="fixed bottom-0 inset-x-0 z-40 md:hidden">
+					<div className="mx-4 mb-4 rounded-lg border border-gold-300 bg-white/90 backdrop-blur px-4 py-3 shadow-lg flex items-center justify-between">
+						<div className="text-sm">
+							<p className="font-semibold text-burgundy-900">Sambal Oelek</p>
+							<p className="text-neutral-600">£7.49 • Free £20+ shipping</p>
+						</div>
+						<Link href="/shop">
+							<Button size="sm" className="bg-gold-600 text-burgundy-900 hover:bg-gold-500">Buy Now</Button>
+						</Link>
+					</div>
+				</div>
+
 			<section className='py-16 sm:py-24 bg-gradient-to-br from-burgundy-900 via-burgundy-800 to-burgundy-900 text-white relative overflow-hidden'>
 				<div className='absolute top-0 left-0 w-96 h-96 bg-gold-600/20 rounded-full -translate-x-48 -translate-y-48 blur-3xl'></div>
 				<div className='absolute bottom-0 right-0 w-96 h-96 bg-gold-600/20 rounded-full translate-x-48 translate-y-48 blur-3xl'></div>
@@ -361,13 +379,15 @@ export default function SambalOelekUKPage() {
 								</span>
 							</h1>
 
-							<p className='text-xl sm:text-2xl text-gold-200 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed font-body'>
-								Finally, real Indonesian sambal oelek
-								made using traditional recipes from Chef
-								Yossie&apos;s family catering kitchen in
-								Bandung. No preservatives, no shortcuts
-								- just authentic Indonesian fire.
-							</p>
+							<div className='space-y-6 mb-8 max-w-2xl mx-auto lg:mx-0'>
+								<p className='text-xl sm:text-2xl text-gold-200 leading-relaxed font-body'>
+									Finally, <strong className='text-gold-100'>real Indonesian sambal oelek</strong> made using traditional recipes from Chef Yossie&apos;s family catering kitchen in Bandung.
+								</p>
+
+								<p className='text-lg text-gold-300 leading-relaxed font-body'>
+									No preservatives, no shortcuts, no artificial flavors - just <em>authentic Indonesian fire</em> that transforms every dish with pure chili intensity.
+								</p>
+							</div>
 
 							{/* Customer Rating */}
 							<div className='flex justify-center lg:justify-start mb-10'>
@@ -454,12 +474,13 @@ export default function SambalOelekUKPage() {
 								<div className='aspect-square rounded-sm overflow-hidden shadow-luxury bg-gradient-to-br from-burgundy-900/10 to-gold-600/10 p-8'>
 									<div className='w-full h-full rounded-sm flex items-center justify-center'>
 										<Image
-											src='/images/Spice Island Indonesia Sambal Oelek 185g Label.png'
+											src='/images/optimized/Spice Island Indonesia Sambal Oelek 185g Label-lg.webp'
 											alt='Authentic Indonesian Sambal Oelek 185g - Pure chili paste made by Chef Yossie'
 											width={400}
 											height={400}
 											className='w-full h-full object-contain drop-shadow-2xl'
 											priority
+											sizes='(max-width: 768px) 100vw, 50vw'
 										/>
 									</div>
 								</div>
@@ -477,8 +498,110 @@ export default function SambalOelekUKPage() {
 				</div>
 			</section>
 
-			{/* Problem/Solution Section */}
+			{/* Detailed Product Information */}
 			<section className='py-24 bg-white'>
+				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+					<div className='grid lg:grid-cols-3 gap-12'>
+						{/* Ingredients & Nutrition */}
+						<div className='bg-cream-50 rounded-sm p-8 border border-gold-200'>
+							<h3 className='text-2xl font-bold text-burgundy-900 mb-6 font-brand flex items-center'>
+								<Leaf className='w-6 h-6 mr-3 text-gold-600' />
+								Pure Ingredients
+							</h3>
+							<div className='space-y-4 font-body'>
+								<div>
+									<h4 className='font-semibold text-burgundy-800 mb-2'>Complete Ingredient List:</h4>
+									<ul className='text-neutral-700 space-y-2'>
+										<li>• <strong>Red Bird&apos;s Eye Chilies</strong> (85%) - From Indonesian volcanic soil</li>
+										<li>• <strong>Sea Salt</strong> (10%) - Natural preservation</li>
+										<li>• <strong>Rice Vinegar</strong> (5%) - Traditional acidity</li>
+									</ul>
+								</div>
+								<div className='border-t border-gold-300 pt-4'>
+									<h4 className='font-semibold text-burgundy-800 mb-2'>Nutritional Highlights:</h4>
+									<div className='grid grid-cols-2 gap-2 text-sm text-neutral-700'>
+										<span>Calories: 5 per tsp</span>
+										<span>Sodium: 180mg</span>
+										<span>Carbs: 1g</span>
+										<span>Fiber: 0.5g</span>
+										<span>Vitamin C: 15% DV</span>
+										<span>Capsaicin: High</span>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						{/* Heat Level & Usage */}
+						<div className='bg-burgundy-50 rounded-sm p-8 border border-burgundy-200'>
+							<h3 className='text-2xl font-bold text-burgundy-900 mb-6 font-brand flex items-center'>
+								<Flame className='w-6 h-6 mr-3 text-burgundy-600' />
+								Heat Profile
+							</h3>
+							<div className='space-y-6 font-body'>
+								<div>
+									<div className='flex justify-between items-center mb-2'>
+										<span className='font-semibold text-burgundy-800'>Scoville Rating</span>
+										<span className='text-2xl font-bold text-burgundy-900'>25,000</span>
+									</div>
+									<div className='w-full bg-cream-200 rounded-full h-3'>
+										<div className='bg-gradient-to-r from-burgundy-600 to-burgundy-900 h-3 rounded-full' style={{width: '75%'}}></div>
+									</div>
+									<p className='text-sm text-neutral-600 mt-2'>Significantly hotter than Tabasco or Sriracha</p>
+								</div>
+
+								<div>
+									<h4 className='font-semibold text-burgundy-800 mb-3'>Perfect Usage Guide:</h4>
+									<div className='space-y-2 text-sm text-neutral-700'>
+										<div className='flex justify-between'>
+											<span>Beginners:</span>
+											<span className='font-semibold'>1/4 teaspoon</span>
+										</div>
+										<div className='flex justify-between'>
+											<span>Regular users:</span>
+											<span className='font-semibold'>1/2 teaspoon</span>
+										</div>
+										<div className='flex justify-between'>
+											<span>Heat lovers:</span>
+											<span className='font-semibold'>1+ teaspoon</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						{/* Authenticity & Origin */}
+						<div className='bg-gold-50 rounded-sm p-8 border border-gold-200'>
+							<h3 className='text-2xl font-bold text-burgundy-900 mb-6 font-brand flex items-center'>
+								<MapPin className='w-6 h-6 mr-3 text-gold-600' />
+								Authentic Origin
+							</h3>
+							<div className='space-y-4 font-body text-neutral-700'>
+								<div>
+									<h4 className='font-semibold text-burgundy-800 mb-2'>Traditional Method:</h4>
+									<p className='text-sm leading-relaxed'>
+										Ground using traditional stone mortar (cobek) technique from Chef Yossie&apos;s family kitchen in Bandung, West Java - Indonesia&apos;s culinary capital.
+									</p>
+								</div>
+								<div>
+									<h4 className='font-semibold text-burgundy-800 mb-2'>Chili Source:</h4>
+									<p className='text-sm leading-relaxed'>
+										Premium red bird&apos;s eye chilies grown in the mineral-rich volcanic soil of the Maluku Islands - the original Spice Islands.
+									</p>
+								</div>
+								<div>
+									<h4 className='font-semibold text-burgundy-800 mb-2'>Cultural Significance:</h4>
+									<p className='text-sm leading-relaxed'>
+										&quot;Sambal&quot; is the Indonesian word for chili paste, and &quot;oelek&quot; refers to the grinding method - making this the fundamental sauce of Indonesian cuisine.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			{/* Problem/Solution Section */}
+			<section className='py-24 bg-gradient-to-br from-cream-100 to-cream-200'>
 				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<div className='text-center mb-16'>
 						<h2 className='text-4xl sm:text-5xl font-bold text-burgundy-900 mb-6 font-brand'>
@@ -615,6 +738,141 @@ export default function SambalOelekUKPage() {
 				</div>
 			</section>
 
+			{/* Cooking Guide & Recipes */}
+			<section className='py-24 bg-white'>
+				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+					<div className='text-center mb-16'>
+						<h2 className='text-4xl sm:text-5xl font-bold text-burgundy-900 mb-6 font-brand'>
+							Master the Art of
+							<span className='text-gold-700 block'>Sambal Oelek Cooking</span>
+						</h2>
+						<p className='text-xl text-neutral-600 max-w-3xl mx-auto font-body leading-relaxed'>
+							Transform your cooking with professional techniques from Chef Yossie&apos;s Indonesian kitchen. Learn how to unlock sambal oelek&apos;s full potential in every dish.
+						</p>
+					</div>
+
+					<div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>
+						{/* Quick Stir-Fry */}
+						<div className='bg-gradient-to-br from-burgundy-50 to-burgundy-100 rounded-sm p-8 border border-burgundy-200'>
+							<div className='flex items-center mb-4'>
+								<Utensils className='w-8 h-8 text-burgundy-600 mr-3' />
+								<div>
+									<h3 className='text-xl font-bold text-burgundy-900 font-brand'>Perfect Stir-Fry</h3>
+									<p className='text-sm text-burgundy-700'>5-minute technique</p>
+								</div>
+							</div>
+							<div className='space-y-3 text-sm font-body'>
+								<p className='text-neutral-700 leading-relaxed'>
+									<strong>The Secret:</strong> Add 1 tsp sambal oelek to hot oil BEFORE vegetables. This releases the chili oils and creates restaurant-quality depth.
+								</p>
+								<div className='bg-white/70 rounded p-3'>
+									<p className='text-xs text-neutral-600'>
+										<strong>Pro Tip:</strong> Mix with soy sauce and sesame oil for the perfect Indonesian stir-fry base.
+									</p>
+								</div>
+							</div>
+						</div>
+
+						{/* Marinade Master */}
+						<div className='bg-gradient-to-br from-gold-50 to-gold-100 rounded-sm p-8 border border-gold-200'>
+							<div className='flex items-center mb-4'>
+								<Timer className='w-8 h-8 text-gold-600 mr-3' />
+								<div>
+									<h3 className='text-xl font-bold text-burgundy-900 font-brand'>Ultimate Marinade</h3>
+									<p className='text-sm text-gold-700'>30-min magic</p>
+								</div>
+							</div>
+							<div className='space-y-3 text-sm font-body'>
+								<p className='text-neutral-700 leading-relaxed'>
+									<strong>Recipe:</strong> 2 tsp sambal oelek + 2 tbsp oil + 1 tbsp lime juice + salt. Perfect for chicken, beef, or tofu.
+								</p>
+								<div className='bg-white/70 rounded p-3'>
+									<p className='text-xs text-neutral-600'>
+										<strong>Best For:</strong> Grilling, BBQ, or pan-searing proteins with authentic Indonesian heat.
+									</p>
+								</div>
+							</div>
+						</div>
+
+						{/* Instant Flavor Boost */}
+						<div className='bg-gradient-to-br from-cream-50 to-cream-100 rounded-sm p-8 border border-cream-200'>
+							<div className='flex items-center mb-4'>
+								<Heart className='w-8 h-8 text-burgundy-600 mr-3' />
+								<div>
+									<h3 className='text-xl font-bold text-burgundy-900 font-brand'>Instant Upgrade</h3>
+									<p className='text-sm text-neutral-700'>Any dish, instantly</p>
+								</div>
+							</div>
+							<div className='space-y-3 text-sm font-body'>
+								<p className='text-neutral-700 leading-relaxed'>
+									<strong>Transform:</strong> Add 1/4 tsp to scrambled eggs, pasta sauce, soup, or even mayonnaise for instant Indonesian complexity.
+								</p>
+								<div className='bg-white/70 rounded p-3'>
+									<p className='text-xs text-neutral-600'>
+										<strong>Versatile:</strong> Works in Western dishes, Asian cuisines, and fusion cooking.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					{/* Featured Recipe Spotlight */}
+					<div className='bg-gradient-to-r from-burgundy-900 to-burgundy-800 rounded-sm p-12 text-white'>
+						<div className='grid lg:grid-cols-2 gap-8 items-center'>
+							<div>
+								<h3 className='text-3xl font-bold mb-6 font-brand text-gold-200'>
+									Chef Yossie&apos;s Signature Recipe:
+									<span className='block text-white text-2xl'>Sambal Fried Rice</span>
+								</h3>
+								<div className='space-y-4 font-body'>
+									<p className='text-gold-200 leading-relaxed'>
+										This is the dish that made Chef Yossie famous in her Bandung catering kitchen - a perfect balance of heat, umami, and comfort that feeds the soul.
+									</p>
+									<div className='grid grid-cols-2 gap-4 text-sm'>
+										<div>
+											<strong className='text-gold-300'>Prep Time:</strong>
+											<p>10 minutes</p>
+										</div>
+										<div>
+											<strong className='text-gold-300'>Cook Time:</strong>
+											<p>15 minutes</p>
+										</div>
+										<div>
+											<strong className='text-gold-300'>Serves:</strong>
+											<p>4 people</p>
+										</div>
+										<div>
+											<strong className='text-gold-300'>Difficulty:</strong>
+											<p>Easy</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div className='bg-white/10 rounded-sm p-6'>
+								<h4 className='font-bold text-gold-200 mb-4'>Key Ingredients:</h4>
+								<ul className='space-y-2 text-sm font-body'>
+									<li>• <strong>2-3 tsp Sambal Oelek</strong> (adjust to taste)</li>
+									<li>• 4 cups day-old jasmine rice</li>
+									<li>• 2 eggs, beaten</li>
+									<li>• 200g protein (chicken/shrimp/tofu)</li>
+									<li>• 3 cloves garlic, minced</li>
+									<li>• 2 tbsp vegetable oil</li>
+									<li>• 2 tbsp dark soy sauce</li>
+									<li>• Spring onions & cucumber to serve</li>
+								</ul>
+								<div className='mt-6'>
+									<Link href='/recipes/sambal-fried-rice'>
+										<Button variant='primary' size='sm' className='bg-gold-600 text-burgundy-900 hover:bg-gold-500 font-elegant'>
+											Get Full Recipe →
+										</Button>
+									</Link>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
 			{/* Chef Credibility Section */}
 			<section className='py-24 bg-gradient-to-br from-cream-100 to-cream-200'>
 				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -622,10 +880,11 @@ export default function SambalOelekUKPage() {
 						<div className='relative'>
 							<div className='aspect-[4/3] rounded-sm overflow-hidden shadow-luxury border border-gold-200'>
 								<Image
-									src='/images/indonesian_vista.png'
-									alt='Indonesian spices and ingredients from Bandung'
-									fill
-									className='object-cover'
+									src='/images/optimized/long-red-chili-lg.webp'
+									alt='Premium red chilies used in authentic sambal oelek - the main ingredient'
+									width={800}
+									height={600}
+									className='w-full h-full object-cover'
 									loading='lazy'
 									sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw'
 								/>
@@ -648,23 +907,25 @@ export default function SambalOelekUKPage() {
 								</span>
 							</h2>
 
-							<div className='space-y-6 text-lg text-neutral-700 leading-relaxed mb-8 font-body'>
+							<div className='space-y-8 text-lg text-neutral-700 leading-relaxed mb-8 font-body'>
 								<p>
 									Born and raised in{" "}
-									<strong>Bandung, West Java</strong>{" "}
+									<strong className='text-burgundy-800'>Bandung, West Java</strong>{" "}
 									- Indonesia&apos;s culinary capital
 									- Chef Yossie learned the art of
 									sambal making in her mother&apos;s
 									bustling catering kitchen.
 								</p>
+
 								<p>
-									For over <strong>15 years</strong>,
+									For over <strong className='text-burgundy-800'>15 years</strong>,
 									she prepared traditional Indonesian
 									recipes for hundreds of guests
 									daily, mastering the professional
 									techniques that separate authentic
 									sambal from home-made attempts.
 								</p>
+
 								<p>
 									Missing the authentic flavors of
 									home in the UK, Chef Yossie decided
@@ -984,21 +1245,26 @@ export default function SambalOelekUKPage() {
 								<h3 className='text-xl font-bold text-burgundy-900 mb-3 font-brand'>
 									What is sambal oelek?
 								</h3>
-								<p className='text-gray-700 font-body leading-relaxed'>
-									Sambal oelek is a traditional
-									Indonesian chili paste made from
-									fresh red chilies, salt, and
-									vinegar. It&apos;s the foundation
-									of Indonesian cuisine - a pure,
-									fiery condiment that delivers
-									authentic heat without artificial
-									flavors or preservatives. Unlike
-									Western hot sauces, sambal oelek
-									has a chunky texture and focuses on
-									the natural flavor of chilies
-									rather than masking it with sugar
-									or additives.
-								</p>
+								<div className='text-gray-700 font-body leading-relaxed space-y-4'>
+									<p>
+										Sambal oelek is a traditional
+										Indonesian chili paste made from
+										fresh red chilies, salt, and
+										vinegar. It&apos;s the foundation
+										of Indonesian cuisine - a pure,
+										fiery condiment that delivers
+										authentic heat without artificial
+										flavors or preservatives.
+									</p>
+
+									<p>
+										Unlike Western hot sauces, sambal oelek
+										has a chunky texture and focuses on
+										the natural flavor of chilies
+										rather than masking it with sugar
+										or additives.
+									</p>
+								</div>
 							</div>
 
 							{/* FAQ Item 2 */}

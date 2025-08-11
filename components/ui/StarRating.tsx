@@ -8,6 +8,8 @@ interface StarRatingProps {
 	showValue?: boolean;
 	reviewCount?: number;
 	className?: string;
+	ratingColorClass?: string; // Tailwind classes for the numeric rating (e.g., text-gold-500)
+	reviewColorClass?: string; // Tailwind classes for the review count text (e.g., text-white)
 }
 
 const StarRating: FC<StarRatingProps> = ({
@@ -16,18 +18,18 @@ const StarRating: FC<StarRatingProps> = ({
 	size = "md",
 	showValue = true,
 	reviewCount,
-	className = ""
+	className = "",
 }) => {
 	const sizeClasses = {
 		sm: "w-4 h-4",
 		md: "w-5 h-5",
-		lg: "w-6 h-6"
+		lg: "w-6 h-6",
 	};
 
 	const textSizeClasses = {
 		sm: "text-sm",
 		md: "text-base",
-		lg: "text-lg"
+		lg: "text-lg",
 	};
 
 	const renderStars = () => {
@@ -48,11 +50,11 @@ const StarRating: FC<StarRatingProps> = ({
 		// Half star
 		if (hasHalfStar) {
 			stars.push(
-				<div key="half" className="relative">
+				<div key='half' className='relative'>
 					<Star
 						className={`${sizeClasses[size]} text-gray-300 fill-gray-300`}
 					/>
-					<div className="absolute inset-0 overflow-hidden w-1/2">
+					<div className='absolute inset-0 overflow-hidden w-1/2'>
 						<Star
 							className={`${sizeClasses[size]} text-gold-500 fill-gold-500`}
 						/>
@@ -77,14 +79,16 @@ const StarRating: FC<StarRatingProps> = ({
 
 	return (
 		<div className={`flex items-center space-x-2 ${className}`}>
-			<div className="flex items-center space-x-1">
+			<div className='flex items-center space-x-1'>
 				{renderStars()}
 			</div>
 			{showValue && (
-				<div className={`${textSizeClasses[size]} text-gray-700 font-medium`}>
-					<span className="text-burgundy-900 font-bold">{rating.toFixed(1)}</span>
+				<div className={`${textSizeClasses[size]} font-medium`}>
+					<span className={`text-gold-500 font-bold`}>
+						{rating.toFixed(1)}
+					</span>
 					{reviewCount && (
-						<span className="text-gray-600 ml-1">
+						<span className={`text-white ml-1`}>
 							({reviewCount.toLocaleString()} reviews)
 						</span>
 					)}

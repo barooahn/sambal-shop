@@ -31,10 +31,10 @@ export const metadata = {
 		type: "website",
 		images: [
 			{
-				url: "https://spiceislandindonesia.com/images/Spice Island Indonesia Sambal Oelek 185g Label.png",
+				url: "https://spiceislandindonesia.com/images/optimized/sambal-sample-responsive.webp",
 				width: 400,
 				height: 400,
-				alt: "Indonesian Sambal Sample Pack - Try before you buy",
+				alt: "Indonesian Sambal Sample Pack - Sambal Goreng 45g jar",
 			},
 		],
 	},
@@ -140,8 +140,8 @@ export default function SamplePackTryFirstPage() {
 							<div className='relative w-full max-w-md mx-auto'>
 								<div className='absolute inset-0 bg-gradient-to-r from-gold-600/30 to-gold-400/30 rounded-full blur-3xl'></div>
 								<Image
-									src='/images/Spice Island Indonesia Sambal Oelek 185g Label.png'
-									alt='Indonesian Sambal Sample Pack - Try before you buy'
+									src='/images/optimized/sambal-sample-lg.webp'
+									alt='Indonesian Sambal Sample Pack - Sambal Goreng 45g jar'
 									width={400}
 									height={400}
 									className='relative z-10 w-full h-auto drop-shadow-2xl'

@@ -53,7 +53,7 @@ const cinzel = Cinzel({
 });
 
 export const metadata: Metadata = {
-	metadataBase: new URL("https://spiceislandindonesia.com"),
+	metadataBase: new URL("https://www.spiceislandindonesia.com"),
 	title: "Indonesian Sambal UK | Authentic Delivery London Manchester Birmingham | Spice Island Indonesia",
 	description:
 		"UK's premier Indonesian sambal supplier. Authentic traditional chili paste from the Spice Islands, delivered nationwide. Shop sambal oelek, sambal bali & gift sets with free UK delivery over £20.",
@@ -99,10 +99,10 @@ export const metadata: Metadata = {
 		},
 	},
 	alternates: {
-		canonical: "https://spiceislandindonesia.com/",
+		canonical: "https://www.spiceislandindonesia.com/",
 		languages: {
-			"en-GB": "https://spiceislandindonesia.com/",
-			en: "https://spiceislandindonesia.com/",
+			"en-GB": "https://www.spiceislandindonesia.com/",
+			en: "https://www.spiceislandindonesia.com/",
 		},
 	},
 };

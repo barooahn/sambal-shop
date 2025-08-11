@@ -28,27 +28,32 @@ export default function Header() {
 			dropdown: [
 				{
 					name: "Sambal Oelek",
-					href: "/shop#sambal-oelek",
+					href: "/sambal-oelek-uk",
 					description: "Pure chili paste - the foundation",
 				},
 				{
 					name: "Sambal Bali",
-					href: "/shop#sambal-bali",
-					description: "Sweet & spicy with aromatic spices",
+					href: "/sambal-bali-aromatic-spicy",
+					description: "Aromatic spices with sophisticated heat",
+				},
+				{
+					name: "Sambal Goreng",
+					href: "/sambal-goreng-uk",
+					description: "Sweet & spicy with traditional fried method",
 				},
 				{
 					name: "Sample Pack",
-					href: "/shop#sample-pack",
+					href: "/sample-pack-try-first",
 					description: "Try before you buy",
 				},
 				{
 					name: "Gift Set",
-					href: "/shop#gift-set",
+					href: "/gift-set",
 					description: "Perfect for food lovers",
 				},
 				{
 					name: "View All Products",
-					href: "/shop",
+					href: "/products",
 					description: "See our complete range",
 				},
 			],

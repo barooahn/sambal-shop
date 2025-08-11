@@ -3,7 +3,7 @@ import { MetadataRoute } from "next";
 export const dynamic = "force-static";
 
 // Get the base URL from environment or default
-const baseUrl = "https://spiceislandindonesia.com";
+const baseUrl = "https://www.spiceislandindonesia.com";
 
 // Define all static routes with their priorities and change frequencies
 const staticRoutes = [
@@ -25,12 +25,27 @@ const staticRoutes = [
 		changeFrequency: "monthly" as const,
 	},
 	{
+		route: "/sambal-bali-sweet-spicy",
+		priority: 0.8,
+		changeFrequency: "monthly" as const,
+	},
+	{
+		route: "/sambal-goreng-uk",
+		priority: 0.8,
+		changeFrequency: "monthly" as const,
+	},
+	{
 		route: "/sample-pack-try-first",
 		priority: 0.8,
 		changeFrequency: "monthly" as const,
 	},
 	{
 		route: "/gift-set-indonesian",
+		priority: 0.8,
+		changeFrequency: "monthly" as const,
+	},
+	{
+		route: "/gift-set",
 		priority: 0.8,
 		changeFrequency: "monthly" as const,
 	},
@@ -80,6 +95,16 @@ const staticRoutes = [
 		priority: 0.6,
 		changeFrequency: "monthly" as const,
 	},
+	{
+		route: "/sambal-delivery-manchester",
+		priority: 0.6,
+		changeFrequency: "monthly" as const,
+	},
+	{
+		route: "/uk-indonesian-food-delivery",
+		priority: 0.6,
+		changeFrequency: "monthly" as const,
+	},
 
 	// Info pages
 	{ route: "/about", priority: 0.6, changeFrequency: "monthly" as const },
@@ -90,6 +115,11 @@ const staticRoutes = [
 		changeFrequency: "monthly" as const,
 	},
 	{ route: "/contact", priority: 0.5, changeFrequency: "monthly" as const },
+	{ route: "/shipping", priority: 0.5, changeFrequency: "monthly" as const },
+	{ route: "/returns", priority: 0.5, changeFrequency: "monthly" as const },
+	{ route: "/feedback", priority: 0.4, changeFrequency: "monthly" as const },
+	{ route: "/success", priority: 0.3, changeFrequency: "yearly" as const },
+	{ route: "/unsubscribe", priority: 0.2, changeFrequency: "yearly" as const },
 	{ route: "/privacy", priority: 0.3, changeFrequency: "yearly" as const },
 	{ route: "/terms", priority: 0.3, changeFrequency: "yearly" as const },
 ];
@@ -100,6 +130,7 @@ const blogPosts = [
 	{ slug: "indonesian-cooking-guide-british-kitchens", date: "2025-01-08" },
 	{ slug: "indonesian-spice-levels-british-palates", date: "2025-01-08" },
 	{ slug: "indonesian-ingredients-uk-shopping-guide", date: "2025-01-07" },
+	{ slug: "mastering-indonesian-heat", date: "2025-01-08" },
 	{ slug: "spice-islands-history", date: "2024-02-10" },
 	{ slug: "sambal-british-classics", date: "2024-02-05" },
 	{ slug: "ultimate-guide-indonesian-sambal", date: "2024-02-01" },
@@ -116,6 +147,10 @@ const recipes = [
 	{ slug: "sambal-bbq-marinade", date: "2024-02-12" },
 	{ slug: "sambal-scrambled-eggs", date: "2024-02-12" },
 	{ slug: "sambal-noodle-soup", date: "2024-02-12" },
+	{ slug: "ayam-penyet", date: "2024-02-12" },
+	{ slug: "bakwan", date: "2024-02-12" },
+	{ slug: "ikan-bakar", date: "2024-02-12" },
+	{ slug: "lalapan", date: "2024-02-12" },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

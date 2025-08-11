@@ -42,9 +42,9 @@
 		{
 			"source": "(.*)",
 			"has": [
-				{ "type": "host", "value": "www.spiceislandindonesia.com" }
+				{ "type": "host", "value": "spiceislandindonesia.com" }
 			],
-			"destination": "https://spiceislandindonesia.com$1",
+			"destination": "https://www.spiceislandindonesia.com$1",
 			"permanent": true
 		}
 	]

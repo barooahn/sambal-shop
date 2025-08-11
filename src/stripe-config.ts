@@ -9,11 +9,29 @@ export interface Product {
 
 export const products: Product[] = [
 	{
-		id: "prod_Smr9HU81tTheO7", // Your actual Stripe product ID
-		priceId: "price_1RrHRQGFsfvhgc4oNLQRIyrG", // Your actual Stripe price ID
-		name: "Sambal Bawang",
+		id: "prod_SqMc4jVjxfr7xF",
+		priceId: "price_1Ruft8GFsfvhgc4ohlgJnkoe",
+		name: "Sambal Oelek 185g",
 		description:
-			"Authentic Indonesian Sambal Bawang - a fiery chili sauce made with fresh chilies, aromatic shallots, and garlic. Perfect for BBQs, stir-fries, eggs, and adding bold Indonesian flavour to any dish. Made using traditional recipes from the original Spice Islands. Medium-hot spice level. Ingredients: Red chilies, shallots, garlic, palm oil, salt, sugar, shrimp paste Heat Level: Medium-Hot (🌶️🌶️🌶️) Size: 200g jar Storage: Refrigerate after opening, use within 4 weeks",
+			"Authentic Indonesian Sambal Oelek — pure chili paste made from fresh red chilies, salt and vinegar. Perfect foundation for cooking and adding clean heat.",
+		mode: "payment",
+		price: "£7.49",
+	},
+	{
+		id: "prod_SqMbub2ongdTXd",
+		priceId: "price_1RufryGFsfvhgc4o5X8bjTeK",
+		name: "Sambal Bali 200g",
+		description:
+			"Balinese-style sambal with aromatic spices (galangal, lemongrass, kaffir lime). Balanced sweet heat and depth — great as condiment or for cooking.",
+		mode: "payment",
+		price: "£8.49",
+	},
+	{
+		id: "prod_SqMXLUlQlnvRCw",
+		priceId: "price_1RufoSGFsfvhgc4oOHaIyRsv",
+		name: "Sambal Goreng 185g",
+		description:
+			"Classic sautéed chili relish with shallots and garlic. Rich, savory heat that pairs beautifully with rice, noodles, and grilled dishes.",
 		mode: "payment",
 		price: "£7.49",
 	},

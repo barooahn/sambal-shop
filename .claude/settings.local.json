@@ -15,7 +15,15 @@
       "Bash(timeout 30 npm run build)",
       "Bash(timeout:*)",
       "Bash(yarn test)",
-      "Bash(yarn test:*)"
+      "Bash(yarn test:*)",
+      "WebFetch(domain:www.seobility.net)",
+      "WebFetch(domain:web.archive.org)",
+      "WebFetch(domain:www.semrush.com)",
+      "WebFetch(domain:who.is)",
+      "Bash(git add:*)",
+      "Bash(yarn lint)",
+      "Bash(rm:*)",
+      "Bash(npx tsc:*)"
     ],
     "deny": []
   }
