@@ -8,10 +8,19 @@ import {
 	Cinzel,
 } from "next/font/google";
 import Header from "@/components/navigation/Header";
-import Footer from "@/components/navigation/Footer";
 import Breadcrumb from "@/components/shared/Breadcrumb";
 import ThirdPartyScripts from "@/components/optimization/ThirdPartyScripts";
-import UKExitIntentPopup from "@/components/optimization/UKExitIntentPopup";
+import dynamic from "next/dynamic";
+
+// Lazy load non-critical components
+const Footer = dynamic(() => import("@/components/navigation/Footer"), {
+	ssr: true,
+	loading: () => <div className="h-96" />, // Prevent layout shift
+});
+
+const UKExitIntentPopup = dynamic(() => import("@/components/optimization/UKExitIntentPopup"), {
+	loading: () => null, // No loading state needed for popup
+});
 import PerformanceOptimizer, {
 	criticalCSS,
 	criticalImages,
@@ -115,6 +124,16 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<head>
+				{/* Critical Resource Hints */}
+				<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+				<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+				<link rel='dns-prefetch' href='//www.google-analytics.com' />
+				
+				<link
+					rel='preconnect'
+					href='https://fonts.googleapis.com'
+					crossOrigin='anonymous'
+				/>
 				<link
 					rel='preconnect'
 					href='https://www.googletagmanager.com'
@@ -125,6 +144,19 @@ export default function RootLayout({
 					href='https://www.google-analytics.com'
 					crossOrigin='anonymous'
 				/>
+				
+				{/* Preload critical Next.js chunks */}
+				<link
+					rel='modulepreload'
+					href='/_next/static/chunks/4bd1b696-602635ee57868870.js'
+					as='script'
+				/>
+				<link
+					rel='modulepreload'
+					href='/_next/static/chunks/5964-1a8fca11ddc9a9d0.js'
+					as='script'
+				/>
+				
 				<PerformanceOptimizer
 					preloadImages={criticalImages}
 					criticalCSS={criticalCSS}
