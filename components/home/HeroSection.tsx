@@ -10,7 +10,7 @@ import { toast } from "sonner";
 // Custom loading skeleton for Sambal Bali product
 function SambalBaliSkeleton() {
 	return (
-		<div className='relative max-w-[280px] sm:max-w-sm lg:max-w-lg mx-auto lg:mx-0'>
+		<div className='relative max-w-[240px] sm:max-w-[280px] lg:max-w-lg mx-auto lg:mx-0'>
 			<div className='relative z-20 group'>
 				{/* Main skeleton container */}
 				<div className='w-full aspect-square bg-gradient-to-br from-orange-100 to-red-100 rounded-lg shadow-2xl flex flex-col items-center justify-center p-8'>
@@ -113,7 +113,7 @@ export default function HeroSection() {
 	};
 
 	return (
-		<section className='relative flex items-center justify-center overflow-hidden' style={{ minHeight: '100vh' }}>
+		<section className='relative flex items-center justify-center overflow-hidden' style={{ minHeight: 'max(100vh, 800px)' }}>
 			{/* Background Image - Optimized for LCP with fixed dimensions to prevent CLS */}
 			<div className='absolute inset-0 z-0'>
 				<Image
@@ -132,10 +132,10 @@ export default function HeroSection() {
 					alt='Premium Indonesian spices imported to UK - authentic Indonesian cooking ingredients available London Manchester Birmingham'
 					width={1024}
 					height={768}
-					className='object-cover w-full h-full hidden sm:block md:hidden'
+					className='object-cover w-full h-full hidden sm:block lg:hidden'
 					priority
 					fetchPriority='high'
-					sizes='(min-width: 640px) and (max-width: 768px) 100vw, 0px'
+					sizes='(min-width: 640px) and (max-width: 1024px) 100vw, 0px'
 					quality={85}
 				/>
 				<Image
@@ -143,10 +143,10 @@ export default function HeroSection() {
 					alt='Premium Indonesian spices imported to UK - authentic Indonesian cooking ingredients available London Manchester Birmingham'
 					width={1200}
 					height={800}
-					className='object-cover w-full h-full hidden md:block lg:hidden'
+					className='object-cover w-full h-full hidden lg:block xl:hidden'
 					priority
 					fetchPriority='high'
-					sizes='(min-width: 768px) and (max-width: 1024px) 100vw, 0px'
+					sizes='(min-width: 1024px) and (max-width: 1280px) 100vw, 0px'
 					quality={85}
 				/>
 				<Image
@@ -154,10 +154,10 @@ export default function HeroSection() {
 					alt='Premium Indonesian spices imported to UK - authentic Indonesian cooking ingredients available London Manchester Birmingham'
 					width={1920}
 					height={1080}
-					className='object-cover w-full h-full hidden lg:block'
+					className='object-cover w-full h-full hidden xl:block'
 					priority
 					fetchPriority='high'
-					sizes='(min-width: 1024px) 100vw, 0px'
+					sizes='(min-width: 1280px) 100vw, 0px'
 					quality={85}
 				/>
 			</div>
@@ -170,14 +170,14 @@ export default function HeroSection() {
 				}}
 			></div>
 
-			<div className='relative z-10 max-w-7xl mx-auto px-3 sm:px-5 lg:px-8 py-6 sm:py-8 lg:py-12 translate-y-0 sm:-translate-y-4 lg:-translate-y-6'>
-				<div className='flex flex-col lg:grid lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-16 items-center'>
+			<div className='hero-content-container relative z-10 max-w-7xl mx-auto px-3 sm:px-5 lg:px-8 py-2 sm:py-4 lg:py-12 -translate-y-1 sm:-translate-y-8 lg:-translate-y-6' style={{ minHeight: 'max(80vh, 640px)', width: '100%' }}>
+				<div className='flex flex-col lg:grid lg:grid-cols-2 gap-2 sm:gap-4 lg:gap-16 items-center h-full' style={{ minHeight: 'max(60vh, 500px)' }}>
 					{/* Mobile/Tablet - Text content first */}
-					<div className='text-center lg:text-left order-1 lg:order-2 pt-2 sm:pt-0'>
+					<div className='text-center lg:text-left order-1 lg:order-2 pt-4 sm:pt-0'>
 						{/* Chef badge - explicit dimensions to prevent layout shift */}
-						<div className='mb-4 lg:mb-6 inline-block'>
-							<div className='bg-white/90 backdrop-blur-sm rounded-full px-3 lg:px-6 py-1.5 lg:py-3 border border-orange-200/50 shadow-xl' style={{ minHeight: '32px', minWidth: '280px' }}>
-								<div className='flex items-center justify-center space-x-2 lg:space-x-3' style={{ height: '20px' }}>
+						<div className='mb-2 sm:mb-3 lg:mb-6 flex justify-center lg:justify-start'>
+							<div className='bg-white/90 backdrop-blur-sm rounded-full px-3 lg:px-6 py-1.5 lg:py-3 border border-orange-200/50 shadow-xl' style={{ minHeight: '40px', width: '320px', maxWidth: '90vw' }}>
+								<div className='flex items-center justify-center space-x-2 lg:space-x-3' style={{ height: '28px', minHeight: '28px' }}>
 									<ChefHat className='w-3 lg:w-5 h-3 lg:h-5 text-orange-600' />
 									<span className='text-gray-800 font-semibold text-xs lg:text-sm tracking-wide'>
 										Chef Yossie&apos;s Traditional
@@ -196,7 +196,7 @@ export default function HeroSection() {
 						</div>
 
 						{/* Main headline with UK market optimization */}
-						<h1 className='voice-hero-title mobile-text-shadow text-3xl sm:text-4xl lg:text-7xl font-light text-white mb-2 lg:mb-4 leading-tight tracking-tight'>
+						<h1 className='voice-hero-title mobile-text-shadow text-4xl sm:text-4xl lg:text-7xl font-light text-white mb-1 sm:mb-2 lg:mb-4 leading-tight tracking-tight'>
 							<span className='block font-light text-white/90'>
 								Professional
 							</span>
@@ -209,14 +209,14 @@ export default function HeroSection() {
 						</h1>
 
 						{/* Subtitle */}
-						<div className='mb-4 lg:mb-6'>
+						<div className='mb-2 sm:mb-3 lg:mb-6'>
 							<p className='text-base sm:text-lg lg:text-2xl text-white/80 font-light tracking-wide'>
 								From Bandung to Britain
 							</p>
 						</div>
 
 						{/* Description */}
-						<p className='voice-product-description mobile-text-shadow text-sm lg:text-lg text-white/90 mb-4 lg:mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed font-light px-2 lg:px-0'>
+						<p className='voice-product-description mobile-text-shadow text-sm lg:text-lg text-white/90 mb-3 sm:mb-4 lg:mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed font-light px-2 lg:px-0'>
 							Meet Chef Yossie - born in Bandung, trained
 							in her mother&apos;s catering kitchen, now
 							bringing{" "}
@@ -230,7 +230,7 @@ export default function HeroSection() {
 						</p>
 
 						{/* Features with mobile-optimized design */}
-						<div className='flex flex-col sm:flex-row justify-center lg:justify-start gap-3 sm:gap-4 lg:gap-6 mb-4 lg:mb-8 px-2 lg:px-0'>
+						<div className='flex flex-col sm:flex-row justify-center lg:justify-start gap-2 sm:gap-3 lg:gap-6 mb-3 sm:mb-4 lg:mb-8 px-2 lg:px-0'>
 							{[
 								{ icon: ChefHat, label: "Handcrafted" },
 								{ icon: Award, label: "Authentic" },
@@ -330,8 +330,8 @@ export default function HeroSection() {
 					</div>
 
 					{/* Product showcase - moved to bottom on mobile */}
-					<div className='relative order-2 lg:order-1 pb-4 sm:pb-2 lg:pb-0'>
-						<div className='relative max-w-[280px] sm:max-w-sm lg:max-w-lg mx-auto lg:mx-0'>
+					<div className='relative order-2 lg:order-1 pb-0'>
+						<div className='relative max-w-[240px] sm:max-w-[280px] lg:max-w-lg mx-auto lg:mx-0'>
 							{/* Main product image */}
 							{/* Show skeleton until image loads */}
 							{!imageLoaded && <SambalBaliSkeleton />}
@@ -391,6 +391,37 @@ export default function HeroSection() {
 				@media (max-width: 639px) {
 					.mobile-text-shadow {
 						text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+					}
+					/* Ensure safe spacing from header on all mobile devices */
+					.hero-content-container {
+						padding-top: max(1rem, calc(env(safe-area-inset-top) + 0.5rem)) !important;
+					}
+				}
+				/* Handle very short mobile screens (older devices, landscape) */
+				@media (max-width: 639px) and (max-height: 600px) {
+					section {
+						min-height: 700px !important;
+					}
+					.hero-content-container {
+						min-height: 560px !important;
+						transform: translateY(0px) !important;
+						padding-top: 1rem !important;
+					}
+				}
+				@media (max-width: 639px) and (max-height: 500px) {
+					section {
+						min-height: 600px !important;
+					}
+					.hero-content-container {
+						min-height: 480px !important;
+						transform: translateY(0px) !important;
+						padding-top: 1.5rem !important;
+					}
+				}
+				/* Additional spacing for very old mobile devices */
+				@media (max-width: 639px) and (max-height: 480px) {
+					.hero-content-container {
+						padding-top: 2rem !important;
 					}
 				}
 			`}</style>

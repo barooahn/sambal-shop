@@ -161,8 +161,21 @@ export default function RootLayout({
 				<style dangerouslySetInnerHTML={{
 					__html: `
 						/* Critical above-the-fold CSS */
-						body { font-family: var(--font-inter) !important; margin: 0; padding: 0; }
-						.hero-section { min-height: 100vh !important; }
+						body { 
+							font-family: var(--font-inter) !important; 
+							margin: 0; 
+							padding: 0; 
+							font-display: swap !important;
+						}
+						.hero-section { 
+							min-height: 100vh !important; 
+							height: 100vh !important;
+						}
+						/* Prevent layout shift from font loading */
+						.voice-hero-title, .voice-product-description, .voice-location-info {
+							font-display: swap !important;
+							line-height: 1.2 !important;
+						}
 						.header { position: sticky !important; top: 0; z-index: 50; }
 						.loading-placeholder { height: 96px; background: #f5f5f5; }
 						
@@ -175,10 +188,7 @@ export default function RootLayout({
 						.h-full { height: 100% !important; }
 						.object-cover { object-fit: cover !important; }
 						
-						/* Critical display classes - avoid overriding responsive grid/flex */
-						@media (max-width: 1023px) {
-							.flex { display: flex !important; }
-						}
+						/* Critical display classes - avoid overriding navigation */
 						
 						/* Typography */
 						.text-center { text-align: center !important; }
@@ -196,6 +206,12 @@ export default function RootLayout({
 						.hero-bg { position: absolute; inset: 0; z-index: 0; }
 						.hero-content { position: relative; z-index: 10; }
 						
+						/* Additional stability for key hero elements */
+						.hero-section-container {
+							height: 80vh !important;
+							min-height: 80vh !important;
+						}
+						
 						/* Ensure responsive visibility works */
 						@media (max-width: 639px) {
 							.sm\\:hidden { display: none !important; }
@@ -205,19 +221,27 @@ export default function RootLayout({
 							.hidden { display: none !important; }
 							.sm\\:block { display: block !important; }
 						}
-						@media (min-width: 640px) and (max-width: 767px) {
-							.md\\:hidden { display: none !important; }
+						@media (min-width: 640px) and (max-width: 1023px) {
+							.lg\\:hidden { display: none !important; }
+							.sm\\:block.lg\\:hidden { display: block !important; }
 						}
 						@media (min-width: 768px) {
-							.sm\\:block.md\\:hidden { display: none !important; }
 							.md\\:block { display: block !important; }
-						}
-						@media (min-width: 768px) and (max-width: 1023px) {
-							.lg\\:hidden { display: none !important; }
+							.md\\:flex { display: flex !important; }
 						}
 						@media (min-width: 1024px) {
-							.md\\:block.lg\\:hidden { display: none !important; }
+							.sm\\:block.lg\\:hidden { display: none !important; }
 							.lg\\:block { display: block !important; }
+							.lg\\:flex { display: flex !important; }
+							.lg\\:text-left { text-align: left !important; }
+							.lg\\:justify-start { justify-content: flex-start !important; }
+						}
+						@media (min-width: 1024px) and (max-width: 1279px) {
+							.xl\\:hidden { display: none !important; }
+						}
+						@media (min-width: 1280px) {
+							.lg\\:block.xl\\:hidden { display: none !important; }
+							.xl\\:block { display: block !important; }
 						}
 					`
 				}} />

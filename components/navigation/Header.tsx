@@ -170,7 +170,7 @@ export default function Header() {
 
 					{/* Desktop Navigation */}
 					<nav
-						className='hidden md:flex space-x-8'
+						className='hidden lg:flex space-x-8'
 						aria-label='Primary'
 					>
 						{navigation.map((item) => (
@@ -249,7 +249,7 @@ export default function Header() {
 					</nav>
 
 					{/* Desktop CTA */}
-					<div className='hidden md:flex items-center space-x-4'>
+					<div className='hidden lg:flex items-center space-x-4'>
 						{user ? (
 							<>
 								<Link href='/dashboard'>
@@ -301,7 +301,7 @@ export default function Header() {
 						aria-expanded={isMenuOpen}
 						aria-controls='mobile-menu'
 						onClick={() => setIsMenuOpen(!isMenuOpen)}
-						className='md:hidden p-2 rounded-md text-burgundy-800 hover:text-burgundy-600 hover:bg-burgundy-50 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-burgundy-600 focus-visible:ring-offset-2'
+						className='lg:hidden p-2 rounded-md text-burgundy-800 hover:text-burgundy-600 hover:bg-burgundy-50 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-burgundy-600 focus-visible:ring-offset-2'
 					>
 						{isMenuOpen ? (
 							<X className='w-6 h-6' />
@@ -313,7 +313,7 @@ export default function Header() {
 
 				{/* Mobile Navigation */}
 				{isMenuOpen && (
-					<div className='md:hidden'>
+					<div className='lg:hidden'>
 						<div className='px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gold-200'>
 							{navigation.map((item) => (
 								<div key={item.name}>
