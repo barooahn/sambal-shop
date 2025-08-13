@@ -1,6 +1,8 @@
-import type { Metadata } from "next";
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { useState, useMemo } from "react";
 import {
 	Card,
 	CardContent,
@@ -12,38 +14,48 @@ import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, ChefHat } from "lucide-react";
 import GlassCard from "@/components/ui/GlassCard";
 
-export const metadata: Metadata = {
-	title: "Indonesian Cuisine Blog | Spice Island Indonesia | Authentic Recipes & Stories",
-	description:
-		"Discover authentic Indonesian recipes, cooking tips, and stories from the Spice Islands. Learn about traditional sambal making, Indonesian spices, and culinary heritage.",
-	keywords:
-		"Indonesian recipes, sambal recipes, Indonesian cooking, Spice Islands, traditional Indonesian cuisine, authentic Indonesian food, Indonesian spices, Maluku recipes",
-};
-
 import { blogPosts } from "./posts";
 
-const categories = [
-	"All",
-	"Cooking Guide",
-	"Traditional Recipes",
-	"Cooking Tips",
-	"Heritage Stories",
-	"Food Education",
-];
+// Get unique categories from actual blog posts
+const getUniqueCategories = () => {
+	const categories = blogPosts.map(post => post.category);
+	return ["All", ...Array.from(new Set(categories))];
+};
 
 export default function BlogPage() {
+	const [activeCategory, setActiveCategory] = useState("All");
+	const categories = getUniqueCategories();
+	
+	// Filter posts based on active category
+	const filteredPosts = useMemo(() => {
+		return activeCategory === "All" 
+			? blogPosts 
+			: blogPosts.filter(post => post.category === activeCategory);
+	}, [activeCategory]);
+	
+	// Get featured post (first post if All, first of filtered category if specific)
+	const featuredPost = filteredPosts[0];
+	
+	// Get grid posts (excluding featured)
+	const gridPosts = filteredPosts.slice(1);
+	
+	// Prioritize certain posts when showing "All" category
 	const prioritizedSlugs = [
 		"spice-islands-to-your-kitchen",
 		"sambal-vs-hot-sauce",
 	];
-	const postsExceptFeatured = blogPosts.slice(1);
-	const prioritized = postsExceptFeatured.filter((p) =>
-		prioritizedSlugs.includes(p.slug)
-	);
-	const others = postsExceptFeatured.filter(
-		(p) => !prioritizedSlugs.includes(p.slug)
-	);
-	const reorderedGridPosts = [...prioritized, ...others];
+	
+	const reorderedGridPosts = activeCategory === "All" && gridPosts.length > 0
+		? (() => {
+				const prioritized = gridPosts.filter((p) =>
+					prioritizedSlugs.includes(p.slug)
+				);
+				const others = gridPosts.filter(
+					(p) => !prioritizedSlugs.includes(p.slug)
+				);
+				return [...prioritized, ...others];
+			})()
+		: gridPosts;
 	return (
 		<div className='min-h-screen bg-gradient-to-b from-cream-50 to-cream-100'>
 			{/* Hero Section */}
@@ -74,11 +86,16 @@ export default function BlogPage() {
 							<Badge
 								key={category}
 								variant={
-									category === "All"
+									category === activeCategory
 										? "default"
 										: "secondary"
 								}
-								className='px-4 py-2 cursor-pointer hover:bg-burgundy-700 hover:text-gold-200 transition-colors font-elegant'
+								className={`px-4 py-2 cursor-pointer transition-colors font-elegant ${
+									category === activeCategory
+										? "bg-burgundy-700 text-gold-200"
+										: "hover:bg-burgundy-700 hover:text-gold-200"
+								}`}
+								onClick={() => setActiveCategory(category)}
 							>
 								{category}
 							</Badge>
@@ -86,71 +103,109 @@ export default function BlogPage() {
 					</div>
 
 					{/* Featured Post */}
-					<div className='mb-16'>
-						<GlassCard
-							variant='subtle'
-							className='overflow-hidden rounded-sm'
-						>
-							<div className='grid lg:grid-cols-2 gap-0'>
-								<div className='relative aspect-[16/9] lg:aspect-auto'>
-									<Image
-										src={blogPosts[0].image}
-										alt={blogPosts[0].title}
-										fill
-										className='object-cover'
-										priority
-									/>
-									<div className='absolute top-4 left-4'>
-										<Badge className='bg-burgundy-900 text-gold-300 font-elegant'>
-											Featured
+					{featuredPost && (
+						<div className='mb-16'>
+							<GlassCard
+								variant='subtle'
+								className='overflow-hidden rounded-sm'
+							>
+								<div className='grid lg:grid-cols-2 gap-0'>
+									<div className='relative aspect-[16/9] lg:aspect-auto'>
+										<Image
+											src={featuredPost.image}
+											alt={featuredPost.title}
+											fill
+											className='object-cover'
+											priority
+										/>
+										<div className='absolute top-4 left-4'>
+											<Badge className='bg-burgundy-900 text-gold-300 font-elegant'>
+												{activeCategory === "All" ? "Featured" : `${activeCategory} Featured`}
+											</Badge>
+										</div>
+									</div>
+									<div className='p-8 lg:p-12 flex flex-col justify-center'>
+										<Badge
+											variant='secondary'
+											className='w-fit mb-4 font-elegant'
+										>
+											{featuredPost.category}
 										</Badge>
+										<h2 className='text-3xl font-bold text-burgundy-900 mb-4 font-brand'>
+											{featuredPost.title}
+										</h2>
+										<p className='text-neutral-700 mb-6 leading-relaxed font-body'>
+											{featuredPost.excerpt}
+										</p>
+										<div className='flex items-center gap-4 text-sm text-neutral-600 mb-6 font-body'>
+											<div className='flex items-center gap-1'>
+												<Calendar className='w-4 h-4' />
+												{new Date(
+													featuredPost.publishDate
+												).toLocaleDateString(
+													"en-GB",
+													{
+														day: "numeric",
+														month: "long",
+														year: "numeric",
+													}
+												)}
+											</div>
+											<div className='flex items-center gap-1'>
+												<Clock className='w-4 h-4' />
+												{featuredPost.readTime}
+											</div>
+										</div>
+										<Link
+											href={`/blog/${featuredPost.slug}`}
+											className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-burgundy-900 to-burgundy-800 text-gold-200 font-bold rounded-full hover:shadow-lg transition-all duration-300 border border-gold-600/30 font-elegant w-fit'
+										>
+											Read Full Story
+										</Link>
 									</div>
 								</div>
-								<div className='p-8 lg:p-12 flex flex-col justify-center'>
-									<Badge
-										variant='secondary'
-										className='w-fit mb-4 font-elegant'
-									>
-										{blogPosts[0].category}
-									</Badge>
-									<h2 className='text-3xl font-bold text-burgundy-900 mb-4 font-brand'>
-										{blogPosts[0].title}
-									</h2>
-									<p className='text-neutral-700 mb-6 leading-relaxed font-body'>
-										{blogPosts[0].excerpt}
-									</p>
-									<div className='flex items-center gap-4 text-sm text-neutral-600 mb-6 font-body'>
-										<div className='flex items-center gap-1'>
-											<Calendar className='w-4 h-4' />
-											{new Date(
-												blogPosts[0].publishDate
-											).toLocaleDateString(
-												"en-GB",
-												{
-													day: "numeric",
-													month: "long",
-													year: "numeric",
-												}
-											)}
-										</div>
-										<div className='flex items-center gap-1'>
-											<Clock className='w-4 h-4' />
-											{blogPosts[0].readTime}
-										</div>
-									</div>
-									<Link
-										href={`/blog/${blogPosts[0].slug}`}
-										className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-burgundy-900 to-burgundy-800 text-gold-200 font-bold rounded-full hover:shadow-lg transition-all duration-300 border border-gold-600/30 font-elegant w-fit'
-									>
-										Read Full Story
-									</Link>
-								</div>
+							</GlassCard>
+						</div>
+					)}
+
+					{/* Results count and status */}
+					{filteredPosts.length > 0 && (
+						<div className='mb-8 text-center'>
+							<p className='text-neutral-600 font-body'>
+								{activeCategory === "All" 
+									? `Showing all ${filteredPosts.length} articles`
+									: `${filteredPosts.length} article${filteredPosts.length !== 1 ? 's' : ''} in "${activeCategory}"`
+								}
+							</p>
+						</div>
+					)}
+
+					{/* No posts message */}
+					{filteredPosts.length === 0 && (
+						<div className='text-center py-12'>
+							<div className='max-w-md mx-auto'>
+								<ChefHat className='w-16 h-16 text-neutral-400 mx-auto mb-4' />
+								<h3 className='text-xl font-semibold text-neutral-700 mb-2'>
+									No articles in this category yet
+								</h3>
+								<p className='text-neutral-600 mb-6'>
+									We're working on more content for "{activeCategory}". 
+									Check back soon or browse other categories.
+								</p>
+								<Badge
+									variant="secondary"
+									className='cursor-pointer hover:bg-burgundy-700 hover:text-gold-200 transition-colors'
+									onClick={() => setActiveCategory("All")}
+								>
+									View All Articles
+								</Badge>
 							</div>
-						</GlassCard>
-					</div>
+						</div>
+					)}
 
 					{/* Blog Grid */}
-					<div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
+					{reorderedGridPosts.length > 0 && (
+						<div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
 						{reorderedGridPosts.map((post) => (
 							<Card
 								key={post.id}
@@ -209,7 +264,8 @@ export default function BlogPage() {
 								</CardContent>
 							</Card>
 						))}
-					</div>
+						</div>
+					)}
 
 					{/* Newsletter CTA */}
 					<div className='mt-16 text-center'>
