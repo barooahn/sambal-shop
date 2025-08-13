@@ -25,7 +25,14 @@
       "Bash(rm:*)",
       "Bash(npx tsc:*)",
       "Bash(yarn add stripe)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(yarn dev)",
+      "Bash(pkill:*)",
+      "Bash(true)",
+      "Bash(npx lighthouse:*)",
+      "Bash(npx serve:*)",
+      "Bash(yarn tsc:*)",
+      "Bash(grep:*)"
     ],
     "deny": []
   }

@@ -178,7 +178,7 @@ export default function SpiceIslandsToYourKitchenPage() {
 			<article className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
 				{/* Article Header */}
 				<header className='text-center mb-12'>
-					<div className='flex items-center justify-center gap-2 text-green-600 mb-4'>
+					<div className='flex items-center justify-center gap-2 text-burgundy-600 mb-4'>
 						<Ship className='w-6 h-6' />
 						<span className='text-sm font-semibold tracking-wide uppercase'>
 							Our Story
@@ -235,14 +235,14 @@ export default function SpiceIslandsToYourKitchenPage() {
 
 				{/* Introduction */}
 				<section className='prose prose-lg max-w-none mb-12'>
-					<div className='bg-gradient-to-br from-green-50 to-blue-50 border-l-4 border-green-400 p-8 mb-12 rounded-r-lg'>
+					<div className='bg-gradient-to-br from-burgundy-50 to-gold-50 border-l-4 border-burgundy-400 p-8 mb-12 rounded-r-lg'>
 						<div className='flex items-start gap-4'>
-							<Heart className='w-8 h-8 text-green-600 mt-1 flex-shrink-0' />
+							<Heart className='w-8 h-8 text-burgundy-600 mt-1 flex-shrink-0' />
 							<div>
-								<h3 className='text-xl font-bold text-green-900 mb-4'>
+								<h3 className='text-xl font-bold text-burgundy-900 mb-4'>
 									A Personal Message from Chef Yossie
 								</h3>
-								<p className='text-green-800 leading-relaxed mb-4'>
+								<p className='text-burgundy-800 leading-relaxed mb-4'>
 									"Every jar of sambal we create
 									carries the soul of my homeland -
 									the Maluku Islands, the original
@@ -254,7 +254,7 @@ export default function SpiceIslandsToYourKitchenPage() {
 									responsibility to share authentic
 									Indonesian flavors respectfully."
 								</p>
-								<p className='text-green-800 leading-relaxed'>
+								<p className='text-burgundy-800 leading-relaxed'>
 									"This is the story of how my
 									great-grandmother's sambal recipes
 									traveled from volcanic Indonesian
@@ -302,7 +302,7 @@ export default function SpiceIslandsToYourKitchenPage() {
 								className='flex gap-8 items-start'
 							>
 								<div className='flex-shrink-0'>
-									<div className='w-24 h-24 bg-gradient-to-br from-green-500 to-blue-500 rounded-full flex items-center justify-center text-white font-bold shadow-lg'>
+									<div className='w-24 h-24 bg-gradient-to-br from-burgundy-500 to-gold-500 rounded-full flex items-center justify-center text-white font-bold shadow-lg'>
 										{event.year}
 									</div>
 								</div>
@@ -419,8 +419,8 @@ export default function SpiceIslandsToYourKitchenPage() {
 								key={index}
 								className='bg-white border border-gray-200 rounded-lg p-6 shadow-lg text-center'
 							>
-								<div className='w-16 h-16 bg-gradient-to-br from-green-100 to-blue-100 rounded-full flex items-center justify-center mx-auto mb-4'>
-									<value.icon className='w-8 h-8 text-green-600' />
+								<div className='w-16 h-16 bg-gradient-to-br from-burgundy-100 to-gold-100 rounded-full flex items-center justify-center mx-auto mb-4'>
+									<value.icon className='w-8 h-8 text-burgundy-600' />
 								</div>
 								<h3 className='text-xl font-semibold text-gray-900 mb-3'>
 									{value.title}
@@ -502,11 +502,11 @@ export default function SpiceIslandsToYourKitchenPage() {
 								</div>
 							</div>
 							<div className='flex flex-col justify-center'>
-								<div className='bg-gradient-to-br from-green-50 to-blue-50 rounded-lg p-6 border border-green-200'>
-									<h4 className='font-semibold text-green-900 mb-3'>
+								<div className='bg-gradient-to-br from-burgundy-50 to-gold-50 rounded-lg p-6 border border-burgundy-200'>
+									<h4 className='font-semibold text-burgundy-900 mb-3'>
 										Chef's Philosophy
 									</h4>
-									<blockquote className='text-green-800 italic text-sm leading-relaxed'>
+									<blockquote className='text-burgundy-800 italic text-sm leading-relaxed'>
 										"Authentic doesn't mean
 										inflexible. Real authenticity
 										means understanding the soul
@@ -530,8 +530,8 @@ export default function SpiceIslandsToYourKitchenPage() {
 					</h2>
 
 					<div className='grid md:grid-cols-2 gap-8'>
-						<div className='space-y-6'>
-							<div className='bg-red-50 border border-red-200 rounded-lg p-6'>
+						<div className='grid gap-6'>
+							<div className='bg-red-50 border border-red-200 rounded-lg p-6 h-full'>
 								<h3 className='text-lg font-semibold text-red-800 mb-3'>
 									Traditional Foundation
 								</h3>
@@ -560,11 +560,11 @@ export default function SpiceIslandsToYourKitchenPage() {
 								</ul>
 							</div>
 
-							<div className='bg-blue-50 border border-blue-200 rounded-lg p-6'>
-								<h3 className='text-lg font-semibold text-blue-800 mb-3'>
+							<div className='bg-gold-50 border border-gold-200 rounded-lg p-6 h-full'>
+								<h3 className='text-lg font-semibold text-gold-800 mb-3'>
 									British Adaptation
 								</h3>
-								<ul className='text-blue-700 space-y-2 text-sm'>
+								<ul className='text-gold-700 space-y-2 text-sm'>
 									<li>
 										• Test with British families
 										to understand heat preferences
@@ -586,12 +586,12 @@ export default function SpiceIslandsToYourKitchenPage() {
 							</div>
 						</div>
 
-						<div className='space-y-6'>
-							<div className='bg-green-50 border border-green-200 rounded-lg p-6'>
-								<h3 className='text-lg font-semibold text-green-800 mb-3'>
+						<div className='grid gap-6'>
+							<div className='bg-burgundy-50 border border-burgundy-200 rounded-lg p-6 h-full'>
+								<h3 className='text-lg font-semibold text-burgundy-800 mb-3'>
 									Quality Control
 								</h3>
-								<ul className='text-green-700 space-y-2 text-sm'>
+								<ul className='text-burgundy-700 space-y-2 text-sm'>
 									<li>
 										• Every batch tested by Chef
 										Yossie personally
@@ -612,11 +612,11 @@ export default function SpiceIslandsToYourKitchenPage() {
 								</ul>
 							</div>
 
-							<div className='bg-purple-50 border border-purple-200 rounded-lg p-6'>
-								<h3 className='text-lg font-semibold text-purple-800 mb-3'>
+							<div className='bg-amber-50 border border-amber-200 rounded-lg p-6 h-full'>
+								<h3 className='text-lg font-semibold text-amber-800 mb-3'>
 									Cultural Education
 								</h3>
-								<ul className='text-purple-700 space-y-2 text-sm'>
+								<ul className='text-amber-700 space-y-2 text-sm'>
 									<li>
 										• Detailed usage instructions
 										for authentic application
@@ -641,7 +641,7 @@ export default function SpiceIslandsToYourKitchenPage() {
 
 				{/* Mission Statement */}
 				<section className='mb-12'>
-					<div className='bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-lg p-8 text-center'>
+					<div className='bg-gradient-to-r from-burgundy-600 to-burgundy-800 text-white rounded-lg p-8 text-center'>
 						<h2 className='text-2xl font-bold mb-4'>
 							Our Mission
 						</h2>
@@ -657,14 +657,14 @@ export default function SpiceIslandsToYourKitchenPage() {
 						<div className='flex flex-col sm:flex-row gap-4 justify-center'>
 							<Link
 								href='/sample-pack-try-first'
-								className='inline-flex items-center justify-center gap-2 bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors'
+								className='inline-flex items-center justify-center gap-2 bg-white text-burgundy-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors'
 							>
 								<Star className='w-5 h-5' />
 								Experience Our Story
 							</Link>
 							<Link
 								href='/blog/indonesian-food-culture-context'
-								className='inline-flex items-center justify-center gap-2 border border-white text-white hover:bg-white hover:text-green-600 px-6 py-3 rounded-lg font-semibold transition-colors'
+								className='inline-flex items-center justify-center gap-2 border border-white text-white hover:bg-white hover:text-burgundy-600 px-6 py-3 rounded-lg font-semibold transition-colors'
 							>
 								<Globe className='w-5 h-5' />
 								Learn About Indonesian Culture
@@ -776,7 +776,7 @@ export default function SpiceIslandsToYourKitchenPage() {
 								Maluku Islands and their impact on world
 								cuisine
 							</p>
-							<div className='text-green-600 text-sm font-medium'>
+							<div className='text-burgundy-600 text-sm font-medium'>
 								Explore History →
 							</div>
 						</Link>
@@ -792,7 +792,7 @@ export default function SpiceIslandsToYourKitchenPage() {
 								Learn about the cultural significance
 								behind Indonesian dishes and traditions
 							</p>
-							<div className='text-green-600 text-sm font-medium'>
+							<div className='text-burgundy-600 text-sm font-medium'>
 								Learn Culture →
 							</div>
 						</Link>

@@ -190,6 +190,12 @@ export default function RootLayout({
 						
 						/* Critical display classes - avoid overriding navigation */
 						
+						/* Sambal UK gold text - prevent hydration flash */
+						.sambal-title {
+							color: #fcd34d !important;
+							text-shadow: 0 0 8px rgba(252, 211, 77, 0.3) !important;
+						}
+						
 						/* Typography */
 						.text-center { text-align: center !important; }
 						.font-semibold { font-weight: 600 !important; }
@@ -261,7 +267,7 @@ export default function RootLayout({
 				/>
 				<Header />
 				<Breadcrumb />
-				<main id='main-content' className='min-h-screen'>
+				<main id='main-content' className='min-h-screen mb-16'>
 					{children}
 				</main>
 				<Footer />

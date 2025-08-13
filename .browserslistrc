@@ -1,9 +1,0 @@
-# Modern browsers - balanced approach for development
-> 0.5%
-last 2 versions
-not dead
-not ie 11
-chrome >= 88
-firefox >= 85
-safari >= 14
-edge >= 88

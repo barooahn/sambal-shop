@@ -431,7 +431,7 @@ export default function BakwanPage() {
 				pageTitle='Bakwan Cooking - Frequently Asked Questions'
 			/>
 
-			<div className='container mx-auto px-4 py-8'>
+			<div className='container mx-auto px-4 py-8 pb-16'>
 				{/* Breadcrumb Navigation */}
 				<div className='mb-6'>
 					<Breadcrumb>

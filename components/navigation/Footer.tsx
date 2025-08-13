@@ -222,13 +222,13 @@ export default function Footer() {
 
 				{/* Trust strip */}
 				<div className='mt-12 mb-8 grid grid-cols-1 sm:grid-cols-3 gap-4 text-center'>
-					<div className='rounded-xl border border-gold-600/30 px-4 py-3 bg-neutral-800/60'>
+					<div className='text-gold-400 font-body text-sm font-medium'>
 						Small-batch • Made in the UK
 					</div>
-					<div className='rounded-xl border border-gold-600/30 px-4 py-3 bg-neutral-800/60'>
+					<div className='text-gold-400 font-body text-sm font-medium'>
 						No preservatives • Vegan
 					</div>
-					<div className='rounded-xl border border-gold-600/30 px-4 py-3 bg-neutral-800/60'>
+					<div className='text-gold-400 font-body text-sm font-medium'>
 						Free UK delivery over £20
 					</div>
 				</div>

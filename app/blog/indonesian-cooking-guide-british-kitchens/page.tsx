@@ -120,7 +120,7 @@ const guideChapters = [
 	},
 	{
 		id: 4,
-		title: "British-Indonesian Fusion: 10 Easy Weeknight Recipes",
+		title: "British-Indonesian Fusion: Easy Weeknight Recipes",
 		description:
 			"Quick Indonesian-inspired dishes perfect for busy British households. Each recipe takes 30 minutes or less and uses ingredients available in UK supermarkets.",
 		readTime: "20 min read",

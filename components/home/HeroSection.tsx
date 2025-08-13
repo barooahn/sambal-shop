@@ -115,7 +115,7 @@ export default function HeroSection() {
 	return (
 		<section className='relative flex items-center justify-center overflow-hidden' style={{ minHeight: 'max(100vh, 800px)' }}>
 			{/* Background Image - Optimized for LCP with fixed dimensions to prevent CLS */}
-			<div className='absolute inset-0 z-0'>
+			<div className='absolute inset-0 z-0' style={{ backgroundColor: '#8B4513', backgroundImage: 'url(/images/optimized/hero-image-lg.webp)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
 				<Image
 					src='/images/optimized/hero-image-sm.webp'
 					alt='Premium Indonesian spices imported to UK - authentic Indonesian cooking ingredients available London Manchester Birmingham'
@@ -203,7 +203,7 @@ export default function HeroSection() {
 							<span className='block font-light text-white/90'>
 								Indonesian
 							</span>
-							<span className='block font-bold bg-gradient-to-r from-amber-300 via-orange-300 to-red-300 bg-clip-text text-transparent'>
+							<span className='sambal-title block font-bold'>
 								Sambal UK
 							</span>
 						</h1>

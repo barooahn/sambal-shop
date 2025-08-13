@@ -106,7 +106,7 @@ export default function ContactForm({
 							Your Name
 						</label>
 						<div className='relative'>
-							<div className='absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none'>
+							<div className='absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none'>
 								<User className='w-5 h-5 text-gold-500' />
 							</div>
 							<Input
@@ -119,7 +119,8 @@ export default function ContactForm({
 									})
 								}
 								required
-								className='text-lg py-4 pl-12 pr-4 border-2 border-gold-300/50 focus:border-burgundy-600 rounded-sm font-body bg-white/95 shadow-sm hover:shadow-md transition-all duration-200'
+								className='text-lg py-4 pl-16 pr-4 border-2 border-gold-300/50 focus:border-burgundy-600 rounded-sm font-body bg-white/95 shadow-sm hover:shadow-md transition-all duration-200 placeholder:text-gray-300'
+								style={{ paddingLeft: '4rem' }}
 							/>
 						</div>
 					</div>
@@ -128,7 +129,7 @@ export default function ContactForm({
 							Your Email
 						</label>
 						<div className='relative'>
-							<div className='absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none'>
+							<div className='absolute inset-y-0 left-0 pl-5 flex items-center pointer-events-none'>
 								<Mail className='w-5 h-5 text-gold-500' />
 							</div>
 							<Input
@@ -142,7 +143,8 @@ export default function ContactForm({
 									})
 								}
 								required
-								className='text-lg py-4 pl-12 pr-4 border-2 border-gold-300/50 focus:border-burgundy-600 rounded-sm font-body bg-white/95 shadow-sm hover:shadow-md transition-all duration-200'
+								className='text-lg py-4 pl-16 pr-4 border-2 border-gold-300/50 focus:border-burgundy-600 rounded-sm font-body bg-white/95 shadow-sm hover:shadow-md transition-all duration-200 placeholder:text-gray-300'
+								style={{ paddingLeft: '4rem' }}
 							/>
 						</div>
 					</div>
@@ -152,7 +154,7 @@ export default function ContactForm({
 						Your Message
 					</label>
 					<div className='relative'>
-						<div className='absolute top-4 left-4 pointer-events-none'>
+						<div className='absolute top-4 left-5 pointer-events-none'>
 							<MessageCircle className='w-5 h-5 text-gold-500' />
 						</div>
 						<Textarea
@@ -165,7 +167,8 @@ export default function ContactForm({
 								})
 							}
 							required
-							className='min-h-40 text-lg pt-4 pl-12 pr-4 pb-4 border-2 border-gold-300/50 focus:border-burgundy-600 rounded-sm font-body bg-white/95 shadow-sm hover:shadow-md transition-all duration-200 resize-none'
+							className='min-h-40 text-lg pt-4 pl-16 pr-4 pb-4 border-2 border-gold-300/50 focus:border-burgundy-600 rounded-sm font-body bg-white/95 shadow-sm hover:shadow-md transition-all duration-200 resize-none placeholder:text-gray-300'
+							style={{ paddingLeft: '4rem' }}
 						/>
 					</div>
 				</div>
