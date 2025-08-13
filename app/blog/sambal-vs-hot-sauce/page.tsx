@@ -190,6 +190,73 @@ export default function SambalVsHotSaucePage() {
 				pageTitle='Sambal vs Hot Sauce: Understanding the Difference - FAQ'
 			/>
 
+			{/* Product Schema for mentioned sambals */}
+			<script
+				type="application/ld+json"
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify([
+						{
+							"@context": "https://schema.org",
+							"@type": "Product",
+							"name": "Sambal Bali",
+							"description": "Aromatic Indonesian chili paste with traditional spices, perfect for British palates exploring Indonesian flavors",
+							"brand": {
+								"@type": "Brand",
+								"name": "Spice Island Indonesia"
+							},
+							"category": "Indonesian Condiments",
+							"offers": {
+								"@type": "Offer",
+								"url": "https://spiceislandindonesia.com/sambal-bali-aromatic-spicy",
+								"priceCurrency": "GBP",
+								"price": "7.49",
+								"availability": "https://schema.org/InStock",
+								"seller": {
+									"@type": "Organization",
+									"name": "Spice Island Indonesia"
+								}
+							},
+							"aggregateRating": {
+								"@type": "AggregateRating",
+								"ratingValue": "4.9",
+								"reviewCount": "127",
+								"bestRating": "5",
+								"worstRating": "1"
+							}
+						},
+						{
+							"@context": "https://schema.org",
+							"@type": "Product", 
+							"name": "Sambal Oelek",
+							"description": "Traditional Indonesian chili paste made from fresh red chilies with minimal ingredients for authentic heat",
+							"brand": {
+								"@type": "Brand",
+								"name": "Spice Island Indonesia"
+							},
+							"category": "Indonesian Condiments",
+							"offers": {
+								"@type": "Offer",
+								"url": "https://spiceislandindonesia.com/sambal-oelek-uk",
+								"priceCurrency": "GBP",
+								"price": "7.49",
+								"availability": "https://schema.org/InStock",
+								"seller": {
+									"@type": "Organization",
+									"name": "Spice Island Indonesia"
+								}
+							},
+							"aggregateRating": {
+								"@type": "AggregateRating",
+								"ratingValue": "4.8",
+								"reviewCount": "98",
+								"bestRating": "5",
+								"worstRating": "1"
+							}
+						}
+					])
+				}}
+			/>
+
 			<article className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
 				{/* Article Header */}
 				<header className='text-center mb-12'>
