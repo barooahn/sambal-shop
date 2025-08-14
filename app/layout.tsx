@@ -166,7 +166,6 @@ export default function RootLayout({
 							margin: 0; 
 							padding: 0; 
 							font-display: swap !important;
-							contain: layout style paint;
 						}
 						
 						/* Prevent layout shifts */

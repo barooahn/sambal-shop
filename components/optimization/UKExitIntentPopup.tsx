@@ -20,7 +20,7 @@ export default function UKExitIntentPopup() {
 			}
 		};
 
-		// Show after 5 seconds if not already shown (reduced for testing)
+		// Show after 5 seconds for testing (reduced from 30)
 		const timer = setTimeout(() => {
 			if (!hasShown) {
 				setIsVisible(true);
