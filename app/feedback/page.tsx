@@ -26,6 +26,8 @@ interface FeedbackForm {
 	comments: string;
 }
 
+import { supabase } from "@/lib/supabase";
+
 export default function FeedbackPage() {
 	const [formData, setFormData] = useState<FeedbackForm>({
 		name: "",
@@ -52,11 +54,22 @@ export default function FeedbackPage() {
 		setLoading(true);
 
 		try {
-			// Here you would send the data to your backend/database
-			// For now, we&apos;ll simulate an API call
-			await new Promise((resolve) => setTimeout(resolve, 1500));
+			const { error } = await supabase.from("feedback").insert([
+				{
+					name: formData.name,
+					email: formData.email,
+					overall_rating: formData.overallRating,
+					heat_level: formData.heatLevel,
+					would_recommend: formData.wouldRecommend,
+					comments: formData.comments,
+				},
+			]);
 
-			console.log("Feedback submitted:", formData);
+			if (error) {
+				console.error("Error inserting feedback:", error);
+				throw error;
+			}
+
 			setSubmitted(true);
 		} catch (error) {
 			console.error("Error submitting feedback:", error);
