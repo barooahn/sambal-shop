@@ -279,6 +279,7 @@ export default function RootLayout({
 				</main>
 				<Footer />
 				<UKExitIntentPopup />
+				<Toaster />
 			</body>
 		</html>
 	);

@@ -114,19 +114,20 @@ export default function HeroSection() {
 
 	return (
 		<section className='relative flex items-center justify-center overflow-hidden' style={{ minHeight: 'max(100vh, 800px)' }}>
-			{/* Background Image - Optimized for LCP with single responsive image */}
-			<div className='absolute inset-0 z-0' style={{ backgroundColor: '#8B4513' }}>
+			{/* Background Image - Optimized for LCP with proper coverage */}
+			<div className='absolute inset-0 z-0 w-full h-full' style={{ backgroundColor: '#8B4513' }}>
 				<Image
 					src='/images/optimized/hero-image-lg.webp'
 					alt='Premium Indonesian spices imported to UK - authentic Indonesian cooking ingredients available London Manchester Birmingham'
 					fill
-					className='object-cover'
+					className='object-cover w-full h-full'
 					priority
 					fetchPriority='high'
 					sizes='100vw'
 					quality={80}
 					placeholder='blur'
 					blurDataURL='data:image/webp;base64,UklGRlABAABXRUJQVlA4TD4BAAAvAQABACcQEf//72vv++9r7/vvAGwhOLb9AAQAAAAAAABjhwgJCQkJCQkJAJCQkJCQkJCQkABISEhISEhISEgAhISEhISEhISEAISEhISEhISEhAAQEBAQEBAQEBAAEBAQEBAQEBAQABAQEBAQEBAQEBAAICAiICAiICAiABAQEhIQEhIQEhIAEhIREhIREhIREgASEhIREhIREhIRABEhIREhIREhIREhABAQEBAQEBAQEBAQABAQEBAQEBAQEBAAEBAQEBAQEBAQEBAAEBAQEBAQEBAQEBAA'
+					style={{ objectFit: 'cover' }}
 				/>
 			</div>
 

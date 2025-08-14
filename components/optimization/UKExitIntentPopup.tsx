@@ -20,13 +20,13 @@ export default function UKExitIntentPopup() {
 			}
 		};
 
-		// Show after 30 seconds if not already shown
+		// Show after 5 seconds if not already shown (reduced for testing)
 		const timer = setTimeout(() => {
 			if (!hasShown) {
 				setIsVisible(true);
 				setHasShown(true);
 			}
-		}, 30000);
+		}, 5000);
 
 		document.addEventListener("mouseleave", handleMouseLeave);
 
