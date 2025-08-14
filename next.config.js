@@ -10,6 +10,50 @@ const nextConfig = {
 		formats: ["image/webp", "image/avif"],
 	},
 	trailingSlash: true,
+	
+	// Redirect non-www to www to consolidate SEO authority
+	async redirects() {
+		return [
+			{
+				source: '/:path*',
+				has: [
+					{
+						type: 'host',
+						value: 'spiceislandindonesia.com',
+					},
+				],
+				destination: 'https://www.spiceislandindonesia.com/:path*',
+				permanent: true,
+			},
+		]
+	},
+	
+	// Security headers for better SEO and security
+	async headers() {
+		return [
+			{
+				source: '/(.*)',
+				headers: [
+					{
+						key: 'X-Frame-Options',
+						value: 'DENY',
+					},
+					{
+						key: 'X-Content-Type-Options',
+						value: 'nosniff',
+					},
+					{
+						key: 'Referrer-Policy',
+						value: 'origin-when-cross-origin',
+					},
+					{
+						key: 'Permissions-Policy',
+						value: 'camera=(), microphone=(), geolocation=()',
+					},
+				],
+			},
+		]
+	},
 	// Performance optimizations for bundle splitting
 	experimental: {
 		optimizePackageImports: ['lucide-react', '@radix-ui/react-icons', 'next'],
