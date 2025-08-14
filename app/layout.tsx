@@ -3,9 +3,6 @@ import type { Metadata } from "next";
 import {
 	Inter,
 	Playfair_Display,
-	Cormorant_Garamond,
-	Dancing_Script,
-	Cinzel,
 } from "next/font/google";
 import Header from "@/components/navigation/Header";
 import Breadcrumb from "@/components/shared/Breadcrumb";
@@ -31,34 +28,15 @@ const inter = Inter({
 	subsets: ["latin"],
 	variable: "--font-inter",
 	display: "swap",
+	preload: true,
 });
 
 const playfair = Playfair_Display({
 	subsets: ["latin"],
 	variable: "--font-playfair",
 	display: "swap",
-	weight: ["400", "600", "700", "800", "900"],
-});
-
-const cormorant = Cormorant_Garamond({
-	subsets: ["latin"],
-	variable: "--font-cormorant",
-	display: "swap",
-	weight: ["300", "400", "500", "600", "700"],
-});
-
-const dancingScript = Dancing_Script({
-	subsets: ["latin"],
-	variable: "--font-dancing",
-	display: "swap",
-	weight: ["400", "500", "600", "700"],
-});
-
-const cinzel = Cinzel({
-	subsets: ["latin"],
-	variable: "--font-logo",
-	display: "swap",
-	weight: ["400", "500", "600", "700", "800", "900"],
+	weight: ["400", "700"], // Reduced to only necessary weights
+	preload: false, // Only preload critical fonts
 });
 
 export const metadata: Metadata = {
@@ -128,6 +106,20 @@ export default function RootLayout({
 				<link rel='dns-prefetch' href='//fonts.googleapis.com' />
 				<link rel='dns-prefetch' href='//www.googletagmanager.com' />
 				<link rel='dns-prefetch' href='//www.google-analytics.com' />
+				
+				{/* Preload critical images */}
+				<link 
+					rel='preload' 
+					href='/images/optimized/hero-image-lg.webp' 
+					as='image' 
+					type='image/webp'
+				/>
+				<link 
+					rel='preload' 
+					href='/images/optimized/sambal-bali-md.webp' 
+					as='image' 
+					type='image/webp'
+				/>
 				
 				<link
 					rel='preconnect'
@@ -264,7 +256,7 @@ export default function RootLayout({
 				/>
 			</head>
 			<body
-				className={`${inter.variable} ${playfair.variable} ${cormorant.variable} ${dancingScript.variable} ${cinzel.variable} ${inter.className}`}
+				className={`${inter.variable} ${playfair.variable} ${inter.className}`}
 			>
 				<ThirdPartyScripts
 					measurementId={

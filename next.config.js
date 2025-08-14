@@ -4,7 +4,7 @@ const nextConfig = {
 		ignoreDuringBuilds: true,
 	},
 	images: {
-		unoptimized: true,
+		unoptimized: false, // Enable Next.js image optimization
 		deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
 		imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
 		formats: ["image/webp", "image/avif"],
@@ -66,53 +66,41 @@ const nextConfig = {
 	compiler: {
 		removeConsole: process.env.NODE_ENV === 'production',
 	},
-	// Webpack optimizations temporarily disabled for development
-	// webpack: (config, { isServer, dev }) => {
-	// 	// Only apply optimizations in production builds
-	// 	if (!isServer && !dev) {
-	// 		// Optimize client-side bundle splitting and tree shaking
-	// 		config.optimization = {
-	// 			...config.optimization,
-	// 			usedExports: true,
-	// 			sideEffects: false,
-	// 			splitChunks: {
-	// 				...config.optimization.splitChunks,
-	// 				minSize: 30000,
-	// 				maxSize: 150000,
-	// 				cacheGroups: {
-	// 					...config.optimization.splitChunks.cacheGroups,
-	// 					// Core framework (React + Next.js)
-	// 					framework: {
-	// 						test: /[\\/]node_modules[\\/](react|react-dom|next)[\\/]/,
-	// 						name: 'framework',
-	// 						priority: 40,
-	// 						chunks: 'all',
-	// 						enforce: true,
-	// 					},
-	// 					// Vendor libraries (everything else from node_modules)
-	// 					vendors: {
-	// 						test: /[\\/]node_modules[\\/]/,
-	// 						name: 'vendors',
-	// 						priority: 20,
-	// 						chunks: 'all',
-	// 						enforce: true,
-	// 						reuseExistingChunk: true,
-	// 					},
-	// 					// Components (only if they're large enough)
-	// 					components: {
-	// 						test: /[\\/](components|src)[\\/]/,
-	// 						name: 'components',
-	// 						priority: 10,
-	// 						chunks: 'all',
-	// 						minSize: 40000,
-	// 						enforce: false,
-	// 					},
-	// 				},
-	// 			},
-	// 		};
-	// 	}
-	// 	return config;
-	// },
+	// Webpack optimizations for better performance
+	webpack: (config, { isServer, dev }) => {
+		// Apply optimizations in all builds for better dev performance
+		if (!isServer) {
+			// Optimize bundle splitting for faster loading
+			config.optimization = {
+				...config.optimization,
+				splitChunks: {
+					...config.optimization.splitChunks,
+					chunks: 'all',
+					minSize: 20000,
+					maxSize: 200000,
+					cacheGroups: {
+						...config.optimization.splitChunks.cacheGroups,
+						// React and Next.js framework
+						framework: {
+							test: /[\\/]node_modules[\\/](react|react-dom|next)[\\/]/,
+							name: 'framework',
+							priority: 40,
+							enforce: true,
+						},
+						// Large libraries
+						vendor: {
+							test: /[\\/]node_modules[\\/]/,
+							name: 'vendor',
+							priority: 20,
+							enforce: true,
+							reuseExistingChunk: true,
+						},
+					},
+				},
+			};
+		}
+		return config;
+	},
 };
 
 module.exports = nextConfig;
