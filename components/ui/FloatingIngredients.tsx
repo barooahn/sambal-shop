@@ -163,6 +163,9 @@ function ResponsiveIngredient({
 					backfaceVisibility: "hidden",
 					transform: "translateZ(0)",
 				}}
+				loading="lazy"
+				width={160}
+				height={160}
 				fallbackSrc='https://images.pexels.com/photos/4198019/pexels-photo-4198019.jpeg?auto=compress&cs=tinysrgb&w=300&h=300&fit=crop'
 			/>
 		</div>

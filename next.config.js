@@ -8,6 +8,8 @@ const nextConfig = {
 		deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
 		imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
 		formats: ["image/webp", "image/avif"],
+		minimumCacheTTL: 31536000, // 1 year cache
+		dangerouslyAllowSVG: false,
 	},
 	trailingSlash: true,
 	
@@ -58,6 +60,11 @@ const nextConfig = {
 	experimental: {
 		optimizePackageImports: ['lucide-react', '@radix-ui/react-icons', 'next'],
 		optimizeCss: false,
+	},
+	
+	// Modern JavaScript target to reduce polyfills
+	compiler: {
+		removeConsole: process.env.NODE_ENV === 'production',
 	},
 	// Webpack optimizations temporarily disabled for development
 	// webpack: (config, { isServer, dev }) => {

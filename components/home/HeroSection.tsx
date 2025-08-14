@@ -114,51 +114,19 @@ export default function HeroSection() {
 
 	return (
 		<section className='relative flex items-center justify-center overflow-hidden' style={{ minHeight: 'max(100vh, 800px)' }}>
-			{/* Background Image - Optimized for LCP with fixed dimensions to prevent CLS */}
-			<div className='absolute inset-0 z-0' style={{ backgroundColor: '#8B4513', backgroundImage: 'url(/images/optimized/hero-image-lg.webp)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
-				<Image
-					src='/images/optimized/hero-image-sm.webp'
-					alt='Premium Indonesian spices imported to UK - authentic Indonesian cooking ingredients available London Manchester Birmingham'
-					width={768}
-					height={1024}
-					className='object-cover w-full h-full block sm:hidden'
-					priority
-					fetchPriority='high'
-					sizes='(max-width: 640px) 100vw, 0px'
-					quality={85}
-				/>
-				<Image
-					src='/images/optimized/hero-image-md.webp'
-					alt='Premium Indonesian spices imported to UK - authentic Indonesian cooking ingredients available London Manchester Birmingham'
-					width={1024}
-					height={768}
-					className='object-cover w-full h-full hidden sm:block lg:hidden'
-					priority
-					fetchPriority='high'
-					sizes='(min-width: 640px) and (max-width: 1024px) 100vw, 0px'
-					quality={85}
-				/>
+			{/* Background Image - Optimized for LCP with single responsive image */}
+			<div className='absolute inset-0 z-0' style={{ backgroundColor: '#8B4513' }}>
 				<Image
 					src='/images/optimized/hero-image-lg.webp'
 					alt='Premium Indonesian spices imported to UK - authentic Indonesian cooking ingredients available London Manchester Birmingham'
-					width={1200}
-					height={800}
-					className='object-cover w-full h-full hidden lg:block xl:hidden'
+					fill
+					className='object-cover'
 					priority
 					fetchPriority='high'
-					sizes='(min-width: 1024px) and (max-width: 1280px) 100vw, 0px'
-					quality={85}
-				/>
-				<Image
-					src='/images/optimized/hero-image-xl.webp'
-					alt='Premium Indonesian spices imported to UK - authentic Indonesian cooking ingredients available London Manchester Birmingham'
-					width={1920}
-					height={1080}
-					className='object-cover w-full h-full hidden xl:block'
-					priority
-					fetchPriority='high'
-					sizes='(min-width: 1280px) 100vw, 0px'
-					quality={85}
+					sizes='100vw'
+					quality={80}
+					placeholder='blur'
+					blurDataURL='data:image/webp;base64,UklGRlABAABXRUJQVlA4TD4BAAAvAQABACcQEf//72vv++9r7/vvAGwhOLb9AAQAAAAAAABjhwgJCQkJCQkJAJCQkJCQkJCQkABISEhISEhISEgAhISEhISEhISEAISEhISEhISEhAAQEBAQEBAQEBAAEBAQEBAQEBAQABAQEBAQEBAQEBAAICAiICAiICAiABAQEhIQEhIQEhIAEhIREhIREhIREgASEhIREhIREhIRABEhIREhIREhIREhABAQEBAQEBAQEBAQABAQEBAQEBAQEBAAEBAQEBAQEBAQEBAAEBAQEBAQEBAQEBAA'
 				/>
 			</div>
 

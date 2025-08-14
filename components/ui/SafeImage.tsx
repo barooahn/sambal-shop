@@ -12,6 +12,10 @@ interface SafeImageProps {
 	width?: number;
 	height?: number;
 	fill?: boolean;
+	loading?: 'lazy' | 'eager';
+	quality?: number;
+	placeholder?: 'blur' | 'empty';
+	blurDataURL?: string;
 }
 
 export default function SafeImage({
@@ -23,6 +27,10 @@ export default function SafeImage({
 	width = 400,
 	height = 300,
 	fill = false,
+	loading = 'lazy',
+	quality = 85,
+	placeholder,
+	blurDataURL,
 }: SafeImageProps) {
 	const [imgSrc, setImgSrc] = useState(src);
 
@@ -40,6 +48,10 @@ export default function SafeImage({
 			width={fill ? undefined : width}
 			height={fill ? undefined : height}
 			fill={fill}
+			loading={loading}
+			quality={quality}
+			placeholder={placeholder}
+			blurDataURL={blurDataURL}
 			sizes={
 				fill
 					? "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

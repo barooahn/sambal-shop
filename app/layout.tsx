@@ -166,6 +166,13 @@ export default function RootLayout({
 							margin: 0; 
 							padding: 0; 
 							font-display: swap !important;
+							contain: layout style paint;
+						}
+						
+						/* Prevent layout shifts */
+						img {
+							max-width: 100% !important;
+							height: auto !important;
 						}
 						.hero-section { 
 							min-height: 100vh !important; 
