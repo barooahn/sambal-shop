@@ -2,6 +2,18 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Clock, Users, ChefHat, Heart } from "lucide-react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "Indonesian Sambal Recipes UK | Authentic Cooking Ideas | Spice Island Indonesia",
+	description: "Discover authentic Indonesian sambal recipes perfect for UK kitchens. From sambal fried rice to fusion dishes, learn to cook with traditional Indonesian flavors.",
+	keywords: "Indonesian sambal recipes UK, authentic sambal cooking, Indonesian recipes British kitchen, sambal oelek recipes, Indonesian fusion cooking UK, traditional chili paste recipes",
+	openGraph: {
+		title: "Indonesian Sambal Recipes UK | Authentic Cooking Ideas",
+		description: "Discover authentic Indonesian sambal recipes perfect for UK kitchens. Traditional flavors, modern cooking techniques.",
+		images: ["/images/optimized/sambal-fried-rice-lg.webp"],
+	},
+};
 
 export default function RecipesPage() {
 	const recipes = [

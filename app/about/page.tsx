@@ -1,6 +1,19 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Heart, Award, Leaf, ChefHat } from "lucide-react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "About Spice Island Indonesia | Authentic Sambal Makers | UK Delivery",
+	description: "Learn about Spice Island Indonesia - authentic Indonesian sambal makers bringing traditional flavors from the Maluku Islands to the UK. Meet Chef Yossie and discover our story.",
+	keywords: "about spice island indonesia, authentic sambal makers UK, Chef Yossie story, Maluku Islands sambal, traditional Indonesian condiments UK, authentic chili paste story",
+	openGraph: {
+		title: "About Spice Island Indonesia | Authentic Sambal Makers",
+		description: "Learn about our journey bringing authentic Indonesian sambal from the Maluku Islands to the UK. Traditional recipes, authentic flavors.",
+		images: ["/images/optimized/chili-farming-scene-lg.webp"],
+	},
+};
 
 export default function AboutPage() {
 	return (
@@ -224,14 +237,16 @@ export default function AboutPage() {
 								</p>
 							</div>
 							<div className='mt-8'>
-								<Button
-									variant='primary'
-									size='lg'
-									className='font-elegant'
-								>
-									<Heart className='w-5 h-5 mr-2' />
-									Try Our Sambal
-								</Button>
+								<Link href="/sample-pack-try-first">
+									<Button
+										variant='primary'
+										size='lg'
+										className='font-elegant'
+									>
+										<Heart className='w-5 h-5 mr-2' />
+										Try Our Sambal
+									</Button>
+								</Link>
 							</div>
 						</div>
 					</div>
@@ -252,20 +267,24 @@ export default function AboutPage() {
 						the magic of authentic sambal
 					</p>
 					<div className='flex flex-col sm:flex-row gap-4 justify-center'>
-						<Button
-							variant='primary'
-							size='lg'
-							className='font-elegant'
-						>
-							Shop Now
-						</Button>
-						<Button
-							variant='primary'
-							size='lg'
-							className='font-elegant'
-						>
-							Contact Us
-						</Button>
+						<Link href="/shop">
+							<Button
+								variant='primary'
+								size='lg'
+								className='font-elegant'
+							>
+								Shop Now
+							</Button>
+						</Link>
+						<Link href="/contact">
+							<Button
+								variant='primary'
+								size='lg'
+								className='font-elegant'
+							>
+								Contact Us
+							</Button>
+						</Link>
 					</div>
 				</div>
 			</section>

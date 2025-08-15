@@ -3,6 +3,7 @@ import ProblemSolutionContent from "@/components/seo/ProblemSolutionContent";
 import LocalSEOSchema from "@/components/seo/LocalSEOSchema";
 import FAQSchema from "@/components/seo/FAQSchema";
 import VoiceSearchSchema from "@/components/seo/VoiceSearchSchema";
+import EntityMarkup from "@/components/seo/EntityMarkup";
 import Link from "next/link";
 import HeroSection from "@/components/home/HeroSection";
 import ProductShowcase from "@/components/home/ProductShowcase";
@@ -215,6 +216,88 @@ const contactIngredients = [
 ];
 
 export default function Home() {
+	// Ingredient Entity Markup for AI search optimization
+	const ingredientEntities = [
+		{
+			name: "Chili Peppers",
+			type: "Ingredient" as const,
+			description: "Fresh red chili peppers are the primary ingredient in Indonesian sambal, providing natural heat and vibrant flavor. Varieties include bird's eye chilies (cabe rawit) and long red chilies (cabe merah), each contributing different heat levels and flavor profiles to traditional sambal recipes.",
+			properties: {
+				"cuisine": "Indonesian",
+				"spiceLevel": "Hot",
+				"nutritionalBenefit": "Rich in vitamin C and capsaicin",
+				"uses": ["Sambal making", "Indonesian cooking", "Heat enhancement"],
+				"scovilleRange": "15000-30000 SHU",
+				"origin": "Maluku Islands, Indonesia"
+			}
+		},
+		{
+			name: "Galangal",
+			type: "Ingredient" as const,
+			description: "Galangal (lengkuas) is an aromatic root spice essential to Sambal Bali and many Indonesian dishes. This cousin of ginger provides a unique citrusy, pine-like flavor that's more complex and refined than regular ginger, adding depth and authentic Indonesian character to sambal recipes.",
+			properties: {
+				"cuisine": "Indonesian",
+				"flavorProfile": "Citrusy, pine-like, aromatic",
+				"uses": ["Sambal Bali", "Indonesian curry", "Traditional medicine"],
+				"nutritionalBenefit": "Anti-inflammatory properties",
+				"origin": "Southeast Asia",
+				"alternativeName": "Greater galangal, Lengkuas"
+			}
+		},
+		{
+			name: "Lemongrass",
+			type: "Ingredient" as const,
+			description: "Lemongrass (serai) is a fragrant grass that adds bright, citrusy notes to Sambal Bali. This traditional Indonesian ingredient provides a fresh, lemony aroma without the acidity of actual lemons, making it perfect for balancing the heat of chilies in authentic sambal recipes.",
+			properties: {
+				"cuisine": "Indonesian",
+				"flavorProfile": "Citrusy, fresh, aromatic",
+				"uses": ["Sambal Bali", "Indonesian soups", "Traditional teas"],
+				"nutritionalBenefit": "Natural antioxidants and digestive aid",
+				"origin": "Southeast Asia",
+				"preparation": "Bruised or finely chopped for maximum flavor release"
+			}
+		},
+		{
+			name: "Kaffir Lime Leaves",
+			type: "Ingredient" as const,
+			description: "Kaffir lime leaves (daun jeruk purut) are double-lobed aromatic leaves that provide an intense, floral citrus fragrance to Indonesian sambal. These leaves are irreplaceable in authentic Indonesian cooking, offering a unique lime essence that can't be replicated with regular lime zest.",
+			properties: {
+				"cuisine": "Indonesian",
+				"flavorProfile": "Intense citrus, floral, aromatic",
+				"uses": ["Sambal Bali", "Indonesian curry", "Traditional marinades"],
+				"nutritionalBenefit": "Essential oils with antimicrobial properties",
+				"origin": "Southeast Asia",
+				"preparation": "Torn or finely shredded to release essential oils"
+			}
+		},
+		{
+			name: "Shallots",
+			type: "Ingredient" as const,
+			description: "Shallots (bawang merah) are small, purple-skinned onions that form the aromatic base of Indonesian sambal. Milder and sweeter than regular onions, shallots provide essential depth and complexity to traditional Indonesian condiments and are a cornerstone of authentic Southeast Asian cooking.",
+			properties: {
+				"cuisine": "Indonesian",
+				"flavorProfile": "Sweet, mild, aromatic",
+				"uses": ["Sambal base", "Indonesian stir-fries", "Traditional spice pastes"],
+				"nutritionalBenefit": "Antioxidants and natural sulfur compounds",
+				"origin": "Southeast Asia",
+				"preparation": "Finely chopped or ground in traditional stone mortar"
+			}
+		},
+		{
+			name: "Garlic",
+			type: "Ingredient" as const,
+			description: "Garlic (bawang putih) is an essential aromatic ingredient in Indonesian sambal, providing depth and umami complexity. Fresh garlic cloves are traditionally ground with chilies in a stone mortar, releasing essential oils that create the authentic flavor foundation of Indonesian condiments.",
+			properties: {
+				"cuisine": "Indonesian",
+				"flavorProfile": "Pungent, aromatic, umami",
+				"uses": ["Sambal base", "Indonesian marinades", "Traditional spice pastes"],
+				"nutritionalBenefit": "Natural antibacterial and immune-boosting properties",
+				"origin": "Central Asia, widely used in Indonesian cuisine",
+				"preparation": "Fresh cloves, traditionally ground in stone mortar"
+			}
+		}
+	];
+
 	// General Sambal FAQ data for AI search optimization
 	const generalSambalFAQ = [
 		{
@@ -305,6 +388,12 @@ export default function Home() {
 				<FAQSchema
 					faqs={generalSambalFAQ}
 					pageTitle='Indonesian Sambal - Frequently Asked Questions'
+				/>
+
+				{/* Ingredient Entity Markup for AI Search */}
+				<EntityMarkup
+					entities={ingredientEntities}
+					pageTitle='Indonesian Sambal Ingredients - Traditional Spices and Aromatics'
 				/>
 
 				{/* Voice Search Optimization Schema */}

@@ -13,15 +13,15 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-	title: "Contact Us | Spice Island Indonesia | Get In Touch",
+	title: "Contact Us UK | Spice Island Indonesia | Get In Touch",
 	description:
-		"Contact Spice Island Indonesia for questions about our authentic Indonesian sambals, wholesale inquiries, or cooking advice. We respond within 24 hours.",
+		"Contact Spice Island Indonesia for questions about our authentic Indonesian sambals, UK wholesale inquiries, or cooking advice. We respond within 24 hours to UK customers.",
 	keywords:
-		"contact spice island indonesia, sambal questions, indonesian food contact, wholesale inquiries, cooking advice, customer service",
+		"contact spice island indonesia UK, sambal questions UK, indonesian food contact UK, wholesale inquiries UK, cooking advice UK, customer service UK",
 	openGraph: {
-		title: "Contact Us | Spice Island Indonesia",
+		title: "Contact Us UK | Spice Island Indonesia",
 		description:
-			"Get in touch with us for questions about our authentic Indonesian sambals, wholesale inquiries, or cooking advice.",
+			"Get in touch with us for questions about our authentic Indonesian sambals, UK wholesale inquiries, or cooking advice.",
 		images: [
 			{
 				url: "/images/contact-hero.jpg",

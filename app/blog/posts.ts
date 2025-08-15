@@ -164,4 +164,48 @@ export const blogPosts: BlogPostMeta[] = [
     publishDate: "2024-01-25",
     slug: "indonesian-techniques-british-kitchens",
   },
+  {
+    id: 15,
+    title: "Sambal vs Sriracha: The Original Asian Hot Sauce vs Commercial Alternative",
+    excerpt:
+      "Think Sriracha is authentic Asian hot sauce? Indonesian sambal predates it by 500 years. Compare ingredients, taste, and cultural heritage. Discover the real original Asian chili sauce.",
+    image: "/images/blog/sambal-vs-sriracha-comparison.webp",
+    category: "Food Education",
+    readTime: "8 min read",
+    publishDate: "2025-01-12",
+    slug: "sambal-vs-sriracha",
+  },
+  {
+    id: 16,
+    title: "Complete Guide to Indonesian Sambal Varieties: From Oelek to Bali",
+    excerpt:
+      "Discover 15+ authentic Indonesian sambal varieties from across the archipelago. Complete guide to regional differences, heat levels, ingredients, and uses. Master traditional Indonesian condiments.",
+    image: "/images/blog/indonesian-sambal-varieties-guide.webp",
+    category: "Food Education",
+    readTime: "15 min read",
+    publishDate: "2025-01-15",
+    slug: "complete-guide-indonesian-sambal-varieties",
+  },
+  {
+    id: 17,
+    title: "Authentic Indonesian Sambal: Why Most UK Brands Get It Wrong",
+    excerpt:
+      "UK supermarket 'sambal' vs real Indonesian sambal: shocking differences revealed. Learn why authentic matters, what to avoid, and how to identify genuine Indonesian sambal in the UK.",
+    image: "/images/blog/authentic-vs-fake-sambal-uk.webp",
+    category: "Food Education",
+    readTime: "12 min read",
+    publishDate: "2025-01-18",
+    slug: "authentic-indonesian-sambal-why-uk-brands-get-it-wrong",
+  },
+  {
+    id: 18,
+    title: "Spicy Food Beginners Guide: How to Build Heat Tolerance Safely",
+    excerpt:
+      "Complete beginner's guide to spicy food: build heat tolerance safely, understand Scoville scale, choose beginner-friendly options, and discover authentic Indonesian sambal.",
+    image: "/images/blog/spicy-food-beginners-guide.webp",
+    category: "Cooking Guide",
+    readTime: "10 min read",
+    publishDate: "2025-01-20",
+    slug: "spicy-food-beginners-guide",
+  },
 ];

@@ -5,6 +5,20 @@ interface HowToStep {
 	text: string;
 	image?: string;
 	url?: string;
+	duration?: string;
+	tip?: string;
+}
+
+interface HowToTool {
+	name: string;
+	description?: string;
+	required?: boolean;
+}
+
+interface HowToSupply {
+	name: string;
+	amount?: string;
+	description?: string;
 }
 
 interface HowToSchemaProps {
@@ -16,6 +30,9 @@ interface HowToSchemaProps {
 	cookTime?: string;
 	yield?: string;
 	category?: string;
+	difficulty?: "Beginner" | "Intermediate" | "Advanced";
+	tools?: HowToTool[];
+	supplies?: HowToSupply[];
 }
 
 const HowToSchema: FC<HowToSchemaProps> = ({
@@ -26,8 +43,27 @@ const HowToSchema: FC<HowToSchemaProps> = ({
 	prepTime,
 	cookTime,
 	yield: recipeYield,
-	category
+	category,
+	difficulty,
+	tools,
+	supplies
 }) => {
+	// Default tools and supplies if none provided
+	const defaultTools = [
+		{ name: "Wok or large frying pan", description: "For stir-frying and cooking sambal dishes", required: true },
+		{ name: "Wooden spoon or spatula", description: "For stirring without scratching pan", required: true },
+		{ name: "Stone mortar and pestle", description: "Traditional tool for authentic sambal grinding", required: false },
+		{ name: "Sharp knife", description: "For chopping ingredients", required: true },
+		{ name: "Cutting board", description: "For ingredient preparation", required: true }
+	];
+
+	const defaultSupplies = [
+		{ name: "Sambal (Indonesian chili paste)", amount: "1-2 tablespoons", description: "Primary flavor base" },
+		{ name: "Fresh ingredients", description: "As specified in recipe" },
+		{ name: "Salt", description: "For seasoning" },
+		{ name: "Oil", description: "For cooking" }
+	];
+
 	const schemaData = {
 		"@context": "https://schema.org",
 		"@type": "HowTo",
@@ -38,33 +74,28 @@ const HowToSchema: FC<HowToSchemaProps> = ({
 		"performTime": cookTime,
 		"yield": recipeYield,
 		"category": category,
-		"supply": [
-			{
-				"@type": "HowToSupply",
-				"name": "Sambal (Indonesian chili paste)"
-			},
-			{
-				"@type": "HowToSupply", 
-				"name": "Basic cooking ingredients"
-			}
-		],
-		"tool": [
-			{
-				"@type": "HowToTool",
-				"name": "Wok or large frying pan"
-			},
-			{
-				"@type": "HowToTool",
-				"name": "Wooden spoon or spatula"
-			}
-		],
+		"difficulty": difficulty,
+		"supply": (supplies || defaultSupplies).map(supply => ({
+			"@type": "HowToSupply",
+			"name": supply.name,
+			"requiredQuantity": supply.amount,
+			"description": supply.description
+		})),
+		"tool": (tools || defaultTools).map(tool => ({
+			"@type": "HowToTool",
+			"name": tool.name,
+			"description": tool.description,
+			"requiredQuantity": tool.required ? "1" : undefined
+		})),
 		"step": steps.map((step, index) => ({
 			"@type": "HowToStep",
 			"position": index + 1,
 			"name": step.name,
 			"text": step.text,
 			"image": step.image,
-			"url": step.url
+			"url": step.url,
+			"timeRequired": step.duration,
+			"tip": step.tip
 		})),
 		"author": {
 			"@type": "Person",

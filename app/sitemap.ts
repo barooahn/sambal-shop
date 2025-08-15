@@ -74,6 +74,21 @@ const staticRoutes = [
 
 	// Comparison pages
 	{
+		route: "/sriracha-alternative",
+		priority: 0.9,
+		changeFrequency: "weekly" as const,
+	},
+	{
+		route: "/best-asian-hot-sauce",
+		priority: 0.9,
+		changeFrequency: "weekly" as const,
+	},
+	{
+		route: "/hot-sauce-vs-sambal",
+		priority: 0.8,
+		changeFrequency: "weekly" as const,
+	},
+	{
 		route: "/sambal-vs-sriracha",
 		priority: 0.7,
 		changeFrequency: "monthly" as const,
@@ -141,6 +156,10 @@ const blogPosts = [
 	{ slug: "5-ways-sambal-british-cooking", date: "2025-08-13" },
 	{ slug: "british-indonesian-fusion-weeknight-recipes", date: "2025-08-13" },
 	{ slug: "indonesian-techniques-british-kitchens", date: "2025-08-13" },
+	{ slug: "sambal-vs-sriracha", date: "2025-08-15" },
+	{ slug: "complete-guide-indonesian-sambal-varieties", date: "2025-08-15" },
+	{ slug: "authentic-indonesian-sambal-why-uk-brands-get-it-wrong", date: "2025-08-15" },
+	{ slug: "spicy-food-beginners-guide", date: "2025-08-15" },
 ];
 
 // Recipe pages (add new ones here as they&apos;re created)

@@ -37,7 +37,8 @@
       "Bash(convert:*)",
       "Bash(node:*)",
       "Bash(cat:*)",
-      "Bash(identify:*)"
+      "Bash(identify:*)",
+      "Bash(yarn optimize-images:*)"
     ],
     "deny": [],
     "defaultMode": "acceptEdits"

@@ -6,6 +6,7 @@ import FAQSchema from "@/components/seo/FAQSchema";
 import EnhancedRecipeInstructions from "@/components/recipes/EnhancedRecipeInstructions";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import InternalLinkingOptimization from "@/components/seo/InternalLinkingOptimization";
+import HowToVisual from "@/components/ui/HowToVisual";
 import {
 	Breadcrumb,
 	BreadcrumbList,
@@ -400,12 +401,33 @@ export default function SambalFriedRicePage() {
 			<HowToSchema
 				name='How to Make Sambal Fried Rice (Nasi Goreng)'
 				description='Learn to make authentic Indonesian sambal fried rice with this step-by-step guide. Perfect for using leftover rice with authentic sambal heat and flavor.'
-				steps={howToSteps}
+				steps={howToSteps.map((step, index) => ({
+					...step,
+					duration: ['PT2M', 'PT1M', 'PT4M', 'PT1M', 'PT2M', 'PT3M', 'PT1M', 'PT2M'][index],
+					tip: enhancedInstructions[index]?.tips
+				}))}
 				totalTime='PT25M'
 				prepTime='PT10M'
 				cookTime='PT15M'
 				yield='4 servings'
 				category='Indonesian Main Course'
+				difficulty='Beginner'
+				tools={recipe.equipment.map(eq => ({
+					name: eq.name,
+					description: eq.description,
+					required: eq.required
+				}))}
+				supplies={[
+					{ name: "Day-old jasmine rice", amount: "4 cups", description: "Preferably refrigerated overnight for best texture" },
+					{ name: "Sambal Bali", amount: "2-3 tablespoons", description: "Authentic Indonesian chili paste with aromatic spices" },
+					{ name: "Large eggs", amount: "3", description: "For protein and traditional texture" },
+					{ name: "Chicken breast or prawns", amount: "200g", description: "Optional protein addition" },
+					{ name: "Yellow onion", amount: "1 large", description: "Finely diced for aromatic base" },
+					{ name: "Garlic cloves", amount: "3", description: "Minced fresh for best flavor" },
+					{ name: "Sweet soy sauce (kecap manis)", amount: "2 tablespoons", description: "Essential for authentic Indonesian flavor" },
+					{ name: "Light soy sauce", amount: "1 tablespoon", description: "For saltiness and umami" },
+					{ name: "Vegetable oil", amount: "2 tablespoons", description: "For high-heat cooking" }
+				]}
 			/>
 			<FAQSchema
 				faqs={cookingFAQ}
@@ -439,6 +461,37 @@ export default function SambalFriedRicePage() {
 				</div>
 
 				<RecipeCard recipe={recipe} />
+
+				{/* Visual How-To Guide with Step Indicators */}
+				<div className='max-w-4xl mx-auto mt-8'>
+					<HowToVisual
+						name="Authentic Sambal Fried Rice (Nasi Goreng)"
+						description="Follow this step-by-step visual guide to create Indonesia's national dish with authentic sambal heat and flavor."
+						steps={howToSteps.map((step, index) => ({
+							...step,
+							duration: ['2 minutes', '1 minute', '4 minutes', '1 minute', '2 minutes', '3 minutes', '1 minute', '2 minutes'][index],
+							tip: enhancedInstructions[index]?.tips
+						}))}
+						totalTime="25 minutes"
+						difficulty="Beginner"
+						tools={recipe.equipment.map(eq => ({
+							name: eq.name,
+							description: eq.description,
+							required: eq.required
+						}))}
+						supplies={[
+							{ name: "Day-old jasmine rice", amount: "4 cups", description: "Preferably refrigerated overnight for best texture" },
+							{ name: "Sambal Bali", amount: "2-3 tablespoons", description: "Authentic Indonesian chili paste with aromatic spices" },
+							{ name: "Large eggs", amount: "3", description: "For protein and traditional texture" },
+							{ name: "Chicken breast or prawns", amount: "200g", description: "Optional protein addition" },
+							{ name: "Yellow onion", amount: "1 large", description: "Finely diced for aromatic base" },
+							{ name: "Garlic cloves", amount: "3", description: "Minced fresh for best flavor" },
+							{ name: "Sweet soy sauce (kecap manis)", amount: "2 tablespoons", description: "Essential for authentic Indonesian flavor" },
+							{ name: "Light soy sauce", amount: "1 tablespoon", description: "For saltiness and umami" },
+							{ name: "Vegetable oil", amount: "2 tablespoons", description: "For high-heat cooking" }
+						]}
+					/>
+				</div>
 
 				{/* Enhanced Interactive Recipe Instructions */}
 				<div className='max-w-4xl mx-auto mt-8'>
