@@ -18,7 +18,7 @@ export const blogPosts: BlogPostMeta[] = [
     image: "/images/blog/sambal-vs-hp-sauce-hero.webp",
     category: "Food Education",
     readTime: "12 min read",
-    publishDate: "2025-01-08",
+    publishDate: "2025-01-10",
     slug: "sambal-vs-hp-sauce",
   },
   {
@@ -37,10 +37,10 @@ export const blogPosts: BlogPostMeta[] = [
     title: "Indonesian Spice Levels for British Palates",
     excerpt:
       "Navigate Indonesian heat levels safely. Learn to build spice tolerance, adjust traditional recipes for British tastes, and discover complex flavors behind the fire.",
-    image: "/images/blog/spice-levels-guide.webp",
+    image: "/images/indonesian-spice-guide-uk.webp",
     category: "Cooking Guide",
     readTime: "8 min read",
-    publishDate: "2025-01-08",
+    publishDate: "2025-01-09",
     slug: "indonesian-spice-levels-british-palates",
   },
   {
@@ -48,7 +48,7 @@ export const blogPosts: BlogPostMeta[] = [
     title: "Essential Indonesian Ingredients: UK Shopping Guide",
     excerpt:
       "Complete shopping guide for Indonesian ingredients in the UK. Find authentic sambal, spices, and pantry essentials at supermarkets, Asian shops, and online stores with money-saving tips.",
-    image: "/images/blog/ingredients-shopping-guide.webp",
+    image: "/images/ingredients-shopping-guide.webp",
     category: "Cooking Guide",
     readTime: "12 min read",
     publishDate: "2025-01-07",
@@ -130,5 +130,38 @@ export const blogPosts: BlogPostMeta[] = [
     readTime: "5 min read",
     publishDate: "2024-01-01",
     slug: "sambal-vs-hot-sauce",
+  },
+  {
+    id: 12,
+    title: "5 Ways to Use Sambal in British Cooking",
+    excerpt:
+      "Transform your everyday British meals with authentic Indonesian sambal. Discover five creative ways to incorporate this traditional Indonesian condiment into your British kitchen repertoire.",
+    image: "/images/sambal-british-fusion.webp",
+    category: "Cooking Tips",
+    readTime: "8 min read",
+    publishDate: "2024-01-18",
+    slug: "5-ways-sambal-british-cooking",
+  },
+  {
+    id: 13,
+    title: "British-Indonesian Fusion: Weeknight Recipes",
+    excerpt:
+      "Quick and delicious fusion recipes that blend British comfort food with Indonesian flavors. Perfect weeknight dinners that bring excitement to your family table with authentic sambal.",
+    image: "/images/fusion-recipes-guide.webp",
+    category: "Cooking Tips",
+    readTime: "10 min read",
+    publishDate: "2024-01-20",
+    slug: "british-indonesian-fusion-weeknight-recipes",
+  },
+  {
+    id: 14,
+    title: "Indonesian Cooking Techniques for British Kitchens",
+    excerpt:
+      "Master traditional Indonesian cooking methods using standard British kitchen equipment. Learn authentic techniques that bring out the best flavors in Indonesian cuisine at home.",
+    image: "/images/indonesian-techniques-uk-kitchen.webp",
+    category: "Cooking Guide",
+    readTime: "12 min read",
+    publishDate: "2024-01-25",
+    slug: "indonesian-techniques-british-kitchens",
   },
 ];

@@ -32,8 +32,14 @@
       "Bash(npx lighthouse:*)",
       "Bash(npx serve:*)",
       "Bash(yarn tsc:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(magick convert:*)",
+      "Bash(convert:*)",
+      "Bash(node:*)",
+      "Bash(cat:*)",
+      "Bash(identify:*)"
     ],
-    "deny": []
+    "deny": [],
+    "defaultMode": "acceptEdits"
   }
 }

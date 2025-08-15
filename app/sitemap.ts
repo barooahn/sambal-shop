@@ -138,6 +138,9 @@ const blogPosts = [
 	{ slug: "spice-islands-to-your-kitchen", date: "2025-08-13" },
 	{ slug: "sambal-vs-hot-sauce", date: "2025-08-13" },
 	{ slug: "indonesian-food-culture-context", date: "2025-08-13" },
+	{ slug: "5-ways-sambal-british-cooking", date: "2025-08-13" },
+	{ slug: "british-indonesian-fusion-weeknight-recipes", date: "2025-08-13" },
+	{ slug: "indonesian-techniques-british-kitchens", date: "2025-08-13" },
 ];
 
 // Recipe pages (add new ones here as they&apos;re created)

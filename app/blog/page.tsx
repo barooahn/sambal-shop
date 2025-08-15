@@ -110,12 +110,12 @@ export default function BlogPage() {
 								className='overflow-hidden rounded-sm'
 							>
 								<div className='grid lg:grid-cols-2 gap-0'>
-									<div className='relative aspect-[16/9] lg:aspect-auto'>
+									<div className='relative aspect-[16/9] lg:aspect-auto overflow-hidden'>
 										<Image
 											src={featuredPost.image}
 											alt={featuredPost.title}
 											fill
-											className='object-cover'
+											className='object-cover object-center'
 											priority
 										/>
 										<div className='absolute top-4 left-4'>
@@ -211,28 +211,29 @@ export default function BlogPage() {
 								key={post.id}
 								className='overflow-hidden shadow-lg border border-gold-200 bg-gradient-to-br from-cream-50 to-cream-100 rounded-sm hover:shadow-luxury transition-all duration-300 group'
 							>
-								<div className='relative aspect-[16/9]'>
+								<div className='relative aspect-[16/9] overflow-hidden'>
 									<Image
 										src={post.image}
 										alt={post.title}
 										fill
-										className='object-cover group-hover:scale-105 transition-transform duration-300'
+										className='object-cover object-center group-hover:scale-105 transition-transform duration-300'
 										loading='lazy'
 									/>
-								</div>
-								<CardHeader className='pb-3'>
-									<div className='flex items-center justify-between mb-2'>
+									{/* Overlay for better text readability */}
+									<div className='absolute top-3 left-3 right-3 flex items-start justify-between'>
 										<Badge
 											variant='secondary'
-											className='font-elegant'
+											className='font-elegant bg-white/90 text-neutral-800 backdrop-blur-sm'
 										>
 											{post.category}
 										</Badge>
-										<div className='flex items-center gap-1 text-xs text-neutral-500 font-body'>
+										<div className='flex items-center gap-1 text-xs bg-white/90 text-neutral-600 font-body px-2 py-1 rounded backdrop-blur-sm'>
 											<Clock className='w-3 h-3' />
 											{post.readTime}
 										</div>
 									</div>
+								</div>
+								<CardHeader className='pb-3'>
 									<CardTitle className='text-xl font-bold text-burgundy-900 font-brand line-clamp-2'>
 										{post.title}
 									</CardTitle>
