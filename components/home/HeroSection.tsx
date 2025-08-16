@@ -75,7 +75,7 @@ export default function HeroSection() {
 	};
 
 	return (
-		<section className='relative flex items-center justify-center overflow-hidden' style={{ minHeight: 'max(100vh, 800px)' }}>
+		<section className='relative flex items-center justify-center overflow-hidden' style={{ minHeight: 'max(100vh, 700px)' }}>
 			{/* Background Image - Optimized for LCP */}
 			<div className='absolute inset-0 z-0 w-full h-full' style={{ backgroundColor: '#8B4513' }}>
 				<Image
@@ -101,8 +101,8 @@ export default function HeroSection() {
 				}}
 			></div>
 
-			<div className='hero-content-container relative z-10 max-w-7xl mx-auto px-3 sm:px-5 lg:px-8 py-4 sm:py-6 lg:py-12 -translate-y-1 sm:-translate-y-4 lg:-translate-y-6' style={{ minHeight: 'max(85vh, 700px)', width: '100%' }}>
-				<div className='flex flex-col lg:grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-16 items-center h-full' style={{ minHeight: 'max(70vh, 600px)' }}>
+			<div className='hero-content-container relative z-10 max-w-7xl mx-auto px-3 sm:px-5 lg:px-8 py-4 sm:py-6 lg:py-8' style={{ minHeight: 'max(80vh, 600px)', width: '100%' }}>
+				<div className='flex flex-col lg:grid lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-12 items-center h-full' style={{ minHeight: 'max(75vh, 550px)' }}>
 					{/* Mobile/Tablet - Text content first */}
 					<div className='text-center lg:text-left order-1 lg:order-2 pt-4 sm:pt-0'>
 						{/* Chef badge - explicit dimensions to prevent layout shift */}
@@ -127,7 +127,7 @@ export default function HeroSection() {
 						</div>
 
 						{/* Main headline with UK market optimization */}
-						<h1 className='voice-hero-title mobile-text-shadow text-4xl sm:text-4xl lg:text-7xl font-light text-white mb-1 sm:mb-2 lg:mb-4 leading-tight tracking-tight'>
+						<h1 className='voice-hero-title mobile-text-shadow text-4xl sm:text-4xl lg:text-6xl font-light text-white mb-1 sm:mb-2 lg:mb-3 leading-tight tracking-tight'>
 							<span className='block font-light text-white/90'>
 								Authentic
 							</span>
@@ -140,14 +140,14 @@ export default function HeroSection() {
 						</h1>
 
 						{/* Subtitle */}
-						<div className='mb-2 sm:mb-3 lg:mb-6'>
-							<p className='text-base sm:text-lg lg:text-2xl text-white/80 font-light tracking-wide'>
+						<div className='mb-2 sm:mb-3 lg:mb-4'>
+							<p className='text-base sm:text-lg lg:text-xl text-white/80 font-light tracking-wide'>
 								The Original Asian Hot Sauce - Not Thai, Not Malaysian
 							</p>
 						</div>
 
 						{/* Description */}
-						<p className='voice-product-description mobile-text-shadow text-sm lg:text-lg text-white/90 mb-3 sm:mb-4 lg:mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed font-light px-2 lg:px-0'>
+						<p className='voice-product-description mobile-text-shadow text-sm lg:text-base text-white/90 mb-3 sm:mb-4 lg:mb-6 max-w-xl mx-auto lg:mx-0 leading-relaxed font-light px-2 lg:px-0'>
 							Meet Chef Yossie - born in Bandung, trained
 							in traditional Indonesian methods, now bringing{" "}
 							<span className='text-amber-300 font-medium'>
@@ -160,7 +160,7 @@ export default function HeroSection() {
 						</p>
 
 						{/* Features with mobile-optimized design */}
-						<div className='flex flex-col sm:flex-row justify-center lg:justify-start gap-2 sm:gap-3 lg:gap-6 mb-3 sm:mb-4 lg:mb-8 px-2 lg:px-0'>
+						<div className='flex flex-col sm:flex-row justify-center lg:justify-start gap-2 sm:gap-3 lg:gap-4 mb-3 sm:mb-4 lg:mb-6 px-2 lg:px-0'>
 							{[
 								{ icon: ChefHat, label: "Spice Islands Heritage" },
 								{ icon: Award, label: "Not British-Made" },
@@ -260,8 +260,8 @@ export default function HeroSection() {
 					</div>
 
 					{/* Product showcase - optimized for performance */}
-					<div className='relative order-2 lg:order-1 pb-8 sm:pb-12 lg:pb-0'>
-						<div className='relative w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[450px] mx-auto lg:mx-0'>
+					<div className='relative order-2 lg:order-1 pb-8 sm:pb-12 lg:pb-0 flex items-center justify-center'>
+						<div className='relative w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[400px] mx-auto'>
 							{/* Mobile-optimized container with proper aspect ratio */}
 							<div className='relative z-20 group w-full' style={{ aspectRatio: '1 / 1', minHeight: '280px' }}>
 								<Image
@@ -272,7 +272,7 @@ export default function HeroSection() {
 									priority
 									fetchPriority='high'
 									quality={75}
-									sizes='(max-width: 640px) 280px, (max-width: 768px) 320px, 450px'
+									sizes='(max-width: 640px) 280px, (max-width: 768px) 320px, 400px'
 									placeholder='blur'
 									blurDataURL='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k='
 								/>
@@ -306,6 +306,19 @@ export default function HeroSection() {
 					/* Ensure safe spacing from header on all mobile devices */
 					.hero-content-container {
 						padding-top: max(1rem, calc(env(safe-area-inset-top) + 0.5rem)) !important;
+					}
+				}
+				/* Desktop optimization - ensure content fits above fold */
+				@media (min-width: 1024px) {
+					section {
+						min-height: 90vh !important;
+						max-height: 100vh !important;
+					}
+					.hero-content-container {
+						min-height: 80vh !important;
+						max-height: 90vh !important;
+						padding-top: 2rem !important;
+						padding-bottom: 2rem !important;
 					}
 				}
 				/* Handle very short mobile screens (older devices, landscape) */
