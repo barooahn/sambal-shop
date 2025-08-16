@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 	openGraph: {
 		title: "Best Asian Hot Sauce: Authentic Indonesian Sambal vs Commercial Brands",
 		description: "Expert ranking of Asian hot sauces. Discover why authentic Indonesian sambal outperforms Sriracha, Gochujang, and other commercial brands.",
-		images: ["/images/optimized/sriracha-alternative-comparison-lg.webp"],
+		images: ["/images/optimized/best-asian-hot-sauce-comparison-lg.webp"],
 	},
 };
 

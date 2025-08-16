@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 	openGraph: {
 		title: "Spicy Food Beginners Guide: How to Build Heat Tolerance Safely",
 		description: "Learn to enjoy spicy food safely with our complete beginners guide. Build heat tolerance gradually with expert tips and beginner-friendly recommendations.",
-		images: ["/images/optimized/sambal-vs-hot-sauce-comparison-lg.webp"],
+		images: ["/images/optimized/spicy-food-beginners-guide-lg.webp"],
 	},
 };
 

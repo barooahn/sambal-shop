@@ -151,7 +151,13 @@ async function optimizeImage(inputPath, outputDir, imageType) {
 
 			await sharp(inputPath)
 				.resize(resizeOptions)
-				.webp({ quality: config.quality })
+				.webp({ 
+					quality: config.quality,
+					alphaQuality: 100,  // Preserve transparency quality
+					lossless: false,    // Still use lossy compression for size
+					nearLossless: false,
+					smartSubsample: true
+				})
 				.toFile(outputPath);
 
 			console.log(`  ✓ Created ${path.basename(outputPath)}`);

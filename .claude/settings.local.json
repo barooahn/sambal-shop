@@ -39,9 +39,14 @@
       "Bash(cat:*)",
       "Bash(identify:*)",
       "Bash(yarn optimize-images:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(where convert)",
+      "Bash(python:*)"
     ],
     "deny": [],
-    "defaultMode": "acceptEdits"
+    "defaultMode": "acceptEdits",
+    "additionalDirectories": [
+      "C:\\c\\Users\\thinb\\Desktop\\Sambal\\public\\images"
+    ]
   }
 }
