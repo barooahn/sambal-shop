@@ -21,8 +21,11 @@ export default function Footer() {
 						</p>
 						<div className='flex space-x-4'>
 							<a
-								href='#'
+								href='https://www.instagram.com/spiceisland_indonesia/'
+								target='_blank'
+								rel='noopener noreferrer'
 								className='w-12 h-12 bg-burgundy-800 border border-gold-600/30 rounded-full flex items-center justify-center text-gold-400 hover:text-gold-200 hover:bg-burgundy-700 transition-all duration-200'
+								aria-label='Follow Spice Island Indonesia on Instagram'
 							>
 								<Instagram className='w-6 h-6' />
 							</a>
@@ -235,10 +238,12 @@ export default function Footer() {
 
 				<div className='border-t border-gold-600/30 mt-12 pt-8'>
 					<div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>
-						<p className='text-gold-300 font-body'>
-							&copy; 2025 Spice Island Indonesia. All
-							rights reserved.
-						</p>
+						<div className='text-gold-300 font-body text-center md:text-left'>
+							<p>&copy; 2025 Spice Island Indonesia Ltd. All rights reserved.</p>
+							<p className='text-sm text-gold-400 mt-1'>
+								Company Registration: 16650562 | Registered in England and Wales
+							</p>
+						</div>
 						<div className='flex space-x-6 text-gold-300 text-sm font-body'>
 							<Link
 								href='/privacy'

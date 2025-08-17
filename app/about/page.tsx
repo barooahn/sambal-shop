@@ -253,6 +253,70 @@ export default function AboutPage() {
 				</div>
 			</section>
 
+			{/* Company Information Section */}
+			<section className='py-16 bg-gradient-to-br from-cream-50 to-white'>
+				<div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
+					<div className='text-center mb-12'>
+						<h2 className='text-3xl sm:text-4xl font-bold text-burgundy-900 mb-4 font-brand'>
+							Company Information
+						</h2>
+						<p className='text-lg text-neutral-600 font-body'>
+							Officially incorporated and committed to bringing you authentic Indonesian flavors
+						</p>
+					</div>
+					
+					<div className='bg-white rounded-sm p-8 shadow-lg border border-gold-200'>
+						<div className='grid md:grid-cols-2 gap-8'>
+							<div>
+								<h3 className='text-xl font-bold text-burgundy-900 mb-4 font-brand'>
+									Legal Entity
+								</h3>
+								<div className='space-y-3 text-neutral-700 font-body'>
+									<p>
+										<span className='font-semibold text-burgundy-800'>Company Name:</span><br />
+										Spice Island Indonesia Ltd
+									</p>
+									<p>
+										<span className='font-semibold text-burgundy-800'>Company Number:</span><br />
+										16650562
+									</p>
+									<p>
+										<span className='font-semibold text-burgundy-800'>Incorporation Date:</span><br />
+										14th August 2025
+									</p>
+								</div>
+							</div>
+							
+							<div>
+								<h3 className='text-xl font-bold text-burgundy-900 mb-4 font-brand'>
+									Registration Details
+								</h3>
+								<div className='space-y-3 text-neutral-700 font-body'>
+									<p>
+										<span className='font-semibold text-burgundy-800'>Company Type:</span><br />
+										Private Limited Company
+									</p>
+									<p>
+										<span className='font-semibold text-burgundy-800'>Registered Office:</span><br />
+										England and Wales
+									</p>
+									<p>
+										<span className='font-semibold text-burgundy-800'>Registrar:</span><br />
+										Companies House, Cardiff
+									</p>
+								</div>
+							</div>
+						</div>
+						
+						<div className='mt-8 pt-6 border-t border-gold-200'>
+							<p className='text-sm text-neutral-600 text-center font-body'>
+								Incorporated under the Companies Act 2006 as a private company limited by shares
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
 			{/* CTA Section */}
 			<section className='py-24 bg-gradient-to-r from-burgundy-900 to-burgundy-800 text-white'>
 				<div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
