@@ -44,26 +44,42 @@ export default function StructuredData({
 			"https://spiceislandindonesia.com/images/Spice Island Indonesia Complete Packaging System Mockup.webp",
 		],
 		// Basic shipping and return policy info to improve Merchant eligibility
-		shippingDetails: {
-			"@type": "OfferShippingDetails",
-			shippingRate: {
-				"@type": "MonetaryAmount",
-				value: 0,
-				currency: "GBP",
+		shippingDetails: [
+			{
+				"@type": "OfferShippingDetails",
+				shippingRate: {
+					"@type": "MonetaryAmount",
+					value: 3.45,
+					currency: "GBP",
+				},
+				shippingDestination: {
+					"@type": "DefinedRegion",
+					addressCountry: "GB",
+				},
+				shippingLabel: "Royal Mail Tracked 48"
 			},
-			shippingDestination: {
-				"@type": "DefinedRegion",
-				addressCountry: "GB",
-			},
-		},
+			{
+				"@type": "OfferShippingDetails",
+				shippingRate: {
+					"@type": "MonetaryAmount",
+					value: 0,
+					currency: "GBP",
+				},
+				shippingDestination: {
+					"@type": "DefinedRegion",
+					addressCountry: "GB",
+				},
+				shippingLabel: "Free Delivery on orders over £20"
+			}
+		],
 		hasMerchantReturnPolicy: {
 			"@type": "MerchantReturnPolicy",
 			applicableCountry: "GB",
 			returnPolicyCategory:
 				"https://schema.org/MerchantReturnFiniteReturnWindow",
-			merchantReturnDays: 14,
+			merchantReturnDays: 30,
 			returnMethod: "https://schema.org/ReturnByMail",
-			returnFees: "https://schema.org/FreeReturn",
+			returnFees: "https://schema.org/ReturnShippingFees",
 		},
 
 		offers: [
@@ -74,10 +90,83 @@ export default function StructuredData({
 					"Pure, fiery chili paste - the foundation of Indonesian cooking",
 				price: "7.49",
 				priceCurrency: "GBP",
+				priceValidUntil: "2025-12-31",
 				availability: "https://schema.org/PreOrder",
 				itemCondition: "https://schema.org/NewCondition",
 				image: "https://spiceislandindonesia.com/images/Spice Island Indonesia Sambal Oelek 185g Label.webp",
 				url: "https://spiceislandindonesia.com/sambal-oelek-uk",
+				shippingDetails: [
+					{
+						"@type": "OfferShippingDetails",
+						shippingRate: {
+							"@type": "MonetaryAmount",
+							value: 3.45,
+							currency: "GBP",
+						},
+						shippingDestination: {
+							"@type": "DefinedRegion",
+							addressCountry: "GB",
+						},
+						deliveryTime: {
+							"@type": "ShippingDeliveryTime",
+							handlingTime: {
+								"@type": "QuantitativeValue",
+								minValue: 0,
+								maxValue: 1,
+								unitCode: "DAY"
+							},
+							transitTime: {
+								"@type": "QuantitativeValue",
+								minValue: 2,
+								maxValue: 3,
+								unitCode: "DAY"
+							}
+						},
+						shippingLabel: "Royal Mail Tracked 48 - Standard Delivery"
+					},
+					{
+						"@type": "OfferShippingDetails",
+						shippingRate: {
+							"@type": "MonetaryAmount",
+							value: 0,
+							currency: "GBP",
+						},
+						shippingDestination: {
+							"@type": "DefinedRegion",
+							addressCountry: "GB",
+						},
+						deliveryTime: {
+							"@type": "ShippingDeliveryTime",
+							handlingTime: {
+								"@type": "QuantitativeValue",
+								minValue: 0,
+								maxValue: 1,
+								unitCode: "DAY"
+							},
+							transitTime: {
+								"@type": "QuantitativeValue",
+								minValue: 2,
+								maxValue: 3,
+								unitCode: "DAY"
+							}
+						},
+						shippingLabel: "Free Delivery",
+						eligibleQuantity: {
+							"@type": "QuantitativeValue",
+							minValue: 20,
+							unitCode: "GBP"
+						}
+					}
+				],
+				hasMerchantReturnPolicy: {
+					"@type": "MerchantReturnPolicy",
+					applicableCountry: "GB",
+					returnPolicyCategory:
+						"https://schema.org/MerchantReturnFiniteReturnWindow",
+					merchantReturnDays: 30,
+					returnMethod: "https://schema.org/ReturnByMail",
+					returnFees: "https://schema.org/ReturnShippingFees"
+				}
 			},
 			{
 				"@type": "Offer",
@@ -85,10 +174,83 @@ export default function StructuredData({
 				description: "Sweet and spicy with aromatic spices",
 				price: "8.49",
 				priceCurrency: "GBP",
+				priceValidUntil: "2025-12-31",
 				availability: "https://schema.org/PreOrder",
 				itemCondition: "https://schema.org/NewCondition",
 				image: "https://spiceislandindonesia.com/images/Spice Island Indonesia Sambal Bali 185g Label.webp",
 				url: "https://spiceislandindonesia.com/sambal-bali-sweet-spicy",
+				shippingDetails: [
+					{
+						"@type": "OfferShippingDetails",
+						shippingRate: {
+							"@type": "MonetaryAmount",
+							value: 3.45,
+							currency: "GBP",
+						},
+						shippingDestination: {
+							"@type": "DefinedRegion",
+							addressCountry: "GB",
+						},
+						deliveryTime: {
+							"@type": "ShippingDeliveryTime",
+							handlingTime: {
+								"@type": "QuantitativeValue",
+								minValue: 0,
+								maxValue: 1,
+								unitCode: "DAY"
+							},
+							transitTime: {
+								"@type": "QuantitativeValue",
+								minValue: 2,
+								maxValue: 3,
+								unitCode: "DAY"
+							}
+						},
+						shippingLabel: "Royal Mail Tracked 48 - Standard Delivery"
+					},
+					{
+						"@type": "OfferShippingDetails",
+						shippingRate: {
+							"@type": "MonetaryAmount",
+							value: 0,
+							currency: "GBP",
+						},
+						shippingDestination: {
+							"@type": "DefinedRegion",
+							addressCountry: "GB",
+						},
+						deliveryTime: {
+							"@type": "ShippingDeliveryTime",
+							handlingTime: {
+								"@type": "QuantitativeValue",
+								minValue: 0,
+								maxValue: 1,
+								unitCode: "DAY"
+							},
+							transitTime: {
+								"@type": "QuantitativeValue",
+								minValue: 2,
+								maxValue: 3,
+								unitCode: "DAY"
+							}
+						},
+						shippingLabel: "Free Delivery",
+						eligibleQuantity: {
+							"@type": "QuantitativeValue",
+							minValue: 20,
+							unitCode: "GBP"
+						}
+					}
+				],
+				hasMerchantReturnPolicy: {
+					"@type": "MerchantReturnPolicy",
+					applicableCountry: "GB",
+					returnPolicyCategory:
+						"https://schema.org/MerchantReturnFiniteReturnWindow",
+					merchantReturnDays: 30,
+					returnMethod: "https://schema.org/ReturnByMail",
+					returnFees: "https://schema.org/ReturnShippingFees"
+				}
 			},
 			{
 				"@type": "Offer",
@@ -96,10 +258,83 @@ export default function StructuredData({
 				description: "Two signature sambals beautifully packaged",
 				price: "14.99",
 				priceCurrency: "GBP",
+				priceValidUntil: "2025-12-31",
 				availability: "https://schema.org/PreOrder",
 				itemCondition: "https://schema.org/NewCondition",
 				image: "https://spiceislandindonesia.com/images/Spice Island Indonesia Complete Packaging System Mockup.webp",
 				url: "https://spiceislandindonesia.com/gift-set-indonesian",
+				shippingDetails: [
+					{
+						"@type": "OfferShippingDetails",
+						shippingRate: {
+							"@type": "MonetaryAmount",
+							value: 3.45,
+							currency: "GBP",
+						},
+						shippingDestination: {
+							"@type": "DefinedRegion",
+							addressCountry: "GB",
+						},
+						deliveryTime: {
+							"@type": "ShippingDeliveryTime",
+							handlingTime: {
+								"@type": "QuantitativeValue",
+								minValue: 0,
+								maxValue: 1,
+								unitCode: "DAY"
+							},
+							transitTime: {
+								"@type": "QuantitativeValue",
+								minValue: 2,
+								maxValue: 3,
+								unitCode: "DAY"
+							}
+						},
+						shippingLabel: "Royal Mail Tracked 48 - Standard Delivery"
+					},
+					{
+						"@type": "OfferShippingDetails",
+						shippingRate: {
+							"@type": "MonetaryAmount",
+							value: 0,
+							currency: "GBP",
+						},
+						shippingDestination: {
+							"@type": "DefinedRegion",
+							addressCountry: "GB",
+						},
+						deliveryTime: {
+							"@type": "ShippingDeliveryTime",
+							handlingTime: {
+								"@type": "QuantitativeValue",
+								minValue: 0,
+								maxValue: 1,
+								unitCode: "DAY"
+							},
+							transitTime: {
+								"@type": "QuantitativeValue",
+								minValue: 2,
+								maxValue: 3,
+								unitCode: "DAY"
+							}
+						},
+						shippingLabel: "Free Delivery",
+						eligibleQuantity: {
+							"@type": "QuantitativeValue",
+							minValue: 20,
+							unitCode: "GBP"
+						}
+					}
+				],
+				hasMerchantReturnPolicy: {
+					"@type": "MerchantReturnPolicy",
+					applicableCountry: "GB",
+					returnPolicyCategory:
+						"https://schema.org/MerchantReturnFiniteReturnWindow",
+					merchantReturnDays: 30,
+					returnMethod: "https://schema.org/ReturnByMail",
+					returnFees: "https://schema.org/ReturnShippingFees"
+				}
 			},
 		],
 		aggregateRating: {
