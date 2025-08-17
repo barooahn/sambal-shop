@@ -56,7 +56,7 @@ export default function StructuredData({
 					"@type": "DefinedRegion",
 					addressCountry: "GB",
 				},
-				shippingLabel: "Royal Mail Tracked 48"
+				shippingLabel: "Royal Mail Tracked 48",
 			},
 			{
 				"@type": "OfferShippingDetails",
@@ -69,8 +69,8 @@ export default function StructuredData({
 					"@type": "DefinedRegion",
 					addressCountry: "GB",
 				},
-				shippingLabel: "Free Delivery on orders over £20"
-			}
+				shippingLabel: "Free Delivery on orders over £20",
+			},
 		],
 		hasMerchantReturnPolicy: {
 			"@type": "MerchantReturnPolicy",
@@ -113,16 +113,17 @@ export default function StructuredData({
 								"@type": "QuantitativeValue",
 								minValue: 0,
 								maxValue: 1,
-								unitCode: "DAY"
+								unitCode: "DAY",
 							},
 							transitTime: {
 								"@type": "QuantitativeValue",
 								minValue: 2,
 								maxValue: 3,
-								unitCode: "DAY"
-							}
+								unitCode: "DAY",
+							},
 						},
-						shippingLabel: "Royal Mail Tracked 48 - Standard Delivery"
+						shippingLabel:
+							"Royal Mail Tracked 48 - Standard Delivery",
 					},
 					{
 						"@type": "OfferShippingDetails",
@@ -141,22 +142,22 @@ export default function StructuredData({
 								"@type": "QuantitativeValue",
 								minValue: 0,
 								maxValue: 1,
-								unitCode: "DAY"
+								unitCode: "DAY",
 							},
 							transitTime: {
 								"@type": "QuantitativeValue",
 								minValue: 2,
 								maxValue: 3,
-								unitCode: "DAY"
-							}
+								unitCode: "DAY",
+							},
 						},
 						shippingLabel: "Free Delivery",
 						eligibleQuantity: {
 							"@type": "QuantitativeValue",
 							minValue: 20,
-							unitCode: "GBP"
-						}
-					}
+							unitCode: "GBP",
+						},
+					},
 				],
 				hasMerchantReturnPolicy: {
 					"@type": "MerchantReturnPolicy",
@@ -165,8 +166,8 @@ export default function StructuredData({
 						"https://schema.org/MerchantReturnFiniteReturnWindow",
 					merchantReturnDays: 30,
 					returnMethod: "https://schema.org/ReturnByMail",
-					returnFees: "https://schema.org/ReturnShippingFees"
-				}
+					returnFees: "https://schema.org/ReturnShippingFees",
+				},
 			},
 			{
 				"@type": "Offer",
@@ -197,16 +198,17 @@ export default function StructuredData({
 								"@type": "QuantitativeValue",
 								minValue: 0,
 								maxValue: 1,
-								unitCode: "DAY"
+								unitCode: "DAY",
 							},
 							transitTime: {
 								"@type": "QuantitativeValue",
 								minValue: 2,
 								maxValue: 3,
-								unitCode: "DAY"
-							}
+								unitCode: "DAY",
+							},
 						},
-						shippingLabel: "Royal Mail Tracked 48 - Standard Delivery"
+						shippingLabel:
+							"Royal Mail Tracked 48 - Standard Delivery",
 					},
 					{
 						"@type": "OfferShippingDetails",
@@ -225,22 +227,22 @@ export default function StructuredData({
 								"@type": "QuantitativeValue",
 								minValue: 0,
 								maxValue: 1,
-								unitCode: "DAY"
+								unitCode: "DAY",
 							},
 							transitTime: {
 								"@type": "QuantitativeValue",
 								minValue: 2,
 								maxValue: 3,
-								unitCode: "DAY"
-							}
+								unitCode: "DAY",
+							},
 						},
 						shippingLabel: "Free Delivery",
 						eligibleQuantity: {
 							"@type": "QuantitativeValue",
 							minValue: 20,
-							unitCode: "GBP"
-						}
-					}
+							unitCode: "GBP",
+						},
+					},
 				],
 				hasMerchantReturnPolicy: {
 					"@type": "MerchantReturnPolicy",
@@ -249,8 +251,8 @@ export default function StructuredData({
 						"https://schema.org/MerchantReturnFiniteReturnWindow",
 					merchantReturnDays: 30,
 					returnMethod: "https://schema.org/ReturnByMail",
-					returnFees: "https://schema.org/ReturnShippingFees"
-				}
+					returnFees: "https://schema.org/ReturnShippingFees",
+				},
 			},
 			{
 				"@type": "Offer",
@@ -281,16 +283,17 @@ export default function StructuredData({
 								"@type": "QuantitativeValue",
 								minValue: 0,
 								maxValue: 1,
-								unitCode: "DAY"
+								unitCode: "DAY",
 							},
 							transitTime: {
 								"@type": "QuantitativeValue",
 								minValue: 2,
 								maxValue: 3,
-								unitCode: "DAY"
-							}
+								unitCode: "DAY",
+							},
 						},
-						shippingLabel: "Royal Mail Tracked 48 - Standard Delivery"
+						shippingLabel:
+							"Royal Mail Tracked 48 - Standard Delivery",
 					},
 					{
 						"@type": "OfferShippingDetails",
@@ -309,22 +312,22 @@ export default function StructuredData({
 								"@type": "QuantitativeValue",
 								minValue: 0,
 								maxValue: 1,
-								unitCode: "DAY"
+								unitCode: "DAY",
 							},
 							transitTime: {
 								"@type": "QuantitativeValue",
 								minValue: 2,
 								maxValue: 3,
-								unitCode: "DAY"
-							}
+								unitCode: "DAY",
+							},
 						},
 						shippingLabel: "Free Delivery",
 						eligibleQuantity: {
 							"@type": "QuantitativeValue",
 							minValue: 20,
-							unitCode: "GBP"
-						}
-					}
+							unitCode: "GBP",
+						},
+					},
 				],
 				hasMerchantReturnPolicy: {
 					"@type": "MerchantReturnPolicy",
@@ -333,8 +336,8 @@ export default function StructuredData({
 						"https://schema.org/MerchantReturnFiniteReturnWindow",
 					merchantReturnDays: 30,
 					returnMethod: "https://schema.org/ReturnByMail",
-					returnFees: "https://schema.org/ReturnShippingFees"
-				}
+					returnFees: "https://schema.org/ReturnShippingFees",
+				},
 			},
 		],
 		aggregateRating: {
@@ -432,7 +435,7 @@ export default function StructuredData({
 			"Authentic Indonesian sambal from the original Spice Islands",
 		url: "https://spiceislandindonesia.com",
 		telephone: "+44 (0) 20 1234 5678", // TODO: Replace with real phone number
-		email: "hello@spiceislandindonesia.co.uk", // TODO: Replace with real email
+		email: "info@spiceislandindonesia.com", // TODO: Replace with real email
 		address: {
 			"@type": "PostalAddress",
 			streetAddress: "123 Spice Street", // TODO: Replace with real address

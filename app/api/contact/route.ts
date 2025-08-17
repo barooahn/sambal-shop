@@ -73,7 +73,7 @@ async function sendViaResend(data: any) {
 		const RESEND_API_KEY = process.env.RESEND_API_KEY;
 		const TO_EMAIL =
 			process.env.CONTACT_TO_EMAIL ||
-			"contact@spiceislandindonesia.com";
+			"info@spiceislandindonesia.com";
 
 		if (!RESEND_API_KEY) {
 			throw new Error("Resend API key not configured");
@@ -88,7 +88,7 @@ async function sendViaResend(data: any) {
 			body: JSON.stringify({
 				from:
 					process.env.RESEND_FROM_EMAIL ||
-					"noreply@spiceislandindonesia.com",
+					"info@spiceislandindonesia.com",
 				to: [TO_EMAIL],
 				reply_to: data.email,
 				subject: `New Contact Form Submission - ${data.name}`,

@@ -263,7 +263,7 @@ export default function TermsPage() {
 												<strong>
 													Email:
 												</strong>{" "}
-												legal@spiceislandindonesia.co.uk
+												info@spiceislandindonesia.com
 											</p>
 											<p>
 												<strong>

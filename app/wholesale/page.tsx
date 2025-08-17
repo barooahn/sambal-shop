@@ -103,8 +103,8 @@ export default function WholesalePage() {
 							Why Partner With Us?
 						</h2>
 						<p className='text-xl text-neutral-600 max-w-3xl mx-auto font-body'>
-							We&apos;re committed to supporting our wholesale
-							partners with premium products and
+							We&apos;re committed to supporting our
+							wholesale partners with premium products and
 							exceptional service
 						</p>
 					</div>
@@ -150,19 +150,6 @@ export default function WholesalePage() {
 
 							<div className='space-y-6'>
 								<div className='flex items-center space-x-4'>
-									<div className='w-12 h-12 bg-burgundy-100 rounded-full flex items-center justify-center'>
-										<Phone className='w-6 h-6 text-burgundy-700' />
-									</div>
-									<div>
-										<h4 className='font-bold text-burgundy-900 font-brand'>
-											Phone
-										</h4>
-										<p className='text-neutral-600 font-body'>
-											+44 (0) 20 1234 5678
-										</p>
-									</div>
-								</div>
-								<div className='flex items-center space-x-4'>
 									<div className='w-12 h-12 bg-gold-100 rounded-full flex items-center justify-center'>
 										<Mail className='w-6 h-6 text-gold-700' />
 									</div>
@@ -171,7 +158,7 @@ export default function WholesalePage() {
 											Email
 										</h4>
 										<p className='text-neutral-600 font-body'>
-											wholesale@spiceislandindonesia.co.uk
+											info@spiceislandindonesia.com
 										</p>
 									</div>
 								</div>
@@ -184,7 +171,7 @@ export default function WholesalePage() {
 											Address
 										</h4>
 										<p className='text-neutral-600 font-body'>
-											London, United Kingdom
+											Ormskirk, United Kingdom
 										</p>
 									</div>
 								</div>
@@ -205,9 +192,9 @@ export default function WholesalePage() {
 										Thank You!
 									</h4>
 									<p className='text-green-600 font-body'>
-										We&apos;ve received your wholesale
-										enquiry and will get back to
-										you within 24 hours.
+										We&apos;ve received your
+										wholesale enquiry and will get
+										back to you within 24 hours.
 									</p>
 								</div>
 							) : (

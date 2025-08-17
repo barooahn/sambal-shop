@@ -253,7 +253,7 @@ export default function PrivacyPage() {
 												<strong>
 													Email:
 												</strong>{" "}
-												privacy@spiceislandindonesia.co.uk
+												info@spiceislandindonesia.com
 											</p>
 											<p>
 												<strong>

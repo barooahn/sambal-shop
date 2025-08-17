@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { Clock, CheckCircle, AlertCircle, ChefHat, Utensils } from "lucide-react";
+import Image from "next/image";
 
 interface HowToStep {
 	name: string;
@@ -84,6 +85,17 @@ const HowToVisual: FC<HowToVisualProps> = ({
 					{/* Tools */}
 					{tools && tools.length > 0 && (
 						<div>
+							{/* Equipment Setup Image */}
+							<div className="mb-4 rounded-lg overflow-hidden shadow-md">
+								<Image
+									src="/images/optimized/cooking-step-setup-md.webp"
+									alt="Indonesian cooking equipment setup with wok, mortar and pestle, and traditional tools"
+									width={600}
+									height={400}
+									className="w-full h-32 object-cover"
+									sizes="(max-width: 768px) 100vw, 50vw"
+								/>
+							</div>
 							<h3 className="flex items-center text-lg font-semibold mb-4 text-gray-800">
 								<Utensils className="w-5 h-5 mr-2 text-red-500" />
 								Equipment Needed
@@ -110,6 +122,17 @@ const HowToVisual: FC<HowToVisualProps> = ({
 					{/* Supplies */}
 					{supplies && supplies.length > 0 && (
 						<div>
+							{/* Ingredient Preparation Image */}
+							<div className="mb-4 rounded-lg overflow-hidden shadow-md">
+								<Image
+									src="/images/optimized/ingredient-prep-process-md.webp"
+									alt="Step-by-step ingredient preparation showing hands chopping garlic, dicing shallots, and measuring sambal"
+									width={600}
+									height={400}
+									className="w-full h-32 object-cover"
+									sizes="(max-width: 768px) 100vw, 50vw"
+								/>
+							</div>
 							<h3 className="flex items-center text-lg font-semibold mb-4 text-gray-800">
 								<ChefHat className="w-5 h-5 mr-2 text-amber-500" />
 								Ingredients

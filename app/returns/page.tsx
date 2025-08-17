@@ -51,7 +51,7 @@ export default function ReturnsPage() {
           <div>
             <h3 className="text-xl font-bold text-burgundy-900 mb-2 font-brand">How to start a return</h3>
             <ol className="list-decimal pl-6 text-neutral-700 space-y-2">
-              <li>Email <a className="underline" href="mailto:support@spiceislandindonesia.com">support@spiceislandindonesia.com</a> with your order number and reason for return (photos if damaged/faulty).</li>
+              <li>Email <a className="underline" href="mailto:info@spiceislandindonesia.com">info@spiceislandindonesia.com</a> with your order number and reason for return (photos if damaged/faulty).</li>
               <li>We will issue an RMA and provide the return address.</li>
               <li>Pack securely and send via tracked post; share the tracking reference.</li>
               <li>We confirm receipt and process your refund or replacement.</li>

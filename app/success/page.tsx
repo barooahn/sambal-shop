@@ -88,9 +88,9 @@ function SuccessPageContent() {
 											Order Processing
 										</p>
 										<p className='text-sm text-gray-600'>
-											We&apos;ll prepare your sambal
-											with care using our
-											traditional methods
+											We&apos;ll prepare your
+											sambal with care using
+											our traditional methods
 										</p>
 									</div>
 								</div>
@@ -105,9 +105,10 @@ function SuccessPageContent() {
 											Shipping Notification
 										</p>
 										<p className='text-sm text-gray-600'>
-											You&apos;ll receive tracking
-											information via email
-											within 1-2 business days
+											You&apos;ll receive
+											tracking information via
+											email within 1-2 business
+											days
 										</p>
 									</div>
 								</div>
@@ -192,10 +193,10 @@ function SuccessPageContent() {
 					<p>
 						Contact us at{" "}
 						<a
-							href='mailto:hello@spiceislandindonesia.co.uk'
+							href='mailto:info@spiceislandindonesia.com'
 							className='text-red-600 hover:text-red-700 font-medium'
 						>
-							hello@spiceislandindonesia.co.uk
+							info@spiceislandindonesia.com
 						</a>
 					</p>
 				</div>

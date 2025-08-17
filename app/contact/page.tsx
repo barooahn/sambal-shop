@@ -48,8 +48,8 @@ export default function ContactPage() {
 						<p className='text-xl lg:text-2xl text-neutral-600 max-w-3xl mx-auto font-body leading-relaxed'>
 							Have questions about our authentic Indonesian
 							sambals? Want to learn more about our
-							products or need cooking advice? We&apos;d love to
-							hear from you.
+							products or need cooking advice? We&apos;d
+							love to hear from you.
 						</p>
 					</div>
 
@@ -69,7 +69,7 @@ export default function ContactPage() {
 											Email Us
 										</h3>
 										<p className='text-neutral-600 font-body'>
-											hello@spiceislandindonesia.co.uk
+											info@spiceislandindonesia.com
 										</p>
 									</div>
 								</div>
@@ -82,7 +82,7 @@ export default function ContactPage() {
 											Location
 										</h3>
 										<p className='text-neutral-600 font-body'>
-											London, United Kingdom
+											Ormskirk, United Kingdom
 										</p>
 									</div>
 								</div>
