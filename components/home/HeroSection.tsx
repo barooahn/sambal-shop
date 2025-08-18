@@ -80,7 +80,7 @@ export default function HeroSection() {
 			<div className='absolute inset-0 z-0 w-full h-full' style={{ backgroundColor: '#8B4513' }}>
 				<Image
 					src='/images/optimized/hero-image-lg.webp'
-					alt='Premium Indonesian spices imported to UK'
+					alt='Authentic Sambal UK - Premium Indonesian Chili Paste Spices from Spice Islands'
 					fill
 					className='object-cover w-full h-full'
 					priority
@@ -266,7 +266,7 @@ export default function HeroSection() {
 							<div className='relative z-20 group w-full' style={{ aspectRatio: '1 / 1', minHeight: '280px' }}>
 								<Image
 									src='/images/optimized/sambal-bali-md.webp'
-									alt='Spice Island Indonesia Sambal Bali - Authentic Indonesian Chili Paste'
+									alt='Authentic Sambal UK - Spice Island Indonesia Sambal Bali Indonesian Chili Paste Artisanal Hot Sauce'
 									fill
 									className='object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-700 ease-out'
 									priority

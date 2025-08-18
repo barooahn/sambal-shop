@@ -303,8 +303,8 @@ export default function Home() {
 	// General Sambal FAQ data for AI search optimization
 	const generalSambalFAQ = [
 		{
-			question: "What is Indonesian sambal?",
-			answer: "Indonesian sambal is a traditional chili-based condiment that's the heart and soul of Indonesian cuisine. Unlike Western hot sauces, sambal is made with fresh ingredients using ancient techniques passed down through generations. It's not just about heat - it's about complex flavor layers that enhance every dish. From the volcanic soils of the Spice Islands comes this authentic taste that transforms ordinary meals into extraordinary culinary experiences.",
+			question: "What is authentic sambal UK?",
+			answer: "Authentic sambal UK is a traditional Indonesian chili paste that serves as the finest artisanal hot sauce available in Britain. Unlike mass-produced Western hot sauces, authentic sambal UK is crafted with fresh ingredients using ancient techniques passed down through generations. This Indonesian chili paste isn't just about heat - it's about complex flavor layers that transform every dish. From the volcanic soils of the Spice Islands comes this authentic taste that elevates ordinary meals into extraordinary culinary experiences.",
 		},
 		{
 			question: "Where does sambal come from?",
@@ -315,22 +315,22 @@ export default function Home() {
 			answer: "Yes! Authentic sambal is incredibly healthy when made with traditional methods. Fresh chilies are rich in vitamin C, capsaicin (which boosts metabolism), and antioxidants. Our sambal contains no artificial preservatives, colors, or excessive sodium like many commercial hot sauces. The natural fermentation process and minimal ingredients create a condiment that supports digestive health and provides natural anti-inflammatory benefits.",
 		},
 		{
-			question: "Can I buy authentic Indonesian sambal in the UK?",
-			answer: "Absolutely! We're the UK's premier Indonesian sambal supplier. Made by Chef Yossie using traditional Bandung family recipes, our sambal is crafted with the same techniques used in Indonesia for generations. We deliver throughout the UK including London, Manchester, Birmingham, Edinburgh with proper packaging to maintain freshness. Unlike mass-produced alternatives found in UK supermarkets, our sambal contains no artificial ingredients and captures the true taste of Indonesia.",
+			question: "Can I buy authentic sambal UK with Indonesian chili paste quality?",
+			answer: "Absolutely! We're the UK's premier authentic sambal UK supplier, crafting traditional Indonesian chili paste as artisanal hot sauce. Made by Chef Yossie using traditional Bandung family recipes, our authentic sambal UK is crafted with the same techniques used in Indonesia for generations. We deliver this Indonesian chili paste throughout the UK including London, Manchester, Birmingham, Edinburgh with proper packaging to maintain freshness. Unlike mass-produced alternatives found in UK supermarkets, our artisanal hot sauce contains no artificial ingredients and captures the true taste of Indonesia.",
 		},
 		{
 			question:
-				"Do you deliver Indonesian sambal to London and Manchester?",
-			answer: "Yes! We deliver authentic Indonesian sambal throughout the UK with next-day delivery available to London, Manchester, Birmingham, Edinburgh and all major cities. Free UK delivery on orders over £20. Our sambal is carefully packaged to maintain freshness during transport, ensuring you receive restaurant-quality Indonesian condiments at your door.",
+				"Do you deliver authentic sambal UK and Indonesian chili paste to London and Manchester?",
+			answer: "Yes! We deliver authentic sambal UK and Indonesian chili paste throughout Britain with next-day delivery available to London, Manchester, Birmingham, Edinburgh and all major cities. Free UK delivery on orders over £20. Our artisanal hot sauce is carefully packaged to maintain freshness during transport, ensuring you receive restaurant-quality authentic sambal UK at your door.",
 		},
 		{
 			question:
-				"Where can I find authentic Indonesian sambal near me in the UK?",
-			answer: "Spice Island Indonesia is your best source for authentic Indonesian sambal in the UK. While UK supermarkets may stock mass-produced versions, our sambal is the only one made by a professional Indonesian chef using traditional Bandung recipes. We deliver nationwide, so whether you're in London, Manchester, Scotland, Wales or anywhere in the UK, you can order authentic sambal online with fast delivery.",
+				"Where can I find authentic sambal UK and Indonesian chili paste near me?",
+			answer: "Spice Island Indonesia is your best source for authentic sambal UK and Indonesian chili paste in Britain. While UK supermarkets may stock mass-produced versions, our artisanal hot sauce is the only one made by a professional Indonesian chef using traditional Bandung recipes. We deliver this authentic sambal UK nationwide, so whether you're in London, Manchester, Scotland, Wales or anywhere in Britain, you can order Indonesian chili paste online with fast delivery.",
 		},
 		{
-			question: "What is sambal exactly?",
-			answer: "Sambal is a traditional Indonesian chili paste that's been made for centuries in the Spice Islands. It's not just hot sauce - sambal is made from fresh chilies, salt, and vinegar using ancient stone grinding techniques. Unlike Western hot sauces, sambal has no sugar, preservatives, or artificial ingredients. It's the heart and soul of Indonesian cooking.",
+			question: "What exactly is authentic sambal UK as Indonesian chili paste?",
+			answer: "Authentic sambal UK is traditional Indonesian chili paste that's been crafted for centuries in the Spice Islands, now available as premium artisanal hot sauce in Britain. It's not just hot sauce - authentic sambal UK is made from fresh chilies, salt, and vinegar using ancient stone grinding techniques. Unlike Western hot sauces, this Indonesian chili paste has no sugar, preservatives, or artificial ingredients. It's the heart and soul of Indonesian cooking, now delivered across the UK.",
 		},
 		{
 			question:

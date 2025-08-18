@@ -8,27 +8,29 @@ import ArticleSchema from "@/components/seo/ArticleSchema";
 import FAQSchema from "@/components/seo/FAQSchema";
 
 export const metadata: Metadata = {
-	title: "The Ultimate Guide to Indonesian Sambal: Beyond Sriracha | Spice Island Indonesia",
-	description: excerpt,
+	title: "Ultimate Guide to Authentic Sambal UK | Indonesian Chili Paste Artisanal Hot Sauce Beyond Sriracha | Spice Island Indonesia",
+	description: "Complete guide to authentic sambal UK. Indonesian chili paste artisanal hot sauce varieties, traditional techniques. UK cooking applications beyond sriracha.",
 	keywords: [
+		"authentic sambal UK",
+		"Indonesian chili paste",
+		"artisanal hot sauce",
 		"Indonesian sambal guide",
 		"sambal vs sriracha",
-		"authentic sambal UK",
 		"traditional sambal",
 		"sambal varieties",
 		"Indonesian cooking UK",
 	],
 	openGraph: {
-		title: "The Ultimate Guide to Indonesian Sambal: Beyond Sriracha",
+		title: "Ultimate Guide to Authentic Sambal UK | Indonesian Chili Paste Artisanal Hot Sauce Beyond Sriracha",
 		description:
-			"Explore sambal varieties, traditional techniques, and the differences from Western hot sauces.",
+			"Explore authentic sambal UK varieties, Indonesian chili paste artisanal hot sauce techniques, and differences from Western hot sauces for UK cooks.",
 		type: "article",
 		images: [
 			{
 				url: "/images/blog/ultimate-sambal-guide.webp",
 				width: 1200,
 				height: 630,
-				alt: "Varieties of Indonesian sambal",
+				alt: "Authentic Sambal UK varieties - Indonesian chili paste artisanal hot sauce collection guide",
 			},
 		],
 	},

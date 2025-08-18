@@ -18,21 +18,21 @@ import FAQSchema from "@/components/seo/FAQSchema";
 import ArticleSchema from "@/components/seo/ArticleSchema";
 
 export const metadata: Metadata = {
-	title: "Transform British Classics with Indonesian Sambal | 8 Creative Fusion Ideas | Spice Island Indonesia",
-	description: excerpt,
+	title: "Authentic Sambal UK Transforms British Classics | Indonesian Chili Paste Artisanal Hot Sauce Fusion | Spice Island Indonesia",
+	description: "Revolutionize British dishes with authentic sambal UK. Indonesian chili paste artisanal hot sauce transforms fish & chips, Sunday roasts. Complete UK fusion cooking guide.",
 	keywords:
-		"sambal British food fusion, Indonesian sambal UK recipes, British Indonesian cooking, sambal fish and chips, sambal roast dinner, Indonesian spices British classics, sambal transformation British dishes",
+		"authentic sambal UK, Indonesian chili paste, artisanal hot sauce, sambal British food fusion, Indonesian sambal UK recipes, British Indonesian cooking, sambal fish and chips, sambal roast dinner, Indonesian spices British classics, sambal transformation British dishes",
 	openGraph: {
-		title: "Transform British Classics with Indonesian Sambal | 8 Creative Fusion Ideas",
+		title: "Authentic Sambal UK Transforms British Classics | Indonesian Chili Paste Artisanal Hot Sauce Fusion",
 		description:
-			"Revolutionary fusion recipes combining authentic Indonesian sambal with beloved British dishes",
+			"Revolutionary fusion recipes combining authentic sambal UK Indonesian chili paste artisanal hot sauce with beloved British dishes",
 		type: "article",
 		images: [
 			{
 				url: "/images/blog/sambal-british-fusion.webp",
 				width: 1200,
 				height: 630,
-				alt: "British classic dishes transformed with Indonesian sambal showing fusion cooking",
+				alt: "Authentic Sambal UK British classic dishes transformed with Indonesian chili paste artisanal hot sauce fusion cooking",
 			},
 		],
 	},

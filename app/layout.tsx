@@ -41,25 +41,25 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
 	metadataBase: new URL("https://www.spiceislandindonesia.com"),
-	title: "Indonesian Sambal UK | Authentic Delivery London Manchester Birmingham | Spice Island Indonesia",
+	title: "Authentic Sambal UK | Indonesian Chili Paste & Artisanal Hot Sauce | Spice Island Indonesia",
 	description:
-		"UK's premier Indonesian sambal supplier. Authentic traditional chili paste from the Spice Islands, delivered nationwide. Shop sambal oelek, sambal bali & gift sets with free UK delivery over £20.",
+		"UK's premier authentic sambal UK supplier. Traditional Indonesian chili paste crafted as artisanal hot sauce from the Spice Islands. Delivered nationwide - sambal oelek, sambal bali & gift sets with free UK delivery over £20.",
 	keywords:
-		"Indonesian sambal UK, sambal oelek UK, sambal bali UK, authentic chili paste UK, Indonesian condiments UK delivery, traditional sambal London, sambal delivery Manchester, Indonesian food Birmingham, premium condiments UK, sambal Edinburgh, authentic indonesian cuisine UK, Chef Yossie sambal",
+		"authentic sambal UK, Indonesian chili paste, artisanal hot sauce, sambal oelek UK, sambal bali UK, traditional chili paste UK, Indonesian condiments UK delivery, authentic sambal London, chili paste delivery Manchester, Indonesian food Birmingham, premium hot sauce UK, sambal Edinburgh, authentic indonesian cuisine UK, Chef Yossie sambal, artisanal condiments UK, traditional Indonesian hot sauce",
 	verification: {
 		google: process.env.NEXT_PUBLIC_GSC_VERIFICATION_CODE,
 	},
 	openGraph: {
-		title: "Indonesian Sambal UK | Authentic Delivery | Spice Island Indonesia",
+		title: "Authentic Sambal UK | Indonesian Chili Paste & Artisanal Hot Sauce | Spice Island Indonesia",
 		description:
-			"UK's premier Indonesian sambal supplier. Traditional recipes by Chef Yossie, nationwide delivery. Authentic sambal oelek & sambal bali.",
+			"UK's premier authentic sambal UK supplier. Traditional Indonesian chili paste crafted as artisanal hot sauce by Chef Yossie, nationwide delivery. Authentic sambal oelek & sambal bali.",
 		type: "website",
 		images: [
 			{
 				url: "/images/Spice Island Indonesia Sambal Oelek 185g Label.webp",
 				width: 400,
 				height: 400,
-				alt: "Authentic Indonesian Sambal Oelek 185g - UK Delivery - Chef Yossie Traditional Recipe",
+				alt: "Authentic Sambal UK - Indonesian Chili Paste Artisanal Hot Sauce 185g - UK Delivery - Chef Yossie Traditional Recipe",
 			},
 		],
 		locale: "en_GB",
@@ -67,9 +67,9 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "Indonesian Sambal UK | Authentic Delivery | Spice Island Indonesia",
+		title: "Authentic Sambal UK | Indonesian Chili Paste & Artisanal Hot Sauce | Spice Island Indonesia",
 		description:
-			"UK's premier Indonesian sambal supplier. Traditional recipes by Chef Yossie, nationwide delivery. Authentic sambal oelek & sambal bali.",
+			"UK's premier authentic sambal UK supplier. Traditional Indonesian chili paste crafted as artisanal hot sauce by Chef Yossie, nationwide delivery. Authentic sambal oelek & sambal bali.",
 		images: [
 			"/images/Spice Island Indonesia Sambal Oelek 185g Label.webp",
 		],

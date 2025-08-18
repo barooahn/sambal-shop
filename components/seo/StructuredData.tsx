@@ -12,7 +12,7 @@ export default function StructuredData({
 		url: "https://spiceislandindonesia.com",
 		logo: "https://spiceislandindonesia.com/images/optimized/logo-lg.webp",
 		description:
-			"UK's premier Indonesian sambal supplier. Authentic traditional chili paste from the original Spice Islands, delivered nationwide",
+			"UK's premier authentic sambal UK supplier. Traditional Indonesian chili paste crafted as artisanal hot sauce from the original Spice Islands, delivered nationwide",
 		address: {
 			"@type": "PostalAddress",
 			addressCountry: "GB",
@@ -31,9 +31,9 @@ export default function StructuredData({
 	const productData = {
 		"@context": "https://schema.org",
 		"@type": "Product",
-		name: "Authentic Indonesian Sambal Collection",
+		name: "Authentic Sambal UK - Indonesian Chili Paste Collection",
 		description:
-			"Handcrafted Indonesian sambal from traditional Spice Islands recipes",
+			"Handcrafted authentic sambal UK - premium Indonesian chili paste as artisanal hot sauce from traditional Spice Islands recipes",
 		brand: {
 			"@type": "Brand",
 			name: "Spice Island Indonesia",
@@ -85,9 +85,9 @@ export default function StructuredData({
 		offers: [
 			{
 				"@type": "Offer",
-				name: "Sambal Oelek",
+				name: "Authentic Sambal UK - Sambal Oelek Indonesian Chili Paste",
 				description:
-					"Pure, fiery chili paste - the foundation of Indonesian cooking",
+					"Pure, fiery authentic sambal UK - traditional Indonesian chili paste, the foundation of Indonesian cooking. Premium artisanal hot sauce crafted from Spice Islands recipes.",
 				price: "7.49",
 				priceCurrency: "GBP",
 				priceValidUntil: "2025-12-31",
@@ -171,8 +171,8 @@ export default function StructuredData({
 			},
 			{
 				"@type": "Offer",
-				name: "Sambal Bali",
-				description: "Sweet and spicy with aromatic spices",
+				name: "Authentic Sambal UK - Sambal Bali Indonesian Chili Paste",
+				description: "Premium authentic sambal UK - Indonesian chili paste with aromatic spices. Sweet and spicy artisanal hot sauce from traditional Balinese recipes.",
 				price: "8.49",
 				priceCurrency: "GBP",
 				priceValidUntil: "2025-12-31",
@@ -256,8 +256,8 @@ export default function StructuredData({
 			},
 			{
 				"@type": "Offer",
-				name: "Heritage Gift Set",
-				description: "Two signature sambals beautifully packaged",
+				name: "Authentic Sambal UK Heritage Gift Set - Indonesian Chili Paste Collection",
+				description: "Two signature authentic sambal UK varieties beautifully packaged - premium Indonesian chili paste collection featuring artisanal hot sauce from traditional recipes",
 				price: "14.99",
 				priceCurrency: "GBP",
 				priceValidUntil: "2025-12-31",
@@ -399,7 +399,7 @@ export default function StructuredData({
 	const reviewsData = {
 		"@context": "https://schema.org",
 		"@type": "Product",
-		name: "Spice Island Indonesia Sambal Collection",
+		name: "Authentic Sambal UK - Spice Island Indonesia Indonesian Chili Paste Collection",
 		review: [
 			{
 				"@type": "Review",
@@ -413,7 +413,7 @@ export default function StructuredData({
 					name: "Sarah M.",
 				},
 				reviewBody:
-					"Finally found authentic Indonesian sambal in the UK! The Sambal Oelek is exactly like what I had in Jakarta.",
+					"Finally found authentic sambal UK that matches Indonesian quality! This Indonesian chili paste is exactly like what I had in Jakarta - best artisanal hot sauce in Britain.",
 				datePublished: "2024-01-15",
 			},
 		],
@@ -431,7 +431,7 @@ export default function StructuredData({
 		"@type": "LocalBusiness",
 		name: "Spice Island Indonesia",
 		description:
-			"Authentic Indonesian sambal from the original Spice Islands",
+			"Authentic sambal UK - Traditional Indonesian chili paste crafted as artisanal hot sauce from the original Spice Islands",
 		url: "https://spiceislandindonesia.com",
 		email: "info@spiceislandindonesia.com", 
 		address: {
