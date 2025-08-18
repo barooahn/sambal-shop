@@ -39,7 +39,7 @@ export default function ProductShowcase() {
 										height={400}
 										className='w-full h-full object-contain drop-shadow-2xl relative z-10 group-hover:scale-105 transition-transform duration-500'
 										loading='lazy'
-										sizes='(max-width: 768px) 300px, (max-width: 1200px) 350px, 400px'
+										sizes='(max-width: 768px) 90vw, (max-width: 1024px) 45vw, (max-width: 1920px) 350px, 450px'
 									/>
 								</div>
 							</div>
@@ -95,7 +95,7 @@ export default function ProductShowcase() {
 										height={400}
 										className='w-full h-full object-contain drop-shadow-lg'
 										loading='lazy'
-										sizes='(max-width: 768px) 300px, (max-width: 1200px) 350px, 400px'
+										sizes='(max-width: 768px) 90vw, (max-width: 1024px) 45vw, (max-width: 1920px) 350px, 450px'
 									/>
 								</div>
 							</div>
@@ -147,7 +147,7 @@ export default function ProductShowcase() {
 										height={400}
 										className='w-full h-full object-contain drop-shadow-lg'
 										loading='lazy'
-										sizes='(max-width: 768px) 300px, (max-width: 1200px) 350px, 400px'
+										sizes='(max-width: 768px) 90vw, (max-width: 1024px) 45vw, (max-width: 1920px) 350px, 450px'
 									/>
 								</div>
 							</div>

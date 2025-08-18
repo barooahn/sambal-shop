@@ -375,7 +375,7 @@ export default function SambalForStirFryPage() {
 									fill
 									className='object-cover'
 									loading='lazy'
-									sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw'
+									sizes='(max-width: 768px) 100vw, (max-width: 1920px) 50vw, 600px'
 								/>
 							</div>
 

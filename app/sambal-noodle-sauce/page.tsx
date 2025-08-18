@@ -121,7 +121,7 @@ export default function SambalNoodleSaucePage() {
 									fill
 									className='object-contain relative z-10 drop-shadow-2xl'
 									priority
-									sizes='(max-width: 768px) 100vw, 50vw'
+									sizes='(max-width: 768px) 100vw, (max-width: 1920px) 50vw, 600px'
 								/>
 							</div>
 						</div>
@@ -419,7 +419,7 @@ export default function SambalNoodleSaucePage() {
 									fill
 									className='object-contain drop-shadow-xl'
 									loading='lazy'
-									sizes='(max-width: 768px) 100vw, 50vw'
+									sizes='(max-width: 768px) 100vw, (max-width: 1920px) 50vw, 600px'
 								/>
 							</div>
 						</div>
@@ -439,7 +439,7 @@ export default function SambalNoodleSaucePage() {
 									fill
 									className='object-cover'
 									loading='lazy'
-									sizes='(max-width: 768px) 100vw, 50vw'
+									sizes='(max-width: 768px) 100vw, (max-width: 1920px) 50vw, 600px'
 								/>
 							</div>
 						</div>

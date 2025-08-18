@@ -22,6 +22,7 @@ import PerformanceOptimizer, {
 	criticalCSS,
 	criticalImages,
 } from "@/components/optimization/PerformanceOptimizer";
+import { WebVitals } from "@/components/analytics/WebVitals";
 import { Toaster } from "sonner";
 
 const inter = Inter({
@@ -263,6 +264,7 @@ export default function RootLayout({
 						process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
 					}
 				/>
+				<WebVitals />
 				<Header />
 				<Breadcrumb />
 				<main id='main-content' className='min-h-screen mb-16'>

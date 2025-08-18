@@ -307,17 +307,17 @@ export default function SambalBaliAromaticSpicyPage() {
 
 						{/* Right side - Product Image */}
 						<div className='relative'>
-							<div className='relative w-full lg:max-w-none ml-auto max-h-[60vh] flex items-center justify-end'>
+							<div className='relative w-full lg:max-w-none mx-auto max-h-[60vh] flex items-center justify-center'>
 								<div className='aspect-square rounded-sm overflow-hidden shadow-luxury bg-gradient-to-br from-emerald-900/10 to-teal-600/10 p-6'>
 									<div className='w-full h-full rounded-sm flex items-center justify-center'>
 										<Image
 											src='/images/optimized/Spice Island Indonesia Sambal Bali 185g Label-lg.webp'
 											alt='Authentic Indonesian Sambal Bali 185g - Aromatic Chili Paste with Galangal & Lemongrass by Chef Yossie'
-											width={400}
-											height={400}
+											width={500}
+											height={500}
 											className='w-auto h-auto max-h-[60vh] object-contain drop-shadow-2xl'
 											priority
-											sizes='(max-width: 768px) 100vw, 50vw'
+											sizes='(max-width: 768px) 100vw, (max-width: 1920px) 50vw, 600px'
 										/>
 									</div>
 								</div>

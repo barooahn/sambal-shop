@@ -326,7 +326,7 @@ export default function SambalGorengUKPage() {
 
 						{/* Right side - Product Image */}
 						<div className='relative'>
-							<div className='relative w-full lg:max-w-none ml-auto max-h-[60vh] flex items-center justify-end'>
+							<div className='relative w-full lg:max-w-none mx-auto max-h-[60vh] flex items-center justify-center'>
 								<div className='rounded-sm shadow-luxury bg-gradient-to-br from-amber-900/10 to-orange-600/10 p-4'>
 									<div className='w-full h-full rounded-sm flex items-center justify-center'>
 										<Image
@@ -336,7 +336,7 @@ export default function SambalGorengUKPage() {
 											height={400}
 											className='w-auto h-auto max-h-[60vh] object-contain drop-shadow-2xl'
 											priority
-											sizes='(max-width: 768px) 100vw, 50vw'
+											sizes='(max-width: 768px) 100vw, (max-width: 1920px) 50vw, 600px'
 										/>
 									</div>
 								</div>

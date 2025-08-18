@@ -309,10 +309,12 @@ export default function ShopPage() {
 											<Image
 												src={product.image}
 												alt={`${product.detailedName} - ${product.subtitle}`}
-												width={300}
-												height={300}
+												width={500}
+												height={500}
 												className='w-full h-full object-contain drop-shadow-xl'
-												sizes='(max-width: 768px) 100vw, 33vw'
+												sizes='(max-width: 768px) 100vw, (max-width: 1280px) 50vw, (max-width: 1920px) 400px, 500px'
+												priority={product.id === 'sample-pack'}
+												loading={product.id === 'sample-pack' ? 'eager' : 'lazy'}
 											/>
 										</div>
 									</div>
