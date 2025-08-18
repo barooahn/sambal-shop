@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, ShoppingCart, User, LogOut, ChevronDown } from "lucide-react";
 import { supabase } from "@/lib/supabase";
 import OptimizedImage from "@/components/optimization/OptimizedImage";
+import SearchButton from "@/components/search/SearchButton";
 
 export default function Header() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -60,7 +61,6 @@ export default function Header() {
 		},
 		{ name: "Recipes", href: "/recipes" },
 		{ name: "Blog", href: "/blog" },
-		{ name: "Chef's Story", href: "/chef" },
 		{ name: "About", href: "/about" },
 		{ name: "Wholesale", href: "/wholesale" },
 	];
@@ -293,28 +293,40 @@ export default function Header() {
 						)}
 					</div>
 
-					{/* Mobile menu button */}
-					<button
-						aria-label={
-							isMenuOpen ? "Close menu" : "Open menu"
-						}
-						aria-expanded={isMenuOpen}
-						aria-controls='mobile-menu'
-						onClick={() => setIsMenuOpen(!isMenuOpen)}
-						className='lg:hidden p-2 rounded-md text-burgundy-800 hover:text-burgundy-600 hover:bg-burgundy-50 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-burgundy-600 focus-visible:ring-offset-2'
-					>
-						{isMenuOpen ? (
-							<X className='w-6 h-6' />
-						) : (
-							<Menu className='w-6 h-6' />
-						)}
-					</button>
+					{/* Search & Mobile Menu */}
+					<div className='flex items-center space-x-2'>
+						<SearchButton />
+						<button
+							className='lg:hidden p-2 rounded-md text-burgundy-800 hover:text-burgundy-600 hover:bg-burgundy-50 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-burgundy-600 focus-visible:ring-offset-2'
+							aria-label={
+								isMenuOpen ? "Close menu" : "Open menu"
+							}
+							aria-expanded={isMenuOpen}
+							aria-controls='mobile-menu'
+							onClick={() => setIsMenuOpen(!isMenuOpen)}
+						>
+							{isMenuOpen ? (
+								<X className='w-6 h-6' />
+							) : (
+								<Menu className='w-6 h-6' />
+							)}
+						</button>
+					</div>
 				</div>
 
 				{/* Mobile Navigation */}
 				{isMenuOpen && (
 					<div className='lg:hidden'>
 						<div className='px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gold-200'>
+							{/* Search Link */}
+							<Link
+								href='/search'
+								className='block px-3 py-2 text-burgundy-800 hover:text-burgundy-600 hover:bg-burgundy-50 rounded-md font-medium font-body transition-colors duration-200'
+								onClick={() => setIsMenuOpen(false)}
+							>
+								🔍 Search
+							</Link>
+							
 							{navigation.map((item) => (
 								<div key={item.name}>
 									{item.hasDropdown ? (
