@@ -54,7 +54,7 @@ const faqData = [
 	},
 	{
 		question: "Where can I buy authentic Indonesian sambal in the UK?",
-		answer: "Spice Island Indonesia delivers authentic sambal throughout the UK. Made by Chef Yossie using traditional Bandung recipes, our sambal contains no artificial ingredients unlike mass-produced alternatives in UK supermarkets. We offer free delivery to London, Manchester, Birmingham and nationwide on orders over £25.",
+		answer: "Spice Island Indonesia delivers authentic sambal throughout the UK. Made by Chef Yossie using traditional Bandung recipes, our sambal contains no artificial ingredients unlike mass-produced alternatives in UK supermarkets. We offer free delivery to London, Manchester, Birmingham and nationwide on orders over £20.",
 	},
 	{
 		question: "How spicy is Indonesian sambal compared to HP Sauce?",

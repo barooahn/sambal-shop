@@ -2,14 +2,6 @@ import RecipeCard from "@/components/recipes/RecipeCard";
 import HowToSchema from "@/components/seo/HowToSchema";
 import FAQSchema from "@/components/seo/FAQSchema";
 import InternalLinkingOptimization from "@/components/seo/InternalLinkingOptimization";
-import {
-	Breadcrumb,
-	BreadcrumbList,
-	BreadcrumbItem,
-	BreadcrumbLink,
-	BreadcrumbPage,
-	BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
 
 export default function SambalScrambledEggsPage() {
 	// Breadcrumb data for navigation and schema
@@ -219,30 +211,6 @@ export default function SambalScrambledEggsPage() {
 			/>
 
 			<div className='container mx-auto px-4 py-8'>
-				{/* Breadcrumb Navigation */}
-				<div className='mb-6'>
-					<Breadcrumb>
-						<BreadcrumbList>
-							<BreadcrumbItem>
-								<BreadcrumbLink href='/'>
-									Home
-								</BreadcrumbLink>
-							</BreadcrumbItem>
-							<BreadcrumbSeparator />
-							<BreadcrumbItem>
-								<BreadcrumbLink href='/recipes'>
-									Recipes
-								</BreadcrumbLink>
-							</BreadcrumbItem>
-							<BreadcrumbSeparator />
-							<BreadcrumbItem>
-								<BreadcrumbPage>
-									Sambal Scrambled Eggs
-								</BreadcrumbPage>
-							</BreadcrumbItem>
-						</BreadcrumbList>
-					</Breadcrumb>
-				</div>
 
 				{/* Enhanced Interactive Recipe Instructions (no recipe object in enhanced page) */}
 				<div className='max-w-4xl mx-auto mt-12'>

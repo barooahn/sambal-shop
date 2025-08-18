@@ -18,7 +18,7 @@ export default function StructuredData({
 			addressCountry: "GB",
 		},
 		sameAs: [
-			"https://www.instagram.com/spiceislandindonesia",
+			"https://www.instagram.com/spiceisland_indonesia",
 			"https://www.facebook.com/spiceislandindonesia",
 		],
 		contactPoint: {
@@ -426,7 +426,6 @@ export default function StructuredData({
 		},
 	};
 
-	// LocalBusiness Schema (template - needs real data)
 	const localBusinessData = {
 		"@context": "https://schema.org",
 		"@type": "LocalBusiness",
@@ -434,23 +433,21 @@ export default function StructuredData({
 		description:
 			"Authentic Indonesian sambal from the original Spice Islands",
 		url: "https://spiceislandindonesia.com",
-		telephone: "+44 (0) 20 1234 5678", // TODO: Replace with real phone number
-		email: "info@spiceislandindonesia.com", // TODO: Replace with real email
+		email: "info@spiceislandindonesia.com", 
 		address: {
 			"@type": "PostalAddress",
-			streetAddress: "123 Spice Street", // TODO: Replace with real address
-			addressLocality: "London", // TODO: Replace with real city
-			postalCode: "SW1A 1AA", // TODO: Replace with real postcode
+			streetAddress: "175 Redgate", 
+			addressLocality: "Ormskirk", 
+			postalCode: "L39 3NW", 
 			addressCountry: "GB",
 		},
 		geo: {
 			"@type": "GeoCoordinates",
-			latitude: "51.5074", // TODO: Replace with real coordinates
-			longitude: "-0.1278",
+			latitude: "53.562573",
+			longitude: "-2.890138",
 		},
 		openingHours: [
-			"Mo-Fr 09:00-18:00", // TODO: Replace with real hours
-			"Sa 10:00-16:00",
+			"Mo-Fr 09:00-17:00", 
 		],
 		priceRange: "££",
 		servesCuisine: "Indonesian",
@@ -461,7 +458,7 @@ export default function StructuredData({
 			name: "United Kingdom",
 		},
 		sameAs: [
-			"https://www.instagram.com/spiceislandindonesia", // TODO: Replace when social media is set up
+			"https://www.instagram.com/spiceisland_indonesia", // TODO: Replace when social media is set up
 			"https://www.facebook.com/spiceislandindonesia",
 		],
 	};

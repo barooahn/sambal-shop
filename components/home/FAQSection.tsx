@@ -26,7 +26,7 @@ const faqs: FAQItem[] = [
 	},
 	{
 		question: "Do you deliver across the UK?",
-		answer: "Yes, we deliver premium Indonesian sambal across the UK! Our products are carefully packaged in our signature shipping boxes to ensure they arrive in perfect condition. Standard delivery is 2-3 business days, and we offer free shipping on orders over £25.",
+		answer: "Yes, we deliver premium Indonesian sambal across the UK! Our products are carefully packaged in our signature shipping boxes to ensure they arrive in perfect condition. Standard delivery is 2-3 business days, and we offer free shipping on orders over £20.",
 	},
 	{
 		question: "Are your sambals suitable for vegetarians and vegans?",

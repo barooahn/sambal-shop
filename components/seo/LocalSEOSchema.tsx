@@ -47,8 +47,8 @@ const LocalSEOSchema: FC<LocalSEOSchemaProps> = ({
 			"@type": "GeoCircle",
 			geoMidpoint: {
 				"@type": "GeoCoordinates",
-				latitude: 51.5074,
-				longitude: -0.1278,
+				latitude: 53.562573,
+				longitude: -2.890138,
 			},
 			geoRadius: deliveryRadius
 				? `${deliveryRadius} ${deliveryUnit}`
@@ -75,7 +75,7 @@ const LocalSEOSchema: FC<LocalSEOSchemaProps> = ({
 			},
 		],
 		sameAs: [
-			"https://www.instagram.com/spiceislandindonesia",
+			"https://www.instagram.com/spiceisland_indonesia",
 			"https://www.facebook.com/spiceislandindonesia",
 		],
 	};

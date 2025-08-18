@@ -7,14 +7,6 @@ import EnhancedRecipeInstructions from "@/components/recipes/EnhancedRecipeInstr
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import InternalLinkingOptimization from "@/components/seo/InternalLinkingOptimization";
 import HowToVisual from "@/components/ui/HowToVisual";
-import {
-	Breadcrumb,
-	BreadcrumbList,
-	BreadcrumbItem,
-	BreadcrumbLink,
-	BreadcrumbPage,
-	BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
 
 export const metadata: Metadata = {
 	title: "Sambal Fried Rice Recipe | Authentic Indonesian Nasi Goreng | Spice Island Indonesia",
@@ -435,30 +427,6 @@ export default function SambalFriedRicePage() {
 			/>
 
 			<div className='container mx-auto px-4 py-8 pb-16'>
-				{/* Breadcrumb Navigation */}
-				<div className='mb-6'>
-					<Breadcrumb>
-						<BreadcrumbList>
-							<BreadcrumbItem>
-								<BreadcrumbLink href='/'>
-									Home
-								</BreadcrumbLink>
-							</BreadcrumbItem>
-							<BreadcrumbSeparator />
-							<BreadcrumbItem>
-								<BreadcrumbLink href='/recipes'>
-									Recipes
-								</BreadcrumbLink>
-							</BreadcrumbItem>
-							<BreadcrumbSeparator />
-							<BreadcrumbItem>
-								<BreadcrumbPage>
-									Sambal Fried Rice
-								</BreadcrumbPage>
-							</BreadcrumbItem>
-						</BreadcrumbList>
-					</Breadcrumb>
-				</div>
 
 				<RecipeCard recipe={recipe} />
 

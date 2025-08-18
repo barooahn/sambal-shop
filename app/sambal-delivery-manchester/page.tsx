@@ -322,7 +322,7 @@ export default function ManchesterDeliveryPage() {
 												<p className='text-gray-600 text-sm'>
 													Free delivery
 													on orders over
-													£25
+													£20
 												</p>
 											</div>
 										</div>

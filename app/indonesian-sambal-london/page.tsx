@@ -437,7 +437,7 @@ export default function IndonesianSambalLondonPage() {
 								<p className='text-blue-700'>
 									Standard next-day delivery across
 									all London boroughs. Free on orders
-									over £25.
+									over £20.
 								</p>
 							</CardContent>
 						</Card>
