@@ -12,7 +12,7 @@ export default function StorySection() {
 			<div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 				<div className='grid lg:grid-cols-2 gap-16 items-center'>
 					<div className='relative'>
-						<div className='aspect-[4/3] rounded-sm overflow-hidden shadow-luxury border border-gold-200'>
+						<div className='relative aspect-[4/3] rounded-sm overflow-hidden shadow-luxury border border-gold-200'>
 							<Image
 								src='/images/indonesian_vista.png'
 								alt='Indonesian spices and ingredients'

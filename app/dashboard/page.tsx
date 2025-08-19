@@ -107,7 +107,7 @@ export default function DashboardPage() {
 			if (ordersError) {
 				console.error("Error fetching orders:", ordersError);
 			} else {
-				setOrders(ordersData || []);
+				setOrders((ordersData as unknown as Order[]) || []);
 			}
 
 			// Fetch subscription using maybeSingle()
@@ -123,7 +123,7 @@ export default function DashboardPage() {
 					subscriptionError
 				);
 			} else {
-				setSubscription(subscriptionData);
+				setSubscription(subscriptionData as unknown as Subscription);
 			}
 		} catch (error) {
 			console.error("Error fetching user data:", error);

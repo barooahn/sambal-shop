@@ -7,6 +7,19 @@ module.exports = {
 		"./app/**/*.{ts,tsx}",
 		"./src/**/*.{ts,tsx}",
 	],
+	// Optimize CSS purging for production
+	safelist: [
+		// Only keep essential dynamic classes that might not be detected
+		'animate-spin',
+		'animate-pulse',
+		'bg-gradient-to-b',
+		'from-amber-50',
+		'to-orange-50',
+		'min-h-screen',
+		'flex',
+		'items-center',
+		'justify-center'
+	],
 	prefix: "",
 	theme: {
 		container: {

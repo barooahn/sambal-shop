@@ -55,8 +55,8 @@ export default function AdminPage() {
 
       if (messagesError) throw messagesError;
 
-      setSubscribers(subscribersData || []);
-      setMessages(messagesData || []);
+      setSubscribers((subscribersData as unknown as NewsletterSubscriber[]) || []);
+      setMessages((messagesData as unknown as ContactMessage[]) || []);
     } catch (err) {
       console.error('Error fetching data:', err);
       setError('Failed to load admin data. Please check your permissions.');

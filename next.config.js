@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+	enabled: process.env.ANALYZE === 'true',
+});
+
 const nextConfig = {
 	eslint: {
 		ignoreDuringBuilds: true,
@@ -62,10 +66,12 @@ const nextConfig = {
 		optimizeCss: false,
 	},
 	
-	// Modern JavaScript target to reduce polyfills
+	// Modern JavaScript targets to reduce polyfills and bundle size
 	compiler: {
 		removeConsole: process.env.NODE_ENV === 'production',
 	},
+	// SWC is enabled by default in Next.js 15
+	// output: 'standalone', // For deployment optimization - only add if needed for deployment
 	// Webpack optimizations for better performance
 	webpack: (config, { isServer, dev }) => {
 		// Apply optimizations in all builds for better dev performance
@@ -103,4 +109,4 @@ const nextConfig = {
 	},
 };
 
-module.exports = nextConfig;
+module.exports = withBundleAnalyzer(nextConfig);

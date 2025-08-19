@@ -49,13 +49,18 @@
       "WebFetch(domain:www.tjinstoko.eu)",
       "Bash(yarn lighthouse:*)",
       "Bash(kill:*)",
-      "Bash(git reset:*)"
+      "Bash(git reset:*)",
+      "Bash(yarn add:*)",
+      "Bash(ANALYZE=true yarn build)",
+      "Bash(yarn remove:*)",
+      "Bash(yarn start)"
     ],
     "deny": [],
     "defaultMode": "acceptEdits",
     "additionalDirectories": [
       "C:\\c\\Users\\thinb\\Desktop\\Sambal\\public\\images",
-      "C:\\c\\Users\\thinb\\Desktop"
+      "C:\\c\\Users\\thinb\\Desktop",
+      "C:\\c\\Users"
     ]
   }
 }

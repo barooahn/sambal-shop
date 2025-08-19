@@ -9,21 +9,28 @@ import Breadcrumb from "@/components/shared/Breadcrumb";
 import ThirdPartyScripts from "@/components/optimization/ThirdPartyScripts";
 import dynamic from "next/dynamic";
 
-// Lazy load non-critical components
+// Lazy load non-critical components with improved loading states
 const Footer = dynamic(() => import("@/components/navigation/Footer"), {
 	ssr: true,
-	loading: () => <div className="h-96" />, // Prevent layout shift
+	loading: () => <div className="h-96 bg-gray-50 animate-pulse" />, // Prevent layout shift with skeleton
 });
 
 const UKExitIntentPopup = dynamic(() => import("@/components/optimization/UKExitIntentPopup"), {
 	loading: () => null, // No loading state needed for popup
 });
+
+const WebVitals = dynamic(() => import("@/components/analytics/WebVitals").then(mod => ({ default: mod.WebVitals })), {
+	loading: () => null,
+});
+
+const Toaster = dynamic(() => import("sonner").then(mod => ({ default: mod.Toaster })), {
+	loading: () => null,
+});
+
 import PerformanceOptimizer, {
 	criticalCSS,
 	criticalImages,
 } from "@/components/optimization/PerformanceOptimizer";
-import { WebVitals } from "@/components/analytics/WebVitals";
-import { Toaster } from "sonner";
 
 const inter = Inter({
 	subsets: ["latin"],
@@ -122,6 +129,22 @@ export default function RootLayout({
 					type='image/webp'
 				/>
 				
+				{/* Preload critical self-hosted fonts */}
+				<link 
+					rel='preload' 
+					href='/fonts/junisrg_-webfont.woff2' 
+					as='font' 
+					type='font/woff2'
+					crossOrigin=''
+				/>
+				<link 
+					rel='preload' 
+					href='/fonts/junisb__-webfont.woff2' 
+					as='font' 
+					type='font/woff2'
+					crossOrigin=''
+				/>
+				
 				<link
 					rel='preconnect'
 					href='https://fonts.googleapis.com'
@@ -136,18 +159,6 @@ export default function RootLayout({
 					rel='preconnect'
 					href='https://www.google-analytics.com'
 					crossOrigin='anonymous'
-				/>
-				
-				{/* Preload critical Next.js chunks */}
-				<link
-					rel='modulepreload'
-					href='/_next/static/chunks/4bd1b696-602635ee57868870.js'
-					as='script'
-				/>
-				<link
-					rel='modulepreload'
-					href='/_next/static/chunks/5964-1a8fca11ddc9a9d0.js'
-					as='script'
 				/>
 				
 				{/* Critical CSS inlining to prevent render blocking */}
