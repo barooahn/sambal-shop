@@ -30,7 +30,7 @@ export const metadata = {
 		type: "website",
 		images: [
 			{
-				url: "https://spiceislandindonesia.com/images/Spice Island Indonesia Sambal Oelek 185g Label.png",
+				url: "https://spiceislandindonesia.com/images/sambal-oelek-lg.webp",
 				width: 400,
 				height: 400,
 				alt: "Indonesian Sambal BBQ Marinade - Authentic Grilling Sauce",
@@ -139,7 +139,7 @@ export default function SambalBBQMarinadePage() {
 							<div className='relative w-full lg:max-w-none ml-auto max-h-[60vh] flex items-center justify-end'>
 								<div className='absolute inset-0 bg-gradient-to-r from-gold-600/30 to-gold-400/30 rounded-full blur-3xl'></div>
 								<Image
-									src='/images/Spice Island Indonesia Sambal Oelek 185g Label.png'
+									src='/images/sambal-oelek-lg.webp'
 									alt='Indonesian Sambal BBQ Marinade - Authentic Grilling Sauce'
 									width={400}
 									height={400}

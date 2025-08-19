@@ -39,7 +39,7 @@ export default function StructuredData({
 			name: "Spice Island Indonesia",
 		},
 		image: [
-			"https://spiceislandindonesia.com/images/Spice Island Indonesia Sambal Oelek 185g Label.webp",
+			"https://spiceislandindonesia.com/images/sambal-oelek-lg.webp",
 			"https://spiceislandindonesia.com/images/Spice Island Indonesia Sambal Bali 185g Label.webp",
 			"https://spiceislandindonesia.com/images/Spice Island Indonesia Complete Packaging System Mockup.webp",
 		],
@@ -93,7 +93,7 @@ export default function StructuredData({
 				priceValidUntil: "2025-12-31",
 				availability: "https://schema.org/PreOrder",
 				itemCondition: "https://schema.org/NewCondition",
-				image: "https://spiceislandindonesia.com/images/Spice Island Indonesia Sambal Oelek 185g Label.webp",
+				image: "https://spiceislandindonesia.com/images/sambal-oelek-lg.webp",
 				url: "https://spiceislandindonesia.com/sambal-oelek-uk",
 				shippingDetails: [
 					{

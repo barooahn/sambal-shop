@@ -44,7 +44,7 @@ const testimonials: Testimonial[] = [
 		name: "Emma T.",
 		location: "Cardiff",
 		rating: 5,
-		review: "Chef Yossie's story drew me in, but the taste kept me coming back. This is restaurant-quality sambal that I can enjoy at home. The 75g sample was perfect to try first!",
+		review: "Chef Yossie's story drew me in, but the taste kept me coming back. This is restaurant-quality sambal that I can enjoy at home. The 45g sample was perfect to try first!",
 		product: "Sample Size",
 	},
 	{

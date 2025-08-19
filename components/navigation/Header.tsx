@@ -40,7 +40,8 @@ export default function Header() {
 				{
 					name: "Sambal Goreng",
 					href: "/sambal-goreng-uk",
-					description: "Sweet & spicy with traditional fried method",
+					description:
+						"Sweet & spicy with traditional fried method",
 				},
 				{
 					name: "Sample Pack",
@@ -150,19 +151,19 @@ export default function Header() {
 							<OptimizedImage
 								src='/images/optimized/logo-xs.webp'
 								alt='Spice Island Indonesia Logo'
-								width={40}
-								height={40}
+								width={45}
+								height={45}
 								className='w-full h-full object-contain'
 								priority
 								quality={85}
 								sizes='(max-width: 640px) 32px, 40px'
 							/>
 						</div>
-						<div className='block leading-none'>
-							<div className='text-sm sm:text-xl font-bold text-burgundy-900 font-logo'>
-								Spice Island
+						<div className='flex flex-col items-center justify-center leading-none'>
+							<div className='font-logo text-gold-700 pb-1'>
+								SPICE ISLAND
 							</div>
-							<div className='text-[10px] sm:text-xs text-gold-800 font-elegant tracking-[0.28em]'>
+							<div className='font-logo-sub text-gold-700'>
 								INDONESIA
 							</div>
 						</div>
@@ -326,7 +327,7 @@ export default function Header() {
 							>
 								🔍 Search
 							</Link>
-							
+
 							{navigation.map((item) => (
 								<div key={item.name}>
 									{item.hasDropdown ? (

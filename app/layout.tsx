@@ -57,7 +57,7 @@ export const metadata: Metadata = {
 		type: "website",
 		images: [
 			{
-				url: "/images/Spice Island Indonesia Sambal Oelek 185g Label.webp",
+				url: "/images/sambal-oelek-lg.webp",
 				width: 400,
 				height: 400,
 				alt: "Authentic Sambal UK - Indonesian Chili Paste Artisanal Hot Sauce 185g - UK Delivery - Chef Yossie Traditional Recipe",
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
 		description:
 			"UK's premier authentic sambal UK supplier. Traditional Indonesian chili paste crafted as artisanal hot sauce by Chef Yossie, nationwide delivery. Authentic sambal oelek & sambal bali.",
 		images: [
-			"/images/Spice Island Indonesia Sambal Oelek 185g Label.webp",
+			"/images/sambal-oelek-lg.webp",
 		],
 	},
 	robots: {

@@ -29,7 +29,7 @@ export const metadata = {
 		type: "website",
 		images: [
 			{
-				url: "https://spiceislandindonesia.com/images/Spice Island Indonesia Sambal Oelek 185g Label.png",
+				url: "https://spiceislandindonesia.com/images/sambal-oelek-lg.webp",
 				width: 400,
 				height: 400,
 				alt: "Authentic Indonesian Sambal Bali 185g jar - Sweet Spicy",
@@ -287,7 +287,7 @@ export default function SambalBaliSweetSpicyPage() {
 							<div className='relative w-full lg:max-w-none ml-auto max-h-[60vh] flex items-center justify-end'>
 								<div className='absolute inset-0 bg-gradient-to-r from-gold-600/30 to-gold-400/30 rounded-full blur-3xl'></div>
 								<Image
-									src='/images/optimized/Spice Island Indonesia Sambal Oelek 185g Label-responsive.webp'
+									src='/images/optimized/sambal-oelek-responsive.webp'
 									alt='Authentic Indonesian Sambal Bali 185g jar - Sweet Spicy'
 									width={664}
 									height={364}

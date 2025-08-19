@@ -42,7 +42,7 @@ const faqs: FAQItem[] = [
 	},
 	{
 		question: "Can I try before buying a full jar?",
-		answer: "Yes! We offer 75g sample sizes for £3.99 - perfect for discovering your favorite sambal before committing to the full 185g jar. This is especially great if you're new to Indonesian cuisine or want to try multiple varieties.",
+		answer: "Yes! We offer 45g sample sizes for £4.99 - perfect for discovering your favorite sambal before committing to the full 185g jar. This is especially great if you're new to Indonesian cuisine or want to try multiple varieties.",
 	},
 ];
 

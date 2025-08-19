@@ -31,7 +31,7 @@ export const metadata = {
 		type: "website",
 		images: [
 			{
-				url: "https://spiceislandindonesia.com/images/Spice Island Indonesia Sambal Oelek 185g Label.png",
+				url: "https://spiceislandindonesia.com/images/sambal-oelek-lg.webp",
 				width: 400,
 				height: 400,
 				alt: "Authentic Indonesian Sambal vs Sriracha comparison",
@@ -152,7 +152,7 @@ export default function SambalVsSrirachaPage() {
 								<div className='text-center mb-6'>
 									<div className='w-32 h-32 mx-auto mb-4 relative'>
 										<Image
-											src='/images/Spice Island Indonesia Sambal Oelek 185g Label.png'
+											src='/images/sambal-oelek-lg.webp'
 											alt='Authentic Indonesian Sambal Oelek'
 											fill
 											className='object-contain'

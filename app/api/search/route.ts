@@ -11,7 +11,7 @@ const searchData = [
 		url: "/sambal-oelek-uk",
 		category: "Products",
 		keywords: ["sambal", "oelek", "chili paste", "spicy", "pure", "traditional", "indonesian"],
-		image: "/images/optimized/Spice Island Indonesia Sambal Oelek 185g Label-md.webp",
+		image: "/images/optimized/sambal-oelek-md.webp",
 		price: "£7.49"
 	},
 	{
@@ -39,7 +39,7 @@ const searchData = [
 	{
 		id: "sample-pack",
 		title: "Sample Pack - Try First",
-		description: "Try all three sambal varieties in 75g jars. Perfect for discovering your favorite before buying full size.",
+		description: "Try all three sambal varieties in 45g jars. Perfect for discovering your favorite before buying full size.",
 		type: "product",
 		url: "/sample-pack-try-first", 
 		category: "Products",

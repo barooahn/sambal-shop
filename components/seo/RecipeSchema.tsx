@@ -65,27 +65,35 @@ export default function RecipeSchema({ recipe }: RecipeSchemaProps) {
 	const recipeSchema = {
 		"@context": "https://schema.org",
 		"@type": "Recipe",
-		name: recipe.name,
-		description: recipe.description,
-		image: recipe.image,
+		name: recipe.name || "Untitled Recipe",
+		description: recipe.description || "Delicious Indonesian recipe",
+		image: recipe.image || "/images/default-recipe.webp",
 		prepTime: recipe.prepTime,
 		cookTime: recipe.cookTime,
 		totalTime: recipe.totalTime,
 		recipeYield: recipe.servings,
 		recipeCuisine: recipe.cuisine,
 		recipeCategory: recipe.category,
-		keywords: recipe.keywords.join(", "),
+		keywords: recipe.keywords && recipe.keywords.length > 0 ? recipe.keywords.join(", ") : "Indonesian recipe, sambal, spicy food",
 		datePublished: recipe.datePublished,
 		author: {
-			"@type": recipe.author.type,
-			name: recipe.author.name,
+			"@type": recipe.author?.type || "Organization",
+			name: recipe.author?.name || "Spice Island Indonesia",
 		},
-		recipeIngredient: recipe.ingredients,
-		recipeInstructions: recipe.instructions.map((instruction) => ({
-			"@type": "HowToStep",
-			text: instruction.text,
-			position: instruction.step,
-		})),
+		recipeIngredient: recipe.ingredients && recipe.ingredients.length > 0 
+			? recipe.ingredients 
+			: ["Ingredients list not available"],
+		recipeInstructions: recipe.instructions && recipe.instructions.length > 0 
+			? recipe.instructions.map((instruction) => ({
+				"@type": "HowToStep",
+				text: instruction.text || "Step not available",
+				position: instruction.step || 1,
+			}))
+			: [{
+				"@type": "HowToStep",
+				text: "Instructions not available",
+				position: 1,
+			}],
 		aggregateRating: {
 			"@type": "AggregateRating",
 			ratingValue: "4.8",
@@ -93,16 +101,14 @@ export default function RecipeSchema({ recipe }: RecipeSchemaProps) {
 			bestRating: "5",
 			worstRating: "1",
 		},
-		nutrition: recipe.nutrition
-			? {
-					"@type": "NutritionInformation",
-					calories: recipe.nutrition.calories,
-					proteinContent: recipe.nutrition.protein,
-					carbohydrateContent: recipe.nutrition.carbohydrates,
-					fatContent: recipe.nutrition.fat,
-					sodiumContent: recipe.nutrition.sodium,
-				}
-			: undefined,
+		nutrition: {
+			"@type": "NutritionInformation",
+			calories: recipe.nutrition?.calories || "Information not available",
+			proteinContent: recipe.nutrition?.protein || "Information not available",
+			carbohydrateContent: recipe.nutrition?.carbohydrates || "Information not available", 
+			fatContent: recipe.nutrition?.fat || "Information not available",
+			sodiumContent: recipe.nutrition?.sodium || "Information not available",
+		},
 		video: {
 			"@type": "VideoObject",
 			name: `How to Make ${recipe.name}`,

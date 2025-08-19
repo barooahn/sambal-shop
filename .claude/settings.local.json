@@ -41,12 +41,21 @@
       "Bash(yarn optimize-images:*)",
       "Bash(git commit:*)",
       "Bash(where convert)",
-      "Bash(python:*)"
+      "Bash(python:*)",
+      "Bash(taskkill:*)",
+      "Bash(curl:*)",
+      "WebFetch(domain:dapurc.uk)",
+      "WebFetch(domain:www.tokoindonesia.co.uk)",
+      "WebFetch(domain:www.tjinstoko.eu)",
+      "Bash(yarn lighthouse:*)",
+      "Bash(kill:*)",
+      "Bash(git reset:*)"
     ],
     "deny": [],
     "defaultMode": "acceptEdits",
     "additionalDirectories": [
-      "C:\\c\\Users\\thinb\\Desktop\\Sambal\\public\\images"
+      "C:\\c\\Users\\thinb\\Desktop\\Sambal\\public\\images",
+      "C:\\c\\Users\\thinb\\Desktop"
     ]
   }
 }

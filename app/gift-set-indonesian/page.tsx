@@ -32,7 +32,7 @@ export const metadata = {
 		type: "website",
 		images: [
 			{
-				url: "https://sambal-shop.vercel.app/images/Spice Island Indonesia Sambal Oelek 185g Label.png",
+				url: "https://sambal-shop.vercel.app/images/sambal-oelek-lg.webp",
 				width: 400,
 				height: 400,
 				alt: "Indonesian Food Gift Set - Authentic Sambal Collection",
@@ -295,7 +295,7 @@ export default function GiftSetIndonesianPage() {
 							<div className='relative w-full max-w-md mx-auto'>
 								<div className='absolute inset-0 bg-gradient-to-r from-gold-600/30 to-gold-400/30 rounded-full blur-3xl'></div>
 								<Image
-									src='/images/Spice Island Indonesia Sambal Oelek 185g Label.png'
+									src='/images/sambal-oelek-lg.webp'
 									alt='Indonesian Food Gift Set - Authentic Sambal Collection'
 									width={400}
 									height={400}

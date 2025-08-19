@@ -2,6 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Brand Fonts - switched to self-hosted Junius */
+@font-face {
+	font-family: "Junius";
+	src:
+		url("/fonts/junisrg_-webfont.woff2") format("woff2"),
+		url("/fonts/junisrg_-webfont.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Junius Bold";
+	src:
+		url("/fonts/junisb__-webfont.woff2") format("woff2"),
+		url("/fonts/junisb__-webfont.woff") format("woff");
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Junius Italic";
+	src:
+		url("/fonts/junisi___-webfont.woff2") format("woff2"),
+		url("/fonts/junisi___-webfont.woff") format("woff");
+	font-weight: normal;
+	font-style: italic;
+	font-display: swap;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;500;600&display=swap");
+
+/* Brand Colors */
+:root {
+	--color-burgundy: #4c1d1d;
+	--color-dark-red: #7a1f1f;
+	--color-gold: #d4af37;
+	--color-black: #0f0f0f;
+	--color-highlight-red: #c1272d;
+}
+
+body {
+	font-family: "Junius", serif !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Junius", serif !important;
+}
+
+.small-caps {
+	font-variant: small-caps !important;
+	color: var(--color-highlight-red) !important;
+}
+
+.script {
+	font-family: "Great Vibes", cursive !important;
+	color: var(--color-gold) !important;
+}
+
 /* UK Exit Intent Popup Animations */
 @keyframes fadeIn {
 	from {
@@ -222,14 +287,13 @@
 	}
 }
 
-
 /* Custom font classes */
 .font-brand {
 	font-family: var(--font-playfair), serif;
 }
 
 .font-elegant {
-	font-family: var(--font-cormorant), serif;
+	font-family: "Cormorant Garamond", serif !important;
 }
 
 .font-script {
@@ -240,10 +304,27 @@
 	font-family: var(--font-inter), sans-serif;
 }
 
-/* Logo font class mapping to Cinzel */
+/* Logo font class mapping to Junius for navbar branding */
 .font-logo {
-	font-family: var(--font-logo), serif;
-	letter-spacing: 0.02em;
+	font-family: "Junius", serif !important;
+	text-transform: uppercase !important;
+	font-size: 1.4rem !important;
+	display: flex !important;
+	justify-content: center !important;
+	align-items: center !important;
+	text-align: center !important;
+}
+
+.font-logo-sub {
+	font-family: "Inter", sans-serif !important;
+	font-size: 0.8rem !important;
+	letter-spacing: 0.3rem;
+	display: flex !important;
+	justify-content: center !important;
+	align-items: center !important;
+	text-align: center !important;
+	margin-top: 0rem;
+	width: 100% !important;
 }
 
 /* Floating animation for ingredients */

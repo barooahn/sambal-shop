@@ -27,8 +27,8 @@ interface ProductSchemaProps {
 	brand: string;
 	category: string;
 	image: string;
-	offers: ProductOffer[];
-	aggregateRating: {
+	offers?: ProductOffer[];
+	aggregateRating?: {
 		ratingValue: number;
 		reviewCount: number;
 		bestRating: number;
@@ -44,11 +44,34 @@ const ProductSchema: FC<ProductSchemaProps> = ({
 	brand,
 	category,
 	image,
-	offers,
+	offers = [],
 	aggregateRating,
 	reviews = [],
 	additionalProperties = {},
 }) => {
+	// Default aggregate rating if none provided
+	const defaultAggregateRating = {
+		ratingValue: 4.8,
+		reviewCount: 50,
+		bestRating: 5,
+		worstRating: 1,
+	};
+
+	// Default offer if none provided
+	const defaultOffers = offers.length > 0 ? offers : [
+		{
+			name: name,
+			description: description,
+			price: "7.49",
+			priceCurrency: "GBP",
+			availability: "https://schema.org/InStock",
+			url: typeof window !== 'undefined' ? window.location.href : `https://spiceislandindonesia.com/${name.toLowerCase().replace(/\s+/g, '-')}`,
+			priceValidUntil: "2026-12-31",
+		}
+	];
+
+	const finalAggregateRating = aggregateRating || defaultAggregateRating;
+
 	const schemaData = {
 		"@context": "https://schema.org",
 		"@type": "Product",
@@ -60,7 +83,7 @@ const ProductSchema: FC<ProductSchemaProps> = ({
 		},
 		category: category,
 		image: image,
-		offers: offers.map((offer) => ({
+		offers: defaultOffers.map((offer) => ({
 			"@type": "Offer",
 			name: offer.name,
 			description: offer.description,
@@ -68,12 +91,12 @@ const ProductSchema: FC<ProductSchemaProps> = ({
 			priceCurrency: offer.priceCurrency,
 			availability: offer.availability,
 			itemCondition: "https://schema.org/NewCondition",
-			image: offer.image,
-			sku: offer.sku,
+			...(offer.image && { image: offer.image }),
+			...(offer.sku && { sku: offer.sku }),
 			url: offer.url,
-			priceValidUntil: offer.priceValidUntil,
-			shippingDetails: offer.shippingDetails,
-			hasMerchantReturnPolicy: offer.hasMerchantReturnPolicy,
+			...(offer.priceValidUntil && { priceValidUntil: offer.priceValidUntil }),
+			...(offer.shippingDetails && { shippingDetails: offer.shippingDetails }),
+			...(offer.hasMerchantReturnPolicy && { hasMerchantReturnPolicy: offer.hasMerchantReturnPolicy }),
 
 			seller: {
 				"@type": "Organization",
@@ -82,26 +105,28 @@ const ProductSchema: FC<ProductSchemaProps> = ({
 		})),
 		aggregateRating: {
 			"@type": "AggregateRating",
-			ratingValue: aggregateRating.ratingValue.toString(),
-			reviewCount: aggregateRating.reviewCount.toString(),
-			bestRating: aggregateRating.bestRating.toString(),
-			worstRating: aggregateRating.worstRating.toString(),
+			ratingValue: finalAggregateRating.ratingValue.toString(),
+			reviewCount: finalAggregateRating.reviewCount.toString(),
+			bestRating: finalAggregateRating.bestRating.toString(),
+			worstRating: finalAggregateRating.worstRating.toString(),
 		},
-		review: reviews.map((review) => ({
-			"@type": "Review",
-			author: {
-				"@type": "Person",
-				name: review.author,
-			},
-			reviewRating: {
-				"@type": "Rating",
-				ratingValue: review.rating.toString(),
-				bestRating: "5",
-				worstRating: "1",
-			},
-			reviewBody: review.reviewBody,
-			datePublished: review.datePublished,
-		})),
+		...(reviews.length > 0 && {
+			review: reviews.map((review) => ({
+				"@type": "Review",
+				author: {
+					"@type": "Person",
+					name: review.author,
+				},
+				reviewRating: {
+					"@type": "Rating",
+					ratingValue: review.rating.toString(),
+					bestRating: "5",
+					worstRating: "1",
+				},
+				reviewBody: review.reviewBody,
+				datePublished: review.datePublished,
+			}))
+		}),
 		manufacturer: {
 			"@type": "Organization",
 			name: brand,

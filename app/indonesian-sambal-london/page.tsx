@@ -31,7 +31,7 @@ export const metadata = {
 		type: "website",
 		images: [
 			{
-				url: "https://spiceislandindonesia.com/images/Spice Island Indonesia Sambal Oelek 185g Label.png",
+				url: "https://spiceislandindonesia.com/images/sambal-oelek-lg.webp",
 				width: 400,
 				height: 400,
 				alt: "Indonesian Sambal delivery London",
@@ -118,7 +118,7 @@ export default function IndonesianSambalLondonPage() {
 							<div className='aspect-square max-w-md mx-auto relative'>
 								<div className='absolute inset-0 bg-gradient-to-br from-gold-400/30 to-gold-600/30 rounded-full blur-3xl'></div>
 								<Image
-									src='/images/Spice Island Indonesia Sambal Oelek 185g Label.png'
+									src='/images/sambal-oelek-lg.webp'
 									alt='Indonesian Sambal delivery across London'
 									fill
 									className='object-contain relative z-10 drop-shadow-2xl'

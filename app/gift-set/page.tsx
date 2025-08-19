@@ -351,7 +351,7 @@ export default function GiftSetPage() {
 						<div className='bg-burgundy-50 rounded-sm p-6 border border-burgundy-200'>
 							<div className='aspect-square mb-4 bg-burgundy-100 rounded-sm p-4'>
 								<Image
-									src='/images/optimized/Spice Island Indonesia Sambal Oelek 185g Label-lg.webp'
+									src='/images/optimized/sambal-oelek-lg.webp'
 									alt='Sambal Oelek - Pure Heat'
 									width={200}
 									height={200}

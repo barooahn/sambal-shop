@@ -38,7 +38,7 @@ export const metadata = {
 		type: "website",
 		images: [
 			{
-				url: "https://spiceislandindonesia.com/images/Spice Island Indonesia Sambal Oelek 185g Label.webp",
+				url: "https://spiceislandindonesia.com/images/sambal-oelek-lg.webp",
 				width: 400,
 				height: 400,
 				alt: "Authentic Indonesian Sambal Oelek 185g - UK Delivery - Chef Yossie Traditional Recipe",
@@ -156,7 +156,7 @@ export default function SambalOelekUKPage() {
 			"Traditional Indonesian chili paste made from fresh red chilies, salt, and vinegar. Handcrafted by Chef Yossie using authentic Bandung family recipes.",
 		brand: "Spice Island Indonesia",
 		category: "Condiments & Sauces",
-		image: "https://spiceislandindonesia.com/images/Spice Island Indonesia Sambal Oelek 185g Label.png",
+		image: "https://spiceislandindonesia.com/images/sambal-oelek-lg.webp",
 		// Merchant-friendly additions
 		shippingDetails: [
 			{
@@ -493,7 +493,7 @@ export default function SambalOelekUKPage() {
 								<div className='aspect-square rounded-sm overflow-hidden shadow-luxury bg-gradient-to-br from-burgundy-900/10 to-gold-600/10 p-6'>
 									<div className='w-full h-full rounded-sm flex items-center justify-center'>
 										<Image
-											src='/images/optimized/Spice Island Indonesia Sambal Oelek 185g Label-lg.webp'
+											src='/images/optimized/sambal-oelek-lg.webp'
 											alt='Authentic Indonesian Sambal Oelek 185g - Pure chili paste made by Chef Yossie'
 											width={500}
 											height={500}

@@ -130,7 +130,7 @@ export default function ShopPage() {
 		sampleProduct,
 		{
 			...products.find((p) => p.name.includes("Oelek"))!,
-			image: "/images/optimized/Spice Island Indonesia Sambal Oelek 185g Label-lg.webp",
+			image: "/images/optimized/sambal-oelek-lg.webp",
 			detailedName: "Sambal Oelek",
 			subtitle: "Pure Indonesian Fire",
 			scoville: "25,000 SHU",

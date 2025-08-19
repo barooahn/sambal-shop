@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, ArrowLeft, Share2 } from "lucide-react";
 import VoiceSearchOptimization from "@/components/seo/VoiceSearchOptimization";
 import ArticleSchema from "@/components/seo/ArticleSchema";
+import SimpleProductSchema from "@/components/seo/SimpleProductSchema";
 
 // Sample blog post data - in a real app, this would come from a CMS or database
 const blogPosts = {
@@ -539,7 +540,7 @@ const blogPosts = {
 
 		<p>Remember: this isn&apos;t just about heat - it&apos;s about discovering a completely different approach to spicy food. Indonesian sambal offers complexity, tradition, and flavors that have been perfected over centuries. Welcome to the real world of Indonesian spice.</p>
 		`,
-		image: "/images/Spice Island Indonesia Sambal Oelek 185g Label.png",
+		image: "/images/sambal-oelek-lg.webp",
 		category: "Food Education",
 		readTime: "12 min read",
 		publishDate: "2024-02-01",
