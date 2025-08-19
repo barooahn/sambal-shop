@@ -126,47 +126,48 @@ export default function HeroSection() {
 							</div>
 						</div>
 
-						{/* Main headline with UK market optimization */}
+						{/* Main headline with Sambal Goreng focus */}
 						<h1 className='voice-hero-title mobile-text-shadow text-4xl sm:text-4xl lg:text-6xl font-light text-white mb-1 sm:mb-2 lg:mb-3 leading-tight tracking-tight'>
 							<span className='block font-light text-white/90'>
 								Authentic
 							</span>
-							<span className='block font-light text-white/90'>
-								Indonesian Sambal
-							</span>
 							<span className='sambal-title block font-bold'>
-								From Spice Islands
+								Sambal Goreng
+							</span>
+							<span className='block font-light text-white/90'>
+								Coming Soon to UK
 							</span>
 						</h1>
 
 						{/* Subtitle */}
 						<div className='mb-2 sm:mb-3 lg:mb-4'>
 							<p className='text-base sm:text-lg lg:text-xl text-white/80 font-light tracking-wide'>
-								The Original Asian Hot Sauce - Not Thai, Not Malaysian
+								Sweet & Spicy Indonesian Chili Paste - Traditional Recipe
 							</p>
 						</div>
 
 						{/* Description */}
 						<p className='voice-product-description mobile-text-shadow text-sm lg:text-base text-white/90 mb-3 sm:mb-4 lg:mb-6 max-w-xl mx-auto lg:mx-0 leading-relaxed font-light px-2 lg:px-0'>
-							Meet Chef Yossie - born in Bandung, trained
-							in traditional Indonesian methods, now bringing{" "}
+							Chef Yossie's signature{" "}
 							<span className='text-amber-300 font-medium'>
-								authentic Spice Islands sambal
+								Sambal Goreng
 							</span>{" "}
+							combines sweet palm sugar with fiery chilies using the traditional{" "}
+							<em>goreng</em> (fried) method from West Java.{" "}
 							<span className='voice-location-info'>
-								to UK homes. Real Indonesian heritage, not commercial imitations.
-								Available across London, Manchester, Birmingham, and nationwide.
+								Perfect balance of sweet and heat - coming soon to the UK.
+								Join our waitlist for early access.
 							</span>
 						</p>
 
 						{/* Features with mobile-optimized design */}
 						<div className='flex flex-col sm:flex-row justify-center lg:justify-start gap-2 sm:gap-3 lg:gap-4 mb-3 sm:mb-4 lg:mb-6 px-2 lg:px-0'>
 							{[
-								{ icon: ChefHat, label: "Spice Islands Heritage" },
-								{ icon: Award, label: "Not British-Made" },
+								{ icon: Heart, label: "Sweet & Spicy Balance" },
+								{ icon: ChefHat, label: "Traditional Fried Method" },
 								{
-									icon: Flame,
-									label: "Traditional Methods",
+									icon: Award,
+									label: "West Java Recipe",
 								},
 							].map(({ icon: Icon, label }) => (
 								<div
@@ -184,7 +185,7 @@ export default function HeroSection() {
 						{/* CTA Buttons with mobile optimization */}
 						<div className='flex flex-col gap-2.5 lg:gap-4 px-2 lg:px-0'>
 							<button
-								aria-label='Join UK waiting list'
+								aria-label='Join Sambal Goreng waiting list'
 								onClick={handleInterestClick}
 								disabled={
 									interestState.isSubmitting ||
@@ -206,14 +207,14 @@ export default function HeroSection() {
 										<>
 											<Heart className='w-4 lg:w-5 h-4 lg:h-5' />
 											<span className='text-sm lg:text-base'>
-												UK VIP List! 🇬🇧🌶️
+												Order Confirmed! 🌶️
 											</span>
 										</>
 									) : (
 										<>
 											<Heart className='w-4 lg:w-5 h-4 lg:h-5 group-hover:animate-bounce' />
 											<span className='text-sm lg:text-base'>
-												Join UK waiting list
+												Join Sambal Goreng Waitlist
 											</span>
 										</>
 									)}
@@ -221,20 +222,14 @@ export default function HeroSection() {
 							</button>
 
 							<button
-								aria-label='Get UK Updates'
+								aria-label='Learn About Sambal Goreng'
 								onClick={() => {
-									const newsletterSection =
-										document.getElementById(
-											"newsletter-signup"
-										);
-									newsletterSection?.scrollIntoView({
-										behavior: "smooth",
-									});
+									window.location.href = "/sambal-goreng-uk";
 								}}
 								className='group bg-white/10 backdrop-blur-md hover:bg-white/20 text-white font-semibold py-3 lg:py-4 px-6 lg:px-8 rounded-lg border border-white/30 hover:border-amber-300/50 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 w-full min-h-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent'
 							>
 								<span className='group-hover:text-amber-300 transition-colors duration-300 text-sm lg:text-base'>
-									Get UK Updates
+									Learn More About Sambal Goreng
 								</span>
 							</button>
 						</div>
@@ -265,8 +260,8 @@ export default function HeroSection() {
 							{/* Mobile-optimized container with proper aspect ratio */}
 							<div className='relative z-20 group w-full' style={{ aspectRatio: '1 / 1', minHeight: '280px' }}>
 								<Image
-									src='/images/optimized/sambal-bali-md.webp'
-									alt='Authentic Sambal UK - Spice Island Indonesia Sambal Bali Indonesian Chili Paste Artisanal Hot Sauce'
+									src='/images/optimized/sambal-goreng-md.webp'
+									alt='Authentic Sambal Goreng UK - Traditional Indonesian Sweet & Spicy Chili Paste from Spice Island Indonesia'
 									fill
 									className='object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-700 ease-out'
 									priority

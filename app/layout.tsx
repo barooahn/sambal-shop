@@ -49,25 +49,25 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
 	metadataBase: new URL("https://www.spiceislandindonesia.com"),
-	title: "Authentic Sambal UK | Indonesian Chili Paste & Artisanal Hot Sauce | Spice Island Indonesia",
+	title: "Authentic Sambal Goreng UK | Traditional Sweet & Spicy Indonesian Chili Paste | Spice Island Indonesia",
 	description:
-		"UK's premier authentic sambal UK supplier. Traditional Indonesian chili paste crafted as artisanal hot sauce from the Spice Islands. Delivered nationwide - sambal oelek, sambal bali & gift sets with free UK delivery over £20.",
+		"Coming Soon: Authentic Sambal Goreng - Traditional Indonesian sweet & spicy chili paste made with palm sugar and traditional goreng method. Join our waitlist for early access to this premium Indonesian condiment.",
 	keywords:
-		"authentic sambal UK, Indonesian chili paste, artisanal hot sauce, sambal oelek UK, sambal bali UK, traditional chili paste UK, Indonesian condiments UK delivery, authentic sambal London, chili paste delivery Manchester, Indonesian food Birmingham, premium hot sauce UK, sambal Edinburgh, authentic indonesian cuisine UK, Chef Yossie sambal, artisanal condiments UK, traditional Indonesian hot sauce",
+		"sambal goreng UK, order sambal goreng, sweet spicy chili paste, Indonesian sambal goreng, traditional sambal goreng UK, palm sugar chili paste, goreng method sambal, authentic sambal goreng, sambal goreng delivery UK, Chef Yossie sambal goreng, Indonesian chili paste, sambal goreng £7.49, artisanal sambal goreng, West Java sambal recipe, traditional Indonesian condiments UK",
 	verification: {
 		google: process.env.NEXT_PUBLIC_GSC_VERIFICATION_CODE,
 	},
 	openGraph: {
-		title: "Authentic Sambal UK | Indonesian Chili Paste & Artisanal Hot Sauce | Spice Island Indonesia",
+		title: "Authentic Sambal Goreng UK | Traditional Sweet & Spicy Indonesian Chili Paste | Spice Island Indonesia",
 		description:
-			"UK's premier authentic sambal UK supplier. Traditional Indonesian chili paste crafted as artisanal hot sauce by Chef Yossie, nationwide delivery. Authentic sambal oelek & sambal bali.",
+			"Coming Soon: Authentic Sambal Goreng - Traditional Indonesian sweet & spicy chili paste with palm sugar. Made using traditional goreng method from West Java. Join our waitlist for early access.",
 		type: "website",
 		images: [
 			{
-				url: "/images/sambal-oelek-lg.webp",
+				url: "/images/optimized/sambal-goreng-md.webp",
 				width: 400,
 				height: 400,
-				alt: "Authentic Sambal UK - Indonesian Chili Paste Artisanal Hot Sauce 185g - UK Delivery - Chef Yossie Traditional Recipe",
+				alt: "Authentic Sambal Goreng UK - Traditional Indonesian Sweet & Spicy Chili Paste £7.49 - UK Delivery Chef Yossie Recipe",
 			},
 		],
 		locale: "en_GB",
@@ -75,11 +75,11 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "Authentic Sambal UK | Indonesian Chili Paste & Artisanal Hot Sauce | Spice Island Indonesia",
+		title: "Authentic Sambal Goreng UK | Traditional Sweet & Spicy Indonesian Chili Paste | Spice Island Indonesia",
 		description:
-			"UK's premier authentic sambal UK supplier. Traditional Indonesian chili paste crafted as artisanal hot sauce by Chef Yossie, nationwide delivery. Authentic sambal oelek & sambal bali.",
+			"Coming Soon: Authentic Sambal Goreng - Traditional Indonesian sweet & spicy chili paste with palm sugar. Made using traditional goreng method from West Java. Join our waitlist for early access.",
 		images: [
-			"/images/sambal-oelek-lg.webp",
+			"/images/optimized/sambal-goreng-md.webp",
 		],
 	},
 	robots: {
@@ -124,7 +124,7 @@ export default function RootLayout({
 				/>
 				<link 
 					rel='preload' 
-					href='/images/optimized/sambal-bali-md.webp' 
+					href='/images/optimized/sambal-goreng-md.webp' 
 					as='image' 
 					type='image/webp'
 				/>

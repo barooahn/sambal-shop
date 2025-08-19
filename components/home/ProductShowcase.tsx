@@ -24,7 +24,60 @@ export default function ProductShowcase() {
 
 				{/* Product Grid with Glass Morphism */}
 				<div className='grid md:grid-cols-2 lg:grid-cols-3 gap-12 mb-20'>
-					{/* Sambal Oelek */}
+					{/* Sambal Goreng - Featured First */}
+					<div className='group'>
+						<div className='relative mb-6'>
+							{/* Clean glass morphism product card - no borders */}
+							<div className='aspect-square rounded-sm overflow-hidden shadow-lg group-hover:shadow-xl transition-all duration-500 bg-white/20 backdrop-blur-md group-hover:bg-white/30'>
+								<div className='w-full h-full flex items-center justify-center p-2 relative'>
+									{/* Subtle inner glass effect */}
+									<div className='absolute inset-4 rounded-sm bg-gradient-to-br from-white/10 to-transparent backdrop-blur-sm'></div>
+									<Image
+										src='/images/optimized/sambal-goreng-md.webp'
+										alt='Authentic Sambal Goreng UK - Traditional Indonesian Sweet & Spicy Chili Paste 185g - UK Delivery Chef Yossie Recipe'
+										width={400}
+										height={400}
+										className='w-full h-full object-contain drop-shadow-2xl relative z-10 group-hover:scale-105 transition-transform duration-500'
+										loading='lazy'
+										sizes='(max-width: 768px) 90vw, (max-width: 1024px) 45vw, (max-width: 1920px) 350px, 450px'
+									/>
+								</div>
+							</div>
+							{/* Featured badge */}
+							<div className='absolute -top-3 -right-3 bg-gradient-to-r from-burgundy-600 to-burgundy-700 text-white px-4 py-2 rounded-full text-sm font-bold font-elegant shadow-lg'>
+								COMING SOON
+							</div>
+						</div>
+						<div className='text-center'>
+							<h3 className='text-2xl font-bold text-burgundy-900 mb-2 font-brand'>
+								Sambal Goreng
+							</h3>
+							<p className='text-neutral-600 mb-4 font-body'>
+								Sweet & spicy with palm sugar - the perfect
+								balance of heat and sweetness using traditional{" "}
+								<em>goreng</em> (fried) method from West Java.
+							</p>
+							<div className='flex justify-center items-center space-x-2 mb-4'>
+								<span className='text-burgundy-600'>
+									🌶️🌶️🌶️
+								</span>
+								<span className='text-sm text-neutral-500 font-body'>
+									Medium-Hot
+								</span>
+							</div>
+							<div className='text-lg font-bold text-burgundy-900 font-brand mb-3'>
+								£7.49
+							</div>
+							<Link
+								href='/sambal-goreng-uk'
+								className='text-sm text-burgundy-700 hover:text-burgundy-900 font-medium underline decoration-gold-600 hover:decoration-burgundy-900 transition-colors'
+							>
+								Learn about Sambal Goreng →
+							</Link>
+						</div>
+					</div>
+
+					{/* Sambal Oelek - Second */}
 					<div className='group'>
 						<div className='relative mb-6'>
 							{/* Clean glass morphism product card - no borders */}
@@ -45,7 +98,7 @@ export default function ProductShowcase() {
 							</div>
 							{/* Clean glass morphism badge */}
 							<div className='absolute -top-3 -right-3 bg-burgundy-600/90 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm font-bold font-elegant shadow-lg'>
-								Most Popular
+								Coming Soon
 							</div>
 						</div>
 						<div className='text-center'>
@@ -126,12 +179,9 @@ export default function ProductShowcase() {
 							<div className='text-lg font-bold text-burgundy-900 font-brand mb-3'>
 								£8.49
 							</div>
-							<Link
-								href='/sambal-bali-sweet-spicy'
-								className='text-sm text-burgundy-700 hover:text-burgundy-900 font-medium underline decoration-gold-600 hover:decoration-burgundy-900 transition-colors'
-							>
-								Discover Sambal Bali&apos;s unique flavor →
-							</Link>
+							<div className='text-sm text-neutral-500 font-body'>
+								Coming Soon - Join waitlist
+							</div>
 						</div>
 					</div>
 

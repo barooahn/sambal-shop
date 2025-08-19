@@ -45,3 +45,6 @@ docs/
 CLAUDE.md
 design.mdc
 default_ui_darkmode.css
+
+# Lighthouse performance reports
+lighthouse-reports/

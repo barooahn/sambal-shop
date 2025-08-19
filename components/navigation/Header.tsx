@@ -28,20 +28,20 @@ export default function Header() {
 			hasDropdown: true,
 			dropdown: [
 				{
-					name: "Sambal Oelek",
-					href: "/sambal-oelek-uk",
-					description: "Pure chili paste - the foundation",
-				},
-				{
-					name: "Sambal Bali",
-					href: "/sambal-bali-aromatic-spicy",
-					description: "Aromatic spices with sophisticated heat",
-				},
-				{
 					name: "Sambal Goreng",
 					href: "/sambal-goreng-uk",
 					description:
 						"Sweet & spicy with traditional fried method",
+				},
+				{
+					name: "Sambal Oelek",
+					href: "/sambal-oelek-uk",
+					description: "Pure chili paste - Coming Soon",
+				},
+				{
+					name: "Sambal Bali",
+					href: "/sambal-bali-aromatic-spicy",
+					description: "Aromatic spices - Coming Soon",
 				},
 				{
 					name: "Sample Pack",
@@ -278,16 +278,14 @@ export default function Header() {
 										Sign In
 									</Button>
 								</Link>
-								<Link href='/shop'>
+								<Link href='/sambal-goreng-uk'>
 									<Button
 										variant='primary'
 										size='lg'
 										className='font-elegant'
 									>
 										<ShoppingCart className='w-4 h-4 mr-2' />
-										{SALES_ENABLED
-											? "Shop Now"
-											: "Coming Soon"}
+										Learn About Sambal Goreng
 									</Button>
 								</Link>
 							</>
@@ -431,7 +429,7 @@ export default function Header() {
 												Sign In
 											</Button>
 										</Link>
-										<Link href='/shop'>
+										<Link href='/sambal-goreng-uk'>
 											<Button
 												variant='primary'
 												size='lg'
@@ -443,9 +441,7 @@ export default function Header() {
 												}
 											>
 												<ShoppingCart className='w-4 h-4 mr-2' />
-												{SALES_ENABLED
-													? "Shop Now"
-													: "Coming Soon"}
+												Learn About Sambal Goreng
 											</Button>
 										</Link>
 									</>
