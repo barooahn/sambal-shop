@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ChefHat, Award, Leaf, Truck, CheckCircle, Flame, Gift, Zap } from "lucide-react";
+import TrustIndicators, { SecurityBadges } from "@/components/ui/TrustIndicators";
 
 export default function ProductShowcase() {
 	return (
@@ -343,19 +344,9 @@ export default function ProductShowcase() {
 									</Link>
 								</div>
 								
-								<div className='mt-8 flex flex-wrap items-center justify-center gap-6 text-neutral-600 text-sm font-body'>
-									<div className='flex items-center space-x-2 bg-white/60 px-4 py-2 rounded-full border border-gold-200/50'>
-										<span className='text-amber-500'>⭐</span>
-										<span>4.8/5 rating (24 reviews)</span>
-									</div>
-									<div className='flex items-center space-x-2 bg-white/60 px-4 py-2 rounded-full border border-gold-200/50'>
-										<span className='text-blue-500'>🚚</span>
-										<span>Ships within 2 days</span>
-									</div>
-									<div className='flex items-center space-x-2 bg-white/60 px-4 py-2 rounded-full border border-gold-200/50'>
-										<span className='text-green-500'>💝</span>
-										<span>Gift wrapping available</span>
-									</div>
+								<div className='mt-8'>
+									<TrustIndicators layout="compact" className="mb-6" />
+									<SecurityBadges className="mt-4" />
 								</div>
 							</div>
 						</div>

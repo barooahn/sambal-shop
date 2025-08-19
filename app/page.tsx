@@ -14,6 +14,7 @@ import NewsletterSection from "@/components/home/NewsletterSection";
 import FAQSection from "@/components/home/FAQSection";
 import ContactSection from "@/components/home/ContactSection";
 import FloatingIngredients from "@/components/ui/FloatingIngredients";
+import TrustIndicators, { DeliveryGuarantee } from "@/components/ui/TrustIndicators";
 import { Waves, Triangle } from "lucide-react";
 
 // Ingredient configurations for different sections
@@ -666,6 +667,58 @@ export default function Home() {
 					<FAQSection />
 					<FloatingIngredients ingredients={faqIngredients} />
 				</div>
+
+				{/* Trust Indicators & Security Section */}
+				<section className='py-16 bg-gradient-to-br from-white via-cream-50 to-gold-50/30 relative'>
+					<div className='absolute top-0 left-0 w-32 h-32 bg-gradient-to-r from-green-100/30 to-blue-100/30 rounded-full blur-2xl'></div>
+					<div className='absolute bottom-0 right-0 w-24 h-24 bg-gradient-to-l from-purple-100/30 to-amber-100/30 rounded-full blur-xl'></div>
+					
+					<div className='container mx-auto px-4 relative z-10'>
+						<div className='text-center mb-12'>
+							<h2 className='text-3xl lg:text-4xl font-bold text-burgundy-900 mb-4 font-heading'>
+								Your Peace of Mind Guaranteed
+							</h2>
+							<p className='text-xl text-gray-600 font-body max-w-3xl mx-auto'>
+								Shop with confidence knowing we prioritize quality, security, and customer satisfaction
+							</p>
+						</div>
+
+						<div className='grid lg:grid-cols-3 gap-8 mb-12'>
+							<div className='lg:col-span-2'>
+								<TrustIndicators layout="grid" className="mb-8" />
+							</div>
+							<div className='lg:col-span-1'>
+								<DeliveryGuarantee />
+							</div>
+						</div>
+
+						<div className='text-center'>
+							<div className='bg-white/80 backdrop-blur-sm rounded-xl p-6 border border-gold-200/50 shadow-sm inline-block'>
+								<h3 className='text-lg font-bold text-burgundy-900 mb-3 font-brand'>
+									Why Customers Trust Us
+								</h3>
+								<div className='grid grid-cols-2 md:grid-cols-4 gap-4 text-sm font-body'>
+									<div className='text-center'>
+										<div className='text-2xl mb-1'>240+</div>
+										<div className='text-neutral-600'>Happy Customers</div>
+									</div>
+									<div className='text-center'>
+										<div className='text-2xl mb-1'>4.8★</div>
+										<div className='text-neutral-600'>Average Rating</div>
+									</div>
+									<div className='text-center'>
+										<div className='text-2xl mb-1'>95%</div>
+										<div className='text-neutral-600'>Reorder Rate</div>
+									</div>
+									<div className='text-center'>
+										<div className='text-2xl mb-1'>100%</div>
+										<div className='text-neutral-600'>Authentic Recipes</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
 
 				{/* Contact Section with final visual flourish */}
 				<div className='relative'>

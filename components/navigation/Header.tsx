@@ -175,10 +175,9 @@ export default function Header() {
 						aria-label='Primary'
 					>
 						{navigation.map((item) => (
-							<div key={item.name} className='relative'>
+							<div key={item.name}>
 								{item.hasDropdown ? (
 									<div
-										className='relative'
 										onMouseEnter={
 											handleMouseEnter
 										}
@@ -195,44 +194,240 @@ export default function Header() {
 											<div
 												id='products-menu'
 												role='menu'
-												className='absolute top-full left-0 w-80 bg-white rounded-sm shadow-luxury border border-gold-200 p-6 z-50'
+												className='absolute top-full left-1/2 -translate-x-1/2 w-[80vw] max-w-7xl bg-white rounded-lg shadow-lg border border-gold-200 p-4 sm:p-6 z-50'
 											>
-												<div className='space-y-4'>
-													{item.dropdown?.map(
-														(
-															dropdownItem
-														) => (
-															<Link
-																key={
-																	dropdownItem.name
-																}
-																href={
-																	dropdownItem.href
-																}
-																className='block group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-burgundy-600 focus-visible:ring-offset-2 rounded-sm'
-																onClick={() =>
-																	setIsProductsOpen(
-																		false
-																	)
-																}
-															>
-																<div className='flex items-start space-x-3 p-3 rounded-sm hover:bg-gradient-to-r hover:from-burgundy-50 hover:to-gold-50 transition-all duration-200'>
-																	<div className='flex-1'>
-																		<h4 className='font-bold text-burgundy-900 group-hover:text-burgundy-700 font-brand'>
-																			{
-																				dropdownItem.name
-																			}
-																		</h4>
-																		<p className='text-sm text-neutral-700 font-body'>
-																			{
-																				dropdownItem.description
-																			}
-																		</p>
-																	</div>
-																</div>
-															</Link>
+												{/* Header */}
+												<div className='mb-4 sm:mb-6 text-center'>
+													<h3 className='text-lg sm:text-xl font-bold text-burgundy-900 font-brand mb-1'>
+														Our Sambal
+														Collection
+													</h3>
+													<p className='text-sm text-neutral-600 font-body'>
+														Authentic
+														Indonesian
+														chili
+														pastes
+														from Chef
+														Yossie
+													</p>
+												</div>
+
+												{/* Products Grid */}
+												<div className='grid md:grid-cols-3 gap-6 mb-10'>
+													{item.dropdown
+														?.slice(
+															0,
+															3
 														)
-													)}
+														.map(
+															(
+																dropdownItem
+															) => {
+																// Product images mapping
+																const productImages: {
+																	[
+																		key: string
+																	]: string;
+																} =
+																	{
+																		"Sambal Goreng":
+																			"/images/optimized/sambal-goreng-md.webp",
+																		"Sambal Oelek":
+																			"/images/optimized/sambal-oelek-md.webp",
+																		"Sambal Bali":
+																			"/images/optimized/sambal-bali-md.webp",
+																	};
+
+																// Heat level indicators
+																const heatLevels: {
+																	[
+																		key: string
+																	]: string;
+																} =
+																	{
+																		"Sambal Goreng":
+																			"🌶️🌶️🌶️",
+																		"Sambal Oelek":
+																			"🌶️🌶️🌶️🌶️🌶️",
+																		"Sambal Bali":
+																			"🌶️🌶️🌶️",
+																	};
+
+																// Status badges
+																const statusInfo: {
+																	[
+																		key: string
+																	]: {
+																		status: string;
+																		color: string;
+																	};
+																} =
+																	{
+																		"Sambal Goreng":
+																			{
+																				status: "Featured",
+																				color: "bg-amber-500",
+																			},
+																		"Sambal Oelek":
+																			{
+																				status: "Coming Soon",
+																				color: "bg-burgundy-600",
+																			},
+																		"Sambal Bali":
+																			{
+																				status: "Coming Soon",
+																				color: "bg-burgundy-600",
+																			},
+																	};
+
+																return (
+																	<Link
+																		key={
+																			dropdownItem.name
+																		}
+																		href={
+																			dropdownItem.href
+																		}
+																		className='block group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-burgundy-600 focus-visible:ring-offset-2 rounded-lg'
+																		onClick={() =>
+																			setIsProductsOpen(
+																				false
+																			)
+																		}
+																	>
+																		{/* Unified Card Layout */}
+																		<div className='p-4 rounded-lg hover:bg-gradient-to-r hover:from-burgundy-50 hover:to-gold-50 transition-all duration-200 border border-transparent hover:border-gold-200 text-center'>
+																			{/* Product Image */}
+																			<div className='relative mx-auto flex items-center justify-center w-36 h-40 bg-white rounded-lg mb-6'>
+																				<OptimizedImage
+																					src={
+																						productImages[
+																							dropdownItem
+																								.name
+																						] ||
+																						"/images/optimized/sambal-oelek-md.webp"
+																					}
+																					alt={`${dropdownItem.name} - Indonesian chili paste`}
+																					width={
+																						160
+																					}
+																					height={
+																						180
+																					}
+																					className='w-auto h-full object-contain'
+																					quality={
+																						95
+																					}
+																					sizes='160px'
+																				/>
+																				{/* Status Badge */}
+																				<div
+																					className={`absolute top-2 right-2 ${statusInfo[dropdownItem.name]?.color || "bg-burgundy-600"} text-white text-xs px-2 py-0.5 rounded-full font-medium`}
+																				>
+																					{statusInfo[
+																						dropdownItem
+																							.name
+																					]
+																						?.status ||
+																						"Soon"}
+																				</div>
+																			</div>
+
+																			{/* Product Info */}
+																			<div>
+																				<h4 className='font-bold text-burgundy-900 group-hover:text-burgundy-700 font-brand text-base mb-1 pt-4'>
+																					{
+																						dropdownItem.name
+																					}
+																				</h4>
+																				<div className='text-sm text-burgundy-600 mb-2'>
+																					{heatLevels[
+																						dropdownItem
+																							.name
+																					] ||
+																						"🌶️🌶️🌶️"}
+																				</div>
+																				<p className='text-xs text-neutral-700 font-body leading-tight mb-2'>
+																					{
+																						dropdownItem.description
+																					}
+																				</p>
+																				<div className='text-sm text-burgundy-600 font-semibold'>
+																					£7.49
+																					•
+																					185g
+																				</div>
+																			</div>
+																		</div>
+																	</Link>
+																);
+															}
+														)}
+												</div>
+
+												{/* Additional Options */}
+												<div className='border-t border-gold-200 pt-4'>
+													<div className='grid md:grid-cols-3 gap-3'>
+														{item.dropdown
+															?.slice(
+																3
+															)
+															.map(
+																(
+																	dropdownItem
+																) => (
+																	<Link
+																		key={
+																			dropdownItem.name
+																		}
+																		href={
+																			dropdownItem.href
+																		}
+																		className='block group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-burgundy-600 focus-visible:ring-offset-2 rounded-md'
+																		onClick={() =>
+																			setIsProductsOpen(
+																				false
+																			)
+																		}
+																	>
+																		<div className='p-3 rounded-md hover:bg-burgundy-50 transition-all duration-200 text-center'>
+																			<h4 className='font-semibold text-burgundy-900 group-hover:text-burgundy-700 font-brand text-sm mb-1'>
+																				{
+																					dropdownItem.name
+																				}
+																			</h4>
+																			<p className='text-xs text-neutral-600 font-body'>
+																				{
+																					dropdownItem.description
+																				}
+																			</p>
+																		</div>
+																	</Link>
+																)
+															)}
+													</div>
+												</div>
+
+												{/* Call to Action */}
+												<div className='border-t border-gold-200 pt-4 mt-4'>
+													<Link
+														href='/products'
+														className='block w-full'
+														onClick={() =>
+															setIsProductsOpen(
+																false
+															)
+														}
+													>
+														<div className='text-center p-3 bg-gradient-to-r from-burgundy-600 to-burgundy-700 text-white rounded-lg hover:from-burgundy-700 hover:to-burgundy-800 transition-all duration-200 font-semibold text-sm'>
+															View
+															All
+															Products
+															&
+															Comparison
+															Tool
+														</div>
+													</Link>
 												</div>
 											</div>
 										)}
@@ -441,7 +636,8 @@ export default function Header() {
 												}
 											>
 												<ShoppingCart className='w-4 h-4 mr-2' />
-												Learn About Sambal Goreng
+												Learn About Sambal
+												Goreng
 											</Button>
 										</Link>
 									</>

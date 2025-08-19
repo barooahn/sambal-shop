@@ -167,6 +167,46 @@ export default function ProductsPage() {
 				</div>
 			</section>
 
+			{/* Sample Pack Banner - Prominent CTA */}
+			<section className="py-8 bg-gradient-to-r from-burgundy-600 via-burgundy-700 to-burgundy-800 text-white">
+				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+					<div className="text-center relative">
+						{/* Background decoration */}
+						<div className='absolute top-0 right-0 w-24 h-24 bg-gold-500/20 rounded-full blur-2xl'></div>
+						<div className='absolute bottom-0 left-0 w-20 h-20 bg-amber-500/20 rounded-full blur-xl'></div>
+						
+						<div className="relative z-10">
+							<div className="mb-4">
+								<span className="inline-flex items-center bg-amber-500 text-burgundy-900 px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+									🎯 RECOMMENDED
+								</span>
+							</div>
+							<h2 className="text-2xl md:text-3xl font-bold mb-4 font-brand">
+								New to Indonesian Sambal? Start with Our Sample Pack
+							</h2>
+							<p className="text-lg text-gold-200 mb-6 max-w-3xl mx-auto font-body">
+								Don't know which heat level is right for you? Try both varieties risk-free with perfect tasting portions.
+							</p>
+							<div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+								<a 
+									href="/sample-pack-try-first" 
+									className="inline-flex items-center bg-gradient-to-r from-amber-500 via-orange-500 to-red-500 hover:from-amber-400 hover:via-orange-400 hover:to-red-400 text-white font-bold py-4 px-8 rounded-xl shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 border border-white/20"
+								>
+									<span className="text-2xl mr-3">🎯</span>
+									<div className="text-left">
+										<div className="text-lg">Try Sample Pack First</div>
+										<div className="text-sm opacity-90">2 varieties • Only £4.99</div>
+									</div>
+								</a>
+								<div className="text-gold-200 text-sm font-body">
+									✨ Risk-free • 2 authentic varieties • Perfect for beginners
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
 			{/* Product Comparison Section */}
 			<section className="py-16">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -254,7 +294,7 @@ export default function ProductsPage() {
 									<span className="text-2xl">🌱</span>
 								</div>
 								<h4 className="font-semibold text-burgundy-900 mb-2 font-brand">New to Spicy Food?</h4>
-								<p className="text-neutral-600 font-body">Start with our Sample Pack to try different heat levels safely</p>
+								<p className="text-neutral-600 font-body">Start with our <a href="/sample-pack-try-first" className="text-burgundy-600 hover:text-burgundy-800 font-semibold underline">Sample Pack</a> to try different heat levels safely</p>
 							</div>
 							<div className="text-center p-4 bg-white/60 rounded-xl border border-gold-200/50">
 								<div className="mb-3">

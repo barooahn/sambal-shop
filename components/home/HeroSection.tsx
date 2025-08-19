@@ -3,8 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 
-import { ChefHat, Award, Heart, Star, Flame } from "lucide-react";
-import { Skeleton } from "@/components/ui/skeleton";
+import { ChefHat, Award, Heart, Star, Package } from "lucide-react";
 import { toast } from "sonner";
 
 // Removed skeleton to prevent layout shifts
@@ -76,6 +75,19 @@ export default function HeroSection() {
 
 	return (
 		<section className='relative flex items-center justify-center overflow-hidden' style={{ minHeight: 'max(100vh, 700px)' }}>
+			{/* Try First Floating Banner */}
+			<div className='absolute top-20 right-4 z-20 hidden lg:block'>
+				<div className='bg-gradient-to-r from-amber-500 via-orange-600 to-red-600 text-white px-4 py-3 rounded-lg shadow-2xl border border-white/20 backdrop-blur-sm transform hover:scale-105 transition-all duration-300 animate-pulse hover:animate-none'>
+					<div className='flex items-center space-x-3'>
+						<Package className='w-5 h-5' />
+						<div>
+							<div className='font-bold text-sm'>🎯 Try First</div>
+							<div className='text-xs opacity-90'>Sample Pack £4.99</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
 			{/* Background Image - Optimized for LCP */}
 			<div className='absolute inset-0 z-0 w-full h-full' style={{ backgroundColor: '#8B4513' }}>
 				<Image
@@ -222,15 +234,18 @@ export default function HeroSection() {
 							</button>
 
 							<button
-								aria-label='Learn About Sambal Goreng'
+								aria-label='Try Sample Pack First'
 								onClick={() => {
-									window.location.href = "/sambal-goreng-uk";
+									window.location.href = "/sample-pack-try-first";
 								}}
 								className='group bg-white/10 backdrop-blur-md hover:bg-white/20 text-white font-semibold py-3 lg:py-4 px-6 lg:px-8 rounded-lg border border-white/30 hover:border-amber-300/50 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 w-full min-h-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent'
 							>
-								<span className='group-hover:text-amber-300 transition-colors duration-300 text-sm lg:text-base'>
-									Learn More About Sambal Goreng
-								</span>
+								<div className='flex items-center justify-center space-x-2'>
+									<Package className='w-4 lg:w-5 h-4 lg:h-5 group-hover:text-amber-300 transition-colors duration-300' />
+									<span className='group-hover:text-amber-300 transition-colors duration-300 text-sm lg:text-base'>
+										🎯 Try Sample Pack First - £4.99
+									</span>
+								</div>
 							</button>
 						</div>
 

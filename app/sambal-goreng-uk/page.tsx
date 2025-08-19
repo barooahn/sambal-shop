@@ -2,29 +2,22 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent } from "@/components/ui/card";
 import FAQSchema from "@/components/seo/FAQSchema";
-import EntityMarkup from "@/components/seo/EntityMarkup";
-import ComparisonTable from "@/components/seo/ComparisonTable";
 import ProductSchema from "@/components/seo/ProductSchema";
 import StarRating from "@/components/ui/StarRating";
 import CustomerReviews from "@/components/ui/CustomerReviews";
 import {
 	ChefHat,
-	Award,
-	Star,
 	Truck,
-	Shield,
 	Clock,
 	MapPin,
 	Heart,
-	CheckCircle,
 	Flame,
 	Leaf,
 	Utensils,
-	Timer,
 	Zap,
 } from "lucide-react";
+import TrustIndicators from "@/components/ui/TrustIndicators";
 
 export const metadata = {
 	title: "Authentic Sambal Goreng UK | Traditional Fried Indonesian Chili Paste | Sweet & Spicy | Chef Yossie Recipe",
@@ -156,6 +149,28 @@ export default function SambalGorengUKPage() {
 
 	return (
 		<div className='min-h-screen bg-gradient-to-br from-cream-50 to-cream-100'>
+			{/* Floating Try First Banner */}
+			<div className='fixed top-26 right-4 z-50 hidden lg:block'>
+				<div className='bg-neutral-900 text-white px-4 py-3 rounded-lg shadow-2xl border border-white/20 backdrop-blur-sm transform hover:scale-105 transition-all duration-300 max-w-xs'>
+					<Link href='/sample-pack-try-first' className='block'>
+						<div className='flex items-center space-x-3'>
+							<div className='text-2xl'>🎯</div>
+							<div>
+								<div className='font-bold text-sm'>
+									Try First!
+								</div>
+								<div className='text-xs opacity-90'>
+									Sample Pack £4.99
+								</div>
+								<div className='text-xs opacity-75'>
+									2 varieties included
+								</div>
+							</div>
+						</div>
+					</Link>
+				</div>
+			</div>
+
 			<FAQSchema
 				faqs={faqData}
 				pageTitle='Sambal Goreng UK - Frequently Asked Questions'
@@ -325,18 +340,18 @@ export default function SambalGorengUKPage() {
 						</div>
 
 						{/* Right side - Product Image */}
-						<div className='relative'>
-							<div className='relative w-full lg:max-w-none mx-auto max-h-[60vh] flex items-center justify-center'>
-								<div className='rounded-sm shadow-luxury bg-gradient-to-br from-amber-900/10 to-orange-600/10 p-4'>
-									<div className='w-full h-full rounded-sm flex items-center justify-center'>
+						<div className='relative mt-8 lg:mt-0'>
+							<div className='relative w-full lg:max-w-none mx-auto flex items-center justify-center'>
+								<div className='rounded-lg shadow-luxury bg-gradient-to-br from-amber-900/10 to-orange-600/10 p-6 sm:p-8 lg:p-4'>
+									<div className='w-full h-full rounded-lg flex items-center justify-center'>
 										<Image
 											src='/images/optimized/sambal-goreng-lg.webp'
 											alt='Authentic Indonesian Sambal Goreng - Sweet & Spicy Fried Chili Paste by Chef Yossie'
 											width={400}
 											height={400}
-											className='w-auto h-auto max-h-[60vh] object-contain drop-shadow-2xl'
+											className='w-full h-auto min-h-[280px] sm:min-h-[320px] lg:min-h-[360px] max-h-[80vh] lg:max-h-[60vh] object-contain drop-shadow-2xl'
 											priority
-											sizes='(max-width: 768px) 100vw, (max-width: 1920px) 50vw, 600px'
+											sizes='(max-width: 640px) 90vw, (max-width: 768px) 80vw, (max-width: 1024px) 70vw, 600px'
 										/>
 									</div>
 								</div>
@@ -600,6 +615,25 @@ export default function SambalGorengUKPage() {
 							</div>
 						</div>
 					</div>
+				</div>
+			</section>
+
+			{/* Trust Indicators */}
+			<section className='py-12 bg-white'>
+				<div className='container mx-auto px-4'>
+					<div className='text-center mb-8'>
+						<h2 className='text-2xl font-bold text-burgundy-900 mb-4 font-brand'>
+							Shop with Confidence
+						</h2>
+						<p className='text-neutral-600 font-body'>
+							Your satisfaction and security are our top
+							priorities
+						</p>
+					</div>
+					<TrustIndicators
+						layout='compact'
+						className='justify-center'
+					/>
 				</div>
 			</section>
 
