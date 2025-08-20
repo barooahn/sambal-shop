@@ -163,7 +163,7 @@ export default function SambalGorengUKPage() {
 									Sample Pack £4.99
 								</div>
 								<div className='text-xs opacity-75'>
-									2 varieties included
+									2 sample jars included
 								</div>
 							</div>
 						</div>

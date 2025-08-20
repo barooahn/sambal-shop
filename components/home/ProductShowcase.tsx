@@ -249,7 +249,7 @@ export default function ProductShowcase() {
 									Not Sure Which Heat Level Is Right?
 								</h3>
 								<p className='text-xl text-neutral-700 mb-8 max-w-3xl mx-auto font-body leading-relaxed'>
-									Try our risk-free Sample Pack! Two 45g jars featuring our most popular varieties - 
+									Try our risk-free Sample Pack! Two 45g sample jars of our authentic sambal goreng - 
 									perfect for discovering authentic Indonesian sambal without commitment.
 								</p>
 							</div>
@@ -285,7 +285,7 @@ export default function ProductShowcase() {
 												<CheckCircle className='w-8 h-8 text-burgundy-600 mr-4' />
 												<h4 className='font-bold text-burgundy-900 font-brand'>Risk-Free Trial</h4>
 											</div>
-											<p className='text-neutral-600 text-sm font-body'>Try both varieties before buying full-size jars</p>
+											<p className='text-neutral-600 text-sm font-body'>Try sample jars before buying full-size jars</p>
 										</div>
 										
 										<div className='bg-white/80 backdrop-blur-sm rounded-xl p-6 border border-gold-200/50 shadow-sm hover:shadow-md transition-shadow'>

@@ -194,7 +194,7 @@ const blogPosts = {
 				</div>
 				<div class="bg-white p-4 rounded-lg border border-gold-100">
 					<h3 class="font-bold text-burgundy-800 mb-2">
-						<a href="/blog/5-ways-sambal-british-cooking" class="hover:text-burgundy-600">British-Indonesian Fusion</a>
+						<a href="/blog/sambal-british-classics" class="hover:text-burgundy-600">British-Indonesian Fusion</a>
 					</h3>
 					<p class="text-gray-700 text-sm">Transform British classics with sambal</p>
 				</div>
@@ -1776,7 +1776,91 @@ const blogPosts = {
 					"recipeYield": "4 servings",
 					"recipeCategory": "Main Course",
 					"recipeCuisine": "British-Indonesian Fusion",
-					"keywords": "sambal shepherds pie, Indonesian British fusion, comfort food fusion UK"
+					"keywords": "sambal shepherds pie, Indonesian British fusion, comfort food fusion UK",
+					"image": {
+						"@type": "ImageObject",
+						"url": "https://spiceislandindonesia.com/images/blog/fusion-recipes-guide.webp",
+						"width": 1200,
+						"height": 630,
+						"caption": "Sambal Shepherd's Pie with crispy potato topping and spiced Indonesian lamb filling"
+					},
+					"author": {
+						"@type": "Person",
+						"name": "Chef Yossie",
+						"jobTitle": "Indonesian Chef",
+						"worksFor": {
+							"@type": "Organization",
+							"name": "Spice Island Indonesia"
+						}
+					},
+					"recipeIngredient": [
+						"750g minced lamb",
+						"2 tbsp authentic sambal",
+						"1 large onion, diced",
+						"2 carrots, diced",
+						"2 cloves garlic, minced",
+						"1 tbsp fresh ginger, minced",
+						"400ml coconut milk",
+						"2 tbsp light soy sauce",
+						"1 tbsp tomato paste",
+						"1kg potatoes",
+						"50g butter",
+						"100ml whole milk",
+						"Salt and pepper to taste",
+						"Fresh coriander for garnish"
+					],
+					"recipeInstructions": [
+						{
+							"@type": "HowToStep",
+							"text": "Preheat oven to 200°C (fan 180°C). Peel and chop potatoes, then boil until tender, about 15 minutes."
+						},
+						{
+							"@type": "HowToStep",
+							"text": "Meanwhile, heat oil in a large pan. Brown the minced lamb over medium-high heat for 5-6 minutes."
+						},
+						{
+							"@type": "HowToStep",
+							"text": "Add diced onion, carrots, garlic, and ginger to the lamb. Cook for 5 minutes until vegetables soften."
+						},
+						{
+							"@type": "HowToStep",
+							"text": "Stir in sambal, tomato paste, and soy sauce. Cook for 2 minutes until fragrant."
+						},
+						{
+							"@type": "HowToStep",
+							"text": "Pour in coconut milk and simmer for 8-10 minutes until sauce thickens. Season with salt and pepper."
+						},
+						{
+							"@type": "HowToStep",
+							"text": "Drain potatoes and mash with butter and milk until smooth. Season with salt and pepper."
+						},
+						{
+							"@type": "HowToStep",
+							"text": "Transfer lamb mixture to a baking dish. Top with mashed potato and fork to create texture."
+						},
+						{
+							"@type": "HowToStep",
+							"text": "Bake for 20-25 minutes until golden. Garnish with fresh coriander and serve hot."
+						}
+					],
+					"aggregateRating": {
+						"@type": "AggregateRating",
+						"ratingValue": "4.8",
+						"reviewCount": "127",
+						"bestRating": "5",
+						"worstRating": "1"
+					},
+					"nutrition": {
+						"@type": "NutritionInformation",
+						"calories": "485 kcal",
+						"proteinContent": "28g",
+						"carbohydrateContent": "42g",
+						"fatContent": "22g",
+						"saturatedFatContent": "12g",
+						"fiberContent": "4g",
+						"sodiumContent": "680mg",
+						"servingSize": "1 serving"
+					}
 				}
 			]
 		},

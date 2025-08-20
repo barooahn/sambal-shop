@@ -195,11 +195,11 @@ export default function ProductsPage() {
 									<span className="text-2xl mr-3">🎯</span>
 									<div className="text-left">
 										<div className="text-lg">Try Sample Pack First</div>
-										<div className="text-sm opacity-90">2 varieties • Only £4.99</div>
+										<div className="text-sm opacity-90">2 sample jars • Only £4.99</div>
 									</div>
 								</a>
 								<div className="text-gold-200 text-sm font-body">
-									✨ Risk-free • 2 authentic varieties • Perfect for beginners
+									✨ Risk-free • 2 sample jars • Perfect for beginners
 								</div>
 							</div>
 						</div>
