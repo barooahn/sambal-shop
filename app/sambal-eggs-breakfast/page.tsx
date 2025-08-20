@@ -68,7 +68,8 @@ export default function SambalEggsBreakfastPage() {
 								Tired of boring breakfast? Add
 								<strong className='text-gold-300'>
 									{" "}
-									Chef Yossie&apos;s authentic sambal
+									Chef Yossie&apos;s authentic
+									sambal{" "}
 								</strong>
 								to eggs, avocado toast, and morning
 								dishes for complex flavors that wake up

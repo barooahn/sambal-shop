@@ -3,16 +3,20 @@ import Script from "next/script";
 interface PerformanceOptimizerProps {
 	preloadImages?: string[];
 	criticalCSS?: string;
+	isHomepage?: boolean;
 }
 
 export default function PerformanceOptimizer({
 	preloadImages = [],
 	criticalCSS,
+	isHomepage = false,
 }: PerformanceOptimizerProps) {
+	// Only preload images if they're provided AND we're on a page that actually uses them
+	const imagesToPreload = preloadImages.length > 0 ? preloadImages : [];
 	return (
 		<>
 			{/* Preload critical resources - LCP optimized */}
-			{preloadImages.map((src, index) => (
+			{imagesToPreload.map((src, index) => (
 				<link
 					key={index}
 					rel='preload'
@@ -199,11 +203,10 @@ export const criticalCSS = `
   }
 `;
 
-// Images to preload (LCP critical first)
+// Images to preload (LCP critical first) - only for homepage
 export const criticalImages = [
-	"/images/optimized/hero-image-xl.webp", // Hero background - LCP candidate
-	"/images/optimized/sambal-bali-md.webp", // Hero product - LCP candidate
-	"/images/optimized/logo-xs.webp", // Logo - always visible but smaller
+	"/images/optimized/hero-image-lg.webp", // Hero background - actual image used in HeroSection
+	"/images/optimized/sambal-goreng-md.webp", // Hero product - actual featured product image
 ];
 
 // Utility function to measure and report performance

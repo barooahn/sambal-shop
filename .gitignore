@@ -46,5 +46,8 @@ CLAUDE.md
 design.mdc
 default_ui_darkmode.css
 
+# Claude Code local settings
+.claude/settings.local.json
+
 # Lighthouse performance reports
 lighthouse-reports/

@@ -115,19 +115,7 @@ export default function RootLayout({
 				<link rel='dns-prefetch' href='//www.googletagmanager.com' />
 				<link rel='dns-prefetch' href='//www.google-analytics.com' />
 				
-				{/* Preload critical images */}
-				<link 
-					rel='preload' 
-					href='/images/optimized/hero-image-lg.webp' 
-					as='image' 
-					type='image/webp'
-				/>
-				<link 
-					rel='preload' 
-					href='/images/optimized/sambal-goreng-md.webp' 
-					as='image' 
-					type='image/webp'
-				/>
+				{/* Preload critical images - handled by PerformanceOptimizer component */}
 				
 				{/* Preload critical self-hosted fonts */}
 				<link 
@@ -263,7 +251,7 @@ export default function RootLayout({
 				}} />
 				
 				<PerformanceOptimizer
-					preloadImages={criticalImages}
+					preloadImages={[]} // Don't preload by default in layout - let pages decide
 					criticalCSS={criticalCSS}
 				/>
 			</head>

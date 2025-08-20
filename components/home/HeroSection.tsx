@@ -74,22 +74,32 @@ export default function HeroSection() {
 	};
 
 	return (
-		<section className='relative flex items-center justify-center overflow-hidden' style={{ minHeight: 'max(100vh, 700px)' }}>
-			{/* Try First Floating Banner */}
-			<div className='absolute top-20 right-4 z-20 hidden lg:block'>
-				<div className='bg-gradient-to-r from-amber-500 via-orange-600 to-red-600 text-white px-4 py-3 rounded-lg shadow-2xl border border-white/20 backdrop-blur-sm transform hover:scale-105 transition-all duration-300 animate-pulse hover:animate-none'>
+		<section
+			className='relative flex items-center justify-center overflow-hidden'
+			style={{ minHeight: "max(100vh, 700px)" }}
+		>
+			{/* Try First Floating Banner - Follows user on scroll */}
+			<div className='fixed top-36 right-4 z-50 hidden lg:block'>
+				<div className='bg-neutral-900 text-gold-100 px-4 py-3 rounded-lg shadow-2xl border border-gold-600/30 backdrop-blur-sm transform hover:scale-105 transition-all duration-300'>
 					<div className='flex items-center space-x-3'>
 						<Package className='w-5 h-5' />
 						<div>
-							<div className='font-bold text-sm'>🎯 Try First</div>
-							<div className='text-xs opacity-90'>Sample Pack £4.99</div>
+							<div className='font-bold text-sm'>
+								🎯 Try First
+							</div>
+							<div className='text-xs opacity-90'>
+								Sample Pack £4.99
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 
 			{/* Background Image - Optimized for LCP */}
-			<div className='absolute inset-0 z-0 w-full h-full' style={{ backgroundColor: '#8B4513' }}>
+			<div
+				className='absolute inset-0 z-0 w-full h-full'
+				style={{ backgroundColor: "#8B4513" }}
+			>
 				<Image
 					src='/images/optimized/hero-image-lg.webp'
 					alt='Authentic Sambal UK - Premium Indonesian Chili Paste Spices from Spice Islands'
@@ -101,7 +111,7 @@ export default function HeroSection() {
 					quality={60} // Reduced for faster load
 					placeholder='blur'
 					blurDataURL='data:image/webp;base64,UklGRlABAABXRUJQVlA4TD4BAAAvAQABACcQEf//72vv++9r7/vvAGwhOLb9AAQAAAAAAABjhwgJCQkJCQkJAJCQkJCQkJCQkABISEhISEhISEgAhISEhISEhISEAISEhISEhISEhAAQEBAQEBAQEBAAEBAQEBAQEBAQABAQEBAQEBAQEBAAICAiICAiICAiABAQEhIQEhIQEhIAEhIREhIREhIREgASEhIREhIREhIRABEhIREhIREhIREhABAQEBAQEBAQEBAQABAQEBAQEBAQEBAAEBAQEBAQEBAQEBAAEBAQEBAQEBAQEBAA'
-					style={{ objectFit: 'cover' }}
+					style={{ objectFit: "cover" }}
 				/>
 			</div>
 
@@ -113,14 +123,33 @@ export default function HeroSection() {
 				}}
 			></div>
 
-			<div className='hero-content-container relative z-10 max-w-7xl mx-auto px-3 sm:px-5 lg:px-8 py-4 sm:py-6 lg:py-8' style={{ minHeight: 'max(80vh, 600px)', width: '100%' }}>
-				<div className='flex flex-col lg:grid lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-12 items-center h-full' style={{ minHeight: 'max(75vh, 550px)' }}>
+			<div
+				className='hero-content-container relative z-10 max-w-7xl mx-auto px-3 sm:px-5 lg:px-8 py-4 sm:py-6 lg:py-8'
+				style={{ minHeight: "max(80vh, 600px)", width: "100%" }}
+			>
+				<div
+					className='flex flex-col lg:grid lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-12 items-center h-full'
+					style={{ minHeight: "max(75vh, 550px)" }}
+				>
 					{/* Mobile/Tablet - Text content first */}
 					<div className='text-center lg:text-left order-1 lg:order-2 pt-4 sm:pt-0'>
 						{/* Chef badge - explicit dimensions to prevent layout shift */}
 						<div className='mb-2 sm:mb-3 lg:mb-6 flex justify-center lg:justify-start'>
-							<div className='bg-white/90 backdrop-blur-sm rounded-full px-3 lg:px-6 py-1.5 lg:py-3 border border-orange-200/50 shadow-xl' style={{ minHeight: '40px', width: '320px', maxWidth: '90vw' }}>
-								<div className='flex items-center justify-center space-x-2 lg:space-x-3' style={{ height: '28px', minHeight: '28px' }}>
+							<div
+								className='bg-white/90 backdrop-blur-sm rounded-full px-3 lg:px-6 py-1.5 lg:py-3 border border-orange-200/50 shadow-xl'
+								style={{
+									minHeight: "40px",
+									width: "320px",
+									maxWidth: "90vw",
+								}}
+							>
+								<div
+									className='flex items-center justify-center space-x-2 lg:space-x-3'
+									style={{
+										height: "28px",
+										minHeight: "28px",
+									}}
+								>
 									<ChefHat className='w-3 lg:w-5 h-3 lg:h-5 text-orange-600' />
 									<span className='text-gray-800 font-semibold text-xs lg:text-sm tracking-wide'>
 										Chef Yossie&apos;s Traditional
@@ -154,7 +183,8 @@ export default function HeroSection() {
 						{/* Subtitle */}
 						<div className='mb-2 sm:mb-3 lg:mb-4'>
 							<p className='text-base sm:text-lg lg:text-xl text-white/80 font-light tracking-wide'>
-								Sweet & Spicy Indonesian Chili Paste - Traditional Recipe
+								Sweet & Spicy Indonesian Chili Paste -
+								Traditional Recipe
 							</p>
 						</div>
 
@@ -164,19 +194,27 @@ export default function HeroSection() {
 							<span className='text-amber-300 font-medium'>
 								Sambal Goreng
 							</span>{" "}
-							combines sweet palm sugar with fiery chilies using the traditional{" "}
-							<em>goreng</em> (fried) method from West Java.{" "}
+							combines sweet palm sugar with fiery chilies
+							using the traditional <em>goreng</em> (fried)
+							method from West Java.{" "}
 							<span className='voice-location-info'>
-								Perfect balance of sweet and heat - coming soon to the UK.
-								Join our waitlist for early access.
+								Perfect balance of sweet and heat -
+								coming soon to the UK. Join our waitlist
+								for early access.
 							</span>
 						</p>
 
 						{/* Features with mobile-optimized design */}
 						<div className='flex flex-col sm:flex-row justify-center lg:justify-start gap-2 sm:gap-3 lg:gap-4 mb-3 sm:mb-4 lg:mb-6 px-2 lg:px-0'>
 							{[
-								{ icon: Heart, label: "Sweet & Spicy Balance" },
-								{ icon: ChefHat, label: "Traditional Fried Method" },
+								{
+									icon: Heart,
+									label: "Sweet & Spicy Balance",
+								},
+								{
+									icon: ChefHat,
+									label: "Traditional Fried Method",
+								},
 								{
 									icon: Award,
 									label: "West Java Recipe",
@@ -226,7 +264,8 @@ export default function HeroSection() {
 										<>
 											<Heart className='w-4 lg:w-5 h-4 lg:h-5 group-hover:animate-bounce' />
 											<span className='text-sm lg:text-base'>
-												Join Sambal Goreng Waitlist
+												Join Sambal Goreng
+												Waitlist
 											</span>
 										</>
 									)}
@@ -236,14 +275,16 @@ export default function HeroSection() {
 							<button
 								aria-label='Try Sample Pack First'
 								onClick={() => {
-									window.location.href = "/sample-pack-try-first";
+									window.location.href =
+										"/sample-pack-try-first";
 								}}
 								className='group bg-white/10 backdrop-blur-md hover:bg-white/20 text-white font-semibold py-3 lg:py-4 px-6 lg:px-8 rounded-lg border border-white/30 hover:border-amber-300/50 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 w-full min-h-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent'
 							>
 								<div className='flex items-center justify-center space-x-2'>
 									<Package className='w-4 lg:w-5 h-4 lg:h-5 group-hover:text-amber-300 transition-colors duration-300' />
 									<span className='group-hover:text-amber-300 transition-colors duration-300 text-sm lg:text-base'>
-										🎯 Try Sample Pack First - £4.99
+										🎯 Try Sample Pack First -
+										£4.99
 									</span>
 								</div>
 							</button>
@@ -273,7 +314,13 @@ export default function HeroSection() {
 					<div className='relative order-2 lg:order-1 pb-8 sm:pb-12 lg:pb-0 flex items-center justify-center'>
 						<div className='relative w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[400px] mx-auto'>
 							{/* Mobile-optimized container with proper aspect ratio */}
-							<div className='relative z-20 group w-full' style={{ aspectRatio: '1 / 1', minHeight: '280px' }}>
+							<div
+								className='relative z-20 group w-full'
+								style={{
+									aspectRatio: "1 / 1",
+									minHeight: "280px",
+								}}
+							>
 								<Image
 									src='/images/optimized/sambal-goreng-md.webp'
 									alt='Authentic Sambal Goreng UK - Traditional Indonesian Sweet & Spicy Chili Paste from Spice Island Indonesia'
@@ -315,7 +362,10 @@ export default function HeroSection() {
 					}
 					/* Ensure safe spacing from header on all mobile devices */
 					.hero-content-container {
-						padding-top: max(1rem, calc(env(safe-area-inset-top) + 0.5rem)) !important;
+						padding-top: max(
+							1rem,
+							calc(env(safe-area-inset-top) + 0.5rem)
+						) !important;
 					}
 				}
 				/* Desktop optimization - ensure content fits above fold */

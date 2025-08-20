@@ -98,8 +98,8 @@ export default function ProductShowcase() {
 								</div>
 							</div>
 							{/* Clean glass morphism badge */}
-							<div className='absolute -top-3 -right-3 bg-burgundy-600/90 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm font-bold font-elegant shadow-lg'>
-								Coming Soon
+							<div className='absolute -top-3 -right-3 bg-gradient-to-r from-burgundy-600 to-burgundy-700 text-white px-4 py-2 rounded-full text-sm font-bold font-elegant shadow-lg'>
+								COMING SOON
 							</div>
 						</div>
 						<div className='text-center'>
@@ -143,7 +143,7 @@ export default function ProductShowcase() {
 							<div className='aspect-square rounded-sm overflow-hidden shadow-lg group-hover:shadow-luxury transition-all duration-300 bg-gradient-to-br from-cream-50 to-gold-50'>
 								<div className='w-full h-full flex items-center justify-center p-2'>
 									<Image
-										src='/images/optimized/Spice Island Indonesia Sambal Bali 185g Label-md.webp'
+										src='/images/optimized/sambal-bali-md.webp'
 										alt='Authentic Sambal UK - Indonesian Chili Paste Sambal Bali 185g Artisanal Hot Sauce - UK Delivery Aromatic Spicy Birmingham Edinburgh Manchester'
 										width={400}
 										height={400}
@@ -152,6 +152,10 @@ export default function ProductShowcase() {
 										sizes='(max-width: 768px) 90vw, (max-width: 1024px) 45vw, (max-width: 1920px) 350px, 450px'
 									/>
 								</div>
+							</div>
+							{/* Status badge */}
+							<div className='absolute -top-3 -right-3 bg-gradient-to-r from-burgundy-600 to-burgundy-700 text-white px-4 py-2 rounded-full text-sm font-bold font-elegant shadow-lg'>
+								COMING SOON
 							</div>
 						</div>
 						<div className='text-center'>
@@ -201,6 +205,10 @@ export default function ProductShowcase() {
 										sizes='(max-width: 768px) 90vw, (max-width: 1024px) 45vw, (max-width: 1920px) 350px, 450px'
 									/>
 								</div>
+							</div>
+							{/* Status badge */}
+							<div className='absolute -top-3 -right-3 bg-gradient-to-r from-burgundy-600 to-burgundy-700 text-white px-4 py-2 rounded-full text-sm font-bold font-elegant shadow-lg'>
+								COMING SOON
 							</div>
 						</div>
 						<div className='text-center'>
