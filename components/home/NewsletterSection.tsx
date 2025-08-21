@@ -60,6 +60,13 @@ export default function NewsletterSection() {
 
 	return (
 		<section id='newsletter-signup' className='relative overflow-hidden'>
+			{/* Background image with overlay */}
+			<div 
+				className='absolute inset-0 pointer-events-none bg-cover bg-center bg-no-repeat opacity-20' 
+				style={{backgroundImage: 'url(/images/sections-background.webp)'}}
+			></div>
+			{/* Gradient overlay for glass morphism compatibility */}
+			<div className='absolute inset-0 pointer-events-none bg-gradient-to-b from-blue-50/20 via-transparent to-indigo-50/20'></div>
 			<div className='pt-24 relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 				<div className='text-center mb-16'>
 					<div className='flex items-center justify-center gap-2 mb-6'>
