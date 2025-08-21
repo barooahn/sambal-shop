@@ -230,7 +230,7 @@ export default function HeroSection() {
 								onClick={() => {
 									window.location.href = "/sample-pack-try-first";
 								}}
-								className='group relative overflow-hidden bg-gradient-to-r from-amber-600 via-orange-700 to-red-700 hover:from-amber-500 hover:via-orange-600 hover:to-red-600 text-white font-bold text-base sm:text-base lg:text-xl py-4 sm:py-4 lg:py-5 px-5 sm:px-6 lg:px-10 rounded-lg sm:rounded-xl shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 border border-white/20 w-full min-h-[52px] sm:min-h-[56px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent'
+								className='group relative overflow-hidden bg-gradient-to-r from-red-600 via-red-700 to-red-800 hover:from-red-500 hover:via-red-600 hover:to-red-700 text-white font-bold text-base sm:text-base lg:text-xl py-4 sm:py-4 lg:py-5 px-5 sm:px-6 lg:px-10 rounded-md sm:rounded-xl shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 border border-white/20 w-full min-h-[52px] sm:min-h-[56px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent'
 							>
 								<div className='absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
 								<div className='relative flex items-center justify-center space-x-1 sm:space-x-2'>
@@ -249,7 +249,7 @@ export default function HeroSection() {
 									interestState.isSubmitting ||
 									interestState.isSubmitted
 								}
-								className='group bg-black/20 backdrop-blur-md hover:bg-black/30 text-white font-medium py-3 sm:py-3 lg:py-3.5 px-4 sm:px-4 lg:px-8 rounded-lg border border-white/20 hover:border-white/40 shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed w-full min-h-[48px] sm:min-h-[48px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent'
+								className='group bg-transparent backdrop-blur-md hover:bg-orange-900/10 text-white font-medium py-3 sm:py-3 lg:py-3.5 px-4 sm:px-4 lg:px-8 rounded-md border-2 border-orange-800/50 hover:border-orange-700/70 shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed w-full min-h-[48px] sm:min-h-[48px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-300/50 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent'
 							>
 								<div className='flex items-center justify-center space-x-1 sm:space-x-2'>
 									{interestState.isSubmitting ? (

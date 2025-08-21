@@ -54,16 +54,21 @@ export default function ProductShowcase() {
 								Sambal Goreng
 							</h3>
 							<p className='text-neutral-600 mb-4 font-body'>
-								Sweet & spicy with palm sugar - the perfect
-								balance of heat and sweetness using traditional{" "}
-								<em>goreng</em> (fried) method from West Java.
+								Sweet & spicy with traditional <span className='text-amber-700 font-medium'>gula kelapa</span> (palm sugar) - the perfect
+								balance of heat and sweetness using Chef Yossie's authentic{" "}
+								<em className='text-orange-800 font-medium'>goreng</em> (fried) method from West Java's spice markets.
 							</p>
-							<div className='flex justify-center items-center space-x-2 mb-4'>
-								<span className='text-burgundy-600'>
-									🌶️🌶️🌶️
-								</span>
-								<span className='text-sm text-neutral-500 font-body'>
-									Medium-Hot
+							<div className='flex justify-center items-center space-x-3 mb-4'>
+								<div className='flex items-center space-x-1'>
+									{/* Heat Level: Medium (3/5) - Palm Sugar Color */}
+									<div className='w-3 h-3 bg-amber-500 rounded-full'></div>
+									<div className='w-3 h-3 bg-amber-500 rounded-full'></div>
+									<div className='w-3 h-3 bg-amber-500 rounded-full'></div>
+									<div className='w-3 h-3 bg-stone-300 rounded-full'></div>
+									<div className='w-3 h-3 bg-stone-300 rounded-full'></div>
+								</div>
+								<span className='text-sm text-neutral-600 font-medium'>
+									Medium Heat
 								</span>
 							</div>
 							<div className='text-lg font-bold text-burgundy-900 font-brand mb-3'>
@@ -107,22 +112,27 @@ export default function ProductShowcase() {
 								Sambal Oelek
 							</h3>
 							<p className='text-neutral-600 mb-4 font-body'>
-								Pure, fiery chili paste - the foundation
-								of Indonesian cooking. Perfect for{" "}
+								Pure, fiery <span className='text-red-700 font-medium'>cabai rawit</span> (bird's eye chili) paste - the sacred foundation
+								of Indonesian cooking. Handcrafted using traditional stone <em className='text-stone-700 font-medium'>cobek</em> (mortar), perfect for{" "}
 								<Link
 									href='/sambal-for-stir-fry'
 									className='text-burgundy-700 hover:text-burgundy-900 font-semibold underline decoration-gold-600 hover:decoration-burgundy-900 transition-colors'
 								>
-									stir-fries
+									authentic stir-fries
 								</Link>{" "}
 								and marinades.
 							</p>
-							<div className='flex justify-center items-center space-x-2 mb-4'>
-								<span className='text-burgundy-600'>
-									🌶️🌶️🌶️🌶️🌶️
-								</span>
-								<span className='text-sm text-neutral-500 font-body'>
-									Very Hot
+							<div className='flex justify-center items-center space-x-3 mb-4'>
+								<div className='flex items-center space-x-1'>
+									{/* Heat Level: Fire (5/5) - Volcanic Color */}
+									<div className='w-3 h-3 bg-red-800 rounded-full'></div>
+									<div className='w-3 h-3 bg-red-800 rounded-full'></div>
+									<div className='w-3 h-3 bg-red-800 rounded-full'></div>
+									<div className='w-3 h-3 bg-red-800 rounded-full'></div>
+									<div className='w-3 h-3 bg-red-800 rounded-full'></div>
+								</div>
+								<span className='text-sm text-neutral-600 font-medium'>
+									Fire Heat
 								</span>
 							</div>
 							<div className='text-lg font-bold text-burgundy-900 font-brand mb-3'>
@@ -163,8 +173,8 @@ export default function ProductShowcase() {
 								Sambal Bali
 							</h3>
 							<p className='text-neutral-600 mb-4 font-body'>
-								Sweet and spicy with aromatic spices. A
-								perfect balance that complements{" "}
+								Sweet and aromatic with <span className='text-amber-700 font-medium'>lengkuas</span> (galangal), <span className='text-green-700 font-medium'>serai</span> (lemongrass) and sacred
+								<span className='text-orange-700 font-medium'> daun jeruk</span> (kaffir lime leaves). A perfect balance from Bali's spice gardens that complements{" "}
 								<Link
 									href='/sambal-bbq-marinade'
 									className='text-burgundy-700 hover:text-burgundy-900 font-semibold underline decoration-gold-600 hover:decoration-burgundy-900 transition-colors'
@@ -173,11 +183,16 @@ export default function ProductShowcase() {
 								</Link>{" "}
 								beautifully.
 							</p>
-							<div className='flex justify-center items-center space-x-2 mb-4'>
-								<span className='text-burgundy-600'>
-									🌶️🌶️🌶️
-								</span>
-								<span className='text-sm text-neutral-500 font-body'>
+							<div className='flex justify-center items-center space-x-3 mb-4'>
+								<div className='flex items-center space-x-1'>
+									{/* Heat Level: Hot (3/5) - Chili Color */}
+									<div className='w-3 h-3 bg-red-500 rounded-full'></div>
+									<div className='w-3 h-3 bg-red-500 rounded-full'></div>
+									<div className='w-3 h-3 bg-red-500 rounded-full'></div>
+									<div className='w-3 h-3 bg-stone-300 rounded-full'></div>
+									<div className='w-3 h-3 bg-stone-300 rounded-full'></div>
+								</div>
+								<span className='text-sm text-neutral-600 font-medium'>
 									Hot
 								</span>
 							</div>
