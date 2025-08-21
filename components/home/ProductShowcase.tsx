@@ -8,8 +8,8 @@ export default function ProductShowcase() {
 	return (
 		<section className='relative overflow-hidden'>
 			<div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-				<div className='text-center mb-20'>
-					<h2 className='text-4xl sm:text-5xl lg:text-6xl font-bold text-burgundy-900 mb-6 font-brand'>
+				<div className='text-center mb-16'>
+					<h2 className='text-3xl sm:text-4xl lg:text-5xl font-bold text-burgundy-900 mb-6 font-brand leading-tight'>
 						Our Signature
 						<span className='text-gold-700 block'>
 							Sambal Collection
@@ -23,8 +23,8 @@ export default function ProductShowcase() {
 					</p>
 				</div>
 
-				{/* Product Grid with Glass Morphism */}
-				<div className='grid md:grid-cols-2 lg:grid-cols-3 gap-12 mb-20'>
+				{/* Product Grid with improved spacing */}
+				<div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12 mb-16'>
 					{/* Sambal Goreng - Featured First */}
 					<div className='group'>
 						<div className='relative mb-6'>
@@ -44,9 +44,9 @@ export default function ProductShowcase() {
 									/>
 								</div>
 							</div>
-							{/* Featured badge */}
-							<div className='absolute -top-3 -right-3 bg-gradient-to-r from-burgundy-600 to-burgundy-700 text-white px-4 py-2 rounded-full text-sm font-bold font-elegant shadow-lg'>
-								COMING SOON
+							{/* Featured badge - smaller and less prominent */}
+							<div className='absolute -top-2 -right-2 bg-neutral-600/80 text-white px-3 py-1 rounded-full text-xs font-medium shadow-md'>
+								Coming Soon
 							</div>
 						</div>
 						<div className='text-center'>
@@ -97,9 +97,9 @@ export default function ProductShowcase() {
 									/>
 								</div>
 							</div>
-							{/* Clean glass morphism badge */}
-							<div className='absolute -top-3 -right-3 bg-gradient-to-r from-burgundy-600 to-burgundy-700 text-white px-4 py-2 rounded-full text-sm font-bold font-elegant shadow-lg'>
-								COMING SOON
+							{/* Status badge - smaller */}
+							<div className='absolute -top-2 -right-2 bg-neutral-600/80 text-white px-3 py-1 rounded-full text-xs font-medium shadow-md'>
+								Coming Soon
 							</div>
 						</div>
 						<div className='text-center'>
@@ -153,9 +153,9 @@ export default function ProductShowcase() {
 									/>
 								</div>
 							</div>
-							{/* Status badge */}
-							<div className='absolute -top-3 -right-3 bg-gradient-to-r from-burgundy-600 to-burgundy-700 text-white px-4 py-2 rounded-full text-sm font-bold font-elegant shadow-lg'>
-								COMING SOON
+							{/* Status badge - smaller */}
+							<div className='absolute -top-2 -right-2 bg-neutral-600/80 text-white px-3 py-1 rounded-full text-xs font-medium shadow-md'>
+								Coming Soon
 							</div>
 						</div>
 						<div className='text-center'>
@@ -206,9 +206,9 @@ export default function ProductShowcase() {
 									/>
 								</div>
 							</div>
-							{/* Status badge */}
-							<div className='absolute -top-3 -right-3 bg-gradient-to-r from-burgundy-600 to-burgundy-700 text-white px-4 py-2 rounded-full text-sm font-bold font-elegant shadow-lg'>
-								COMING SOON
+							{/* Status badge - smaller */}
+							<div className='absolute -top-2 -right-2 bg-neutral-600/80 text-white px-3 py-1 rounded-full text-xs font-medium shadow-md'>
+								Coming Soon
 							</div>
 						</div>
 						<div className='text-center'>
@@ -235,8 +235,8 @@ export default function ProductShowcase() {
 					</div>
 				</div>
 
-				{/* Try Sample Section - Redesigned */}
-				<div className='text-center mb-20 max-w-6xl mx-auto'>
+				{/* Try Sample Section - More prominent placement */}
+				<div className='text-center mb-16 max-w-6xl mx-auto'>
 					<div className='relative bg-gradient-to-br from-cream-50 via-white to-gold-50/30 rounded-2xl p-8 lg:p-12 shadow-xl border border-gold-200/50 overflow-hidden'>
 						{/* Subtle background decoration */}
 						<div className='absolute top-0 right-0 w-48 h-48 bg-gradient-to-br from-gold-100/20 to-burgundy-100/20 rounded-full -translate-y-24 translate-x-24 blur-3xl'></div>
