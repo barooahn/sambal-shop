@@ -7,7 +7,7 @@ export default function Footer() {
 			{/* Background image with overlay */}
 			<div 
 				className='absolute inset-0 pointer-events-none bg-cover bg-center bg-no-repeat' 
-				style={{backgroundImage: 'url(/images/footer-background.png)'}}
+				style={{backgroundImage: 'url(/images/footer-background.webp)'}}
 			></div>
 			{/* Dark overlay to reduce brightness */}
 			<div className='absolute inset-0 pointer-events-none bg-black/60'></div>
