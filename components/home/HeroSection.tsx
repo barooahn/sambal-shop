@@ -78,22 +78,6 @@ export default function HeroSection() {
 			className='relative flex items-center justify-center overflow-hidden'
 			style={{ minHeight: "max(100vh, 700px)" }}
 		>
-			{/* Try First Floating Banner - Follows user on scroll */}
-			<div className='fixed top-36 right-4 z-50 hidden lg:block'>
-				<div className='bg-neutral-900 text-gold-100 px-4 py-3 rounded-lg shadow-2xl border border-gold-600/30 backdrop-blur-sm transform hover:scale-105 transition-all duration-300'>
-					<div className='flex items-center space-x-3'>
-						<Package className='w-5 h-5' />
-						<div>
-							<div className='font-bold text-sm'>
-								🎯 Try First
-							</div>
-							<div className='text-xs opacity-90'>
-								Sample Pack £4.99
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
 
 			{/* Background Image - Optimized for LCP */}
 			<div
@@ -123,13 +107,13 @@ export default function HeroSection() {
 				style={{ minHeight: "max(80vh, 600px)", width: "100%" }}
 			>
 				<div
-					className='flex flex-col lg:grid lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-12 items-center h-full'
+					className='flex flex-col lg:grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center h-full'
 					style={{ minHeight: "max(75vh, 550px)" }}
 				>
 					{/* Mobile/Tablet - Text content first */}
-					<div className='text-center lg:text-left order-1 lg:order-2 pt-4 sm:pt-0'>
-						{/* Chef badge - explicit dimensions to prevent layout shift */}
-						<div className='mb-2 sm:mb-3 lg:mb-6 flex justify-center lg:justify-start'>
+					<div className='text-center lg:text-left order-1 lg:order-2 pt-2 sm:pt-4 lg:pt-0'>
+						{/* Chef badge - hidden on mobile, shown on tablet+ */}
+						<div className='hidden sm:flex mb-2 sm:mb-3 lg:mb-6 justify-center lg:justify-start'>
 							<div
 								className='bg-white/90 backdrop-blur-sm rounded-full px-3 lg:px-6 py-1.5 lg:py-3 border border-orange-200/50 shadow-xl'
 								style={{
@@ -162,73 +146,102 @@ export default function HeroSection() {
 							</div>
 						</div>
 
-						{/* Main headline with Sambal Goreng focus */}
-						<h1 className='voice-hero-title mobile-text-shadow text-4xl sm:text-4xl lg:text-6xl font-light text-white mb-1 sm:mb-2 lg:mb-3 leading-tight tracking-tight'>
-							<span className='block font-light text-white/90'>
+						{/* Main headline - simplified for mobile */}
+						<h1 className='voice-hero-title mobile-text-shadow text-4xl sm:text-4xl lg:text-6xl font-light text-white mb-2 sm:mb-2 lg:mb-3 leading-tight tracking-tight'>
+							<span className='block font-light text-white/90 text-3xl sm:text-3xl lg:text-5xl'>
 								Authentic
 							</span>
-							<span className='sambal-title block font-bold'>
+							<span className='sambal-title block font-bold text-5xl sm:text-5xl lg:text-7xl'>
 								Sambal Goreng
 							</span>
-							<span className='block font-light text-white/90'>
+							<span className='block font-light text-white/90 text-2xl sm:text-2xl lg:text-4xl'>
 								Coming Soon to UK
 							</span>
 						</h1>
 
-						{/* Subtitle */}
-						<div className='mb-2 sm:mb-3 lg:mb-4'>
+						{/* Subtitle - hidden on mobile */}
+						<div className='hidden sm:block mb-2 sm:mb-3 lg:mb-4'>
 							<p className='text-base sm:text-lg lg:text-xl text-white/80 font-light tracking-wide'>
 								Sweet & Spicy Indonesian Chili Paste -
 								Traditional Recipe
 							</p>
 						</div>
 
-						{/* Description */}
-						<p className='voice-product-description mobile-text-shadow text-sm lg:text-base text-white/90 mb-3 sm:mb-4 lg:mb-6 max-w-xl mx-auto lg:mx-0 leading-relaxed font-light px-2 lg:px-0'>
-							Chef Yossie's signature{" "}
-							<span className='text-amber-300 font-medium'>
-								Sambal Goreng
-							</span>{" "}
-							combines sweet palm sugar with fiery chilies
-							using the traditional <em>goreng</em> (fried)
-							method from West Java.{" "}
-							<span className='voice-location-info'>
-								Perfect balance of sweet and heat -
-								coming soon to the UK. Join our waitlist
-								for early access.
+						{/* Description - shortened for mobile */}
+						<p className='voice-product-description mobile-text-shadow text-base sm:text-base lg:text-lg text-white/90 mb-3 sm:mb-4 lg:mb-6 max-w-xl mx-auto lg:mx-0 leading-relaxed font-light px-2 lg:px-0'>
+							<span className='sm:hidden'>Traditional Indonesian sweet & spicy chili paste from West Java.</span>
+							<span className='hidden sm:block'>
+								Chef Yossie's signature{" "}
+								<span className='text-amber-300 font-medium'>
+									Sambal Goreng
+								</span>{" "}
+								combines sweet palm sugar with fiery chilies using the traditional <em>goreng</em> (fried) method from West Java.
 							</span>
 						</p>
+						
+						{/* Trust indicator - hidden on mobile */}
+						<div className='hidden sm:block mb-4 lg:mb-6 px-2 lg:px-0'>
+							<div className='inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 border border-white/20'>
+								<Star className='w-4 h-4 text-amber-300 fill-current' />
+								<span className='text-white/90 text-sm font-medium'>Risk-free trial with sample pack</span>
+							</div>
+						</div>
 
-						{/* Features with mobile-optimized design */}
-						<div className='flex flex-col sm:flex-row justify-center lg:justify-start gap-2 sm:gap-3 lg:gap-4 mb-3 sm:mb-4 lg:mb-6 px-2 lg:px-0'>
+						{/* Key features - hidden on mobile, compact on tablet+ */}
+						<div className='hidden sm:grid sm:grid-cols-3 gap-3 lg:gap-4 mb-4 sm:mb-6 lg:mb-8'>
 							{[
 								{
 									icon: Heart,
-									label: "Sweet & Spicy Balance",
+									label: "Sweet & Spicy",
+									desc: "Perfect Balance",
+									gradient: "from-red-500/20 via-orange-500/15 to-amber-500/20"
 								},
 								{
 									icon: ChefHat,
-									label: "Traditional Fried Method",
+									label: "Traditional",
+									desc: "Fried Method",
+									gradient: "from-amber-500/20 via-yellow-500/15 to-orange-500/20"
 								},
 								{
 									icon: Award,
-									label: "West Java Recipe",
+									label: "West Java",
+									desc: "Recipe",
+									gradient: "from-orange-500/20 via-red-500/15 to-amber-500/20"
 								},
-							].map(({ icon: Icon, label }) => (
+							].map(({ icon: Icon, label, desc, gradient }) => (
 								<div
 									key={label}
-									className='flex items-center justify-center space-x-2 lg:space-x-3 text-white/90'
+									className={`flex flex-col items-center text-center bg-gradient-to-br ${gradient} backdrop-blur-md rounded-lg p-2.5 lg:p-3 border border-amber-300/30 shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 group`}
 								>
-									<Icon className='w-4 lg:w-5 h-4 lg:h-5 text-amber-300' />
-									<span className='font-light text-sm lg:text-base tracking-wide'>
-										{label}
-									</span>
+									<Icon className='w-4 h-4 lg:w-5 lg:h-5 text-amber-200 mb-1 lg:mb-1.5 group-hover:text-amber-100 group-hover:scale-110 transition-all duration-300' />
+									<div className='text-white'>
+										<div className='font-medium text-xs lg:text-sm text-white'>{label}</div>
+										<div className='font-light text-xs text-white/80'>{desc}</div>
+									</div>
 								</div>
 							))}
 						</div>
 
-						{/* CTA Buttons with mobile optimization */}
-						<div className='flex flex-col gap-2.5 lg:gap-4 px-2 lg:px-0'>
+						{/* Primary CTA - simplified for mobile */}
+						<div className='flex flex-col gap-2 sm:gap-3 lg:gap-4 px-2 lg:px-0 max-w-sm sm:max-w-md mx-auto lg:mx-0'>
+							{/* Single Primary CTA - Sample Pack */}
+							<button
+								aria-label='Try Sample Pack First - Primary CTA'
+								onClick={() => {
+									window.location.href = "/sample-pack-try-first";
+								}}
+								className='group relative overflow-hidden bg-gradient-to-r from-amber-600 via-orange-700 to-red-700 hover:from-amber-500 hover:via-orange-600 hover:to-red-600 text-white font-bold text-base sm:text-base lg:text-xl py-4 sm:py-4 lg:py-5 px-5 sm:px-6 lg:px-10 rounded-lg sm:rounded-xl shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 border border-white/20 w-full min-h-[52px] sm:min-h-[56px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent'
+							>
+								<div className='absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
+								<div className='relative flex items-center justify-center space-x-1 sm:space-x-2'>
+									<Package className='w-5 h-5 sm:w-5 sm:h-5 lg:w-6 lg:h-6 group-hover:scale-110 transition-transform duration-300' />
+									<span className='font-bold'>
+										🎯 Try Sample Pack - £4.99
+									</span>
+								</div>
+							</button>
+
+							{/* Secondary CTA - Waitlist (mobile simplified) */}
 							<button
 								aria-label='Join Sambal Goreng waiting list'
 								onClick={handleInterestClick}
@@ -236,51 +249,32 @@ export default function HeroSection() {
 									interestState.isSubmitting ||
 									interestState.isSubmitted
 								}
-								className='group relative overflow-hidden bg-gradient-to-r from-amber-500 via-orange-600 to-red-600 hover:from-amber-400 hover:via-orange-500 hover:to-red-500 text-white font-semibold py-3 lg:py-4 px-6 lg:px-8 rounded-lg shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed border border-white/20 w-full min-h-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent'
+								className='group bg-black/20 backdrop-blur-md hover:bg-black/30 text-white font-medium py-3 sm:py-3 lg:py-3.5 px-4 sm:px-4 lg:px-8 rounded-lg border border-white/20 hover:border-white/40 shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed w-full min-h-[48px] sm:min-h-[48px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/50 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent'
 							>
-								<div className='absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
-								<div className='relative flex items-center justify-center space-x-2 lg:space-x-3'>
+								<div className='flex items-center justify-center space-x-1 sm:space-x-2'>
 									{interestState.isSubmitting ? (
 										<>
-											<Heart className='w-4 lg:w-5 h-4 lg:h-5 animate-pulse' />
-											<span className='text-sm lg:text-base'>
-												Recording
-												Interest...
+											<Heart className='w-4 h-4 sm:w-4 sm:h-4 animate-pulse' />
+											<span className='text-sm sm:text-sm lg:text-base'>
+												Joining...
 											</span>
 										</>
 									) : interestState.isSubmitted ? (
 										<>
-											<Heart className='w-4 lg:w-5 h-4 lg:h-5' />
-											<span className='text-sm lg:text-base'>
-												Order Confirmed! 🌶️
+											<Heart className='w-4 h-4 sm:w-4 sm:h-4' />
+											<span className='text-sm sm:text-sm lg:text-base'>
+												Joined! 🌶️
 											</span>
 										</>
 									) : (
 										<>
-											<Heart className='w-4 lg:w-5 h-4 lg:h-5 group-hover:animate-bounce' />
-											<span className='text-sm lg:text-base'>
-												Join Sambal Goreng
-												Waitlist
+											<Heart className='w-4 h-4 sm:w-4 sm:h-4' />
+											<span className='text-sm sm:text-sm lg:text-base text-center leading-tight'>
+												<span className='sm:hidden'>Join Waitlist</span>
+												<span className='hidden sm:inline'>Join Waitlist for Full-Size Jars</span>
 											</span>
 										</>
 									)}
-								</div>
-							</button>
-
-							<button
-								aria-label='Try Sample Pack First'
-								onClick={() => {
-									window.location.href =
-										"/sample-pack-try-first";
-								}}
-								className='group bg-white/10 backdrop-blur-md hover:bg-white/20 text-white font-semibold py-3 lg:py-4 px-6 lg:px-8 rounded-lg border border-white/30 hover:border-amber-300/50 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 w-full min-h-[44px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent'
-							>
-								<div className='flex items-center justify-center space-x-2'>
-									<Package className='w-4 lg:w-5 h-4 lg:h-5 group-hover:text-amber-300 transition-colors duration-300' />
-									<span className='group-hover:text-amber-300 transition-colors duration-300 text-sm lg:text-base'>
-										🎯 Try Sample Pack First -
-										£4.99
-									</span>
 								</div>
 							</button>
 						</div>
@@ -305,8 +299,8 @@ export default function HeroSection() {
 						)}
 					</div>
 
-					{/* Product showcase - optimized for performance */}
-					<div className='relative order-2 lg:order-1 pb-8 sm:pb-12 lg:pb-0 flex items-center justify-center'>
+					{/* Product showcase - mobile-first optimization */}
+					<div className='relative order-2 lg:order-1 pb-4 sm:pb-6 lg:pb-0 flex items-center justify-center'>
 						<div className='relative w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[400px] mx-auto'>
 							{/* Mobile-optimized container with proper aspect ratio */}
 							<div
@@ -337,8 +331,8 @@ export default function HeroSection() {
 								</div>
 							</div>
 
-							{/* Subtle background glow - responsive sizing */}
-							<div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-60 sm:w-72 lg:w-96 h-60 sm:h-72 lg:h-96 bg-gradient-radial from-orange-600/10 via-red-600/5 to-transparent rounded-full blur-3xl'></div>
+							{/* Subtle background glow - mobile optimized sizing */}
+							<div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 sm:w-60 lg:w-96 h-48 sm:h-60 lg:h-96 bg-gradient-radial from-orange-600/10 via-red-600/5 to-transparent rounded-full blur-3xl'></div>
 						</div>
 					</div>
 				</div>
