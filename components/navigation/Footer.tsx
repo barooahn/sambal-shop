@@ -4,8 +4,13 @@ import { Instagram, Facebook } from "lucide-react";
 export default function Footer() {
 	return (
 		<footer className='bg-neutral-900 text-gold-100 py-16 relative overflow-hidden border-t border-gold-600/30'>
-			{/* Batik-inspired overlay */}
-			<div className='absolute inset-0 pointer-events-none opacity-20 batik-pattern-subtle'></div>
+			{/* Background image with overlay */}
+			<div 
+				className='absolute inset-0 pointer-events-none bg-cover bg-center bg-no-repeat' 
+				style={{backgroundImage: 'url(/images/footer-background.png)'}}
+			></div>
+			{/* Dark overlay to reduce brightness */}
+			<div className='absolute inset-0 pointer-events-none bg-black/60'></div>
 
 			<div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 				<div className='grid md:grid-cols-5 gap-8'>

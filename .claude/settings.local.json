@@ -53,7 +53,8 @@
       "Bash(yarn add:*)",
       "Bash(ANALYZE=true yarn build)",
       "Bash(yarn remove:*)",
-      "Bash(yarn start)"
+      "Bash(yarn start)",
+      "Bash(yarn dev:*)"
     ],
     "deny": [],
     "defaultMode": "acceptEdits",
