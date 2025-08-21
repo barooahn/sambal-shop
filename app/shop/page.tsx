@@ -229,13 +229,13 @@ export default function ShopPage() {
 		<div className='min-h-screen bg-gradient-to-br from-cream-50 to-cream-100'>
 			{/* Enhanced Hero Section */}
 			<section className='py-16 sm:py-20 bg-gradient-to-br from-burgundy-900 via-burgundy-800 to-gold-900 text-white relative overflow-hidden'>
-				{/* Background image with overlay */}
+				{/* Background image with opacity only */}
 				<div 
-					className='absolute inset-0 pointer-events-none bg-cover bg-center bg-no-repeat opacity-20' 
+					className='absolute inset-0 pointer-events-none bg-cover bg-center bg-no-repeat opacity-45' 
 					style={{backgroundImage: 'url(/images/sections-background.webp)'}}
 				></div>
-				{/* Maintain gradient overlay for hero styling */}
-				<div className='absolute inset-0 bg-gradient-to-br from-burgundy-900/80 via-burgundy-800/60 to-gold-900/40'></div>
+				{/* Maintain primary gradient overlay */}
+				<div className='absolute inset-0 bg-gradient-to-br from-burgundy-900/70 via-burgundy-800/50 to-burgundy-700/40'></div>
 
 				<div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
 					<ShoppingBag className='w-16 h-16 mx-auto mb-6 text-gold-300' />

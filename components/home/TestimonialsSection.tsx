@@ -72,13 +72,11 @@ export default function TestimonialsSection() {
 
 	return (
 		<section className='py-24 relative overflow-hidden'>
-			{/* Background image with overlay */}
+			{/* Background image with opacity only */}
 			<div 
-				className='absolute inset-0 pointer-events-none bg-cover bg-center bg-no-repeat opacity-25' 
+				className='absolute inset-0 pointer-events-none bg-cover bg-center bg-no-repeat opacity-60' 
 				style={{backgroundImage: 'url(/images/sections-background.webp)'}}
 			></div>
-			{/* Light overlay for cream background compatibility */}
-			<div className='absolute inset-0 pointer-events-none bg-gradient-to-br from-white/30 via-cream-50/20 to-white/40'></div>
 
 			<div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 				<div className='text-center mb-16'>

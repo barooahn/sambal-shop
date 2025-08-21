@@ -20,13 +20,13 @@ export default function AboutPage() {
 		<div className='min-h-screen bg-gradient-to-br from-cream-50 to-cream-100'>
 			{/* Hero Section */}
 			<section className='py-24 bg-gradient-to-br from-burgundy-900 to-burgundy-800 text-white relative overflow-hidden'>
-				{/* Background image with overlay */}
+				{/* Background image with opacity only */}
 				<div 
-					className='absolute inset-0 pointer-events-none bg-cover bg-center bg-no-repeat opacity-15' 
+					className='absolute inset-0 pointer-events-none bg-cover bg-center bg-no-repeat opacity-40' 
 					style={{backgroundImage: 'url(/images/sections-background.webp)'}}
 				></div>
-				{/* Maintain gradient overlay for hero section */}
-				<div className='absolute inset-0 bg-gradient-to-r from-burgundy-900/90 to-gold-900/20'></div>
+				{/* Maintain primary gradient overlay */}
+				<div className='absolute inset-0 bg-gradient-to-r from-burgundy-900/80 to-burgundy-800/60'></div>
 
 				<div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
 					<h1 className='text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 font-brand'>

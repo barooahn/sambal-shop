@@ -6,13 +6,11 @@ import { Star, Heart } from "lucide-react";
 export default function StorySection() {
 	return (
 		<section className='py-24 relative overflow-hidden'>
-			{/* Background image with overlay */}
+			{/* Background image with opacity only */}
 			<div 
-				className='absolute inset-0 pointer-events-none bg-cover bg-center bg-no-repeat opacity-30' 
+				className='absolute inset-0 pointer-events-none bg-cover bg-center bg-no-repeat opacity-70' 
 				style={{backgroundImage: 'url(/images/sections-background.webp)'}}
 			></div>
-			{/* Subtle overlay for better text readability */}
-			<div className='absolute inset-0 pointer-events-none bg-gradient-to-b from-white/20 via-transparent to-white/10'></div>
 
 			<div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 				<div className='grid lg:grid-cols-2 gap-16 items-center'>
