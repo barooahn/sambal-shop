@@ -59,11 +59,6 @@ export default function FAQSection() {
 
 	return (
 		<section className='py-24 relative overflow-hidden'>
-			{/* Background image with opacity only */}
-			<div 
-				className='absolute inset-0 pointer-events-none bg-cover bg-center bg-no-repeat opacity-55' 
-				style={{backgroundImage: 'url(/images/sections-background.webp)'}}
-			></div>
 			<div className='relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
 				<div className='text-center mb-16'>
 					<h2 className='text-4xl sm:text-5xl font-bold text-burgundy-900 mb-6 font-brand'>
