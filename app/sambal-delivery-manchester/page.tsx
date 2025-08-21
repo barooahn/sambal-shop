@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 		title: "Authentic Indonesian Sambal Delivery Manchester - Spice Island Indonesia",
 		description:
 			"Same-day delivery of authentic Indonesian sambal to Manchester. Traditional recipes, no preservatives, delivered fresh to your door.",
-		images: ["/images/Spice Island Indonesia Sambal Bali 185g Label.png"],
+		images: ["/images/optimized/sambal-bali-md.webp"],
 		type: "website",
 	},
 };

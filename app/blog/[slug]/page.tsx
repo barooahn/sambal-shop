@@ -470,7 +470,7 @@ const blogPosts = {
 			</div>
 		</div>
 		`,
-		image: "/images/Spice Island Indonesia Sambal Bali 185g Label.png",
+		image: "/images/blog/indonesian-british-sambal-fusion-split-screen.webp",
 		category: "Cooking Tips",
 		readTime: "10 min read",
 		publishDate: "2024-02-05",
@@ -578,7 +578,7 @@ const blogPosts = {
 		publishDate: "2024-01-15",
 		author: "The Spice Island Indonesia Team",
 	},
-	
+
 	"indonesian-spice-levels-british-palates": {
 		title: "Indonesian Spice Levels for British Palates: Complete 2025 Guide to Heat Tolerance UK",
 		excerpt: "Master Indonesian spice levels perfectly adapted for British tastes. Complete UK guide to building spice tolerance, comparing heat scales, and enjoying authentic Indonesian food safely. Includes shopping guide for UK supermarkets.",
@@ -1005,58 +1005,61 @@ const blogPosts = {
 		author: "Chef Yossie",
 		keywords: [
 			"Indonesian spice levels UK",
-			"British palate spice guide UK 2025", 
+			"British palate spice guide UK 2025",
 			"sambal heat levels UK families",
 			"Indonesian cooking heat tolerance UK",
 			"UK supermarket Indonesian spices",
 			"Indonesian food too spicy UK solutions",
 			"building spice tolerance UK guide",
-			"British Indonesian cuisine adaptation"
+			"British Indonesian cuisine adaptation",
 		],
 		structuredData: {
 			"@context": "https://schema.org",
 			"@graph": [
 				{
 					"@type": "Article",
-					"headline": "Indonesian Spice Levels for British Palates: Complete 2025 Guide to Heat Tolerance UK",
-					"description": "Master Indonesian spice levels perfectly adapted for British tastes. Complete UK guide to building spice tolerance, comparing heat scales, and enjoying authentic Indonesian food safely.",
-					"author": {
+					headline:
+						"Indonesian Spice Levels for British Palates: Complete 2025 Guide to Heat Tolerance UK",
+					description:
+						"Master Indonesian spice levels perfectly adapted for British tastes. Complete UK guide to building spice tolerance, comparing heat scales, and enjoying authentic Indonesian food safely.",
+					author: {
 						"@type": "Person",
-						"name": "Chef Yossie",
-						"jobTitle": "Indonesian Chef",
-						"worksFor": {
+						name: "Chef Yossie",
+						jobTitle: "Indonesian Chef",
+						worksFor: {
 							"@type": "Organization",
-							"name": "Spice Island Indonesia"
-						}
+							name: "Spice Island Indonesia",
+						},
 					},
-					"datePublished": "2025-01-13",
-					"dateModified": "2025-01-13",
-					"publisher": {
+					datePublished: "2025-01-13",
+					dateModified: "2025-01-13",
+					publisher: {
 						"@type": "Organization",
-						"name": "Spice Island Indonesia",
-						"logo": {
+						name: "Spice Island Indonesia",
+						logo: {
 							"@type": "ImageObject",
-							"url": "https://spiceislandindonesia.com/images/logo.webp"
-						}
+							url: "https://spiceislandindonesia.com/images/logo.webp",
+						},
 					},
-					"mainEntityOfPage": {
+					mainEntityOfPage: {
 						"@type": "WebPage",
-						"@id": "https://spiceislandindonesia.com/blog/indonesian-spice-levels-british-palates"
+						"@id": "https://spiceislandindonesia.com/blog/indonesian-spice-levels-british-palates",
 					},
-					"wordCount": 3200,
-					"keywords": "Indonesian spice levels UK, British palate spice guide UK 2025, sambal heat levels UK families",
-					"image": {
+					wordCount: 3200,
+					keywords:
+						"Indonesian spice levels UK, British palate spice guide UK 2025, sambal heat levels UK families",
+					image: {
 						"@type": "ImageObject",
-						"url": "https://spiceislandindonesia.com/images/indonesian-spice-guide-uk.webp",
-						"width": 1200,
-						"height": 630,
-						"caption": "Indonesian sambal spice level comparison for British palates showing different heat levels with UK supermarket ingredients and traditional Indonesian spices"
-					}
-				}
-			]
-		}
+						url: "https://spiceislandindonesia.com/images/indonesian-spice-guide-uk.webp",
+						width: 1200,
+						height: 630,
+						caption: "Indonesian sambal spice level comparison for British palates showing different heat levels with UK supermarket ingredients and traditional Indonesian spices",
+					},
+				},
+			],
+		},
 	},
-	
+
 	"indonesian-techniques-british-kitchens": {
 		title: "Indonesian Cooking Techniques for British Kitchens 2025: Master Traditional Methods UK",
 		excerpt: "Complete guide to authentic Indonesian cooking techniques using standard British kitchen equipment. Master wok techniques, spice paste preparation, traditional timing methods, and equipment adaptations for UK homes. Includes professional chef secrets.",
@@ -1667,45 +1670,48 @@ const blogPosts = {
 			"@graph": [
 				{
 					"@type": "Article",
-					"headline": "Indonesian Cooking Techniques for British Kitchens 2025: Master Traditional Methods UK",
-					"description": "Complete guide to authentic Indonesian cooking techniques using standard British kitchen equipment. Master wok techniques, spice paste preparation, traditional timing methods, and equipment adaptations for UK homes.",
-					"author": {
+					headline:
+						"Indonesian Cooking Techniques for British Kitchens 2025: Master Traditional Methods UK",
+					description:
+						"Complete guide to authentic Indonesian cooking techniques using standard British kitchen equipment. Master wok techniques, spice paste preparation, traditional timing methods, and equipment adaptations for UK homes.",
+					author: {
 						"@type": "Person",
-						"name": "Chef Yossie",
-						"jobTitle": "Indonesian Chef",
-						"worksFor": {
+						name: "Chef Yossie",
+						jobTitle: "Indonesian Chef",
+						worksFor: {
 							"@type": "Organization",
-							"name": "Spice Island Indonesia"
-						}
+							name: "Spice Island Indonesia",
+						},
 					},
-					"datePublished": "2025-01-13",
-					"dateModified": "2025-01-13",
-					"publisher": {
+					datePublished: "2025-01-13",
+					dateModified: "2025-01-13",
+					publisher: {
 						"@type": "Organization",
-						"name": "Spice Island Indonesia",
-						"logo": {
+						name: "Spice Island Indonesia",
+						logo: {
 							"@type": "ImageObject",
-							"url": "https://spiceislandindonesia.com/images/logo.webp"
-						}
+							url: "https://spiceislandindonesia.com/images/logo.webp",
+						},
 					},
-					"mainEntityOfPage": {
+					mainEntityOfPage: {
 						"@type": "WebPage",
-						"@id": "https://spiceislandindonesia.com/blog/indonesian-techniques-british-kitchens"
+						"@id": "https://spiceislandindonesia.com/blog/indonesian-techniques-british-kitchens",
 					},
-					"wordCount": 3500,
-					"keywords": "Indonesian cooking techniques UK, British kitchen Indonesian methods, authentic Indonesian cooking UK",
-					"image": {
+					wordCount: 3500,
+					keywords:
+						"Indonesian cooking techniques UK, British kitchen Indonesian methods, authentic Indonesian cooking UK",
+					image: {
 						"@type": "ImageObject",
-						"url": "https://spiceislandindonesia.com/images/indonesian-techniques-uk-kitchen.webp",
-						"width": 1200,
-						"height": 630,
-						"caption": "Split-screen showing traditional Indonesian cooking methods adapted for modern British kitchens with proper equipment and techniques"
-					}
-				}
-			]
-		}
+						url: "https://spiceislandindonesia.com/images/indonesian-techniques-uk-kitchen.webp",
+						width: 1200,
+						height: 630,
+						caption: "Split-screen showing traditional Indonesian cooking methods adapted for modern British kitchens with proper equipment and techniques",
+					},
+				},
+			],
+		},
 	},
-	
+
 	"british-indonesian-fusion-weeknight-recipes": {
 		title: "British-Indonesian Fusion Weeknight Recipes UK 2025: Quick 30-Minute Family Meals",
 		excerpt: "Transform your weeknight dinners with 10 quick Indonesian-British fusion recipes. 30 minutes or less using Tesco, ASDA & Sainsbury's ingredients. Perfect for busy UK families discovering Indonesian flavors.",
@@ -1719,7 +1725,7 @@ const blogPosts = {
 			"30 minute Indonesian meals UK",
 			"British Asian fusion recipes",
 			"Indonesian ingredients UK supermarkets",
-			"quick sambal recipes UK families"
+			"quick sambal recipes UK families",
 		],
 		image: "/images/blog/fusion-recipes-guide.webp",
 		category: "UK Family Recipes",
@@ -1731,69 +1737,74 @@ const blogPosts = {
 			"@graph": [
 				{
 					"@type": "Article",
-					"headline": "British-Indonesian Fusion Weeknight Recipes UK 2025: Quick 30-Minute Family Meals",
-					"description": "Transform your weeknight dinners with 10 quick Indonesian-British fusion recipes. 30 minutes or less using Tesco, ASDA & Sainsbury's ingredients.",
-					"author": {
+					headline:
+						"British-Indonesian Fusion Weeknight Recipes UK 2025: Quick 30-Minute Family Meals",
+					description:
+						"Transform your weeknight dinners with 10 quick Indonesian-British fusion recipes. 30 minutes or less using Tesco, ASDA & Sainsbury's ingredients.",
+					author: {
 						"@type": "Person",
-						"name": "Chef Yossie",
-						"jobTitle": "Indonesian Chef",
-						"worksFor": {
+						name: "Chef Yossie",
+						jobTitle: "Indonesian Chef",
+						worksFor: {
 							"@type": "Organization",
-							"name": "Spice Island Indonesia"
-						}
+							name: "Spice Island Indonesia",
+						},
 					},
-					"datePublished": "2025-01-08",
-					"dateModified": "2025-01-08",
-					"publisher": {
+					datePublished: "2025-01-08",
+					dateModified: "2025-01-08",
+					publisher: {
 						"@type": "Organization",
-						"name": "Spice Island Indonesia",
-						"logo": {
+						name: "Spice Island Indonesia",
+						logo: {
 							"@type": "ImageObject",
-							"url": "https://spiceislandindonesia.com/logo.webp"
-						}
+							url: "https://spiceislandindonesia.com/logo.webp",
+						},
 					},
-					"mainEntityOfPage": {
+					mainEntityOfPage: {
 						"@type": "WebPage",
-						"@id": "https://spiceislandindonesia.com/blog/british-indonesian-fusion-weeknight-recipes"
+						"@id": "https://spiceislandindonesia.com/blog/british-indonesian-fusion-weeknight-recipes",
 					},
-					"wordCount": 3000,
-					"keywords": "British Indonesian fusion recipes, quick weeknight meals UK, Indonesian fusion cooking UK 2025",
-					"image": {
+					wordCount: 3000,
+					keywords:
+						"British Indonesian fusion recipes, quick weeknight meals UK, Indonesian fusion cooking UK 2025",
+					image: {
 						"@type": "ImageObject",
-						"url": "https://spiceislandindonesia.com/images/blog/fusion-recipes-guide.webp",
-						"width": 1200,
-						"height": 630,
-						"caption": "Overhead view of British-Indonesian fusion family dinner featuring sambal shepherd's pie, Indonesian bangers & mash, and other fusion weeknight recipes using UK supermarket ingredients"
-					}
+						url: "https://spiceislandindonesia.com/images/blog/fusion-recipes-guide.webp",
+						width: 1200,
+						height: 630,
+						caption: "Overhead view of British-Indonesian fusion family dinner featuring sambal shepherd's pie, Indonesian bangers & mash, and other fusion weeknight recipes using UK supermarket ingredients",
+					},
 				},
 				{
 					"@type": "Recipe",
-					"name": "Sambal Shepherd's Pie",
-					"description": "British shepherd's pie with Indonesian sambal twist - comfort food fusion in 30 minutes",
-					"cookTime": "PT30M",
-					"prepTime": "PT15M",
-					"totalTime": "PT45M",
-					"recipeYield": "4 servings",
-					"recipeCategory": "Main Course",
-					"recipeCuisine": "British-Indonesian Fusion",
-					"keywords": "sambal shepherds pie, Indonesian British fusion, comfort food fusion UK",
-					"image": {
+					name: "Sambal Shepherd's Pie",
+					description:
+						"British shepherd's pie with Indonesian sambal twist - comfort food fusion in 30 minutes",
+					cookTime: "PT30M",
+					prepTime: "PT15M",
+					totalTime: "PT45M",
+					recipeYield: "4 servings",
+					recipeCategory: "Main Course",
+					recipeCuisine: "British-Indonesian Fusion",
+					keywords:
+						"sambal shepherds pie, Indonesian British fusion, comfort food fusion UK",
+					image: {
 						"@type": "ImageObject",
-						"url": "https://spiceislandindonesia.com/images/blog/fusion-recipes-guide.webp",
-						"width": 1200,
-						"height": 630,
-						"caption": "Sambal Shepherd's Pie with crispy potato topping and spiced Indonesian lamb filling"
+						url: "https://spiceislandindonesia.com/images/blog/fusion-recipes-guide.webp",
+						width: 1200,
+						height: 630,
+						caption: "Sambal Shepherd's Pie with crispy potato topping and spiced Indonesian lamb filling",
 					},
-					"author": {
+					author: {
 						"@type": "Person",
-						"name": "Chef Yossie",
-						"jobTitle": "Indonesian Chef",
-						"worksFor": {
+						name: "Chef Yossie",
+						jobTitle: "Indonesian Chef",
+						worksFor: {
 							"@type": "Organization",
-							"name": "Spice Island Indonesia"
-						}
+							name: "Spice Island Indonesia",
+						},
 					},
-					"recipeIngredient": [
+					recipeIngredient: [
 						"750g minced lamb",
 						"2 tbsp authentic sambal",
 						"1 large onion, diced",
@@ -1807,62 +1818,62 @@ const blogPosts = {
 						"50g butter",
 						"100ml whole milk",
 						"Salt and pepper to taste",
-						"Fresh coriander for garnish"
+						"Fresh coriander for garnish",
 					],
-					"recipeInstructions": [
+					recipeInstructions: [
 						{
 							"@type": "HowToStep",
-							"text": "Preheat oven to 200°C (fan 180°C). Peel and chop potatoes, then boil until tender, about 15 minutes."
+							text: "Preheat oven to 200°C (fan 180°C). Peel and chop potatoes, then boil until tender, about 15 minutes.",
 						},
 						{
 							"@type": "HowToStep",
-							"text": "Meanwhile, heat oil in a large pan. Brown the minced lamb over medium-high heat for 5-6 minutes."
+							text: "Meanwhile, heat oil in a large pan. Brown the minced lamb over medium-high heat for 5-6 minutes.",
 						},
 						{
 							"@type": "HowToStep",
-							"text": "Add diced onion, carrots, garlic, and ginger to the lamb. Cook for 5 minutes until vegetables soften."
+							text: "Add diced onion, carrots, garlic, and ginger to the lamb. Cook for 5 minutes until vegetables soften.",
 						},
 						{
 							"@type": "HowToStep",
-							"text": "Stir in sambal, tomato paste, and soy sauce. Cook for 2 minutes until fragrant."
+							text: "Stir in sambal, tomato paste, and soy sauce. Cook for 2 minutes until fragrant.",
 						},
 						{
 							"@type": "HowToStep",
-							"text": "Pour in coconut milk and simmer for 8-10 minutes until sauce thickens. Season with salt and pepper."
+							text: "Pour in coconut milk and simmer for 8-10 minutes until sauce thickens. Season with salt and pepper.",
 						},
 						{
 							"@type": "HowToStep",
-							"text": "Drain potatoes and mash with butter and milk until smooth. Season with salt and pepper."
+							text: "Drain potatoes and mash with butter and milk until smooth. Season with salt and pepper.",
 						},
 						{
 							"@type": "HowToStep",
-							"text": "Transfer lamb mixture to a baking dish. Top with mashed potato and fork to create texture."
+							text: "Transfer lamb mixture to a baking dish. Top with mashed potato and fork to create texture.",
 						},
 						{
 							"@type": "HowToStep",
-							"text": "Bake for 20-25 minutes until golden. Garnish with fresh coriander and serve hot."
-						}
+							text: "Bake for 20-25 minutes until golden. Garnish with fresh coriander and serve hot.",
+						},
 					],
-					"aggregateRating": {
+					aggregateRating: {
 						"@type": "AggregateRating",
-						"ratingValue": "4.8",
-						"reviewCount": "127",
-						"bestRating": "5",
-						"worstRating": "1"
+						ratingValue: "4.8",
+						reviewCount: "127",
+						bestRating: "5",
+						worstRating: "1",
 					},
-					"nutrition": {
+					nutrition: {
 						"@type": "NutritionInformation",
-						"calories": "485 kcal",
-						"proteinContent": "28g",
-						"carbohydrateContent": "42g",
-						"fatContent": "22g",
-						"saturatedFatContent": "12g",
-						"fiberContent": "4g",
-						"sodiumContent": "680mg",
-						"servingSize": "1 serving"
-					}
-				}
-			]
+						calories: "485 kcal",
+						proteinContent: "28g",
+						carbohydrateContent: "42g",
+						fatContent: "22g",
+						saturatedFatContent: "12g",
+						fiberContent: "4g",
+						sodiumContent: "680mg",
+						servingSize: "1 serving",
+					},
+				},
+			],
 		},
 		content: `
 		<div class="bg-gradient-to-r from-burgundy-50 to-gold-50 border-l-4 border-burgundy-500 p-6 my-8 rounded-r-lg">
@@ -2203,7 +2214,7 @@ const blogPosts = {
 		<p class="text-lg leading-relaxed mb-6">Many of these fusion dishes can be prepared in advance or adapted for meal prep, making Indonesian flavors accessible even during the busiest weeks.</p>
 		
 		<p class="text-lg leading-relaxed">Start with these approachable recipes and gradually build your confidence with Indonesian flavors. Soon, you'll be creating your own fusion combinations!</p>
-		`
+		`,
 	},
 };
 
@@ -2258,17 +2269,19 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 			{/* Structured Data */}
 			{(post as any).structuredData && (
 				<script
-					type="application/ld+json"
+					type='application/ld+json'
 					dangerouslySetInnerHTML={{
-						__html: JSON.stringify((post as any).structuredData),
+						__html: JSON.stringify(
+							(post as any).structuredData
+						),
 					}}
 				/>
 			)}
-			
+
 			<ArticleSchema
 				headline={post.title}
 				description={post.excerpt}
-				image='/images/Spice Island Indonesia Sambal Bali 185g Label.png'
+				image='/images/blog/indonesian-british-sambal-fusion-split-screen.webp'
 				datePublished={post.publishDate}
 				dateModified={post.publishDate}
 				author={{
@@ -2360,7 +2373,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 							fill
 							className='object-cover'
 							priority
-							sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
+							sizes='(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px'
 						/>
 					</div>
 

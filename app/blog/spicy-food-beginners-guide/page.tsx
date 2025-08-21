@@ -18,13 +18,25 @@ export const metadata: Metadata = {
 	openGraph: {
 		title: "Spicy Food Beginners Guide: How to Build Heat Tolerance Safely",
 		description: "Learn to enjoy spicy food safely with our complete beginners guide. Build heat tolerance gradually with expert tips and beginner-friendly recommendations.",
-		images: ["/images/optimized/spicy-food-beginners-guide-lg.webp"],
+		images: ["/images/blog/spicy-food-beginners-safe-progression.webp.webp"],
 	},
 };
 
 export default function SpicyFoodBeginnersGuidePage() {
 	return (
 		<div className="min-h-screen bg-gradient-to-b from-cream-50 to-cream-100">
+			{/* Hero Image */}
+			<div className="mb-8">
+				<Image
+					src="/images/blog/spicy-food-beginners-safe-progression.webp.webp"
+					alt="Spicy food beginners guide - safe progression from mild to hot with cooling foods and tolerance building tips"
+					width={1200}
+					height={675}
+					className="w-full h-64 md:h-80 object-cover"
+					priority
+				/>
+			</div>
+
 			{/* Hero Section */}
 			<section className="py-16 bg-gradient-to-br from-burgundy-50 to-gold-50 relative overflow-hidden">
 				<div className="absolute inset-0 bg-gradient-to-r from-burgundy-900/5 via-transparent to-gold-600/5"></div>

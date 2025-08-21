@@ -160,6 +160,8 @@ const blogPosts = [
 	{ slug: "complete-guide-indonesian-sambal-varieties", date: "2025-08-15" },
 	{ slug: "authentic-indonesian-sambal-why-uk-brands-get-it-wrong", date: "2025-08-15" },
 	{ slug: "spicy-food-beginners-guide", date: "2025-08-15" },
+	{ slug: "5-asian-hot-sauces-beat-sriracha", date: "2025-08-21" },
+	{ slug: "ultimate-guide-spicy-sauces-stir-fry", date: "2025-08-21" },
 ];
 
 // Recipe pages (add new ones here as they&apos;re created)
@@ -188,13 +190,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
 		});
 	});
 
-	// Add blog posts
+	// Add blog posts with higher priority for key SEO articles
 	blogPosts.forEach(({ slug, date }) => {
+		// Give higher priority to strategic SEO articles
+		const isHighPriorityArticle = [
+			"5-asian-hot-sauces-beat-sriracha",
+			"sambal-vs-sriracha", 
+			"ultimate-guide-indonesian-sambal",
+			"sambal-vs-hp-sauce"
+		].includes(slug);
+		
 		routes.push({
 			url: `${baseUrl}/blog/${slug}`,
 			lastModified: new Date(date),
-			changeFrequency: "monthly",
-			priority: 0.7,
+			changeFrequency: isHighPriorityArticle ? "weekly" : "monthly",
+			priority: isHighPriorityArticle ? 0.9 : 0.7,
 		});
 	});
 

@@ -19,7 +19,7 @@ export default function StructuredData({
 		},
 		sameAs: [
 			"https://www.instagram.com/spiceisland_indonesia",
-			"https://www.facebook.com/spiceislandindonesia",
+			"https://www.facebook.com/profile.php?id=61579653961037",
 		],
 		contactPoint: {
 			"@type": "ContactPoint",
@@ -458,8 +458,8 @@ export default function StructuredData({
 			name: "United Kingdom",
 		},
 		sameAs: [
-			"https://www.instagram.com/spiceisland_indonesia", // TODO: Replace when social media is set up
-			"https://www.facebook.com/spiceislandindonesia",
+			"https://www.instagram.com/spiceisland_indonesia",
+			"https://www.facebook.com/profile.php?id=61579653961037",
 		],
 	};
 

@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 		title: "UK-Wide Indonesian Food Delivery - Authentic Sambal Nationwide",
 		description:
 			"Bringing authentic Indonesian flavors to every corner of the UK. Traditional sambal recipes delivered nationwide with free shipping.",
-		images: ["/images/Spice Island Indonesia Sambal Bali 185g Label.png"],
+		images: ["/images/optimized/sambal-bali-md.webp"],
 		type: "website",
 	},
 };

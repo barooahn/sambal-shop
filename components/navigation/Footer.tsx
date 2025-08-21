@@ -30,8 +30,11 @@ export default function Footer() {
 								<Instagram className='w-6 h-6' />
 							</a>
 							<a
-								href='#'
+								href='https://www.facebook.com/profile.php?id=61579653961037'
+								target='_blank'
+								rel='noopener noreferrer'
 								className='w-12 h-12 bg-burgundy-800 border border-gold-600/30 rounded-full flex items-center justify-center text-gold-400 hover:text-gold-200 hover:bg-burgundy-700 transition-all duration-200'
+								aria-label='Follow Spice Island Indonesia on Facebook'
 							>
 								<Facebook className='w-6 h-6' />
 							</a>
