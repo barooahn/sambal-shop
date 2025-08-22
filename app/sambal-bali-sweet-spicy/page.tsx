@@ -358,18 +358,6 @@ export default function SambalBaliSweetSpicyPage() {
 				<div className='absolute top-0 left-0 w-96 h-96 bg-gold-600/20 rounded-full -translate-x-48 -translate-y-48 blur-3xl'></div>
 				<div className='absolute bottom-0 right-0 w-96 h-96 bg-gold-600/20 rounded-full translate-x-48 translate-y-48 blur-3xl'></div>
 
-				{/* Product Schema for Merchant listings */}
-				<ProductSchema
-					name={productData.name}
-					description={productData.description}
-					brand={productData.brand}
-					category={productData.category}
-					image={productData.image}
-					offers={productData.offers}
-					aggregateRating={productData.aggregateRating}
-					reviews={productData.reviews}
-					additionalProperties={productData.additionalProperties}
-				/>
 
 				<div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<div className='grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] lg:gap-6 items-center'>

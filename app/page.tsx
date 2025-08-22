@@ -351,9 +351,6 @@ export default function Home() {
 				{/* Structured Data (keep single instances to avoid duplicates) */}
 				<StructuredData type='organization' />
 				<StructuredData type='localbusiness' />
-				<StructuredData type='product' />
-				{/* FAQ schema is injected below via <FAQSchema /> to avoid duplication */}
-				<StructuredData type='reviews' />
 
 				{/* Local SEO Schema for AI Search */}
 				<LocalSEOSchema

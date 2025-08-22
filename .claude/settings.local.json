@@ -58,7 +58,10 @@
       "mcp__playwright__browser_navigate",
       "mcp__playwright__browser_take_screenshot",
       "mcp__playwright__browser_resize",
-      "mcp__playwright__browser_snapshot"
+      "mcp__playwright__browser_snapshot",
+      "Bash(for file in \"C:\\Users\\thinb\\Desktop\\Sambal\\app\\sambal-bali-aromatic-spicy\\page.tsx\" \"C:\\Users\\thinb\\Desktop\\Sambal\\app\\sambal-goreng-uk\\page.tsx\" \"C:\\Users\\thinb\\Desktop\\Sambal\\app\\sambal-oelek-uk\\page.tsx\")",
+      "Bash(do echo \"=== $file ===\")",
+      "Bash(done)"
     ],
     "deny": [],
     "defaultMode": "acceptEdits",
