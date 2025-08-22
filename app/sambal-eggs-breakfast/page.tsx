@@ -38,6 +38,9 @@ export const metadata = {
 			},
 		],
 	},
+	alternates: {
+		canonical: "https://www.spiceislandindonesia.com/sambal-eggs-breakfast",
+	},
 };
 
 export default function SambalEggsBreakfastPage() {

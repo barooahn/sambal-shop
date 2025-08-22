@@ -8,6 +8,14 @@ import {
 	CreditCard,
 } from "lucide-react";
 
+export const metadata = {
+	title: "Shipping & Delivery Information | Spice Island Indonesia",
+	description: "Fast UK delivery of authentic Indonesian sambal. Free delivery over £20. Royal Mail tracked shipping, same-day dispatch, secure packaging.",
+	alternates: {
+		canonical: "https://www.spiceislandindonesia.com/shipping",
+	},
+};
+
 export default function ShippingPage() {
 	const shippingOptions = [
 		{

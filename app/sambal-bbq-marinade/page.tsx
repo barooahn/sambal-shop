@@ -37,6 +37,9 @@ export const metadata = {
 			},
 		],
 	},
+	alternates: {
+		canonical: "https://www.spiceislandindonesia.com/sambal-bbq-marinade",
+	},
 };
 
 export default function SambalBBQMarinadePage() {

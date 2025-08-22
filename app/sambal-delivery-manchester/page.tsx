@@ -29,6 +29,9 @@ export const metadata: Metadata = {
 		images: ["/images/optimized/sambal-bali-md.webp"],
 		type: "website",
 	},
+	alternates: {
+		canonical: "https://www.spiceislandindonesia.com/sambal-delivery-manchester",
+	},
 };
 
 export default function ManchesterDeliveryPage() {

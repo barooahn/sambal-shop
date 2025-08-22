@@ -18,7 +18,10 @@ export const metadata: Metadata = {
 			height: 600,
 			alt: "Compare Indonesian Sambal Products - Complete Collection"
 		}]
-	}
+	},
+	alternates: {
+		canonical: "https://www.spiceislandindonesia.com/products",
+	},
 };
 
 export default function ProductsPage() {

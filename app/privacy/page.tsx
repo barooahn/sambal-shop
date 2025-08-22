@@ -1,3 +1,11 @@
+export const metadata = {
+	title: "Privacy Policy | Spice Island Indonesia",
+	description: "Learn how Spice Island Indonesia collects, uses, and protects your personal information. Read our comprehensive privacy policy for UK customers.",
+	alternates: {
+		canonical: "https://www.spiceislandindonesia.com/privacy",
+	},
+};
+
 export default function PrivacyPage() {
 	return (
 		<div className='bg-gradient-to-br from-cream-50 to-cream-100'>

@@ -9,6 +9,9 @@ export const metadata = {
 		"Meet Chef Yossie, born in Bandung and trained in her mother&apos;s catering kitchen. Now bringing professional-grade Indonesian sambal and West Java recipes to British homes.",
 	keywords:
 		"Indonesian chef UK, Bandung chef, West Java cuisine, Sundanese cooking, professional sambal maker, Indonesian catering recipes, authentic Indonesian chef",
+	alternates: {
+		canonical: "https://www.spiceislandindonesia.com/chef",
+	},
 };
 
 export default function ChefPage() {

@@ -1,3 +1,11 @@
+export const metadata = {
+	title: "Terms of Service | Spice Island Indonesia",
+	description: "Read the terms and conditions for using Spice Island Indonesia services, purchasing authentic Indonesian sambal, and UK delivery terms.",
+	alternates: {
+		canonical: "https://www.spiceislandindonesia.com/terms",
+	},
+};
+
 export default function TermsPage() {
 	return (
 		<div className='min-h-screen bg-gradient-to-br from-cream-50 to-cream-100'>

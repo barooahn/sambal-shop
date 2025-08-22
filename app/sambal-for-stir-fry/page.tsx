@@ -38,6 +38,9 @@ export const metadata = {
 			},
 		],
 	},
+	alternates: {
+		canonical: "https://www.spiceislandindonesia.com/sambal-for-stir-fry",
+	},
 };
 
 export default function SambalForStirFryPage() {
