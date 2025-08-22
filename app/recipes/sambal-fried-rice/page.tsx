@@ -430,6 +430,8 @@ export default function SambalFriedRicePage() {
 			/>
 
 			<div className='container mx-auto px-4 py-8 pb-16'>
+				{/* Hidden H1 for SEO */}
+				<h1 className='sr-only'>Sambal Fried Rice Recipe | Authentic Indonesian Nasi Goreng</h1>
 
 				<RecipeCard recipe={recipe} />
 

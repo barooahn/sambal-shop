@@ -432,6 +432,8 @@ export default function IkanBakarPage() {
 			/>
 
 			<div className='container mx-auto px-4 py-8 pb-16'>
+				{/* Hidden H1 for SEO */}
+				<h1 className='sr-only'>Ikan Bakar Recipe | Indonesian Grilled Fish with Sambal</h1>
 
 				<RecipeCard recipe={recipe} />
 

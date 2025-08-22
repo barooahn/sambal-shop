@@ -464,6 +464,8 @@ export default function SambalNoodleSoupPage() {
 			/>
 
 			<div className='container mx-auto px-4 py-8 pb-16'>
+				{/* Hidden H1 for SEO */}
+				<h1 className='sr-only'>Indonesian Sambal Noodle Soup Recipe | Soto Ayam Sambal Style</h1>
 
 				<RecipeCard recipe={recipe} />
 

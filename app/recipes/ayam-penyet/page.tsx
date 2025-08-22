@@ -420,6 +420,8 @@ export default function AyamPenyetPage() {
 			/>
 
 			<div className='container mx-auto px-4 py-8 pb-16'>
+				{/* Hidden H1 for SEO */}
+				<h1 className='sr-only'>Ayam Penyet Recipe | Indonesian Smashed Fried Chicken</h1>
 
 				<RecipeCard recipe={recipe} />
 

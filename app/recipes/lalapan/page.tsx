@@ -393,6 +393,8 @@ export default function LalapaPage() {
 			/>
 
 			<div className='container mx-auto px-4 py-8 pb-16'>
+				{/* Hidden H1 for SEO */}
+				<h1 className='sr-only'>Lalapan Recipe | Indonesian Fresh Raw Vegetables with Sambal</h1>
 
 				<RecipeCard recipe={recipe} />
 
