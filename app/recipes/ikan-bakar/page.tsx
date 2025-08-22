@@ -398,14 +398,14 @@ export default function IkanBakarPage() {
 	const relatedArticles = [
 		{
 			title: "Indonesian Seafood Culture: From Coast to Kitchen",
-			url: "/blog/indonesian-seafood-culture",
+			url: "/blog/spice-islands-history",
 			excerpt: "Explore Indonesia's rich maritime culinary traditions and how fresh seafood shapes the cuisine",
 			readTime: "8 min",
 			category: "Culture & Food",
 		},
 		{
 			title: "Grilling Techniques from Indonesian Masters",
-			url: "/blog/indonesian-grilling-techniques",
+			url: "/blog/traditional-sambal-making",
 			excerpt: "Learn traditional Indonesian grilling methods that create perfect charred flavors",
 			readTime: "10 min",
 			category: "Cooking Techniques",

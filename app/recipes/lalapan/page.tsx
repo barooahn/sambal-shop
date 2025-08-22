@@ -366,7 +366,7 @@ export default function LalapaPage() {
 		},
 		{
 			title: "Sambal: The Soul of Indonesian Cuisine",
-			url: "/blog/sambal-soul-indonesian-cuisine",
+			url: "/blog/ultimate-guide-indonesian-sambal",
 			excerpt: "Discover why every Indonesian meal revolves around sambal and how it transforms simple ingredients",
 			readTime: "8 min",
 			category: "Culture & Food",

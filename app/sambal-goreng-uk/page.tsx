@@ -977,7 +977,7 @@ export default function SambalGorengUKPage() {
 									</li>
 								</ul>
 								<div className='mt-6'>
-									<Link href='/recipes/sambal-goreng-fried-rice'>
+									<Link href='/recipes/sambal-fried-rice'>
 										<Button
 											variant='primary'
 											size='sm'

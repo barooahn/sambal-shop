@@ -363,15 +363,15 @@ export default function SambalBBQMarinadePage() {
 	const relatedArticles = [
 		{
 			title: "Indonesian Grilling Traditions: Beyond the Western BBQ",
-			url: "/blog/indonesian-grilling-traditions",
+			url: "/blog/ultimate-guide-spicy-sauces-stir-fry",
 			excerpt: "Explore how Indonesian flavors revolutionize traditional grilling with aromatic spices and complex marinades",
 			readTime: "8 min",
 			category: "Grilling Techniques",
 		},
 		{
-			title: "The Science of Marinades: How Sambal Transforms Protein",
-			url: "/blog/sambal-marinade-science",
-			excerpt: "Understanding how traditional Indonesian sambals work as marinades to tenderize and flavor proteins",
+			title: "Traditional Sambal Making: Ancient Methods for Modern Kitchens",
+			url: "/blog/traditional-sambal-making",
+			excerpt: "Discover time-honored Indonesian techniques for creating authentic sambal at home",
 			readTime: "6 min",
 			category: "Cooking Science",
 		},

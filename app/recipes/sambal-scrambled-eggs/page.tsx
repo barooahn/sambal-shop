@@ -363,16 +363,16 @@ export default function SambalScrambledEggsPage() {
 
 	const relatedArticles = [
 		{
-			title: "Indonesian Breakfast Culture: Starting the Day with Spice",
-			url: "/blog/indonesian-breakfast-culture",
-			excerpt: "Explore how Indonesians start their day with bold, spicy flavors and hearty meals",
+			title: "Indonesian Food Culture & Context",
+			url: "/blog/indonesian-food-culture-context",
+			excerpt: "Explore Indonesian culinary traditions and how food shapes daily life in the archipelago",
 			readTime: "7 min",
 			category: "Culture & Food",
 		},
 		{
-			title: "Mastering Eggs: Indonesian Techniques for Perfect Texture",
-			url: "/blog/indonesian-egg-cooking-techniques",
-			excerpt: "Learn traditional Indonesian methods for cooking eggs with perfect texture and flavor",
+			title: "Indonesian Cooking Guide for British Kitchens",
+			url: "/blog/indonesian-cooking-guide-british-kitchens",
+			excerpt: "Master authentic Indonesian cooking in your British kitchen with traditional techniques",
 			readTime: "9 min",
 			category: "Cooking Techniques",
 		},

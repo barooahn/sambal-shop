@@ -390,7 +390,7 @@ export default function BakwanPage() {
 	const relatedArticles = [
 		{
 			title: "Indonesian Street Food Culture: From Markets to Your Kitchen",
-			url: "/blog/indonesian-street-food-culture",
+			url: "/blog/indonesian-food-culture-context",
 			excerpt: "Explore the vibrant world of Indonesian street food and learn about dishes like bakwan",
 			readTime: "9 min",
 			category: "Culture & Food",

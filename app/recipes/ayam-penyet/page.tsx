@@ -393,7 +393,7 @@ export default function AyamPenyetPage() {
 		},
 		{
 			title: "Indonesian Street Food Culture: From Warungs to Your Kitchen",
-			url: "/blog/indonesian-street-food-culture",
+			url: "/blog/indonesian-ingredients-uk-shopping-guide",
 			excerpt: "Discover the vibrant world of Indonesian street food and how to recreate it at home",
 			readTime: "10 min",
 			category: "Culture & Food",
