@@ -174,15 +174,15 @@ export default function GiftSetPage() {
 			/>
 
 			{/* Hero Section */}
-			<section className='py-16 sm:py-20 lg:py-14 bg-gradient-to-br from-purple-900 via-indigo-800 to-purple-900 text-white relative overflow-hidden'>
-				<div className='absolute top-0 left-0 w-72 h-72 lg:w-80 lg:h-80 bg-indigo-600/20 rounded-full -translate-x-48 -translate-y-48 blur-3xl'></div>
-				<div className='absolute bottom-0 right-0 w-72 h-72 lg:w-80 lg:h-80 bg-purple-600/20 rounded-full translate-x-48 translate-y-48 blur-3xl'></div>
+			<section className='py-16 sm:py-20 lg:py-14 bg-gradient-to-br from-stone-900 via-stone-800 to-stone-900 text-white relative overflow-hidden'>
+				<div className='absolute top-0 left-0 w-72 h-72 lg:w-80 lg:h-80 bg-amber-600/20 rounded-full -translate-x-48 -translate-y-48 blur-3xl'></div>
+				<div className='absolute bottom-0 right-0 w-72 h-72 lg:w-80 lg:h-80 bg-amber-600/20 rounded-full translate-x-48 translate-y-48 blur-3xl'></div>
 
 				<div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<div className='grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] lg:gap-6 items-center'>
 						{/* Left side - Content */}
 						<div className='text-center lg:text-left'>
-							<Badge className='bg-purple-800 text-indigo-300 mb-6 px-6 py-3 text-lg font-semibold border border-indigo-600/30'>
+							<Badge className='bg-stone-800 text-amber-300 mb-6 px-6 py-3 text-lg font-semibold border border-amber-600/30'>
 								<Gift className='w-5 h-5 mr-2' />
 								Perfect for Food Lovers
 							</Badge>
@@ -191,18 +191,18 @@ export default function GiftSetPage() {
 								<span className='text-white block mb-2'>
 									Indonesian Sambal
 								</span>
-								<span className='text-indigo-300 block mb-2'>
+								<span className='text-amber-300 block mb-2'>
 									Gift Set Collection
 								</span>
-								<span className='text-indigo-200 text-2xl sm:text-3xl lg:text-3xl font-script italic'>
+								<span className='text-stone-200 text-2xl sm:text-3xl lg:text-3xl font-script italic'>
 									Complete Authentic Experience
 								</span>
 							</h1>
 
 							<div className='space-y-4 mb-6 max-w-2xl mx-auto lg:mx-0'>
-								<p className='text-lg sm:text-xl text-indigo-200 leading-relaxed font-body'>
+								<p className='text-lg sm:text-xl text-stone-200 leading-relaxed font-body'>
 									The{" "}
-									<strong className='text-indigo-100'>
+									<strong className='text-stone-100'>
 										perfect gift
 									</strong>{" "}
 									for food enthusiasts - all three
@@ -210,7 +210,7 @@ export default function GiftSetPage() {
 									beautiful presentation packaging.
 								</p>
 
-								<p className='text-lg text-indigo-300 leading-relaxed font-body'>
+								<p className='text-lg text-amber-300 leading-relaxed font-body'>
 									<em>
 										Complete Indonesian experience
 									</em>{" "}
@@ -243,34 +243,34 @@ export default function GiftSetPage() {
 							{/* Key Features */}
 							<div className='grid sm:grid-cols-2 gap-2 mb-6'>
 								<div className='flex items-center justify-center lg:justify-start space-x-3'>
-									<div className='w-8 h-8 bg-gradient-to-r from-indigo-600 to-indigo-500 rounded-full flex items-center justify-center'>
+									<div className='w-8 h-8 bg-gradient-to-r from-amber-600 to-amber-500 rounded-full flex items-center justify-center'>
 										<Package className='w-4 h-4 text-purple-900' />
 									</div>
-									<span className='text-indigo-200 font-medium font-elegant'>
+									<span className='text-stone-200 font-medium font-elegant'>
 										Three Complete Varieties
 									</span>
 								</div>
 								<div className='flex items-center justify-center lg:justify-start space-x-3'>
-									<div className='w-8 h-8 bg-gradient-to-r from-indigo-600 to-indigo-500 rounded-full flex items-center justify-center'>
+									<div className='w-8 h-8 bg-gradient-to-r from-amber-600 to-amber-500 rounded-full flex items-center justify-center'>
 										<Gift className='w-4 h-4 text-purple-900' />
 									</div>
-									<span className='text-indigo-200 font-medium font-elegant'>
+									<span className='text-stone-200 font-medium font-elegant'>
 										Premium Gift Packaging
 									</span>
 								</div>
 								<div className='flex items-center justify-center lg:justify-start space-x-3'>
-									<div className='w-8 h-8 bg-gradient-to-r from-indigo-600 to-indigo-500 rounded-full flex items-center justify-center'>
+									<div className='w-8 h-8 bg-gradient-to-r from-amber-600 to-amber-500 rounded-full flex items-center justify-center'>
 										<Users className='w-4 h-4 text-purple-900' />
 									</div>
-									<span className='text-indigo-200 font-medium font-elegant'>
+									<span className='text-stone-200 font-medium font-elegant'>
 										Perfect for Sharing
 									</span>
 								</div>
 								<div className='flex items-center justify-center lg:justify-start space-x-3'>
-									<div className='w-8 h-8 bg-gradient-to-r from-indigo-600 to-indigo-500 rounded-full flex items-center justify-center'>
+									<div className='w-8 h-8 bg-gradient-to-r from-amber-600 to-amber-500 rounded-full flex items-center justify-center'>
 										<Award className='w-4 h-4 text-purple-900' />
 									</div>
-									<span className='text-indigo-200 font-medium font-elegant'>
+									<span className='text-stone-200 font-medium font-elegant'>
 										Save £2.48
 									</span>
 								</div>
@@ -282,7 +282,7 @@ export default function GiftSetPage() {
 									<Button
 										variant='primary'
 										size='lg'
-										className='font-elegant text-lg px-8 py-4 bg-indigo-600 hover:bg-indigo-500 text-white'
+										className='font-elegant text-lg px-8 py-4 bg-red-600 hover:bg-red-700 text-white'
 									>
 										Order Gift Set - £24.99
 									</Button>
@@ -302,7 +302,7 @@ export default function GiftSetPage() {
 						{/* Right side - Product Image */}
 						<div className='relative'>
 							<div className='relative w-full lg:max-w-none ml-auto max-h-[60vh] flex items-center justify-end'>
-								<div className='aspect-square rounded-sm overflow-hidden shadow-luxury bg-gradient-to-br from-purple-900/10 to-indigo-600/10 p-6'>
+								<div className='aspect-square rounded-sm overflow-hidden shadow-lg bg-neutral-100 p-6 h-96'>
 									<div className='w-full h-full rounded-sm flex items-center justify-center'>
 										<Image
 											src='/images/Spice Island Indonesia Complete Packaging System Mockup.webp'
@@ -320,7 +320,7 @@ export default function GiftSetPage() {
 								<div className='absolute -top-4 -left-4 bg-indigo-500 text-purple-900 rounded-full p-4 shadow-luxury animate-float border border-indigo-300'>
 									<Gift className='w-6 h-6' />
 								</div>
-								<div className='absolute -bottom-4 -right-4 bg-purple-800 text-indigo-300 rounded-full p-4 shadow-luxury animate-float delay-1000 border border-purple-600'>
+								<div className='absolute -bottom-4 -right-4 bg-stone-800 text-amber-300 rounded-full p-4 shadow-luxury animate-float delay-1000 border border-purple-600'>
 									<Heart className='w-6 h-6' />
 								</div>
 							</div>
@@ -393,7 +393,7 @@ export default function GiftSetPage() {
 						<div className='bg-emerald-50 rounded-sm p-6 border border-emerald-200'>
 							<div className='aspect-square mb-4 bg-emerald-100 rounded-sm p-4'>
 								<Image
-									src='/images/optimized/Spice Island Indonesia Sambal Bali 185g Label-lg.webp'
+									src='/images/optimized/sambal-bali-lg.webp'
 									alt='Sambal Bali - Aromatic Complexity'
 									width={200}
 									height={200}
@@ -647,11 +647,11 @@ export default function GiftSetPage() {
 				<div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
 					<h2 className='text-4xl sm:text-5xl font-bold mb-6 font-brand'>
 						Perfect Gift for
-						<span className='text-indigo-300 block'>
+						<span className='text-amber-300 block'>
 							Food Enthusiasts
 						</span>
 					</h2>
-					<p className='text-xl text-indigo-200 mb-8 font-body'>
+					<p className='text-xl text-stone-200 mb-8 font-body'>
 						Complete authentic Indonesian sambal experience
 						with beautiful presentation and recipe guidance
 					</p>
@@ -678,7 +678,7 @@ export default function GiftSetPage() {
 						</Link>
 					</div>
 
-					<div className='flex items-center justify-center space-x-6 text-indigo-200'>
+					<div className='flex items-center justify-center space-x-6 text-stone-200'>
 						<div className='flex items-center space-x-2'>
 							<Truck className='w-5 h-5' />
 							<span className='font-body'>

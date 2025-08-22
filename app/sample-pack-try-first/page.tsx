@@ -138,15 +138,19 @@ export default function SamplePackTryFirstPage() {
 						{/* Right side - Product Image */}
 						<div className='relative'>
 							<div className='relative w-full max-w-md mx-auto max-h-[55vh] flex items-center justify-center'>
-								<div className='absolute inset-0 bg-gradient-to-r from-gold-600/30 to-gold-400/30 rounded-full blur-3xl'></div>
-								<Image
-									src='/images/optimized/sambal-sample-lg.webp'
-									alt='Indonesian Sambal Sample Pack - Sambal Goreng 45g jar'
-									width={400}
-									height={400}
-									className='relative z-10 w-auto h-auto max-h-[55vh] object-contain drop-shadow-2xl'
-									priority
-								/>
+								<div className='aspect-square rounded-sm overflow-hidden shadow-lg bg-neutral-100 p-6 h-96'>
+									<div className='w-full h-full rounded-sm flex items-center justify-center'>
+										<Image
+											src='/images/optimized/sambal-sample-lg.webp'
+											alt='Indonesian Sambal Sample Pack - Sambal Goreng 45g jar'
+											width={500}
+											height={500}
+											className='w-full h-full object-contain drop-shadow-2xl'
+											priority
+											sizes='(max-width: 768px) 100vw, 50vw'
+										/>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -174,7 +178,7 @@ export default function SamplePackTryFirstPage() {
 						>
 							<div className='p-8'>
 								<div className='text-center mb-6'>
-									<div className='w-16 h-16 bg-gradient-to-r from-burgundy-600 to-burgundy-500 rounded-full flex items-center justify-center mx-auto mb-4'>
+									<div className='w-16 h-16 bg-gradient-to-r from-red-600 to-red-700 rounded-full flex items-center justify-center mx-auto mb-4'>
 										<Package className='w-8 h-8 text-white' />
 									</div>
 									<h3 className='text-xl font-semibold text-burgundy-900 mb-2 font-brand'>
@@ -187,7 +191,7 @@ export default function SamplePackTryFirstPage() {
 								<ul className='space-y-3 text-neutral-600 font-body'>
 									<li className='flex items-start'>
 										<CheckCircle className='w-5 h-5 text-burgundy-600 mr-3 flex-shrink-0 mt-0.5' />
-										Pure chili paste - the
+										Pure <span className='text-red-700 font-medium'>cabai rawit</span> (bird's eye chili) paste - the
 										foundation of Indonesian
 										cooking
 									</li>
@@ -216,7 +220,7 @@ export default function SamplePackTryFirstPage() {
 						>
 							<div className='p-8'>
 								<div className='text-center mb-6'>
-									<div className='w-16 h-16 bg-gradient-to-r from-burgundy-600 to-burgundy-500 rounded-full flex items-center justify-center mx-auto mb-4'>
+									<div className='w-16 h-16 bg-gradient-to-r from-red-600 to-red-700 rounded-full flex items-center justify-center mx-auto mb-4'>
 										<Heart className='w-8 h-8 text-white' />
 									</div>
 									<h3 className='text-xl font-semibold text-burgundy-900 mb-2 font-brand'>
@@ -274,7 +278,7 @@ export default function SamplePackTryFirstPage() {
 							className='hover:shadow-xl transition-shadow'
 						>
 							<div className='p-8 text-center'>
-								<div className='w-16 h-16 bg-gradient-to-r from-burgundy-600 to-burgundy-500 rounded-full flex items-center justify-center mx-auto mb-6'>
+								<div className='w-16 h-16 bg-gradient-to-r from-red-600 to-red-700 rounded-full flex items-center justify-center mx-auto mb-6'>
 									<Shield className='w-8 h-8 text-white' />
 								</div>
 								<h3 className='text-xl font-semibold text-burgundy-900 mb-4 font-brand'>
@@ -294,7 +298,7 @@ export default function SamplePackTryFirstPage() {
 							className='hover:shadow-xl transition-shadow'
 						>
 							<div className='p-8 text-center'>
-								<div className='w-16 h-16 bg-gradient-to-r from-burgundy-600 to-burgundy-500 rounded-full flex items-center justify-center mx-auto mb-6'>
+								<div className='w-16 h-16 bg-gradient-to-r from-red-600 to-red-700 rounded-full flex items-center justify-center mx-auto mb-6'>
 									<Heart className='w-8 h-8 text-white' />
 								</div>
 								<h3 className='text-xl font-semibold text-burgundy-900 mb-4 font-brand'>
@@ -314,7 +318,7 @@ export default function SamplePackTryFirstPage() {
 							className='hover:shadow-xl transition-shadow'
 						>
 							<div className='p-8 text-center'>
-								<div className='w-16 h-16 bg-gradient-to-r from-burgundy-600 to-burgundy-500 rounded-full flex items-center justify-center mx-auto mb-6'>
+								<div className='w-16 h-16 bg-gradient-to-r from-red-600 to-red-700 rounded-full flex items-center justify-center mx-auto mb-6'>
 									<Gift className='w-8 h-8 text-white' />
 								</div>
 								<h3 className='text-xl font-semibold text-burgundy-900 mb-4 font-brand'>
@@ -371,7 +375,7 @@ export default function SamplePackTryFirstPage() {
 						].map((item, index) => (
 							<div key={index} className='text-center'>
 								<div className='relative mb-8'>
-									<div className='w-20 h-20 bg-gradient-to-r from-burgundy-600 to-burgundy-500 rounded-full flex items-center justify-center mx-auto mb-4'>
+									<div className='w-20 h-20 bg-gradient-to-r from-red-600 to-red-700 rounded-full flex items-center justify-center mx-auto mb-4'>
 										<item.icon className='w-10 h-10 text-white' />
 									</div>
 									<div className='absolute -top-2 -right-2 w-8 h-8 bg-gold-500 rounded-full flex items-center justify-center'>

@@ -40,7 +40,7 @@ export default function StructuredData({
 		},
 		image: [
 			"https://spiceislandindonesia.com/images/sambal-oelek-lg.webp",
-			"https://spiceislandindonesia.com/images/Spice Island Indonesia Sambal Bali 185g Label.webp",
+			"https://spiceislandindonesia.com/images/sambal-bali.webp",
 			"https://spiceislandindonesia.com/images/Spice Island Indonesia Complete Packaging System Mockup.webp",
 		],
 		// Basic shipping and return policy info to improve Merchant eligibility
@@ -178,7 +178,7 @@ export default function StructuredData({
 				priceValidUntil: "2025-12-31",
 				availability: "https://schema.org/PreOrder",
 				itemCondition: "https://schema.org/NewCondition",
-				image: "https://spiceislandindonesia.com/images/Spice Island Indonesia Sambal Bali 185g Label.webp",
+				image: "https://spiceislandindonesia.com/images/sambal-bali.webp",
 				url: "https://spiceislandindonesia.com/sambal-bali-sweet-spicy",
 				shippingDetails: [
 					{

@@ -149,7 +149,7 @@ export default function ShopPage() {
 		},
 		{
 			...products.find((p) => p.name.includes("Bali"))!,
-			image: "/images/optimized/Spice Island Indonesia Sambal Bali 185g Label-lg.webp",
+			image: "/images/optimized/sambal-bali-lg.webp",
 			detailedName: "Sambal Bali",
 			subtitle: "Aromatic Sophistication",
 			scoville: "14,000 SHU",

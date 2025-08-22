@@ -380,15 +380,15 @@ export default function SambalOelekUKPage() {
 				</div>
 			</div>
 
-			<section className='py-16 sm:py-20 lg:py-14 bg-gradient-to-br from-burgundy-900 via-burgundy-800 to-burgundy-900 text-white relative overflow-hidden'>
-				<div className='absolute top-0 left-0 w-72 h-72 lg:w-80 lg:h-80 bg-gold-600/20 rounded-full -translate-x-48 -translate-y-48 blur-3xl'></div>
-				<div className='absolute bottom-0 right-0 w-72 h-72 lg:w-80 lg:h-80 bg-gold-600/20 rounded-full translate-x-48 translate-y-48 blur-3xl'></div>
+			<section className='py-16 sm:py-20 lg:py-14 bg-gradient-to-br from-stone-900 via-stone-800 to-stone-900 text-white relative overflow-hidden'>
+				<div className='absolute top-0 left-0 w-72 h-72 lg:w-80 lg:h-80 bg-amber-600/20 rounded-full -translate-x-48 -translate-y-48 blur-3xl'></div>
+				<div className='absolute bottom-0 right-0 w-72 h-72 lg:w-80 lg:h-80 bg-amber-600/20 rounded-full translate-x-48 translate-y-48 blur-3xl'></div>
 
 				<div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<div className='grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] lg:gap-6 items-center'>
 						{/* Left side - Content */}
 						<div className='text-center lg:text-left'>
-							<Badge className='bg-burgundy-800 text-gold-300 mb-6 px-6 py-3 text-lg font-semibold border border-gold-600/30'>
+							<Badge className='bg-stone-800 text-amber-300 mb-6 px-6 py-3 text-lg font-semibold border border-amber-600/30'>
 								<ChefHat className='w-5 h-5 mr-2' />
 								Chef Yossie&apos;s Traditional Recipe
 							</Badge>
@@ -397,16 +397,16 @@ export default function SambalOelekUKPage() {
 								<span className='text-white block mb-2'>
 									Authentic Indonesian
 								</span>
-								<span className='text-gold-300 block mb-2'>
+								<span className='text-amber-300 block mb-2'>
 									Sambal Oelek UK
 								</span>
-								<span className='text-gold-200 text-2xl sm:text-3xl lg:text-3xl font-script italic'>
+								<span className='text-amber-200 text-2xl sm:text-3xl lg:text-3xl font-script italic'>
 									Traditional Recipe - UK Delivery
 								</span>
 							</h1>
 
 							<div className='space-y-4 mb-6 max-w-2xl mx-auto lg:mx-0'>
-								<p className='text-lg sm:text-xl text-gold-200 leading-relaxed font-body'>
+								<p className='text-lg sm:text-xl text-amber-200 leading-relaxed font-body'>
 									Finally,{" "}
 									<strong className='text-gold-100'>
 										real Indonesian sambal oelek
@@ -416,7 +416,7 @@ export default function SambalOelekUKPage() {
 									kitchen in Bandung.
 								</p>
 
-								<p className='text-lg text-gold-300 leading-relaxed font-body'>
+								<p className='text-lg text-amber-300 leading-relaxed font-body'>
 									No preservatives, no shortcuts, no
 									artificial flavors - just{" "}
 									<em>authentic Indonesian fire</em>{" "}
@@ -440,7 +440,7 @@ export default function SambalOelekUKPage() {
 												.reviewCount
 										}
 										size='lg'
-										className='text-gold-200'
+										className='text-amber-200'
 									/>
 								</div>
 							</div>
@@ -451,7 +451,7 @@ export default function SambalOelekUKPage() {
 									<div className='w-8 h-8 bg-gradient-to-r from-gold-600 to-gold-500 rounded-full flex items-center justify-center'>
 										<ChefHat className='w-4 h-4 text-burgundy-900' />
 									</div>
-									<span className='text-gold-200 font-medium font-elegant'>
+									<span className='text-amber-200 font-medium font-elegant'>
 										Professional Chef Made
 									</span>
 								</div>
@@ -459,7 +459,7 @@ export default function SambalOelekUKPage() {
 									<div className='w-8 h-8 bg-gradient-to-r from-gold-600 to-gold-500 rounded-full flex items-center justify-center'>
 										<Shield className='w-4 h-4 text-burgundy-900' />
 									</div>
-									<span className='text-gold-200 font-medium font-elegant'>
+									<span className='text-amber-200 font-medium font-elegant'>
 										No Preservatives
 									</span>
 								</div>
@@ -467,7 +467,7 @@ export default function SambalOelekUKPage() {
 									<div className='w-8 h-8 bg-gradient-to-r from-gold-600 to-gold-500 rounded-full flex items-center justify-center'>
 										<MapPin className='w-4 h-4 text-burgundy-900' />
 									</div>
-									<span className='text-gold-200 font-medium font-elegant'>
+									<span className='text-amber-200 font-medium font-elegant'>
 										Traditional Bandung Recipe
 									</span>
 								</div>
@@ -475,7 +475,7 @@ export default function SambalOelekUKPage() {
 									<div className='w-8 h-8 bg-gradient-to-r from-gold-600 to-gold-500 rounded-full flex items-center justify-center'>
 										<Truck className='w-4 h-4 text-burgundy-900' />
 									</div>
-									<span className='text-gold-200 font-medium font-elegant'>
+									<span className='text-amber-200 font-medium font-elegant'>
 										UK Wide Delivery
 									</span>
 								</div>
@@ -487,7 +487,7 @@ export default function SambalOelekUKPage() {
 									<Button
 										variant='primary'
 										size='lg'
-										className='font-elegant text-lg px-6 py-3'
+										className='font-elegant text-lg px-6 py-3 bg-red-600 hover:bg-red-700'
 									>
 										Order Sambal Oelek Now - £7.49
 									</Button>
@@ -496,7 +496,7 @@ export default function SambalOelekUKPage() {
 									<Button
 										variant='outline'
 										size='lg'
-										className='font-elegant border-gold-300 text-gold-300 hover:bg-gold-300 hover:text-burgundy-900 text-lg px-6 py-3'
+										className='font-elegant border-amber-300 text-amber-300 hover:bg-amber-300 hover:text-stone-900 text-lg px-6 py-3'
 									>
 										Try Sample First - £2.99
 									</Button>
@@ -507,25 +507,25 @@ export default function SambalOelekUKPage() {
 						{/* Right side - Product Image */}
 						<div className='relative mt-8 lg:mt-0'>
 							<div className='relative w-full lg:max-w-none mx-auto flex items-center justify-center'>
-								<div className='aspect-square rounded-lg overflow-hidden shadow-luxury bg-gradient-to-br from-burgundy-900/10 to-gold-600/10 p-6 sm:p-8 lg:p-6'>
-									<div className='w-full h-full rounded-lg flex items-center justify-center'>
+								<div className='aspect-square rounded-sm overflow-hidden shadow-lg bg-neutral-100 p-6 h-96'>
+									<div className='w-full h-full rounded-sm flex items-center justify-center'>
 										<Image
 											src='/images/optimized/sambal-oelek-lg.webp'
 											alt='Authentic Indonesian Sambal Oelek 185g - Pure chili paste made by Chef Yossie'
 											width={500}
 											height={500}
-											className='w-full h-auto min-h-[280px] sm:min-h-[320px] lg:min-h-[360px] max-h-[80vh] lg:max-h-[60vh] object-contain drop-shadow-2xl'
+											className='w-full h-full object-contain drop-shadow-2xl'
 											priority
-											sizes='(max-width: 640px) 90vw, (max-width: 768px) 80vw, (max-width: 1024px) 70vw, 600px'
+											sizes='(max-width: 768px) 100vw, 50vw'
 										/>
 									</div>
 								</div>
 
 								{/* Floating badges */}
-								<div className='absolute -top-4 -left-4 bg-gold-500 text-burgundy-900 rounded-full p-4 shadow-luxury animate-float border border-gold-300'>
+								<div className='absolute -top-4 -left-4 bg-amber-600 text-stone-900 rounded-full p-4 shadow-luxury animate-float border border-amber-500'>
 									<Award className='w-6 h-6' />
 								</div>
-								<div className='absolute -bottom-4 -right-4 bg-burgundy-800 text-gold-300 rounded-full p-4 shadow-luxury animate-float delay-1000 border border-burgundy-600'>
+								<div className='absolute -bottom-4 -right-4 bg-stone-800 text-amber-300 rounded-full p-4 shadow-luxury animate-float delay-1000 border border-stone-600'>
 									<Heart className='w-6 h-6' />
 								</div>
 							</div>
@@ -954,10 +954,10 @@ export default function SambalOelekUKPage() {
 					</div>
 
 					{/* Featured Recipe Spotlight */}
-					<div className='bg-gradient-to-r from-burgundy-900 to-burgundy-800 rounded-sm p-12 text-white'>
+					<div className='bg-gradient-to-r from-stone-900 to-stone-800 rounded-sm p-12 text-white'>
 						<div className='grid lg:grid-cols-2 gap-8 items-center'>
 							<div>
-								<h3 className='text-3xl font-bold mb-6 font-brand text-gold-200'>
+								<h3 className='text-3xl font-bold mb-6 font-brand text-amber-200'>
 									Chef Yossie&apos;s Signature
 									Recipe:
 									<span className='block text-white text-2xl'>
@@ -965,7 +965,7 @@ export default function SambalOelekUKPage() {
 									</span>
 								</h3>
 								<div className='space-y-4 font-body'>
-									<p className='text-gold-200 leading-relaxed'>
+									<p className='text-amber-200 leading-relaxed'>
 										This is the dish that made
 										Chef Yossie famous in her
 										Bandung catering kitchen - a
@@ -975,25 +975,25 @@ export default function SambalOelekUKPage() {
 									</p>
 									<div className='grid grid-cols-2 gap-4 text-sm'>
 										<div>
-											<strong className='text-gold-300'>
+											<strong className='text-amber-300'>
 												Prep Time:
 											</strong>
 											<p>10 minutes</p>
 										</div>
 										<div>
-											<strong className='text-gold-300'>
+											<strong className='text-amber-300'>
 												Cook Time:
 											</strong>
 											<p>15 minutes</p>
 										</div>
 										<div>
-											<strong className='text-gold-300'>
+											<strong className='text-amber-300'>
 												Serves:
 											</strong>
 											<p>4 people</p>
 										</div>
 										<div>
-											<strong className='text-gold-300'>
+											<strong className='text-amber-300'>
 												Difficulty:
 											</strong>
 											<p>Easy</p>
@@ -1002,7 +1002,7 @@ export default function SambalOelekUKPage() {
 								</div>
 							</div>
 							<div className='bg-white/10 rounded-sm p-6'>
-								<h4 className='font-bold text-gold-200 mb-4'>
+								<h4 className='font-bold text-amber-200 mb-4'>
 									Key Ingredients:
 								</h4>
 								<ul className='space-y-2 text-sm font-body'>
@@ -1034,7 +1034,7 @@ export default function SambalOelekUKPage() {
 										<Button
 											variant='primary'
 											size='sm'
-											className='bg-gold-600 text-burgundy-900 hover:bg-gold-500 font-elegant'
+											className='bg-red-600 text-white hover:bg-red-700 font-elegant'
 										>
 											Get Full Recipe →
 										</Button>
@@ -1156,15 +1156,15 @@ export default function SambalOelekUKPage() {
 			</section>
 
 			{/* Final CTA Section */}
-			<section className='py-24 bg-gradient-to-r from-burgundy-900 to-burgundy-800 text-white'>
+			<section className='py-24 bg-gradient-to-r from-stone-900 to-stone-800 text-white'>
 				<div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
 					<h2 className='text-4xl sm:text-5xl font-bold mb-6 font-brand'>
 						Taste Authentic Indonesia
-						<span className='text-gold-300 block'>
+						<span className='text-amber-300 block'>
 							In Your Kitchen Today
 						</span>
 					</h2>
-					<p className='text-xl text-gold-200 mb-8 font-body'>
+					<p className='text-xl text-amber-200 mb-8 font-body'>
 						Join hundreds of UK customers who&apos;ve
 						discovered the difference professional-made sambal
 						makes
@@ -1175,7 +1175,7 @@ export default function SambalOelekUKPage() {
 							<Button
 								variant='primary'
 								size='lg'
-								className='font-elegant text-lg px-8 py-4'
+								className='font-elegant text-lg px-8 py-4 bg-red-600 hover:bg-red-700'
 							>
 								Order Sambal Oelek - £7.49
 							</Button>
@@ -1184,14 +1184,14 @@ export default function SambalOelekUKPage() {
 							<Button
 								variant='outline'
 								size='lg'
-								className='font-elegant border-gold-300 text-gold-300 hover:bg-gold-300 hover:text-burgundy-900 text-lg px-8 py-4'
+								className='font-elegant border-amber-300 text-amber-300 hover:bg-amber-300 hover:text-stone-900 text-lg px-8 py-4'
 							>
 								Try Sample Pack - £2.99
 							</Button>
 						</Link>
 					</div>
 
-					<div className='flex items-center justify-center space-x-6 text-gold-200'>
+					<div className='flex items-center justify-center space-x-6 text-amber-200'>
 						<div className='flex items-center space-x-2'>
 							<Truck className='w-5 h-5' />
 							<span className='font-body'>
@@ -1605,7 +1605,7 @@ export default function SambalOelekUKPage() {
 
 						{/* CTA after FAQ */}
 						<div className='text-center mt-12'>
-							<div className='bg-gradient-to-r from-burgundy-600 to-burgundy-800 text-white rounded-lg p-8'>
+							<div className='bg-gradient-to-r from-stone-600 to-stone-800 text-white rounded-lg p-8'>
 								<h3 className='text-2xl font-bold mb-4 font-heading'>
 									Ready to Experience Authentic
 									Sambal Oelek?
@@ -1617,14 +1617,14 @@ export default function SambalOelekUKPage() {
 								<div className='flex flex-col sm:flex-row gap-4 justify-center'>
 									<Button
 										size='lg'
-										className='bg-white text-burgundy-600 hover:bg-gray-100'
+										className='bg-white text-stone-600 hover:bg-gray-100'
 									>
 										Order Sambal Oelek Now
 									</Button>
 									<Button
 										variant='outline'
 										size='lg'
-										className='border-white text-white hover:bg-white hover:text-burgundy-600'
+										className='border-white text-white hover:bg-white hover:text-stone-600'
 									>
 										Try Sample Pack First
 									</Button>

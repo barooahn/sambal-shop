@@ -22,7 +22,7 @@ const searchData = [
 		url: "/sambal-bali-aromatic-spicy",
 		category: "Products",
 		keywords: ["sambal", "bali", "aromatic", "sweet", "spicy", "garlic", "shallots", "palm sugar"],
-		image: "/images/optimized/Spice Island Indonesia Sambal Bali 185g Label-md.webp",
+		image: "/images/optimized/sambal-bali-md.webp",
 		price: "£7.49"
 	},
 	{
