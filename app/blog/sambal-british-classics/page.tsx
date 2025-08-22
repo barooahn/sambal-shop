@@ -38,7 +38,7 @@ export const metadata: Metadata = {
 	},
 	alternates: {
 		canonical:
-			"https://spiceislandindonesia.com/blog/sambal-british-classics",
+			"https://www.spiceislandindonesia.com/blog/sambal-british-classics",
 	},
 };
 

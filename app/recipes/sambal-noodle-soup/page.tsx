@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 	},
 	alternates: {
 		canonical:
-			"https://spiceislandindonesia.com/recipes/sambal-noodle-soup",
+			"https://www.spiceislandindonesia.com/recipes/sambal-noodle-soup",
 	},
 };
 

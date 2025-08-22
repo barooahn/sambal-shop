@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 	},
 	alternates: {
 		canonical:
-			"https://spiceislandindonesia.com/blog/ultimate-guide-indonesian-sambal",
+			"https://www.spiceislandindonesia.com/blog/ultimate-guide-indonesian-sambal",
 	},
 };
 

@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 		type: "article",
 	},
 	alternates: {
-		canonical: "https://spiceislandindonesia.com/recipes/ikan-bakar",
+		canonical: "https://www.spiceislandindonesia.com/recipes/ikan-bakar",
 	},
 };
 

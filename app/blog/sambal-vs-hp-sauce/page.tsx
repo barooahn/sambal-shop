@@ -39,7 +39,7 @@ export const metadata: Metadata = {
 		],
 	},
 	alternates: {
-		canonical: "https://spiceislandindonesia.com/blog/sambal-vs-hp-sauce",
+		canonical: "https://www.spiceislandindonesia.com/blog/sambal-vs-hp-sauce",
 	},
 };
 

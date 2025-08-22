@@ -39,7 +39,7 @@ export const metadata: Metadata = {
 	},
 	alternates: {
 		canonical:
-			"https://spiceislandindonesia.com/blog/spice-islands-to-your-kitchen",
+			"https://www.spiceislandindonesia.com/blog/spice-islands-to-your-kitchen",
 	},
 };
 

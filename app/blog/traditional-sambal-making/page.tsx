@@ -41,7 +41,7 @@ export const metadata: Metadata = {
 	},
 	alternates: {
 		canonical:
-			"https://spiceislandindonesia.com/blog/traditional-sambal-making",
+			"https://www.spiceislandindonesia.com/blog/traditional-sambal-making",
 	},
 };
 

@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 	},
 	alternates: {
 		canonical:
-			"https://spiceislandindonesia.com/recipes/sambal-bbq-marinade",
+			"https://www.spiceislandindonesia.com/recipes/sambal-bbq-marinade",
 	},
 };
 

@@ -37,7 +37,7 @@ export const metadata: Metadata = {
 	},
 	alternates: {
 		canonical:
-			"https://spiceislandindonesia.com/blog/indonesian-spice-levels-british-palates",
+			"https://www.spiceislandindonesia.com/blog/indonesian-spice-levels-british-palates",
 	},
 };
 

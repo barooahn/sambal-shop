@@ -39,7 +39,7 @@ export const metadata: Metadata = {
 	},
 	alternates: {
 		canonical:
-			"https://spiceislandindonesia.com/blog/indonesian-food-culture-context",
+			"https://www.spiceislandindonesia.com/blog/indonesian-food-culture-context",
 	},
 };
 

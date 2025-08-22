@@ -38,7 +38,7 @@ export const metadata: Metadata = {
 	},
 	alternates: {
 		canonical:
-			"https://spiceislandindonesia.com/blog/mastering-indonesian-heat",
+			"https://www.spiceislandindonesia.com/blog/mastering-indonesian-heat",
 	},
 };
 
