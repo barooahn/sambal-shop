@@ -54,7 +54,11 @@
       "Bash(ANALYZE=true yarn build)",
       "Bash(yarn remove:*)",
       "Bash(yarn start)",
-      "Bash(yarn dev:*)"
+      "Bash(yarn dev:*)",
+      "mcp__playwright__browser_navigate",
+      "mcp__playwright__browser_take_screenshot",
+      "mcp__playwright__browser_resize",
+      "mcp__playwright__browser_snapshot"
     ],
     "deny": [],
     "defaultMode": "acceptEdits",

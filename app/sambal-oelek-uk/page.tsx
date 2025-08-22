@@ -46,6 +46,9 @@ export const metadata = {
 			},
 		],
 	},
+	alternates: {
+		canonical: "https://www.spiceislandindonesia.com/sambal-oelek-uk",
+	},
 };
 
 export default function SambalOelekUKPage() {

@@ -94,7 +94,6 @@ export const metadata: Metadata = {
 		},
 	},
 	alternates: {
-		canonical: "https://www.spiceislandindonesia.com/",
 		languages: {
 			"en-GB": "https://www.spiceislandindonesia.com/",
 			en: "https://www.spiceislandindonesia.com/",

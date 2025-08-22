@@ -38,6 +38,9 @@ export const metadata = {
 			},
 		],
 	},
+	alternates: {
+		canonical: "https://www.spiceislandindonesia.com/sample-pack-try-first",
+	},
 };
 
 export default function SamplePackTryFirstPage() {

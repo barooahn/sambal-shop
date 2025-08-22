@@ -13,6 +13,9 @@ export const metadata: Metadata = {
 		description: "Learn about our journey bringing authentic Indonesian sambal from the Maluku Islands to the UK. Traditional recipes, authentic flavors.",
 		images: ["/images/optimized/chili-farming-scene-lg.webp"],
 	},
+	alternates: {
+		canonical: "https://www.spiceislandindonesia.com/about",
+	},
 };
 
 export default function AboutPage() {

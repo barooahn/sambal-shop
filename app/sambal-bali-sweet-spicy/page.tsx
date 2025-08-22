@@ -47,6 +47,9 @@ export const metadata = {
 			},
 		],
 	},
+	alternates: {
+		canonical: "https://www.spiceislandindonesia.com/sambal-bali-sweet-spicy",
+	},
 };
 
 // Product schema data for Sambal Bali (Sweet & Spicy)

@@ -46,6 +46,9 @@ export const metadata = {
 			},
 		],
 	},
+	alternates: {
+		canonical: "https://www.spiceislandindonesia.com/sambal-bali-aromatic-spicy",
+	},
 };
 
 export default function SambalBaliAromaticSpicyPage() {

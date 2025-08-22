@@ -41,6 +41,9 @@ export const metadata = {
 			},
 		],
 	},
+	alternates: {
+		canonical: "https://www.spiceislandindonesia.com/sambal-goreng-uk",
+	},
 };
 
 export default function SambalGorengUKPage() {

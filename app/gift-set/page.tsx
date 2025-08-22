@@ -47,6 +47,9 @@ export const metadata = {
 			},
 		],
 	},
+	alternates: {
+		canonical: "https://www.spiceislandindonesia.com/gift-set",
+	},
 };
 
 export default function GiftSetPage() {
