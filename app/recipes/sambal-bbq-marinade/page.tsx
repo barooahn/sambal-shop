@@ -397,6 +397,8 @@ export default function SambalBBQMarinadePage() {
 			/>
 
 			<div className='container mx-auto px-4 py-8 pb-16'>
+				{/* Hidden H1 for SEO */}
+				<h1 className='sr-only'>Sambal BBQ Marinade Recipe | Indonesian Spicy Grilling Sauce</h1>
 
 				<RecipeCard recipe={recipe} />
 

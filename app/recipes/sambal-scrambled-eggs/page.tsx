@@ -398,6 +398,8 @@ export default function SambalScrambledEggsPage() {
 			/>
 
 			<div className='container mx-auto px-4 py-8 pb-16'>
+				{/* Hidden H1 for SEO */}
+				<h1 className='sr-only'>Sambal Scrambled Eggs Recipe | Indonesian Spicy Breakfast</h1>
 				<RecipeCard recipe={recipe} />
 
 				{/* Enhanced Interactive Recipe Instructions */}
