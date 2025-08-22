@@ -359,7 +359,7 @@ export default function LalapaPage() {
 	const relatedArticles = [
 		{
 			title: "The Philosophy of Indonesian Balance: Hot, Sweet, Sour, Salt",
-			url: "/blog/indonesian-flavor-balance",
+			url: "/blog/mastering-indonesian-heat",
 			excerpt: "Understand how simple dishes like Lalapan create perfect harmony in Indonesian meals",
 			readTime: "6 min",
 			category: "Culinary Philosophy",
