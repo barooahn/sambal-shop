@@ -27,7 +27,7 @@ import {
 import TrustIndicators from "@/components/ui/TrustIndicators";
 
 export const metadata = {
-	title: "Authentic Sambal Oelek UK | Premium Indonesian Chili Paste | Chef Yossie Traditional Recipe | 25,000 SHU Heat",
+	title: "Authentic Sambal Oelek UK | Premium Indonesian Chili Paste",
 	description:
 		"Experience authentic sambal oelek made by Chef Yossie using traditional Bandung family recipes. Premium Indonesian chili paste with 25,000 Scoville heat - pure chilies, salt & vinegar only. Free UK delivery over £20. Perfect for stir-fries, marinades & authentic Indonesian cooking.",
 	keywords:

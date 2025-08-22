@@ -27,7 +27,7 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-	title: "Authentic Sambal Bali UK | Aromatic Indonesian Chili Paste | Galangal & Lemongrass | Chef Yossie Traditional Recipe",
+	title: "Authentic Sambal Bali UK | Aromatic Chili Paste | Spice Island",
 	description:
 		"Experience authentic sambal Bali with aromatic galangal, lemongrass & kaffir lime leaves. Made by Chef Yossie using traditional Balinese recipes. Perfect for satay, grilled meats & authentic Indonesian dishes. Complex aromatic heat with sophisticated spice blend. Free UK delivery over £20.",
 	keywords:

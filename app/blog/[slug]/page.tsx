@@ -1061,7 +1061,7 @@ const blogPosts = {
 	},
 
 	"indonesian-techniques-british-kitchens": {
-		title: "Indonesian Cooking Techniques for British Kitchens 2025: Master Traditional Methods UK",
+		title: "Indonesian Cooking Techniques UK | Traditional Methods Guide",
 		excerpt: "Complete guide to authentic Indonesian cooking techniques using standard British kitchen equipment. Master wok techniques, spice paste preparation, traditional timing methods, and equipment adaptations for UK homes. Includes professional chef secrets.",
 		content: `
 		<div class="bg-gradient-to-r from-burgundy-50 to-gold-50 border-l-4 border-burgundy-500 p-6 my-8 rounded-r-lg">
@@ -1713,7 +1713,7 @@ const blogPosts = {
 	},
 
 	"british-indonesian-fusion-weeknight-recipes": {
-		title: "British-Indonesian Fusion Weeknight Recipes UK 2025: Quick 30-Minute Family Meals",
+		title: "British-Indonesian Fusion Recipes UK | Quick 30-Minute Meals",
 		excerpt: "Transform your weeknight dinners with 10 quick Indonesian-British fusion recipes. 30 minutes or less using Tesco, ASDA & Sainsbury's ingredients. Perfect for busy UK families discovering Indonesian flavors.",
 		keywords: [
 			"British Indonesian fusion recipes",

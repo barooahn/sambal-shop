@@ -8,7 +8,7 @@ import ArticleSchema from "@/components/seo/ArticleSchema";
 import FAQSchema from "@/components/seo/FAQSchema";
 
 export const metadata: Metadata = {
-	title: "Ultimate Guide to Authentic Sambal UK | Indonesian Chili Paste Artisanal Hot Sauce Beyond Sriracha | Spice Island Indonesia",
+	title: "Ultimate Sambal Guide UK | Authentic Indonesian Chili Paste",
 	description: "Complete guide to authentic sambal UK. Indonesian chili paste artisanal hot sauce varieties, traditional techniques. UK cooking applications beyond sriracha.",
 	keywords: [
 		"authentic sambal UK",
