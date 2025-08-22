@@ -21,6 +21,9 @@ export const metadata: Metadata = {
 		images: ["/images/sambal-fried-rice.webp"],
 		type: "article",
 	},
+	alternates: {
+		canonical: "https://www.spiceislandindonesia.com/recipes/sambal-fried-rice",
+	},
 };
 
 const recipe = {

@@ -5,6 +5,9 @@ export const metadata = {
   title: "Returns & Refunds Policy | Spice Island Indonesia",
   description:
     "Read our simple returns policy. 14-day change-of-mind returns for sealed items. Faulty or damaged items replaced or refunded. Free UK shipping over £20.",
+  alternates: {
+    canonical: "https://www.spiceislandindonesia.com/returns",
+  },
 };
 
 export default function ReturnsPage() {

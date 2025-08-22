@@ -1,5 +1,13 @@
 import dynamic from 'next/dynamic';
 
+export const metadata = {
+	title: "Login | Spice Island Indonesia",
+	description: "Sign in to your Spice Island Indonesia account to manage orders, track deliveries, and access exclusive Indonesian sambal offers.",
+	alternates: {
+		canonical: "https://www.spiceislandindonesia.com/login",
+	},
+};
+
 const LoginForm = dynamic(() => import('@/components/auth/login-form').then(mod => ({ default: mod.LoginForm })), {
   ssr: true, // Keep SSR for SEO and better UX
   loading: () => (

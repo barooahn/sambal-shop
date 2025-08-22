@@ -38,6 +38,9 @@ export const metadata = {
 			},
 		],
 	},
+	alternates: {
+		canonical: "https://www.spiceislandindonesia.com/indonesian-sambal-london",
+	},
 };
 
 export default function IndonesianSambalLondonPage() {

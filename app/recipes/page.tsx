@@ -13,6 +13,9 @@ export const metadata: Metadata = {
 		description: "Discover authentic Indonesian sambal recipes perfect for UK kitchens. Traditional flavors, modern cooking techniques.",
 		images: ["/images/optimized/sambal-fried-rice-lg.webp"],
 	},
+	alternates: {
+		canonical: "https://www.spiceislandindonesia.com/recipes",
+	},
 };
 
 export default function RecipesPage() {

@@ -39,6 +39,9 @@ export const metadata = {
 			},
 		],
 	},
+	alternates: {
+		canonical: "https://www.spiceislandindonesia.com/authentic-vs-store-bought",
+	},
 };
 
 export default function AuthenticVsStoreBoughtPage() {

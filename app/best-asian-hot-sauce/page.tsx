@@ -20,6 +20,9 @@ export const metadata: Metadata = {
 		description: "Expert ranking of Asian hot sauces. Discover why authentic Indonesian sambal outperforms Sriracha, Gochujang, and other commercial brands.",
 		images: ["/images/optimized/best-asian-hot-sauce-comparison-lg.webp"],
 	},
+	alternates: {
+		canonical: "https://www.spiceislandindonesia.com/best-asian-hot-sauce",
+	},
 };
 
 export default function BestAsianHotSaucePage() {

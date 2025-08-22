@@ -31,6 +31,9 @@ export const metadata: Metadata = {
 			},
 		],
 	},
+	alternates: {
+		canonical: "https://www.spiceislandindonesia.com/contact",
+	},
 };
 
 export default function ContactPage() {
