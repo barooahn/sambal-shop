@@ -2253,6 +2253,9 @@ export async function generateMetadata({
 			images: [post.image],
 			type: "article",
 		},
+		alternates: {
+			canonical: `https://www.spiceislandindonesia.com/blog/${slug}`,
+		},
 	};
 }
 
