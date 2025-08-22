@@ -26,6 +26,9 @@ export const metadata: Metadata = {
 	description: excerpt,
 	keywords:
 		"Indonesian ingredients UK, where to buy sambal UK, Asian supermarket UK, Indonesian shopping guide, sambal ingredients UK, Indonesian spices UK",
+	alternates: {
+		canonical: "https://www.spiceislandindonesia.com/blog/indonesian-ingredients-uk-shopping-guide",
+	},
 };
 
 export default function IndonesianIngredientsUKPage() {

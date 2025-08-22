@@ -20,6 +20,9 @@ export const metadata: Metadata = {
 		description: "Discover the key differences between Western hot sauces and authentic Indonesian sambal. Ingredients, preparation, heat levels, and culinary uses compared.",
 		images: ["/images/optimized/sambal-vs-sriracha-comparison-lg.webp"],
 	},
+	alternates: {
+		canonical: "https://www.spiceislandindonesia.com/hot-sauce-vs-sambal",
+	},
 };
 
 export default function HotSauceVsSambalPage() {

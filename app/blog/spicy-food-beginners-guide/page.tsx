@@ -20,6 +20,9 @@ export const metadata: Metadata = {
 		description: "Learn to enjoy spicy food safely with our complete beginners guide. Build heat tolerance gradually with expert tips and beginner-friendly recommendations.",
 		images: ["/images/blog/spicy-food-beginners-safe-progression.webp.webp"],
 	},
+	alternates: {
+		canonical: "https://www.spiceislandindonesia.com/blog/spicy-food-beginners-guide",
+	},
 };
 
 export default function SpicyFoodBeginnersGuidePage() {

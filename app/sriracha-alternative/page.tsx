@@ -20,6 +20,9 @@ export const metadata: Metadata = {
 		description: "Discover why Indonesian sambal is the superior Sriracha alternative. 500+ years older, no artificial ingredients, authentic Asian flavors.",
 		images: ["/images/optimized/sriracha-alternative-comparison-lg.webp"],
 	},
+	alternates: {
+		canonical: "https://www.spiceislandindonesia.com/sriracha-alternative",
+	},
 };
 
 export default function SrirachaAlternativePage() {

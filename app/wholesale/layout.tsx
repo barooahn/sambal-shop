@@ -9,6 +9,9 @@ export const metadata: Metadata = {
 		description: "Wholesale authentic Indonesian sambal for UK businesses. Restaurants, cafes, and retailers - contact us for competitive bulk pricing.",
 		images: ["/images/optimized/sambal-oelek-lg.webp"],
 	},
+	alternates: {
+		canonical: "https://www.spiceislandindonesia.com/wholesale",
+	},
 };
 
 export default function WholesaleLayout({

@@ -38,6 +38,9 @@ export const metadata = {
 			},
 		],
 	},
+	alternates: {
+		canonical: "https://www.spiceislandindonesia.com/sambal-vs-sriracha",
+	},
 };
 
 export default function SambalVsSrirachaPage() {

@@ -20,6 +20,9 @@ export const metadata: Metadata = {
 		description: "Why Indonesian sambal is the authentic Asian hot sauce that predates Sriracha by centuries. Compare ingredients, taste, and cultural heritage.",
 		images: ["/images/optimized/sambal-vs-sriracha-comparison-lg.webp"],
 	},
+	alternates: {
+		canonical: "https://www.spiceislandindonesia.com/blog/sambal-vs-sriracha",
+	},
 };
 
 export default function SambalVsSrirachaPage() {

@@ -20,6 +20,9 @@ export const metadata: Metadata = {
 		description: "Discover 15+ authentic Indonesian sambal varieties from across the archipelago. Complete guide to regional differences, heat levels, and traditional uses.",
 		images: ["/images/optimized/indonesian-sambal-varieties-guide-lg.webp"],
 	},
+	alternates: {
+		canonical: "https://www.spiceislandindonesia.com/blog/complete-guide-indonesian-sambal-varieties",
+	},
 };
 
 export default function CompleteGuideIndonesianSambalVarietiesPage() {

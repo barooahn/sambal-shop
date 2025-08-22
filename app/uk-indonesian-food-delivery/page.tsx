@@ -29,6 +29,9 @@ export const metadata: Metadata = {
 		images: ["/images/optimized/sambal-bali-md.webp"],
 		type: "website",
 	},
+	alternates: {
+		canonical: "https://www.spiceislandindonesia.com/uk-indonesian-food-delivery",
+	},
 };
 
 export default function UKDeliveryPage() {

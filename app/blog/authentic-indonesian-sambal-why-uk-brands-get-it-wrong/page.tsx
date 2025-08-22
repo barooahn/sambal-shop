@@ -20,6 +20,9 @@ export const metadata: Metadata = {
 		description: "UK supermarket 'sambal' vs real Indonesian sambal: shocking differences revealed. Learn why authentic matters and how to find genuine Indonesian sambal.",
 		images: ["/images/optimized/sriracha-alternative-comparison-lg.webp"],
 	},
+	alternates: {
+		canonical: "https://www.spiceislandindonesia.com/blog/authentic-indonesian-sambal-why-uk-brands-get-it-wrong",
+	},
 };
 
 export default function AuthenticIndonesianSambalUKBrandsPage() {
