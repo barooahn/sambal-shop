@@ -22,9 +22,9 @@ import {
 import TrustIndicators from "@/components/ui/TrustIndicators";
 
 export const metadata = {
-	title: "Authentic Sambal Goreng UK | Traditional Fried Indonesian Chili Paste | Sweet & Spicy | Chef Yossie Recipe",
+	title: "Sambal Goreng UK | Traditional Sweet & Spicy Indonesian Chili",
 	description:
-		"Discover authentic sambal goreng - traditional Indonesian fried chili paste with sweet & spicy complexity. Made by Chef Yossie using ancestral recipes from Java. Perfect for nasi goreng, grilled meats & authentic Indonesian dishes. Free UK delivery over £20.",
+		"Authentic sambal goreng - traditional Indonesian sweet & spicy chili paste. Made by Chef Yossie using ancestral Java recipes. Free UK delivery.",
 	keywords:
 		"authentic sambal goreng UK, traditional Indonesian fried chili paste, sweet spicy sambal, Chef Yossie recipe, Javanese sambal goreng, nasi goreng sauce, Indonesian fried chili, sambal goreng delivery UK, traditional Indonesian condiments, authentic Javanese cooking",
 	openGraph: {

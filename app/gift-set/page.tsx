@@ -28,9 +28,9 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-	title: "Indonesian Sambal Gift Set UK | Premium Chili Paste Collection | Chef Yossie Authentic Gift Box",
+	title: "Indonesian Sambal Gift Set UK | Premium Collection",
 	description:
-		"Perfect gift for food lovers - complete Indonesian sambal collection with all three varieties: Sambal Oelek, Sambal Bali, and Sambal Goreng. Made by Chef Yossie using traditional recipes. Beautiful presentation box with tasting guide. Free UK delivery over £20.",
+		"Perfect Indonesian sambal gift set with all three varieties: Oelek, Bali, and Goreng. Made by Chef Yossie using traditional recipes. Free UK delivery.",
 	keywords:
 		"Indonesian sambal gift set UK, chili paste gift box, Chef Yossie gift collection, authentic sambal gift UK, Indonesian condiment gift set, food lover gift UK, sambal collection gift box, premium Indonesian spices gift",
 	openGraph: {

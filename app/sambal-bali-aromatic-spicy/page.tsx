@@ -29,7 +29,7 @@ import {
 export const metadata = {
 	title: "Sambal Bali UK | Aromatic Indonesian Chili Paste",
 	description:
-		"Experience authentic sambal Bali with aromatic galangal, lemongrass & kaffir lime leaves. Made by Chef Yossie using traditional Balinese recipes. Perfect for satay, grilled meats & authentic Indonesian dishes. Complex aromatic heat with sophisticated spice blend. Free UK delivery over £20.",
+		"Authentic sambal Bali with aromatic galangal, lemongrass & kaffir lime. Made by Chef Yossie using traditional Balinese recipes. Free UK delivery.",
 	keywords:
 		"authentic sambal bali UK, traditional Balinese chili paste, aromatic sambal galangal lemongrass, Chef Yossie sambal bali, Indonesian aromatic condiments UK, traditional Balinese cooking, sambal bali delivery UK, kaffir lime leaves sambal, sophisticated Indonesian spice paste, authentic Balinese flavors UK",
 	openGraph: {

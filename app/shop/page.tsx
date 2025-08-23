@@ -19,9 +19,9 @@ import Image from "next/image";
 import StarRating from "@/components/ui/StarRating";
 
 export const metadata = {
-	title: "Shop Authentic Indonesian Sambal UK | Chef Yossie Premium Collection | Buy Online",
+	title: "Shop Authentic Indonesian Sambal UK | Chef Yossie Collection",
 	description:
-		"Shop authentic Indonesian sambal online - Sambal Oelek (25,000 SHU), Sambal Bali (aromatic galangal & lemongrass), Sambal Goreng (sweet & spicy). Made by Chef Yossie using traditional recipes. Free UK delivery over £20. Secure checkout with Stripe.",
+		"Shop authentic Indonesian sambal online: Oelek (pure heat), Bali (aromatic), Goreng (sweet & spicy). Made by Chef Yossie. Free UK delivery.",
 	keywords:
 		"buy Indonesian sambal online UK, shop authentic sambal UK, Chef Yossie sambal collection, sambal oelek buy UK, sambal bali buy online, sambal goreng purchase UK, Indonesian chili paste shop, authentic sambal delivery UK, traditional Indonesian condiments buy online",
 	openGraph: {
