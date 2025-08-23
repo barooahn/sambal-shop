@@ -528,9 +528,9 @@ export default function SambalNoodleSoupPage() {
 
 					{/* Ingredient Spotlight */}
 					<section className='bg-gradient-to-br from-burgundy-50 to-gold-50 rounded-sm shadow-sm border border-gold-200 p-8'>
-						<h2 className='text-2xl font-bold text-burgundy-900 mb-4 font-heading'>
+						<h3 className='text-2xl font-bold text-burgundy-900 mb-4 font-heading'>
 							Key Ingredients & Their Magic
-						</h2>
+						</h3>
 						<div className='grid md:grid-cols-2 gap-6'>
 							<div>
 								<h3 className='text-lg font-semibold text-burgundy-800 mb-3 font-brand'>
@@ -597,9 +597,9 @@ export default function SambalNoodleSoupPage() {
 
 					{/* Chef's Techniques */}
 					<section className='bg-white rounded-sm shadow-sm border border-gold-200 p-8'>
-						<h2 className='text-2xl font-bold text-burgundy-900 mb-4 font-heading'>
+						<h3 className='text-2xl font-bold text-burgundy-900 mb-4 font-heading'>
 							Chef Yossie's Professional Techniques
-						</h2>
+						</h3>
 						<div className='prose prose-lg max-w-none text-gray-700 font-body'>
 							<p>
 								<strong>
@@ -637,9 +637,9 @@ export default function SambalNoodleSoupPage() {
 
 					{/* Noodle Selection Guide */}
 					<section className='bg-gradient-to-br from-gold-50 to-cream-50 rounded-sm shadow-sm border border-gold-200 p-8'>
-						<h2 className='text-2xl font-bold text-burgundy-900 mb-4 font-heading'>
+						<h3 className='text-2xl font-bold text-burgundy-900 mb-4 font-heading'>
 							Choosing Your Noodles
-						</h2>
+						</h3>
 						<div className='grid md:grid-cols-3 gap-6'>
 							<div>
 								<h3 className='text-lg font-semibold text-burgundy-800 mb-3 font-brand'>

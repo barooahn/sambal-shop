@@ -466,9 +466,9 @@ export default function SambalBBQMarinadePage() {
 
 					{/* Marinating Science */}
 					<section className='bg-gradient-to-br from-burgundy-50 to-gold-50 rounded-sm shadow-sm border border-gold-200 p-8'>
-						<h2 className='text-2xl font-bold text-burgundy-900 mb-4 font-heading'>
+						<h3 className='text-2xl font-bold text-burgundy-900 mb-4 font-heading'>
 							Chef Yossie's Marinating Mastery
-						</h2>
+						</h3>
 						<div className='grid md:grid-cols-2 gap-6'>
 							<div>
 								<h3 className='text-lg font-semibold text-burgundy-800 mb-3 font-brand'>
@@ -521,9 +521,9 @@ export default function SambalBBQMarinadePage() {
 
 					{/* Grilling Excellence */}
 					<section className='bg-white rounded-sm shadow-sm border border-gold-200 p-8'>
-						<h2 className='text-2xl font-bold text-burgundy-900 mb-4 font-heading'>
+						<h3 className='text-2xl font-bold text-burgundy-900 mb-4 font-heading'>
 							Perfect Grilling Technique
-						</h2>
+						</h3>
 						<div className='prose prose-lg max-w-none text-gray-700 font-body'>
 							<p>
 								<strong>
@@ -563,9 +563,9 @@ export default function SambalBBQMarinadePage() {
 
 					{/* Protein Pairing Guide */}
 					<section className='bg-gradient-to-br from-gold-50 to-cream-50 rounded-sm shadow-sm border border-gold-200 p-8'>
-						<h2 className='text-2xl font-bold text-burgundy-900 mb-4 font-heading'>
+						<h3 className='text-2xl font-bold text-burgundy-900 mb-4 font-heading'>
 							Optimal Protein Pairings
-						</h2>
+						</h3>
 						<div className='grid md:grid-cols-3 gap-6'>
 							<div>
 								<h3 className='text-lg font-semibold text-burgundy-800 mb-3 font-brand'>
@@ -617,9 +617,9 @@ export default function SambalBBQMarinadePage() {
 
 					{/* Cultural Context */}
 					<section className='bg-white rounded-sm shadow-sm border border-gold-200 p-8'>
-						<h2 className='text-2xl font-bold text-burgundy-900 mb-4 font-heading'>
+						<h3 className='text-2xl font-bold text-burgundy-900 mb-4 font-heading'>
 							Indonesian Grilling Heritage
-						</h2>
+						</h3>
 						<div className='prose prose-lg max-w-none text-gray-700 font-body'>
 							<p>
 								In Indonesian cuisine, marinades serve a

@@ -76,9 +76,9 @@ export default function PrivacyPage() {
 								</section>
 
 								<section>
-									<h2 className='text-2xl font-bold text-burgundy-900 mb-4 font-brand'>
+									<h3 className='text-2xl font-bold text-burgundy-900 mb-4 font-brand'>
 										2. How We Use Your Information
-									</h2>
+									</h3>
 									<div className='text-neutral-700 font-body space-y-4'>
 										<p>
 											We use the information we
@@ -113,9 +113,9 @@ export default function PrivacyPage() {
 								</section>
 
 								<section>
-									<h2 className='text-2xl font-bold text-burgundy-900 mb-4 font-brand'>
+									<h3 className='text-2xl font-bold text-burgundy-900 mb-4 font-brand'>
 										3. Information Sharing
-									</h2>
+									</h3>
 									<div className='text-neutral-700 font-body space-y-4'>
 										<p>
 											We do not sell, trade, or
@@ -146,9 +146,9 @@ export default function PrivacyPage() {
 								</section>
 
 								<section>
-									<h2 className='text-2xl font-bold text-burgundy-900 mb-4 font-brand'>
+									<h3 className='text-2xl font-bold text-burgundy-900 mb-4 font-brand'>
 										4. Data Security
-									</h2>
+									</h3>
 									<div className='text-neutral-700 font-body space-y-4'>
 										<p>
 											We implement appropriate
@@ -166,9 +166,9 @@ export default function PrivacyPage() {
 								</section>
 
 								<section>
-									<h2 className='text-2xl font-bold text-burgundy-900 mb-4 font-brand'>
+									<h3 className='text-2xl font-bold text-burgundy-900 mb-4 font-brand'>
 										5. Cookies and Tracking
-									</h2>
+									</h3>
 									<div className='text-neutral-700 font-body space-y-4'>
 										<p>
 											We use cookies and
@@ -183,9 +183,9 @@ export default function PrivacyPage() {
 								</section>
 
 								<section>
-									<h2 className='text-2xl font-bold text-burgundy-900 mb-4 font-brand'>
+									<h3 className='text-2xl font-bold text-burgundy-900 mb-4 font-brand'>
 										6. Your Rights
-									</h2>
+									</h3>
 									<div className='text-neutral-700 font-body space-y-4'>
 										<p>You have the right to:</p>
 										<ul className='list-disc pl-6 space-y-2'>
@@ -212,9 +212,9 @@ export default function PrivacyPage() {
 								</section>
 
 								<section>
-									<h2 className='text-2xl font-bold text-burgundy-900 mb-4 font-brand'>
+									<h3 className='text-2xl font-bold text-burgundy-900 mb-4 font-brand'>
 										7. Children&apos;s Privacy
-									</h2>
+									</h3>
 									<div className='text-neutral-700 font-body space-y-4'>
 										<p>
 											Our services are not
@@ -228,9 +228,9 @@ export default function PrivacyPage() {
 								</section>
 
 								<section>
-									<h2 className='text-2xl font-bold text-burgundy-900 mb-4 font-brand'>
+									<h3 className='text-2xl font-bold text-burgundy-900 mb-4 font-brand'>
 										8. Changes to This Policy
-									</h2>
+									</h3>
 									<div className='text-neutral-700 font-body space-y-4'>
 										<p>
 											We may update this
@@ -246,9 +246,9 @@ export default function PrivacyPage() {
 								</section>
 
 								<section>
-									<h2 className='text-2xl font-bold text-burgundy-900 mb-4 font-brand'>
+									<h3 className='text-2xl font-bold text-burgundy-900 mb-4 font-brand'>
 										9. Contact Us
-									</h2>
+									</h3>
 									<div className='text-neutral-700 font-body space-y-4'>
 										<p>
 											If you have any questions

@@ -435,9 +435,9 @@ export default function SambalChickenStirFryPage() {
 
 					{/* Chef's Tips */}
 					<section className='bg-gradient-to-br from-burgundy-50 to-gold-50 rounded-sm shadow-sm border border-gold-200 p-8'>
-						<h2 className='text-2xl font-bold text-burgundy-900 mb-4 font-heading'>
+						<h3 className='text-2xl font-bold text-burgundy-900 mb-4 font-heading'>
 							Chef Yossie's Professional Tips
-						</h2>
+						</h3>
 						<div className='grid md:grid-cols-2 gap-6'>
 							<div>
 								<h3 className='text-lg font-semibold text-burgundy-800 mb-3 font-brand'>
@@ -466,9 +466,9 @@ export default function SambalChickenStirFryPage() {
 
 					{/* Serving Suggestions */}
 					<section className='bg-white rounded-sm shadow-sm border border-gold-200 p-8'>
-						<h2 className='text-2xl font-bold text-burgundy-900 mb-4 font-heading'>
+						<h3 className='text-2xl font-bold text-burgundy-900 mb-4 font-heading'>
 							Traditional Indonesian Serving
-						</h2>
+						</h3>
 						<div className='prose prose-lg max-w-none text-gray-700 font-body'>
 							<p>
 								In Indonesia, Ayam Rica Rica is traditionally served with steamed white rice, fresh cucumber slices, and keropok (prawn crackers). The cool cucumber provides essential relief from the heat, while the crunchy prawn crackers add textural contrast.

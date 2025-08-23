@@ -93,9 +93,9 @@ export default function ContactPage() {
 						</div>
 
 						<div className='bg-white/60 rounded-sm p-8 shadow-lg border border-gold-200/50'>
-							<h2 className='text-2xl font-bold text-burgundy-900 mb-6 font-brand'>
+							<h3 className='text-2xl font-bold text-burgundy-900 mb-6 font-brand'>
 								Response Time
-							</h2>
+							</h3>
 							<div className='space-y-4'>
 								<div className='flex items-center space-x-4'>
 									<div className='w-12 h-12 bg-green-100 rounded-full flex items-center justify-center'>
@@ -135,9 +135,9 @@ export default function ContactPage() {
 					{/* Additional Information */}
 					<div className='mt-16 text-center'>
 						<div className='bg-burgundy-50 rounded-sm p-8 border border-burgundy-200/50'>
-							<h2 className='text-2xl font-bold text-burgundy-900 mb-4 font-brand'>
+							<h3 className='text-2xl font-bold text-burgundy-900 mb-4 font-brand'>
 								What Can We Help You With?
-							</h2>
+							</h3>
 							<div className='grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8'>
 								<div className='text-center'>
 									<div className='w-16 h-16 bg-burgundy-100 rounded-full flex items-center justify-center mx-auto mb-4'>

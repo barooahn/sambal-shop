@@ -104,9 +104,9 @@ export default function AboutPage() {
 			<section className='py-24 bg-gradient-to-br from-cream-100 to-cream-200'>
 				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<div className='text-center mb-16'>
-						<h2 className='text-4xl sm:text-5xl font-bold text-burgundy-900 mb-6 font-brand'>
+						<h3 className='text-4xl sm:text-5xl font-bold text-burgundy-900 mb-6 font-brand'>
 							Our Values
-						</h2>
+						</h3>
 						<p className='text-xl text-neutral-600 max-w-3xl mx-auto font-body'>
 							Every jar reflects our commitment to
 							authenticity, quality, and tradition
@@ -213,9 +213,9 @@ export default function AboutPage() {
 							<div className='absolute inset-0 bg-gradient-to-t from-burgundy-900/20 to-transparent rounded-sm'></div>
 						</div>
 						<div>
-							<h2 className='text-4xl sm:text-5xl font-bold text-burgundy-900 mb-6 font-brand'>
+							<h3 className='text-4xl sm:text-5xl font-bold text-burgundy-900 mb-6 font-brand'>
 								Our Mission
-							</h2>
+							</h3>
 							<div className='space-y-6 text-lg text-neutral-700 leading-relaxed font-body'>
 								<p>
 									We believe that great food brings
@@ -260,9 +260,9 @@ export default function AboutPage() {
 			<section className='py-16 bg-gradient-to-br from-cream-50 to-white'>
 				<div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<div className='text-center mb-12'>
-						<h2 className='text-3xl sm:text-4xl font-bold text-burgundy-900 mb-4 font-brand'>
+						<h3 className='text-3xl sm:text-4xl font-bold text-burgundy-900 mb-4 font-brand'>
 							Company Information
-						</h2>
+						</h3>
 						<p className='text-lg text-neutral-600 font-body'>
 							Officially incorporated and committed to bringing you authentic Indonesian flavors
 						</p>
@@ -323,12 +323,12 @@ export default function AboutPage() {
 			{/* CTA Section */}
 			<section className='py-24 bg-gradient-to-r from-burgundy-900 to-burgundy-800 text-white'>
 				<div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-					<h2 className='text-4xl sm:text-5xl font-bold mb-6 font-brand'>
+					<h3 className='text-4xl sm:text-5xl font-bold mb-6 font-brand'>
 						Ready to Experience
 						<span className='text-gold-300 block'>
 							Authentic Indonesian Flavors?
 						</span>
-					</h2>
+					</h3>
 					<p className='text-xl text-gold-200 mb-8 font-body'>
 						Join thousands of food lovers who have discovered
 						the magic of authentic sambal

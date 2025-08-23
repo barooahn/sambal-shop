@@ -460,12 +460,12 @@ export default function ShopPage() {
 							/>
 						</div>
 
-						<h2 className='text-4xl sm:text-5xl font-bold mb-6 font-brand'>
+						<h3 className='text-4xl sm:text-5xl font-bold mb-6 font-brand'>
 							Ready to Experience
 							<span className='text-gold-300 block'>
 								Authentic Indonesian Heat?
 							</span>
-						</h2>
+						</h3>
 						<p className='text-xl text-gold-200 mb-8 font-body'>
 							Join thousands of UK customers who've
 							discovered the difference authentic sambal

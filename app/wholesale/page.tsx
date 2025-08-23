@@ -135,12 +135,12 @@ export default function WholesalePage() {
 				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<div className='grid lg:grid-cols-2 gap-16'>
 						<div>
-							<h2 className='text-4xl sm:text-5xl font-bold text-burgundy-900 mb-6 font-brand'>
+							<h3 className='text-4xl sm:text-5xl font-bold text-burgundy-900 mb-6 font-brand'>
 								Get Started
 								<span className='text-gold-700 block'>
 									Today
 								</span>
-							</h2>
+							</h3>
 							<p className='text-lg text-neutral-700 mb-8 font-body'>
 								Ready to bring authentic Indonesian
 								sambal to your customers? Fill out the

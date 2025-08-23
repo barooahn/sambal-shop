@@ -214,9 +214,9 @@ export default function ProductsPage() {
 			<section className="py-16">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="text-center mb-12">
-						<h2 className="text-3xl sm:text-4xl font-bold text-burgundy-900 mb-4 font-brand">
+						<h3 className="text-3xl sm:text-4xl font-bold text-burgundy-900 mb-4 font-brand">
 							Interactive Product Comparison
-						</h2>
+						</h3>
 						<p className="text-lg text-neutral-600 max-w-3xl mx-auto font-body">
 							Select any 2-3 products below to compare them side-by-side. 
 							See detailed comparisons of heat levels, ingredients, uses, and customer ratings.
@@ -234,9 +234,9 @@ export default function ProductsPage() {
 			<section className="py-16 bg-white">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="text-center mb-12">
-						<h2 className="text-3xl font-bold text-burgundy-900 mb-4 font-brand">
+						<h3 className="text-3xl font-bold text-burgundy-900 mb-4 font-brand">
 							Understanding Heat Levels
-						</h2>
+						</h3>
 						<p className="text-lg text-neutral-600 font-body">
 							Our sambal varieties range from beginner-friendly to serious heat enthusiasts
 						</p>

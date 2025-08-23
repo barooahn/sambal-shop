@@ -266,12 +266,12 @@ export default function RecipesPage() {
 				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<div className='grid lg:grid-cols-2 gap-16 items-center'>
 						<div>
-							<h2 className='text-4xl sm:text-5xl font-bold text-burgundy-900 mb-6 font-brand'>
+							<h3 className='text-4xl sm:text-5xl font-bold text-burgundy-900 mb-6 font-brand'>
 								Cooking with
 								<span className='text-gold-700 block'>
 									Sambal
 								</span>
-							</h2>
+							</h3>
 							<div className='space-y-6 text-lg text-neutral-700 leading-relaxed font-body'>
 								<div className='bg-cream-50 rounded-sm p-6 border border-gold-200'>
 									<h3 className='font-bold text-burgundy-900 mb-2 font-brand'>
@@ -329,12 +329,12 @@ export default function RecipesPage() {
 			{/* CTA Section */}
 			<section className='py-24 bg-gradient-to-r from-burgundy-900 to-burgundy-800 text-white'>
 				<div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-					<h2 className='text-4xl sm:text-5xl font-bold mb-6 font-brand'>
+					<h3 className='text-4xl sm:text-5xl font-bold mb-6 font-brand'>
 						Ready to Start
 						<span className='text-gold-300 block'>
 							Cooking?
 						</span>
-					</h2>
+					</h3>
 					<p className='text-xl text-gold-200 mb-8 font-body'>
 						Get our authentic sambal and start creating
 						delicious Indonesian-inspired meals tonight

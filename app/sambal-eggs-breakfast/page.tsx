@@ -210,9 +210,9 @@ export default function SambalEggsBreakfastPage() {
 			<section className='py-16 bg-gradient-to-br from-cream-50 to-cream-100'>
 				<div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<div className='text-center mb-12'>
-						<h2 className='text-3xl sm:text-4xl font-bold text-burgundy-900 mb-6 font-brand'>
+						<h3 className='text-3xl sm:text-4xl font-bold text-burgundy-900 mb-6 font-brand'>
 							Perfect Breakfast Pairings
-						</h2>
+						</h3>
 						<p className='text-xl text-gray-700 font-elegant max-w-3xl mx-auto'>
 							Discover how authentic Indonesian sambal
 							transforms your favorite morning dishes.
@@ -346,10 +346,10 @@ export default function SambalEggsBreakfastPage() {
 								Morning Perfection
 							</Badge>
 
-							<h2 className='text-3xl sm:text-4xl font-bold text-burgundy-900 mb-6 font-brand'>
+							<h3 className='text-3xl sm:text-4xl font-bold text-burgundy-900 mb-6 font-brand'>
 								Why Indonesian Sambal is Perfect for
 								Breakfast
-							</h2>
+							</h3>
 
 							<p className='text-xl text-gray-700 mb-8 font-elegant leading-relaxed'>
 								Unlike harsh hot sauces that assault
@@ -454,10 +454,10 @@ export default function SambalEggsBreakfastPage() {
 								Chef&apos;s Tips
 							</Badge>
 
-							<h2 className='text-3xl sm:text-4xl font-bold text-burgundy-900 mb-6 font-brand'>
+							<h3 className='text-3xl sm:text-4xl font-bold text-burgundy-900 mb-6 font-brand'>
 								Indonesian Breakfast Secrets from Chef
 								Yossie
-							</h2>
+							</h3>
 
 							<p className='text-xl text-gray-700 mb-6 font-elegant leading-relaxed'>
 								In Indonesia, we start every day with
@@ -530,9 +530,9 @@ export default function SambalEggsBreakfastPage() {
 				<div className='absolute bottom-0 right-0 w-96 h-96 bg-gold-600/20 rounded-full translate-x-48 translate-y-48 blur-3xl'></div>
 
 				<div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
-					<h2 className='text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 font-brand'>
+					<h3 className='text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 font-brand'>
 						Start Every Morning with Indonesian Fire
-					</h2>
+					</h3>
 
 					<p className='text-xl sm:text-2xl mb-8 text-cream-100 font-elegant leading-relaxed max-w-3xl mx-auto'>
 						Transform your breakfast routine with authentic

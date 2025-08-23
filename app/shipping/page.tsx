@@ -137,12 +137,12 @@ export default function ShippingPage() {
 							</div>
 						</div>
 						<div>
-							<h2 className='text-4xl sm:text-5xl font-bold text-burgundy-900 mb-6 font-brand'>
+							<h3 className='text-4xl sm:text-5xl font-bold text-burgundy-900 mb-6 font-brand'>
 								Premium
 								<span className='text-gold-700 block'>
 									Packaging
 								</span>
-							</h2>
+							</h3>
 							<div className='space-y-6 text-lg text-neutral-700 leading-relaxed font-body'>
 								<p>
 									Every order is carefully packed in
@@ -196,9 +196,9 @@ export default function ShippingPage() {
 			<section className='py-24 bg-white'>
 				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<div className='text-center mb-16'>
-						<h2 className='text-4xl sm:text-5xl font-bold text-burgundy-900 mb-6 font-brand'>
+						<h3 className='text-4xl sm:text-5xl font-bold text-burgundy-900 mb-6 font-brand'>
 							Delivery Areas
-						</h2>
+						</h3>
 						<p className='text-xl text-neutral-600 max-w-3xl mx-auto font-body'>
 							We currently deliver across the United
 							Kingdom
@@ -251,9 +251,9 @@ export default function ShippingPage() {
 			<section className='py-24 bg-gradient-to-br from-cream-100 to-cream-200'>
 				<div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<div className='text-center mb-16'>
-						<h2 className='text-4xl sm:text-5xl font-bold text-burgundy-900 mb-6 font-brand'>
+						<h3 className='text-4xl sm:text-5xl font-bold text-burgundy-900 mb-6 font-brand'>
 							Shipping FAQ
-						</h2>
+						</h3>
 					</div>
 
 					<div className='space-y-6'>

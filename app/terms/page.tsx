@@ -53,9 +53,9 @@ export default function TermsPage() {
 								</section>
 
 								<section>
-									<h2 className='text-2xl font-bold text-burgundy-900 mb-4 font-brand'>
+									<h3 className='text-2xl font-bold text-burgundy-900 mb-4 font-brand'>
 										2. Use License
-									</h2>
+									</h3>
 									<div className='text-neutral-700 font-body space-y-4'>
 										<p>
 											Permission is granted to
@@ -77,9 +77,9 @@ export default function TermsPage() {
 								</section>
 
 								<section>
-									<h2 className='text-2xl font-bold text-burgundy-900 mb-4 font-brand'>
+									<h3 className='text-2xl font-bold text-burgundy-900 mb-4 font-brand'>
 										3. Product Information
-									</h2>
+									</h3>
 									<div className='text-neutral-700 font-body space-y-4'>
 										<p>
 											We strive to provide
@@ -96,9 +96,9 @@ export default function TermsPage() {
 								</section>
 
 								<section>
-									<h2 className='text-2xl font-bold text-burgundy-900 mb-4 font-brand'>
+									<h3 className='text-2xl font-bold text-burgundy-900 mb-4 font-brand'>
 										4. Orders and Payment
-									</h2>
+									</h3>
 									<div className='text-neutral-700 font-body space-y-4'>
 										<p>
 											By placing an order, you
@@ -124,9 +124,9 @@ export default function TermsPage() {
 								</section>
 
 								<section>
-									<h2 className='text-2xl font-bold text-burgundy-900 mb-4 font-brand'>
+									<h3 className='text-2xl font-bold text-burgundy-900 mb-4 font-brand'>
 										5. Shipping and Delivery
-									</h2>
+									</h3>
 									<div className='text-neutral-700 font-body space-y-4'>
 										<p>
 											We aim to dispatch orders
@@ -141,9 +141,9 @@ export default function TermsPage() {
 								</section>
 
 								<section>
-									<h2 className='text-2xl font-bold text-burgundy-900 mb-4 font-brand'>
+									<h3 className='text-2xl font-bold text-burgundy-900 mb-4 font-brand'>
 										6. Returns and Refunds
-									</h2>
+									</h3>
 									<div className='text-neutral-700 font-body space-y-4'>
 										<p>
 											We accept returns of
@@ -159,9 +159,9 @@ export default function TermsPage() {
 								</section>
 
 								<section>
-									<h2 className='text-2xl font-bold text-burgundy-900 mb-4 font-brand'>
+									<h3 className='text-2xl font-bold text-burgundy-900 mb-4 font-brand'>
 										7. Disclaimer
-									</h2>
+									</h3>
 									<div className='text-neutral-700 font-body space-y-4'>
 										<p>
 											The materials on Spice
@@ -182,9 +182,9 @@ export default function TermsPage() {
 								</section>
 
 								<section>
-									<h2 className='text-2xl font-bold text-burgundy-900 mb-4 font-brand'>
+									<h3 className='text-2xl font-bold text-burgundy-900 mb-4 font-brand'>
 										8. Limitations
-									</h2>
+									</h3>
 									<div className='text-neutral-700 font-body space-y-4'>
 										<p>
 											In no event shall Spice
@@ -203,9 +203,9 @@ export default function TermsPage() {
 								</section>
 
 								<section>
-									<h2 className='text-2xl font-bold text-burgundy-900 mb-4 font-brand'>
+									<h3 className='text-2xl font-bold text-burgundy-900 mb-4 font-brand'>
 										9. Accuracy of Materials
-									</h2>
+									</h3>
 									<div className='text-neutral-700 font-body space-y-4'>
 										<p>
 											The materials appearing
@@ -222,9 +222,9 @@ export default function TermsPage() {
 								</section>
 
 								<section>
-									<h2 className='text-2xl font-bold text-burgundy-900 mb-4 font-brand'>
+									<h3 className='text-2xl font-bold text-burgundy-900 mb-4 font-brand'>
 										10. Modifications
-									</h2>
+									</h3>
 									<div className='text-neutral-700 font-body space-y-4'>
 										<p>
 											Spice Island Indonesia
@@ -241,9 +241,9 @@ export default function TermsPage() {
 								</section>
 
 								<section>
-									<h2 className='text-2xl font-bold text-burgundy-900 mb-4 font-brand'>
+									<h3 className='text-2xl font-bold text-burgundy-900 mb-4 font-brand'>
 										11. Governing Law
-									</h2>
+									</h3>
 									<div className='text-neutral-700 font-body space-y-4'>
 										<p>
 											These terms and
@@ -256,9 +256,9 @@ export default function TermsPage() {
 								</section>
 
 								<section>
-									<h2 className='text-2xl font-bold text-burgundy-900 mb-4 font-brand'>
+									<h3 className='text-2xl font-bold text-burgundy-900 mb-4 font-brand'>
 										12. Contact Information
-									</h2>
+									</h3>
 									<div className='text-neutral-700 font-body space-y-4'>
 										<p>
 											If you have any questions
