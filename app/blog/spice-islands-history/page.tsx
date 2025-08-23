@@ -8,7 +8,7 @@ import ArticleSchema from "@/components/seo/ArticleSchema";
 import FAQSchema from "@/components/seo/FAQSchema";
 
 export const metadata: Metadata = {
-	title: "The History of the Spice Islands: Where Your Sambal Comes From | Spice Island Indonesia",
+	title: "Spice Islands History | Where Your Sambal Comes From",
 	description: excerpt,
 	keywords: [
 		"Spice Islands history",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 		"volcanic soil",
 	],
 	openGraph: {
-		title: "The History of the Spice Islands: Where Your Sambal Comes From",
+		title: "Spice Islands History | Where Your Sambal Comes From",
 		description:
 			"A heritage story from the Maluku Islands — the birthplace of nutmeg, cloves, and authentic Indonesian spice culture.",
 		type: "article",

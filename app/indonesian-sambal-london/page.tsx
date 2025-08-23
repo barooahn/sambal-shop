@@ -19,13 +19,13 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-	title: "Indonesian Sambal Delivery London | Authentic Chili Paste London UK | Spice Island Indonesia",
+	title: "Indonesian Sambal Delivery London | Authentic Chili Paste",
 	description:
 		"Get authentic Indonesian sambal delivered across London! Chef Yossie&apos;s traditional recipes available with fast London delivery. Perfect for Indonesian food lovers in the capital.",
 	keywords:
 		"Indonesian sambal London, sambal delivery London, authentic Indonesian food London, Indonesian condiments London, Chef Yossie London, sambal oelek London, Indonesian chili paste London delivery",
 	openGraph: {
-		title: "Indonesian Sambal Delivery London | Authentic Chili Paste London UK",
+		title: "Indonesian Sambal Delivery London | Authentic Chili Paste",
 		description:
 			"Authentic Indonesian sambal delivered across London. Traditional recipes from Chef Yossie, perfect for London&apos;s Indonesian food scene.",
 		type: "website",

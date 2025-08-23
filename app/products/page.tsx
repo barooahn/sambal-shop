@@ -5,11 +5,11 @@ import { Star, Flame, Sparkles, Zap, CheckCircle } from "lucide-react";
 import NewsletterSection from "@/components/home/NewsletterSection";
 
 export const metadata: Metadata = {
-	title: "Compare Indonesian Sambal Products UK | Sambal Oelek vs Bali vs Goreng | Product Comparison",
+	title: "Indonesian Sambal Comparison | Oelek vs Bali vs Goreng",
 	description: "Compare all authentic Indonesian sambal varieties side-by-side. Sambal Oelek (25,000 SHU), Sambal Bali (aromatic), Sambal Goreng (sweet). Heat levels, ingredients, customer reviews, and pricing comparison. Made by Chef Yossie with traditional recipes.",
 	keywords: "compare Indonesian sambal UK, sambal oelek vs sambal bali, sambal comparison UK, Indonesian chili paste comparison, authentic sambal varieties UK, sambal heat levels comparison, Chef Yossie sambal products, sambal product comparison tool",
 	openGraph: {
-		title: "Compare Indonesian Sambal Products UK | Product Comparison Tool",
+		title: "Indonesian Sambal Comparison | Product Guide",
 		description: "Side-by-side comparison of authentic Indonesian sambal varieties. Compare heat levels, ingredients, customer reviews, and pricing for all products.",
 		type: "website",
 		images: [{

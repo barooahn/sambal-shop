@@ -22,7 +22,7 @@ import { Badge } from "@/components/ui/badge";
 import GlassCard from "@/components/ui/GlassCard";
 
 export const metadata: Metadata = {
-	title: "Essential Indonesian Ingredients: UK Shopping Guide | Spice Island Indonesia",
+	title: "Indonesian Ingredients UK Shopping Guide | Essential Spices",
 	description: excerpt,
 	keywords:
 		"Indonesian ingredients UK, where to buy sambal UK, Asian supermarket UK, Indonesian shopping guide, sambal ingredients UK, Indonesian spices UK",

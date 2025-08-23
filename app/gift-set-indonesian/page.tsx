@@ -20,11 +20,14 @@ import {
 import ProductSchema from "@/components/seo/ProductSchema";
 
 export const metadata = {
-	title: "Indonesian Food Gift Set UK | Authentic Sambal Gift Box | Spice Island Indonesia",
+	title: "Indonesian Food Gift Set UK | Authentic Sambal Gift Box",
 	description:
 		"Perfect Indonesian food gift set featuring Chef Yossie&apos;s authentic sambal collection. Beautifully packaged with recipe cards. Ideal for food lovers, birthdays, and special occasions.",
 	keywords:
 		"Indonesian food gifts UK, sambal gift set, Indonesian condiment gift box, Chef Yossie gift set, authentic Indonesian food gifts, spicy food lover gifts, unique food gifts UK",
+	alternates: {
+		canonical: "https://www.spiceislandindonesia.com/gift-set-indonesian",
+	},
 	openGraph: {
 		title: "Indonesian Food Gift Set UK | Authentic Sambal Gift Box",
 		description:

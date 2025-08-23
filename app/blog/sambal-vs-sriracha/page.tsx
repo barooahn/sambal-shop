@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "Sambal vs Sriracha: The Original Asian Hot Sauce vs Commercial Alternative | Spice Island Indonesia",
+	title: "Sambal vs Sriracha | Original vs Commercial Hot Sauce",
 	description: "Discover why Indonesian sambal predates Sriracha by centuries. Compare authentic Spice Islands chili paste vs Thai-American hot sauce. Find the real Asian hot sauce here.",
 	keywords: [
 		"sambal vs sriracha",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 		"traditional indonesian hot sauce"
 	],
 	openGraph: {
-		title: "Sambal vs Sriracha: The Original Asian Hot Sauce vs Commercial Alternative",
+		title: "Sambal vs Sriracha | Original vs Commercial Hot Sauce",
 		description: "Why Indonesian sambal is the authentic Asian hot sauce that predates Sriracha by centuries. Compare ingredients, taste, and cultural heritage.",
 		images: ["/images/optimized/sambal-vs-sriracha-comparison-lg.webp"],
 	},

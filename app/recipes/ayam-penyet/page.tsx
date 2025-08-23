@@ -8,7 +8,7 @@ import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import InternalLinkingOptimization from "@/components/seo/InternalLinkingOptimization";
 
 export const metadata: Metadata = {
-	title: "Ayam Penyet Recipe | Indonesian Smashed Fried Chicken | Spice Island Indonesia",
+	title: "Ayam Penyet Recipe | Indonesian Smashed Fried Chicken",
 	description:
 		"Authentic Indonesian Ayam Penyet recipe - crispy fried chicken smashed and served with raw sambal oelek. Traditional East Javanese dish with explosive flavor combinations.",
 	keywords:

@@ -61,7 +61,8 @@
       "mcp__playwright__browser_snapshot",
       "Bash(for file in \"C:\\Users\\thinb\\Desktop\\Sambal\\app\\sambal-bali-aromatic-spicy\\page.tsx\" \"C:\\Users\\thinb\\Desktop\\Sambal\\app\\sambal-goreng-uk\\page.tsx\" \"C:\\Users\\thinb\\Desktop\\Sambal\\app\\sambal-oelek-uk\\page.tsx\")",
       "Bash(do echo \"=== $file ===\")",
-      "Bash(done)"
+      "Bash(done)",
+      "WebSearch"
     ],
     "deny": [],
     "defaultMode": "acceptEdits",

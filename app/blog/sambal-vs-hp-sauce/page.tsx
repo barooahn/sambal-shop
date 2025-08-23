@@ -20,12 +20,12 @@ import FAQSchema from "@/components/seo/FAQSchema";
 import ArticleSchema from "@/components/seo/ArticleSchema";
 
 export const metadata: Metadata = {
-	title: "Sambal vs HP Sauce: The Ultimate British Condiment Showdown | Spice Island Indonesia",
+	title: "Sambal vs HP Sauce | The Ultimate British Condiment Guide",
 	description: excerpt,
 	keywords:
 		"sambal vs HP sauce, best condiment UK, HP sauce alternative, Indonesian condiment UK, spicy sauce comparison, authentic sambal UK, British condiment showdown, Chef Yossie sambal, healthy condiment UK, professional chef condiment",
 	openGraph: {
-		title: "Sambal vs HP Sauce: The Ultimate British Condiment Showdown",
+		title: "Sambal vs HP Sauce | The Ultimate British Condiment Guide",
 		description:
 			"Professional chef reveals why Indonesian sambal is transforming British kitchens. Comprehensive comparison of flavor, health benefits & versatility.",
 		type: "article",

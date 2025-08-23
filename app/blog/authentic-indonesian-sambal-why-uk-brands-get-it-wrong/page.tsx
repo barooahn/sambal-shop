@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "Authentic Indonesian Sambal: Why Most UK Brands Get It Wrong | Spice Island Indonesia",
+	title: "Authentic Indonesian Sambal | Why UK Brands Get It Wrong",
 	description: "Shocking differences between UK supermarket 'sambal' vs authentic Indonesian sambal. Learn what makes real sambal, what to avoid, and how to find genuine Indonesian sambal in the UK.",
 	keywords: [
 		"authentic indonesian sambal uk",

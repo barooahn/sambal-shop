@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "Spicy Food Beginners Guide: How to Build Heat Tolerance Safely | Spice Island Indonesia",
+	title: "Spicy Food Beginners Guide | How to Build Heat Tolerance",
 	description: "Complete spicy food beginners guide: how to build heat tolerance, understand Scoville scale, choose beginner-friendly hot sauces, and safely explore spicy cuisines.",
 	keywords: [
 		"spicy food beginners guide",

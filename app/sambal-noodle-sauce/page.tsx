@@ -19,13 +19,16 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-	title: "Authentic Asian Noodle Sauce UK | Indonesian Sambal for Noodles | Spice Island Indonesia",
+	title: "Authentic Asian Noodle Sauce UK | Indonesian Sambal",
 	description:
 		"Transform your noodle dishes with authentic Indonesian sambal! Perfect sauce for ramen, stir-fry noodles, and Asian dishes. Chef Yossie&apos;s traditional recipes create restaurant-quality flavor at home.",
 	keywords:
 		"Asian noodle sauce UK, Indonesian sambal for noodles, authentic noodle sauce, sambal noodles, spicy noodle sauce, Chef Yossie noodle sauce, Indonesian noodle condiment, Asian cooking sauce UK",
+	alternates: {
+		canonical: "https://www.spiceislandindonesia.com/sambal-noodle-sauce",
+	},
 	openGraph: {
-		title: "Authentic Asian Noodle Sauce UK | Indonesian Sambal for Noodles",
+		title: "Authentic Asian Noodle Sauce UK | Indonesian Sambal",
 		description:
 			"Restaurant-quality noodle dishes at home! Authentic Indonesian sambal transforms any noodle recipe into a flavor sensation.",
 		type: "website",

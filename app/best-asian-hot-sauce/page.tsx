@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "Best Asian Hot Sauce: Authentic Indonesian Sambal vs Commercial Brands | Spice Island Indonesia",
+	title: "Best Asian Hot Sauce | Authentic Indonesian Sambal",
 	description: "Discover the best Asian hot sauce: authentic Indonesian sambal. Compare Sriracha, Gochujang, and other Asian hot sauces. Expert rankings and authentic alternatives in the UK.",
 	keywords: [
 		"best asian hot sauce",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 		"genuine asian hot sauce"
 	],
 	openGraph: {
-		title: "Best Asian Hot Sauce: Authentic Indonesian Sambal vs Commercial Brands",
+		title: "Best Asian Hot Sauce | Authentic Indonesian Guide",
 		description: "Expert ranking of Asian hot sauces. Discover why authentic Indonesian sambal outperforms Sriracha, Gochujang, and other commercial brands.",
 		images: ["/images/optimized/best-asian-hot-sauce-comparison-lg.webp"],
 	},

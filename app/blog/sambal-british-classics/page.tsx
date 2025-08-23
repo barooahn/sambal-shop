@@ -23,7 +23,7 @@ export const metadata: Metadata = {
 	keywords:
 		"authentic sambal UK, Indonesian chili paste, artisanal hot sauce, sambal British food fusion, Indonesian sambal UK recipes, British Indonesian cooking, sambal fish and chips, sambal roast dinner, Indonesian spices British classics, sambal transformation British dishes",
 	openGraph: {
-		title: "Authentic Sambal UK Transforms British Classics | Indonesian Chili Paste Artisanal Hot Sauce Fusion",
+		title: "Sambal Transforms British Classics | Indonesian Fusion",
 		description:
 			"Revolutionary fusion recipes combining authentic sambal UK Indonesian chili paste artisanal hot sauce with beloved British dishes",
 		type: "article",

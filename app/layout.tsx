@@ -49,7 +49,7 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
 	metadataBase: new URL("https://www.spiceislandindonesia.com"),
-	title: "Authentic Sambal Goreng UK | Traditional Sweet & Spicy Indonesian Chili Paste | Spice Island Indonesia",
+	title: "Authentic Indonesian Sambal Goreng UK | Sweet & Spicy",
 	description:
 		"Coming Soon: Authentic Sambal Goreng - Traditional Indonesian sweet & spicy chili paste made with palm sugar and traditional goreng method. Join our waitlist for early access to this premium Indonesian condiment.",
 	keywords:
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
 		google: process.env.NEXT_PUBLIC_GSC_VERIFICATION_CODE,
 	},
 	openGraph: {
-		title: "Authentic Sambal Goreng UK | Traditional Sweet & Spicy Indonesian Chili Paste | Spice Island Indonesia",
+		title: "Authentic Indonesian Sambal Goreng UK | Sweet & Spicy",
 		description:
 			"Coming Soon: Authentic Sambal Goreng - Traditional Indonesian sweet & spicy chili paste with palm sugar. Made using traditional goreng method from West Java. Join our waitlist for early access.",
 		type: "website",
@@ -75,7 +75,7 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "Authentic Sambal Goreng UK | Traditional Sweet & Spicy Indonesian Chili Paste | Spice Island Indonesia",
+		title: "Authentic Indonesian Sambal Goreng UK | Sweet & Spicy",
 		description:
 			"Coming Soon: Authentic Sambal Goreng - Traditional Indonesian sweet & spicy chili paste with palm sugar. Made using traditional goreng method from West Java. Join our waitlist for early access.",
 		images: [

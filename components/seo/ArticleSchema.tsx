@@ -117,12 +117,12 @@ const ArticleSchema: FC<ArticleSchemaProps> = ({
 		],
 		"mentions": [
 			{
-				"@type": "Product",
+				"@type": "Thing",
 				"name": "Sambal Oelek",
 				"description": "Traditional Indonesian chili paste"
 			},
 			{
-				"@type": "Product",
+				"@type": "Thing",
 				"name": "Sambal Bali",
 				"description": "Aromatic Indonesian chili paste with traditional spices"
 			}

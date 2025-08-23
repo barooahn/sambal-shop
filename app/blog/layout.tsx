@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "Indonesian Cuisine Blog | Spice Island Indonesia | Authentic Recipes & Stories",
+	title: "Indonesian Cuisine Blog | Authentic Recipes & Stories",
 	description:
 		"Discover authentic Indonesian recipes, cooking tips, and stories from the Spice Islands. Learn about traditional sambal making, Indonesian spices, and culinary heritage.",
 	keywords:

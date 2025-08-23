@@ -6,7 +6,7 @@ import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import FAQSchema from "@/components/seo/FAQSchema";
 
 export const metadata: Metadata = {
-	title: "Ultimate Guide to Spicy Sauces for Stir Fry | Best Hot Sauce UK 2025 | Spice Island Indonesia",
+	title: "Spicy Sauces for Stir Fry | Best Hot Sauce Guide UK",
 	description:
 		"Master stir-fry with the perfect spicy sauces! Complete guide to hot sauce for stir fry, from Indonesian sambal to Asian classics. Transform your UK home cooking today.",
 	keywords:

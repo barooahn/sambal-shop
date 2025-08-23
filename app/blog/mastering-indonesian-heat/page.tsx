@@ -18,12 +18,12 @@ import FAQSchema from "@/components/seo/FAQSchema";
 import ArticleSchema from "@/components/seo/ArticleSchema";
 
 export const metadata: Metadata = {
-	title: "Mastering Indonesian Heat | Spice Levels & Flavor Building Guide | Spice Island Indonesia",
+	title: "Mastering Indonesian Heat | Spice Levels & Flavor Guide",
 	description: excerpt,
 	keywords:
 		"Indonesian spice mastery, Indonesian heat levels, building spice tolerance, sambal spice guide, Indonesian cooking heat control, spicy food tolerance UK, authentic Indonesian spice levels",
 	openGraph: {
-		title: "Mastering Indonesian Heat | Spice Levels & Flavor Building Guide",
+		title: "Mastering Indonesian Heat | Spice Levels & Flavor Guide",
 		description:
 			"Complete guide to mastering Indonesian spice levels and building heat tolerance for British cooks",
 		type: "article",

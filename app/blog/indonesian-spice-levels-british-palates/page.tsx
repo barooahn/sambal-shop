@@ -17,12 +17,12 @@ import FAQSchema from "@/components/seo/FAQSchema";
 import ArticleSchema from "@/components/seo/ArticleSchema";
 
 export const metadata: Metadata = {
-	title: "Indonesian Spice Levels for British Palates | Beginner's Guide | Spice Island Indonesia",
+	title: "Indonesian Spice Levels for British Palates | Beginners",
 	description: excerpt,
 	keywords:
 		"Indonesian spice levels UK, sambal heat scale, British spice tolerance, Indonesian cooking beginners, spicy food UK, authentic Indonesian mild recipes, Chef Yossie spice guide",
 	openGraph: {
-		title: "Indonesian Spice Levels for British Palates | Beginner's Guide",
+		title: "Indonesian Spice Levels for British Palates | Beginners",
 		description:
 			"Master Indonesian heat levels with Chef Yossie's beginner-friendly guide for British kitchens",
 		type: "article",

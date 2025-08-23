@@ -9,7 +9,7 @@ import InternalLinkingOptimization from "@/components/seo/InternalLinkingOptimiz
 import HowToVisual from "@/components/ui/HowToVisual";
 
 export const metadata: Metadata = {
-	title: "Sambal Fried Rice Recipe | Authentic Indonesian Nasi Goreng | Spice Island Indonesia",
+	title: "Sambal Fried Rice Recipe | Indonesian Nasi Goreng",
 	description:
 		"Learn to make authentic Indonesian sambal fried rice (nasi goreng) with our traditional recipe. Perfect for using leftover rice with authentic sambal heat and flavor.",
 	keywords:

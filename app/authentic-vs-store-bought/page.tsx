@@ -20,13 +20,13 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-	title: "Authentic vs Store-Bought Sambal: Real Indonesian vs Mass-Produced | Spice Island Indonesia",
+	title: "Authentic vs Store-Bought Sambal | Indonesian Quality",
 	description:
 		"Discover the shocking difference between authentic Indonesian sambal and mass-produced store brands. Chef Yossie reveals why traditional methods create superior flavor and quality.",
 	keywords:
 		"authentic Indonesian sambal, real vs fake sambal, traditional sambal vs store bought, mass produced sambal comparison, Chef Yossie authentic sambal, handmade Indonesian condiments",
 	openGraph: {
-		title: "Authentic vs Store-Bought Sambal: Real Indonesian vs Mass-Produced",
+		title: "Authentic vs Store-Bought Sambal | Quality Guide",
 		description:
 			"The shocking truth about mass-produced sambal vs authentic Indonesian recipes. Discover what you&apos;re really buying.",
 		type: "website",

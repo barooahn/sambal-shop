@@ -21,12 +21,12 @@ import ArticleSchema from "@/components/seo/ArticleSchema";
 import FAQSchema from "@/components/seo/FAQSchema";
 
 export const metadata: Metadata = {
-	title: "The Art of Traditional Sambal Making: A Journey Through the Spice Islands | Spice Island Indonesia",
+	title: "Traditional Sambal Making | Journey Through Spice Islands",
 	description: excerpt,
 	keywords:
 		"traditional sambal making, Indonesian sambal techniques, stone mortar grinding, cobek and ulekan, authentic sambal recipe, traditional Indonesian cooking, spice islands heritage, volcanic stone grinding, sambal preservation methods, Indonesian culinary traditions",
 	openGraph: {
-		title: "The Art of Traditional Sambal Making: A Journey Through the Spice Islands",
+		title: "Traditional Sambal Making | Journey Through Spice Islands",
 		description:
 			"How centuries-old techniques from the Spice Islands shape the flavour and texture of authentic sambal.",
 		type: "article",

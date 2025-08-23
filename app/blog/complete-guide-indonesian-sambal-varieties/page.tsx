@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "Complete Guide to Indonesian Sambal Varieties: From Oelek to Bali | Spice Island Indonesia",
+	title: "Indonesian Sambal Varieties Guide | Oelek to Bali",
 	description: "Comprehensive guide to 15+ authentic Indonesian sambal varieties. Learn regional differences, heat levels, ingredients, and traditional uses. Master Indonesian condiments.",
 	keywords: [
 		"indonesian sambal varieties",

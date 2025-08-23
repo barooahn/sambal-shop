@@ -19,12 +19,12 @@ import FAQSchema from "@/components/seo/FAQSchema";
 import ArticleSchema from "@/components/seo/ArticleSchema";
 
 export const metadata: Metadata = {
-	title: "Authentic Sambal UK vs Hot Sauce | Indonesian Chili Paste vs Artisanal Hot Sauce Guide | Spice Island Indonesia",
+	title: "Authentic Sambal vs Hot Sauce | Indonesian vs Western",
 	description: "Complete comparison: authentic sambal UK vs hot sauce. Indonesian chili paste artisanal hot sauce differences explained. UK buyer's guide to authentic sambal.",
 	keywords:
 		"authentic sambal UK, Indonesian chili paste, artisanal hot sauce, sambal vs hot sauce, Indonesian sambal difference, authentic sambal ingredients, sambal oelek vs hot sauce, Indonesian condiments UK, traditional sambal vs Western sauces, sambal authenticity guide",
 	openGraph: {
-		title: "Authentic Sambal UK vs Hot Sauce | Indonesian Chili Paste vs Artisanal Hot Sauce Guide",
+		title: "Authentic Sambal vs Hot Sauce | Indonesian vs Western",
 		description:
 			"Comprehensive comparison of authentic sambal UK Indonesian chili paste and Western artisanal hot sauce with detailed analysis for UK buyers",
 		type: "article",

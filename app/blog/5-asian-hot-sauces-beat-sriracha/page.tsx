@@ -6,7 +6,7 @@ import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import FAQSchema from "@/components/seo/FAQSchema";
 
 export const metadata: Metadata = {
-	title: "5 Asian Hot Sauces That Beat Sriracha | Best Alternatives 2025 | Spice Island Indonesia",
+	title: "5 Asian Hot Sauces That Beat Sriracha | Best Alternatives",
 	description:
 		"Discover 5 superior Asian hot sauces that outperform Sriracha. From Indonesia's authentic sambal to Korean gochujang - find your perfect Sriracha alternative for UK cooking.",
 	keywords:

@@ -19,12 +19,12 @@ import FAQSchema from "@/components/seo/FAQSchema";
 import ArticleSchema from "@/components/seo/ArticleSchema";
 
 export const metadata: Metadata = {
-	title: "Indonesian Cooking Guide for British Kitchens | Complete Beginner's Guide | Spice Island Indonesia",
+	title: "Indonesian Cooking Guide for British Kitchens | Beginners",
 	description: excerpt,
 	keywords:
 		"Indonesian cooking UK, Indonesian recipes British kitchen, sambal recipes UK, Indonesian spices UK, Asian cooking guide Britain, authentic Indonesian food UK, Indonesian cuisine London, traditional Indonesian cooking",
 	openGraph: {
-		title: "Indonesian Cooking Guide for British Kitchens | Complete Beginner's Guide",
+		title: "Indonesian Cooking Guide for British Kitchens | Beginners",
 		description:
 			"Master authentic Indonesian cooking in your British kitchen with Chef Yossie's comprehensive guide",
 		type: "article",

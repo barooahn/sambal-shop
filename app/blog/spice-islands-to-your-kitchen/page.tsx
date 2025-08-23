@@ -19,12 +19,12 @@ import FAQSchema from "@/components/seo/FAQSchema";
 import ArticleSchema from "@/components/seo/ArticleSchema";
 
 export const metadata: Metadata = {
-	title: "Our Journey from the Spice Islands to Your Kitchen | Brand Story | Spice Island Indonesia",
+	title: "From Spice Islands to Your Kitchen | Our Brand Story",
 	description: excerpt,
 	keywords:
 		"Spice Island Indonesia story, Maluku Islands spices, Indonesian heritage sambal, authentic Indonesian brand, traditional spice knowledge UK, Chef Yossie story, Indonesian culinary heritage Britain",
 	openGraph: {
-		title: "Our Journey from the Spice Islands to Your Kitchen | Brand Story",
+		title: "From Spice Islands to Your Kitchen | Our Brand Story",
 		description:
 			"The inspiring story of how traditional Indonesian spice wisdom from the Maluku Islands came to British kitchens",
 		type: "article",

@@ -4,7 +4,7 @@ import { ChefHat, Heart, Award, MapPin, Users, Clock } from "lucide-react";
 import Link from "next/link";
 
 export const metadata = {
-	title: "Meet Chef Yossie | Bandung-Born Indonesian Chef | Spice Island Indonesia",
+	title: "Meet Chef Yossie | Bandung-Born Indonesian Chef",
 	description:
 		"Meet Chef Yossie, born in Bandung and trained in her mother&apos;s catering kitchen. Now bringing professional-grade Indonesian sambal and West Java recipes to British homes.",
 	keywords:

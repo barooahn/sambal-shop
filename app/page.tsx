@@ -1,4 +1,20 @@
+import { Metadata } from "next";
 import StructuredData from "@/components/seo/StructuredData";
+
+export const metadata: Metadata = {
+	title: "Authentic Indonesian Sambal UK | Spice Island Indonesia",
+	description: "Discover authentic Indonesian sambal made by Chef Yossie using traditional recipes. Premium sambal oelek, sambal bali, and sambal goreng delivered throughout the UK. Free delivery over £20.",
+	keywords: "authentic Indonesian sambal UK, sambal oelek UK, traditional Indonesian chili paste, Chef Yossie sambal, UK delivery Indonesian condiments",
+	alternates: {
+		canonical: "https://www.spiceislandindonesia.com",
+	},
+	openGraph: {
+		title: "Authentic Indonesian Sambal UK | Spice Island Indonesia",
+		description: "Premium Indonesian sambal made by Chef Yossie using traditional recipes. UK delivery available.",
+		type: "website",
+		url: "https://www.spiceislandindonesia.com",
+	},
+};
 import ProblemSolutionContent from "@/components/seo/ProblemSolutionContent";
 import LocalSEOSchema from "@/components/seo/LocalSEOSchema";
 import FAQSchema from "@/components/seo/FAQSchema";

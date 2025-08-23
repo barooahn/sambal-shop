@@ -19,12 +19,12 @@ import FAQSchema from "@/components/seo/FAQSchema";
 import ArticleSchema from "@/components/seo/ArticleSchema";
 
 export const metadata: Metadata = {
-	title: "Understanding Indonesian Food Culture | Cultural Context Guide | Spice Island Indonesia",
+	title: "Understanding Indonesian Food Culture | Cultural Guide",
 	description: excerpt,
 	keywords:
 		"Indonesian food culture, Indonesian meal etiquette, Indonesian dining traditions, Indonesian cooking cultural context, Indonesian food significance, respecting Indonesian cuisine, Indonesian culinary heritage",
 	openGraph: {
-		title: "Understanding Indonesian Food Culture | Cultural Context Guide",
+		title: "Understanding Indonesian Food Culture | Cultural Guide",
 		description:
 			"Learn the cultural significance and traditions behind authentic Indonesian cuisine",
 		type: "article",

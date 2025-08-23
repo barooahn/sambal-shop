@@ -19,7 +19,7 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-	title: "Sambal vs Sriracha: The Complete Guide | Authentic Indonesian vs Thai Hot Sauce | Spice Island Indonesia",
+	title: "Sambal vs Sriracha | Indonesian vs Thai Hot Sauce Guide",
 	description:
 		"Discover the key differences between authentic Indonesian sambal and Thai sriracha. Learn about origins, ingredients, heat levels, and which one to choose for your cooking.",
 	keywords:
