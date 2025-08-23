@@ -1873,6 +1873,84 @@ const blogPosts = {
 						servingSize: "1 serving",
 					},
 				},
+				{
+					"@type": "Product",
+					name: "Sambal Oelek",
+					description: "Traditional Indonesian chili paste",
+					brand: {
+						"@type": "Brand",
+						name: "Spice Island Indonesia"
+					},
+					category: "Condiments & Sauces",
+					image: {
+						"@type": "ImageObject",
+						url: "https://spiceislandindonesia.com/images/products/sambal-oelek.webp",
+						width: 800,
+						height: 800
+					},
+					offers: {
+						"@type": "Offer",
+						price: "7.49",
+						priceCurrency: "GBP",
+						availability: "https://schema.org/InStock",
+						itemCondition: "https://schema.org/NewCondition",
+						url: "https://spiceislandindonesia.com/products/sambal-oelek",
+						seller: {
+							"@type": "Organization",
+							name: "Spice Island Indonesia"
+						}
+					},
+					aggregateRating: {
+						"@type": "AggregateRating",
+						ratingValue: "4.8",
+						reviewCount: "89",
+						bestRating: "5",
+						worstRating: "1"
+					},
+					manufacturer: {
+						"@type": "Organization",
+						name: "Spice Island Indonesia"
+					}
+				},
+				{
+					"@type": "Product",
+					name: "Sambal Bali",
+					description: "Aromatic Indonesian chili paste with traditional spices",
+					brand: {
+						"@type": "Brand",
+						name: "Spice Island Indonesia"
+					},
+					category: "Condiments & Sauces",
+					image: {
+						"@type": "ImageObject",
+						url: "https://spiceislandindonesia.com/images/products/sambal-bali.webp",
+						width: 800,
+						height: 800
+					},
+					offers: {
+						"@type": "Offer",
+						price: "8.99",
+						priceCurrency: "GBP",
+						availability: "https://schema.org/InStock",
+						itemCondition: "https://schema.org/NewCondition",
+						url: "https://spiceislandindonesia.com/products/sambal-bali",
+						seller: {
+							"@type": "Organization",
+							name: "Spice Island Indonesia"
+						}
+					},
+					aggregateRating: {
+						"@type": "AggregateRating",
+						ratingValue: "4.9",
+						reviewCount: "112",
+						bestRating: "5",
+						worstRating: "1"
+					},
+					manufacturer: {
+						"@type": "Organization",
+						name: "Spice Island Indonesia"
+					}
+				},
 			],
 		},
 		content: `
