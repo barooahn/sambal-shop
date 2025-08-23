@@ -2323,7 +2323,7 @@ export async function generateMetadata({
 	}
 
 	return {
-		title: `${post.title} | Spice Island Indonesia Blog`,
+		title: post.title,
 		description: post.excerpt,
 		keywords:
 			"Indonesian sambal, traditional recipes, Spice Islands, authentic Indonesian cooking, sambal making techniques",

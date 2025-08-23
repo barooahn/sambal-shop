@@ -63,7 +63,7 @@ export const blogPosts: BlogPostMeta[] = [
 	},
 	{
 		id: 15,
-		title: "Sambal vs Sriracha: The Original Asian Hot Sauce vs Commercial Alternative",
+		title: "Sambal vs Sriracha: Original Asian Hot Sauce Comparison",
 		excerpt: "Think Sriracha is authentic Asian hot sauce? Indonesian sambal predates it by 500 years. Compare ingredients, taste, and cultural heritage. Discover the real original Asian chili sauce.",
 		image: "/images/blog/sambal-vs-sriracha-comparison.webp",
 		category: "Food Education",
@@ -73,7 +73,7 @@ export const blogPosts: BlogPostMeta[] = [
 	},
 	{
 		id: 14,
-		title: "Indonesian Cooking Techniques for British Kitchens",
+		title: "Indonesian Cooking Techniques UK | Methods Guide",
 		excerpt: "Master traditional Indonesian cooking methods using standard British kitchen equipment. Learn authentic techniques that bring out the best flavors in Indonesian cuisine at home.",
 		image: "/images/indonesian-techniques-uk-kitchen.webp",
 		category: "Cooking Guide",
@@ -93,7 +93,7 @@ export const blogPosts: BlogPostMeta[] = [
 	},
 	{
 		id: 13,
-		title: "British-Indonesian Fusion: Weeknight Recipes",
+		title: "British-Indonesian Fusion Recipes UK | Quick 30-Min Meals",
 		excerpt: "Quick and delicious fusion recipes that blend British comfort food with Indonesian flavors. Perfect weeknight dinners that bring excitement to your family table with authentic sambal.",
 		image: "/images/fusion-recipes-guide.webp",
 		category: "Cooking Tips",
@@ -103,7 +103,7 @@ export const blogPosts: BlogPostMeta[] = [
 	},
 	{
 		id: 12,
-		title: "5 Ways to Use Sambal in British Cooking",
+		title: "5 Ways to Use Indonesian Sambal in British Cooking",
 		excerpt: "Transform your everyday British meals with authentic Indonesian sambal. Discover five creative ways to incorporate this traditional Indonesian condiment into your British kitchen repertoire.",
 		image: "/images/blog/indonesian-british-sambal-fusion-split-screen.webp",
 		category: "Cooking Tips",
@@ -113,7 +113,7 @@ export const blogPosts: BlogPostMeta[] = [
 	},
 	{
 		id: 5,
-		title: "Transform British Classics with Indonesian Sambal: 8 Creative Ways",
+		title: "Transform British Classics with Indonesian Sambal",
 		excerpt: "Revolutionize your favourite British dishes with authentic Indonesian sambal. From Sunday roasts to fish and chips, discover how traditional sambal elevates classic British cooking with bold, complex flavors.",
 		image: "/images/blog/sambal-british-fusion.webp",
 		category: "Cooking Tips",
@@ -133,7 +133,7 @@ export const blogPosts: BlogPostMeta[] = [
 	},
 	{
 		id: 8,
-		title: "Mastering Indonesian Heat: A Guide to Spice Levels and Flavor Building",
+		title: "Mastering Indonesian Heat: Spice Levels & Flavor Guide",
 		excerpt: "Learn to navigate Indonesian heat levels with confidence. Discover how to build spice tolerance, balance heat with flavor, and create authentic Indonesian dishes that suit British palates.",
 		image: "/images/blog/indonesian-spice-mastery.webp",
 		category: "Cooking Guide",
@@ -173,7 +173,7 @@ export const blogPosts: BlogPostMeta[] = [
 	},
 	{
 		id: 7,
-		title: "The Art of Traditional Sambal Making: A Journey Through the Spice Islands",
+		title: "Traditional Sambal Making: Journey Through Spice Islands",
 		excerpt: "Discover the ancient techniques and secret ingredients that make authentic Indonesian sambal so special. From selecting the perfect chilies to the traditional grinding methods passed down through generations.",
 		image: "/images/blog/traditional-sambal-making.webp",
 		category: "Traditional Recipes",
@@ -183,7 +183,7 @@ export const blogPosts: BlogPostMeta[] = [
 	},
 	{
 		id: 4,
-		title: "The History of the Spice Islands: Where Your Sambal Comes From",
+		title: "History of Spice Islands: Where Your Sambal Comes From",
 		excerpt: "Journey back to the Maluku Islands, the original Spice Islands that changed world history. Discover the rich culinary heritage and volcanic soil that creates the perfect chilies for authentic sambal.",
 		image: "/images/blog/spice-islands-history.webp",
 		category: "Heritage Stories",
