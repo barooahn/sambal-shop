@@ -4,7 +4,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
 	title: "Best Asian Hot Sauce | Authentic Indonesian Sambal",
-	description: "Discover the best Asian hot sauce: authentic Indonesian sambal. Compare Sriracha, Gochujang, and other Asian hot sauces. Expert rankings and authentic alternatives in the UK.",
+	description: "Discover the best Asian hot sauce: authentic Indonesian sambal. Compare Sriracha, Gochujang & others. Expert rankings & UK alternatives.",
 	keywords: [
 		"best asian hot sauce",
 		"authentic asian hot sauce",

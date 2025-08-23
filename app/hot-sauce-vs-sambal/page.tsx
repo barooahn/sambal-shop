@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "Hot Sauce vs Sambal: Key Differences Explained | Spice Island Indonesia",
+	title: "Hot Sauce vs Sambal | Key Differences Explained",
 	description: "Hot sauce vs sambal: understand the key differences between Western hot sauces and authentic Indonesian sambal. Ingredients, heat levels, uses, and which is better explained.",
 	keywords: [
 		"hot sauce vs sambal",

@@ -8,7 +8,7 @@ import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import InternalLinkingOptimization from "@/components/seo/InternalLinkingOptimization";
 
 export const metadata: Metadata = {
-	title: "Sambal BBQ Marinade Recipe | Indonesian Spicy Grilling Sauce | Spice Island Indonesia",
+	title: "Sambal BBQ Marinade | Indonesian Spicy Grilling Sauce",
 	description:
 		"Transform your BBQ with this authentic Indonesian sambal marinade. Perfect for chicken, beef, pork, and seafood. Easy 15-minute recipe with incredible flavor depth that revolutionizes grilling.",
 	keywords:

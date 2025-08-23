@@ -18,7 +18,7 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-	title: "Indonesian BBQ Sauce & Marinade UK | Sambal for Grilling | Spice Island Indonesia",
+	title: "Indonesian BBQ Sauce & Marinade | Sambal for Grilling",
 	description:
 		"Transform your BBQ with authentic Indonesian sambal marinade. Chef Yossie&apos;s traditional recipes perfect for chicken, pork, beef, and vegetables. Elevate your grilling game.",
 	keywords:

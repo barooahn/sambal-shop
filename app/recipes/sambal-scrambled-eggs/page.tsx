@@ -8,7 +8,7 @@ import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import InternalLinkingOptimization from "@/components/seo/InternalLinkingOptimization";
 
 export const metadata: Metadata = {
-	title: "Sambal Scrambled Eggs Recipe | Indonesian Spicy Breakfast | Spice Island Indonesia",
+	title: "Sambal Scrambled Eggs | Indonesian Spicy Breakfast",
 	description:
 		"Master Indonesian-style sambal scrambled eggs with authentic heat and creamy texture. Perfect 10-minute protein breakfast that transforms your morning routine with genuine sambal flavors.",
 	keywords:

@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
 	title: "About Spice Island Indonesia | Authentic Sambal Makers",
-	description: "Learn about Spice Island Indonesia - authentic Indonesian sambal makers bringing traditional flavors from the Maluku Islands to the UK. Meet Chef Yossie and discover our story.",
+	description: "Learn about Spice Island Indonesia - authentic Indonesian sambal makers from the Maluku Islands. Meet Chef Yossie and discover our story.",
 	keywords: "about spice island indonesia, authentic sambal makers UK, Chef Yossie story, Maluku Islands sambal, traditional Indonesian condiments UK, authentic chili paste story",
 	openGraph: {
 		title: "About Spice Island Indonesia | Authentic Sambal Makers",

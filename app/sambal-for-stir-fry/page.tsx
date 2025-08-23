@@ -19,7 +19,7 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-	title: "Best Chili Sauce for Stir Fry | Authentic Indonesian Sambal | Professional Chef Tips | Spice Island Indonesia",
+	title: "Indonesian Sambal for Stir Fry | Professional Chef Tips",
 	description:
 		"Discover why Indonesian sambal is the secret to perfect stir-fries. Professional chef reveals why sambal beats other hot sauces for high-heat cooking. UK delivery available.",
 	keywords:

@@ -19,7 +19,7 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-	title: "Spicy Breakfast Condiment UK | Indonesian Sambal for Eggs & Morning Meals | Spice Island Indonesia",
+	title: "Indonesian Sambal for Breakfast | Spicy Eggs & Morning",
 	description:
 		"Transform your breakfast with authentic Indonesian sambal! Perfect with eggs, avocado toast, and morning dishes. Chef Yossie&apos;s traditional recipes add complex heat to start your day right.",
 	keywords:

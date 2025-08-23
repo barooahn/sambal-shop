@@ -135,9 +135,9 @@ function SearchPageContent() {
 			<div className="container mx-auto px-4 py-8">
 				{/* Search Header */}
 				<div className="mb-8">
-					<h1 className="text-3xl font-bold text-burgundy-900 mb-4 font-brand">
+					<h2 className="text-3xl font-bold text-burgundy-900 mb-4 font-brand">
 						Search Results
-					</h1>
+					</h2>
 					
 					{/* Search Input */}
 					<div className="relative max-w-2xl">

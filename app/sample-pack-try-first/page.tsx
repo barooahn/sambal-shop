@@ -19,7 +19,7 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-	title: "Try Indonesian Sambal Sample Pack UK | Taste Before You Buy | Spice Island Indonesia",
+	title: "Indonesian Sambal Sample Pack UK | Taste Before Buy",
 	description:
 		"Try authentic Indonesian sambal before committing to full jars. Chef Yossie&apos;s sample pack includes Sambal Oelek and Sambal Bali. Perfect introduction to Indonesian flavors.",
 	keywords:

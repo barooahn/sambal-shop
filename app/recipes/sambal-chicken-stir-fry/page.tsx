@@ -8,7 +8,7 @@ import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import InternalLinkingOptimization from "@/components/seo/InternalLinkingOptimization";
 
 export const metadata: Metadata = {
-	title: "Sambal Chicken Stir-Fry Recipe | Authentic Indonesian Ayam Rica Rica | Spice Island Indonesia",
+	title: "Sambal Chicken Stir-Fry | Indonesian Ayam Rica Rica",
 	description:
 		"Learn to make authentic Indonesian sambal chicken stir-fry (ayam rica rica) with traditional recipe. Quick 20-minute spicy chicken dish with genuine sambal oelek heat and aromatic flavors.",
 	keywords:

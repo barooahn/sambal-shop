@@ -22,7 +22,7 @@ import {
 export const metadata = {
 	title: "Authentic vs Store-Bought Sambal | Indonesian Quality",
 	description:
-		"Discover the shocking difference between authentic Indonesian sambal and mass-produced store brands. Chef Yossie reveals why traditional methods create superior flavor and quality.",
+		"Discover the difference between authentic Indonesian sambal and mass-produced store brands. Chef Yossie reveals why traditional methods create superior flavor.",
 	keywords:
 		"authentic Indonesian sambal, real vs fake sambal, traditional sambal vs store bought, mass produced sambal comparison, Chef Yossie authentic sambal, handmade Indonesian condiments",
 	openGraph: {

@@ -8,7 +8,7 @@ import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import InternalLinkingOptimization from "@/components/seo/InternalLinkingOptimization";
 
 export const metadata: Metadata = {
-	title: "Indonesian Sambal Noodle Soup Recipe | Soto Ayam Sambal Style | Spice Island Indonesia",
+	title: "Indonesian Sambal Noodle Soup | Soto Ayam Style",
 	description:
 		"Authentic Indonesian sambal noodle soup with rich coconut broth, aromatic spices, and traditional heat. Comforting soto-inspired recipe ready in 40 minutes. Made with genuine sambal bali.",
 	keywords:

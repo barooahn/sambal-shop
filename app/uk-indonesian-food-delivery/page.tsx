@@ -17,7 +17,7 @@ import {
 } from "@/components/ui/breadcrumb";
 
 export const metadata: Metadata = {
-	title: "UK-Wide Indonesian Food Delivery | Authentic Sambal Nationwide | Spice Island Indonesia",
+	title: "Indonesian Food Delivery UK | Authentic Sambal Nationwide",
 	description:
 		"Authentic Indonesian sambal delivered nationwide across the UK. Traditional recipes by Chef Yossie from Bandung. Free delivery to England, Scotland, Wales & Northern Ireland.",
 	keywords:

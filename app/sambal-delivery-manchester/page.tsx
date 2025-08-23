@@ -17,7 +17,7 @@ import {
 } from "@/components/ui/breadcrumb";
 
 export const metadata: Metadata = {
-	title: "Authentic Indonesian Sambal Delivery Manchester | Same Day Delivery | Spice Island Indonesia",
+	title: "Indonesian Sambal Delivery Manchester | Same Day",
 	description:
 		"Get authentic Indonesian sambal delivered to Manchester and Greater Manchester. Same-day delivery available. Traditional recipes by Chef Yossie from Bandung, Indonesia.",
 	keywords:
