@@ -847,12 +847,12 @@ export default function SambalOelekUKPage() {
 			<section className='py-24 bg-white'>
 				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<div className='text-center mb-16'>
-						<h2 className='text-4xl sm:text-5xl font-bold text-burgundy-900 mb-6 font-brand'>
+						<h3 className='text-4xl sm:text-5xl font-bold text-burgundy-900 mb-6 font-brand'>
 							Master the Art of
 							<span className='text-gold-700 block'>
 								Sambal Oelek Cooking
 							</span>
-						</h2>
+						</h3>
 						<p className='text-xl text-neutral-600 max-w-3xl mx-auto font-body leading-relaxed'>
 							Transform your cooking with professional
 							techniques from Chef Yossie&apos;s Indonesian
@@ -1076,12 +1076,12 @@ export default function SambalOelekUKPage() {
 						</div>
 
 						<div>
-							<h2 className='text-4xl sm:text-5xl font-bold text-burgundy-900 mb-8 font-brand'>
+							<h3 className='text-4xl sm:text-5xl font-bold text-burgundy-900 mb-8 font-brand'>
 								Meet Chef Yossie
 								<span className='text-gold-700 block font-script italic text-4xl sm:text-5xl'>
 									Your Sambal Expert
 								</span>
-							</h2>
+							</h3>
 
 							<div className='space-y-8 text-lg text-neutral-700 leading-relaxed mb-8 font-body'>
 								<p>
@@ -1161,12 +1161,12 @@ export default function SambalOelekUKPage() {
 			{/* Final CTA Section */}
 			<section className='py-24 bg-gradient-to-r from-stone-900 to-stone-800 text-white'>
 				<div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-					<h2 className='text-4xl sm:text-5xl font-bold mb-6 font-brand'>
+					<h3 className='text-4xl sm:text-5xl font-bold mb-6 font-brand'>
 						Taste Authentic Indonesia
 						<span className='text-amber-300 block'>
 							In Your Kitchen Today
 						</span>
-					</h2>
+					</h3>
 					<p className='text-xl text-amber-200 mb-8 font-body'>
 						Join hundreds of UK customers who&apos;ve
 						discovered the difference professional-made sambal
@@ -1215,9 +1215,9 @@ export default function SambalOelekUKPage() {
 			<section className='py-16 bg-gray-50'>
 				<div className='container mx-auto px-4'>
 					<div className='max-w-6xl mx-auto'>
-						<h2 className='text-3xl lg:text-4xl font-bold text-burgundy-900 mb-4 text-center font-heading'>
+						<h3 className='text-3xl lg:text-4xl font-bold text-burgundy-900 mb-4 text-center font-heading'>
 							Sambal Oelek vs Other Hot Sauces
-						</h2>
+						</h3>
 						<p className='text-xl text-gray-600 text-center mb-12 font-body'>
 							See how authentic Indonesian sambal compares
 							to popular Western hot sauces
@@ -1413,9 +1413,9 @@ export default function SambalOelekUKPage() {
 			<section className='py-16 bg-white'>
 				<div className='container mx-auto px-4'>
 					<div className='max-w-4xl mx-auto'>
-						<h2 className='text-3xl lg:text-4xl font-bold text-burgundy-900 mb-4 text-center font-heading'>
+						<h3 className='text-3xl lg:text-4xl font-bold text-burgundy-900 mb-4 text-center font-heading'>
 							Frequently Asked Questions
-						</h2>
+						</h3>
 						<p className='text-xl text-gray-600 text-center mb-12 font-body'>
 							Everything you need to know about authentic
 							Indonesian sambal oelek
@@ -1642,9 +1642,9 @@ export default function SambalOelekUKPage() {
 			<section className='py-12 bg-white'>
 				<div className='container mx-auto px-4'>
 					<div className='text-center mb-8'>
-						<h2 className='text-2xl font-bold text-burgundy-900 mb-4 font-brand'>
+						<h3 className='text-2xl font-bold text-burgundy-900 mb-4 font-brand'>
 							Shop with Confidence
-						</h2>
+						</h3>
 						<p className='text-neutral-600 font-body'>
 							Your satisfaction and security are our top priorities
 						</p>

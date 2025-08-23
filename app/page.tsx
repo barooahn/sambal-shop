@@ -513,9 +513,9 @@ export default function Home() {
 						{/* Section header with visual enhancement */}
 						<div className='text-center mb-16 relative'>
 							<div className='inline-block p-8 bg-white/80 backdrop-blur-sm rounded-sm shadow-xl border border-white/20'>
-								<h2 className='text-3xl lg:text-4xl font-bold text-burgundy-900 mb-4 font-heading'>
+								<h3 className='text-3xl lg:text-4xl font-bold text-burgundy-900 mb-4 font-heading'>
 									Transform Your Cooking Experience
-								</h2>
+								</h3>
 								<p className='text-xl text-gray-600 font-body'>
 									Discover how authentic Indonesian
 									sambal solves your kitchen

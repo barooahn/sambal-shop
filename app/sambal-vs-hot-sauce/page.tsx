@@ -19,7 +19,7 @@ import {
 } from "lucide-react";
 
 export const metadata = {
-	title: "Sambal vs Hot Sauce: The Ultimate Comparison | Why Indonesian Sambal Wins | Spice Island Indonesia",
+	title: "Sambal vs Hot Sauce | Why Indonesian Sambal Wins",
 	description:
 		"Discover why authentic Indonesian sambal beats regular hot sauce. Compare ingredients, flavor complexity, and culinary uses. Made by Chef Yossie from traditional Bandung recipes.",
 	keywords:
@@ -273,9 +273,9 @@ export default function SambalVsHotSaucePage() {
 			<section className='py-16 bg-gradient-to-br from-cream-50 to-cream-100'>
 				<div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<div className='text-center mb-12'>
-						<h2 className='text-3xl sm:text-4xl font-bold text-burgundy-900 mb-6 font-brand'>
+						<h3 className='text-3xl sm:text-4xl font-bold text-burgundy-900 mb-6 font-brand'>
 							Why Indonesian Sambal Transforms Your Cooking
-						</h2>
+						</h3>
 						<p className='text-xl text-gray-700 font-elegant max-w-3xl mx-auto'>
 							It&apos;s not just about heat - it&apos;s
 							about depth, complexity, and culinary
@@ -425,10 +425,10 @@ export default function SambalVsHotSaucePage() {
 								Expert Opinion
 							</Badge>
 
-							<h2 className='text-3xl sm:text-4xl font-bold text-burgundy-900 mb-6 font-brand'>
+							<h3 className='text-3xl sm:text-4xl font-bold text-burgundy-900 mb-6 font-brand'>
 								&quot;Hot Sauce vs Sambal? No
 								Contest.&quot;
-							</h2>
+							</h3>
 
 							<p className='text-xl text-gray-700 mb-6 font-elegant leading-relaxed'>
 								Chef Yossie has spent over 20 years

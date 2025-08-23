@@ -8,7 +8,7 @@ import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import InternalLinkingOptimization from "@/components/seo/InternalLinkingOptimization";
 
 export const metadata: Metadata = {
-	title: "Lalapan Recipe | Indonesian Fresh Raw Vegetables with Sambal | Spice Island Indonesia",
+	title: "Lalapan Recipe | Indonesian Fresh Raw Vegetables",
 	description:
 		"Authentic Indonesian Lalapan recipe - fresh raw vegetables served with fiery sambal. The perfect healthy accompaniment that showcases sambal as the star. Simple, traditional, essential.",
 	keywords:

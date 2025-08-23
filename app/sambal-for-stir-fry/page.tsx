@@ -269,12 +269,12 @@ export default function SambalForStirFryPage() {
 			<section className='py-24 bg-gradient-to-br from-cream-100 to-cream-200'>
 				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<div className='text-center mb-16'>
-						<h2 className='text-4xl sm:text-5xl font-bold text-burgundy-900 mb-6 font-brand'>
+						<h3 className='text-4xl sm:text-5xl font-bold text-burgundy-900 mb-6 font-brand'>
 							How to Use Sambal
 							<span className='text-gold-700 block'>
 								in Your Stir-Fries
 							</span>
-						</h2>
+						</h3>
 						<p className='text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed font-body'>
 							Chef Yossie&apos;s professional technique for
 							perfect results
@@ -398,12 +398,12 @@ export default function SambalForStirFryPage() {
 			<section className='py-24 bg-white'>
 				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<div className='text-center mb-16'>
-						<h2 className='text-4xl sm:text-5xl font-bold text-burgundy-900 mb-6 font-brand'>
+						<h3 className='text-4xl sm:text-5xl font-bold text-burgundy-900 mb-6 font-brand'>
 							Perfect Stir-Fry Recipes
 							<span className='text-gold-700 block'>
 								Using Sambal
 							</span>
-						</h2>
+						</h3>
 					</div>
 
 					<div className='grid md:grid-cols-3 gap-8'>
@@ -496,12 +496,12 @@ export default function SambalForStirFryPage() {
 			{/* Final CTA Section */}
 			<section className='py-24 bg-gradient-to-r from-burgundy-900 to-burgundy-800 text-white'>
 				<div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-					<h2 className='text-4xl sm:text-5xl font-bold mb-6 font-brand'>
+					<h3 className='text-4xl sm:text-5xl font-bold mb-6 font-brand'>
 						Transform Your Stir-Fries
 						<span className='text-gold-300 block'>
 							Starting Tonight
 						</span>
-					</h2>
+					</h3>
 					<p className='text-xl text-gold-200 mb-8 font-body'>
 						Join hundreds of home cooks who&apos;ve discovered
 						the secret to restaurant-quality stir-fries

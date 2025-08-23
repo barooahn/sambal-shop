@@ -44,7 +44,7 @@ export function LoginForm() {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-amber-50 to-orange-50 px-4">
       <Card className="w-full max-w-md shadow-xl">
         <CardHeader className="text-center">
-          <h1 className="text-2xl font-bold text-gray-900">Welcome Back</h1>
+          <h2 className="text-2xl font-bold text-gray-900">Welcome Back</h2>
           <CardDescription>Sign in to your Spice Island Indonesia account</CardDescription>
         </CardHeader>
         <CardContent>

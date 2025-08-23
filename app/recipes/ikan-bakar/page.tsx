@@ -8,7 +8,7 @@ import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import InternalLinkingOptimization from "@/components/seo/InternalLinkingOptimization";
 
 export const metadata: Metadata = {
-	title: "Ikan Bakar Recipe | Indonesian Grilled Fish with Sambal | Spice Island Indonesia",
+	title: "Ikan Bakar Recipe | Indonesian Grilled Fish",
 	description:
 		"Authentic Indonesian Ikan Bakar recipe - aromatic grilled fish with traditional spice marinade and fresh sambal. Healthy Indonesian BBQ with smoky charcoal flavors and fiery heat.",
 	keywords:

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-	title: "Wholesale Indonesian Sambal UK | Bulk Orders | Restaurants & Retailers",
+	title: "Wholesale Indonesian Sambal UK | Bulk Orders",
 	description: "Wholesale Indonesian sambal for UK restaurants, cafes, and retailers. Authentic traditional recipes, competitive pricing, reliable UK delivery. Contact us for bulk orders.",
 	keywords: "wholesale Indonesian sambal UK, bulk sambal orders UK, restaurant sambal supplier UK, retail sambal distributor UK, authentic sambal wholesale, Chef Yossie wholesale UK",
 	openGraph: {

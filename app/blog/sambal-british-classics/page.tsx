@@ -18,7 +18,7 @@ import FAQSchema from "@/components/seo/FAQSchema";
 import ArticleSchema from "@/components/seo/ArticleSchema";
 
 export const metadata: Metadata = {
-	title: "Sambal Transforms British Classics | Indonesian Fusion Recipes",
+	title: "Sambal Transforms British Classics | Fusion Recipes",
 	description: "Revolutionize British dishes with authentic sambal UK. Indonesian chili paste artisanal hot sauce transforms fish & chips, Sunday roasts. Complete UK fusion cooking guide.",
 	keywords:
 		"authentic sambal UK, Indonesian chili paste, artisanal hot sauce, sambal British food fusion, Indonesian sambal UK recipes, British Indonesian cooking, sambal fish and chips, sambal roast dinner, Indonesian spices British classics, sambal transformation British dishes",

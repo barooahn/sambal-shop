@@ -22,7 +22,7 @@ import {
 import TrustIndicators from "@/components/ui/TrustIndicators";
 
 export const metadata = {
-	title: "Sambal Goreng UK | Traditional Sweet & Spicy Indonesian Chili",
+	title: "Sambal Goreng UK | Traditional Sweet & Spicy Chili",
 	description:
 		"Authentic sambal goreng - traditional Indonesian sweet & spicy chili paste. Made by Chef Yossie using ancestral Java recipes. Free UK delivery.",
 	keywords:
@@ -997,12 +997,12 @@ export default function SambalGorengUKPage() {
 			<section className='py-24 bg-white'>
 				<div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<div className='text-center mb-12'>
-						<h2 className='text-4xl font-bold text-stone-900 mb-6 font-brand'>
+						<h3 className='text-4xl font-bold text-stone-900 mb-6 font-brand'>
 							Frequently Asked Questions
 							<span className='text-amber-700 block text-2xl'>
 								About Sambal Goreng
 							</span>
-						</h2>
+						</h3>
 						<p className='text-xl text-neutral-600 font-body'>
 							Everything you need to know about this sweet & spicy Indonesian classic
 						</p>
@@ -1070,12 +1070,12 @@ export default function SambalGorengUKPage() {
 			{/* Final CTA Section */}
 			<section className='py-24 bg-gradient-to-r from-stone-900 to-stone-800 text-white'>
 				<div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-					<h2 className='text-4xl sm:text-5xl font-bold mb-6 font-brand'>
+					<h3 className='text-4xl sm:text-5xl font-bold mb-6 font-brand'>
 						Bring Authentic Indonesia
 						<span className='text-amber-300 block'>
 							To Your Kitchen Today
 						</span>
-					</h2>
+					</h3>
 					<p className='text-xl text-amber-200 mb-8 font-body'>
 						Experience the traditional sweet-spicy harmony that has made Javanese cuisine beloved worldwide
 					</p>
@@ -1122,9 +1122,9 @@ export default function SambalGorengUKPage() {
 			<section className='py-12 bg-white'>
 				<div className='container mx-auto px-4'>
 					<div className='text-center mb-8'>
-						<h2 className='text-2xl font-bold text-stone-900 mb-4 font-brand'>
+						<h3 className='text-2xl font-bold text-stone-900 mb-4 font-brand'>
 							Shop with Confidence
-						</h2>
+						</h3>
 						<p className='text-neutral-600 font-body'>
 							Your satisfaction and security are our top
 							priorities
@@ -1150,9 +1150,9 @@ export default function SambalGorengUKPage() {
 			<section className='py-16 bg-gray-50'>
 				<div className='container mx-auto px-4'>
 					<div className='max-w-6xl mx-auto'>
-						<h2 className='text-3xl lg:text-4xl font-bold text-stone-900 mb-4 text-center font-brand'>
+						<h3 className='text-3xl lg:text-4xl font-bold text-stone-900 mb-4 text-center font-brand'>
 							Sambal Goreng vs Sriracha - Complete Comparison
-						</h2>
+						</h3>
 						<p className='text-xl text-gray-600 text-center mb-12 font-body'>
 							See how traditional Indonesian sambal goreng compares to popular Western sweet chili sauces
 						</p>
