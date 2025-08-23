@@ -234,9 +234,9 @@ export default function SambalBBQMarinadePage() {
 			>
 				<div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<div className='text-center mb-16'>
-						<h2 className='text-3xl sm:text-4xl font-bold text-burgundy-900 mb-6 font-brand'>
+						<h3 className='text-3xl sm:text-4xl font-bold text-burgundy-900 mb-6 font-brand'>
 							Chef Yossie&apos;s BBQ Recipes
-						</h2>
+						</h3>
 						<p className='text-xl text-neutral-600 max-w-3xl mx-auto font-body'>
 							Professional techniques from Indonesian
 							catering kitchens, adapted for UK home
@@ -357,9 +357,9 @@ export default function SambalBBQMarinadePage() {
 			<section className='py-16 sm:py-20 bg-white'>
 				<div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<div className='text-center mb-16'>
-						<h2 className='text-3xl sm:text-4xl font-bold text-burgundy-900 mb-6 font-brand'>
+						<h3 className='text-3xl sm:text-4xl font-bold text-burgundy-900 mb-6 font-brand'>
 							Perfect for All Your Grilling
-						</h2>
+						</h3>
 						<p className='text-xl text-neutral-600 max-w-3xl mx-auto font-body'>
 							From quick weeknight dinners to impressive
 							weekend BBQ parties, Indonesian sambal
@@ -425,10 +425,10 @@ export default function SambalBBQMarinadePage() {
 								Professional BBQ Tips
 							</Badge>
 
-							<h2 className='text-3xl sm:text-4xl font-bold text-burgundy-900 mb-6 font-brand'>
+							<h3 className='text-3xl sm:text-4xl font-bold text-burgundy-900 mb-6 font-brand'>
 								Chef Yossie&apos;s Indonesian BBQ
 								Secrets
-							</h2>
+							</h3>
 
 							<p className='text-lg text-neutral-600 mb-6 font-body'>
 								&quot;In my catering kitchen, we served
@@ -543,9 +543,9 @@ export default function SambalBBQMarinadePage() {
 			{/* Final CTA Section */}
 			<section className='py-16 sm:py-20 bg-gradient-to-br from-burgundy-900 via-burgundy-800 to-burgundy-900 text-white'>
 				<div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-					<h2 className='text-3xl sm:text-4xl font-bold mb-6 font-brand'>
+					<h3 className='text-3xl sm:text-4xl font-bold mb-6 font-brand'>
 						Transform Your BBQ Game Tonight
-					</h2>
+					</h3>
 
 					<p className='text-xl text-gold-200 mb-10 max-w-2xl mx-auto font-body'>
 						Join hundreds of UK grill masters who&apos;ve

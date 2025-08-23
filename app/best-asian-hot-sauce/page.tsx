@@ -134,7 +134,7 @@ export default function BestAsianHotSaucePage() {
 			{/* Detailed Analysis */}
 			<section className="py-16 bg-gradient-to-br from-burgundy-50 to-gold-50">
 				<div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-					<h2 className="text-3xl font-bold text-burgundy-900 mb-12 text-center font-brand">Detailed Hot Sauce Analysis</h2>
+					<h3 className="text-3xl font-bold text-burgundy-900 mb-12 text-center font-brand">Detailed Hot Sauce Analysis</h3>
 					
 					{/* Indonesian Sambal - Winner */}
 					<div className="bg-white rounded-lg shadow-xl p-8 mb-8">
@@ -282,7 +282,7 @@ export default function BestAsianHotSaucePage() {
 			{/* What Makes Great Asian Hot Sauce */}
 			<section className="py-16 bg-white">
 				<div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-					<h2 className="text-3xl font-bold text-burgundy-900 mb-12 text-center font-brand">What Makes Great Asian Hot Sauce</h2>
+					<h3 className="text-3xl font-bold text-burgundy-900 mb-12 text-center font-brand">What Makes Great Asian Hot Sauce</h3>
 					
 					<div className="grid md:grid-cols-3 gap-8">
 						<div className="text-center p-6">
@@ -315,7 +315,7 @@ export default function BestAsianHotSaucePage() {
 			{/* Regional Styles */}
 			<section className="py-16 bg-gradient-to-br from-gold-50 to-burgundy-50">
 				<div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-					<h2 className="text-3xl font-bold text-burgundy-900 mb-12 text-center font-brand">Asian Hot Sauce by Region</h2>
+					<h3 className="text-3xl font-bold text-burgundy-900 mb-12 text-center font-brand">Asian Hot Sauce by Region</h3>
 					
 					<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
 						<div className="bg-white p-6 rounded-lg shadow-lg">
@@ -352,7 +352,7 @@ export default function BestAsianHotSaucePage() {
 			{/* Where to Buy */}
 			<section className="py-16 bg-white">
 				<div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-					<h2 className="text-3xl font-bold text-burgundy-900 mb-12 text-center font-brand">Where to Buy the Best Asian Hot Sauce in the UK</h2>
+					<h3 className="text-3xl font-bold text-burgundy-900 mb-12 text-center font-brand">Where to Buy the Best Asian Hot Sauce in the UK</h3>
 					
 					<div className="grid md:grid-cols-3 gap-8">
 						<div className="bg-green-50 border-2 border-green-200 p-6 rounded-lg text-center">
@@ -384,7 +384,7 @@ export default function BestAsianHotSaucePage() {
 			{/* Final Recommendation */}
 			<section className="py-16 bg-burgundy-900 text-white">
 				<div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-					<h2 className="text-3xl font-bold mb-6 font-brand">The Verdict: Indonesian Sambal Reigns Supreme</h2>
+					<h3 className="text-3xl font-bold mb-6 font-brand">The Verdict: Indonesian Sambal Reigns Supreme</h3>
 					<p className="text-xl mb-8 text-burgundy-100">
 						After testing 15+ Asian hot sauces, authentic Indonesian sambal offers the perfect combination of heat, flavor complexity, and cultural authenticity that commercial brands simply cannot match.
 					</p>

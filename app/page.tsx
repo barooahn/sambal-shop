@@ -688,9 +688,9 @@ export default function Home() {
 					
 					<div className='container mx-auto px-4 relative z-10'>
 						<div className='text-center mb-12'>
-							<h2 className='text-3xl lg:text-4xl font-bold text-burgundy-900 mb-4 font-heading'>
+							<h3 className='text-3xl lg:text-4xl font-bold text-burgundy-900 mb-4 font-heading'>
 								Your Peace of Mind Guaranteed
-							</h2>
+							</h3>
 							<p className='text-xl text-gray-600 font-body max-w-3xl mx-auto'>
 								Shop with confidence knowing we prioritize quality, security, and customer satisfaction
 							</p>

@@ -98,7 +98,7 @@ export default function LoginPage() {
             </div>
             
             <div>
-              <h2 className="text-2xl font-bold text-burgundy-900 mb-4">Account Security</h2>
+              <h3 className="text-2xl font-bold text-burgundy-900 mb-4">Account Security</h3>
               <p className="text-neutral-600 mb-4">
                 Your personal information and payment details are protected with enterprise-level security. We follow UK data protection regulations and never share your information.
               </p>

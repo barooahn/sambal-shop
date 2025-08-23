@@ -211,10 +211,10 @@ export default function AuthenticVsStoreBoughtPage() {
 			<section className='py-16 bg-gradient-to-br from-cream-50 to-cream-100'>
 				<div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<div className='text-center mb-12'>
-						<h2 className='text-3xl sm:text-4xl font-bold text-burgundy-900 mb-6 font-brand'>
+						<h3 className='text-3xl sm:text-4xl font-bold text-burgundy-900 mb-6 font-brand'>
 							Authentic vs Store-Bought: The Complete
 							Breakdown
-						</h2>
+						</h3>
 					</div>
 
 					<div className='grid lg:grid-cols-2 gap-8'>
@@ -448,10 +448,10 @@ export default function AuthenticVsStoreBoughtPage() {
 								Professional Insight
 							</Badge>
 
-							<h2 className='text-3xl sm:text-4xl font-bold text-burgundy-900 mb-6 font-brand'>
+							<h3 className='text-3xl sm:text-4xl font-bold text-burgundy-900 mb-6 font-brand'>
 								&quot;I Can Taste the Difference
 								Immediately&quot;
-							</h2>
+							</h3>
 
 							<p className='text-xl text-gray-700 mb-6 font-elegant leading-relaxed'>
 								Chef Yossie&apos;s 20+ years in
@@ -509,9 +509,9 @@ export default function AuthenticVsStoreBoughtPage() {
 			<section className='py-16 bg-gradient-to-br from-cream-50 to-cream-100'>
 				<div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<div className='text-center mb-12'>
-						<h2 className='text-3xl sm:text-4xl font-bold text-burgundy-900 mb-6 font-brand'>
+						<h3 className='text-3xl sm:text-4xl font-bold text-burgundy-900 mb-6 font-brand'>
 							The Real Value Comparison
-						</h2>
+						</h3>
 						<p className='text-xl text-gray-700 font-elegant'>
 							When you consider quality, authenticity, and
 							flavor, authentic sambal offers incredible
@@ -570,9 +570,9 @@ export default function AuthenticVsStoreBoughtPage() {
 				<div className='absolute bottom-0 right-0 w-96 h-96 bg-gold-600/20 rounded-full translate-x-48 translate-y-48 blur-3xl'></div>
 
 				<div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
-					<h2 className='text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 font-brand'>
+					<h3 className='text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 font-brand'>
 						Taste the Authentic Difference
-					</h2>
+					</h3>
 
 					<p className='text-xl sm:text-2xl mb-8 text-cream-100 font-elegant leading-relaxed max-w-3xl mx-auto'>
 						Don&apos;t settle for mass-produced imitations.

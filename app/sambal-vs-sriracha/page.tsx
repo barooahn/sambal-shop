@@ -136,12 +136,12 @@ export default function SambalVsSrirachaPage() {
 			>
 				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<div className='text-center mb-16'>
-						<h2 className='text-4xl sm:text-5xl font-bold text-burgundy-900 mb-6 font-brand'>
+						<h3 className='text-4xl sm:text-5xl font-bold text-burgundy-900 mb-6 font-brand'>
 							Sambal vs Sriracha
 							<span className='text-gold-700 block'>
 								Side-by-Side Comparison
 							</span>
-						</h2>
+						</h3>
 						<p className='text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed font-body'>
 							Understanding the differences helps you
 							choose the right sauce for your cooking style
@@ -366,12 +366,12 @@ export default function SambalVsSrirachaPage() {
 			<section className='py-24 bg-white'>
 				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<div className='text-center mb-16'>
-						<h2 className='text-4xl sm:text-5xl font-bold text-burgundy-900 mb-6 font-brand'>
+						<h3 className='text-4xl sm:text-5xl font-bold text-burgundy-900 mb-6 font-brand'>
 							When to Use Which?
 							<span className='text-gold-700 block'>
 								Chef Yossie&apos;s Recommendations
 							</span>
-						</h2>
+						</h3>
 					</div>
 
 					<div className='grid lg:grid-cols-2 gap-12'>
@@ -493,9 +493,9 @@ export default function SambalVsSrirachaPage() {
 			{/* Chef&apos;s Recommendation CTA */}
 			<section className='py-24 bg-gradient-to-r from-burgundy-900 to-burgundy-800 text-white'>
 				<div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-					<h2 className='text-4xl sm:text-5xl font-bold mb-6 font-brand'>
+					<h3 className='text-4xl sm:text-5xl font-bold mb-6 font-brand'>
 						Chef Yossie&apos;s Recommendation
-					</h2>
+					</h3>
 					<div className='bg-gradient-to-r from-burgundy-800/50 to-burgundy-700/50 rounded-sm p-8 mb-8 border border-gold-600/30'>
 						<blockquote className='text-xl sm:text-2xl text-gold-200 font-body italic leading-relaxed mb-4'>
 							&quot;Both have their place, but if
