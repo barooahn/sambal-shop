@@ -49,11 +49,11 @@
 	],
 	"redirects": [
 		{
-			"source": "(.*)",
+			"source": "/(.*)",
 			"has": [
 				{ "type": "host", "value": "spiceislandindonesia.com" }
 			],
-			"destination": "https://www.spiceislandindonesia.com$1",
+			"destination": "https://www.spiceislandindonesia.com/$1",
 			"permanent": true
 		}
 	]

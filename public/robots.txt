@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# Preferred domain
+Sitemap: https://www.spiceislandindonesia.com/sitemap.xml
+
+# Block admin and sensitive areas
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /api/
+Disallow: /success/
+Disallow: /unsubscribe/
+
+# Allow important crawlable content
+Allow: /blog/
+Allow: /recipes/
+Allow: /products/
+Allow: /shop/
