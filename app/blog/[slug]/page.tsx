@@ -1795,6 +1795,16 @@ const blogPosts = {
 						height: 630,
 						caption: "Sambal Shepherd's Pie with crispy potato topping and spiced Indonesian lamb filling",
 					},
+					video: {
+						"@type": "VideoObject",
+						name: "How to Make Sambal Shepherd's Pie - British Indonesian Fusion Recipe",
+						description: "Step-by-step video guide for making authentic sambal shepherd's pie with Indonesian spices",
+						thumbnailUrl: "https://spiceislandindonesia.com/images/blog/fusion-recipes-guide.webp",
+						contentUrl: "https://spiceislandindonesia.com/videos/sambal-shepherds-pie-recipe.mp4",
+						embedUrl: "https://spiceislandindonesia.com/videos/embed/sambal-shepherds-pie-recipe",
+						uploadDate: "2025-01-15",
+						duration: "PT8M30S"
+					},
 					author: {
 						"@type": "Person",
 						name: "Chef Yossie",
@@ -1823,35 +1833,99 @@ const blogPosts = {
 					recipeInstructions: [
 						{
 							"@type": "HowToStep",
+							name: "Prepare potatoes and preheat oven",
 							text: "Preheat oven to 200°C (fan 180°C). Peel and chop potatoes, then boil until tender, about 15 minutes.",
+							url: "https://spiceislandindonesia.com/blog/british-indonesian-fusion-weeknight-recipes#step1",
+							image: {
+								"@type": "ImageObject",
+								url: "https://spiceislandindonesia.com/images/blog/fusion-recipes-guide.webp",
+								width: 1200,
+								height: 630
+							}
 						},
 						{
 							"@type": "HowToStep",
+							name: "Brown the minced lamb",
 							text: "Meanwhile, heat oil in a large pan. Brown the minced lamb over medium-high heat for 5-6 minutes.",
+							url: "https://spiceislandindonesia.com/blog/british-indonesian-fusion-weeknight-recipes#step2",
+							image: {
+								"@type": "ImageObject",
+								url: "https://spiceislandindonesia.com/images/blog/fusion-recipes-guide.webp",
+								width: 1200,
+								height: 630
+							}
 						},
 						{
 							"@type": "HowToStep",
+							name: "Add vegetables and aromatics",
 							text: "Add diced onion, carrots, garlic, and ginger to the lamb. Cook for 5 minutes until vegetables soften.",
+							url: "https://spiceislandindonesia.com/blog/british-indonesian-fusion-weeknight-recipes#step3",
+							image: {
+								"@type": "ImageObject",
+								url: "https://spiceislandindonesia.com/images/blog/fusion-recipes-guide.webp",
+								width: 1200,
+								height: 630
+							}
 						},
 						{
 							"@type": "HowToStep",
+							name: "Add sambal and seasonings",
 							text: "Stir in sambal, tomato paste, and soy sauce. Cook for 2 minutes until fragrant.",
+							url: "https://spiceislandindonesia.com/blog/british-indonesian-fusion-weeknight-recipes#step4",
+							image: {
+								"@type": "ImageObject",
+								url: "https://spiceislandindonesia.com/images/blog/fusion-recipes-guide.webp",
+								width: 1200,
+								height: 630
+							}
 						},
 						{
 							"@type": "HowToStep",
+							name: "Add coconut milk and simmer",
 							text: "Pour in coconut milk and simmer for 8-10 minutes until sauce thickens. Season with salt and pepper.",
+							url: "https://spiceislandindonesia.com/blog/british-indonesian-fusion-weeknight-recipes#step5",
+							image: {
+								"@type": "ImageObject",
+								url: "https://spiceislandindonesia.com/images/blog/fusion-recipes-guide.webp",
+								width: 1200,
+								height: 630
+							}
 						},
 						{
 							"@type": "HowToStep",
+							name: "Prepare mashed potatoes",
 							text: "Drain potatoes and mash with butter and milk until smooth. Season with salt and pepper.",
+							url: "https://spiceislandindonesia.com/blog/british-indonesian-fusion-weeknight-recipes#step6",
+							image: {
+								"@type": "ImageObject",
+								url: "https://spiceislandindonesia.com/images/blog/fusion-recipes-guide.webp",
+								width: 1200,
+								height: 630
+							}
 						},
 						{
 							"@type": "HowToStep",
+							name: "Assemble the shepherd's pie",
 							text: "Transfer lamb mixture to a baking dish. Top with mashed potato and fork to create texture.",
+							url: "https://spiceislandindonesia.com/blog/british-indonesian-fusion-weeknight-recipes#step7",
+							image: {
+								"@type": "ImageObject",
+								url: "https://spiceislandindonesia.com/images/blog/fusion-recipes-guide.webp",
+								width: 1200,
+								height: 630
+							}
 						},
 						{
 							"@type": "HowToStep",
+							name: "Bake and serve",
 							text: "Bake for 20-25 minutes until golden. Garnish with fresh coriander and serve hot.",
+							url: "https://spiceislandindonesia.com/blog/british-indonesian-fusion-weeknight-recipes#step8",
+							image: {
+								"@type": "ImageObject",
+								url: "https://spiceislandindonesia.com/images/blog/fusion-recipes-guide.webp",
+								width: 1200,
+								height: 630
+							}
 						},
 					],
 					aggregateRating: {
