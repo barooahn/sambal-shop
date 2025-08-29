@@ -100,6 +100,13 @@ export default function GiftSetPage() {
 				sku: "SII-GIFT-SET-COMPLETE",
 				url: "https://spiceislandindonesia.com/gift-set",
 				priceValidUntil: "2026-12-31",
+				hasMerchantReturnPolicy: {
+					"@type": "MerchantReturnPolicy",
+					returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
+					merchandiseReturnDays: 30,
+					returnMethod: "https://schema.org/ReturnByMail",
+					returnFees: "https://schema.org/ReturnShippingFees"
+				},
 			},
 		],
 		aggregateRating: {

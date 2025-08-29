@@ -100,6 +100,13 @@ export default function SambalBaliAromaticSpicyPage() {
 				sku: "SII-SB-185G",
 				url: "https://spiceislandindonesia.com/sambal-bali-aromatic-spicy",
 				priceValidUntil: "2026-12-31",
+				hasMerchantReturnPolicy: {
+					"@type": "MerchantReturnPolicy",
+					returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
+					merchandiseReturnDays: 30,
+					returnMethod: "https://schema.org/ReturnByMail",
+					returnFees: "https://schema.org/ReturnShippingFees"
+				},
 			},
 		],
 		aggregateRating: {
