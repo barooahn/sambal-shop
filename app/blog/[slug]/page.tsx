@@ -1892,10 +1892,49 @@ const blogPosts = {
 						"@type": "Offer",
 						price: "7.49",
 						priceCurrency: "GBP",
-						priceValidUntil: "2025-12-31",
+						priceValidUntil: "2026-12-31",
 						availability: "https://schema.org/InStock",
 						itemCondition: "https://schema.org/NewCondition",
-						url: "https://spiceislandindonesia.com/products/sambal-oelek",
+						url: "https://spiceislandindonesia.com/sambal-oelek-uk",
+					shippingDetails: {
+						"@type": "OfferShippingDetails",
+						shippingRate: {
+							"@type": "MonetaryAmount",
+							currency: "GBP",
+							value: "3.49"
+						},
+						shippingDestination: {
+							"@type": "DefinedRegion",
+							addressCountry: "GB"
+						},
+						deliveryTime: {
+							"@type": "ShippingDeliveryTime",
+							handlingTime: {
+								"@type": "QuantitativeValue",
+								minValue: 1,
+								maxValue: 2,
+								unitCode: "DAY"
+							},
+							transitTime: {
+								"@type": "QuantitativeValue",
+								minValue: 1,
+								maxValue: 3,
+								unitCode: "DAY"
+							}
+						}
+					},
+					hasMerchantReturnPolicy: {
+						"@type": "MerchantReturnPolicy",
+						returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
+						merchandiseReturnDays: 30,
+						returnMethod: "https://schema.org/ReturnByMail",
+						returnFees: "https://schema.org/ReturnShippingFees",
+						returnShippingFeesAmount: {
+							"@type": "MonetaryAmount",
+							currency: "GBP",
+							value: "3.49"
+						}
+					},
 						seller: {
 							"@type": "Organization",
 							name: "Spice Island Indonesia"
@@ -1930,12 +1969,51 @@ const blogPosts = {
 					},
 					offers: {
 						"@type": "Offer",
-						price: "8.99",
+						price: "8.49",
 						priceCurrency: "GBP",
-						priceValidUntil: "2025-12-31",
+						priceValidUntil: "2026-12-31",
 						availability: "https://schema.org/InStock",
 						itemCondition: "https://schema.org/NewCondition",
-						url: "https://spiceislandindonesia.com/products/sambal-bali",
+						url: "https://spiceislandindonesia.com/sambal-bali-aromatic-spicy",
+					shippingDetails: {
+						"@type": "OfferShippingDetails",
+						shippingRate: {
+							"@type": "MonetaryAmount",
+							currency: "GBP",
+							value: "3.49"
+						},
+						shippingDestination: {
+							"@type": "DefinedRegion",
+							addressCountry: "GB"
+						},
+						deliveryTime: {
+							"@type": "ShippingDeliveryTime",
+							handlingTime: {
+								"@type": "QuantitativeValue",
+								minValue: 1,
+								maxValue: 2,
+								unitCode: "DAY"
+							},
+							transitTime: {
+								"@type": "QuantitativeValue",
+								minValue: 1,
+								maxValue: 3,
+								unitCode: "DAY"
+							}
+						}
+					},
+					hasMerchantReturnPolicy: {
+						"@type": "MerchantReturnPolicy",
+						returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
+						merchandiseReturnDays: 30,
+						returnMethod: "https://schema.org/ReturnByMail",
+						returnFees: "https://schema.org/ReturnShippingFees",
+						returnShippingFeesAmount: {
+							"@type": "MonetaryAmount",
+							currency: "GBP",
+							value: "3.49"
+						}
+					},
 						seller: {
 							"@type": "Organization",
 							name: "Spice Island Indonesia"
