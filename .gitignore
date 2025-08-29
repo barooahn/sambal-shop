@@ -42,7 +42,7 @@ stripe-webhook-function.ts
 # Documentation and development files
 docs/
 .windsurfrules
-CLAUDE.md
+.claude/
 design.mdc
 default_ui_darkmode.css
 
