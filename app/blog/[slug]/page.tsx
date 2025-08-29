@@ -1802,7 +1802,7 @@ const blogPosts = {
 						thumbnailUrl: "https://spiceislandindonesia.com/images/blog/fusion-recipes-guide.webp",
 						contentUrl: "https://spiceislandindonesia.com/videos/sambal-shepherds-pie-recipe.mp4",
 						embedUrl: "https://spiceislandindonesia.com/videos/embed/sambal-shepherds-pie-recipe",
-						uploadDate: "2025-01-15",
+						uploadDate: "2025-01-15T10:00:00+00:00",
 						duration: "PT8M30S"
 					},
 					author: {
