@@ -1925,8 +1925,9 @@ const blogPosts = {
 					},
 					hasMerchantReturnPolicy: {
 						"@type": "MerchantReturnPolicy",
+						applicableCountry: "GB",
 						returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
-						merchandiseReturnDays: 30,
+						merchantReturnDays: 30,
 						returnMethod: "https://schema.org/ReturnByMail",
 						returnFees: "https://schema.org/ReturnShippingFees",
 						returnShippingFeesAmount: {
@@ -2004,8 +2005,9 @@ const blogPosts = {
 					},
 					hasMerchantReturnPolicy: {
 						"@type": "MerchantReturnPolicy",
+						applicableCountry: "GB",
 						returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
-						merchandiseReturnDays: 30,
+						merchantReturnDays: 30,
 						returnMethod: "https://schema.org/ReturnByMail",
 						returnFees: "https://schema.org/ReturnShippingFees",
 						returnShippingFeesAmount: {
