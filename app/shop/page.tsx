@@ -89,7 +89,12 @@ export default function ShopPage() {
 						"https://schema.org/MerchantReturnFiniteReturnWindow",
 					merchantReturnDays: 14,
 					returnMethod: "https://schema.org/ReturnByMail",
-					returnFees: "https://schema.org/FreeReturn",
+					returnFees: "https://schema.org/ReturnShippingFees",
+					returnShippingFeesAmount: {
+						"@type": "MonetaryAmount",
+						currency: "GBP",
+						value: "3.49"
+					},
 				},
 			},
 		],

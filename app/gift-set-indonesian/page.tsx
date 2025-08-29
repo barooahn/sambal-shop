@@ -89,7 +89,7 @@ const productData = {
 			"@type": "OfferShippingDetails",
 			shippingRate: {
 				"@type": "MonetaryAmount",
-				value: 3.45,
+				value: 3.49,
 				currency: "GBP",
 			},
 			eligibleTransactionVolume: {
@@ -126,6 +126,11 @@ const productData = {
 		merchantReturnDays: 14,
 		returnMethod: "https://schema.org/ReturnByMail",
 		returnFees: "https://schema.org/ReturnShippingFees",
+		returnShippingFeesAmount: {
+			"@type": "MonetaryAmount",
+			currency: "GBP",
+			value: "3.49"
+		},
 	},
 	offers: [
 		{

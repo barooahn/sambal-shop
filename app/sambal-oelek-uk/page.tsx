@@ -201,7 +201,7 @@ export default function SambalOelekUKPage() {
 				// Standard Royal Mail 48 Tracked (under £20)
 				shippingRate: {
 					"@type": "MonetaryAmount",
-					value: 3.45,
+					value: 3.49,
 					currency: "GBP",
 				},
 				eligibleTransactionVolume: {
@@ -276,7 +276,12 @@ export default function SambalOelekUKPage() {
 						"https://schema.org/MerchantReturnFiniteReturnWindow",
 					merchantReturnDays: 14,
 					returnMethod: "https://schema.org/ReturnByMail",
-					returnFees: "https://schema.org/FreeReturn",
+					returnFees: "https://schema.org/ReturnShippingFees",
+					returnShippingFeesAmount: {
+						"@type": "MonetaryAmount",
+						currency: "GBP",
+						value: "3.49"
+					},
 				},
 			},
 		],

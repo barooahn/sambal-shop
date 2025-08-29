@@ -100,12 +100,44 @@ export default function GiftSetPage() {
 				sku: "SII-GIFT-SET-COMPLETE",
 				url: "https://spiceislandindonesia.com/gift-set",
 				priceValidUntil: "2026-12-31",
+				shippingDetails: {
+					"@type": "OfferShippingDetails",
+					shippingRate: {
+						"@type": "MonetaryAmount",
+						currency: "GBP",
+						value: "3.49"
+					},
+					shippingDestination: {
+						"@type": "DefinedRegion",
+						addressCountry: "GB"
+					},
+					deliveryTime: {
+						"@type": "ShippingDeliveryTime",
+						handlingTime: {
+							"@type": "QuantitativeValue",
+							minValue: 1,
+							maxValue: 2,
+							unitCode: "DAY"
+						},
+						transitTime: {
+							"@type": "QuantitativeValue",
+							minValue: 1,
+							maxValue: 3,
+							unitCode: "DAY"
+						}
+					}
+				},
 				hasMerchantReturnPolicy: {
 					"@type": "MerchantReturnPolicy",
 					returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
 					merchandiseReturnDays: 30,
 					returnMethod: "https://schema.org/ReturnByMail",
-					returnFees: "https://schema.org/ReturnShippingFees"
+					returnFees: "https://schema.org/ReturnShippingFees",
+					returnShippingFeesAmount: {
+						"@type": "MonetaryAmount",
+						currency: "GBP",
+						value: "3.49"
+					}
 				},
 			},
 		],
