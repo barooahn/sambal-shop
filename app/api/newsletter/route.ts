@@ -64,15 +64,18 @@ export async function POST(request: NextRequest) {
 					);
 				}
 
-				// Attempt to send a welcome email (non-blocking)
+				// Send welcome email (non-blocking)
 				try {
-					if (process.env.RESEND_API_KEY) {
-						const { sendWelcomeEmail } = await import(
-							"@/lib/email"
-						);
-						sendWelcomeEmail(email).catch(() => {});
+					if (process.env.ZEPTOMAIL_SMTP_HOST && process.env.ZEPTOMAIL_FROM_EMAIL) {
+						// Import and send welcome email
+						const emailLib = await import("@/lib/email");
+						emailLib.sendWelcomeEmail(email).catch((error: any) => {
+							console.error('Welcome email error:', error);
+						});
 					}
-				} catch {}
+				} catch (error) {
+					console.error('Email sending error:', error);
+				}
 
 				return NextResponse.json({
 					success: true,
