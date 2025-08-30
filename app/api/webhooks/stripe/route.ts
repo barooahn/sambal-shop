@@ -38,7 +38,7 @@ export async function POST(req: NextRequest) {
 
         // Get customer details
         const customer = session.customer_details;
-        const shippingDetails = session.shipping as any;
+        const shippingDetails = (session as any).shipping_details;
         
         if (!customer?.email) {
           console.error('❌ No customer email found in session');
