@@ -3,7 +3,7 @@ import { Instagram, Facebook } from "lucide-react";
 
 export default function Footer() {
 	return (
-		<footer className='bg-neutral-900 text-gold-100 py-16 relative overflow-hidden border-t border-gold-600/30'>
+		<footer role="contentinfo" className='bg-neutral-900 text-gold-100 py-16 relative overflow-hidden border-t border-gold-600/30'>
 			{/* Background image with overlay */}
 			<div 
 				className='absolute inset-0 pointer-events-none bg-cover bg-center bg-no-repeat' 

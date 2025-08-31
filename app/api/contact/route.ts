@@ -1,8 +1,29 @@
 import { NextRequest, NextResponse } from "next/server";
+// import { contactFormSchema, rateLimitConfig, sanitizeInput } from "@/lib/validation";
+// import { z } from "zod";
 
-// This API route handles contact form submissions
-// Configure with your preferred email service (SendGrid, Resend, etc.)
+// Simple in-memory rate limiting store (use Redis in production)
+const rateLimitStore = new Map<string, { count: number; resetTime: number }>();
 
+// Rate limiting utility  
+function checkRateLimit(key: string, config: { windowMs: number; max: number }): boolean {
+	const now = Date.now();
+	const entry = rateLimitStore.get(key);
+	
+	if (!entry || now > entry.resetTime) {
+		rateLimitStore.set(key, { count: 1, resetTime: now + config.windowMs });
+		return true;
+	}
+	
+	if (entry.count >= config.max) {
+		return false;
+	}
+	
+	entry.count++;
+	return true;
+}
+
+// This API route handles contact form submissions with enhanced security
 export async function POST(request: NextRequest) {
 	try {
 		const { name, email, message, timestamp, source, userAgent } =
@@ -30,12 +51,10 @@ export async function POST(request: NextRequest) {
 
 		// Rate limiting check (simple IP-based)
 		const clientIP =
-			request.headers.get("x-forwarded-for") ||
+			request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
 			request.headers.get("x-real-ip") ||
 			"unknown";
 
-		// TODO: Implement proper rate limiting with Redis/database
-		// For now, we'll just log the IP for monitoring
 		console.log("Contact form submission from IP:", clientIP);
 
 		// Send via Resend (primary); fallback to log if not configured

@@ -23,6 +23,8 @@ const WebVitals = dynamic(() => import("@/components/analytics/WebVitals").then(
 	loading: () => null,
 });
 
+// Note: ServiceWorkerRegistration is a client component, loaded in body
+
 const Toaster = dynamic(() => import("sonner").then(mod => ({ default: mod.Toaster })), {
 	loading: () => null,
 });
@@ -31,6 +33,7 @@ import PerformanceOptimizer, {
 	criticalCSS,
 	criticalImages,
 } from "@/components/optimization/PerformanceOptimizer";
+import ServiceWorkerRegistration from "@/components/optimization/ServiceWorkerRegistration";
 
 const inter = Inter({
 	subsets: ["latin"],
@@ -263,9 +266,19 @@ export default function RootLayout({
 					}
 				/>
 				<WebVitals />
+				{/* ServiceWorkerRegistration disabled for testing */}
+				
+				{/* Skip to main content for keyboard navigation */}
+				<a 
+					href="#main-content" 
+					className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-white focus:text-gray-900 focus:rounded focus:shadow-lg focus:underline"
+				>
+					Skip to main content
+				</a>
+				
 				<Header />
 				<Breadcrumb />
-				<main id='main-content' className='min-h-screen mb-16'>
+				<main id="main-content" role="main" className="min-h-screen mb-16">
 					{children}
 				</main>
 				<Footer />

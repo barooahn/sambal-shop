@@ -117,6 +117,7 @@ export default function Header() {
 
 	return (
 		<header
+			role="banner"
 			className={`sticky top-0 z-50 backdrop-blur-sm transition-all duration-300 ${isScrolled ? "bg-cream-50/80 border-b border-gold-300 shadow-gold" : "bg-cream-50/95 border-b border-gold-200"}`}
 		>
 			<a
@@ -510,7 +511,12 @@ export default function Header() {
 
 				{/* Mobile Navigation */}
 				{isMenuOpen && (
-					<div className='lg:hidden'>
+					<nav 
+						id="mobile-menu" 
+						className='lg:hidden' 
+						role="navigation" 
+						aria-label="Mobile navigation"
+					>
 						<div className='px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gold-200'>
 							{/* Search Link */}
 							<Link
@@ -644,7 +650,7 @@ export default function Header() {
 								)}
 							</div>
 						</div>
-					</div>
+					</nav>
 				)}
 			</div>
 		</header>
