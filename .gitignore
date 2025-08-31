@@ -52,3 +52,6 @@ settings.local.json
 
 # Lighthouse performance reports
 lighthouse-reports/
+
+# Playwright MCP directory
+.playwright-mcp/
