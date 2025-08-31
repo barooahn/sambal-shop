@@ -293,6 +293,98 @@ h6 {
 	.pattern-opacity-light { opacity: 0.3; }
 	.pattern-opacity-medium { opacity: 0.5; }
 	.pattern-opacity-visible { opacity: 0.7; }
+	
+	/* Advanced Batik Pattern System */
+	.batik-traditional .batik-layer-1 {
+		background-image:
+			radial-gradient(ellipse 60px 120px at 25% 25%, transparent 50%, rgba(244, 196, 48, 0.08) 60%, transparent 90%),
+			radial-gradient(ellipse 80px 40px at 75% 75%, transparent 50%, rgba(194, 24, 7, 0.06) 60%, transparent 90%);
+		background-size: 200px 200px, 150px 150px;
+		background-position: 0 0, 100px 100px;
+	}
+	
+	.batik-traditional .batik-layer-2 {
+		background-image:
+			linear-gradient(45deg, transparent 40%, rgba(74, 93, 35, 0.04) 50%, transparent 60%),
+			linear-gradient(135deg, transparent 40%, rgba(127, 29, 43, 0.04) 50%, transparent 60%);
+		background-size: 120px 120px, 160px 160px;
+		background-position: 50px 50px, 0 0;
+	}
+	
+	.batik-traditional .batik-layer-3 {
+		background-image:
+			repeating-conic-gradient(from 0deg at 50% 50%, transparent 0deg, rgba(244, 196, 48, 0.02) 30deg, transparent 60deg);
+		background-size: 300px 300px;
+	}
+	
+	.batik-geometric .batik-layer-1 {
+		background-image:
+			repeating-linear-gradient(0deg, transparent 0px, rgba(194, 24, 7, 0.03) 1px, transparent 8px),
+			repeating-linear-gradient(60deg, transparent 0px, rgba(244, 196, 48, 0.03) 1px, transparent 8px),
+			repeating-linear-gradient(120deg, transparent 0px, rgba(74, 93, 35, 0.03) 1px, transparent 8px);
+		background-size: 24px 24px, 24px 24px, 24px 24px;
+	}
+	
+	.batik-floral .batik-layer-1 {
+		background-image:
+			radial-gradient(circle at 30% 40%, transparent 30%, rgba(244, 196, 48, 0.1) 40%, transparent 70%),
+			radial-gradient(ellipse 40px 60px at 70% 60%, transparent 40%, rgba(194, 24, 7, 0.08) 50%, transparent 80%);
+		background-size: 120px 120px, 100px 140px;
+		background-position: 0 0, 60px 70px;
+	}
+	
+	.batik-organic .batik-layer-1 {
+		background-image:
+			radial-gradient(ellipse 100px 60px at 20% 80%, transparent 20%, rgba(74, 93, 35, 0.06) 40%, transparent 80%),
+			radial-gradient(ellipse 80px 120px at 80% 20%, transparent 30%, rgba(127, 29, 43, 0.05) 50%, transparent 90%);
+		background-size: 180px 180px, 160px 200px;
+	}
+	
+	/* Variant-specific styling */
+	.variant-hero {
+		opacity: 0.6;
+		transform: scale(1.1);
+	}
+	
+	.variant-section {
+		opacity: 0.4;
+	}
+	
+	.variant-card {
+		opacity: 0.2;
+		mix-blend-mode: multiply;
+	}
+	
+	.variant-overlay {
+		opacity: 0.3;
+		mix-blend-mode: overlay;
+	}
+	
+	/* Intensity variations */
+	.intensity-subtle { filter: contrast(0.8) saturate(0.7); }
+	.intensity-medium { filter: contrast(1.0) saturate(1.0); }
+	.intensity-prominent { filter: contrast(1.2) saturate(1.3); }
+	
+	/* Animation classes */
+	.batik-fade-in {
+		animation: batikFadeIn 2s ease-out forwards;
+	}
+	
+	@keyframes batikFadeIn {
+		0% { opacity: 0; transform: scale(0.95); }
+		100% { opacity: 1; transform: scale(1); }
+	}
+	
+	/* Enhanced float animation with cultural feel */
+	@keyframes float {
+		0%, 100% { transform: translateY(0px) rotate(0deg); }
+		25% { transform: translateY(-8px) rotate(1deg); }
+		50% { transform: translateY(-15px) rotate(0deg); }
+		75% { transform: translateY(-8px) rotate(-1deg); }
+	}
+	
+	.delay-1000 { animation-delay: 1s; }
+	.delay-2000 { animation-delay: 2s; }
 
 	/* Elegant Batik Pattern Background */
 	.batik-pattern {
@@ -578,4 +670,95 @@ h6 {
 		--input: 0 0% 20%;
 		--ring: 351 63% 40%;
 	}
+}
+
+/* Performance optimizations for visual elements */
+.batik-layer-1,
+.batik-layer-2,
+.batik-layer-3 {
+	will-change: transform;
+	transform: translateZ(0); /* Force hardware acceleration */
+}
+
+/* Optimize animations for better performance */
+.animate-float {
+	will-change: transform;
+	transform: translateZ(0);
+}
+
+/* Reduce repaints for pattern elements */
+.batik-pattern-subtle,
+.batik-pattern-traditional,
+.spice-weave-pattern,
+.palm-leaf-pattern,
+.coconut-fiber-pattern {
+	will-change: auto;
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+}
+
+/* Optimize gradient rendering */
+.bg-gradient-to-r,
+.bg-gradient-to-br,
+.bg-gradient-to-tr,
+.bg-gradient-to-bl {
+	background-attachment: local;
+}
+
+/* Performance-optimized shadow rendering */
+.shadow-palm,
+.shadow-turmeric,
+.shadow-chili,
+.shadow-gold,
+.shadow-burgundy {
+	filter: drop-shadow(0 4px 6px rgb(0 0 0 / 0.1));
+}
+
+/* Lazy loading optimization for images */
+.lazy-load {
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out;
+}
+
+.lazy-load.loaded {
+	opacity: 1;
+}
+
+/* Critical CSS for above-the-fold content */
+.critical-content {
+	contain: layout style paint;
+}
+
+/* Optimize text rendering */
+.text-spice-gradient,
+.text-traditional,
+.text-spice-title {
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* Reduce memory usage for complex backgrounds */
+@media (prefers-reduced-motion: reduce) {
+	.animate-float,
+	.batik-fade-in,
+	.transition-all,
+	.transition-transform,
+	.transition-opacity {
+		animation: none !important;
+		transition: none !important;
+	}
+}
+
+/* GPU acceleration for smooth scrolling */
+.scroll-smooth {
+	scroll-behavior: smooth;
+	transform: translateZ(0);
+}
+
+/* Optimize component rendering */
+.component-optimized {
+	contain: layout style;
+	content-visibility: auto;
+	contain-intrinsic-size: 0 500px;
 }
