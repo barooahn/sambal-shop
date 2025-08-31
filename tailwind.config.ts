@@ -40,6 +40,56 @@ module.exports = {
 
 			// Colors matching your product design
 			colors: {
+				// Indonesian spice-inspired colors
+				turmeric: {
+					50: "#fffdf0",
+					100: "#fffadc",
+					200: "#fff4b8",
+					300: "#ffeb85",
+					400: "#f4c430", // Traditional turmeric yellow
+					500: "#e6b800",
+					600: "#cc9900",
+					700: "#b38600",
+					800: "#996f00",
+					900: "#805900",
+				},
+				chili: {
+					50: "#fef2f2",
+					100: "#fee2e2", 
+					200: "#fecaca",
+					300: "#fca5a5",
+					400: "#f87171",
+					500: "#c21807", // Traditional chili red
+					600: "#dc2626",
+					700: "#b91c1c",
+					800: "#991b1b",
+					900: "#7f1d1d",
+				},
+				coconut: {
+					50: "#f8f6f0", // Traditional coconut white
+					100: "#f3f0e8",
+					200: "#ede8d8",
+					300: "#e5ddc8",
+					400: "#ddd1b8",
+					500: "#d4c5a8",
+					600: "#c7b898",
+					700: "#b9ab88",
+					800: "#a89e78",
+					900: "#959168",
+				},
+				palm: {
+					50: "#f0f4e8",
+					100: "#e1e9d1",
+					200: "#c3d3a3",
+					300: "#a5bd75",
+					400: "#87a747",
+					500: "#4a5d23", // Palm green
+					600: "#6b8f19",
+					700: "#5c7915",
+					800: "#4d6311",
+					900: "#3e4d0d",
+				},
+
 				// Deep burgundy/wine red from your jars
 				burgundy: {
 					50: "#fdf2f3", // Very light burgundy
@@ -157,15 +207,18 @@ module.exports = {
 				"5xl": "3rem",
 			},
 
-			// Box shadows with burgundy and gold
+			// Box shadows with Indonesian spice colors
 			boxShadow: {
-				burgundy:
-					"0 4px 6px -1px rgba(127, 29, 43, 0.15), 0 2px 4px -1px rgba(127, 29, 43, 0.1)",
+				burgundy: "0 4px 6px -1px rgba(127, 29, 43, 0.15), 0 2px 4px -1px rgba(127, 29, 43, 0.1)",
 				gold: "0 4px 6px -1px rgba(217, 119, 6, 0.15), 0 2px 4px -1px rgba(217, 119, 6, 0.1)",
 				luxury: "0 10px 15px -3px rgba(127, 29, 43, 0.15), 0 4px 6px -2px rgba(217, 119, 6, 0.1)",
 				"glow-gold": "0 0 20px rgba(217, 119, 6, 0.4)",
-				"inner-burgundy":
-					"inset 0 2px 4px 0 rgba(127, 29, 43, 0.1)",
+				"inner-burgundy": "inset 0 2px 4px 0 rgba(127, 29, 43, 0.1)",
+				// New Indonesian spice-inspired shadows
+				turmeric: "0 4px 6px -1px rgba(244, 196, 48, 0.15), 0 2px 4px -1px rgba(244, 196, 48, 0.1)",
+				chili: "0 4px 6px -1px rgba(194, 24, 7, 0.15), 0 2px 4px -1px rgba(194, 24, 7, 0.1)",
+				palm: "0 4px 6px -1px rgba(74, 93, 35, 0.15), 0 2px 4px -1px rgba(74, 93, 35, 0.1)",
+				coconut: "0 4px 6px -1px rgba(248, 246, 240, 0.25), 0 2px 4px -1px rgba(248, 246, 240, 0.15)",
 			},
 
 			// Custom gradients

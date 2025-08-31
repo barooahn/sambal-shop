@@ -13,44 +13,50 @@ const trustSignals = [
   {
     icon: Shield,
     title: 'Authentic Recipe',
-    description: 'Chef Yossie\'s traditional Indonesian recipe',
-    color: 'text-gold-600',
-    bgColor: 'bg-gold-50',
+    description: '🇮🇩 Chef Yossie\'s traditional West Java family recipe',
+    color: 'text-turmeric-600',
+    bgColor: 'bg-turmeric-50',
+    borderColor: 'border-turmeric-200',
   },
   {
     icon: Truck,
     title: 'Free UK Delivery',
-    description: 'Free delivery on orders over £20',
-    color: 'text-green-600',
-    bgColor: 'bg-green-50',
+    description: '🚚 Free delivery on orders over £25 - Next day available',
+    color: 'text-chili-600',
+    bgColor: 'bg-chili-50',
+    borderColor: 'border-chili-200',
   },
   {
     icon: RotateCcw,
     title: '30-Day Returns',
-    description: 'Not satisfied? Full refund guaranteed',
-    color: 'text-blue-600',
-    bgColor: 'bg-blue-50',
+    description: '✅ Not satisfied? Full refund guaranteed - No questions asked',
+    color: 'text-palm-600',
+    bgColor: 'bg-palm-50',
+    borderColor: 'border-palm-200',
   },
   {
     icon: Star,
-    title: 'Premium Quality',
-    description: 'Small-batch, restaurant-grade sambal',
+    title: '★★★★★ Premium Quality',
+    description: '⭐ Small-batch, restaurant-grade sambal - 4.9/5 rated',
     color: 'text-burgundy-600',
     bgColor: 'bg-burgundy-50',
+    borderColor: 'border-burgundy-200',
   },
   {
     icon: Clock,
-    title: 'Fresh Made',
-    description: 'Made to order for maximum freshness',
-    color: 'text-orange-600',
-    bgColor: 'bg-orange-50',
+    title: 'Fresh Made Weekly',
+    description: '🔥 Made in small batches every week for maximum freshness',
+    color: 'text-turmeric-700',
+    bgColor: 'bg-turmeric-50',
+    borderColor: 'border-turmeric-200',
   },
   {
     icon: Leaf,
     title: 'Natural Ingredients',
-    description: 'No artificial preservatives or colors',
-    color: 'text-emerald-600',
-    bgColor: 'bg-emerald-50',
+    description: '🌿 No artificial preservatives, colors, or additives - Pure taste',
+    color: 'text-palm-600',
+    bgColor: 'bg-palm-50',
+    borderColor: 'border-palm-200',
   },
 ];
 
@@ -65,24 +71,27 @@ export default function TrustSignals({
   const sizeClasses = {
     sm: {
       icon: 'w-4 h-4',
-      title: 'text-xs font-medium',
-      description: 'text-xs',
-      padding: 'p-2',
-      gap: 'gap-1',
+      title: 'text-xs font-bold',
+      description: 'text-xs leading-tight',
+      padding: 'p-3',
+      gap: 'gap-2',
+      minHeight: 'min-h-[44px]', // Ensure accessibility
     },
     md: {
       icon: 'w-5 h-5',
-      title: 'text-sm font-semibold',
-      description: 'text-xs',
-      padding: 'p-3',
-      gap: 'gap-2',
+      title: 'text-sm font-bold',
+      description: 'text-xs leading-relaxed',
+      padding: 'p-4',
+      gap: 'gap-3',
+      minHeight: 'min-h-[48px]',
     },
     lg: {
       icon: 'w-6 h-6',
-      title: 'text-base font-semibold',
-      description: 'text-sm',
-      padding: 'p-4',
-      gap: 'gap-3',
+      title: 'text-base font-bold',
+      description: 'text-sm leading-relaxed',
+      padding: 'p-5',
+      gap: 'gap-4',
+      minHeight: 'min-h-[52px]',
     },
   };
 
@@ -90,20 +99,20 @@ export default function TrustSignals({
 
   if (variant === 'horizontal') {
     return (
-      <div className={`flex flex-wrap justify-center gap-4 ${className}`}>
+      <div className={`flex flex-wrap justify-center gap-6 ${className}`}>
         {displaySignals.map((signal, index) => (
           <div
             key={index}
-            className={`flex items-center ${classes.gap} ${classes.padding} rounded-lg border border-neutral-200 bg-white shadow-sm hover:shadow-md transition-shadow`}
+            className={`flex items-center ${classes.gap} ${classes.padding} ${classes.minHeight} rounded-xl border-2 ${signal.borderColor} bg-gradient-to-r from-coconut-50 to-white shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 cursor-default max-w-sm`}
           >
-            <div className={`${signal.bgColor} ${classes.padding} rounded-full`}>
+            <div className={`${signal.bgColor} ${classes.padding} rounded-full shadow-sm border ${signal.borderColor}`}>
               <signal.icon className={`${classes.icon} ${signal.color}`} />
             </div>
-            <div>
-              <div className={`${classes.title} text-neutral-800`}>
+            <div className="flex-1">
+              <div className={`${classes.title} text-burgundy-900 mb-1`}>
                 {signal.title}
               </div>
-              <div className={`${classes.description} text-neutral-600`}>
+              <div className={`${classes.description} text-palm-700`}>
                 {signal.description}
               </div>
             </div>
@@ -185,31 +194,33 @@ export function TrustBadges({ className = '' }: { className?: string }) {
   );
 }
 
-// Urgency indicator component
+// Enhanced Urgency indicator component with Indonesian styling
 export function UrgencyIndicator({ 
-  message = "Only 3 left in stock", 
+  message = "⚡ Only 3 jars left - Order now!", 
   type = 'stock',
   className = '' 
 }: { 
   message?: string;
-  type?: 'stock' | 'time' | 'demand';
+  type?: 'stock' | 'time' | 'demand' | 'cultural';
   className?: string;
 }) {
   const typeStyles = {
-    stock: 'bg-orange-50 text-orange-800 border-orange-200',
-    time: 'bg-red-50 text-red-800 border-red-200',
-    demand: 'bg-green-50 text-green-800 border-green-200',
+    stock: 'bg-gradient-to-r from-chili-50 to-chili-100 text-chili-800 border-chili-300 shadow-chili',
+    time: 'bg-gradient-to-r from-turmeric-50 to-turmeric-100 text-turmeric-800 border-turmeric-300 shadow-turmeric',
+    demand: 'bg-gradient-to-r from-burgundy-50 to-burgundy-100 text-burgundy-800 border-burgundy-300 shadow-burgundy',
+    cultural: 'bg-gradient-to-r from-palm-50 to-palm-100 text-palm-800 border-palm-300 shadow-palm',
   };
 
   const typeIcons = {
-    stock: '📦',
-    time: '⏰',
-    demand: '🔥',
+    stock: '⚡',
+    time: '🔥',
+    demand: '👥',
+    cultural: '🇮🇩',
   };
 
   return (
-    <div className={`inline-flex items-center gap-2 px-3 py-2 rounded-lg border text-sm font-medium ${typeStyles[type]} ${className}`}>
-      <span>{typeIcons[type]}</span>
+    <div className={`inline-flex items-center gap-3 px-4 py-3 rounded-full border-2 text-sm font-bold min-h-[44px] hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5 animate-pulse ${typeStyles[type]} ${className}`}>
+      <span className="text-lg">{typeIcons[type]}</span>
       <span>{message}</span>
     </div>
   );

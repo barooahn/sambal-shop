@@ -175,8 +175,9 @@ export default function ContactForm({
 				<div className='pt-4'>
 					<Button
 						type='submit'
+						variant='primary'
 						size='lg'
-						className='w-full bg-gradient-to-r from-burgundy-900 to-burgundy-800 hover:from-burgundy-800 hover:to-burgundy-700 text-gold-200 font-bold py-4 px-8 rounded-sm shadow-lg hover:shadow-xl transition-all duration-300 border border-gold-600/30 font-elegant text-lg'
+						className='w-full'
 						disabled={
 							contactState.isSubmitting ||
 							contactState.isSubmitted

@@ -193,8 +193,9 @@ export default function NewsletterSection() {
 
 											<Button
 												type='submit'
+												variant='golden'
 												size='lg'
-												className='w-full bg-gradient-to-r from-gold-600 to-gold-500 hover:from-gold-500 hover:to-gold-400 text-burgundy-900 font-bold py-4 px-8 rounded-sm shadow-lg hover:shadow-xl transition-all duration-300 font-elegant'
+												className='w-full'
 												disabled={
 													newsletterState.isSubmitting ||
 													newsletterState.isSubmitted

@@ -356,8 +356,9 @@ export default function ProductShowcase() {
 								<div className='flex flex-col sm:flex-row gap-4 justify-center items-center max-w-lg mx-auto'>
 									<Link href='/sample-pack-try-first' className='w-full sm:w-auto'>
 										<Button 
+											variant='spicy'
 											size='lg' 
-											className='w-full bg-gradient-to-r from-burgundy-600 via-burgundy-700 to-burgundy-800 hover:from-burgundy-700 hover:via-burgundy-800 hover:to-burgundy-900 text-white font-bold py-4 px-8 rounded-xl shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 border border-burgundy-500/20'
+											className='w-full'
 										>
 											🎯 Order Sample Pack - £4.99
 										</Button>
