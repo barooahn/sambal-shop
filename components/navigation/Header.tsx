@@ -146,26 +146,53 @@ export default function Header() {
 			</div>
 			<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 				<div className='flex justify-between items-center h-16'>
-					{/* Logo */}
-					<Link href='/' className='flex items-center space-x-2'>
-						<div className='relative w-10 h-10 sm:w-10 sm:h-10'>
+					{/* Enhanced Logo with Indonesian Cultural Elements */}
+					<Link href='/' className='flex items-center space-x-3 group min-h-[44px] min-w-[44px]'>
+						<div className='relative w-12 h-12 sm:w-12 sm:h-12'>
+							{/* Subtle cultural background ring */}
+							<div className='absolute inset-0 rounded-full bg-gradient-to-br from-turmeric-100 to-chili-100 opacity-20 group-hover:opacity-40 transition-opacity duration-300'></div>
+							<div className='absolute inset-0.5 rounded-full bg-gradient-to-br from-coconut-50 to-white shadow-sm'></div>
+							
 							<OptimizedImage
 								src='/images/optimized/logo-xs.webp'
-								alt='Spice Island Indonesia Logo'
-								width={45}
-								height={45}
-								className='w-full h-full object-contain'
+								alt='Spice Island Indonesia - Authentic Indonesian Sambal UK'
+								width={48}
+								height={48}
+								className='relative z-10 w-full h-full object-contain p-0.5 group-hover:scale-105 transition-transform duration-300'
 								priority
-								quality={85}
-								sizes='(max-width: 640px) 32px, 40px'
+								quality={90}
+								sizes='(max-width: 640px) 40px, 48px'
 							/>
 						</div>
-						<div className='flex flex-col items-center justify-center leading-none'>
-							<div className='font-logo text-gold-700 pb-1'>
-								SPICE ISLAND
+						
+						<div className='hidden sm:flex flex-col justify-center leading-tight'>
+							{/* Main brand name with Indonesian styling */}
+							<div className='font-bold text-base text-spice-gradient group-hover:text-golden-glow transition-colors duration-300'>
+								<span className='text-turmeric-600'>SPICE</span>{' '}
+								<span className='text-chili-600'>ISLAND</span>
 							</div>
-							<div className='font-logo-sub text-gold-700'>
-								INDONESIA
+							
+							{/* Subtitle with cultural accent */}
+							<div className='flex items-center space-x-1 text-xs'>
+								<span className='text-burgundy-700 font-medium tracking-wide'>INDONESIA</span>
+								<span className='text-turmeric-500'>🇮🇩</span>
+							</div>
+							
+							{/* Subtle tagline */}
+							<div className='text-[10px] text-palm-600 font-medium tracking-widest mt-0.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
+								AUTHENTIC SAMBAL
+							</div>
+						</div>
+						
+						{/* Mobile-only compact version */}
+						<div className='sm:hidden flex flex-col justify-center leading-none'>
+							<div className='text-sm font-bold'>
+								<span className='text-turmeric-600'>SPICE</span>{' '}
+								<span className='text-chili-600'>ISLAND</span>
+							</div>
+							<div className='text-xs text-burgundy-700 font-medium flex items-center space-x-1'>
+								<span>INDONESIA</span>
+								<span className='text-turmeric-500'>🇮🇩</span>
 							</div>
 						</div>
 					</Link>

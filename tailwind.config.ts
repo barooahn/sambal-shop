@@ -221,16 +221,25 @@ module.exports = {
 				coconut: "0 4px 6px -1px rgba(248, 246, 240, 0.25), 0 2px 4px -1px rgba(248, 246, 240, 0.15)",
 			},
 
-			// Custom gradients
+			// Custom gradients - Enhanced with Indonesian inspirations
 			backgroundImage: {
-				"burgundy-gradient":
-					"linear-gradient(135deg, #7f1d2b 0%, #962838 50%, #b52d3c 100%)",
-				"gold-gradient":
-					"linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #b45309 100%)",
-				"luxury-gradient":
-					"linear-gradient(135deg, #7f1d2b 0%, #d97706 100%)",
-				"cream-radial":
-					"radial-gradient(circle at center, #fef9f1 0%, #fdf2e1 100%)",
+				"burgundy-gradient": "linear-gradient(135deg, #7f1d2b 0%, #962838 50%, #b52d3c 100%)",
+				"gold-gradient": "linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #b45309 100%)",
+				"luxury-gradient": "linear-gradient(135deg, #7f1d2b 0%, #d97706 100%)",
+				"cream-radial": "radial-gradient(circle at center, #fef9f1 0%, #fdf2e1 100%)",
+				
+				// Indonesian Spice-Inspired Gradients
+				"spice-sunset": "linear-gradient(135deg, #f4c430 0%, #c21807 50%, #7f1d2b 100%)", // Turmeric to chili to burgundy
+				"tropical-warmth": "linear-gradient(135deg, #4a5d23 0%, #f4c430 50%, #c21807 100%)", // Palm to turmeric to chili  
+				"coconut-dream": "linear-gradient(135deg, #f8f6f0 0%, #f4c430 30%, #c7b898 100%)", // Coconut to turmeric
+				"traditional-batik": "linear-gradient(45deg, #7f1d2b 0%, #f4c430 25%, #4a5d23 50%, #c21807 75%, #7f1d2b 100%)",
+				"sambal-fire": "linear-gradient(135deg, #c21807 0%, #f4c430 50%, #c21807 100%)", // Chili with turmeric highlight
+				"palm-leaf": "linear-gradient(135deg, #4a5d23 0%, #6b8f19 50%, #87a747 100%)", // Deep to light palm
+				"spice-market": "radial-gradient(circle at center, #f4c430 0%, #c21807 40%, #7f1d2b 100%)",
+				
+				// Cultural Pattern Gradients
+				"batik-subtle": "linear-gradient(135deg, transparent 0%, rgba(244, 196, 48, 0.05) 25%, transparent 50%, rgba(194, 24, 7, 0.05) 75%, transparent 100%)",
+				"indonesian-heritage": "linear-gradient(135deg, #f8f6f0 0%, rgba(244, 196, 48, 0.1) 50%, #f8f6f0 100%)",
 			},
 
 			// Animations

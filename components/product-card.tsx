@@ -12,6 +12,7 @@ import {
 import { Badge } from "@/components/ui/badge";
 import GlassCard from "@/components/ui/GlassCard";
 import { Flame, Leaf, Star, ShoppingCart, Loader2, Bell } from "lucide-react";
+import SpiceHeatIndicator, { HeatLevelBadge } from "@/components/ui/SpiceHeatIndicator";
 import { Product } from "@/src/stripe-config";
 import { toast } from "sonner";
 
@@ -94,62 +95,57 @@ export function ProductCard({ product }: ProductCardProps) {
 					{product.description}
 				</CardDescription>
 
-				<div className='grid grid-cols-2 gap-3'>
-					<div className='flex items-center space-x-2'>
-						<div className='w-8 h-8 bg-red-100 rounded-full flex items-center justify-center'>
-							<Flame className='w-4 h-4 text-red-600' />
+				<div className='space-y-4'>
+					{/* Enhanced Heat Level Indicator */}
+					<div className='bg-gradient-to-r from-coconut-50 to-coconut-100 p-4 rounded-xl border border-coconut-200'>
+						<div className='flex items-center justify-between mb-3'>
+							<h4 className='font-bold text-burgundy-900 text-sm'>Heat Level</h4>
+							<HeatLevelBadge heatLevel={3} />
 						</div>
-						<div>
-							<p className='font-semibold text-sm text-gray-900'>
-								Medium-Hot
-							</p>
-							<p className='text-xs text-gray-600'>
-								🌶️🌶️🌶️
-							</p>
+						<SpiceHeatIndicator 
+							heatLevel={3}
+							variant="detailed"
+							size="sm"
+							className="w-full"
+						/>
+					</div>
+					
+					{/* Enhanced Product Features */}
+					<div className='grid grid-cols-2 gap-3'>
+						<div className='flex items-center space-x-3 p-3 rounded-lg bg-palm-50 border border-palm-200 hover:bg-palm-100 transition-colors'>
+							<div className='w-10 h-10 bg-palm-100 rounded-full flex items-center justify-center border border-palm-300'>
+								<Leaf className='w-5 h-5 text-palm-600' />
+							</div>
+							<div>
+								<p className='font-bold text-sm text-burgundy-900'>
+									🌿 All Natural
+								</p>
+								<p className='text-xs text-palm-700 font-medium'>
+									No preservatives
+								</p>
+							</div>
+						</div>
+
+						<div className='flex items-center space-x-3 p-3 rounded-lg bg-turmeric-50 border border-turmeric-200 hover:bg-turmeric-100 transition-colors'>
+							<div className='w-10 h-10 bg-turmeric-100 rounded-full flex items-center justify-center border border-turmeric-300'>
+								<Star className='w-5 h-5 text-turmeric-600' />
+							</div>
+							<div>
+								<p className='font-bold text-sm text-burgundy-900'>
+									⭐ Premium Quality
+								</p>
+								<p className='text-xs text-turmeric-700 font-medium'>
+									Chef handcrafted
+								</p>
+							</div>
 						</div>
 					</div>
-
-					<div className='flex items-center space-x-2'>
-						<div className='w-8 h-8 bg-emerald-100 rounded-full flex items-center justify-center'>
-							<Leaf className='w-4 h-4 text-emerald-600' />
-						</div>
-						<div>
-							<p className='font-semibold text-sm text-gray-900'>
-								All Natural
-							</p>
-							<p className='text-xs text-gray-600'>
-								No preservatives
-							</p>
-						</div>
-					</div>
-
-					<div className='flex items-center space-x-2'>
-						<div className='w-8 h-8 bg-amber-100 rounded-full flex items-center justify-center'>
-							<Star className='w-4 h-4 text-amber-600' />
-						</div>
-						<div>
-							<p className='font-semibold text-sm text-gray-900'>
-								Premium
-							</p>
-							<p className='text-xs text-gray-600'>
-								Handcrafted
-							</p>
-						</div>
-					</div>
-
-					<div className='flex items-center space-x-2'>
-						<div className='w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center'>
-							<span className='text-orange-600 font-bold text-xs'>
-								200g
-							</span>
-						</div>
-						<div>
-							<p className='font-semibold text-sm text-gray-900'>
-								Size
-							</p>
-							<p className='text-xs text-gray-600'>
-								Perfect portion
-							</p>
+					
+					{/* Additional product info if needed */}
+					<div className='flex items-center justify-center p-3 rounded-lg bg-coconut-50 border border-coconut-200'>
+						<div className='flex items-center space-x-2'>
+							<span className='text-turmeric-600 font-bold text-sm'>📏 200g</span>
+							<span className='text-palm-700 text-xs'>Perfect portion size</span>
 						</div>
 					</div>
 				</div>
