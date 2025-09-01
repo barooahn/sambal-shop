@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState } from "react"; // TODO: move state into a small client component to reduce hydration
 import Image from "next/image";
 
 import { ChefHat, Award, Heart, Star, Package } from "lucide-react";
@@ -78,7 +78,6 @@ export default function HeroSection() {
 			className='relative flex items-center justify-center overflow-hidden'
 			style={{ minHeight: "max(100vh, 700px)" }}
 		>
-
 			{/* Background Image - Optimized for LCP */}
 			<div
 				className='absolute inset-0 z-0 w-full h-full'
@@ -89,8 +88,7 @@ export default function HeroSection() {
 					alt='Authentic Sambal UK - Premium Indonesian Chili Paste Spices from Spice Islands'
 					fill
 					className='object-cover w-full h-full'
-					priority
-					fetchPriority='high'
+					fetchPriority='low'
 					sizes='100vw'
 					quality={60} // Reduced for faster load
 					placeholder='blur'
@@ -169,21 +167,29 @@ export default function HeroSection() {
 
 						{/* Description - shortened for mobile */}
 						<p className='voice-product-description mobile-text-shadow text-base sm:text-base lg:text-lg text-white/90 mb-3 sm:mb-4 lg:mb-6 max-w-xl mx-auto lg:mx-0 leading-relaxed font-light px-2 lg:px-0'>
-							<span className='sm:hidden'>Traditional Indonesian sweet & spicy chili paste from West Java.</span>
+							<span className='sm:hidden'>
+								Traditional Indonesian sweet & spicy
+								chili paste from West Java.
+							</span>
 							<span className='hidden sm:block'>
 								Chef Yossie's signature{" "}
 								<span className='text-amber-300 font-medium'>
 									Sambal Goreng
 								</span>{" "}
-								combines sweet palm sugar with fiery chilies using the traditional <em>goreng</em> (fried) method from West Java.
+								combines sweet palm sugar with fiery
+								chilies using the traditional{" "}
+								<em>goreng</em> (fried) method from West
+								Java.
 							</span>
 						</p>
-						
+
 						{/* Trust indicator - hidden on mobile */}
 						<div className='hidden sm:block mb-4 lg:mb-6 px-2 lg:px-0'>
 							<div className='inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 border border-white/20'>
 								<Star className='w-4 h-4 text-amber-300 fill-current' />
-								<span className='text-white/90 text-sm font-medium'>Risk-free trial with sample pack</span>
+								<span className='text-white/90 text-sm font-medium'>
+									Risk-free trial with sample pack
+								</span>
 							</div>
 						</div>
 
@@ -194,32 +200,46 @@ export default function HeroSection() {
 									icon: Heart,
 									label: "Sweet & Spicy",
 									desc: "Perfect Balance",
-									gradient: "from-red-500/20 via-orange-500/15 to-amber-500/20"
+									gradient:
+										"from-red-500/20 via-orange-500/15 to-amber-500/20",
 								},
 								{
 									icon: ChefHat,
 									label: "Traditional",
 									desc: "Fried Method",
-									gradient: "from-amber-500/20 via-yellow-500/15 to-orange-500/20"
+									gradient:
+										"from-amber-500/20 via-yellow-500/15 to-orange-500/20",
 								},
 								{
 									icon: Award,
 									label: "West Java",
 									desc: "Recipe",
-									gradient: "from-orange-500/20 via-red-500/15 to-amber-500/20"
+									gradient:
+										"from-orange-500/20 via-red-500/15 to-amber-500/20",
 								},
-							].map(({ icon: Icon, label, desc, gradient }) => (
-								<div
-									key={label}
-									className={`flex flex-col items-center text-center bg-gradient-to-br ${gradient} backdrop-blur-md rounded-lg p-2.5 lg:p-3 border border-amber-300/30 shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 group`}
-								>
-									<Icon className='w-4 h-4 lg:w-5 lg:h-5 text-amber-200 mb-1 lg:mb-1.5 group-hover:text-amber-100 group-hover:scale-110 transition-all duration-300' />
-									<div className='text-white'>
-										<div className='font-medium text-xs lg:text-sm text-white'>{label}</div>
-										<div className='font-light text-xs text-white/80'>{desc}</div>
+							].map(
+								({
+									icon: Icon,
+									label,
+									desc,
+									gradient,
+								}) => (
+									<div
+										key={label}
+										className={`flex flex-col items-center text-center bg-gradient-to-br ${gradient} backdrop-blur-md rounded-lg p-2.5 lg:p-3 border border-amber-300/30 shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 group`}
+									>
+										<Icon className='w-4 h-4 lg:w-5 lg:h-5 text-amber-200 mb-1 lg:mb-1.5 group-hover:text-amber-100 group-hover:scale-110 transition-all duration-300' />
+										<div className='text-white'>
+											<div className='font-medium text-xs lg:text-sm text-white'>
+												{label}
+											</div>
+											<div className='font-light text-xs text-white/80'>
+												{desc}
+											</div>
+										</div>
 									</div>
-								</div>
-							))}
+								)
+							)}
 						</div>
 
 						{/* Primary CTA - simplified for mobile */}
@@ -228,7 +248,8 @@ export default function HeroSection() {
 							<button
 								aria-label='Try Sample Pack First - Primary CTA'
 								onClick={() => {
-									window.location.href = "/sample-pack-try-first";
+									window.location.href =
+										"/sample-pack-try-first";
 								}}
 								className='group relative overflow-hidden bg-gradient-to-r from-red-600 via-red-700 to-red-800 hover:from-red-500 hover:via-red-600 hover:to-red-700 text-white font-bold text-base sm:text-base lg:text-xl py-4 sm:py-4 lg:py-5 px-5 sm:px-6 lg:px-10 rounded-md sm:rounded-xl shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 border border-white/20 w-full min-h-[52px] sm:min-h-[56px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent'
 							>
@@ -270,8 +291,14 @@ export default function HeroSection() {
 										<>
 											<Heart className='w-4 h-4 sm:w-4 sm:h-4' />
 											<span className='text-sm sm:text-sm lg:text-base text-center leading-tight'>
-												<span className='sm:hidden'>Join Waitlist</span>
-												<span className='hidden sm:inline'>Join Waitlist for Full-Size Jars</span>
+												<span className='sm:hidden'>
+													Join Waitlist
+												</span>
+												<span className='hidden sm:inline'>
+													Join Waitlist
+													for Full-Size
+													Jars
+												</span>
 											</span>
 										</>
 									)}
