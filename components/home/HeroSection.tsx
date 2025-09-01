@@ -219,8 +219,7 @@ export default function HeroSection() {
 
 							{/* Secondary CTA - Waitlist */}
 							<WaitlistButton />
-							{/* legacy button removed */}
-							<!--
+
 								aria-label='Join Sambal Goreng waiting list'
 								onClick={handleInterestClick}
 								disabled={
@@ -260,7 +259,7 @@ export default function HeroSection() {
 										</>
 									)}
 								</div>
-							-->
+
 
 						</div>
 
