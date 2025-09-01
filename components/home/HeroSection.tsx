@@ -1,9 +1,9 @@
 "use client";
 
-import { useState } from "react"; // TODO: move state into a small client component to reduce hydration
+
 import Image from "next/image";
 
-import { ChefHat, Award, Star, Package } from "lucide-react";
+import { ChefHat, Award, Star, Package, Heart } from "lucide-react";
 import WaitlistButton from "./WaitlistButton";
 
 // Removed skeleton to prevent layout shifts
@@ -26,7 +26,7 @@ export default function HeroSection() {
 
 
 
-	};
+	
 
 	return (
 		<section
@@ -219,7 +219,7 @@ export default function HeroSection() {
 
 							{/* Secondary CTA - Waitlist */}
 							<WaitlistButton />
-							{/* legacy button removed
+							{/* legacy button removed */}
 							<!--
 								aria-label='Join Sambal Goreng waiting list'
 								onClick={handleInterestClick}
