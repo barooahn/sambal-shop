@@ -1,32 +1,15 @@
 "use client";
 
-
 import Image from "next/image";
 
-import { ChefHat, Award, Star, Package, Heart } from "lucide-react";
+import { ChefHat, Award, Star, Package } from "lucide-react";
 import WaitlistButton from "./WaitlistButton";
 
 // Removed skeleton to prevent layout shifts
 
 export default function HeroSection() {
-
 	// Remove image loading state to prevent layout shift
 	// const [imageLoaded, setImageLoaded] = useState(false);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
 
 	return (
 		<section
@@ -219,48 +202,6 @@ export default function HeroSection() {
 
 							{/* Secondary CTA - Waitlist */}
 							<WaitlistButton />
-
-								aria-label='Join Sambal Goreng waiting list'
-								onClick={handleInterestClick}
-								disabled={
-									interestState.isSubmitting ||
-									interestState.isSubmitted
-								}
-								className='group bg-transparent backdrop-blur-md hover:bg-orange-900/10 text-white font-medium py-3 sm:py-3 lg:py-3.5 px-4 sm:px-4 lg:px-8 rounded-md border-2 border-orange-800/50 hover:border-orange-700/70 shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed w-full min-h-[48px] sm:min-h-[48px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-300/50 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent'
-							>
-								<div className='flex items-center justify-center space-x-1 sm:space-x-2'>
-									{interestState.isSubmitting ? (
-										<>
-											<Heart className='w-4 h-4 sm:w-4 sm:h-4 animate-pulse' />
-											<span className='text-sm sm:text-sm lg:text-base'>
-												Joining...
-											</span>
-										</>
-									) : interestState.isSubmitted ? (
-										<>
-											<Heart className='w-4 h-4 sm:w-4 sm:h-4' />
-											<span className='text-sm sm:text-sm lg:text-base'>
-												Joined! 🌶️
-											</span>
-										</>
-									) : (
-										<>
-											<Heart className='w-4 h-4 sm:w-4 sm:h-4' />
-											<span className='text-sm sm:text-sm lg:text-base text-center leading-tight'>
-												<span className='sm:hidden'>
-													Join Waitlist
-												</span>
-												<span className='hidden sm:inline'>
-													Join Waitlist
-													for Full-Size
-													Jars
-												</span>
-											</span>
-										</>
-									)}
-								</div>
-
-
 						</div>
 
 						{/* Waitlist feedback handled inside client button */}
