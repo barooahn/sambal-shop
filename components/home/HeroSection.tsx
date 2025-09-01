@@ -220,7 +220,7 @@ export default function HeroSection() {
 							{/* Secondary CTA - Waitlist */}
 							<WaitlistButton />
 							{/* legacy button removed
-							<button
+							<!--
 								aria-label='Join Sambal Goreng waiting list'
 								onClick={handleInterestClick}
 								disabled={
@@ -260,10 +260,12 @@ export default function HeroSection() {
 										</>
 									)}
 								</div>
-							</button>
+							-->
+
 						</div>
 
-						{interestState.message && (
+						{/* Waitlist feedback handled inside client button */}
+						{/*
 							<div
 								className={`mt-4 lg:mt-6 p-3 lg:p-4 rounded-lg backdrop-blur-md mx-4 lg:mx-0 lg:max-w-md border shadow-xl ${
 									interestState.message.includes(
@@ -280,7 +282,7 @@ export default function HeroSection() {
 									{interestState.message}
 								</span>
 							</div>
-						)}
+						*/}
 					</div>
 
 					{/* Product showcase - mobile-first optimization */}
