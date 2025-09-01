@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import {
 	Inter,
 	Playfair_Display,
+	Cormorant_Garamond,
+	Great_Vibes,
 } from "next/font/google";
 import Header from "@/components/navigation/Header";
 import Breadcrumb from "@/components/shared/Breadcrumb";
@@ -12,22 +14,34 @@ import dynamic from "next/dynamic";
 // Lazy load non-critical components with improved loading states
 const Footer = dynamic(() => import("@/components/navigation/Footer"), {
 	ssr: true,
-	loading: () => <div className="h-96 bg-gray-50 animate-pulse" />, // Prevent layout shift with skeleton
+	loading: () => <div className='h-96 bg-gray-50 animate-pulse' />, // Prevent layout shift with skeleton
 });
 
-const UKExitIntentPopup = dynamic(() => import("@/components/optimization/UKExitIntentPopup"), {
-	loading: () => null, // No loading state needed for popup
-});
+const UKExitIntentPopup = dynamic(
+	() => import("@/components/optimization/UKExitIntentPopup"),
+	{
+		loading: () => null, // No loading state needed for popup
+	}
+);
 
-const WebVitals = dynamic(() => import("@/components/analytics/WebVitals").then(mod => ({ default: mod.WebVitals })), {
-	loading: () => null,
-});
+const WebVitals = dynamic(
+	() =>
+		import("@/components/analytics/WebVitals").then((mod) => ({
+			default: mod.WebVitals,
+		})),
+	{
+		loading: () => null,
+	}
+);
 
 // Note: ServiceWorkerRegistration is a client component, loaded in body
 
-const Toaster = dynamic(() => import("sonner").then(mod => ({ default: mod.Toaster })), {
-	loading: () => null,
-});
+const Toaster = dynamic(
+	() => import("sonner").then((mod) => ({ default: mod.Toaster })),
+	{
+		loading: () => null,
+	}
+);
 
 import PerformanceOptimizer, {
 	criticalCSS,
@@ -39,7 +53,7 @@ const inter = Inter({
 	subsets: ["latin"],
 	variable: "--font-inter",
 	display: "swap",
-	preload: true,
+	preload: false,
 });
 
 const playfair = Playfair_Display({
@@ -47,7 +61,23 @@ const playfair = Playfair_Display({
 	variable: "--font-playfair",
 	display: "swap",
 	weight: ["400", "700"], // Reduced to only necessary weights
-	preload: false, // Only preload critical fonts
+	preload: false,
+});
+
+const cormorant = Cormorant_Garamond({
+	subsets: ["latin"],
+	variable: "--font-cormorant",
+	weight: ["400", "500", "600"],
+	display: "swap",
+	preload: false,
+});
+
+const greatVibes = Great_Vibes({
+	subsets: ["latin"],
+	variable: "--font-greatvibes",
+	weight: ["400"],
+	display: "swap",
+	preload: false,
 });
 
 export const metadata: Metadata = {
@@ -81,9 +111,7 @@ export const metadata: Metadata = {
 		title: "Authentic Indonesian Sambal Goreng UK | Sweet & Spicy",
 		description:
 			"Coming Soon: Authentic Sambal Goreng - Traditional Indonesian sweet & spicy chili paste with palm sugar. Made using traditional goreng method from West Java. Join our waitlist for early access.",
-		images: [
-			"/images/optimized/sambal-goreng-md.webp",
-		],
+		images: ["/images/optimized/sambal-goreng-md.webp"],
 	},
 	robots: {
 		index: true,
@@ -114,27 +142,19 @@ export default function RootLayout({
 			<head>
 				{/* Critical Resource Hints */}
 				<link rel='dns-prefetch' href='//fonts.googleapis.com' />
-				<link rel='dns-prefetch' href='//www.googletagmanager.com' />
-				<link rel='dns-prefetch' href='//www.google-analytics.com' />
-				
+				<link
+					rel='dns-prefetch'
+					href='//www.googletagmanager.com'
+				/>
+				<link
+					rel='dns-prefetch'
+					href='//www.google-analytics.com'
+				/>
+
 				{/* Preload critical images - handled by PerformanceOptimizer component */}
-				
-				{/* Preload critical self-hosted fonts */}
-				<link 
-					rel='preload' 
-					href='/fonts/junisrg_-webfont.woff2' 
-					as='font' 
-					type='font/woff2'
-					crossOrigin=''
-				/>
-				<link 
-					rel='preload' 
-					href='/fonts/junisb__-webfont.woff2' 
-					as='font' 
-					type='font/woff2'
-					crossOrigin=''
-				/>
-				
+
+				{/* Removed preload of unused self-hosted fonts (Junius) */}
+
 				<link
 					rel='preconnect'
 					href='https://fonts.googleapis.com'
@@ -150,10 +170,11 @@ export default function RootLayout({
 					href='https://www.google-analytics.com'
 					crossOrigin='anonymous'
 				/>
-				
+
 				{/* Critical CSS inlining to prevent render blocking */}
-				<style dangerouslySetInnerHTML={{
-					__html: `
+				<style
+					dangerouslySetInnerHTML={{
+						__html: `
 						/* Critical above-the-fold CSS */
 						body { 
 							font-family: var(--font-inter) !important; 
@@ -249,16 +270,17 @@ export default function RootLayout({
 							.lg\\:block.xl\\:hidden { display: none !important; }
 							.xl\\:block { display: block !important; }
 						}
-					`
-				}} />
-				
+					`,
+					}}
+				/>
+
 				<PerformanceOptimizer
 					preloadImages={[]} // Don't preload by default in layout - let pages decide
 					criticalCSS={criticalCSS}
 				/>
 			</head>
 			<body
-				className={`${inter.variable} ${playfair.variable} ${inter.className}`}
+				className={`${inter.variable} ${playfair.variable} ${cormorant.variable} ${greatVibes.variable} ${inter.className}`}
 			>
 				<ThirdPartyScripts
 					measurementId={
@@ -267,18 +289,22 @@ export default function RootLayout({
 				/>
 				<WebVitals />
 				{/* ServiceWorkerRegistration disabled for testing */}
-				
+
 				{/* Skip to main content for keyboard navigation */}
-				<a 
-					href="#main-content" 
-					className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-white focus:text-gray-900 focus:rounded focus:shadow-lg focus:underline"
+				<a
+					href='#main-content'
+					className='sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-white focus:text-gray-900 focus:rounded focus:shadow-lg focus:underline'
 				>
 					Skip to main content
 				</a>
-				
+
 				<Header />
 				<Breadcrumb />
-				<main id="main-content" role="main" className="min-h-screen mb-16">
+				<main
+					id='main-content'
+					role='main'
+					className='min-h-screen mb-16'
+				>
 					{children}
 				</main>
 				<Footer />

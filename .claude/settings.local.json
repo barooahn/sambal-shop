@@ -82,7 +82,8 @@
       "mcp__playwright__browser_type",
       "mcp__playwright__browser_click",
       "Bash(yarn next:*)",
-      "Bash(del .nexttrace /f)"
+      "Bash(del .nexttrace /f)",
+      "Bash(npx playwright:*)"
     ],
     "deny": [],
     "defaultMode": "acceptEdits",
