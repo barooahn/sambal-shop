@@ -3,74 +3,29 @@
 import { useState } from "react"; // TODO: move state into a small client component to reduce hydration
 import Image from "next/image";
 
-import { ChefHat, Award, Heart, Star, Package } from "lucide-react";
-import { toast } from "sonner";
+import { ChefHat, Award, Star, Package } from "lucide-react";
+import WaitlistButton from "./WaitlistButton";
 
 // Removed skeleton to prevent layout shifts
 
 export default function HeroSection() {
-	const [interestState, setInterestState] = useState({
-		isSubmitting: false,
-		isSubmitted: false,
-		message: "",
-	});
+
 	// Remove image loading state to prevent layout shift
 	// const [imageLoaded, setImageLoaded] = useState(false);
 
-	const handleInterestClick = async () => {
-		setInterestState({
-			isSubmitting: true,
-			isSubmitted: false,
-			message: "",
-		});
-		try {
-			const res = await fetch("/api/interest", {
-				method: "POST",
-				headers: { "Content-Type": "application/json" },
-				body: JSON.stringify({ source: "hero_waitlist" }),
-			});
-			if (!res.ok) {
-				throw new Error("Failed to record interest");
-			}
-			const result = await res.json();
-			setInterestState({
-				isSubmitting: false,
-				isSubmitted: true,
-				message:
-					result.message ||
-					"Thanks — we’ll notify you when we launch in the UK.",
-			});
-			// Track GA event (click/recorded)
-			try {
-				const { trackEvent } = await import(
-					"@/components/analytics/GoogleAnalytics"
-				);
-				trackEvent(
-					"hero_interest_click",
-					"product_engagement",
-					"hero_waitlist"
-				);
-			} catch {}
-			// Toast confirmation
-			toast.success(
-				"Interest recorded — you’re on the UK VIP list! 🇬🇧🌶️"
-			);
-		} catch (error) {
-			setInterestState({
-				isSubmitting: false,
-				isSubmitted: true,
-				message: "Something went wrong. Please try again later.",
-			});
-			toast.error("Couldn’t record your interest. Please try again.");
-		}
 
-		setTimeout(() => {
-			setInterestState((prev) => ({
-				...prev,
-				isSubmitted: false,
-				message: "",
-			}));
-		}, 4000);
+
+
+
+
+
+
+
+
+
+
+
+
 	};
 
 	return (
@@ -262,8 +217,10 @@ export default function HeroSection() {
 								</div>
 							</button>
 
-							{/* Secondary CTA - Waitlist (mobile simplified) */}
-							<button
+							{/* Secondary CTA - Waitlist */}
+							<WaitlistButton />
+							{/* legacy button removed
+							<!--
 								aria-label='Join Sambal Goreng waiting list'
 								onClick={handleInterestClick}
 								disabled={
@@ -303,10 +260,12 @@ export default function HeroSection() {
 										</>
 									)}
 								</div>
-							</button>
+							-->
+
 						</div>
 
-						{interestState.message && (
+						{/* Waitlist feedback handled inside client button */}
+						{/*
 							<div
 								className={`mt-4 lg:mt-6 p-3 lg:p-4 rounded-lg backdrop-blur-md mx-4 lg:mx-0 lg:max-w-md border shadow-xl ${
 									interestState.message.includes(
@@ -323,7 +282,7 @@ export default function HeroSection() {
 									{interestState.message}
 								</span>
 							</div>
-						)}
+						*/}
 					</div>
 
 					{/* Product showcase - mobile-first optimization */}
