@@ -83,7 +83,8 @@
       "mcp__playwright__browser_click",
       "Bash(yarn next:*)",
       "Bash(del .nexttrace /f)",
-      "Bash(npx playwright:*)"
+      "Bash(npx playwright:*)",
+      "Bash(dir \"C:\\Users\\thinb\\Desktop\\Sambal\\supabase\\migrations\"\")"
     ],
     "deny": [],
     "defaultMode": "acceptEdits",
