@@ -1,8 +1,9 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
+import { withRateLimit } from "@/lib/rate-limiter";
 
 export const runtime = "nodejs";
 
-export async function POST(request: Request) {
+async function handlePOST(request: NextRequest) {
   try {
     const { source = "hero_waitlist" } = await request.json().catch(() => ({ source: "hero_waitlist" }));
 
@@ -35,4 +36,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ success: false, message: "Something went wrong. Please try again later." }, { status: 500 });
   }
 }
+
+// Export with rate limiting
+export const POST = withRateLimit(handlePOST, 'interest');
 

@@ -184,4 +184,145 @@ export const trackExternalLink = (url: string, linkText?: string) => {
 	trackEvent("external_link_click", "outbound", linkText || url);
 };
 
-// Declare gtag function for TypeScript (removed to avoid conflicts)
+// E-commerce tracking functions for GA4
+export const trackPurchase = (transactionData: {
+	transaction_id: string;
+	value: number;
+	currency?: string;
+	items: Array<{
+		item_id: string;
+		item_name: string;
+		category: string;
+		quantity: number;
+		price: number;
+	}>;
+}) => {
+	if (typeof window !== "undefined" && window.gtag) {
+		window.gtag("event", "purchase", {
+			transaction_id: transactionData.transaction_id,
+			value: transactionData.value,
+			currency: transactionData.currency || "GBP",
+			items: transactionData.items
+		});
+	}
+};
+
+export const trackAddToCart = (productData: {
+	currency?: string;
+	value: number;
+	items: Array<{
+		item_id: string;
+		item_name: string;
+		category: string;
+		quantity: number;
+		price: number;
+	}>;
+}) => {
+	if (typeof window !== "undefined" && window.gtag) {
+		window.gtag("event", "add_to_cart", {
+			currency: productData.currency || "GBP",
+			value: productData.value,
+			items: productData.items
+		});
+	}
+};
+
+export const trackBeginCheckout = (cartData: {
+	currency?: string;
+	value: number;
+	items: Array<{
+		item_id: string;
+		item_name: string;
+		category: string;
+		quantity: number;
+		price: number;
+	}>;
+}) => {
+	if (typeof window !== "undefined" && window.gtag) {
+		window.gtag("event", "begin_checkout", {
+			currency: cartData.currency || "GBP",
+			value: cartData.value,
+			items: cartData.items
+		});
+	}
+};
+
+export const trackRemoveFromCart = (productData: {
+	currency?: string;
+	value: number;
+	items: Array<{
+		item_id: string;
+		item_name: string;
+		category: string;
+		quantity: number;
+		price: number;
+	}>;
+}) => {
+	if (typeof window !== "undefined" && window.gtag) {
+		window.gtag("event", "remove_from_cart", {
+			currency: productData.currency || "GBP",
+			value: productData.value,
+			items: productData.items
+		});
+	}
+};
+
+export const trackViewItem = (productData: {
+	currency?: string;
+	value: number;
+	items: Array<{
+		item_id: string;
+		item_name: string;
+		category: string;
+		quantity?: number;
+		price: number;
+	}>;
+}) => {
+	if (typeof window !== "undefined" && window.gtag) {
+		window.gtag("event", "view_item", {
+			currency: productData.currency || "GBP",
+			value: productData.value,
+			items: productData.items
+		});
+	}
+};
+
+// Customer journey tracking for sambal education
+export const trackSamplePackView = () => {
+	if (typeof window !== "undefined" && window.gtag) {
+		window.gtag("event", "sample_pack_view", {
+			customer_segment: "hesitant_first_timer",
+			product_category: "sample_pack"
+		});
+	}
+};
+
+export const trackHeatLevelAssessment = (level: number) => {
+	if (typeof window !== "undefined" && window.gtag) {
+		window.gtag("event", "heat_preference_identified", {
+			heat_tolerance: level,
+			customer_persona: level <= 2 ? "curious_foodie" : level >= 4 ? "spice_enthusiast" : "moderate_explorer"
+		});
+	}
+};
+
+export const trackCulturalContentEngagement = (contentType: string) => {
+	if (typeof window !== "undefined" && window.gtag) {
+		window.gtag("event", "cultural_content_engagement", {
+			content_type: contentType,
+			learning_stage: "cultural_education"
+		});
+	}
+};
+
+// Declare gtag function for TypeScript
+declare global {
+	interface Window {
+		gtag: (
+			command: 'config' | 'event' | 'js' | 'set',
+			targetId: string | Date,
+			config?: any
+		) => void;
+		dataLayer: any[];
+	}
+}

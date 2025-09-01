@@ -216,10 +216,10 @@ export function createOptimizedComponent<T extends Record<string, any>>(
 ) {
   const { memo = true, lazy = false, ssr = true } = options;
 
-  let OptimizedComponent = Component;
+  let OptimizedComponent: React.ComponentType<T> = Component;
 
   if (memo) {
-    OptimizedComponent = React.memo(OptimizedComponent);
+    OptimizedComponent = React.memo(OptimizedComponent) as unknown as React.ComponentType<T>;
   }
 
   if (lazy) {

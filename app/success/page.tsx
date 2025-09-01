@@ -12,6 +12,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Package, ArrowRight, Home } from "lucide-react";
 import Link from "next/link";
+import { trackPurchase } from "@/components/analytics/GoogleAnalytics";
 
 function SuccessPageContent() {
 	const searchParams = useSearchParams();
@@ -20,13 +21,32 @@ function SuccessPageContent() {
 	const [loading, setLoading] = useState(true);
 
 	useEffect(() => {
+		// Track GA4 purchase event if session ID is available
+		if (sessionId) {
+			// Track the purchase conversion for GA4 e-commerce
+			trackPurchase({
+				transaction_id: sessionId,
+				value: 25.50, // Default value - this should ideally come from Stripe session data
+				currency: "GBP",
+				items: [{
+					item_id: "sambal_traditional",
+					item_name: "Traditional Indonesian Sambal",
+					category: "Indonesian Sambal",
+					quantity: 1,
+					price: 25.50
+				}]
+			});
+
+			console.log("GA4 purchase event tracked for session:", sessionId);
+		}
+
 		// Simulate loading time for better UX
 		const timer = setTimeout(() => {
 			setLoading(false);
 		}, 1500);
 
 		return () => clearTimeout(timer);
-	}, []);
+	}, [sessionId]);
 
 	if (loading) {
 		return (

@@ -21,7 +21,6 @@ export default function Header() {
 	const SALES_ENABLED = process.env.NEXT_PUBLIC_SALES_ENABLED === "true";
 
 	const navigation = [
-		{ name: "Home", href: "/" },
 		{
 			name: "Products",
 			href: "/shop",
@@ -117,8 +116,12 @@ export default function Header() {
 
 	return (
 		<header
-			role="banner"
-			className={`sticky top-0 z-50 backdrop-blur-sm transition-all duration-300 ${isScrolled ? "bg-cream-50/80 border-b border-gold-300 shadow-gold" : "bg-cream-50/95 border-b border-gold-200"}`}
+			role='banner'
+			className={`sticky top-0 z-50 backdrop-blur-sm transition-all duration-300 ${
+				isScrolled
+					? "bg-cream-50/80 border-b border-gold-300 shadow-gold"
+					: "bg-cream-50/95 border-b border-gold-200"
+			}`}
 		>
 			<a
 				href='#main-content'
@@ -128,7 +131,9 @@ export default function Header() {
 			</a>
 			{/* Top micro-bar */}
 			<div
-				className={`overflow-hidden bg-burgundy-900 text-gold-100 text-xs font-body transition-[height,opacity] duration-300 ${isScrolled ? "h-0 opacity-0" : "h-9 opacity-100"}`}
+				className={`overflow-hidden bg-burgundy-900 text-gold-100 text-xs font-body transition-[height,opacity] duration-300 ${
+					isScrolled ? "h-0 opacity-0" : "h-9 opacity-100"
+				}`}
 			>
 				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-9 flex items-center'>
 					<div className='flex items-center gap-6 overflow-x-auto whitespace-nowrap w-full no-scrollbar'>
@@ -147,12 +152,16 @@ export default function Header() {
 			<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 				<div className='flex justify-between items-center h-16'>
 					{/* Enhanced Logo with Indonesian Cultural Elements */}
-					<Link href='/' className='flex items-center space-x-3 group min-h-[44px] min-w-[44px]'>
+					<Link
+						href='/'
+						aria-label='Go to homepage'
+						className='flex items-center space-x-3 group min-h-[44px] min-w-[44px]'
+					>
 						<div className='relative w-12 h-12 sm:w-12 sm:h-12'>
 							{/* Subtle cultural background ring */}
 							<div className='absolute inset-0 rounded-full bg-gradient-to-br from-turmeric-100 to-chili-100 opacity-20 group-hover:opacity-40 transition-opacity duration-300'></div>
 							<div className='absolute inset-0.5 rounded-full bg-gradient-to-br from-coconut-50 to-white shadow-sm'></div>
-							
+
 							<OptimizedImage
 								src='/images/optimized/logo-xs.webp'
 								alt='Spice Island Indonesia - Authentic Indonesian Sambal UK'
@@ -164,35 +173,25 @@ export default function Header() {
 								sizes='(max-width: 640px) 40px, 48px'
 							/>
 						</div>
-						
-						<div className='hidden sm:flex flex-col justify-center leading-tight'>
-							{/* Main brand name with Indonesian styling */}
-							<div className='font-bold text-base text-spice-gradient group-hover:text-golden-glow transition-colors duration-300'>
-								<span className='text-turmeric-600'>SPICE</span>{' '}
-								<span className='text-chili-600'>ISLAND</span>
+
+						<div className='flex flex-col justify-center leading-tight'>
+							{/* Main brand name with same styling as hero title */}
+							<div className='font-brand text-lg sm:text-xl lg:text-2xl group-hover:text-golden-glow transition-colors duration-300 leading-tight mt-4'>
+								<span className='text-turmeric-700'>
+									SPICE ISLAND
+								</span>
 							</div>
-							
+
 							{/* Subtitle with cultural accent */}
-							<div className='flex items-center space-x-1 text-xs'>
-								<span className='text-burgundy-700 font-medium tracking-wide'>INDONESIA</span>
-								<span className='text-turmeric-500'>🇮🇩</span>
+							<div className='text-center text-sm sm:text-base'>
+								<span className='text-turmeric-700 font-body tracking-wide'>
+									INDONESIA
+								</span>
 							</div>
-							
+
 							{/* Subtle tagline */}
-							<div className='text-[10px] text-palm-600 font-medium tracking-widest mt-0.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
+							<div className='text-xs text-palm-600 font-brand font-medium tracking-widest mt-0.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
 								AUTHENTIC SAMBAL
-							</div>
-						</div>
-						
-						{/* Mobile-only compact version */}
-						<div className='sm:hidden flex flex-col justify-center leading-none'>
-							<div className='text-sm font-bold'>
-								<span className='text-turmeric-600'>SPICE</span>{' '}
-								<span className='text-chili-600'>ISLAND</span>
-							</div>
-							<div className='text-xs text-burgundy-700 font-medium flex items-center space-x-1'>
-								<span>INDONESIA</span>
-								<span className='text-turmeric-500'>🇮🇩</span>
 							</div>
 						</div>
 					</Link>
@@ -350,7 +349,14 @@ export default function Header() {
 																				/>
 																				{/* Status Badge */}
 																				<div
-																					className={`absolute top-2 right-2 ${statusInfo[dropdownItem.name]?.color || "bg-burgundy-600"} text-white text-xs px-2 py-0.5 rounded-full font-medium`}
+																					className={`absolute top-2 right-2 ${
+																						statusInfo[
+																							dropdownItem
+																								.name
+																						]
+																							?.color ||
+																						"bg-burgundy-600"
+																					} text-white text-xs px-2 py-0.5 rounded-full font-medium`}
 																				>
 																					{statusInfo[
 																						dropdownItem
@@ -538,11 +544,11 @@ export default function Header() {
 
 				{/* Mobile Navigation */}
 				{isMenuOpen && (
-					<nav 
-						id="mobile-menu" 
-						className='lg:hidden' 
-						role="navigation" 
-						aria-label="Mobile navigation"
+					<nav
+						id='mobile-menu'
+						className='lg:hidden'
+						role='navigation'
+						aria-label='Mobile navigation'
 					>
 						<div className='px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gold-200'>
 							{/* Search Link */}

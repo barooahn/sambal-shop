@@ -1,6 +1,7 @@
- import { NextRequest, NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
+import { withRateLimit } from "@/lib/rate-limiter";
 
-export async function POST(request: NextRequest) {
+async function handlePOST(request: NextRequest) {
 	try {
 		const { email } = await request.json();
 
@@ -64,13 +65,19 @@ export async function POST(request: NextRequest) {
 					);
 				}
 
-				// Send welcome email (non-blocking)
+				// Send welcome email and start sequence (non-blocking)
 				try {
 					if (process.env.ZEPTOMAIL_SMTP_HOST && process.env.ZEPTOMAIL_FROM_EMAIL) {
-						// Import and send welcome email
+						// Import and send welcome email #1
 						const emailLib = await import("@/lib/email");
 						emailLib.sendWelcomeEmail(email).catch((error: any) => {
 							console.error('Welcome email error:', error);
+						});
+
+						// Start the welcome email sequence (emails 2-5)
+						const { addToWelcomeSequence } = await import("@/lib/email-campaigns");
+						addToWelcomeSequence(email, { firstName: email.split('@')[0] }).catch((error: any) => {
+							console.error('Welcome sequence error:', error);
 						});
 					}
 				} catch (error) {
@@ -105,3 +112,6 @@ export async function POST(request: NextRequest) {
 		);
 	}
 }
+
+// Export with rate limiting
+export const POST = withRateLimit(handlePOST, 'newsletter');

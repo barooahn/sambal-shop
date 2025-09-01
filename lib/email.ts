@@ -789,3 +789,84 @@ export async function sendReviewFollowUpEmail(reviewData: {
 		return { success: false, error };
 	}
 }
+
+// Welcome Series Email Functions
+export async function sendWelcomeEmail2(email: string, firstName?: string) {
+	try {
+		const { getWelcomeEmail2Html } = await import('./email-templates');
+		
+		const mailOptions = {
+			from: `"Chef Yossie - Spice Island Indonesia" <${process.env.ZEPTOMAIL_FROM_EMAIL!}>`,
+			to: email,
+			subject: "What makes Indonesian sambal so special? 🇮🇩",
+			html: getWelcomeEmail2Html({ email, firstName }),
+		};
+
+		const result = await transport.sendMail(mailOptions);
+		console.log(`✅ Welcome email 2 (sambal education) sent to ${email}`);
+		return { success: true, data: result };
+	} catch (error) {
+		console.error("Error sending welcome email 2:", error);
+		return { success: false, error };
+	}
+}
+
+export async function sendWelcomeEmail3(email: string, firstName?: string, heatTolerance?: number) {
+	try {
+		const { getWelcomeEmail3Html } = await import('./email-templates');
+		
+		const mailOptions = {
+			from: `"Chef Yossie - Spice Island Indonesia" <${process.env.ZEPTOMAIL_FROM_EMAIL!}>`,
+			to: email,
+			subject: "Your first sambal recipe (easy wins!) 👨‍🍳",
+			html: getWelcomeEmail3Html({ email, firstName, heatTolerance }),
+		};
+
+		const result = await transport.sendMail(mailOptions);
+		console.log(`✅ Welcome email 3 (recipe guidance) sent to ${email}`);
+		return { success: true, data: result };
+	} catch (error) {
+		console.error("Error sending welcome email 3:", error);
+		return { success: false, error };
+	}
+}
+
+export async function sendWelcomeEmail4(email: string, firstName?: string) {
+	try {
+		const { getWelcomeEmail4Html } = await import('./email-templates');
+		
+		const mailOptions = {
+			from: `"Chef Yossie - Spice Island Indonesia" <${process.env.ZEPTOMAIL_FROM_EMAIL!}>`,
+			to: email,
+			subject: "Meet Chef Yossie - The Story Behind Our Authentic Sambals 👨‍🍳",
+			html: getWelcomeEmail4Html({ email, firstName }),
+		};
+
+		const result = await transport.sendMail(mailOptions);
+		console.log(`✅ Welcome email 4 (Chef Yossie story) sent to ${email}`);
+		return { success: true, data: result };
+	} catch (error) {
+		console.error("Error sending welcome email 4:", error);
+		return { success: false, error };
+	}
+}
+
+export async function sendWelcomeEmail5(email: string, firstName?: string) {
+	try {
+		const { getWelcomeEmail5Html } = await import('./email-templates');
+		
+		const mailOptions = {
+			from: `"Spice Island Indonesia Community" <${process.env.ZEPTOMAIL_FROM_EMAIL!}>`,
+			to: email,
+			subject: "Share Your Sambal Creations - Join Our Recipe Community! 🌶️",
+			html: getWelcomeEmail5Html({ email, firstName }),
+		};
+
+		const result = await transport.sendMail(mailOptions);
+		console.log(`✅ Welcome email 5 (community recipes) sent to ${email}`);
+		return { success: true, data: result };
+	} catch (error) {
+		console.error("Error sending welcome email 5:", error);
+		return { success: false, error };
+	}
+}

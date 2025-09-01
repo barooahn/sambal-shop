@@ -1,30 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
-// import { contactFormSchema, rateLimitConfig, sanitizeInput } from "@/lib/validation";
-// import { z } from "zod";
-
-// Simple in-memory rate limiting store (use Redis in production)
-const rateLimitStore = new Map<string, { count: number; resetTime: number }>();
-
-// Rate limiting utility  
-function checkRateLimit(key: string, config: { windowMs: number; max: number }): boolean {
-	const now = Date.now();
-	const entry = rateLimitStore.get(key);
-	
-	if (!entry || now > entry.resetTime) {
-		rateLimitStore.set(key, { count: 1, resetTime: now + config.windowMs });
-		return true;
-	}
-	
-	if (entry.count >= config.max) {
-		return false;
-	}
-	
-	entry.count++;
-	return true;
-}
+import { withRateLimit } from "@/lib/rate-limiter";
 
 // This API route handles contact form submissions with enhanced security
-export async function POST(request: NextRequest) {
+async function handlePOST(request: NextRequest) {
 	try {
 		const { name, email, message, timestamp, source, userAgent } =
 			await request.json();
@@ -162,3 +140,6 @@ async function logContactForm(data: any) {
 		message: "Thank you for your message! We'll get back to you within 24 hours.",
 	});
 }
+
+// Export with rate limiting
+export const POST = withRateLimit(handlePOST, 'contact');

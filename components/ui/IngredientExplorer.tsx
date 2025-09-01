@@ -5,7 +5,7 @@ import { ChevronLeft, ChevronRight, Info, Leaf, Star, MapPin, Clock, Flame } fro
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { SpiceHeatIndicator } from '@/components/ui/SpiceHeatIndicator';
+import SpiceHeatIndicator from '@/components/ui/SpiceHeatIndicator';
 import { BatikCard } from '@/components/ui/AdvancedBatikPatterns';
 
 interface Ingredient {

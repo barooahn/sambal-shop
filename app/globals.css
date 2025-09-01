@@ -33,7 +33,7 @@
 	font-display: swap;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Great+Vibes&family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600&display=swap");
 
 /* Brand Colors - Enhanced for Accessibility */
 :root {
@@ -44,6 +44,7 @@
 	--color-highlight-red: #c1272d;
 	
 	/* Indonesian Spice Colors - WCAG AA Compliant */
+	--turmeric-500: #e6b000; /* Lighter turmeric for gradients */
 	--turmeric-600: #cc9900; /* 4.5:1 contrast on white */
 	--turmeric-700: #b38600; /* 5.8:1 contrast on white */
 	--chili-600: #b91c1c; /* 4.8:1 contrast on white */
@@ -60,7 +61,7 @@
 }
 
 body {
-	font-family: "Junius", serif !important;
+	font-family: "Inter", sans-serif;
 }
 
 h1,
@@ -69,7 +70,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: "Junius", serif !important;
+	font-family: "Playfair Display", serif;
 }
 
 /* Enhanced Typography with Indonesian Cultural Elements */
@@ -85,7 +86,7 @@ h6 {
 
 /* Indonesian-inspired Typography Classes */
 .text-spice-title {
-	font-family: "Junius Bold", serif;
+	font-family: "Playfair Display", serif;
 	font-weight: bold;
 	color: var(--chili-700);
 	text-shadow: 0 1px 2px rgba(194, 24, 7, 0.1);
@@ -93,7 +94,7 @@ h6 {
 }
 
 .text-heritage {
-	font-family: "Junius", serif;
+	font-family: "Playfair Display", serif;
 	color: var(--burgundy-800);
 	font-style: italic;
 	line-height: 1.6;
@@ -116,7 +117,7 @@ h6 {
 /* Enhanced Drop Caps for Cultural Content */
 .drop-cap::first-letter {
 	float: left;
-	font-family: "Junius Bold", serif;
+	font-family: "Playfair Display", serif;
 	font-size: 4rem;
 	line-height: 3rem;
 	padding-right: 8px;
@@ -571,30 +572,30 @@ h6 {
 
 /* Custom font classes */
 .font-brand {
-	font-family: var(--font-playfair), serif;
+	font-family: "Playfair Display", serif;
 }
 
 .font-elegant {
-	font-family: "Cormorant Garamond", serif !important;
+	font-family: "Cormorant Garamond", serif;
 }
 
 .font-script {
-	font-family: var(--font-dancing), cursive;
+	font-family: "Great Vibes", cursive;
 }
 
 .font-body {
-	font-family: var(--font-inter), sans-serif;
+	font-family: "Inter", sans-serif;
 }
 
-/* Logo font class mapping to Junius for navbar branding */
+/* Logo font class mapping to Playfair Display for navbar branding */
 .font-logo {
-	font-family: "Junius", serif !important;
-	text-transform: uppercase !important;
-	font-size: 1.4rem !important;
-	display: flex !important;
-	justify-content: center !important;
-	align-items: center !important;
-	text-align: center !important;
+	font-family: "Playfair Display", serif;
+	text-transform: uppercase;
+	font-size: 1.4rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
 }
 
 .font-logo-sub {

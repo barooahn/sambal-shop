@@ -237,7 +237,7 @@ export function HeatLevelSelector({
       </div>
       
       <div className="grid grid-cols-1 gap-2">
-        {(Object.keys(heatLevelData) as Array<keyof typeof heatLevelData>).map((level) => {
+        {(Object.keys(heatLevelData) as unknown as Array<keyof typeof heatLevelData>).map((level) => {
           const heat = heatLevelData[level];
           const isSelected = selectedLevel === level;
           

@@ -107,10 +107,4 @@ export default function ThirdPartyScripts({
 	);
 }
 
-// Declare gtag function for TypeScript
-declare global {
-	interface Window {
-		gtag: (...args: any[]) => void;
-		dataLayer: any[];
-	}
-}
+// gtag function already declared in GoogleAnalytics.tsx
