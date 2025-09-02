@@ -121,6 +121,11 @@ const staticRoutes = [
 		changeFrequency: "monthly" as const,
 	},
 
+	// Community pages
+	{ route: "/community", priority: 0.7, changeFrequency: "weekly" as const },
+	{ route: "/community/quiz", priority: 0.6, changeFrequency: "monthly" as const },
+	{ route: "/community/share-story", priority: 0.6, changeFrequency: "monthly" as const },
+
 	// Info pages
 	{ route: "/about", priority: 0.6, changeFrequency: "monthly" as const },
 	{ route: "/chef", priority: 0.6, changeFrequency: "monthly" as const },
