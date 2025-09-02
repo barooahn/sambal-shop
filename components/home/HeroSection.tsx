@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-import { ChefHat, Award, Star, Package, Heart } from "lucide-react";
+import { ChefHat, Award, Star, Package, Heart } from "@/components/ui/icons";
 import WaitlistButton from "./WaitlistButton";
 
 // Removed skeleton to prevent layout shifts

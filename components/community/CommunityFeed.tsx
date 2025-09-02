@@ -18,7 +18,7 @@ import {
 	ChefHat,
 	Calendar,
 	User,
-} from "lucide-react";
+} from "@/components/ui/icons";
 import { toast } from "sonner";
 
 interface Story {

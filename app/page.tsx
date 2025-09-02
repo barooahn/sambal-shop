@@ -36,7 +36,7 @@ import FloatingIngredients from "@/components/ui/FloatingIngredients";
 import TrustIndicators, {
 	DeliveryGuarantee,
 } from "@/components/ui/TrustIndicators";
-import { Waves, Triangle } from "lucide-react";
+import { Waves, Triangle } from "@/components/ui/icons";
 
 // Ingredient configurations for different sections
 const heroIngredients = [

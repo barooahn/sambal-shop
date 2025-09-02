@@ -3,14 +3,17 @@ import type { Metadata } from "next";
 import {
 	Inter,
 	Playfair_Display,
-	Cormorant_Garamond,
-	Great_Vibes,
 } from "next/font/google";
+// Cormorant_Garamond and Great_Vibes moved to page-level imports to reduce global bundle
 import Header from "@/components/navigation/Header";
-import Breadcrumb from "@/components/shared/Breadcrumb";
 import ThirdPartyScripts from "@/components/optimization/ThirdPartyScripts";
 import dynamic from "next/dynamic";
 import { Suspense } from "react";
+
+// Dynamically load Breadcrumb to reduce initial bundle
+const Breadcrumb = dynamic(() => import("@/components/shared/Breadcrumb"), {
+	loading: () => null, // Breadcrumb is not critical for initial render
+});
 
 // Lazy load non-critical components with improved loading states
 const Footer = dynamic(() => import("@/components/navigation/Footer"), {
@@ -44,7 +47,10 @@ const Toaster = dynamic(
 	}
 );
 
-import PageViewTracker from "@/components/analytics/PageViewTracker";
+// Dynamically import PageViewTracker to reduce initial bundle
+const PageViewTracker = dynamic(() => import("@/components/analytics/PageViewTracker"), {
+	loading: () => null,
+});
 
 import PerformanceOptimizer, {
 	criticalCSS,
@@ -67,21 +73,8 @@ const playfair = Playfair_Display({
 	preload: false,
 });
 
-const cormorant = Cormorant_Garamond({
-	subsets: ["latin"],
-	variable: "--font-cormorant",
-	weight: ["400", "500", "600"],
-	display: "swap",
-	preload: false,
-});
-
-const greatVibes = Great_Vibes({
-	subsets: ["latin"],
-	variable: "--font-greatvibes",
-	weight: ["400"],
-	display: "swap",
-	preload: false,
-});
+// Cormorant and Great Vibes fonts moved to page-level imports to reduce global bundle
+// Only load these fonts on pages that actually use them
 
 export const metadata: Metadata = {
 	metadataBase: new URL("https://www.spiceislandindonesia.com"),
@@ -283,7 +276,7 @@ export default function RootLayout({
 				/>
 			</head>
 			<body
-				className={`${inter.variable} ${playfair.variable} ${cormorant.variable} ${greatVibes.variable} ${inter.className} bg-coconut-50`}
+				className={`${inter.variable} ${playfair.variable} ${inter.className} bg-coconut-50`}
 			>
 				<ThirdPartyScripts
 					measurementId={

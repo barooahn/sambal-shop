@@ -19,7 +19,8 @@
       "mcp__playwright__browser_file_upload",
       "Bash(curl:*)",
       "Bash(yarn typecheck)",
-      "Bash(identify:*)"
+      "Bash(identify:*)",
+      "Bash(yarn build:*)"
     ],
     "deny": [],
     "ask": [],
