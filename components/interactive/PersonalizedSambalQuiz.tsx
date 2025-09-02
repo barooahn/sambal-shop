@@ -2,12 +2,12 @@
 
 import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Progress } from '@/components/ui/progress';
+import { Button } from '@/components/ui/simple-button';
+import { Progress } from '@/components/ui/simple-progress';
 import { Badge } from '@/components/ui/badge';
-import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
-import { Label } from '@/components/ui/label';
-import { Checkbox } from '@/components/ui/checkbox';
+import { RadioGroup, RadioGroupItem } from '@/components/ui/simple-radio-group';
+import { Label } from '@/components/ui/simple-label';
+import { Checkbox } from '@/components/ui/simple-checkbox';
 import { 
   ChefHat, 
   Flame, 
@@ -16,7 +16,7 @@ import {
   ArrowLeft,
   Sparkles,
   ShoppingCart
-} from 'lucide-react';
+} from '@/components/ui/icons';
 
 interface QuizData {
   heatTolerance: number;

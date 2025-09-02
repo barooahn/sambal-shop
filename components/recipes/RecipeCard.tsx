@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Clock, Users, ChefHat, Star } from "lucide-react";
+import { Clock, Users, ChefHat, Star } from "@/components/ui/icons";
 import OptimizedImage from "@/components/optimization/OptimizedImage";
 import RecipeSchema from "@/components/seo/RecipeSchema";
 import GlassCard from "@/components/ui/GlassCard";

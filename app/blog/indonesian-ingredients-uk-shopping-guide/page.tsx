@@ -10,7 +10,7 @@ import {
 	ShoppingCart,
 	MapPin,
 	PoundSterling,
-} from "lucide-react";
+} from "@/components/ui/icons";
 import {
 	Card,
 	CardContent,

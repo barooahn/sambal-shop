@@ -2,12 +2,12 @@
 
 import React, { useState } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
+import { Button } from '@/components/ui/simple-button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Label } from '@/components/ui/label';
-import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
-import { Checkbox } from '@/components/ui/checkbox';
+import { Label } from '@/components/ui/simple-label';
+import { RadioGroup, RadioGroupItem } from '@/components/ui/simple-radio-group';
+import { Checkbox } from '@/components/ui/simple-checkbox';
 import { Badge } from '@/components/ui/badge';
 import { PhotoUpload } from '@/components/ui/PhotoUpload';
 import { 
@@ -17,7 +17,7 @@ import {
   Star,
   Check,
   Sparkles
-} from 'lucide-react';
+} from '@/components/ui/icons';
 import { toast } from 'sonner';
 
 interface StoryFormData {

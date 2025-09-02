@@ -2,9 +2,9 @@
 
 import { FC, useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/simple-button";
 import { Badge } from "@/components/ui/badge";
-import { Clock, Users, ChefHat, Play, Pause, RotateCcw } from "lucide-react";
+import { Clock, Users, ChefHat, Play, Pause, RotateCcw } from "@/components/ui/icons";
 import EnhancedRecipeStep from "./EnhancedRecipeStep";
 
 interface EnhancedRecipeStep {

@@ -4,7 +4,7 @@ import { FC } from "react";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, Star, ShoppingCart } from "lucide-react";
+import { ArrowRight, Star, ShoppingCart } from "@/components/ui/icons";
 import { trackEvent } from "@/components/analytics/GoogleAnalytics";
 
 interface RelatedProduct {

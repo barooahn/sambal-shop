@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/simple-button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import GlassCard from "@/components/ui/GlassCard";
@@ -16,7 +16,7 @@ import {
 	CheckCircle,
 	Package,
 	Gift,
-} from "lucide-react";
+} from "@/components/ui/icons";
 
 export const metadata = {
 	title: "Indonesian Sambal Sample Pack UK | Taste Before Buy",

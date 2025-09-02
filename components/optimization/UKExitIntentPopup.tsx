@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { X, Gift, Star, MapPin, Clock } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { X, Gift, Star, MapPin, Clock } from "@/components/ui/icons";
+import { Button } from "@/components/ui/simple-button";
 import { Input } from "@/components/ui/input";
 
 export default function UKExitIntentPopup() {

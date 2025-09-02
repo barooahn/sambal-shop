@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Shield, Package, Mail, RefreshCw } from "lucide-react";
+import { Shield, Package, Mail, RefreshCw } from "@/components/ui/icons";
 
 export const metadata = {
   title: "Returns & Refunds Policy | Spice Island Indonesia",

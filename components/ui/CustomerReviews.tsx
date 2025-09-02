@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import StarRating from "./StarRating";
-import { Quote } from "lucide-react";
+import { Quote } from "@/components/ui/icons";
 import GlassCard from "./GlassCard";
 
 interface Review {

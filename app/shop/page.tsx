@@ -9,9 +9,9 @@ import {
 	// ArrowRight,
 	Info,
 	Bell,
-} from "lucide-react";
+} from "@/components/ui/icons";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/simple-button";
 import { Badge } from "@/components/ui/badge";
 import NewsletterSection from "@/components/home/NewsletterSection";
 import ProductSchema from "@/components/seo/ProductSchema";

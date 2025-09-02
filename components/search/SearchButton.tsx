@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Search } from "@/components/ui/icons";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/simple-button";
 import SearchModal from "./SearchModal";
 import { trackEvent } from "@/components/analytics/GoogleAnalytics";
 import SearchKeyboardHandler from "./SearchKeyboardHandler";

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import { Star, Heart } from "lucide-react";
+import { Button } from "@/components/ui/simple-button";
+import { Star, Heart } from "@/components/ui/icons";
 
 export default function StorySection() {
 	return (

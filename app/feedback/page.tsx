@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/simple-button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import {
@@ -13,9 +13,9 @@ import {
 	CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Label } from "@/components/ui/label";
-import { Star, Flame, Heart, ThumbsUp, Send, Loader2, Zap } from "lucide-react";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/simple-radio-group";
+import { Label } from "@/components/ui/simple-label";
+import { Star, Flame, Heart, ThumbsUp, Send, Loader2, Zap } from "@/components/ui/icons";
 
 interface FeedbackForm {
 	name: string;

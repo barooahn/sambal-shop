@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import { ChefHat, Heart, Award, MapPin, Users, Clock } from "lucide-react";
+import { Button } from "@/components/ui/simple-button";
+import { ChefHat, Heart, Award, MapPin, Users, Clock } from "@/components/ui/icons";
 import Link from "next/link";
 
 export const metadata = {

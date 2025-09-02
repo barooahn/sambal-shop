@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/simple-button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -18,7 +18,7 @@ import {
 	Utensils,
 	Timer,
 	Gift,
-} from "lucide-react";
+} from "@/components/ui/icons";
 import FAQSchema from "@/components/seo/FAQSchema";
 import EntityMarkup from "@/components/seo/EntityMarkup";
 import ComparisonTable from "@/components/seo/ComparisonTable";

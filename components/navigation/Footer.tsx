@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Instagram, Facebook } from "lucide-react";
+import { Instagram, Facebook } from "@/components/ui/icons";
 import TrackedExternalLink from "@/components/analytics/TrackedExternalLink";
 
 export default function Footer() {

@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { products } from "@/src/stripe-config";
 import ProductComparison from "@/components/ui/ProductComparison";
-import { Star, Flame, Sparkles, Zap, CheckCircle } from "lucide-react";
+import { Star, Flame, Sparkles, Zap, CheckCircle } from "@/components/ui/icons";
 import NewsletterSection from "@/components/home/NewsletterSection";
 
 export const metadata: Metadata = {

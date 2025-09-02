@@ -7,7 +7,7 @@ import {
 	CardHeader,
 	CardTitle,
 } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/simple-button";
 import { Badge } from "@/components/ui/badge";
 import dynamic from "next/dynamic";
 
@@ -39,7 +39,7 @@ import {
 	Camera,
 	Star,
 	Flame,
-} from "lucide-react";
+} from "@/components/ui/icons";
 
 export const metadata: Metadata = {
 	title: "Sambal Community UK | Indonesian Spice Lovers & Recipe Sharing",

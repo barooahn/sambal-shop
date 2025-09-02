@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { supabase } from "@/lib/supabase";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/simple-button";
 import {
 	Card,
 	CardContent,
@@ -19,7 +19,7 @@ import {
 	Calendar,
 	ArrowRight,
 	ShoppingBag,
-} from "lucide-react";
+} from "@/components/ui/icons";
 import Link from "next/link";
 
 interface Order {

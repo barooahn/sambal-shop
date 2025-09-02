@@ -13,7 +13,7 @@ import {
 	Shield,
 	Target,
 	AlertTriangle,
-} from "lucide-react";
+} from "@/components/ui/icons";
 import FAQSchema from "@/components/seo/FAQSchema";
 import ArticleSchema from "@/components/seo/ArticleSchema";
 

@@ -8,7 +8,7 @@ import {
 	Info,
 	Check,
 	ChevronRight,
-} from "lucide-react";
+} from "@/components/ui/icons";
 
 interface ProblemSolution {
 	problem: string;

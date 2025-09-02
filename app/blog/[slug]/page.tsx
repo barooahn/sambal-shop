@@ -4,7 +4,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, Clock, ArrowLeft, Share2 } from "lucide-react";
+import { Calendar, Clock, ArrowLeft, Share2 } from "@/components/ui/icons";
 import VoiceSearchOptimization from "@/components/seo/VoiceSearchOptimization";
 import ArticleSchema from "@/components/seo/ArticleSchema";
 import SimpleProductSchema from "@/components/seo/SimpleProductSchema";

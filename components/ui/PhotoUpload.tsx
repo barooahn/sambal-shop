@@ -3,10 +3,10 @@
 import SafeImage from "@/components/optimization/SafeImage";
 
 import React, { useState, useRef } from "react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/simple-button";
 import { Card } from "@/components/ui/card";
-import { Label } from "@/components/ui/label";
-import { Upload, X, Image as ImageIcon, Loader2 } from "lucide-react";
+import { Label } from "@/components/ui/simple-label";
+import { Upload, X, Image as ImageIcon, Loader2 } from "@/components/ui/icons";
 import { toast } from "sonner";
 
 interface PhotoUploadProps {

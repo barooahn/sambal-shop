@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/simple-button";
 import { trackEvent } from "@/components/analytics/GoogleAnalytics";
 import { Menu, X, ShoppingCart, User, LogOut, ChevronDown } from "@/components/ui/icons";
 import { useAuth } from "@/hooks/use-auth";

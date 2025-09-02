@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Star } from "lucide-react";
+import { Star } from "@/components/ui/icons";
 
 interface StarRatingProps {
 	rating: number;

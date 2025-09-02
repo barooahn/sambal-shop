@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/simple-button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -16,7 +16,7 @@ import {
 	Package,
 	Gift,
 	Users,
-} from "lucide-react";
+} from "@/components/ui/icons";
 import ProductSchema from "@/components/seo/ProductSchema";
 
 export const metadata = {

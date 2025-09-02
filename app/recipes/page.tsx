@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { Clock, Users, ChefHat, Heart } from "lucide-react";
+import { Button } from "@/components/ui/simple-button";
+import { Clock, Users, ChefHat, Heart } from "@/components/ui/icons";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {

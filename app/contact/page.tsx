@@ -10,7 +10,7 @@ import {
 	Clock,
 	HelpCircle,
 	ShoppingBag,
-} from "lucide-react";
+} from "@/components/ui/icons";
 
 export const metadata: Metadata = {
 	title: "Contact Us UK | Spice Island Indonesia | Get In Touch",

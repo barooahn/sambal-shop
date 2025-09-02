@@ -6,7 +6,7 @@ import { useState, useEffect, useRef } from "react";
 import ReactDOM from "react-dom";
 import { useRouter } from "next/navigation";
 import { Search, X, Clock, ArrowRight, Loader2 } from "@/components/ui/icons";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/simple-button";
 import OptimizedImage from "@/components/optimization/OptimizedImage";
 import { trackEvent } from "@/components/analytics/GoogleAnalytics";
 

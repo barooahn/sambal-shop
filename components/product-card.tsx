@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/simple-button";
 import {
 	Card,
 	CardContent,
@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import GlassCard from "@/components/ui/GlassCard";
-import { Flame, Leaf, Star, ShoppingCart, Loader2, Bell } from "lucide-react";
+import { Flame, Leaf, Star, ShoppingCart, Loader2, Bell } from "@/components/ui/icons";
 import SpiceHeatIndicator, {
 	HeatLevelBadge,
 } from "@/components/ui/SpiceHeatIndicator";

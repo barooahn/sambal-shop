@@ -13,7 +13,7 @@ import {
 	Utensils,
 	BookOpen,
 	Award,
-} from "lucide-react";
+} from "@/components/ui/icons";
 import StructuredData from "@/components/seo/StructuredData";
 import FAQSchema from "@/components/seo/FAQSchema";
 import ArticleSchema from "@/components/seo/ArticleSchema";

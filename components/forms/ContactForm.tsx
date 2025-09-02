@@ -2,10 +2,10 @@
 
 import { useState } from "react";
 import { submitContactForm } from "@/lib/actions";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/simple-button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Loader2, Send, User, Mail, MessageCircle, Check } from "lucide-react";
+import { Loader2, Send, User, Mail, MessageCircle, Check } from "@/components/ui/icons";
 
 interface ContactFormProps {
 	showHeader?: boolean;

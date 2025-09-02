@@ -13,7 +13,7 @@ import {
 	Award,
 	ChefHat,
 	Zap,
-} from "lucide-react";
+} from "@/components/ui/icons";
 import ComparisonTable from "@/components/seo/ComparisonTable";
 import StructuredData from "@/components/seo/StructuredData";
 import FAQSchema from "@/components/seo/FAQSchema";

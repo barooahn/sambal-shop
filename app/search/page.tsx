@@ -5,7 +5,7 @@ import SafeImage from "@/components/optimization/SafeImage";
 import { useState, useEffect, Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { Search, Filter, Grid, List } from "@/components/ui/icons";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/simple-button";
 import { Card, CardContent } from "@/components/ui/card";
 import OptimizedImage from "@/components/optimization/OptimizedImage";
 import Link from "next/link";

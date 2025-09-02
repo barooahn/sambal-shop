@@ -20,7 +20,8 @@
       "Bash(curl:*)",
       "Bash(yarn typecheck)",
       "Bash(identify:*)",
-      "Bash(yarn build:*)"
+      "Bash(yarn build:*)",
+      "Bash(ANALYZE=false timeout 60 yarn build)"
     ],
     "deny": [],
     "ask": [],

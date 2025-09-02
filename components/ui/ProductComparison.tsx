@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/simple-button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { 
@@ -16,7 +16,7 @@ import {
 	ShoppingCart,
 	Info,
 	ArrowRight
-} from "lucide-react";
+} from "@/components/ui/icons";
 import StarRating from "@/components/ui/StarRating";
 
 interface Product {

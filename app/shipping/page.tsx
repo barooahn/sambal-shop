@@ -6,7 +6,7 @@ import {
 	Package,
 	Shield,
 	CreditCard,
-} from "lucide-react";
+} from "@/components/ui/icons";
 
 export const metadata = {
 	title: "Shipping & Delivery Information | Spice Island Indonesia",

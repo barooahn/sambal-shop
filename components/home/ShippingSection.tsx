@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Truck, Award } from "lucide-react";
+import { Truck, Award } from "@/components/ui/icons";
 
 export default function ShippingSection() {
 	return (

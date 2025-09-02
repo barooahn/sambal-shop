@@ -1,6 +1,6 @@
 "use client";
 
-import { Shield, Truck, Award, CheckCircle, Star, Clock, RefreshCw, Heart } from "lucide-react";
+import { Shield, Truck, Award, CheckCircle, Star, Clock, RefreshCw, Heart } from "@/components/ui/icons";
 
 interface TrustIndicatorsProps {
 	layout?: 'horizontal' | 'grid' | 'compact';

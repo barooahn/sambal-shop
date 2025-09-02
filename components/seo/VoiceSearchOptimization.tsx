@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Mic, Info } from "lucide-react";
+import { Mic, Info } from "@/components/ui/icons";
 
 interface QuickAnswer {
 	question: string;

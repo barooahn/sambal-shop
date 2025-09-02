@@ -11,7 +11,7 @@ import {
 	CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, Clock, ChefHat } from "lucide-react";
+import { Calendar, Clock, ChefHat } from "@/components/ui/icons";
 import GlassCard from "@/components/ui/GlassCard";
 
 import { blogPosts } from "./posts";

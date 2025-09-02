@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Clock, CheckCircle, AlertCircle, ChefHat, Utensils } from "lucide-react";
+import { Clock, CheckCircle, AlertCircle, ChefHat, Utensils } from "@/components/ui/icons";
 import Image from "next/image";
 
 interface HowToStep {

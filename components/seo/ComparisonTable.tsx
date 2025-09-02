@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Info, BarChart3 } from "lucide-react";
+import { Info, BarChart3 } from "@/components/ui/icons";
 
 interface ComparisonItem {
 	category: string;

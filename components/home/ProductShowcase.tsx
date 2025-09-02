@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { ChefHat, Award, Leaf, Truck, CheckCircle, Flame, Gift, Zap } from "lucide-react";
+import { Button } from "@/components/ui/simple-button";
+import { ChefHat, Award, Leaf, Truck, CheckCircle, Flame, Gift, Zap } from "@/components/ui/icons";
 import TrustIndicators, { SecurityBadges } from "@/components/ui/TrustIndicators";
 
 export default function ProductShowcase() {
@@ -356,7 +356,7 @@ export default function ProductShowcase() {
 								<div className='flex flex-col sm:flex-row gap-4 justify-center items-center max-w-lg mx-auto'>
 									<Link href='/sample-pack-try-first' className='w-full sm:w-auto'>
 										<Button 
-											variant='spicy'
+											variant='outline'
 											size='lg' 
 											className='w-full'
 										>

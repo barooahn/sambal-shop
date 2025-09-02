@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Clock, ChefHat, AlertCircle, CheckCircle } from "lucide-react";
+import { Clock, ChefHat, AlertCircle, CheckCircle } from "@/components/ui/icons";
 import { Badge } from "@/components/ui/badge";
 
 interface RecipeStep {

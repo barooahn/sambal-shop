@@ -9,8 +9,8 @@ import {
 	CardHeader,
 	CardTitle,
 } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { CheckCircle, Package, ArrowRight, Home } from "lucide-react";
+import { Button } from "@/components/ui/simple-button";
+import { CheckCircle, Package, ArrowRight, Home } from "@/components/ui/icons";
 import Link from "next/link";
 import { trackPurchase } from "@/components/analytics/GoogleAnalytics";
 

@@ -16,7 +16,7 @@ import {
 	Eye,
 	Heart,
 	Award,
-} from "lucide-react";
+} from "@/components/ui/icons";
 import ArticleSchema from "@/components/seo/ArticleSchema";
 import FAQSchema from "@/components/seo/FAQSchema";
 

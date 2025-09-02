@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/simple-button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import {
@@ -12,7 +12,7 @@ import {
 	Phone,
 	Mail,
 	MapPin,
-} from "lucide-react";
+} from "@/components/ui/icons";
 
 export default function WholesalePage() {
 	const [formData, setFormData] = useState({
