@@ -4,7 +4,7 @@ import { useState } from "react";
 import { subscribeToNewsletter } from "@/lib/actions";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Mail, Gift, Star, Sparkles } from "lucide-react";
+import { Mail, Gift, Star, Sparkles } from "@/components/ui/icons";
 
 export default function NewsletterSection() {
 	const [email, setEmail] = useState("");

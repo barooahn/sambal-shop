@@ -6,7 +6,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { trackEvent } from "@/components/analytics/GoogleAnalytics";
 import { Menu, X, ShoppingCart, User, LogOut, ChevronDown } from "@/components/ui/icons";
-import { supabase } from "@/lib/supabase";
+import { useAuth } from "@/hooks/use-auth";
 import OptimizedImage from "@/components/optimization/OptimizedImage";
 import SearchButton from "@/components/search/SearchButton";
 
@@ -14,7 +14,7 @@ export default function Header() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const [isProductsOpen, setIsProductsOpen] = useState(false);
 	const [isScrolled, setIsScrolled] = useState(false);
-	const [user, setUser] = useState<any>(null);
+	const { user, isAuthenticated, signOut } = useAuth();
 	const [hoverTimeout, setHoverTimeout] = useState<NodeJS.Timeout | null>(
 		null
 	);
@@ -67,25 +67,7 @@ export default function Header() {
 		{ name: "Wholesale", href: "/wholesale" },
 	];
 
-	useEffect(() => {
-		// Get initial user
-		const getUser = async () => {
-			const {
-				data: { user },
-			} = await supabase.auth.getUser();
-			setUser(user);
-		};
-		getUser();
-
-		// Listen for auth changes
-		const {
-			data: { subscription },
-		} = supabase.auth.onAuthStateChange((event, session) => {
-			setUser(session?.user || null);
-		});
-
-		return () => subscription.unsubscribe();
-	}, []);
+	// Auth is now handled by useAuth hook
 
 	// Collapse micro-bar and add gold accent on scroll
 	useEffect(() => {
@@ -96,7 +78,7 @@ export default function Header() {
 	}, []);
 
 	const handleSignOut = async () => {
-		await supabase.auth.signOut();
+		await signOut();
 		router.push("/");
 	};
 
