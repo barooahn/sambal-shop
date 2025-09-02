@@ -56,7 +56,8 @@ export default function HeroSection() {
 								<div className='relative flex items-center justify-center space-x-3'>
 									<ChefHat className='w-5 h-5 text-burgundy-600' />
 									<span className='text-burgundy-900 font-elegant font-semibold text-sm tracking-wide'>
-										Chef Yossie's Traditional Bandung Recipes
+										Chef Yossie's Traditional
+										Bandung Recipes
 									</span>
 									<div className='flex space-x-1'>
 										{[...Array(5)].map((_, i) => (
@@ -126,36 +127,57 @@ export default function HeroSection() {
 									icon: Heart,
 									label: "Sweet & Spicy",
 									desc: "Perfect Balance",
-									gradient: "from-gold-500/30 via-burgundy-500/20 to-gold-500/30",
-									culturalElement: "Traditional palm sugar sweetness"
+									gradient:
+										"from-gold-500/30 via-burgundy-500/20 to-gold-500/30",
+									culturalElement:
+										"Traditional palm sugar sweetness",
 								},
 								{
-									icon: ChefHat, 
+									icon: ChefHat,
 									label: "Goreng Method",
-									desc: "Fried Technique", 
-									gradient: "from-burgundy-500/30 via-gold-500/20 to-burgundy-500/30",
-									culturalElement: "West Java cooking tradition"
+									desc: "Fried Technique",
+									gradient:
+										"from-burgundy-500/30 via-gold-500/20 to-burgundy-500/30",
+									culturalElement:
+										"West Java cooking tradition",
 								},
 								{
 									icon: Award,
-									label: "Bandung Heritage", 
+									label: "Bandung Heritage",
 									desc: "Family Recipe",
-									gradient: "from-gold-600/30 via-burgundy-600/20 to-cream-300/30",
-									culturalElement: "Generational knowledge"
-								}
-							].map(({ icon: Icon, label, desc, gradient, culturalElement }) => (
-								<div key={label} className={`relative bg-gradient-to-br ${gradient} backdrop-blur-md rounded-xl p-4 border-2 border-gold-300/40 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 group overflow-hidden`}>
-									{/* Subtle Indonesian pattern overlay */}
-									<div className='absolute inset-0 bg-gradient-to-r from-gold-100/10 to-burgundy-100/10 opacity-20 group-hover:opacity-30 transition-opacity'></div>
-									<div className='relative flex flex-col items-center text-center'>
-										<Icon className='w-6 h-6 text-gold-200 mb-2 group-hover:text-cream-100 group-hover:scale-110 transition-all duration-300 drop-shadow-sm' />
-										<div className='text-cream-100'>
-											<div className='font-elegant font-semibold text-sm tracking-wide mb-1'>{label}</div>
-											<div className='font-body text-xs text-cream-200/90'>{desc}</div>
+									gradient:
+										"from-gold-600/30 via-burgundy-600/20 to-cream-300/30",
+									culturalElement:
+										"Generational knowledge",
+								},
+							].map(
+								({
+									icon: Icon,
+									label,
+									desc,
+									gradient,
+									culturalElement,
+								}) => (
+									<div
+										key={label}
+										className={`relative bg-gradient-to-br ${gradient} backdrop-blur-md rounded-xl p-4 border-2 border-gold-300/40 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 group overflow-hidden`}
+									>
+										{/* Subtle Indonesian pattern overlay */}
+										<div className='absolute inset-0 bg-gradient-to-r from-gold-100/10 to-burgundy-100/10 opacity-20 group-hover:opacity-30 transition-opacity'></div>
+										<div className='relative flex flex-col items-center text-center'>
+											<Icon className='w-6 h-6 text-gold-200 mb-2 group-hover:text-cream-100 group-hover:scale-110 transition-all duration-300 drop-shadow-sm' />
+											<div className='text-cream-100'>
+												<div className='font-elegant font-semibold text-sm tracking-wide mb-1'>
+													{label}
+												</div>
+												<div className='font-body text-xs text-cream-200/90'>
+													{desc}
+												</div>
+											</div>
 										</div>
 									</div>
-								</div>
-							))}
+								)
+							)}
 						</div>
 
 						{/* Primary CTA - simplified for mobile */}
@@ -163,7 +185,18 @@ export default function HeroSection() {
 							{/* Single Primary CTA - Sample Pack */}
 							<button
 								aria-label='Try Sample Pack First - Primary CTA'
-								onClick={() => {
+								onClick={async () => {
+									try {
+										const { trackEvent } =
+											await import(
+												"@/components/analytics/GoogleAnalytics"
+											);
+										trackEvent(
+											"internal_cta_click",
+											"sample_pack_cta",
+											"hero_sample_pack"
+										);
+									} catch {}
 									window.location.href =
 										"/sample-pack-try-first";
 								}}
@@ -173,7 +206,9 @@ export default function HeroSection() {
 								<div className='absolute inset-0 bg-gradient-to-r from-transparent via-gold-400/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700'></div>
 								<div className='relative flex items-center justify-center space-x-2'>
 									<Package className='w-6 h-6 group-hover:scale-110 transition-transform duration-300' />
-									<span className='font-elegant tracking-wide'>Try Sample Pack - £4.99</span>
+									<span className='font-elegant tracking-wide'>
+										Try Sample Pack - £4.99
+									</span>
 								</div>
 							</button>
 

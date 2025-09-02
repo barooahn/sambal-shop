@@ -1,8 +1,11 @@
+"use client";
+
 import { FC } from "react";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Star, ShoppingCart } from "lucide-react";
+import { trackEvent } from "@/components/analytics/GoogleAnalytics";
 
 interface RelatedProduct {
 	name: string;
@@ -42,7 +45,7 @@ const InternalLinkingOptimization: FC<InternalLinkingOptimizationProps> = ({
 	relatedProducts = [],
 	relatedRecipes = [],
 	relatedArticles = [],
-	className = ""
+	className = "",
 }) => {
 	const getDifficultyColor = (difficulty: string) => {
 		switch (difficulty) {
@@ -62,45 +65,55 @@ const InternalLinkingOptimization: FC<InternalLinkingOptimizationProps> = ({
 			{/* Related Products Section */}
 			{relatedProducts.length > 0 && (
 				<section>
-					<h3 className="text-2xl font-bold text-burgundy-900 mb-6 font-heading">
+					<h3 className='text-2xl font-bold text-burgundy-900 mb-6 font-heading'>
 						🛒 Perfect Ingredients for This Recipe
 					</h3>
-					<div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+					<div className='grid gap-4 md:grid-cols-2 lg:grid-cols-3'>
 						{relatedProducts.map((product, index) => (
-							<Card key={index} className="border border-gold-200 hover:shadow-lg transition-shadow duration-300">
-								<CardContent className="p-4">
-									<div className="flex justify-between items-start mb-2">
-										<h4 className="font-bold text-burgundy-900 text-sm">
+							<Card
+								key={index}
+								className='border border-gold-200 hover:shadow-lg transition-shadow duration-300'
+							>
+								<CardContent className='p-4'>
+									<div className='flex justify-between items-start mb-2'>
+										<h4 className='font-bold text-burgundy-900 text-sm'>
 											{product.name}
 										</h4>
 										{product.badge && (
-											<Badge className="bg-burgundy-100 text-burgundy-800 text-xs">
+											<Badge className='bg-burgundy-100 text-burgundy-800 text-xs'>
 												{product.badge}
 											</Badge>
 										)}
 									</div>
-									
-									<p className="text-gray-600 text-sm mb-3 line-clamp-2">
+
+									<p className='text-gray-600 text-sm mb-3 line-clamp-2'>
 										{product.description}
 									</p>
-									
-									<div className="flex items-center justify-between mb-3">
-										<div className="flex items-center space-x-1">
-											<Star className="w-4 h-4 text-gold-500 fill-gold-500" />
-											<span className="text-sm font-medium text-gray-700">
+
+									<div className='flex items-center justify-between mb-3'>
+										<div className='flex items-center space-x-1'>
+											<Star className='w-4 h-4 text-gold-500 fill-gold-500' />
+											<span className='text-sm font-medium text-gray-700'>
 												{product.rating}
 											</span>
 										</div>
-										<span className="font-bold text-burgundy-900">
+										<span className='font-bold text-burgundy-900'>
 											{product.price}
 										</span>
 									</div>
-									
-									<Link 
+
+									<Link
+										onClick={() =>
+											trackEvent(
+												"internal_cta_click",
+												"product_cta",
+												product.name
+											)
+										}
 										href={product.url}
-										className="inline-flex items-center w-full justify-center px-4 py-2 bg-burgundy-600 text-white text-sm font-medium rounded-md hover:bg-burgundy-700 transition-colors duration-200"
+										className='inline-flex items-center w-full justify-center px-4 py-2 bg-burgundy-600 text-white text-sm font-medium rounded-md hover:bg-burgundy-700 transition-colors duration-200'
 									>
-										<ShoppingCart className="w-4 h-4 mr-2" />
+										<ShoppingCart className='w-4 h-4 mr-2' />
 										Shop Now
 									</Link>
 								</CardContent>
@@ -113,36 +126,50 @@ const InternalLinkingOptimization: FC<InternalLinkingOptimizationProps> = ({
 			{/* Related Recipes Section */}
 			{relatedRecipes.length > 0 && (
 				<section>
-					<h3 className="text-2xl font-bold text-burgundy-900 mb-6 font-heading">
+					<h3 className='text-2xl font-bold text-burgundy-900 mb-6 font-heading'>
 						👨‍🍳 More Delicious Sambal Recipes
 					</h3>
-					<div className="grid gap-4 md:grid-cols-2">
+					<div className='grid gap-4 md:grid-cols-2'>
 						{relatedRecipes.map((recipe, index) => (
-							<Card key={index} className="border border-gold-200 hover:shadow-lg transition-shadow duration-300">
-								<CardContent className="p-4">
-									<div className="flex justify-between items-start mb-2">
-										<h4 className="font-bold text-burgundy-900">
+							<Card
+								key={index}
+								className='border border-gold-200 hover:shadow-lg transition-shadow duration-300'
+							>
+								<CardContent className='p-4'>
+									<div className='flex justify-between items-start mb-2'>
+										<h4 className='font-bold text-burgundy-900'>
 											{recipe.name}
 										</h4>
-										<Badge className={`text-xs ${getDifficultyColor(recipe.difficulty)}`}>
+										<Badge
+											className={`text-xs ${getDifficultyColor(
+												recipe.difficulty
+											)}`}
+										>
 											{recipe.difficulty}
 										</Badge>
 									</div>
-									
-									<p className="text-gray-600 text-sm mb-3">
+
+									<p className='text-gray-600 text-sm mb-3'>
 										{recipe.description}
 									</p>
-									
-									<div className="flex items-center justify-between">
-										<span className="text-sm text-gray-500">
+
+									<div className='flex items-center justify-between'>
+										<span className='text-sm text-gray-500'>
 											⏱️ {recipe.cookTime}
 										</span>
-										<Link 
+										<Link
+											onClick={() =>
+												trackEvent(
+													"internal_cta_click",
+													"recipe_cta",
+													recipe.name
+												)
+											}
 											href={recipe.url}
-											className="inline-flex items-center text-burgundy-600 hover:text-burgundy-800 font-medium text-sm transition-colors duration-200"
+											className='inline-flex items-center text-burgundy-600 hover:text-burgundy-800 font-medium text-sm transition-colors duration-200'
 										>
 											Try Recipe
-											<ArrowRight className="w-4 h-4 ml-1" />
+											<ArrowRight className='w-4 h-4 ml-1' />
 										</Link>
 									</div>
 								</CardContent>
@@ -155,36 +182,50 @@ const InternalLinkingOptimization: FC<InternalLinkingOptimizationProps> = ({
 			{/* Related Articles Section */}
 			{relatedArticles.length > 0 && (
 				<section>
-					<h3 className="text-2xl font-bold text-burgundy-900 mb-6 font-heading">
+					<h3 className='text-2xl font-bold text-burgundy-900 mb-6 font-heading'>
 						📚 Learn More About Indonesian Cuisine
 					</h3>
-					<div className="space-y-4">
+					<div className='space-y-4'>
 						{relatedArticles.map((article, index) => (
-							<Card key={index} className="border border-gold-200 hover:shadow-lg transition-shadow duration-300">
-								<CardContent className="p-4">
-									<div className="flex justify-between items-start mb-2">
-										<h4 className="font-bold text-burgundy-900 text-lg">
+							<Card
+								key={index}
+								className='border border-gold-200 hover:shadow-lg transition-shadow duration-300'
+							>
+								<CardContent className='p-4'>
+									<div className='flex justify-between items-start mb-2'>
+										<h4 className='font-bold text-burgundy-900 text-lg'>
 											{article.title}
 										</h4>
-										<Badge variant="outline" className="text-xs">
+										<Badge
+											variant='outline'
+											className='text-xs'
+										>
 											{article.category}
 										</Badge>
 									</div>
-									
-									<p className="text-gray-600 mb-3">
+
+									<p className='text-gray-600 mb-3'>
 										{article.excerpt}
 									</p>
-									
-									<div className="flex items-center justify-between">
-										<span className="text-sm text-gray-500">
-											📖 {article.readTime} read
+
+									<div className='flex items-center justify-between'>
+										<span className='text-sm text-gray-500'>
+											📖 {article.readTime}{" "}
+											read
 										</span>
-										<Link 
+										<Link
+											onClick={() =>
+												trackEvent(
+													"internal_cta_click",
+													"article_cta",
+													article.title
+												)
+											}
 											href={article.url}
-											className="inline-flex items-center text-burgundy-600 hover:text-burgundy-800 font-medium transition-colors duration-200"
+											className='inline-flex items-center text-burgundy-600 hover:text-burgundy-800 font-medium transition-colors duration-200'
 										>
 											Read Article
-											<ArrowRight className="w-4 h-4 ml-1" />
+											<ArrowRight className='w-4 h-4 ml-1' />
 										</Link>
 									</div>
 								</CardContent>

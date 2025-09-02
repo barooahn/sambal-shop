@@ -12,7 +12,9 @@ import {
 import { Badge } from "@/components/ui/badge";
 import GlassCard from "@/components/ui/GlassCard";
 import { Flame, Leaf, Star, ShoppingCart, Loader2, Bell } from "lucide-react";
-import SpiceHeatIndicator, { HeatLevelBadge } from "@/components/ui/SpiceHeatIndicator";
+import SpiceHeatIndicator, {
+	HeatLevelBadge,
+} from "@/components/ui/SpiceHeatIndicator";
 import { Product } from "@/src/stripe-config";
 import { toast } from "sonner";
 
@@ -28,7 +30,9 @@ export function ProductCard({ product }: ProductCardProps) {
 
 	const handlePurchase = async () => {
 		// For static export, redirect to external checkout or show message
-		toast.error("Checkout is currently unavailable. Please join our waitlist for updates!");
+		toast.error(
+			"Checkout is currently unavailable. Please join our waitlist for updates!"
+		);
 	};
 
 	const handleJoinWaitlist = async () => {
@@ -49,6 +53,17 @@ export function ProductCard({ product }: ProductCardProps) {
 				result.message ||
 					"Interest recorded — you’re on the UK VIP list! 🇬🇧🌶️"
 			);
+			// Track GA4 event for shop waitlist joins
+			try {
+				const { trackEvent } = await import(
+					"@/components/analytics/GoogleAnalytics"
+				);
+				trackEvent(
+					"shop_interest_click",
+					"product_engagement",
+					"shop_waitlist"
+				);
+			} catch {}
 		} catch (err: any) {
 			toast.error(
 				err?.message ||
@@ -99,17 +114,19 @@ export function ProductCard({ product }: ProductCardProps) {
 					{/* Enhanced Heat Level Indicator */}
 					<div className='bg-gradient-to-r from-coconut-50 to-coconut-100 p-4 rounded-xl border border-coconut-200'>
 						<div className='flex items-center justify-between mb-3'>
-							<h4 className='font-bold text-burgundy-900 text-sm'>Heat Level</h4>
+							<h4 className='font-bold text-burgundy-900 text-sm'>
+								Heat Level
+							</h4>
 							<HeatLevelBadge heatLevel={3} />
 						</div>
-						<SpiceHeatIndicator 
+						<SpiceHeatIndicator
 							heatLevel={3}
-							variant="detailed"
-							size="sm"
-							className="w-full"
+							variant='detailed'
+							size='sm'
+							className='w-full'
 						/>
 					</div>
-					
+
 					{/* Enhanced Product Features */}
 					<div className='grid grid-cols-2 gap-3'>
 						<div className='flex items-center space-x-3 p-3 rounded-lg bg-palm-50 border border-palm-200 hover:bg-palm-100 transition-colors'>
@@ -140,12 +157,16 @@ export function ProductCard({ product }: ProductCardProps) {
 							</div>
 						</div>
 					</div>
-					
+
 					{/* Additional product info if needed */}
 					<div className='flex items-center justify-center p-3 rounded-lg bg-coconut-50 border border-coconut-200'>
 						<div className='flex items-center space-x-2'>
-							<span className='text-turmeric-600 font-bold text-sm'>📏 200g</span>
-							<span className='text-palm-700 text-xs'>Perfect portion size</span>
+							<span className='text-turmeric-600 font-bold text-sm'>
+								📏 200g
+							</span>
+							<span className='text-palm-700 text-xs'>
+								Perfect portion size
+							</span>
 						</div>
 					</div>
 				</div>

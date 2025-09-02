@@ -32,6 +32,13 @@ export default function NewsletterSection() {
 
 			if (result.success) {
 				setEmail("");
+				// Track GA4 newsletter signup
+				try {
+					const { trackNewsletterSignup } = await import(
+						"@/components/analytics/GoogleAnalytics"
+					);
+					trackNewsletterSignup("newsletter_section");
+				} catch {}
 			}
 
 			setTimeout(() => {
@@ -75,7 +82,11 @@ export default function NewsletterSection() {
 					</h2>
 
 					<p className='text-xl lg:text-2xl text-neutral-600 max-w-3xl mx-auto leading-relaxed font-body'>
-						Join 500+ UK food lovers waiting for Chef Yossie's authentic Indonesian sambal. Be the first to experience professional-grade chili paste delivered to London, Manchester, Birmingham & nationwide.
+						Join 500+ UK food lovers waiting for Chef Yossie's
+						authentic Indonesian sambal. Be the first to
+						experience professional-grade chili paste
+						delivered to London, Manchester, Birmingham &
+						nationwide.
 					</p>
 				</div>
 
@@ -95,7 +106,10 @@ export default function NewsletterSection() {
 											UK Exclusive Preview
 										</h3>
 										<p className='text-xl text-neutral-600 font-body'>
-											Get VIP access to the UK's most authentic Indonesian sambal. Subscribe to our
+											Get VIP access to the
+											UK's most authentic
+											Indonesian sambal.
+											Subscribe to our
 											newsletter and unlock
 											exclusive benefits
 										</p>
@@ -109,10 +123,20 @@ export default function NewsletterSection() {
 											</div>
 											<div>
 												<h4 className='text-xl font-bold text-burgundy-900 mb-2 font-heading'>
-													UK Exclusive: 25% Off First Order
+													UK Exclusive:
+													25% Off First
+													Order
 												</h4>
 												<p className='text-neutral-600 font-body'>
-													Special launch discount for UK customers only. Plus free delivery to London, Manchester, Birmingham & nationwide.
+													Special launch
+													discount for UK
+													customers only.
+													Plus free
+													delivery to
+													London,
+													Manchester,
+													Birmingham &
+													nationwide.
 												</p>
 											</div>
 										</div>
@@ -123,10 +147,20 @@ export default function NewsletterSection() {
 											</div>
 											<div>
 												<h4 className='text-xl font-bold text-burgundy-900 mb-2 font-heading'>
-													Priority Access - UK Launch
+													Priority Access
+													- UK Launch
 												</h4>
 												<p className='text-neutral-600 font-body'>
-													Be among the first 100 UK customers to taste Chef Yossie's professional-grade sambal. Skip the waiting list with VIP email access.
+													Be among the
+													first 100 UK
+													customers to
+													taste Chef
+													Yossie's
+													professional-grade
+													sambal. Skip
+													the waiting
+													list with VIP
+													email access.
 												</p>
 											</div>
 										</div>
@@ -137,10 +171,21 @@ export default function NewsletterSection() {
 											</div>
 											<div>
 												<h4 className='text-xl font-bold text-burgundy-900 mb-2 font-heading'>
-													British-Indonesian Recipe Guide
+													British-Indonesian
+													Recipe Guide
 												</h4>
 												<p className='text-neutral-600 font-body'>
-													Free recipe collection adapting traditional Indonesian dishes for British kitchens. UK supermarket ingredients included.
+													Free recipe
+													collection
+													adapting
+													traditional
+													Indonesian
+													dishes for
+													British
+													kitchens. UK
+													supermarket
+													ingredients
+													included.
 												</p>
 											</div>
 										</div>
@@ -152,10 +197,14 @@ export default function NewsletterSection() {
 									<div className='bg-gradient-to-br from-burgundy-900 to-burgundy-800 rounded-sm p-8 text-white shadow-xl h-full flex flex-col justify-center'>
 										<div className='text-center mb-6'>
 											<h4 className='text-2xl font-bold mb-2 font-brand text-gold-200'>
-												Join the UK Preview List
+												Join the UK Preview
+												List
 											</h4>
 											<p className='text-burgundy-100 font-body'>
-												Join 500+ UK food lovers waiting for authentic Indonesian sambal
+												Join 500+ UK food
+												lovers waiting for
+												authentic Indonesian
+												sambal
 											</p>
 										</div>
 
@@ -211,12 +260,16 @@ export default function NewsletterSection() {
 												) : newsletterState.isSubmitted ? (
 													<>
 														<Star className='w-5 h-5 mr-2' />
-														You're on the UK VIP List! 🇬🇧🌶️
+														You're on
+														the UK VIP
+														List! 🇬🇧🌶️
 													</>
 												) : (
 													<>
 														<Mail className='w-5 h-5 mr-2' />
-														Get UK Exclusive Access
+														Get UK
+														Exclusive
+														Access
 													</>
 												)}
 											</Button>

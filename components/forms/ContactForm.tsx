@@ -45,6 +45,13 @@ export default function ContactForm({
 
 			if (result.success) {
 				setContactForm({ name: "", email: "", message: "" });
+				// Track GA4 contact form submission
+				try {
+					const { trackContactForm } = await import(
+						"@/components/analytics/GoogleAnalytics"
+					);
+					trackContactForm("contact_page");
+				} catch {}
 			}
 
 			setTimeout(() => {
@@ -90,8 +97,8 @@ export default function ContactForm({
 						Contact Us
 					</h3>
 					<p className='text-lg text-neutral-600 font-body'>
-						Send us a message and we&apos;ll get back to you within
-						24 hours
+						Send us a message and we&apos;ll get back to you
+						within 24 hours
 					</p>
 				</div>
 			)}
@@ -120,7 +127,7 @@ export default function ContactForm({
 								}
 								required
 								className='text-lg py-4 pl-16 pr-4 border-2 border-gold-300/50 focus:border-burgundy-600 rounded-sm font-body bg-white/95 shadow-sm hover:shadow-md transition-all duration-200 placeholder:text-gray-300'
-								style={{ paddingLeft: '4rem' }}
+								style={{ paddingLeft: "4rem" }}
 							/>
 						</div>
 					</div>
@@ -144,7 +151,7 @@ export default function ContactForm({
 								}
 								required
 								className='text-lg py-4 pl-16 pr-4 border-2 border-gold-300/50 focus:border-burgundy-600 rounded-sm font-body bg-white/95 shadow-sm hover:shadow-md transition-all duration-200 placeholder:text-gray-300'
-								style={{ paddingLeft: '4rem' }}
+								style={{ paddingLeft: "4rem" }}
 							/>
 						</div>
 					</div>
@@ -168,7 +175,7 @@ export default function ContactForm({
 							}
 							required
 							className='min-h-40 text-lg pt-4 pl-16 pr-4 pb-4 border-2 border-gold-300/50 focus:border-burgundy-600 rounded-sm font-body bg-white/95 shadow-sm hover:shadow-md transition-all duration-200 resize-none placeholder:text-gray-300'
-							style={{ paddingLeft: '4rem' }}
+							style={{ paddingLeft: "4rem" }}
 						/>
 					</div>
 				</div>

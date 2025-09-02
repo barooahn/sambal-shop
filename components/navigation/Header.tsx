@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { trackEvent } from "@/components/analytics/GoogleAnalytics";
 import { Menu, X, ShoppingCart, User, LogOut, ChevronDown } from "lucide-react";
 import { supabase } from "@/lib/supabase";
 import OptimizedImage from "@/components/optimization/OptimizedImage";
@@ -465,6 +466,13 @@ export default function Header() {
 								) : (
 									<Link
 										href={item.href}
+										onClick={() =>
+											trackEvent(
+												"nav_click",
+												"header",
+												item.name
+											)
+										}
 										className='text-burgundy-900 hover:text-burgundy-600 font-elegant text-base tracking-wide transition-all duration-200 py-3 px-3 rounded-lg hover:bg-gradient-to-r hover:from-burgundy-50 hover:to-gold-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-burgundy-600 focus-visible:ring-offset-2'
 									>
 										{item.name}
@@ -518,6 +526,13 @@ export default function Header() {
 									<Button
 										variant='primary'
 										size='default'
+										onClick={() =>
+											trackEvent(
+												"internal_cta_click",
+												"header_cta",
+												"learn_sambal_goreng"
+											)
+										}
 										className='font-medium bg-gradient-to-r from-burgundy-700 to-burgundy-800 hover:from-burgundy-800 hover:to-burgundy-900 text-white border border-gold-600/30 shadow-lg hover:shadow-xl transition-all duration-300 px-5 py-2.5'
 									>
 										<ShoppingCart className='w-4 h-4 mr-2' />

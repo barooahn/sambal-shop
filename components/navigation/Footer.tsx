@@ -1,13 +1,19 @@
 import Link from "next/link";
 import { Instagram, Facebook } from "lucide-react";
+import TrackedExternalLink from "@/components/analytics/TrackedExternalLink";
 
 export default function Footer() {
 	return (
-		<footer role="contentinfo" className='bg-neutral-900 text-gold-100 py-16 relative overflow-hidden border-t border-gold-600/30'>
+		<footer
+			role='contentinfo'
+			className='bg-neutral-900 text-gold-100 py-16 relative overflow-hidden border-t border-gold-600/30'
+		>
 			{/* Background image with overlay */}
-			<div 
-				className='absolute inset-0 pointer-events-none bg-cover bg-center bg-no-repeat' 
-				style={{backgroundImage: 'url(/images/footer-background.webp)'}}
+			<div
+				className='absolute inset-0 pointer-events-none bg-cover bg-center bg-no-repeat'
+				style={{
+					backgroundImage: "url(/images/footer-background.webp)",
+				}}
 			></div>
 			{/* Dark overlay to reduce brightness */}
 			<div className='absolute inset-0 pointer-events-none bg-black/60'></div>
@@ -25,24 +31,27 @@ export default function Footer() {
 							kitchens.
 						</p>
 						<div className='flex space-x-4'>
-							<a
+							{/* Tracked external links for social icons */}
+							<TrackedExternalLink
 								href='https://www.instagram.com/spiceisland_indonesia/'
+								linkText='Instagram'
 								target='_blank'
 								rel='noopener noreferrer'
 								className='w-12 h-12 bg-burgundy-800 border border-gold-600/30 rounded-full flex items-center justify-center text-gold-400 hover:text-gold-200 hover:bg-burgundy-700 transition-all duration-200'
 								aria-label='Follow Spice Island Indonesia on Instagram'
 							>
 								<Instagram className='w-6 h-6' />
-							</a>
-							<a
+							</TrackedExternalLink>
+							<TrackedExternalLink
 								href='https://www.facebook.com/profile.php?id=61579653961037'
+								linkText='Facebook'
 								target='_blank'
 								rel='noopener noreferrer'
 								className='w-12 h-12 bg-burgundy-800 border border-gold-600/30 rounded-full flex items-center justify-center text-gold-400 hover:text-gold-200 hover:bg-burgundy-700 transition-all duration-200'
 								aria-label='Follow Spice Island Indonesia on Facebook'
 							>
 								<Facebook className='w-6 h-6' />
-							</a>
+							</TrackedExternalLink>
 						</div>
 					</div>
 
@@ -247,9 +256,13 @@ export default function Footer() {
 				<div className='border-t border-gold-600/30 mt-12 pt-8'>
 					<div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>
 						<div className='text-gold-300 font-body text-center md:text-left'>
-							<p>&copy; 2025 Spice Island Indonesia Ltd. All rights reserved.</p>
+							<p>
+								&copy; 2025 Spice Island Indonesia Ltd.
+								All rights reserved.
+							</p>
 							<p className='text-sm text-gold-400 mt-1'>
-								Company Registration: 16650562 | Registered in England and Wales
+								Company Registration: 16650562 |
+								Registered in England and Wales
 							</p>
 						</div>
 						<div className='flex space-x-6 text-gold-300 text-sm font-body'>

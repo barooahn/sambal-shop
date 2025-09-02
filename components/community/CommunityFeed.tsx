@@ -1,4 +1,6 @@
 "use client";
+/* eslint-disable @next/next/no-img-element */
+import SafeImage from "@/components/optimization/SafeImage";
 
 import React, { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -383,20 +385,14 @@ export default function CommunityFeed() {
 															photo,
 															index
 														) => (
-															<img
-																key={
-																	index
-																}
-																src={
-																	photo
-																}
-																alt={`${
-																	story.story_title
-																} ${
-																	index +
-																	1
-																}`}
-																className='w-full h-24 object-cover rounded-lg border-2 border-gray-100'
+															<SafeImage 
+																key={index} 
+																src={photo} 
+																alt={`${story.story_title} ${index + 1}`} 
+																className='w-full h-24 object-cover rounded-lg border-2 border-gray-100' 
+																width={240} 
+																height={96} 
+																priority={false} 
 															/>
 														)
 													)}

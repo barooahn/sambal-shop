@@ -10,6 +10,7 @@ import Header from "@/components/navigation/Header";
 import Breadcrumb from "@/components/shared/Breadcrumb";
 import ThirdPartyScripts from "@/components/optimization/ThirdPartyScripts";
 import dynamic from "next/dynamic";
+import { Suspense } from "react";
 
 // Lazy load non-critical components with improved loading states
 const Footer = dynamic(() => import("@/components/navigation/Footer"), {
@@ -42,6 +43,8 @@ const Toaster = dynamic(
 		loading: () => null,
 	}
 );
+
+import PageViewTracker from "@/components/analytics/PageViewTracker";
 
 import PerformanceOptimizer, {
 	criticalCSS,
@@ -176,20 +179,20 @@ export default function RootLayout({
 					dangerouslySetInnerHTML={{
 						__html: `
 						/* Critical above-the-fold CSS */
-						body { 
-							font-family: var(--font-inter) !important; 
-							margin: 0; 
-							padding: 0; 
+						body {
+							font-family: var(--font-inter) !important;
+							margin: 0;
+							padding: 0;
 							font-display: swap !important;
 						}
-						
+
 						/* Prevent layout shifts */
 						img {
 							max-width: 100% !important;
 							height: auto !important;
 						}
-						.hero-section { 
-							min-height: 100vh !important; 
+						.hero-section {
+							min-height: 100vh !important;
 							height: 100vh !important;
 						}
 						/* Prevent layout shift from font loading */
@@ -199,7 +202,7 @@ export default function RootLayout({
 						}
 						.header { position: sticky !important; top: 0; z-index: 50; }
 						.loading-placeholder { height: 96px; background: #f5f5f5; }
-						
+
 						/* Critical layout styles - avoid !important on display/visibility */
 						.relative { position: relative !important; }
 						.absolute { position: absolute !important; }
@@ -208,37 +211,37 @@ export default function RootLayout({
 						.w-full { width: 100% !important; }
 						.h-full { height: 100% !important; }
 						.object-cover { object-fit: cover !important; }
-						
+
 						/* Critical display classes - avoid overriding navigation */
-						
+
 						/* Sambal UK gold text - prevent hydration flash */
 						.sambal-title {
 							color: #fcd34d !important;
 							text-shadow: 0 0 8px rgba(252, 211, 77, 0.3) !important;
 						}
-						
+
 						/* Typography */
 						.text-center { text-align: center !important; }
 						.font-semibold { font-weight: 600 !important; }
 						.text-xs { font-size: 0.75rem !important; }
 						.text-sm { font-size: 0.875rem !important; }
-						
+
 						/* Spacing */
 						.mb-4 { margin-bottom: 1rem !important; }
 						.mb-6 { margin-bottom: 1.5rem !important; }
 						.px-3 { padding-left: 0.75rem; padding-right: 0.75rem !important; }
 						.py-1-5 { padding-top: 0.375rem; padding-bottom: 0.375rem !important; }
-						
+
 						/* Hero background container */
 						.hero-bg { position: absolute; inset: 0; z-index: 0; }
 						.hero-content { position: relative; z-index: 10; }
-						
+
 						/* Additional stability for key hero elements */
 						.hero-section-container {
 							height: 80vh !important;
 							min-height: 80vh !important;
 						}
-						
+
 						/* Ensure responsive visibility works */
 						@media (max-width: 639px) {
 							.sm\\:hidden { display: none !important; }
@@ -287,6 +290,12 @@ export default function RootLayout({
 						process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
 					}
 				/>
+				{/* Track SPA navigations in GA4 */}
+				{process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ? (
+					<Suspense fallback={null}>
+						<PageViewTracker />
+					</Suspense>
+				) : null}
 				<WebVitals />
 				{/* ServiceWorkerRegistration disabled for testing */}
 
