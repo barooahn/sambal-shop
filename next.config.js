@@ -54,7 +54,7 @@ const nextConfig = {
 					},
 					{
 						key: 'Content-Security-Policy',
-						value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' cdn.tailwindcss.com cdn.jsdelivr.net unpkg.com; style-src 'self' 'unsafe-inline' fonts.googleapis.com cdn.tailwindcss.com; font-src 'self' fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https:; frame-src 'none'; object-src 'none'; base-uri 'self';",
+						value: "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline' cdn.tailwindcss.com cdn.jsdelivr.net unpkg.com www.googletagmanager.com; style-src 'self' 'unsafe-inline' fonts.googleapis.com cdn.tailwindcss.com; font-src 'self' fonts.gstatic.com; img-src 'self' data: https: blob:; connect-src 'self' https: www.google-analytics.com analytics.google.com; frame-src 'none'; object-src 'none'; base-uri 'self';",
 					},
 					{
 						key: 'Permissions-Policy',

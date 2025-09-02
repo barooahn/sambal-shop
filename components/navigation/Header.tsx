@@ -60,6 +60,7 @@ export default function Header() {
 			],
 		},
 		{ name: "Recipes", href: "/recipes" },
+		{ name: "Community", href: "/community" },
 		{ name: "Blog", href: "/blog" },
 		{ name: "About", href: "/about" },
 		{ name: "Wholesale", href: "/wholesale" },
@@ -119,8 +120,8 @@ export default function Header() {
 			role='banner'
 			className={`sticky top-0 z-50 backdrop-blur-sm transition-all duration-300 ${
 				isScrolled
-					? "bg-cream-50/80 border-b border-gold-300 shadow-gold"
-					: "bg-cream-50/95 border-b border-gold-200"
+					? "bg-white/80 border-b border-gold-300 shadow-lg"
+					: "bg-white/95 border-b border-gold-200"
 			}`}
 		>
 			<a
@@ -150,17 +151,17 @@ export default function Header() {
 				</div>
 			</div>
 			<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-				<div className='flex justify-between items-center h-16'>
+				<div className='flex justify-between items-center py-1'>
 					{/* Enhanced Logo with Indonesian Cultural Elements */}
 					<Link
 						href='/'
 						aria-label='Go to homepage'
 						className='flex items-center space-x-3 group min-h-[44px] min-w-[44px]'
 					>
-						<div className='relative w-12 h-12 sm:w-12 sm:h-12'>
-							{/* Subtle cultural background ring */}
-							<div className='absolute inset-0 rounded-full bg-gradient-to-br from-turmeric-100 to-chili-100 opacity-20 group-hover:opacity-40 transition-opacity duration-300'></div>
-							<div className='absolute inset-0.5 rounded-full bg-gradient-to-br from-coconut-50 to-white shadow-sm'></div>
+						<div className='relative w-11 h-11 sm:w-12 sm:h-12'>
+							{/* Enhanced Indonesian heritage background ring */}
+							<div className='absolute inset-0 rounded-full bg-gradient-to-br from-gold-200 to-burgundy-200 opacity-40 group-hover:opacity-60 transition-opacity duration-300'></div>
+							<div className='absolute inset-0.5 rounded-full bg-gradient-to-br from-cream-50 to-gold-100 shadow-md border border-gold-300/30'></div>
 
 							<OptimizedImage
 								src='/images/optimized/logo-xs.webp'
@@ -170,35 +171,28 @@ export default function Header() {
 								className='relative z-10 w-full h-full object-contain p-0.5 group-hover:scale-105 transition-transform duration-300'
 								priority
 								quality={90}
-								sizes='(max-width: 640px) 40px, 48px'
+								sizes='(max-width: 640px) 44px, 48px'
 							/>
 						</div>
 
-						<div className='flex flex-col justify-center leading-tight'>
-							{/* Main brand name with same styling as hero title */}
-							<div className='font-brand text-lg sm:text-xl lg:text-2xl group-hover:text-golden-glow transition-colors duration-300 leading-tight mt-4'>
-								<span className='text-turmeric-700'>
+						<div className='flex flex-col justify-center leading-tight ml-3'>
+							{/* Streamlined brand name */}
+							<div className='font-brand text-base sm:text-lg lg:text-xl group-hover:text-gold-600 transition-colors duration-300 leading-tight'>
+								<span className='text-burgundy-700'>
 									SPICE ISLAND
 								</span>
 							</div>
 
-							{/* Subtitle with cultural accent */}
-							<div className='text-center text-sm sm:text-base'>
-								<span className='text-turmeric-700 font-body tracking-wide'>
-									INDONESIA
-								</span>
-							</div>
-
-							{/* Subtle tagline */}
-							<div className='text-xs text-palm-600 font-brand font-medium tracking-widest mt-0.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
-								AUTHENTIC SAMBAL
+							{/* Refined subtitle */}
+							<div className='text-center text-xs sm:text-sm text-burgundy-600 font-body tracking-wider font-medium'>
+								INDONESIA
 							</div>
 						</div>
 					</Link>
 
-					{/* Desktop Navigation */}
+					{/* Desktop Navigation with Enhanced Spacing */}
 					<nav
-						className='hidden lg:flex space-x-8'
+						className='hidden lg:flex items-center space-x-2 xl:space-x-3'
 						aria-label='Primary'
 					>
 						{navigation.map((item) => (
@@ -212,9 +206,11 @@ export default function Header() {
 											handleMouseLeave
 										}
 									>
-										<button className='flex items-center space-x-1 text-burgundy-800 hover:text-burgundy-600 font-medium font-body transition-colors duration-200'>
-											<span>{item.name}</span>
-											<ChevronDown className='w-4 h-4' />
+										<button className='flex items-center space-x-1.5 text-burgundy-900 hover:text-burgundy-600 font-elegant text-base tracking-wide transition-colors duration-200 py-3 px-3 rounded-lg hover:bg-gradient-to-r hover:from-burgundy-50 hover:to-gold-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-burgundy-600 focus-visible:ring-offset-2'>
+											<span className='tracking-wide'>
+												{item.name}
+											</span>
+											<ChevronDown className='w-4 h-4 transition-transform duration-200 group-hover:rotate-180' />
 										</button>
 
 										{isProductsOpen && (
@@ -323,7 +319,7 @@ export default function Header() {
 																		}
 																	>
 																		{/* Unified Card Layout */}
-																		<div className='p-4 rounded-lg hover:bg-gradient-to-r hover:from-burgundy-50 hover:to-gold-50 transition-all duration-200 border border-transparent hover:border-gold-200 text-center'>
+																		<div className='p-4 rounded-lg hover:bg-gradient-to-r hover:from-burgundy-50 hover:to-gold-50 transition-all duration-200 border border-transparent hover:border-gold-300 text-center shadow-sm hover:shadow-md'>
 																			{/* Product Image */}
 																			<div className='relative mx-auto flex items-center justify-center w-36 h-40 bg-white rounded-lg mb-6'>
 																				<OptimizedImage
@@ -469,7 +465,7 @@ export default function Header() {
 								) : (
 									<Link
 										href={item.href}
-										className='text-burgundy-800 hover:text-burgundy-600 font-medium font-body transition-colors duration-200'
+										className='text-burgundy-900 hover:text-burgundy-600 font-elegant text-base tracking-wide transition-all duration-200 py-3 px-3 rounded-lg hover:bg-gradient-to-r hover:from-burgundy-50 hover:to-gold-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-burgundy-600 focus-visible:ring-offset-2'
 									>
 										{item.name}
 									</Link>
@@ -478,51 +474,67 @@ export default function Header() {
 						))}
 					</nav>
 
-					{/* Desktop CTA */}
-					<div className='hidden lg:flex items-center space-x-4'>
+					{/* Desktop CTA with Enhanced Spacing */}
+					<div className='hidden lg:flex items-center space-x-3 ml-4 xl:ml-6'>
+						<SearchButton />
 						{user ? (
-							<>
+							<div className='flex items-center space-x-4'>
 								<Link href='/dashboard'>
 									<Button
 										variant='outline'
-										className='flex items-center space-x-2'
+										size='sm'
+										className='flex items-center space-x-2 border-burgundy-300 text-burgundy-800 hover:bg-burgundy-700 hover:text-cream-50 hover:border-burgundy-700 px-4 py-2 transition-all duration-200'
 									>
 										<User className='w-4 h-4' />
-										<span>Dashboard</span>
+										<span className='hidden xl:inline'>
+											Dashboard
+										</span>
 									</Button>
 								</Link>
 								<Button
 									onClick={handleSignOut}
 									variant='outline'
-									className='flex items-center space-x-2'
+									size='sm'
+									className='flex items-center space-x-2 border-burgundy-300 text-burgundy-800 hover:bg-burgundy-700 hover:text-cream-50 hover:border-burgundy-700 px-4 py-2 transition-all duration-200'
 								>
 									<LogOut className='w-4 h-4' />
-									<span>Sign Out</span>
+									<span className='hidden xl:inline'>
+										Sign Out
+									</span>
 								</Button>
-							</>
+							</div>
 						) : (
-							<>
+							<div className='flex items-center space-x-3'>
 								<Link href='/login'>
-									<Button variant='outline'>
+									<Button
+										variant='outline'
+										size='sm'
+										className='border-burgundy-300 text-burgundy-800 hover:bg-burgundy-700 hover:text-cream-50 hover:border-burgundy-700 font-medium px-4 py-2 transition-all duration-200'
+									>
 										Sign In
 									</Button>
 								</Link>
 								<Link href='/sambal-goreng-uk'>
 									<Button
 										variant='primary'
-										size='lg'
-										className='font-elegant'
+										size='default'
+										className='font-medium bg-gradient-to-r from-burgundy-700 to-burgundy-800 hover:from-burgundy-800 hover:to-burgundy-900 text-white border border-gold-600/30 shadow-lg hover:shadow-xl transition-all duration-300 px-5 py-2.5'
 									>
 										<ShoppingCart className='w-4 h-4 mr-2' />
-										Learn About Sambal Goreng
+										<span className='hidden xl:inline'>
+											Learn About Sambal Goreng
+										</span>
+										<span className='xl:hidden'>
+											Sambal Goreng
+										</span>
 									</Button>
 								</Link>
-							</>
+							</div>
 						)}
 					</div>
 
 					{/* Search & Mobile Menu */}
-					<div className='flex items-center space-x-2'>
+					<div className='flex items-center space-x-3 lg:hidden'>
 						<SearchButton />
 						<button
 							className='lg:hidden p-2 rounded-md text-burgundy-800 hover:text-burgundy-600 hover:bg-burgundy-50 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-burgundy-600 focus-visible:ring-offset-2'

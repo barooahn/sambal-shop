@@ -105,11 +105,11 @@ export default function GiftSetPage() {
 					shippingRate: {
 						"@type": "MonetaryAmount",
 						currency: "GBP",
-						value: "3.49"
+						value: "3.49",
 					},
 					shippingDestination: {
 						"@type": "DefinedRegion",
-						addressCountry: "GB"
+						addressCountry: "GB",
 					},
 					deliveryTime: {
 						"@type": "ShippingDeliveryTime",
@@ -117,27 +117,28 @@ export default function GiftSetPage() {
 							"@type": "QuantitativeValue",
 							minValue: 1,
 							maxValue: 2,
-							unitCode: "DAY"
+							unitCode: "DAY",
 						},
 						transitTime: {
 							"@type": "QuantitativeValue",
 							minValue: 1,
 							maxValue: 3,
-							unitCode: "DAY"
-						}
-					}
+							unitCode: "DAY",
+						},
+					},
 				},
 				hasMerchantReturnPolicy: {
 					"@type": "MerchantReturnPolicy",
-					returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
+					returnPolicyCategory:
+						"https://schema.org/MerchantReturnFiniteReturnWindow",
 					merchandiseReturnDays: 30,
 					returnMethod: "https://schema.org/ReturnByMail",
 					returnFees: "https://schema.org/ReturnShippingFees",
 					returnShippingFeesAmount: {
 						"@type": "MonetaryAmount",
 						currency: "GBP",
-						value: "3.49"
-					}
+						value: "3.49",
+					},
 				},
 			},
 		],
@@ -198,7 +199,7 @@ export default function GiftSetPage() {
 	};
 
 	return (
-		<div className='min-h-screen bg-gradient-to-br from-cream-50 to-cream-100'>
+		<div className='min-h-screen bg-coconut-50'>
 			<FAQSchema
 				faqs={faqData}
 				pageTitle='Indonesian Sambal Gift Set - Frequently Asked Questions'
@@ -216,15 +217,15 @@ export default function GiftSetPage() {
 			/>
 
 			{/* Hero Section */}
-			<section className='py-16 sm:py-20 lg:py-14 bg-gradient-to-br from-stone-900 via-stone-800 to-stone-900 text-white relative overflow-hidden'>
-				<div className='absolute top-0 left-0 w-72 h-72 lg:w-80 lg:h-80 bg-amber-600/20 rounded-full -translate-x-48 -translate-y-48 blur-3xl'></div>
-				<div className='absolute bottom-0 right-0 w-72 h-72 lg:w-80 lg:h-80 bg-amber-600/20 rounded-full translate-x-48 translate-y-48 blur-3xl'></div>
+			<section className='py-16 sm:py-20 lg:py-14 bg-gradient-to-br from-burgundy-900 via-burgundy-800 to-burgundy-900 text-white relative overflow-hidden'>
+				<div className='absolute top-0 left-0 w-72 h-72 lg:w-80 lg:h-80 bg-gold-600/20 rounded-full -translate-x-48 -translate-y-48 blur-3xl'></div>
+				<div className='absolute bottom-0 right-0 w-72 h-72 lg:w-80 lg:h-80 bg-gold-600/20 rounded-full translate-x-48 translate-y-48 blur-3xl'></div>
 
 				<div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<div className='grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] lg:gap-6 items-center'>
 						{/* Left side - Content */}
 						<div className='text-center lg:text-left'>
-							<Badge className='bg-stone-800 text-amber-300 mb-6 px-6 py-3 text-lg font-semibold border border-amber-600/30'>
+							<Badge className='bg-burgundy-800 text-gold-300 mb-6 px-6 py-3 text-lg font-semibold border border-gold-600/30'>
 								<Gift className='w-5 h-5 mr-2' />
 								Perfect for Food Lovers
 							</Badge>
@@ -233,10 +234,10 @@ export default function GiftSetPage() {
 								<span className='text-white block mb-2'>
 									Indonesian Sambal
 								</span>
-								<span className='text-amber-300 block mb-2'>
+								<span className='text-gold-300 block mb-2'>
 									Gift Set Collection
 								</span>
-								<span className='text-stone-200 text-2xl sm:text-3xl lg:text-3xl font-script italic'>
+								<span className='text-gold-200 text-2xl sm:text-3xl lg:text-3xl font-script italic'>
 									Complete Authentic Experience
 								</span>
 							</h1>
@@ -244,7 +245,7 @@ export default function GiftSetPage() {
 							<div className='space-y-4 mb-6 max-w-2xl mx-auto lg:mx-0'>
 								<p className='text-lg sm:text-xl text-stone-200 leading-relaxed font-body'>
 									The{" "}
-									<strong className='text-stone-100'>
+									<strong className='text-gold-100'>
 										perfect gift
 									</strong>{" "}
 									for food enthusiasts - all three
@@ -252,7 +253,7 @@ export default function GiftSetPage() {
 									beautiful presentation packaging.
 								</p>
 
-								<p className='text-lg text-amber-300 leading-relaxed font-body'>
+								<p className='text-lg text-gold-300 leading-relaxed font-body'>
 									<em>
 										Complete Indonesian experience
 									</em>{" "}
@@ -264,7 +265,7 @@ export default function GiftSetPage() {
 
 							{/* Customer Rating */}
 							<div className='flex justify-center lg:justify-start mb-6'>
-								<div className='bg-white/10 backdrop-blur-sm rounded-lg px-6 py-3 border border-indigo-300/30'>
+								<div className='bg-white/10 backdrop-blur-sm rounded-lg px-6 py-3 border border-gold-300/30'>
 									<StarRating
 										rating={
 											productData
@@ -277,7 +278,7 @@ export default function GiftSetPage() {
 												.reviewCount
 										}
 										size='lg'
-										className='text-yellow-400'
+										className='text-gold-400'
 									/>
 								</div>
 							</div>
@@ -285,32 +286,32 @@ export default function GiftSetPage() {
 							{/* Key Features */}
 							<div className='grid sm:grid-cols-2 gap-2 mb-6'>
 								<div className='flex items-center justify-center lg:justify-start space-x-3'>
-									<div className='w-8 h-8 bg-gradient-to-r from-amber-600 to-amber-500 rounded-full flex items-center justify-center'>
-										<Package className='w-4 h-4 text-purple-900' />
+									<div className='w-8 h-8 bg-gold-600 rounded-full flex items-center justify-center'>
+										<Package className='w-4 h-4 text-burgundy-900' />
 									</div>
-									<span className='text-stone-200 font-medium font-elegant'>
+									<span className='text-gold-100 font-medium font-elegant'>
 										Three Complete Varieties
 									</span>
 								</div>
 								<div className='flex items-center justify-center lg:justify-start space-x-3'>
-									<div className='w-8 h-8 bg-gradient-to-r from-amber-600 to-amber-500 rounded-full flex items-center justify-center'>
-										<Gift className='w-4 h-4 text-purple-900' />
+									<div className='w-8 h-8 bg-gold-600 rounded-full flex items-center justify-center'>
+										<Gift className='w-4 h-4 text-burgundy-900' />
 									</div>
 									<span className='text-stone-200 font-medium font-elegant'>
 										Premium Gift Packaging
 									</span>
 								</div>
 								<div className='flex items-center justify-center lg:justify-start space-x-3'>
-									<div className='w-8 h-8 bg-gradient-to-r from-amber-600 to-amber-500 rounded-full flex items-center justify-center'>
-										<Users className='w-4 h-4 text-purple-900' />
+									<div className='w-8 h-8 bg-gold-600 rounded-full flex items-center justify-center'>
+										<Users className='w-4 h-4 text-burgundy-900' />
 									</div>
 									<span className='text-stone-200 font-medium font-elegant'>
 										Perfect for Sharing
 									</span>
 								</div>
 								<div className='flex items-center justify-center lg:justify-start space-x-3'>
-									<div className='w-8 h-8 bg-gradient-to-r from-amber-600 to-amber-500 rounded-full flex items-center justify-center'>
-										<Award className='w-4 h-4 text-purple-900' />
+									<div className='w-8 h-8 bg-gold-600 rounded-full flex items-center justify-center'>
+										<Award className='w-4 h-4 text-burgundy-900' />
 									</div>
 									<span className='text-stone-200 font-medium font-elegant'>
 										Save £2.48
@@ -324,7 +325,7 @@ export default function GiftSetPage() {
 									<Button
 										variant='primary'
 										size='lg'
-										className='font-elegant text-lg px-8 py-4 bg-red-600 hover:bg-red-700 text-white'
+										className='font-elegant text-lg px-8 py-4 bg-burgundy-600 hover:bg-burgundy-700 text-white'
 									>
 										Order Gift Set - £24.99
 									</Button>
@@ -333,7 +334,7 @@ export default function GiftSetPage() {
 									<Button
 										variant='outline'
 										size='lg'
-										className='font-elegant border-indigo-400 text-indigo-400 hover:bg-indigo-400 hover:text-purple-900 text-lg px-8 py-4'
+										className='font-elegant border-gold-300 text-gold-300 hover:bg-gold-300 hover:text-burgundy-900 text-lg px-8 py-4'
 									>
 										Try Sample Pack First
 									</Button>
@@ -359,10 +360,10 @@ export default function GiftSetPage() {
 								</div>
 
 								{/* Floating badges */}
-								<div className='absolute -top-4 -left-4 bg-indigo-500 text-purple-900 rounded-full p-4 shadow-luxury animate-float border border-indigo-300'>
+								<div className='absolute -top-4 -left-4 bg-gold-600 text-burgundy-900 rounded-full p-4 shadow-luxury animate-float border border-gold-300'>
 									<Gift className='w-6 h-6' />
 								</div>
-								<div className='absolute -bottom-4 -right-4 bg-stone-800 text-amber-300 rounded-full p-4 shadow-luxury animate-float delay-1000 border border-purple-600'>
+								<div className='absolute -bottom-4 -right-4 bg-burgundy-800 text-gold-300 rounded-full p-4 shadow-luxury animate-float delay-1000 border border-gold-600'>
 									<Heart className='w-6 h-6' />
 								</div>
 							</div>
@@ -375,9 +376,9 @@ export default function GiftSetPage() {
 			<section className='py-24 bg-white'>
 				<div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<div className='text-center mb-16'>
-						<h2 className='text-4xl sm:text-5xl font-bold text-purple-900 mb-6 font-brand'>
+						<h2 className='text-4xl sm:text-5xl font-bold text-burgundy-900 mb-6 font-brand'>
 							Complete Indonesian
-							<span className='text-indigo-700 block'>
+							<span className='text-gold-700 block'>
 								Sambal Experience
 							</span>
 						</h2>
@@ -409,21 +410,21 @@ export default function GiftSetPage() {
 							</p>
 							<ul className='space-y-1 text-xs text-neutral-700'>
 								<li className='flex items-center space-x-2'>
-									<CheckCircle className='w-3 h-3 text-green-600' />
+									<CheckCircle className='w-3 h-3 text-gold-600' />
 									<span>
 										Perfect for cooking and
 										marinades
 									</span>
 								</li>
 								<li className='flex items-center space-x-2'>
-									<CheckCircle className='w-3 h-3 text-green-600' />
+									<CheckCircle className='w-3 h-3 text-gold-600' />
 									<span>
 										Traditional cobek-ground
 										texture
 									</span>
 								</li>
 								<li className='flex items-center space-x-2'>
-									<CheckCircle className='w-3 h-3 text-green-600' />
+									<CheckCircle className='w-3 h-3 text-gold-600' />
 									<span>
 										For serious heat lovers
 									</span>
@@ -432,8 +433,8 @@ export default function GiftSetPage() {
 						</div>
 
 						{/* Sambal Bali */}
-						<div className='bg-emerald-50 rounded-sm p-6 border border-emerald-200'>
-							<div className='aspect-square mb-4 bg-emerald-100 rounded-sm p-4'>
+						<div className='bg-burgundy-50 rounded-sm p-6 border border-burgundy-200'>
+							<div className='aspect-square mb-4 bg-burgundy-100 rounded-sm p-4'>
 								<Image
 									src='/images/optimized/sambal-bali-lg.webp'
 									alt='Sambal Bali - Aromatic Complexity'
@@ -443,28 +444,28 @@ export default function GiftSetPage() {
 									sizes='(max-width: 768px) 100vw, 33vw'
 								/>
 							</div>
-							<h3 className='text-xl font-bold text-emerald-900 mb-2 font-brand'>
+							<h3 className='text-xl font-bold text-burgundy-900 mb-2 font-brand'>
 								Sambal Bali
 							</h3>
-							<p className='text-emerald-700 text-sm mb-4 font-elegant'>
+							<p className='text-burgundy-700 text-sm mb-4 font-elegant'>
 								Aromatic Sophistication - 14,000 SHU
 							</p>
 							<ul className='space-y-1 text-xs text-neutral-700'>
 								<li className='flex items-center space-x-2'>
-									<CheckCircle className='w-3 h-3 text-green-600' />
+									<CheckCircle className='w-3 h-3 text-gold-600' />
 									<span>
 										Galangal, lemongrass & kaffir
 										lime
 									</span>
 								</li>
 								<li className='flex items-center space-x-2'>
-									<CheckCircle className='w-3 h-3 text-green-600' />
+									<CheckCircle className='w-3 h-3 text-gold-600' />
 									<span>
 										Complex aromatic layers
 									</span>
 								</li>
 								<li className='flex items-center space-x-2'>
-									<CheckCircle className='w-3 h-3 text-green-600' />
+									<CheckCircle className='w-3 h-3 text-gold-600' />
 									<span>
 										Perfect for grilled meats
 									</span>
@@ -473,8 +474,8 @@ export default function GiftSetPage() {
 						</div>
 
 						{/* Sambal Goreng */}
-						<div className='bg-amber-50 rounded-sm p-6 border border-amber-200'>
-							<div className='aspect-square mb-4 bg-amber-100 rounded-sm p-4'>
+						<div className='bg-gold-50 rounded-sm p-6 border border-gold-200'>
+							<div className='aspect-square mb-4 bg-gold-100 rounded-sm p-4'>
 								<Image
 									src='/images/optimized/sambal-goreng-lg.webp'
 									alt='Sambal Goreng - Sweet & Spicy Harmony'
@@ -484,25 +485,25 @@ export default function GiftSetPage() {
 									sizes='(max-width: 768px) 100vw, 33vw'
 								/>
 							</div>
-							<h3 className='text-xl font-bold text-amber-900 mb-2 font-brand'>
+							<h3 className='text-xl font-bold text-gold-900 mb-2 font-brand'>
 								Sambal Goreng
 							</h3>
-							<p className='text-amber-700 text-sm mb-4 font-elegant'>
+							<p className='text-gold-700 text-sm mb-4 font-elegant'>
 								Sweet & Spicy Harmony - 12,000 SHU
 							</p>
 							<ul className='space-y-1 text-xs text-neutral-700'>
 								<li className='flex items-center space-x-2'>
-									<CheckCircle className='w-3 h-3 text-green-600' />
+									<CheckCircle className='w-3 h-3 text-gold-600' />
 									<span>Palm sugar sweetness</span>
 								</li>
 								<li className='flex items-center space-x-2'>
-									<CheckCircle className='w-3 h-3 text-green-600' />
+									<CheckCircle className='w-3 h-3 text-gold-600' />
 									<span>
 										Traditional fried method
 									</span>
 								</li>
 								<li className='flex items-center space-x-2'>
-									<CheckCircle className='w-3 h-3 text-green-600' />
+									<CheckCircle className='w-3 h-3 text-gold-600' />
 									<span>Perfect for beginners</span>
 								</li>
 							</ul>
@@ -510,16 +511,16 @@ export default function GiftSetPage() {
 					</div>
 
 					{/* Additional Items */}
-					<div className='bg-gradient-to-r from-purple-50 to-indigo-50 rounded-sm p-8 border border-purple-200'>
+					<div className='bg-cream-50 rounded-sm p-8 border border-gold-200'>
 						<h3 className='text-2xl font-bold text-purple-900 mb-6 font-brand text-center'>
 							Plus Premium Extras
 						</h3>
 						<div className='grid md:grid-cols-3 gap-6'>
 							<div className='text-center'>
-								<div className='w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>
+								<div className='w-12 h-12 bg-gold-600 rounded-full flex items-center justify-center mx-auto mb-4'>
 									<Package className='w-6 h-6 text-white' />
 								</div>
-								<h4 className='font-semibold text-purple-900 mb-2'>
+								<h4 className='font-semibold text-burgundy-900 mb-2'>
 									Premium Gift Box
 								</h4>
 								<p className='text-sm text-neutral-700'>
@@ -528,10 +529,10 @@ export default function GiftSetPage() {
 								</p>
 							</div>
 							<div className='text-center'>
-								<div className='w-12 h-12 bg-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4'>
+								<div className='w-12 h-12 bg-burgundy-600 rounded-full flex items-center justify-center mx-auto mb-4'>
 									<Utensils className='w-6 h-6 text-white' />
 								</div>
-								<h4 className='font-semibold text-purple-900 mb-2'>
+								<h4 className='font-semibold text-burgundy-900 mb-2'>
 									Tasting Guide
 								</h4>
 								<p className='text-sm text-neutral-700'>
@@ -540,10 +541,10 @@ export default function GiftSetPage() {
 								</p>
 							</div>
 							<div className='text-center'>
-								<div className='w-12 h-12 bg-purple-700 rounded-full flex items-center justify-center mx-auto mb-4'>
+								<div className='w-12 h-12 bg-burgundy-700 rounded-full flex items-center justify-center mx-auto mb-4'>
 									<ChefHat className='w-6 h-6 text-white' />
 								</div>
-								<h4 className='font-semibold text-purple-900 mb-2'>
+								<h4 className='font-semibold text-burgundy-900 mb-2'>
 									Recipe Cards
 								</h4>
 								<p className='text-sm text-neutral-700'>
@@ -560,7 +561,7 @@ export default function GiftSetPage() {
 			<section className='py-16 bg-gradient-to-br from-cream-100 to-cream-200'>
 				<div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<div className='text-center mb-12'>
-						<h2 className='text-3xl font-bold text-purple-900 mb-4 font-brand'>
+						<h2 className='text-3xl font-bold text-burgundy-900 mb-4 font-brand'>
 							Exceptional Value
 						</h2>
 						<p className='text-xl text-neutral-600 font-body'>
@@ -569,11 +570,11 @@ export default function GiftSetPage() {
 						</p>
 					</div>
 
-					<div className='bg-white rounded-sm shadow-luxury border border-purple-200 overflow-hidden'>
-						<div className='grid md:grid-cols-2 divide-x divide-purple-200'>
+					<div className='bg-white rounded-sm shadow-luxury border border-gold-200 overflow-hidden'>
+						<div className='grid md:grid-cols-2 divide-x divide-gold-200'>
 							{/* Individual Purchase */}
 							<div className='p-8'>
-								<h3 className='text-xl font-bold text-purple-900 mb-4 font-brand'>
+								<h3 className='text-xl font-bold text-burgundy-900 mb-4 font-brand'>
 									Individual Purchase
 								</h3>
 								<div className='space-y-2 text-neutral-700'>
@@ -601,7 +602,7 @@ export default function GiftSetPage() {
 							</div>
 
 							{/* Gift Set */}
-							<div className='p-8 bg-gradient-to-br from-purple-50 to-indigo-50'>
+							<div className='p-8 bg-cream-50'>
 								<h3 className='text-xl font-bold text-purple-900 mb-4 font-brand'>
 									Gift Set Collection
 								</h3>
@@ -624,8 +625,8 @@ export default function GiftSetPage() {
 										<span>Gift set discount</span>
 										<span>-£3.98</span>
 									</div>
-									<div className='border-t border-purple-300 pt-2 mt-4'>
-										<div className='flex justify-between font-bold text-lg text-purple-900'>
+									<div className='border-t border-gold-300 pt-2 mt-4'>
+										<div className='flex justify-between font-bold text-lg text-burgundy-900'>
 											<span>
 												Gift Set Price
 											</span>
@@ -657,7 +658,7 @@ export default function GiftSetPage() {
 			<section className='py-16 bg-white'>
 				<div className='container mx-auto px-4'>
 					<div className='max-w-4xl mx-auto'>
-						<h2 className='text-3xl lg:text-4xl font-bold text-purple-900 mb-4 text-center font-brand'>
+						<h2 className='text-3xl lg:text-4xl font-bold text-burgundy-900 mb-4 text-center font-brand'>
 							Gift Set FAQ
 						</h2>
 						<p className='text-xl text-neutral-600 text-center mb-12 font-body'>
@@ -669,9 +670,9 @@ export default function GiftSetPage() {
 							{faqData.map((faq, index) => (
 								<div
 									key={index}
-									className='bg-cream-50 rounded-lg p-6 border border-purple-200'
+									className='bg-cream-50 rounded-lg p-6 border border-gold-200'
 								>
-									<h3 className='text-xl font-bold text-purple-900 mb-3 font-brand'>
+									<h3 className='text-xl font-bold text-burgundy-900 mb-3 font-brand'>
 										{faq.question}
 									</h3>
 									<p className='text-neutral-700 font-body leading-relaxed'>
@@ -685,11 +686,11 @@ export default function GiftSetPage() {
 			</section>
 
 			{/* Final CTA */}
-			<section className='py-24 bg-gradient-to-r from-purple-900 to-purple-800 text-white'>
+			<section className='py-24 bg-gradient-to-r from-burgundy-900 to-burgundy-800 text-white'>
 				<div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
 					<h2 className='text-4xl sm:text-5xl font-bold mb-6 font-brand'>
 						Perfect Gift for
-						<span className='text-amber-300 block'>
+						<span className='text-gold-300 block'>
 							Food Enthusiasts
 						</span>
 					</h2>
@@ -713,14 +714,14 @@ export default function GiftSetPage() {
 							<Button
 								variant='outline'
 								size='lg'
-								className='font-elegant border-indigo-400 text-indigo-400 hover:bg-indigo-300 hover:text-purple-900 text-lg px-8 py-4'
+								className='font-elegant border-gold-300 text-gold-300 hover:bg-gold-300 hover:text-burgundy-900 text-lg px-8 py-4'
 							>
 								Try Sample Pack First
 							</Button>
 						</Link>
 					</div>
 
-					<div className='flex items-center justify-center space-x-6 text-stone-200'>
+					<div className='flex items-center justify-center space-x-6 text-burgundy-100'>
 						<div className='flex items-center space-x-2'>
 							<Truck className='w-5 h-5' />
 							<span className='font-body'>

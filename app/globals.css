@@ -48,6 +48,54 @@ h6 {
 	color: var(--color-highlight-red) !important;
 }
 
+/* Indonesian Cultural Patterns */
+.batik-pattern {
+	background-image: 
+		radial-gradient(circle at 25% 25%, rgba(244, 196, 48, 0.1) 2px, transparent 2px),
+		radial-gradient(circle at 75% 75%, rgba(194, 24, 7, 0.08) 2px, transparent 2px);
+	background-size: 20px 20px;
+}
+
+.batik-subtle {
+	background-image: 
+		radial-gradient(circle at 20% 20%, rgba(212, 175, 55, 0.05) 1px, transparent 1px),
+		radial-gradient(circle at 80% 80%, rgba(124, 45, 18, 0.04) 1px, transparent 1px);
+	background-size: 16px 16px;
+}
+
+.indonesian-border {
+	border-image: linear-gradient(45deg, #d97706, #7f1d2b, #d97706) 1;
+}
+
+/* Enhanced shadow effects for luxury feel */
+.shadow-luxury {
+	box-shadow: 
+		0 10px 15px -3px rgba(124, 45, 18, 0.1), 
+		0 4px 6px -2px rgba(124, 45, 18, 0.05),
+		0 0 0 1px rgba(212, 175, 55, 0.1);
+}
+
+.shadow-glow-gold {
+	box-shadow: 
+		0 10px 25px -5px rgba(212, 175, 55, 0.25),
+		0 10px 10px -5px rgba(212, 175, 55, 0.04),
+		0 0 0 1px rgba(212, 175, 55, 0.2);
+}
+
+.shadow-burgundy {
+	box-shadow: 
+		0 4px 6px -1px rgba(124, 45, 18, 0.1), 
+		0 2px 4px -1px rgba(124, 45, 18, 0.06);
+}
+
+/* Indonesian-inspired gradients */
+.gradient-indonesian-warm {
+	background: linear-gradient(135deg, 
+		rgba(212, 175, 55, 0.1) 0%, 
+		rgba(124, 45, 18, 0.1) 50%, 
+		rgba(212, 175, 55, 0.05) 100%);
+}
+
 .script {
 	font-family: "Great Vibes", cursive !important;
 	color: var(--color-gold) !important;
@@ -742,4 +790,75 @@ h6 {
 	contain: layout style;
 	content-visibility: auto;
 	contain-intrinsic-size: 0 500px;
+}
+
+/* Hide scrollbars */
+.scrollbar-hide {
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+	display: none;  /* Chrome, Safari and Opera */
+}
+
+/* Visual Designer Recommendations - Enhanced Batik Pattern System */
+
+/* Performance & Accessibility Enhancements for Batik Backgrounds */
+.batik-background {
+	/* Better contrast ratios */
+	filter: contrast(1.1) brightness(0.95);
+	
+	/* Performance optimization */
+	will-change: auto;
+	transform: translateZ(0);
+	
+	/* Respect user preferences */
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.batik-background {
+		animation: none !important;
+		transition: none !important;
+	}
+}
+
+/* Mobile-Responsive Pattern Scaling */
+@media (max-width: 768px) {
+	.batik-background {
+		background-size: 60px 40px !important; /* Smaller patterns for mobile */
+		opacity: 0.08 !important; /* Slightly more transparent on mobile */
+	}
+}
+
+@media (min-width: 1280px) {
+	.batik-background {
+		background-size: 150px 100px !important; /* Larger patterns for desktop */
+	}
+}
+
+/* Progressive Enhancement Strategy */
+.page-background {
+	/* Base experience without patterns */
+	background: linear-gradient(135deg, var(--cream-50), var(--cream-100));
+}
+
+/* Enhanced experience with patterns */
+@supports (background-image: url('data:image/svg+xml')) {
+	.page-background.has-batik {
+		background-image: var(--batik-pattern);
+	}
+}
+
+/* Traditional Indonesian Color Enhancements */
+:root {
+	/* More authentic traditional Indonesian colors */
+	--traditional-royal-blue: #1e40af;
+	--traditional-gold: #d97706;
+	--traditional-forest-green: #166534;
+	--traditional-warm-gold: #ca8a04;
+	--traditional-burgundy: #722F37;
+	--traditional-warm-amber: #b45309;
+	--traditional-terracotta: #ea580c;
+	--traditional-consistent-gold: #ca8a04;
 }

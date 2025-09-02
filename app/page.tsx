@@ -3,14 +3,17 @@ import StructuredData from "@/components/seo/StructuredData";
 
 export const metadata: Metadata = {
 	title: "Authentic Indonesian Sambal UK | Spice Island Indonesia",
-	description: "Discover authentic Indonesian sambal made by Chef Yossie using traditional recipes. Premium sambal oelek, sambal bali, and sambal goreng delivered throughout the UK. Free delivery over £20.",
-	keywords: "authentic Indonesian sambal UK, sambal oelek UK, traditional Indonesian chili paste, Chef Yossie sambal, UK delivery Indonesian condiments",
+	description:
+		"Discover authentic Indonesian sambal made by Chef Yossie using traditional recipes. Premium sambal oelek, sambal bali, and sambal goreng delivered throughout the UK. Free delivery over £20.",
+	keywords:
+		"authentic Indonesian sambal UK, sambal oelek UK, traditional Indonesian chili paste, Chef Yossie sambal, UK delivery Indonesian condiments",
 	alternates: {
 		canonical: "https://www.spiceislandindonesia.com",
 	},
 	openGraph: {
 		title: "Authentic Indonesian Sambal UK | Spice Island Indonesia",
-		description: "Premium Indonesian sambal made by Chef Yossie using traditional recipes. UK delivery available.",
+		description:
+			"Premium Indonesian sambal made by Chef Yossie using traditional recipes. UK delivery available.",
 		type: "website",
 		url: "https://www.spiceislandindonesia.com",
 	},
@@ -30,7 +33,9 @@ import NewsletterSection from "@/components/home/NewsletterSection";
 import FAQSection from "@/components/home/FAQSection";
 import ContactSection from "@/components/home/ContactSection";
 import FloatingIngredients from "@/components/ui/FloatingIngredients";
-import TrustIndicators, { DeliveryGuarantee } from "@/components/ui/TrustIndicators";
+import TrustIndicators, {
+	DeliveryGuarantee,
+} from "@/components/ui/TrustIndicators";
 import { Waves, Triangle } from "lucide-react";
 
 // Ingredient configurations for different sections
@@ -240,81 +245,119 @@ export default function Home() {
 		{
 			name: "Chili Peppers",
 			type: "Ingredient" as const,
-			description: "Fresh red chili peppers are the primary ingredient in Indonesian sambal, providing natural heat and vibrant flavor. Varieties include bird's eye chilies (cabe rawit) and long red chilies (cabe merah), each contributing different heat levels and flavor profiles to traditional sambal recipes.",
+			description:
+				"Fresh red chili peppers are the primary ingredient in Indonesian sambal, providing natural heat and vibrant flavor. Varieties include bird's eye chilies (cabe rawit) and long red chilies (cabe merah), each contributing different heat levels and flavor profiles to traditional sambal recipes.",
 			properties: {
-				"cuisine": "Indonesian",
-				"spiceLevel": "Hot",
-				"nutritionalBenefit": "Rich in vitamin C and capsaicin",
-				"uses": ["Sambal making", "Indonesian cooking", "Heat enhancement"],
-				"scovilleRange": "15000-30000 SHU",
-				"origin": "Maluku Islands, Indonesia"
-			}
+				cuisine: "Indonesian",
+				spiceLevel: "Hot",
+				nutritionalBenefit: "Rich in vitamin C and capsaicin",
+				uses: [
+					"Sambal making",
+					"Indonesian cooking",
+					"Heat enhancement",
+				],
+				scovilleRange: "15000-30000 SHU",
+				origin: "Maluku Islands, Indonesia",
+			},
 		},
 		{
 			name: "Galangal",
 			type: "Ingredient" as const,
-			description: "Galangal (lengkuas) is an aromatic root spice essential to Sambal Bali and many Indonesian dishes. This cousin of ginger provides a unique citrusy, pine-like flavor that's more complex and refined than regular ginger, adding depth and authentic Indonesian character to sambal recipes.",
+			description:
+				"Galangal (lengkuas) is an aromatic root spice essential to Sambal Bali and many Indonesian dishes. This cousin of ginger provides a unique citrusy, pine-like flavor that's more complex and refined than regular ginger, adding depth and authentic Indonesian character to sambal recipes.",
 			properties: {
-				"cuisine": "Indonesian",
-				"flavorProfile": "Citrusy, pine-like, aromatic",
-				"uses": ["Sambal Bali", "Indonesian curry", "Traditional medicine"],
-				"nutritionalBenefit": "Anti-inflammatory properties",
-				"origin": "Southeast Asia",
-				"alternativeName": "Greater galangal, Lengkuas"
-			}
+				cuisine: "Indonesian",
+				flavorProfile: "Citrusy, pine-like, aromatic",
+				uses: [
+					"Sambal Bali",
+					"Indonesian curry",
+					"Traditional medicine",
+				],
+				nutritionalBenefit: "Anti-inflammatory properties",
+				origin: "Southeast Asia",
+				alternativeName: "Greater galangal, Lengkuas",
+			},
 		},
 		{
 			name: "Lemongrass",
 			type: "Ingredient" as const,
-			description: "Lemongrass (serai) is a fragrant grass that adds bright, citrusy notes to Sambal Bali. This traditional Indonesian ingredient provides a fresh, lemony aroma without the acidity of actual lemons, making it perfect for balancing the heat of chilies in authentic sambal recipes.",
+			description:
+				"Lemongrass (serai) is a fragrant grass that adds bright, citrusy notes to Sambal Bali. This traditional Indonesian ingredient provides a fresh, lemony aroma without the acidity of actual lemons, making it perfect for balancing the heat of chilies in authentic sambal recipes.",
 			properties: {
-				"cuisine": "Indonesian",
-				"flavorProfile": "Citrusy, fresh, aromatic",
-				"uses": ["Sambal Bali", "Indonesian soups", "Traditional teas"],
-				"nutritionalBenefit": "Natural antioxidants and digestive aid",
-				"origin": "Southeast Asia",
-				"preparation": "Bruised or finely chopped for maximum flavor release"
-			}
+				cuisine: "Indonesian",
+				flavorProfile: "Citrusy, fresh, aromatic",
+				uses: [
+					"Sambal Bali",
+					"Indonesian soups",
+					"Traditional teas",
+				],
+				nutritionalBenefit:
+					"Natural antioxidants and digestive aid",
+				origin: "Southeast Asia",
+				preparation:
+					"Bruised or finely chopped for maximum flavor release",
+			},
 		},
 		{
 			name: "Kaffir Lime Leaves",
 			type: "Ingredient" as const,
-			description: "Kaffir lime leaves (daun jeruk purut) are double-lobed aromatic leaves that provide an intense, floral citrus fragrance to Indonesian sambal. These leaves are irreplaceable in authentic Indonesian cooking, offering a unique lime essence that can't be replicated with regular lime zest.",
+			description:
+				"Kaffir lime leaves (daun jeruk purut) are double-lobed aromatic leaves that provide an intense, floral citrus fragrance to Indonesian sambal. These leaves are irreplaceable in authentic Indonesian cooking, offering a unique lime essence that can't be replicated with regular lime zest.",
 			properties: {
-				"cuisine": "Indonesian",
-				"flavorProfile": "Intense citrus, floral, aromatic",
-				"uses": ["Sambal Bali", "Indonesian curry", "Traditional marinades"],
-				"nutritionalBenefit": "Essential oils with antimicrobial properties",
-				"origin": "Southeast Asia",
-				"preparation": "Torn or finely shredded to release essential oils"
-			}
+				cuisine: "Indonesian",
+				flavorProfile: "Intense citrus, floral, aromatic",
+				uses: [
+					"Sambal Bali",
+					"Indonesian curry",
+					"Traditional marinades",
+				],
+				nutritionalBenefit:
+					"Essential oils with antimicrobial properties",
+				origin: "Southeast Asia",
+				preparation:
+					"Torn or finely shredded to release essential oils",
+			},
 		},
 		{
 			name: "Shallots",
 			type: "Ingredient" as const,
-			description: "Shallots (bawang merah) are small, purple-skinned onions that form the aromatic base of Indonesian sambal. Milder and sweeter than regular onions, shallots provide essential depth and complexity to traditional Indonesian condiments and are a cornerstone of authentic Southeast Asian cooking.",
+			description:
+				"Shallots (bawang merah) are small, purple-skinned onions that form the aromatic base of Indonesian sambal. Milder and sweeter than regular onions, shallots provide essential depth and complexity to traditional Indonesian condiments and are a cornerstone of authentic Southeast Asian cooking.",
 			properties: {
-				"cuisine": "Indonesian",
-				"flavorProfile": "Sweet, mild, aromatic",
-				"uses": ["Sambal base", "Indonesian stir-fries", "Traditional spice pastes"],
-				"nutritionalBenefit": "Antioxidants and natural sulfur compounds",
-				"origin": "Southeast Asia",
-				"preparation": "Finely chopped or ground in traditional stone mortar"
-			}
+				cuisine: "Indonesian",
+				flavorProfile: "Sweet, mild, aromatic",
+				uses: [
+					"Sambal base",
+					"Indonesian stir-fries",
+					"Traditional spice pastes",
+				],
+				nutritionalBenefit:
+					"Antioxidants and natural sulfur compounds",
+				origin: "Southeast Asia",
+				preparation:
+					"Finely chopped or ground in traditional stone mortar",
+			},
 		},
 		{
 			name: "Garlic",
 			type: "Ingredient" as const,
-			description: "Garlic (bawang putih) is an essential aromatic ingredient in Indonesian sambal, providing depth and umami complexity. Fresh garlic cloves are traditionally ground with chilies in a stone mortar, releasing essential oils that create the authentic flavor foundation of Indonesian condiments.",
+			description:
+				"Garlic (bawang putih) is an essential aromatic ingredient in Indonesian sambal, providing depth and umami complexity. Fresh garlic cloves are traditionally ground with chilies in a stone mortar, releasing essential oils that create the authentic flavor foundation of Indonesian condiments.",
 			properties: {
-				"cuisine": "Indonesian",
-				"flavorProfile": "Pungent, aromatic, umami",
-				"uses": ["Sambal base", "Indonesian marinades", "Traditional spice pastes"],
-				"nutritionalBenefit": "Natural antibacterial and immune-boosting properties",
-				"origin": "Central Asia, widely used in Indonesian cuisine",
-				"preparation": "Fresh cloves, traditionally ground in stone mortar"
-			}
-		}
+				cuisine: "Indonesian",
+				flavorProfile: "Pungent, aromatic, umami",
+				uses: [
+					"Sambal base",
+					"Indonesian marinades",
+					"Traditional spice pastes",
+				],
+				nutritionalBenefit:
+					"Natural antibacterial and immune-boosting properties",
+				origin: "Central Asia, widely used in Indonesian cuisine",
+				preparation:
+					"Fresh cloves, traditionally ground in stone mortar",
+			},
+		},
 	];
 
 	// General Sambal FAQ data for AI search optimization
@@ -332,7 +375,8 @@ export default function Home() {
 			answer: "Yes! Authentic sambal is incredibly healthy when made with traditional methods. Fresh chilies are rich in vitamin C, capsaicin (which boosts metabolism), and antioxidants. Our sambal contains no artificial preservatives, colors, or excessive sodium like many commercial hot sauces. The natural fermentation process and minimal ingredients create a condiment that supports digestive health and provides natural anti-inflammatory benefits.",
 		},
 		{
-			question: "Can I buy authentic sambal UK with Indonesian chili paste quality?",
+			question:
+				"Can I buy authentic sambal UK with Indonesian chili paste quality?",
 			answer: "Absolutely! We're the UK's premier authentic sambal UK supplier, crafting traditional Indonesian chili paste as artisanal hot sauce. Made by Chef Yossie using traditional Bandung family recipes, our authentic sambal UK is crafted with the same techniques used in Indonesia for generations. We deliver this Indonesian chili paste throughout the UK including London, Manchester, Birmingham, Edinburgh with proper packaging to maintain freshness. Unlike mass-produced alternatives found in UK supermarkets, our artisanal hot sauce contains no artificial ingredients and captures the true taste of Indonesia.",
 		},
 		{
@@ -346,7 +390,8 @@ export default function Home() {
 			answer: "Spice Island Indonesia is your best source for authentic sambal UK and Indonesian chili paste in Britain. While UK supermarkets may stock mass-produced versions, our artisanal hot sauce is the only one made by a professional Indonesian chef using traditional Bandung recipes. We deliver this authentic sambal UK nationwide, so whether you're in London, Manchester, Scotland, Wales or anywhere in Britain, you can order Indonesian chili paste online with fast delivery.",
 		},
 		{
-			question: "What exactly is authentic sambal UK as Indonesian chili paste?",
+			question:
+				"What exactly is authentic sambal UK as Indonesian chili paste?",
 			answer: "Authentic sambal UK is traditional Indonesian chili paste that's been crafted for centuries in the Spice Islands, now available as premium artisanal hot sauce in Britain. It's not just hot sauce - authentic sambal UK is made from fresh chilies, salt, and vinegar using ancient stone grinding techniques. Unlike Western hot sauces, this Indonesian chili paste has no sugar, preservatives, or artificial ingredients. It's the heart and soul of Indonesian cooking, now delivered across the UK.",
 		},
 		{
@@ -361,396 +406,547 @@ export default function Home() {
 	];
 
 	return (
-		<div className='font-body min-h-screen relative overflow-hidden'>
-			{/* Content with proper z-index */}
-			<div className='relative z-10'>
-				{/* Structured Data (keep single instances to avoid duplicates) */}
-				<StructuredData type='organization' />
-				<StructuredData type='localbusiness' />
+		<>
+			{/* Clean Subtle Background */}
+			<div className='fixed inset-0 bg-coconut-50 pointer-events-none'></div>
 
-				{/* Local SEO Schema for AI Search */}
-				<LocalSEOSchema
-					businessName='Spice Island Indonesia'
-					description='Authentic Indonesian sambal and spices delivered throughout the UK. Traditional recipes by Chef Yossie from Bandung, Indonesia.'
-					serviceAreas={[
-						{ name: "United Kingdom", type: "Country" },
-						{ name: "London", type: "City" },
-						{ name: "Manchester", type: "City" },
-						{ name: "Birmingham", type: "City" },
-						{ name: "Edinburgh", type: "City" },
-						{ name: "Cardiff", type: "City" },
-						{ name: "Belfast", type: "City" },
-						{ name: "England", type: "Region" },
-						{ name: "Scotland", type: "Region" },
-						{ name: "Wales", type: "Region" },
-						{ name: "Northern Ireland", type: "Region" },
-					]}
-					deliveryRadius={500}
-					deliveryUnit='km'
-					specialties={[
-						"Indonesian Sambal",
-						"Traditional Chili Paste",
-						"Authentic Indonesian Spices",
-						"Sambal Oelek",
-						"Sambal Bali",
-						"Indonesian Condiments",
-						"Southeast Asian Cuisine",
-						"Traditional Indonesian Recipes",
-					]}
-					languages={["English", "Indonesian"]}
-				/>
+			<div className='font-body min-h-screen relative overflow-hidden'>
+				{/* Content with proper z-index */}
+				<div className='relative z-10'>
+					{/* Structured Data (keep single instances to avoid duplicates) */}
+					<StructuredData type='organization' />
+					<StructuredData type='localbusiness' />
 
-				{/* General Sambal FAQ Schema */}
-				<FAQSchema
-					faqs={generalSambalFAQ}
-					pageTitle='Indonesian Sambal - Frequently Asked Questions'
-				/>
-
-				{/* Ingredient Entity Markup for AI Search */}
-				<EntityMarkup
-					entities={ingredientEntities}
-					pageTitle='Indonesian Sambal Ingredients - Traditional Spices and Aromatics'
-				/>
-
-				{/* Voice Search Optimization Schema */}
-				<VoiceSearchSchema
-					speakableSections={[
-						{
-							cssSelector: ".voice-hero-title",
-							description:
-								"Main page title for voice assistants",
-						},
-						{
-							cssSelector: ".voice-product-description",
-							description:
-								"Key product information for voice queries",
-						},
-						{
-							cssSelector: ".voice-optimized-answer",
-							description:
-								"FAQ answers optimized for voice search",
-						},
-						{
-							cssSelector: ".voice-location-info",
-							description:
-								"UK delivery and location information",
-						},
-					]}
-					faqQuestions={generalSambalFAQ.map((faq) => ({
-						question: faq.question,
-						answer: faq.answer,
-						voiceOptimized: true,
-					}))}
-				/>
-
-				{/* Hero Section */}
-				<div className='relative'>
-					<HeroSection />
-					<FloatingIngredients ingredients={heroIngredients} />
-				</div>
-
-				{/* Product Showcase Section */}
-				<div className='relative'>
-					<div className='relative pt-8'>
-						<ProductShowcase />
-					</div>
-					<FloatingIngredients
-						ingredients={productIngredients}
+					{/* Local SEO Schema for AI Search */}
+					<LocalSEOSchema
+						businessName='Spice Island Indonesia'
+						description='Authentic Indonesian sambal and spices delivered throughout the UK. Traditional recipes by Chef Yossie from Bandung, Indonesia.'
+						serviceAreas={[
+							{ name: "United Kingdom", type: "Country" },
+							{ name: "London", type: "City" },
+							{ name: "Manchester", type: "City" },
+							{ name: "Birmingham", type: "City" },
+							{ name: "Edinburgh", type: "City" },
+							{ name: "Cardiff", type: "City" },
+							{ name: "Belfast", type: "City" },
+							{ name: "England", type: "Region" },
+							{ name: "Scotland", type: "Region" },
+							{ name: "Wales", type: "Region" },
+							{ name: "Northern Ireland", type: "Region" },
+						]}
+						deliveryRadius={500}
+						deliveryUnit='km'
+						specialties={[
+							"Indonesian Sambal",
+							"Traditional Chili Paste",
+							"Authentic Indonesian Spices",
+							"Sambal Oelek",
+							"Sambal Bali",
+							"Indonesian Condiments",
+							"Southeast Asian Cuisine",
+							"Traditional Indonesian Recipes",
+						]}
+						languages={["English", "Indonesian"]}
 					/>
-				</div>
 
-				{/* Newsletter Section */}
-				<div className='relative'>
-					<div className='absolute top-0 right-0 w-64 h-64 bg-gradient-to-l from-red-300/20 to-transparent rounded-full blur-3xl'></div>
-					<NewsletterSection />
-					<FloatingIngredients
-						ingredients={newsletterIngredients}
+					{/* General Sambal FAQ Schema */}
+					<FAQSchema
+						faqs={generalSambalFAQ}
+						pageTitle='Indonesian Sambal - Frequently Asked Questions'
 					/>
-				</div>
 
-				{/* Transition Ingredients between Newsletter and Shipping */}
-				<div className='relative '>
-					<FloatingIngredients
-						ingredients={transitionIngredients}
+					{/* Ingredient Entity Markup for AI Search */}
+					<EntityMarkup
+						entities={ingredientEntities}
+						pageTitle='Indonesian Sambal Ingredients - Traditional Spices and Aromatics'
 					/>
-				</div>
 
-				{/* Shipping Section */}
-				<div className='relative'>
-					<div className='relative pt-12'>
-						<ShippingSection />
-					</div>
-					<FloatingIngredients
-						ingredients={shippingIngredients}
+					{/* Voice Search Optimization Schema */}
+					<VoiceSearchSchema
+						speakableSections={[
+							{
+								cssSelector: ".voice-hero-title",
+								description:
+									"Main page title for voice assistants",
+							},
+							{
+								cssSelector:
+									".voice-product-description",
+								description:
+									"Key product information for voice queries",
+							},
+							{
+								cssSelector: ".voice-optimized-answer",
+								description:
+									"FAQ answers optimized for voice search",
+							},
+							{
+								cssSelector: ".voice-location-info",
+								description:
+									"UK delivery and location information",
+							},
+						]}
+						faqQuestions={generalSambalFAQ.map((faq) => ({
+							question: faq.question,
+							answer: faq.answer,
+							voiceOptimized: true,
+						}))}
 					/>
-				</div>
 
-				{/* Story Section */}
-				<div className='relative'>
-					<StorySection />
-					<FloatingIngredients ingredients={storyIngredients} />
-				</div>
-
-				{/* Testimonials Section */}
-				<div className='relative pt-8'>
-					<TestimonialsSection />
-				</div>
-
-				{/* Problem-Solution Content with enhanced visual appeal */}
-				<section className='py-16 relative'>
-					{/* Background accent elements */}
-					<div className='absolute top-10 left-10 w-24 h-24 bg-purple-300/20 rounded-full blur-xl animate-pulse'></div>
-					<div
-						className='absolute bottom-10 right-10 w-32 h-32 bg-blue-300/15 rounded-full blur-2xl animate-pulse'
-						style={{ animationDelay: "3s" }}
-					></div>
-
-					{/* Floating ingredients after header */}
-					<FloatingIngredients
-						ingredients={cookingExperienceIngredients}
-					/>
-					<div className='container mx-auto px-4 relative'>
-						{/* Section header with visual enhancement */}
-						<div className='text-center mb-16 relative'>
-							<div className='inline-block p-8 bg-white/80 backdrop-blur-sm rounded-sm shadow-xl border border-white/20'>
-								<h3 className='text-3xl lg:text-4xl font-bold text-burgundy-900 mb-4 font-heading'>
-									Transform Your Cooking Experience
-								</h3>
-								<p className='text-xl text-gray-600 font-body'>
-									Discover how authentic Indonesian
-									sambal solves your kitchen
-									challenges
-								</p>
-							</div>
-						</div>
-
-						<ProblemSolutionContent
-							title='Common Cooking Challenges Solved'
-							subtitle='How authentic Indonesian sambal solves your kitchen problems'
-							problems={[
-								{
-									problem: "I want to add heat to my cooking but don't like artificial flavors or excessive sweetness in Western hot sauces.",
-									solution:
-										"Authentic sambal oelek contains only chilies, salt, and vinegar - no artificial colors, preservatives, or added sugar. You get pure chili heat that enhances rather than masks your food's natural flavors.",
-									benefits: [
-										"No artificial ingredients or preservatives",
-										"Pure chili flavor without sweetness",
-										"Traditional Indonesian authenticity",
-										"Perfect for serious home cooks",
-									],
-									actionLink: {
-										text: "Try Authentic Sambal Oelek",
-										href: "/sambal-oelek-uk",
-									},
-									category: "Flavor Enhancement",
-								},
-								{
-									problem: "I'm new to spicy food but want to explore Indonesian flavors without overwhelming heat.",
-									solution:
-										"Sambal Bali offers complex aromatic spices (galangal, lemongrass, kaffir lime) that balance the heat beautifully. It's milder than pure chili pastes while delivering authentic Indonesian flavor complexity.",
-									benefits: [
-										"Aromatic spices balance the heat",
-										"Perfect introduction to Indonesian cuisine",
-										"Complex flavor layers, not just heat",
-										"Ideal for gradual spice tolerance building",
-									],
-									actionLink: {
-										text: "Start with Sambal Bali",
-										href: "/sambal-bali-aromatic-spicy",
-									},
-									category: "Beginner-Friendly",
-								},
-								{
-									problem: "I want to cook authentic Asian dishes but can't find quality Indonesian ingredients in UK stores.",
-									solution:
-										"We deliver authentic Indonesian sambal throughout the UK, made by Chef Yossie using traditional Bandung family recipes. No need to compromise with inferior substitutes or artificial products.",
-									benefits: [
-										"Authentic Indonesian recipes and techniques",
-										"Made by traditional Indonesian chef",
-										"UK-wide delivery with proper packaging",
-										"Sample packs available to try first",
-									],
-									actionLink: {
-										text: "Order Authentic Sambal",
-										href: "/sample-pack-try-first",
-									},
-									category: "Authenticity",
-								},
-								{
-									problem: "I love cooking but struggle with bland, boring meals that lack excitement and depth of flavor.",
-									solution:
-										"Indonesian sambal transforms ordinary dishes into restaurant-quality meals. Use it in marinades, stir-fries, or as a finishing sauce to add layers of complex heat and authentic Southeast Asian flavor.",
-									benefits: [
-										"Transforms simple ingredients into exciting dishes",
-										"Versatile - works as condiment or cooking ingredient",
-										"Restaurant-quality flavor at home",
-										"Endless recipe possibilities",
-									],
-									actionLink: {
-										text: "Explore Recipe Ideas",
-										href: "/recipes",
-									},
-									category: "Cooking Enhancement",
-								},
-							]}
+					{/* Hero Section */}
+					<div className='relative'>
+						<HeroSection />
+						<FloatingIngredients
+							ingredients={heroIngredients}
 						/>
 					</div>
-					<FloatingIngredients
-						ingredients={problemSolutionIngredients}
-					/>
-				</section>
 
-				{/* General Sambal FAQ with enhanced design */}
-				<section className='py-16 relative'>
-					{/* Visual connecting elements with icons instead of SVG */}
-					<div className='absolute top-0 left-1/2 transform -translate-x-1/2'>
-						<Waves className='w-24 h-6 text-white/10' />
+					{/* Product Showcase Section */}
+					<div className='relative'>
+						<div className='relative pt-8'>
+							<ProductShowcase />
+						</div>
+						<FloatingIngredients
+							ingredients={productIngredients}
+						/>
 					</div>
 
-					<div className='container mx-auto px-4 relative pt-8'>
-						<div className='max-w-4xl mx-auto'>
-							{/* Enhanced section header */}
-							<div className='text-center mb-16'>
-								<div className='inline-block p-8 bg-white/90 backdrop-blur-sm rounded-sm shadow-2xl border border-white/30'>
-									<h2 className='text-3xl lg:text-4xl font-bold text-burgundy-900 mb-4 font-heading'>
-										About Indonesian Sambal
-									</h2>
+					{/* Newsletter Section */}
+					<div className='relative'>
+						<div className='absolute top-0 right-0 w-64 h-64 bg-gradient-to-l from-gold-300/20 to-transparent rounded-full blur-3xl'></div>
+						<NewsletterSection />
+						<FloatingIngredients
+							ingredients={newsletterIngredients}
+						/>
+					</div>
+
+					{/* Transition Ingredients between Newsletter and Shipping */}
+					<div className='relative '>
+						<FloatingIngredients
+							ingredients={transitionIngredients}
+						/>
+					</div>
+
+					{/* Shipping Section */}
+					<div className='relative'>
+						<div className='relative pt-12'>
+							<ShippingSection />
+						</div>
+						<FloatingIngredients
+							ingredients={shippingIngredients}
+						/>
+					</div>
+
+					{/* Story Section */}
+					<div className='relative'>
+						<StorySection />
+						<FloatingIngredients
+							ingredients={storyIngredients}
+						/>
+					</div>
+
+					{/* Community Section */}
+					<section className='py-16 bg-gradient-to-br from-burgundy-50 to-gold-50 relative'>
+						<div className='container mx-auto px-4'>
+							<div className='text-center mb-12'>
+								<h2 className='text-3xl md:text-4xl font-bold text-burgundy-900 mb-4'>
+									Join Our Spice Community
+								</h2>
+								<p className='text-xl text-burgundy-700 max-w-3xl mx-auto mb-8'>
+									Connect with fellow food lovers,
+									share your cooking stories, and
+									discover new ways to enjoy
+									authentic Indonesian flavors
+								</p>
+							</div>
+
+							<div className='grid md:grid-cols-3 gap-8 mb-12'>
+								{/* Share Stories */}
+								<div className='bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow'>
+									<div className='w-16 h-16 bg-burgundy-100 rounded-full flex items-center justify-center mx-auto mb-4'>
+										<span className='text-2xl'>
+											📖
+										</span>
+									</div>
+									<h3 className='text-xl font-bold text-burgundy-900 mb-3'>
+										Share Your Story
+									</h3>
+									<p className='text-gray-600 mb-6'>
+										Tell us about your sambal
+										cooking adventures and earn
+										rewards!
+									</p>
+									<Link
+										href='/community/share-story'
+										className='inline-block bg-burgundy-600 text-white px-6 py-3 rounded-lg hover:bg-burgundy-700 transition-colors'
+									>
+										Share Now
+									</Link>
+								</div>
+
+								{/* Take Quiz */}
+								<div className='bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow'>
+									<div className='w-16 h-16 bg-gold-100 rounded-full flex items-center justify-center mx-auto mb-4'>
+										<span className='text-2xl'>
+											🌶️
+										</span>
+									</div>
+									<h3 className='text-xl font-bold text-burgundy-900 mb-3'>
+										Discover Your Perfect Sambal
+									</h3>
+									<p className='text-gray-600 mb-6'>
+										Take our personalized quiz to
+										find your ideal heat level and
+										flavors.
+									</p>
+									<Link
+										href='/community/quiz'
+										className='inline-block bg-gold-600 text-white px-6 py-3 rounded-lg hover:bg-gold-700 transition-colors'
+									>
+										Take Quiz
+									</Link>
+								</div>
+
+								{/* Community Feed */}
+								<div className='bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition-shadow'>
+									<div className='w-16 h-16 bg-gold-100 rounded-full flex items-center justify-center mx-auto mb-4'>
+										<span className='text-2xl'>
+											👥
+										</span>
+									</div>
+									<h3 className='text-xl font-bold text-burgundy-900 mb-3'>
+										Community Stories
+									</h3>
+									<p className='text-gray-600 mb-6'>
+										Read inspiring cooking stories
+										and recipes from our
+										community.
+									</p>
+									<Link
+										href='/community'
+										className='inline-block bg-burgundy-600 text-white px-6 py-3 rounded-lg hover:bg-burgundy-700 transition-colors'
+									>
+										Explore Community
+									</Link>
+								</div>
+							</div>
+
+							<div className='text-center'>
+								<div className='bg-gradient-to-r from-burgundy-600 to-burgundy-700 text-white rounded-lg p-6 max-w-2xl mx-auto'>
+									<h3 className='text-xl font-bold mb-3'>
+										🏆 Earn Rewards & Badges
+									</h3>
+									<p className='mb-4'>
+										Share your stories, complete
+										challenges, and unlock
+										exclusive discounts and
+										content!
+									</p>
+									<Link
+										href='/community'
+										className='inline-block bg-white text-burgundy-700 px-6 py-2 rounded-lg hover:bg-gold-50 transition-colors font-semibold'
+									>
+										Get Started
+									</Link>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					{/* Testimonials Section */}
+					<div className='relative pt-8'>
+						<TestimonialsSection />
+					</div>
+
+					{/* Problem-Solution Content with enhanced visual appeal */}
+					<section className='py-16 relative'>
+						{/* Background accent elements */}
+						<div className='absolute top-10 left-10 w-24 h-24 bg-gold-300/20 rounded-full blur-xl animate-pulse'></div>
+						<div
+							className='absolute bottom-10 right-10 w-32 h-32 bg-burgundy-300/10 rounded-full blur-2xl animate-pulse'
+							style={{ animationDelay: "3s" }}
+						></div>
+
+						{/* Floating ingredients after header */}
+						<FloatingIngredients
+							ingredients={cookingExperienceIngredients}
+						/>
+						<div className='container mx-auto px-4 relative'>
+							{/* Section header with visual enhancement */}
+							<div className='text-center mb-16 relative'>
+								<div className='inline-block p-8 bg-white/80 backdrop-blur-sm rounded-sm shadow-xl border border-white/20'>
+									<h3 className='text-3xl lg:text-4xl font-bold text-burgundy-900 mb-4 font-heading'>
+										Transform Your Cooking
+										Experience
+									</h3>
 									<p className='text-xl text-gray-600 font-body'>
-										Everything you need to know
-										about authentic Indonesian
-										sambal culture and tradition
+										Discover how authentic
+										Indonesian sambal solves your
+										kitchen challenges
 									</p>
 								</div>
 							</div>
 
-							<div className='space-y-8'>
-								{/* Enhanced FAQ items with better visual flow */}
-								{generalSambalFAQ.map((faq, index) => (
-									<div key={index} className='group'>
-										<div className='bg-white/80 backdrop-blur-sm rounded-sm p-8 border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1'>
-											{/* Visual accent */}
-											<div className='flex items-start space-x-4'>
-												<div className='flex-shrink-0 w-12 h-12 bg-gradient-to-br from-red-500 to-amber-500 rounded-full flex items-center justify-center text-white font-bold text-lg'>
-													{index + 1}
-												</div>
-												<div className='flex-1'>
-													<h3 className='text-xl font-bold text-burgundy-900 mb-4 font-brand group-hover:text-red-600 transition-colors'>
-														{
-															faq.question
-														}
-													</h3>
-													<p className='voice-optimized-answer text-gray-700 font-body leading-relaxed'>
-														{
-															faq.answer
-														}
-														{index ===
-															3 && (
-															<>
-																{" "}
-																Try
-																our{" "}
-																<Link
-																	href='/sample-pack-try-first'
-																	className='text-burgundy-600 hover:text-burgundy-800 underline font-semibold'
-																>
-																	sample
-																	pack
-																</Link>{" "}
-																to
-																experience
-																the
-																authentic
-																difference.
-															</>
-														)}
-													</p>
+							<ProblemSolutionContent
+								title='Common Cooking Challenges Solved'
+								subtitle='How authentic Indonesian sambal solves your kitchen problems'
+								problems={[
+									{
+										problem: "I want to add heat to my cooking but don't like artificial flavors or excessive sweetness in Western hot sauces.",
+										solution:
+											"Authentic sambal oelek contains only chilies, salt, and vinegar - no artificial colors, preservatives, or added sugar. You get pure chili heat that enhances rather than masks your food's natural flavors.",
+										benefits: [
+											"No artificial ingredients or preservatives",
+											"Pure chili flavor without sweetness",
+											"Traditional Indonesian authenticity",
+											"Perfect for serious home cooks",
+										],
+										actionLink: {
+											text: "Try Authentic Sambal Oelek",
+											href: "/sambal-oelek-uk",
+										},
+										category:
+											"Flavor Enhancement",
+									},
+									{
+										problem: "I'm new to spicy food but want to explore Indonesian flavors without overwhelming heat.",
+										solution:
+											"Sambal Bali offers complex aromatic spices (galangal, lemongrass, kaffir lime) that balance the heat beautifully. It's milder than pure chili pastes while delivering authentic Indonesian flavor complexity.",
+										benefits: [
+											"Aromatic spices balance the heat",
+											"Perfect introduction to Indonesian cuisine",
+											"Complex flavor layers, not just heat",
+											"Ideal for gradual spice tolerance building",
+										],
+										actionLink: {
+											text: "Start with Sambal Bali",
+											href: "/sambal-bali-aromatic-spicy",
+										},
+										category: "Beginner-Friendly",
+									},
+									{
+										problem: "I want to cook authentic Asian dishes but can't find quality Indonesian ingredients in UK stores.",
+										solution:
+											"We deliver authentic Indonesian sambal throughout the UK, made by Chef Yossie using traditional Bandung family recipes. No need to compromise with inferior substitutes or artificial products.",
+										benefits: [
+											"Authentic Indonesian recipes and techniques",
+											"Made by traditional Indonesian chef",
+											"UK-wide delivery with proper packaging",
+											"Sample packs available to try first",
+										],
+										actionLink: {
+											text: "Order Authentic Sambal",
+											href: "/sample-pack-try-first",
+										},
+										category: "Authenticity",
+									},
+									{
+										problem: "I love cooking but struggle with bland, boring meals that lack excitement and depth of flavor.",
+										solution:
+											"Indonesian sambal transforms ordinary dishes into restaurant-quality meals. Use it in marinades, stir-fries, or as a finishing sauce to add layers of complex heat and authentic Southeast Asian flavor.",
+										benefits: [
+											"Transforms simple ingredients into exciting dishes",
+											"Versatile - works as condiment or cooking ingredient",
+											"Restaurant-quality flavor at home",
+											"Endless recipe possibilities",
+										],
+										actionLink: {
+											text: "Explore Recipe Ideas",
+											href: "/recipes",
+										},
+										category:
+											"Cooking Enhancement",
+									},
+								]}
+							/>
+						</div>
+						<FloatingIngredients
+							ingredients={problemSolutionIngredients}
+						/>
+					</section>
+
+					{/* General Sambal FAQ with enhanced design */}
+					<section className='py-16 relative'>
+						{/* Visual connecting elements with icons instead of SVG */}
+						<div className='absolute top-0 left-1/2 transform -translate-x-1/2'>
+							<Waves className='w-24 h-6 text-white/10' />
+						</div>
+
+						<div className='container mx-auto px-4 relative pt-8'>
+							<div className='max-w-4xl mx-auto'>
+								{/* Enhanced section header */}
+								<div className='text-center mb-16'>
+									<div className='inline-block p-8 bg-white/90 backdrop-blur-sm rounded-sm shadow-2xl border border-white/30'>
+										<h2 className='text-3xl lg:text-4xl font-bold text-burgundy-900 mb-4 font-heading'>
+											About Indonesian Sambal
+										</h2>
+										<p className='text-xl text-gray-600 font-body'>
+											Everything you need to
+											know about authentic
+											Indonesian sambal culture
+											and tradition
+										</p>
+									</div>
+								</div>
+
+								<div className='space-y-8'>
+									{/* Enhanced FAQ items with better visual flow */}
+									{generalSambalFAQ.map(
+										(faq, index) => (
+											<div
+												key={index}
+												className='group'
+											>
+												<div className='bg-white/80 backdrop-blur-sm rounded-sm p-8 border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1'>
+													{/* Visual accent */}
+													<div className='flex items-start space-x-4'>
+														<div className='flex-shrink-0 w-12 h-12 bg-gradient-to-br from-red-500 to-amber-500 rounded-full flex items-center justify-center text-white font-bold text-lg'>
+															{index +
+																1}
+														</div>
+														<div className='flex-1'>
+															<h3 className='text-xl font-bold text-burgundy-900 mb-4 font-brand group-hover:text-red-600 transition-colors'>
+																{
+																	faq.question
+																}
+															</h3>
+															<p className='voice-optimized-answer text-gray-700 font-body leading-relaxed'>
+																{
+																	faq.answer
+																}
+																{index ===
+																	3 && (
+																	<>
+																		{" "}
+																		Try
+																		our{" "}
+																		<Link
+																			href='/sample-pack-try-first'
+																			className='text-burgundy-600 hover:text-burgundy-800 underline font-semibold'
+																		>
+																			sample
+																			pack
+																		</Link>{" "}
+																		to
+																		experience
+																		the
+																		authentic
+																		difference.
+																	</>
+																)}
+															</p>
+														</div>
+													</div>
 												</div>
 											</div>
-										</div>
-									</div>
-								))}
+										)
+									)}
+								</div>
 							</div>
 						</div>
+					</section>
+
+					{/* FAQ Section */}
+					<div className='relative'>
+						<div className='absolute top-0 right-0 w-48 h-48 bg-gradient-to-l from-gold-300/20 to-transparent rounded-full blur-3xl'></div>
+						<FAQSection />
+						<FloatingIngredients
+							ingredients={faqIngredients}
+						/>
 					</div>
-				</section>
 
-				{/* FAQ Section */}
-				<div className='relative'>
-					<div className='absolute top-0 right-0 w-48 h-48 bg-gradient-to-l from-purple-300/20 to-transparent rounded-full blur-3xl'></div>
-					<FAQSection />
-					<FloatingIngredients ingredients={faqIngredients} />
-				</div>
+					{/* Trust Indicators & Security Section */}
+					<section className='py-16 bg-gradient-to-br from-white via-cream-50 to-gold-50/30 relative'>
+						<div className='absolute top-0 left-0 w-32 h-32 bg-gradient-to-r from-gold-100/30 to-cream-100/30 rounded-full blur-2xl'></div>
+						<div className='absolute bottom-0 right-0 w-24 h-24 bg-gradient-to-l from-gold-100/30 to-cream-100/30 rounded-full blur-xl'></div>
 
-				{/* Trust Indicators & Security Section */}
-				<section className='py-16 bg-gradient-to-br from-white via-cream-50 to-gold-50/30 relative'>
-					<div className='absolute top-0 left-0 w-32 h-32 bg-gradient-to-r from-green-100/30 to-blue-100/30 rounded-full blur-2xl'></div>
-					<div className='absolute bottom-0 right-0 w-24 h-24 bg-gradient-to-l from-purple-100/30 to-amber-100/30 rounded-full blur-xl'></div>
-					
-					<div className='container mx-auto px-4 relative z-10'>
-						<div className='text-center mb-12'>
-							<h3 className='text-3xl lg:text-4xl font-bold text-burgundy-900 mb-4 font-heading'>
-								Your Peace of Mind Guaranteed
-							</h3>
-							<p className='text-xl text-gray-600 font-body max-w-3xl mx-auto'>
-								Shop with confidence knowing we prioritize quality, security, and customer satisfaction
-							</p>
-						</div>
-
-						<div className='grid lg:grid-cols-3 gap-8 mb-12'>
-							<div className='lg:col-span-2'>
-								<TrustIndicators layout="grid" className="mb-8" />
-							</div>
-							<div className='lg:col-span-1'>
-								<DeliveryGuarantee />
-							</div>
-						</div>
-
-						<div className='text-center'>
-							<div className='bg-white/80 backdrop-blur-sm rounded-xl p-6 border border-gold-200/50 shadow-sm inline-block'>
-								<h3 className='text-lg font-bold text-burgundy-900 mb-3 font-brand'>
-									Why Customers Trust Us
+						<div className='container mx-auto px-4 relative z-10'>
+							<div className='text-center mb-12'>
+								<h3 className='text-3xl lg:text-4xl font-bold text-burgundy-900 mb-4 font-heading'>
+									Your Peace of Mind Guaranteed
 								</h3>
-								<div className='grid grid-cols-2 md:grid-cols-4 gap-4 text-sm font-body'>
-									<div className='text-center'>
-										<div className='text-2xl mb-1'>240+</div>
-										<div className='text-neutral-600'>Happy Customers</div>
-									</div>
-									<div className='text-center'>
-										<div className='text-2xl mb-1'>4.8★</div>
-										<div className='text-neutral-600'>Average Rating</div>
-									</div>
-									<div className='text-center'>
-										<div className='text-2xl mb-1'>95%</div>
-										<div className='text-neutral-600'>Reorder Rate</div>
-									</div>
-									<div className='text-center'>
-										<div className='text-2xl mb-1'>100%</div>
-										<div className='text-neutral-600'>Authentic Recipes</div>
+								<p className='text-xl text-gray-600 font-body max-w-3xl mx-auto'>
+									Shop with confidence knowing we
+									prioritize quality, security, and
+									customer satisfaction
+								</p>
+							</div>
+
+							<div className='grid lg:grid-cols-3 gap-8 mb-12'>
+								<div className='lg:col-span-2'>
+									<TrustIndicators
+										layout='grid'
+										className='mb-8'
+									/>
+								</div>
+								<div className='lg:col-span-1'>
+									<DeliveryGuarantee />
+								</div>
+							</div>
+
+							<div className='text-center'>
+								<div className='bg-white/80 backdrop-blur-sm rounded-xl p-6 border border-gold-200/50 shadow-sm inline-block'>
+									<h3 className='text-lg font-bold text-burgundy-900 mb-3 font-brand'>
+										Why Customers Trust Us
+									</h3>
+									<div className='grid grid-cols-2 md:grid-cols-4 gap-4 text-sm font-body'>
+										<div className='text-center'>
+											<div className='text-2xl mb-1'>
+												240+
+											</div>
+											<div className='text-neutral-600'>
+												Happy Customers
+											</div>
+										</div>
+										<div className='text-center'>
+											<div className='text-2xl mb-1'>
+												4.8★
+											</div>
+											<div className='text-neutral-600'>
+												Average Rating
+											</div>
+										</div>
+										<div className='text-center'>
+											<div className='text-2xl mb-1'>
+												95%
+											</div>
+											<div className='text-neutral-600'>
+												Reorder Rate
+											</div>
+										</div>
+										<div className='text-center'>
+											<div className='text-2xl mb-1'>
+												100%
+											</div>
+											<div className='text-neutral-600'>
+												Authentic Recipes
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-				</section>
+					</section>
 
-				{/* Contact Section with final visual flourish */}
-				<div className='relative'>
-					{/* Final connecting elements with icons */}
-					<div className='absolute top-0 left-1/2 transform -translate-x-1/2'>
-						<Triangle className='w-16 h-8 text-blue-100/10' />
-					</div>
+					{/* Contact Section with final visual flourish */}
+					<div className='relative'>
+						{/* Final connecting elements with icons */}
+						<div className='absolute top-0 left-1/2 transform -translate-x-1/2'>
+							<Triangle className='w-16 h-8 text-gold-100/10' />
+						</div>
 
-					{/* Background accent for contact section */}
-					<div className='absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-slate-900/5 to-transparent'></div>
+						{/* Background accent for contact section */}
+						<div className='absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-slate-900/5 to-transparent'></div>
 
-					<div className='relative pt-12'>
-						<ContactSection />
+						<div className='relative pt-12'>
+							<ContactSection />
+						</div>
+						<FloatingIngredients
+							ingredients={contactIngredients}
+						/>
 					</div>
-					<FloatingIngredients
-						ingredients={contactIngredients}
-					/>
 				</div>
 			</div>
-		</div>
+		</>
 	);
 }
