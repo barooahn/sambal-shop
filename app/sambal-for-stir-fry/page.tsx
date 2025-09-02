@@ -371,7 +371,7 @@ export default function SambalForStirFryPage() {
 						</div>
 
 						<div className='relative'>
-							<div className='aspect-[4/3] rounded-sm overflow-hidden shadow-luxury border border-gold-200'>
+							<div className='relative aspect-[4/3] rounded-sm overflow-hidden shadow-luxury border border-gold-200'>
 								<Image
 									src='/images/indonesian_vista.png'
 									alt='Indonesian cooking ingredients and spices'

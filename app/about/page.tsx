@@ -20,7 +20,11 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
 	return (
-		<div className='min-h-screen bg-gradient-to-br from-cream-50 to-cream-100'>
+		<>
+			{/* Clean Subtle Background */}
+			<div className='fixed inset-0 bg-coconut-50 pointer-events-none'></div>
+			
+			<div className='min-h-screen bg-transparent relative'>
 			{/* Hero Section */}
 			<section className='py-24 bg-gradient-to-br from-burgundy-900 to-burgundy-800 text-white relative overflow-hidden'>
 				<div className='absolute inset-0 bg-gradient-to-r from-burgundy-900/90 to-gold-900/20'></div>
@@ -355,6 +359,7 @@ export default function AboutPage() {
 					</div>
 				</div>
 			</section>
-		</div>
+			</div>
+		</>
 	);
 }

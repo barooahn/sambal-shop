@@ -161,8 +161,8 @@ function SearchPageContent() {
 				</div>
 
 				<div className="flex flex-col lg:flex-row gap-8">
-					{/* Sidebar Filters */}
-					<div className="lg:w-64 flex-shrink-0">
+					{/* Sidebar Filters - Hidden in mobile to reduce scroll areas */}
+					<div className="hidden lg:block lg:w-64 flex-shrink-0">
 						<Card>
 							<CardContent className="p-6">
 								<div className="flex items-center gap-2 mb-4">
@@ -191,6 +191,25 @@ function SearchPageContent() {
 								</div>
 							</CardContent>
 						</Card>
+					</div>
+
+					{/* Mobile Filter Buttons - Horizontal scroll alternative */}
+					<div className="lg:hidden mb-6">
+						<div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
+							{categories.map((category) => (
+								<button
+									key={category.value}
+									onClick={() => handleCategoryChange(category.value)}
+									className={`flex-shrink-0 px-4 py-2 rounded-full text-sm transition-colors ${
+										selectedCategory === category.value
+											? "bg-burgundy-900 text-white"
+											: "bg-white text-gray-700 border border-gray-300 hover:bg-gray-50"
+									}`}
+								>
+									{category.label} ({getCategoryCount(category.value)})
+								</button>
+							))}
+						</div>
 					</div>
 
 					{/* Main Content */}
@@ -269,13 +288,10 @@ function SearchPageContent() {
 													<div className={`relative bg-gray-100 rounded-lg overflow-hidden flex-shrink-0 ${
 														viewMode === "list" ? "w-20 h-20" : "w-full h-48 mb-4"
 													}`}>
-														<OptimizedImage
+														<img
 															src={result.image}
 															alt={result.title}
-															width={viewMode === "list" ? 80 : 400}
-															height={viewMode === "list" ? 80 : 192}
-															className="object-cover group-hover:scale-105 transition-transform duration-300 w-full h-full"
-															sizes={viewMode === "list" ? "80px" : "(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"}
+															className="absolute inset-0 w-full h-full object-fill group-hover:scale-105 transition-transform duration-300"
 														/>
 													</div>
 												)}

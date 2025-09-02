@@ -73,7 +73,7 @@ export default function WholesalePage() {
 	];
 
 	return (
-		<div className='min-h-screen bg-gradient-to-br from-cream-50 to-cream-100'>
+		<div className='min-h-screen bg-coconut-50'>
 			{/* Hero Section */}
 			<section className='py-24 bg-gradient-to-br from-burgundy-900 to-burgundy-800 text-white relative overflow-hidden'>
 				<div className='absolute inset-0 bg-gradient-to-r from-burgundy-900/90 to-gold-900/20'></div>
@@ -185,13 +185,13 @@ export default function WholesalePage() {
 
 							{isSubmitted ? (
 								<div className='text-center py-8'>
-									<div className='w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4'>
-										<Award className='w-8 h-8 text-green-600' />
+									<div className='w-16 h-16 bg-gold-100 rounded-full flex items-center justify-center mx-auto mb-4'>
+										<Award className='w-8 h-8 text-gold-600' />
 									</div>
-									<h4 className='text-xl font-bold text-green-800 mb-2 font-brand'>
+									<h4 className='text-xl font-bold text-burgundy-800 mb-2 font-brand'>
 										Thank You!
 									</h4>
-									<p className='text-green-600 font-body'>
+									<p className='text-gold-700 font-body'>
 										We&apos;ve received your
 										wholesale enquiry and will get
 										back to you within 24 hours.

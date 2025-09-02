@@ -215,7 +215,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
 					</div>
 
 					{/* Category Filters */}
-					<div className="flex gap-2 overflow-x-auto">
+					<div className="flex gap-2 overflow-x-auto pb-2">
 						{categories.map((category) => (
 							<button
 								key={category.value}
@@ -262,13 +262,10 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
 								>
 									{(result.image || result.thumbnail) && (
 										<div className="relative w-16 h-16 flex-shrink-0 rounded-lg overflow-hidden bg-gray-100">
-											<OptimizedImage
+											<img
 												src={result.image || result.thumbnail || "/images/optimized/sambal-bali-md.webp"}
 												alt={result.title || result.name || "Image"}
-												width={64}
-												height={64}
-												className="object-cover w-full h-full"
-												sizes="64px"
+												className="absolute inset-0 w-full h-full object-fill"
 											/>
 										</div>
 									)}
@@ -365,10 +362,13 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
 				{/* Search Footer */}
 				<div className="bg-gray-50 rounded-b-lg p-4 border-t border-gray-200 flex-shrink-0">
 					<div className="flex items-center justify-between text-sm text-gray-600">
-						<div className="flex items-center gap-4">
+						{/* Keyboard shortcuts - only show on desktop */}
+						<div className="hidden sm:flex items-center gap-4">
 							<span>Press <kbd className="px-2 py-1 bg-white border rounded text-xs">↵</kbd> to navigate</span>
 							<span>Press <kbd className="px-2 py-1 bg-white border rounded text-xs">Esc</kbd> to close</span>
 						</div>
+						{/* Mobile - show results count or empty div for spacing */}
+						<div className="sm:hidden flex-1"></div>
 						{results.length > 0 && (
 							<span>{results.length} results</span>
 						)}

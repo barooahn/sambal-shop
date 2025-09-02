@@ -1,50 +1,43 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
-import { Separator } from '@/components/ui/separator';
 import { 
   Trophy, 
   Star, 
-  Flame, 
-  Heart, 
-  ChefHat, 
-  Users, 
-  BookOpen, 
-  Award,
   Lock,
-  Sparkles,
+  CheckCircle2,
+  Flame,
+  Globe,
+  BookOpen,
+  Users,
   Target,
-  Crown,
-  Zap,
-  Gift
+  Sparkles
 } from 'lucide-react';
-import { toast } from 'sonner';
 
-interface Achievement {
-  id: string;
+interface AchievementBadge {
+  id: number;
   badge_key: string;
   badge_name: string;
   description: string;
   icon: string;
   category: 'heat' | 'cultural' | 'recipes' | 'community' | 'milestones';
   rarity: 'common' | 'uncommon' | 'rare' | 'legendary';
-  requirements: Record<string, any>;
-  reward_type?: string;
-  reward_value?: string;
+  requirements: any;
+  reward_type: 'discount' | 'points' | 'exclusive_content';
+  reward_value: number;
   is_active: boolean;
 }
 
 interface CustomerBadge {
-  id: string;
-  badge_id: string;
+  id: number;
+  badge_id: number;
   earned_at: string;
-  progress_data: Record<string, any>;
   is_displayed: boolean;
-  achievement: Achievement;
+  achievement_badges: AchievementBadge;
 }
 
 interface UserProgress {
@@ -58,447 +51,405 @@ interface UserProgress {
 }
 
 interface AchievementBadgesProps {
-  customerEmail?: string;
+  customerEmail: string;
   showProgress?: boolean;
-  displayMode?: 'earned' | 'available' | 'all';
   compact?: boolean;
 }
 
 const CATEGORY_ICONS = {
   heat: Flame,
-  cultural: Heart,
+  cultural: Globe,
   recipes: BookOpen,
   community: Users,
-  milestones: Trophy
+  milestones: Target
 };
 
-const RARITY_COLORS = {
-  common: 'bg-slate-100 border-slate-300 text-slate-700',
+const RARITY_STYLES = {
+  common: 'bg-gray-100 border-gray-300 text-gray-700',
   uncommon: 'bg-green-100 border-green-300 text-green-700',
   rare: 'bg-blue-100 border-blue-300 text-blue-700',
   legendary: 'bg-purple-100 border-purple-300 text-purple-700'
 };
 
-const RARITY_GLOW = {
-  common: '',
-  uncommon: 'shadow-green-200',
-  rare: 'shadow-blue-200',
-  legendary: 'shadow-purple-200 animate-pulse'
+const RARITY_LABELS = {
+  common: 'Common',
+  uncommon: 'Uncommon', 
+  rare: 'Rare',
+  legendary: 'Legendary'
 };
 
-export default function AchievementBadges({ 
-  customerEmail, 
-  showProgress = true, 
-  displayMode = 'all',
-  compact = false 
-}: AchievementBadgesProps) {
-  const [achievements, setAchievements] = useState<Achievement[]>([]);
+export default function AchievementBadges({ customerEmail, showProgress = false, compact = false }: AchievementBadgesProps) {
   const [earnedBadges, setEarnedBadges] = useState<CustomerBadge[]>([]);
-  const [userProgress, setUserProgress] = useState<UserProgress>({
-    quiz_completed: false,
-    heat_tolerance: 1,
-    stories_shared: 0,
-    recipes_saved: 0,
-    community_interactions: 0,
-    cultural_content_engaged: 0,
-    journey_created: false
-  });
+  const [availableBadges, setAvailableBadges] = useState<AchievementBadge[]>([]);
+  const [userProgress, setUserProgress] = useState<UserProgress | null>(null);
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
-  useEffect(() => {
-    loadAchievements();
-    if (customerEmail) {
-      loadEarnedBadges();
-      loadUserProgress();
-    }
-  }, [customerEmail]);
-
-  const loadAchievements = async () => {
+  const loadBadgesAndProgress = useCallback(async () => {
     try {
-      const response = await fetch('/api/achievements');
-      const result = await response.json();
-      
-      if (result.success) {
-        setAchievements(result.achievements);
+      // Load earned badges
+      const earnedResponse = await fetch(`/api/customer-badges?email=${customerEmail}`);
+      if (earnedResponse.ok) {
+        const earnedData = await earnedResponse.json();
+        if (earnedData.success) {
+          setEarnedBadges(earnedData.badges || []);
+        }
       }
-    } catch (error) {
-      console.error('Failed to load achievements:', error);
-    }
-  };
 
-  const loadEarnedBadges = async () => {
-    if (!customerEmail) return;
-
-    try {
-      const response = await fetch(`/api/customer-badges?email=${encodeURIComponent(customerEmail)}`);
-      const result = await response.json();
-      
-      if (result.success) {
-        setEarnedBadges(result.badges);
+      // Load available badges
+      const availableResponse = await fetch('/api/achievements');
+      if (availableResponse.ok) {
+        const availableData = await availableResponse.json();
+        if (availableData.success) {
+          setAvailableBadges(availableData.achievements || []);
+        }
       }
-    } catch (error) {
-      console.error('Failed to load earned badges:', error);
-    }
-  };
 
-  const loadUserProgress = async () => {
-    if (!customerEmail) {
-      setLoading(false);
-      return;
-    }
-
-    try {
-      const response = await fetch(`/api/user-progress?email=${encodeURIComponent(customerEmail)}`);
-      const result = await response.json();
-      
-      if (result.success) {
-        setUserProgress(result.progress);
+      // Load user progress if showing progress
+      if (showProgress) {
+        const progressResponse = await fetch(`/api/user-progress?email=${customerEmail}`);
+        if (progressResponse.ok) {
+          const progressData = await progressResponse.json();
+          if (progressData.success) {
+            setUserProgress(progressData.progress);
+          }
+        }
       }
+
     } catch (error) {
-      console.error('Failed to load user progress:', error);
+      console.error('Failed to load badges:', error);
+      // Load mock data for demo
+      setEarnedBadges(getMockEarnedBadges());
+      setAvailableBadges(getMockAvailableBadges());
+      if (showProgress) {
+        setUserProgress(getMockUserProgress());
+      }
     } finally {
       setLoading(false);
     }
-  };
+  }, [customerEmail, showProgress]);
 
-  const checkBadgeEligibility = (achievement: Achievement): { eligible: boolean; progress: number; missing: string[] } => {
-    const requirements = achievement.requirements;
-    let eligible = true;
+  useEffect(() => {
+    loadBadgesAndProgress();
+  }, [customerEmail, loadBadgesAndProgress]);
+
+  const calculateProgress = (badge: AchievementBadge): { progress: number; isEarned: boolean; canEarn: boolean } => {
+    if (!userProgress) return { progress: 0, isEarned: false, canEarn: false };
+
+    const isEarned = earnedBadges.some(eb => eb.badge_id === badge.id);
+    if (isEarned) return { progress: 100, isEarned: true, canEarn: false };
+
+    const req = badge.requirements || {};
     let progress = 0;
-    const missing: string[] = [];
-    const totalRequirements = Object.keys(requirements).length;
+    let canEarn = false;
 
-    if (requirements.quiz_completed && !userProgress.quiz_completed) {
-      eligible = false;
-      missing.push('Complete the sambal quiz');
-    } else if (requirements.quiz_completed) {
-      progress += 1;
+    // Calculate progress based on requirements
+    if (req.stories_shared) {
+      progress = Math.min((userProgress.stories_shared / req.stories_shared) * 100, 100);
+      canEarn = userProgress.stories_shared >= req.stories_shared;
+    } else if (req.heat_levels_tried) {
+      // Mock calculation - in real app, track different heat levels tried
+      progress = Math.min((userProgress.heat_tolerance / 5) * 100, 100);
+      canEarn = userProgress.heat_tolerance >= 3;
+    } else if (req.max_heat_level) {
+      progress = Math.min((userProgress.heat_tolerance / req.max_heat_level) * 100, 100);
+      canEarn = userProgress.heat_tolerance >= req.max_heat_level;
+    } else if (req.total_likes_received) {
+      // Mock calculation
+      progress = Math.min((userProgress.community_interactions * 10 / req.total_likes_received) * 100, 100);
+      canEarn = (userProgress.community_interactions * 10) >= req.total_likes_received;
+    } else if (req.recipes_saved) {
+      progress = Math.min((userProgress.recipes_saved / req.recipes_saved) * 100, 100);
+      canEarn = userProgress.recipes_saved >= req.recipes_saved;
     }
 
-    if (requirements.min_heat_tolerance && userProgress.heat_tolerance < requirements.min_heat_tolerance) {
-      eligible = false;
-      missing.push(`Try heat level ${requirements.min_heat_tolerance}+`);
-    } else if (requirements.min_heat_tolerance) {
-      progress += 1;
-    }
-
-    if (requirements.stories_shared && userProgress.stories_shared < requirements.stories_shared) {
-      eligible = false;
-      missing.push(`Share ${requirements.stories_shared - userProgress.stories_shared} more stories`);
-    } else if (requirements.stories_shared) {
-      progress += 1;
-    }
-
-    if (requirements.recipes_saved && userProgress.recipes_saved < requirements.recipes_saved) {
-      eligible = false;
-      missing.push(`Save ${requirements.recipes_saved - userProgress.recipes_saved} more recipes`);
-    } else if (requirements.recipes_saved) {
-      progress += 1;
-    }
-
-    if (requirements.helpful_interactions && userProgress.community_interactions < requirements.helpful_interactions) {
-      eligible = false;
-      missing.push(`Help ${requirements.helpful_interactions - userProgress.community_interactions} more customers`);
-    } else if (requirements.helpful_interactions) {
-      progress += 1;
-    }
-
-    return { 
-      eligible, 
-      progress: totalRequirements > 0 ? (progress / totalRequirements) * 100 : 0,
-      missing 
-    };
+    return { progress: Math.round(progress), isEarned, canEarn };
   };
 
-  const toggleBadgeDisplay = async (badgeId: string) => {
-    try {
-      const response = await fetch('/api/customer-badges/toggle', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          customer_email: customerEmail,
-          badge_id: badgeId
-        })
-      });
-
-      if (response.ok) {
-        setEarnedBadges(prev => 
-          prev.map(badge => 
-            badge.badge_id === badgeId 
-              ? { ...badge, is_displayed: !badge.is_displayed }
-              : badge
-          )
-        );
-        toast.success('Badge display updated');
-      }
-    } catch (error) {
-      toast.error('Failed to update badge display');
-    }
-  };
-
-  const getIconComponent = (iconString: string) => {
-    switch (iconString) {
-      case '🌱': return <Sparkles className="w-6 h-6" />;
-      case '🔥': return <Flame className="w-6 h-6" />;
-      case '🇬🇧🇮🇩': return <Heart className="w-6 h-6" />;
-      case '⭐': return <Star className="w-6 h-6" />;
-      case '🌉': return <Target className="w-6 h-6" />;
-      case '🚀': return <Zap className="w-6 h-6" />;
-      case '📚': return <BookOpen className="w-6 h-6" />;
-      case '✍️': return <ChefHat className="w-6 h-6" />;
-      default: return <Award className="w-6 h-6" />;
-    }
-  };
-
-  const renderBadge = (achievement: Achievement, earned?: CustomerBadge) => {
-    const CategoryIcon = CATEGORY_ICONS[achievement.category];
-    const isEarned = !!earned;
-    const { eligible, progress, missing } = checkBadgeEligibility(achievement);
-
-    if (displayMode === 'earned' && !isEarned) return null;
-    if (displayMode === 'available' && isEarned) return null;
-
-    return (
-      <Card 
-        key={achievement.id}
-        className={`relative transition-all duration-300 hover:scale-105 ${
-          isEarned 
-            ? `${RARITY_COLORS[achievement.rarity]} shadow-lg ${RARITY_GLOW[achievement.rarity]}` 
-            : 'border-gray-200 bg-gray-50 opacity-75'
-        } ${compact ? 'p-4' : 'p-6'}`}
-      >
-        {isEarned && achievement.rarity === 'legendary' && (
-          <div className="absolute -top-2 -right-2">
-            <Crown className="w-6 h-6 text-yellow-500 animate-bounce" />
-          </div>
-        )}
-
-        <CardHeader className={compact ? 'pb-2' : 'pb-4'}>
-          <div className="flex items-start justify-between">
-            <div className="flex items-center space-x-3">
-              <div className={`p-2 rounded-full ${
-                isEarned 
-                  ? 'bg-white/50' 
-                  : 'bg-gray-200'
-              }`}>
-                {getIconComponent(achievement.icon)}
-              </div>
-              <div>
-                <CardTitle className={`${compact ? 'text-base' : 'text-lg'} flex items-center gap-2`}>
-                  {achievement.badge_name}
-                  {isEarned && <Check className="w-4 h-4 text-green-600" />}
-                  {!isEarned && !eligible && <Lock className="w-4 h-4 text-gray-400" />}
-                </CardTitle>
-                <div className="flex items-center space-x-2 mt-1">
-                  <Badge variant="outline" className="text-xs">
-                    <CategoryIcon className="w-3 h-3 mr-1" />
-                    {achievement.category}
-                  </Badge>
-                  <Badge 
-                    className={`text-xs ${RARITY_COLORS[achievement.rarity]}`}
-                    variant="outline"
-                  >
-                    {achievement.rarity}
-                  </Badge>
-                </div>
-              </div>
-            </div>
-          </div>
-        </CardHeader>
-
-        <CardContent className={compact ? 'pt-0' : 'pt-2'}>
-          <CardDescription className="mb-3">
-            {achievement.description}
-          </CardDescription>
-
-          {/* Progress Bar for Unearned Badges */}
-          {!isEarned && showProgress && customerEmail && (
-            <div className="space-y-2 mb-3">
-              <div className="flex justify-between text-xs">
-                <span>Progress</span>
-                <span>{Math.round(progress)}%</span>
-              </div>
-              <Progress value={progress} className="h-2" />
-              {missing.length > 0 && (
-                <div className="text-xs text-gray-600">
-                  <p className="font-medium">To earn this badge:</p>
-                  <ul className="list-disc list-inside mt-1 space-y-1">
-                    {missing.map((requirement, index) => (
-                      <li key={index}>{requirement}</li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-            </div>
-          )}
-
-          {/* Earned Badge Details */}
-          {isEarned && earned && (
-            <div className="space-y-2 mb-3">
-              <div className="flex items-center justify-between text-xs text-gray-600">
-                <span>Earned {new Date(earned.earned_at).toLocaleDateString()}</span>
-                {earned.is_displayed && <span className="text-green-600">★ Displayed</span>}
-              </div>
-              {customerEmail && (
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={() => toggleBadgeDisplay(earned.badge_id)}
-                  className="w-full text-xs"
-                >
-                  {earned.is_displayed ? 'Hide from Profile' : 'Show on Profile'}
-                </Button>
-              )}
-            </div>
-          )}
-
-          {/* Reward Information */}
-          {achievement.reward_type && achievement.reward_value && (
-            <div className="bg-white/50 rounded-lg p-2 mt-3">
-              <div className="flex items-center space-x-2">
-                <Gift className="w-4 h-4 text-gold-600" />
-                <div className="text-xs">
-                  <span className="font-medium">Reward: </span>
-                  {achievement.reward_type === 'discount' && `${achievement.reward_value} off next order`}
-                  {achievement.reward_type === 'early_access' && 'Early access to new products'}
-                  {achievement.reward_type === 'free_shipping' && 'Free shipping on next order'}
-                </div>
-              </div>
-            </div>
-          )}
-        </CardContent>
-      </Card>
-    );
-  };
-
-  const filteredAchievements = achievements.filter(achievement => 
-    selectedCategory === 'all' || achievement.category === selectedCategory
+  const filteredBadges = availableBadges.filter(badge => 
+    selectedCategory === 'all' || badge.category === selectedCategory
   );
 
-  const earnedCount = earnedBadges.length;
-  const totalCount = achievements.length;
-  const completionPercentage = totalCount > 0 ? (earnedCount / totalCount) * 100 : 0;
+  const categories = [
+    { key: 'all', label: 'All Badges', icon: Trophy },
+    { key: 'heat', label: 'Heat Master', icon: Flame },
+    { key: 'cultural', label: 'Cultural', icon: Globe },
+    { key: 'recipes', label: 'Recipes', icon: BookOpen },
+    { key: 'community', label: 'Community', icon: Users },
+    { key: 'milestones', label: 'Milestones', icon: Target }
+  ];
 
   if (loading) {
     return (
-      <div className="space-y-6">
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {[...Array(6)].map((_, i) => (
-            <Card key={i} className="animate-pulse">
-              <CardHeader>
-                <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-gray-200 rounded-full"></div>
-                  <div className="space-y-2">
-                    <div className="w-24 h-4 bg-gray-200 rounded"></div>
-                    <div className="w-16 h-3 bg-gray-200 rounded"></div>
-                  </div>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-2">
-                  <div className="w-full h-3 bg-gray-200 rounded"></div>
-                  <div className="w-3/4 h-3 bg-gray-200 rounded"></div>
-                </div>
-              </CardContent>
-            </Card>
+      <div className="animate-pulse space-y-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {[1, 2, 3, 4].map(i => (
+            <div key={i} className="h-32 bg-gray-200 rounded-lg"></div>
           ))}
         </div>
       </div>
     );
   }
 
+  if (compact) {
+    return (
+      <div className="flex flex-wrap gap-2">
+        {earnedBadges.slice(0, 6).map((earnedBadge) => (
+          <div
+            key={earnedBadge.id}
+            className={`inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs ${RARITY_STYLES[earnedBadge.achievement_badges.rarity]}`}
+          >
+            <span>{earnedBadge.achievement_badges.icon}</span>
+            <span>{earnedBadge.achievement_badges.badge_name}</span>
+          </div>
+        ))}
+        {earnedBadges.length > 6 && (
+          <div className="inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs bg-gray-100 border border-gray-300 text-gray-700">
+            <Sparkles className="w-3 h-3" />
+            +{earnedBadges.length - 6} more
+          </div>
+        )}
+      </div>
+    );
+  }
+
   return (
     <div className="space-y-6">
-      {/* Header & Progress */}
-      {!compact && (
-        <div className="text-center space-y-4">
-          <div>
-            <h2 className="text-3xl font-bold text-burgundy-900 mb-2">
-              Achievement Badges
-            </h2>
-            <p className="text-xl text-gray-600">
-              Earn badges as you explore Indonesian cuisine with us
-            </p>
-          </div>
-
-          {customerEmail && (
-            <Card className="max-w-md mx-auto">
-              <CardContent className="pt-6">
-                <div className="text-center space-y-3">
-                  <div className="text-2xl font-bold text-burgundy-900">
-                    {earnedCount} / {totalCount}
-                  </div>
-                  <Progress value={completionPercentage} className="h-3" />
-                  <p className="text-sm text-gray-600">
-                    {Math.round(completionPercentage)}% Complete
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-          )}
-        </div>
-      )}
-
       {/* Category Filter */}
-      {!compact && (
-        <div className="flex justify-center">
-          <div className="flex flex-wrap gap-2">
+      <div className="flex flex-wrap gap-2">
+        {categories.map((category) => {
+          const IconComponent = category.icon;
+          return (
             <Button
-              variant={selectedCategory === 'all' ? 'default' : 'outline'}
+              key={category.key}
+              variant={selectedCategory === category.key ? "default" : "outline"}
               size="sm"
-              onClick={() => setSelectedCategory('all')}
-              className={selectedCategory === 'all' ? 'bg-burgundy-600' : ''}
+              onClick={() => setSelectedCategory(category.key)}
+              className={selectedCategory === category.key ? "bg-burgundy-600 hover:bg-burgundy-700" : ""}
             >
-              All Badges
+              <IconComponent className="w-4 h-4 mr-2" />
+              {category.label}
             </Button>
-            {Object.entries(CATEGORY_ICONS).map(([category, Icon]) => (
-              <Button
-                key={category}
-                variant={selectedCategory === category ? 'default' : 'outline'}
-                size="sm"
-                onClick={() => setSelectedCategory(category)}
-                className={selectedCategory === category ? 'bg-burgundy-600' : ''}
-              >
-                <Icon className="w-4 h-4 mr-1" />
-                {category.charAt(0).toUpperCase() + category.slice(1)}
-              </Button>
-            ))}
-          </div>
+          );
+        })}
+      </div>
+
+      {/* Earned Badges Count */}
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-2">
+          <Trophy className="w-5 h-5 text-gold-600" />
+          <span className="font-semibold text-burgundy-900">
+            {earnedBadges.length} of {availableBadges.length} Badges Earned
+          </span>
         </div>
+        <Badge className="bg-gold-100 text-gold-800">
+          {Math.round((earnedBadges.length / availableBadges.length) * 100)}% Complete
+        </Badge>
+      </div>
+
+      {/* Progress Overview */}
+      {showProgress && userProgress && (
+        <Card className="bg-gradient-to-r from-burgundy-50 to-gold-50">
+          <CardHeader className="pb-3">
+            <CardTitle className="text-lg flex items-center">
+              <Target className="w-5 h-5 mr-2 text-burgundy-600" />
+              Your Progress
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-3">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+              <div>
+                <div className="text-2xl font-bold text-burgundy-700">{userProgress.stories_shared}</div>
+                <div className="text-sm text-gray-600">Stories Shared</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-burgundy-700">{userProgress.heat_tolerance}</div>
+                <div className="text-sm text-gray-600">Heat Level</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-burgundy-700">{userProgress.community_interactions}</div>
+                <div className="text-sm text-gray-600">Interactions</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-burgundy-700">{userProgress.recipes_saved}</div>
+                <div className="text-sm text-gray-600">Recipes Saved</div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
       )}
 
       {/* Badges Grid */}
-      <div className={`grid gap-4 ${
-        compact 
-          ? 'md:grid-cols-3 lg:grid-cols-4' 
-          : 'md:grid-cols-2 lg:grid-cols-3'
-      }`}>
-        {filteredAchievements.map(achievement => {
-          const earned = earnedBadges.find(badge => badge.badge_id === achievement.id);
-          return renderBadge(achievement, earned);
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {filteredBadges.map((badge) => {
+          const { progress, isEarned, canEarn } = showProgress ? calculateProgress(badge) : { progress: 0, isEarned: earnedBadges.some(eb => eb.badge_id === badge.id), canEarn: false };
+          const CategoryIcon = CATEGORY_ICONS[badge.category] || Target;
+
+          return (
+            <Card key={badge.id} className={`relative overflow-hidden ${isEarned ? 'border-gold-300 bg-gold-50' : 'border-gray-200'}`}>
+              {isEarned && (
+                <div className="absolute top-2 right-2">
+                  <CheckCircle2 className="w-6 h-6 text-gold-600" />
+                </div>
+              )}
+
+              <CardHeader className="pb-3">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-3">
+                    <div className={`p-2 rounded-lg ${isEarned ? 'bg-gold-100' : 'bg-gray-100'}`}>
+                      <span className="text-2xl">{badge.icon}</span>
+                    </div>
+                    <div>
+                      <CardTitle className={`text-lg ${isEarned ? 'text-gold-800' : 'text-gray-600'}`}>
+                        {badge.badge_name}
+                      </CardTitle>
+                      <div className="flex items-center gap-2">
+                        <Badge className={RARITY_STYLES[badge.rarity]} variant="outline">
+                          {RARITY_LABELS[badge.rarity]}
+                        </Badge>
+                        <div className="flex items-center gap-1 text-xs text-gray-500">
+                          <CategoryIcon className="w-3 h-3" />
+                          {badge.category}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </CardHeader>
+
+              <CardContent className="space-y-3">
+                <CardDescription className={isEarned ? 'text-gold-700' : 'text-gray-600'}>
+                  {badge.description}
+                </CardDescription>
+
+                {/* Progress Bar */}
+                {showProgress && !isEarned && (
+                  <div className="space-y-2">
+                    <div className="flex justify-between text-sm">
+                      <span className="text-gray-600">Progress</span>
+                      <span className="font-medium">{progress}%</span>
+                    </div>
+                    <Progress value={progress} className="h-2" />
+                  </div>
+                )}
+
+                {/* Reward */}
+                <div className={`flex items-center justify-between text-sm ${isEarned ? 'text-gold-700' : 'text-gray-600'}`}>
+                  <span>Reward:</span>
+                  <span className="font-medium">
+                    {badge.reward_type === 'discount' && `${badge.reward_value}% off`}
+                    {badge.reward_type === 'points' && `${badge.reward_value} points`}
+                    {badge.reward_type === 'exclusive_content' && 'Exclusive content'}
+                  </span>
+                </div>
+
+                {/* Earned Date */}
+                {isEarned && (
+                  <div className="text-xs text-gold-600 bg-gold-100 rounded px-2 py-1">
+                    Earned {new Date(earnedBadges.find(eb => eb.badge_id === badge.id)?.earned_at || '').toLocaleDateString()}
+                  </div>
+                )}
+
+                {/* Can Earn Soon */}
+                {showProgress && !isEarned && canEarn && (
+                  <div className="text-xs text-green-600 bg-green-100 rounded px-2 py-1">
+                    ✨ Ready to claim!
+                  </div>
+                )}
+              </CardContent>
+            </Card>
+          );
         })}
       </div>
 
       {/* Empty State */}
-      {filteredAchievements.length === 0 && (
-        <div className="text-center py-12">
-          <Award className="w-16 h-16 mx-auto text-gray-400 mb-4" />
-          <h3 className="text-xl font-semibold text-gray-700 mb-2">
-            No badges in this category yet
-          </h3>
-          <p className="text-gray-600">
-            Try a different category or start exploring our community features!
-          </p>
+      {filteredBadges.length === 0 && (
+        <div className="text-center py-8">
+          <Trophy className="w-12 h-12 mx-auto text-gray-400 mb-4" />
+          <p className="text-gray-600">No badges in this category yet.</p>
         </div>
       )}
     </div>
   );
 }
 
-// Import Check icon
-const Check = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-  </svg>
-);
+// Mock data functions
+function getMockEarnedBadges(): CustomerBadge[] {
+  return [
+    {
+      id: 1,
+      badge_id: 1,
+      earned_at: "2025-08-20T10:00:00Z",
+      is_displayed: true,
+      achievement_badges: {
+        id: 1,
+        badge_key: "first_story",
+        badge_name: "Storyteller",
+        description: "Share your first cooking story with the community",
+        icon: "📖",
+        category: "community",
+        rarity: "common",
+        requirements: { stories_shared: 1 },
+        reward_type: "discount",
+        reward_value: 10,
+        is_active: true
+      }
+    }
+  ];
+}
+
+function getMockAvailableBadges(): AchievementBadge[] {
+  return [
+    {
+      id: 1,
+      badge_key: "first_story",
+      badge_name: "Storyteller",
+      description: "Share your first cooking story with the community",
+      icon: "📖",
+      category: "community",
+      rarity: "common",
+      requirements: { stories_shared: 1 },
+      reward_type: "discount",
+      reward_value: 10,
+      is_active: true
+    },
+    {
+      id: 2,
+      badge_key: "heat_explorer",
+      badge_name: "Heat Explorer",
+      description: "Try 3 different heat levels",
+      icon: "🌶️",
+      category: "heat",
+      rarity: "common",
+      requirements: { heat_levels_tried: 3 },
+      reward_type: "points",
+      reward_value: 50,
+      is_active: true
+    },
+    {
+      id: 3,
+      badge_key: "spice_master",
+      badge_name: "Spice Master",
+      description: "Reach heat level 5 and share your experience",
+      icon: "🔥",
+      category: "heat",
+      rarity: "rare",
+      requirements: { max_heat_level: 5, stories_shared: 1 },
+      reward_type: "discount",
+      reward_value: 15,
+      is_active: true
+    }
+  ];
+}
+
+function getMockUserProgress(): UserProgress {
+  return {
+    quiz_completed: true,
+    heat_tolerance: 3,
+    stories_shared: 1,
+    recipes_saved: 0,
+    community_interactions: 2,
+    cultural_content_engaged: 1,
+    journey_created: true
+  };
+}

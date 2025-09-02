@@ -9,17 +9,12 @@ import { Label } from '@/components/ui/label';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Badge } from '@/components/ui/badge';
-import { HeatLevelSelector } from '@/components/ui/SpiceHeatIndicator';
+import { PhotoUpload } from '@/components/ui/PhotoUpload';
 import { 
-  Camera, 
   Heart, 
-  Globe, 
-  ChefHat, 
   Send, 
   Loader2, 
   Star,
-  Upload,
-  X,
   Check,
   Sparkles
 } from 'lucide-react';
@@ -37,7 +32,7 @@ interface StoryFormData {
   fusionType: string;
   allowContact: boolean;
   allowFeaturing: boolean;
-  photos: File[];
+  photoUrls: string[];
 }
 
 const SAMBAL_PRODUCTS = [
@@ -67,6 +62,14 @@ const FUSION_TYPES = [
   { value: 'family-adaptation', label: 'Family Recipe Adaptation', description: 'Modified for family preferences' }
 ];
 
+const HEAT_LEVELS = [
+  { level: 1, label: 'Mild', emoji: '🌶️', description: 'Just a gentle warmth' },
+  { level: 2, label: 'Medium', emoji: '🌶️🌶️', description: 'Noticeable heat but manageable' },
+  { level: 3, label: 'Hot', emoji: '🌶️🌶️🌶️', description: 'Proper spicy kick' },
+  { level: 4, label: 'Very Hot', emoji: '🌶️🌶️🌶️🌶️', description: 'Intense heat for spice lovers' },
+  { level: 5, label: 'Extreme', emoji: '🔥🔥🔥', description: 'Maximum fire!' }
+];
+
 export default function CustomerStoryForm() {
   const [formData, setFormData] = useState<StoryFormData>({
     customerName: '',
@@ -80,61 +83,18 @@ export default function CustomerStoryForm() {
     fusionType: '',
     allowContact: false,
     allowFeaturing: false,
-    photos: []
+    photoUrls: []
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-  const [photoPreviewUrls, setPhotoPreviewUrls] = useState<string[]>([]);
 
   const updateFormData = (field: keyof StoryFormData, value: any) => {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 
-  const handlePhotoUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const files = Array.from(event.target.files || []);
-    
-    // Limit to 4 photos
-    const maxPhotos = 4;
-    if (formData.photos.length + files.length > maxPhotos) {
-      toast.error(`Maximum ${maxPhotos} photos allowed`);
-      return;
-    }
-
-    // Validate file types and sizes
-    const validFiles = files.filter(file => {
-      const isValidType = file.type.startsWith('image/');
-      const isValidSize = file.size <= 5 * 1024 * 1024; // 5MB max
-
-      if (!isValidType) {
-        toast.error(`${file.name} is not a valid image file`);
-        return false;
-      }
-      if (!isValidSize) {
-        toast.error(`${file.name} is too large (max 5MB)`);
-        return false;
-      }
-      return true;
-    });
-
-    if (validFiles.length === 0) return;
-
-    // Update form data
-    const newPhotos = [...formData.photos, ...validFiles];
-    updateFormData('photos', newPhotos);
-
-    // Create preview URLs
-    const newPreviewUrls = validFiles.map(file => URL.createObjectURL(file));
-    setPhotoPreviewUrls(prev => [...prev, ...newPreviewUrls]);
-  };
-
-  const removePhoto = (index: number) => {
-    const newPhotos = formData.photos.filter((_, i) => i !== index);
-    updateFormData('photos', newPhotos);
-
-    // Clean up preview URLs
-    URL.revokeObjectURL(photoPreviewUrls[index]);
-    setPhotoPreviewUrls(prev => prev.filter((_, i) => i !== index));
+  const handlePhotoUpload = (urls: string[]) => {
+    updateFormData('photoUrls', urls);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -142,38 +102,6 @@ export default function CustomerStoryForm() {
     setIsSubmitting(true);
 
     try {
-      // First, upload photos if any
-      let photoUrls: string[] = [];
-      
-      if (formData.photos.length > 0) {
-        toast.info('Uploading photos...');
-        
-        // Upload each photo to our API
-        for (const photo of formData.photos) {
-          const photoFormData = new FormData();
-          photoFormData.append('file', photo);
-          photoFormData.append('folder', 'story-photos');
-          
-          const uploadResponse = await fetch('/api/upload', {
-            method: 'POST',
-            body: photoFormData,
-          });
-          
-          if (!uploadResponse.ok) {
-            throw new Error('Failed to upload photo');
-          }
-          
-          const uploadResult = await uploadResponse.json();
-          if (uploadResult.success) {
-            photoUrls.push(uploadResult.url);
-          } else {
-            throw new Error(uploadResult.message || 'Photo upload failed');
-          }
-        }
-        
-        toast.success('Photos uploaded successfully!');
-      }
-
       // Submit story data
       const storyData = {
         customer_name: formData.customerName,
@@ -185,7 +113,7 @@ export default function CustomerStoryForm() {
         product_used: formData.productUsed,
         cooking_occasion: formData.cookingOccasion,
         fusion_type: formData.fusionType,
-        photos: photoUrls.length > 0 ? photoUrls : null,
+        photos: formData.photoUrls.length > 0 ? formData.photoUrls : null,
         allow_featuring: formData.allowFeaturing,
         approved: false, // Requires admin approval
       };
@@ -205,9 +133,6 @@ export default function CustomerStoryForm() {
       if (result.success) {
         setSubmitted(true);
         toast.success('Story submitted successfully! We\'ll review it within 24 hours.');
-        
-        // Clean up preview URLs
-        photoPreviewUrls.forEach(url => URL.revokeObjectURL(url));
       } else {
         throw new Error(result.message || 'Failed to submit story');
       }
@@ -230,9 +155,12 @@ export default function CustomerStoryForm() {
             </div>
             <CardTitle className="text-3xl text-burgundy-900 font-bold">
               Terima Kasih! 🙏
+              <span className="text-lg font-normal block mt-2 text-burgundy-700">
+                (Thank You in Indonesian)
+              </span>
             </CardTitle>
             <CardDescription className="text-lg text-burgundy-700">
-              Thank you for sharing your story!
+              Your story connects our Indonesian heritage with UK food lovers!
             </CardDescription>
           </CardHeader>
           <CardContent className="p-8 text-center">
@@ -261,7 +189,7 @@ export default function CustomerStoryForm() {
                 <Button
                   onClick={() => window.location.href = '/community'}
                   variant="outline"
-                  className="border-burgundy-600 text-burgundy-600 hover:bg-burgundy-50"
+                  className="border-burgundy-600 text-burgundy-600 hover:bg-burgundy-600 hover:text-white"
                 >
                   View Community Stories
                 </Button>
@@ -441,16 +369,27 @@ export default function CustomerStoryForm() {
 
             <div>
               <Label className="text-base font-medium mb-4 block">
-                Heat Level Experience
+                Heat Level Experience *
               </Label>
-              <HeatLevelSelector
-                selectedLevel={formData.heatLevel}
-                onLevelChange={(level) => updateFormData('heatLevel', level)}
-                className="w-full"
-              />
-              <p className="text-sm text-gray-600 mt-2">
-                How spicy did this dish turn out for you?
-              </p>
+              <RadioGroup
+                value={formData.heatLevel.toString()}
+                onValueChange={(value) => updateFormData('heatLevel', parseInt(value))}
+                className="space-y-3"
+              >
+                {HEAT_LEVELS.map((level) => (
+                  <div key={level.level} className="flex items-center space-x-3">
+                    <RadioGroupItem value={level.level.toString()} id={`heat-${level.level}`} />
+                    <Label htmlFor={`heat-${level.level}`} className="cursor-pointer flex-1">
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <span className="font-medium">{level.emoji} {level.label}</span>
+                          <p className="text-sm text-gray-600">{level.description}</p>
+                        </div>
+                      </div>
+                    </Label>
+                  </div>
+                ))}
+              </RadioGroup>
             </div>
 
             <div>
@@ -511,60 +450,17 @@ export default function CustomerStoryForm() {
         {/* Photo Upload */}
         <Card className="shadow-lg border-burgundy-200">
           <CardHeader>
-            <CardTitle className="text-xl text-burgundy-900 flex items-center">
-              <Camera className="w-5 h-5 mr-2" />
-              Add Photos (Optional)
-            </CardTitle>
+            <CardTitle className="text-xl text-burgundy-900">Add Photos (Optional)</CardTitle>
             <CardDescription>
               Share up to 4 photos of your cooking process or final dish
             </CardDescription>
           </CardHeader>
-          <CardContent className="space-y-6">
-            {photoPreviewUrls.length < 4 && (
-              <div className="border-2 border-dashed border-burgundy-300 rounded-lg p-8 text-center">
-                <input
-                  type="file"
-                  accept="image/*"
-                  multiple
-                  onChange={handlePhotoUpload}
-                  className="hidden"
-                  id="photo-upload"
-                />
-                <Label
-                  htmlFor="photo-upload"
-                  className="cursor-pointer flex flex-col items-center space-y-2"
-                >
-                  <Upload className="w-8 h-8 text-burgundy-600" />
-                  <span className="text-burgundy-700 font-medium">
-                    Click to upload photos
-                  </span>
-                  <span className="text-sm text-gray-600">
-                    JPG, PNG up to 5MB each
-                  </span>
-                </Label>
-              </div>
-            )}
-
-            {photoPreviewUrls.length > 0 && (
-              <div className="grid grid-cols-2 gap-4">
-                {photoPreviewUrls.map((url, index) => (
-                  <div key={index} className="relative">
-                    <img
-                      src={url}
-                      alt={`Preview ${index + 1}`}
-                      className="w-full h-32 object-cover rounded-lg border-2 border-gray-200"
-                    />
-                    <button
-                      type="button"
-                      onClick={() => removePhoto(index)}
-                      className="absolute -top-2 -right-2 bg-red-500 hover:bg-red-600 text-white rounded-full p-1 shadow-lg transition-colors"
-                    >
-                      <X className="w-4 h-4" />
-                    </button>
-                  </div>
-                ))}
-              </div>
-            )}
+          <CardContent>
+            <PhotoUpload 
+              onUpload={handlePhotoUpload}
+              maxFiles={4}
+              folder="story-photos"
+            />
           </CardContent>
         </Card>
 

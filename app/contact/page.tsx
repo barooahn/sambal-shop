@@ -38,7 +38,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
 	return (
-		<div className='min-h-screen bg-gradient-to-br from-cream-50 via-white to-gold-50/30'>
+		<div className='min-h-screen bg-coconut-50'>
 			{/* Hero Section */}
 			<section className='py-16 lg:py-24 relative overflow-hidden'>
 				<div className='absolute inset-0 bg-gradient-to-r from-burgundy-900/5 via-transparent to-burgundy-900/5'></div>
@@ -98,8 +98,8 @@ export default function ContactPage() {
 							</h3>
 							<div className='space-y-4'>
 								<div className='flex items-center space-x-4'>
-									<div className='w-12 h-12 bg-green-100 rounded-full flex items-center justify-center'>
-										<Clock className='w-6 h-6 text-green-600' />
+									<div className='w-12 h-12 bg-gold-100 rounded-full flex items-center justify-center'>
+										<Clock className='w-6 h-6 text-gold-600' />
 									</div>
 									<div>
 										<h3 className='font-semibold text-burgundy-800 font-brand'>
@@ -112,8 +112,8 @@ export default function ContactPage() {
 									</div>
 								</div>
 								<div className='flex items-center space-x-4'>
-									<div className='w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center'>
-										<HelpCircle className='w-6 h-6 text-blue-600' />
+									<div className='w-12 h-12 bg-cream-100 rounded-full flex items-center justify-center'>
+										<HelpCircle className='w-6 h-6 text-burgundy-600' />
 									</div>
 									<div>
 										<h3 className='font-semibold text-burgundy-800 font-brand'>

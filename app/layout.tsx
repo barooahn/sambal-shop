@@ -280,7 +280,7 @@ export default function RootLayout({
 				/>
 			</head>
 			<body
-				className={`${inter.variable} ${playfair.variable} ${cormorant.variable} ${greatVibes.variable} ${inter.className}`}
+				className={`${inter.variable} ${playfair.variable} ${cormorant.variable} ${greatVibes.variable} ${inter.className} bg-coconut-50`}
 			>
 				<ThirdPartyScripts
 					measurementId={

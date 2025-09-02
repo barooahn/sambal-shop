@@ -31,7 +31,9 @@ export default function BlogPage() {
 		const posts =
 			activeCategory === "All"
 				? blogPosts
-				: blogPosts.filter((post) => post.category === activeCategory);
+				: blogPosts.filter(
+						(post) => post.category === activeCategory
+				  );
 
 		// Always sort by publishDate ascending (oldest first)
 		return [...posts].sort(
@@ -63,12 +65,12 @@ export default function BlogPage() {
 						(p) => !prioritizedSlugs.includes(p.slug)
 					);
 					return [...prioritized, ...others];
-				})()
+			  })()
 			: gridPosts;
 	return (
-		<div className='min-h-screen bg-gradient-to-b from-cream-50 to-cream-100'>
+		<div className='min-h-screen bg-coconut-50'>
 			{/* Hero Section */}
-			<section className='py-16 bg-gradient-to-br from-burgundy-50 to-gold-50 relative overflow-hidden'>
+			<section className='py-16 bg-cream-50 relative overflow-hidden'>
 				<div className='absolute inset-0 bg-gradient-to-r from-burgundy-900/5 via-transparent to-gold-600/5'></div>
 
 				<div className='relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
@@ -126,6 +128,7 @@ export default function BlogPage() {
 											src={featuredPost.image}
 											alt={featuredPost.title}
 											fill
+											sizes='(max-width: 1024px) 100vw, 50vw'
 											className='object-cover object-center'
 											priority
 										/>
@@ -174,7 +177,7 @@ export default function BlogPage() {
 										</div>
 										<Link
 											href={`/blog/${featuredPost.slug}`}
-											className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-burgundy-900 to-burgundy-800 text-gold-200 font-bold rounded-full hover:shadow-lg transition-all duration-300 border border-gold-600/30 font-elegant w-fit'
+											className='inline-flex items-center px-6 py-3 bg-burgundy-900 text-gold-200 font-bold rounded-full hover:shadow-lg transition-all duration-300 border border-gold-600/30 font-elegant w-fit'
 										>
 											Read Full Story
 										</Link>
@@ -190,7 +193,14 @@ export default function BlogPage() {
 							<p className='text-neutral-600 font-body'>
 								{activeCategory === "All"
 									? `Showing all ${filteredPosts.length} articles`
-									: `${filteredPosts.length} article${filteredPosts.length !== 1 ? "s" : ""} in "${activeCategory}"`}
+									: `${
+											filteredPosts.length
+									  } article${
+											filteredPosts.length !==
+											1
+												? "s"
+												: ""
+									  } in "${activeCategory}"`}
 							</p>
 						</div>
 					)}
@@ -234,6 +244,7 @@ export default function BlogPage() {
 											src={post.image}
 											alt={post.title}
 											fill
+											sizes='(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw'
 											className='object-cover object-center group-hover:scale-105 transition-transform duration-300'
 											loading='lazy'
 										/>
@@ -275,7 +286,7 @@ export default function BlogPage() {
 											</div>
 											<Link
 												href={`/blog/${post.slug}`}
-												className='text-burgundy-700 hover:text-burgundy-900 font-medium text-sm font-elegant hover:underline'
+												className='text-burgundy-700 hover:text-burgundy-900 font-medium text-sm font-elegant underline-offset-2 hover:underline'
 											>
 												Read More →
 											</Link>
@@ -305,7 +316,7 @@ export default function BlogPage() {
 							<CardContent>
 								<Link
 									href='/#newsletter-signup'
-									className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-burgundy-900 to-burgundy-800 text-gold-200 font-bold rounded-full hover:shadow-lg transition-all duration-300 border border-gold-600/30 font-elegant'
+									className='inline-flex items-center px-8 py-4 bg-burgundy-900 text-gold-200 font-bold rounded-full hover:shadow-lg transition-all duration-300 border border-gold-600/30 font-elegant'
 								>
 									Subscribe to Our Newsletter
 								</Link>

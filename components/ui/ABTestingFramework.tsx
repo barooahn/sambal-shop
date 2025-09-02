@@ -433,12 +433,11 @@ export function TrustSignalsTest({ className = '' }: { className?: string }) {
 // Development A/B Test Debug Panel
 export function ABTestDebugPanel() {
   const context = useContext(ABTestContext);
+  const [showPanel, setShowPanel] = useState(false);
   
   if (process.env.NODE_ENV !== 'development' || !context) {
     return null;
   }
-
-  const [showPanel, setShowPanel] = useState(false);
 
   return (
     <>

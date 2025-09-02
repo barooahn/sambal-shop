@@ -5,7 +5,7 @@ VALUES (
     'recipe-photos',
     true,
     5242880, -- 5MB limit
-    '{"image/jpeg","image/jpg","image/png","image/webp"}'::jsonb
+    ARRAY['image/jpeg','image/jpg','image/png','image/webp']
 ) ON CONFLICT (id) DO NOTHING;
 
 -- Storage policies for recipe photos bucket

@@ -1,32 +1,15 @@
 "use client";
 
-import { useState } from "react"; // TODO: move state into a small client component to reduce hydration
 import Image from "next/image";
 
-import { ChefHat, Award, Star, Package } from "lucide-react";
+import { ChefHat, Award, Star, Package, Heart } from "lucide-react";
 import WaitlistButton from "./WaitlistButton";
 
 // Removed skeleton to prevent layout shifts
 
 export default function HeroSection() {
-
 	// Remove image loading state to prevent layout shift
 	// const [imageLoaded, setImageLoaded] = useState(false);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	};
 
 	return (
 		<section
@@ -67,31 +50,19 @@ export default function HeroSection() {
 					<div className='text-center lg:text-left order-1 lg:order-2 pt-2 sm:pt-4 lg:pt-0'>
 						{/* Chef badge - hidden on mobile, shown on tablet+ */}
 						<div className='hidden sm:flex mb-2 sm:mb-3 lg:mb-6 justify-center lg:justify-start'>
-							<div
-								className='bg-white/90 backdrop-blur-sm rounded-full px-3 lg:px-6 py-1.5 lg:py-3 border border-orange-200/50 shadow-xl'
-								style={{
-									minHeight: "40px",
-									width: "320px",
-									maxWidth: "90vw",
-								}}
-							>
-								<div
-									className='flex items-center justify-center space-x-2 lg:space-x-3'
-									style={{
-										height: "28px",
-										minHeight: "28px",
-									}}
-								>
-									<ChefHat className='w-3 lg:w-5 h-3 lg:h-5 text-orange-600' />
-									<span className='text-gray-800 font-semibold text-xs lg:text-sm tracking-wide'>
-										Chef Yossie&apos;s Traditional
-										Recipes
+							<div className='bg-gradient-to-r from-cream-50 via-white to-cream-50 backdrop-blur-sm rounded-full px-6 py-3 border-2 border-gold-300/50 shadow-xl relative overflow-hidden'>
+								{/* Subtle batik pattern background */}
+								<div className='absolute inset-0 bg-gradient-to-r from-gold-100/30 to-burgundy-100/20 opacity-30'></div>
+								<div className='relative flex items-center justify-center space-x-3'>
+									<ChefHat className='w-5 h-5 text-burgundy-600' />
+									<span className='text-burgundy-900 font-elegant font-semibold text-sm tracking-wide'>
+										Chef Yossie's Traditional Bandung Recipes
 									</span>
-									<div className='hidden sm:flex space-x-1'>
+									<div className='flex space-x-1'>
 										{[...Array(5)].map((_, i) => (
 											<Star
 												key={i}
-												className='w-3 h-3 text-amber-500 fill-current'
+												className='w-3 h-3 text-gold-600 fill-current'
 											/>
 										))}
 									</div>
@@ -99,16 +70,16 @@ export default function HeroSection() {
 							</div>
 						</div>
 
-						{/* Main headline - simplified for mobile */}
-						<h1 className='voice-hero-title mobile-text-shadow text-4xl sm:text-4xl lg:text-6xl font-light text-white mb-2 sm:mb-2 lg:mb-3 leading-tight tracking-tight'>
-							<span className='block font-light text-white/90 text-3xl sm:text-3xl lg:text-5xl'>
-								Authentic
+						{/* Enhanced hero title treatment */}
+						<h1 className='voice-hero-title mobile-text-shadow font-brand leading-tight tracking-tight mb-2 sm:mb-2 lg:mb-3'>
+							<span className='block font-light text-cream-100/90 text-3xl sm:text-3xl lg:text-5xl'>
+								Authentic Indonesian
 							</span>
-							<span className='sambal-title block font-bold text-5xl sm:text-5xl lg:text-7xl'>
+							<span className='sambal-title block font-bold text-gold-300 text-5xl sm:text-5xl lg:text-7xl drop-shadow-lg'>
 								Sambal Goreng
 							</span>
-							<span className='block font-light text-white/90 text-2xl sm:text-2xl lg:text-4xl'>
-								Coming Soon to UK
+							<span className='block font-elegant italic text-cream-200/90 text-2xl sm:text-2xl lg:text-4xl'>
+								Traditional West Java Recipe
 							</span>
 						</h1>
 
@@ -148,53 +119,43 @@ export default function HeroSection() {
 							</div>
 						</div>
 
-						{/* Key features - hidden on mobile, compact on tablet+ */}
+						{/* Enhanced Indonesian-inspired feature cards */}
 						<div className='hidden sm:grid sm:grid-cols-3 gap-3 lg:gap-4 mb-4 sm:mb-6 lg:mb-8'>
 							{[
 								{
 									icon: Heart,
 									label: "Sweet & Spicy",
 									desc: "Perfect Balance",
-									gradient:
-										"from-red-500/20 via-orange-500/15 to-amber-500/20",
+									gradient: "from-gold-500/30 via-burgundy-500/20 to-gold-500/30",
+									culturalElement: "Traditional palm sugar sweetness"
 								},
 								{
-									icon: ChefHat,
-									label: "Traditional",
-									desc: "Fried Method",
-									gradient:
-										"from-amber-500/20 via-yellow-500/15 to-orange-500/20",
+									icon: ChefHat, 
+									label: "Goreng Method",
+									desc: "Fried Technique", 
+									gradient: "from-burgundy-500/30 via-gold-500/20 to-burgundy-500/30",
+									culturalElement: "West Java cooking tradition"
 								},
 								{
 									icon: Award,
-									label: "West Java",
-									desc: "Recipe",
-									gradient:
-										"from-orange-500/20 via-red-500/15 to-amber-500/20",
-								},
-							].map(
-								({
-									icon: Icon,
-									label,
-									desc,
-									gradient,
-								}) => (
-									<div
-										key={label}
-										className={`flex flex-col items-center text-center bg-gradient-to-br ${gradient} backdrop-blur-md rounded-lg p-2.5 lg:p-3 border border-amber-300/30 shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 group`}
-									>
-										<Icon className='w-4 h-4 lg:w-5 lg:h-5 text-amber-200 mb-1 lg:mb-1.5 group-hover:text-amber-100 group-hover:scale-110 transition-all duration-300' />
-										<div className='text-white'>
-											<div className='font-medium text-xs lg:text-sm text-white'>
-												{label}
-											</div>
-											<div className='font-light text-xs text-white/80'>
-												{desc}
-											</div>
+									label: "Bandung Heritage", 
+									desc: "Family Recipe",
+									gradient: "from-gold-600/30 via-burgundy-600/20 to-cream-300/30",
+									culturalElement: "Generational knowledge"
+								}
+							].map(({ icon: Icon, label, desc, gradient, culturalElement }) => (
+								<div key={label} className={`relative bg-gradient-to-br ${gradient} backdrop-blur-md rounded-xl p-4 border-2 border-gold-300/40 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 group overflow-hidden`}>
+									{/* Subtle Indonesian pattern overlay */}
+									<div className='absolute inset-0 bg-gradient-to-r from-gold-100/10 to-burgundy-100/10 opacity-20 group-hover:opacity-30 transition-opacity'></div>
+									<div className='relative flex flex-col items-center text-center'>
+										<Icon className='w-6 h-6 text-gold-200 mb-2 group-hover:text-cream-100 group-hover:scale-110 transition-all duration-300 drop-shadow-sm' />
+										<div className='text-cream-100'>
+											<div className='font-elegant font-semibold text-sm tracking-wide mb-1'>{label}</div>
+											<div className='font-body text-xs text-cream-200/90'>{desc}</div>
 										</div>
 									</div>
-								)
-							)}
+								</div>
+							))}
 						</div>
 
 						{/* Primary CTA - simplified for mobile */}
@@ -206,62 +167,18 @@ export default function HeroSection() {
 									window.location.href =
 										"/sample-pack-try-first";
 								}}
-								className='group relative overflow-hidden bg-gradient-to-r from-red-600 via-red-700 to-red-800 hover:from-red-500 hover:via-red-600 hover:to-red-700 text-white font-bold text-base sm:text-base lg:text-xl py-4 sm:py-4 lg:py-5 px-5 sm:px-6 lg:px-10 rounded-md sm:rounded-xl shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 border border-white/20 w-full min-h-[52px] sm:min-h-[56px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-red-300/70 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent'
+								className='group relative overflow-hidden bg-gradient-to-r from-burgundy-900 via-burgundy-800 to-burgundy-900 hover:from-burgundy-800 hover:via-burgundy-700 hover:to-burgundy-800 text-cream-50 font-bold text-xl py-5 px-10 rounded-xl shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 border-2 border-gold-600/40 hover:border-gold-500/60 w-full min-h-[56px]'
 							>
-								<div className='absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
-								<div className='relative flex items-center justify-center space-x-1 sm:space-x-2'>
-									<Package className='w-5 h-5 sm:w-5 sm:h-5 lg:w-6 lg:h-6 group-hover:scale-110 transition-transform duration-300' />
-									<span className='font-bold'>
-										🎯 Try Sample Pack - £4.99
-									</span>
+								<div className='absolute inset-0 bg-gold-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
+								<div className='absolute inset-0 bg-gradient-to-r from-transparent via-gold-400/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700'></div>
+								<div className='relative flex items-center justify-center space-x-2'>
+									<Package className='w-6 h-6 group-hover:scale-110 transition-transform duration-300' />
+									<span className='font-elegant tracking-wide'>Try Sample Pack - £4.99</span>
 								</div>
 							</button>
 
 							{/* Secondary CTA - Waitlist */}
 							<WaitlistButton />
-							{/* legacy button removed
-							<!--
-								aria-label='Join Sambal Goreng waiting list'
-								onClick={handleInterestClick}
-								disabled={
-									interestState.isSubmitting ||
-									interestState.isSubmitted
-								}
-								className='group bg-transparent backdrop-blur-md hover:bg-orange-900/10 text-white font-medium py-3 sm:py-3 lg:py-3.5 px-4 sm:px-4 lg:px-8 rounded-md border-2 border-orange-800/50 hover:border-orange-700/70 shadow-lg hover:shadow-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed w-full min-h-[48px] sm:min-h-[48px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-300/50 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent'
-							>
-								<div className='flex items-center justify-center space-x-1 sm:space-x-2'>
-									{interestState.isSubmitting ? (
-										<>
-											<Heart className='w-4 h-4 sm:w-4 sm:h-4 animate-pulse' />
-											<span className='text-sm sm:text-sm lg:text-base'>
-												Joining...
-											</span>
-										</>
-									) : interestState.isSubmitted ? (
-										<>
-											<Heart className='w-4 h-4 sm:w-4 sm:h-4' />
-											<span className='text-sm sm:text-sm lg:text-base'>
-												Joined! 🌶️
-											</span>
-										</>
-									) : (
-										<>
-											<Heart className='w-4 h-4 sm:w-4 sm:h-4' />
-											<span className='text-sm sm:text-sm lg:text-base text-center leading-tight'>
-												<span className='sm:hidden'>
-													Join Waitlist
-												</span>
-												<span className='hidden sm:inline'>
-													Join Waitlist
-													for Full-Size
-													Jars
-												</span>
-											</span>
-										</>
-									)}
-								</div>
-							-->
-
 						</div>
 
 						{/* Waitlist feedback handled inside client button */}

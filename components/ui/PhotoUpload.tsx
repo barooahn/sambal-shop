@@ -225,6 +225,10 @@ export function PhotoUpload({
                 <span className="text-xs text-gray-500 block mt-1">
                   JPEG, PNG, WebP supported
                 </span>
+                <div className="text-xs text-burgundy-600 mt-2 p-2 bg-burgundy-50 rounded">
+                  <strong>Photography Tips (Tips Fotografi):</strong> Use natural lighting, show traditional Indonesian cooking tools (mortar & pestle), 
+                  include colorful spices and ingredients for authentic Indonesian appeal
+                </div>
               </div>
             </Label>
           </div>

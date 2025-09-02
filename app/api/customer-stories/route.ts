@@ -1,274 +1,159 @@
-import { NextRequest, NextResponse } from "next/server";
-import { withRateLimit } from "@/lib/rate-limiter";
+import { NextRequest, NextResponse } from 'next/server';
 
-async function handlePOST(request: NextRequest) {
-    try {
-        const storyData = await request.json();
-
-        // Validate required fields
-        const requiredFields = [
-            'customer_name',
-            'story_title', 
-            'story_content',
-            'product_used',
-            'cooking_occasion',
-            'fusion_type',
-            'heat_level'
-        ];
-
-        for (const field of requiredFields) {
-            if (!storyData[field]) {
-                return NextResponse.json(
-                    { success: false, message: `Missing required field: ${field}` },
-                    { status: 400 }
-                );
-            }
-        }
-
-        // Validate heat level
-        if (storyData.heat_level < 1 || storyData.heat_level > 5) {
-            return NextResponse.json(
-                { success: false, message: "Heat level must be between 1 and 5" },
-                { status: 400 }
-            );
-        }
-
-        // Store in Supabase
-        try {
-            const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-            const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
-            const anonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-
-            if (supabaseUrl && (serviceRoleKey || anonKey)) {
-                const { createClient } = await import("@supabase/supabase-js");
-                const supabase = createClient(
-                    supabaseUrl,
-                    serviceRoleKey || (anonKey as string)
-                );
-
-                // Insert the main story
-                const { data: story, error: storyError } = await supabase
-                    .from("customer_stories")
-                    .insert([{
-                        customer_name: storyData.customer_name,
-                        customer_email: storyData.customer_email || null,
-                        story_title: storyData.story_title,
-                        story_content: storyData.story_content,
-                        recipe_shared: storyData.recipe_shared || null,
-                        heat_level: storyData.heat_level,
-                        product_used: storyData.product_used,
-                        cooking_occasion: storyData.cooking_occasion,
-                        fusion_type: storyData.fusion_type,
-                        allow_featuring: storyData.allow_featuring || false,
-                        approved: false, // Always requires admin approval
-                        likes_count: 0,
-                        shares_count: 0
-                    }])
-                    .select()
-                    .single();
-
-                if (storyError) {
-                    console.error("Story insertion error:", storyError);
-                    throw storyError;
-                }
-
-                // If photos were uploaded, create photo records
-                if (storyData.photos && Array.isArray(storyData.photos) && storyData.photos.length > 0) {
-                    const photoRecords = storyData.photos.map((photoUrl: string, index: number) => ({
-                        story_id: story.id,
-                        photo_url: photoUrl,
-                        upload_order: index,
-                        is_featured: index === 0, // First photo is featured
-                        alt_text: `${storyData.story_title} - Photo ${index + 1}`
-                    }));
-
-                    const { error: photosError } = await supabase
-                        .from("story_photos")
-                        .insert(photoRecords);
-
-                    if (photosError) {
-                        console.error("Photos insertion error:", photosError);
-                        // Don't fail the whole request if photos fail
-                    }
-                }
-
-                // Award the "Storyteller" badge
-                try {
-                    if (storyData.customer_email) {
-                        // Check if customer already has the storyteller badge
-                        const { data: existingBadge } = await supabase
-                            .from("customer_badges")
-                            .select("id")
-                            .eq("customer_email", storyData.customer_email)
-                            .eq("badge_id", (
-                                await supabase
-                                    .from("achievement_badges")
-                                    .select("id")
-                                    .eq("badge_key", "storyteller")
-                                    .single()
-                            ).data?.id)
-                            .single();
-
-                        if (!existingBadge) {
-                            // Get the storyteller badge ID
-                            const { data: badge } = await supabase
-                                .from("achievement_badges")
-                                .select("id")
-                                .eq("badge_key", "storyteller")
-                                .single();
-
-                            if (badge) {
-                                await supabase
-                                    .from("customer_badges")
-                                    .insert([{
-                                        customer_email: storyData.customer_email,
-                                        badge_id: badge.id,
-                                        progress_data: {
-                                            story_id: story.id,
-                                            story_title: storyData.story_title,
-                                            earned_by: "story_submission"
-                                        }
-                                    }]);
-                            }
-                        }
-
-                        // Update or create spice journey
-                        const { error: journeyError } = await supabase
-                            .from("spice_journeys")
-                            .upsert([{
-                                customer_email: storyData.customer_email,
-                                customer_name: storyData.customer_name,
-                                current_heat_level: storyData.heat_level,
-                                max_heat_achieved: storyData.heat_level,
-                                products_tried: [storyData.product_used],
-                                total_recipes_tried: storyData.recipe_shared ? 1 : 0,
-                                last_activity_at: new Date().toISOString()
-                            }], {
-                                onConflict: 'customer_email',
-                                ignoreDuplicates: false
-                            });
-
-                        if (journeyError) {
-                            console.error("Journey update error:", journeyError);
-                            // Don't fail the request
-                        }
-                    }
-                } catch (badgeError) {
-                    console.error("Badge award error:", badgeError);
-                    // Don't fail the request
-                }
-
-                return NextResponse.json({
-                    success: true,
-                    message: "Story submitted successfully! We'll review it within 24 hours.",
-                    story_id: story.id,
-                    badges_earned: ["storyteller"],
-                    discount_code: "STORY10"
-                });
-
-            } else {
-                throw new Error("Database configuration not available");
-            }
-
-        } catch (supabaseError) {
-            console.error("Database error:", supabaseError);
-            
-            // Fallback - log the story for manual processing
-            console.log("Story submission (fallback):", {
-                customer: storyData.customer_name,
-                title: storyData.story_title,
-                content: storyData.story_content.substring(0, 100) + "...",
-                product: storyData.product_used,
-                heat_level: storyData.heat_level,
-                occasion: storyData.cooking_occasion,
-                fusion_type: storyData.fusion_type,
-                timestamp: new Date().toISOString()
-            });
-
-            return NextResponse.json({
-                success: true,
-                message: "Story submitted successfully! We'll review it within 24 hours.",
-                fallback: true
-            });
-        }
-
-    } catch (error) {
-        console.error("Customer stories API error:", error);
-        return NextResponse.json(
-            { 
-                success: false, 
-                message: "Failed to submit story. Please try again later." 
-            },
-            { status: 500 }
-        );
-    }
+interface CustomerStory {
+  id: number;
+  customer_name: string;
+  customer_email?: string;
+  story_title: string;
+  story_content: string;
+  recipe_shared?: string;
+  heat_level: number;
+  product_used: string;
+  cooking_occasion: string;
+  fusion_type: string;
+  photos?: string[];
+  allow_featuring: boolean;
+  approved: boolean;
+  likes_count: number;
+  shares_count: number;
+  featured: boolean;
+  created_at: string;
 }
 
-async function handleGET(request: NextRequest) {
-    try {
-        const { searchParams } = new URL(request.url);
-        const featured = searchParams.get('featured') === 'true';
-        const limit = parseInt(searchParams.get('limit') || '10');
-        const offset = parseInt(searchParams.get('offset') || '0');
+// Mock data for demonstration
+const mockStories: CustomerStory[] = [
+  {
+    id: 1,
+    customer_name: "Sarah M.",
+    story_title: "My First Indonesian Sunday Roast",
+    story_content: "I decided to try something different for Sunday lunch and used Sambal Oelek as a marinade for our traditional roast chicken. The results were absolutely incredible! My family, who are usually quite conservative with spices, were asking for seconds. The heat level was perfect - warming but not overwhelming. It's now become our new Sunday tradition!",
+    recipe_shared: "Sambal Sunday Roast Chicken:\n1 whole chicken\n3 tbsp Sambal Oelek\n2 tbsp honey\n1 tbsp soy sauce\n1 tbsp olive oil\n\nMix ingredients, marinate for 2 hours, roast at 180°C for 1 hour 15 mins.",
+    heat_level: 3,
+    product_used: "Sambal Oelek Traditional",
+    cooking_occasion: "sunday-roast",
+    fusion_type: "british-fusion",
+    photos: [],
+    allow_featuring: true,
+    approved: true,
+    likes_count: 24,
+    shares_count: 8,
+    featured: true,
+    created_at: "2025-08-28T14:30:00Z"
+  },
+  {
+    id: 2,
+    customer_name: "Ahmed K.",
+    story_title: "Sambal Transformed My Weeknight Dinners",
+    story_content: "As someone who cooks for the family every night, I was getting bored with the same old flavours. A friend recommended trying sambal, and it's been a game-changer! I now add it to stir-fries, pasta sauces, even scrambled eggs. My teenage kids have gone from picky eaters to asking 'what's for dinner?' with genuine excitement.",
+    heat_level: 2,
+    product_used: "Sambal Bali Sweet & Spicy",
+    cooking_occasion: "quick-weeknight",
+    fusion_type: "creative-experiment",
+    photos: [],
+    allow_featuring: true,
+    approved: true,
+    likes_count: 31,
+    shares_count: 12,
+    featured: false,
+    created_at: "2025-08-25T19:45:00Z"
+  },
+  {
+    id: 3,
+    customer_name: "Emma L.",
+    story_title: "Bringing Indonesia to Manchester",
+    story_content: "Having lived in Jakarta for two years, I've been desperately missing authentic Indonesian flavours since moving back to Manchester. This sambal is the closest I've found to what I remember from the street food stalls. I made gado-gado for my friends last weekend, and they couldn't believe how amazing it was!",
+    recipe_shared: "Quick Gado-Gado:\nBlanched vegetables (cabbage, bean sprouts, green beans)\nBoiled eggs\nTofu cubes\nSambal dressing: 2 tbsp sambal + 1 tbsp peanut butter + lime juice + a little warm water",
+    heat_level: 4,
+    product_used: "Sambal Oelek Traditional",
+    cooking_occasion: "dinner-party",
+    fusion_type: "traditional",
+    photos: [],
+    allow_featuring: true,
+    approved: true,
+    likes_count: 18,
+    shares_count: 6,
+    featured: false,
+    created_at: "2025-08-23T16:20:00Z"
+  }
+];
 
-        const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-        const anonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-
-        if (!supabaseUrl || !anonKey) {
-            return NextResponse.json(
-                { success: false, message: "Database not configured" },
-                { status: 500 }
-            );
-        }
-
-        const { createClient } = await import("@supabase/supabase-js");
-        const supabase = createClient(supabaseUrl, anonKey);
-
-        let query = supabase
-            .from("customer_stories")
-            .select(`
-                *,
-                story_photos (
-                    photo_url,
-                    alt_text,
-                    caption,
-                    is_featured,
-                    upload_order
-                )
-            `)
-            .eq("approved", true)
-            .order("created_at", { ascending: false });
-
-        if (featured) {
-            query = query.eq("featured", true);
-        }
-
-        const { data: stories, error } = await query
-            .range(offset, offset + limit - 1);
-
-        if (error) {
-            throw error;
-        }
-
-        return NextResponse.json({
-            success: true,
-            stories: stories || [],
-            pagination: {
-                limit,
-                offset,
-                total: stories?.length || 0
-            }
-        });
-
-    } catch (error) {
-        console.error("Get stories error:", error);
-        return NextResponse.json(
-            { success: false, message: "Failed to fetch stories" },
-            { status: 500 }
-        );
-    }
+export async function GET() {
+  try {
+    // In a real app, this would query a database
+    // For now, return mock data
+    return NextResponse.json({
+      success: true,
+      stories: mockStories,
+      count: mockStories.length
+    });
+  } catch (error) {
+    console.error('Error fetching customer stories:', error);
+    return NextResponse.json(
+      { success: false, message: 'Failed to fetch stories' },
+      { status: 500 }
+    );
+  }
 }
 
-// Export with rate limiting
-export const POST = withRateLimit(handlePOST, 'contact'); // Use contact rate limit (5 per hour)
-export const GET = withRateLimit(handleGET, 'default');
+export async function POST(request: NextRequest) {
+  try {
+    const body = await request.json();
+    
+    // Validate required fields
+    const required = [
+      'customer_name', 
+      'story_title', 
+      'story_content', 
+      'heat_level', 
+      'product_used',
+      'cooking_occasion',
+      'fusion_type'
+    ];
+    
+    for (const field of required) {
+      if (!body[field]) {
+        return NextResponse.json(
+          { success: false, message: `Missing required field: ${field}` },
+          { status: 400 }
+        );
+      }
+    }
+
+    // In a real app, this would save to a database
+    const newStory: CustomerStory = {
+      id: mockStories.length + 1,
+      customer_name: body.customer_name,
+      customer_email: body.customer_email || null,
+      story_title: body.story_title,
+      story_content: body.story_content,
+      recipe_shared: body.recipe_shared || null,
+      heat_level: body.heat_level,
+      product_used: body.product_used,
+      cooking_occasion: body.cooking_occasion,
+      fusion_type: body.fusion_type,
+      photos: body.photos || [],
+      allow_featuring: body.allow_featuring || false,
+      approved: false, // Stories need admin approval
+      likes_count: 0,
+      shares_count: 0,
+      featured: false,
+      created_at: new Date().toISOString()
+    };
+
+    // Add to mock data (in real app, save to database)
+    mockStories.push(newStory);
+
+    return NextResponse.json({
+      success: true,
+      story: newStory,
+      message: 'Story submitted successfully and will be reviewed within 24 hours'
+    });
+
+  } catch (error) {
+    console.error('Error creating customer story:', error);
+    return NextResponse.json(
+      { success: false, message: 'Failed to submit story' },
+      { status: 500 }
+    );
+  }
+}

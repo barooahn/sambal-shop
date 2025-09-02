@@ -129,7 +129,7 @@ const productData = {
 		returnShippingFeesAmount: {
 			"@type": "MonetaryAmount",
 			currency: "GBP",
-			value: "3.49"
+			value: "3.49",
 		},
 	},
 	offers: [
@@ -183,7 +183,7 @@ const productData = {
 
 export default function GiftSetIndonesianPage() {
 	return (
-		<div className='min-h-screen bg-gradient-to-br from-cream-50 to-cream-100'>
+		<div className='min-h-screen bg-coconut-50'>
 			{/* Hero Section */}
 			<section className='py-16 sm:py-20 lg:py-14 bg-gradient-to-br from-burgundy-900 via-burgundy-800 to-burgundy-900 text-white relative overflow-hidden'>
 				<div className='absolute top-0 left-0 w-72 h-72 lg:w-80 lg:h-80 bg-gold-600/20 rounded-full -translate-x-48 -translate-y-48 blur-3xl'></div>
