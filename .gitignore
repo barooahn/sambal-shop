@@ -61,5 +61,14 @@ test-*.js
 # Supabase temporary files
 supabase/.temp/
 
+# IDE and tool directories  
+.cursor/
+.lighthouse/
+.superdesign/
+.bolt/
+
+# Test directories
+__tests__/
+
 # Playwright MCP directory
 .playwright-mcp/
