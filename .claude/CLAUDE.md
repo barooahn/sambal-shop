@@ -76,7 +76,17 @@ This project uses specialized documentation and workflows for different types of
 
 ## How It Works
 
-When requesting specialized assistance:
+### 🤖 Automated Subagent Detection (NEW)
+The system now **automatically detects** task types and suggests appropriate subagents based on:
+- **Keywords** in user requests (design, code, content, etc.)
+- **File patterns** being worked on (.tsx, .md, .css, etc.)
+- **Command patterns** recently executed (yarn build, yarn lint, etc.)
+- **Task complexity** and context clues
+
+**See**: `subagent_router.md` and `subagent_detector.js` for full automation details.
+
+### Manual Subagent Selection (Fallback)
+When requesting specialized assistance manually:
 1. **Specify the domain** (e.g., "design task", "development task", "content task")
 2. **Reference documentation explicitly** in the task prompt
 3. **Use general-purpose agent** with clear instructions to follow the methodology files
