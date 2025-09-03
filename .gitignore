@@ -35,6 +35,15 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# Temporary and generated files
+temp_*.sql
+temp-*.js
+temp-*.mjs
+test-*.mjs
+test-*.js
+lighthouse-*.json
+lighthouse-*.html
+
 # Edge function files (these will be deployed separately)
 stripe-checkout-function.ts
 stripe-webhook-function.ts
@@ -42,7 +51,6 @@ stripe-webhook-function.ts
 # Documentation and development files
 docs/
 .windsurfrules
-.claude/
 design.mdc
 default_ui_darkmode.css
 
@@ -69,6 +77,7 @@ supabase/.temp/
 
 # Test directories
 __tests__/
+tests/
 
 # Playwright MCP directory
 .playwright-mcp/
