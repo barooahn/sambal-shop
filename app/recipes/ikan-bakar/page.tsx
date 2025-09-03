@@ -204,17 +204,17 @@ export default function IkanBakarPage() {
 	const breadcrumbItems = [
 		{
 			name: "Home",
-			url: "https://spiceislandindonesia.com",
+			url: "https://www.spiceislandindonesia.com",
 			position: 1,
 		},
 		{
 			name: "Recipes",
-			url: "https://spiceislandindonesia.com/recipes",
+			url: "https://www.spiceislandindonesia.com/recipes",
 			position: 2,
 		},
 		{
 			name: "Ikan Bakar",
-			url: "https://spiceislandindonesia.com/recipes/ikan-bakar",
+			url: "https://www.spiceislandindonesia.com/recipes/ikan-bakar",
 			position: 3,
 		},
 	];

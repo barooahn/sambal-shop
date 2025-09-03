@@ -61,19 +61,19 @@ const VoiceSearchSchema: FC<VoiceSearchSchemaProps> = ({
 				"@type": "HowToStep",
 				text: "Start with half a teaspoon of sambal oelek - it's much hotter than Western hot sauces",
 				name: "Measure carefully",
-				image: "https://spiceislandindonesia.com/images/sambal-measuring.webp",
+				image: "https://www.spiceislandindonesia.com/images/sambal-measuring.webp",
 			},
 			{
 				"@type": "HowToStep",
 				text: "Mix sambal into your dish gradually, tasting as you go",
 				name: "Add gradually",
-				image: "https://spiceislandindonesia.com/images/sambal-mixing.webp",
+				image: "https://www.spiceislandindonesia.com/images/sambal-mixing.webp",
 			},
 			{
 				"@type": "HowToStep",
 				text: "Let flavors develop for 2-3 minutes before serving",
 				name: "Allow flavor development",
-				image: "https://spiceislandindonesia.com/images/sambal-finished.webp",
+				image: "https://www.spiceislandindonesia.com/images/sambal-finished.webp",
 			},
 		],
 	};

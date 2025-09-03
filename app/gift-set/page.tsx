@@ -40,7 +40,7 @@ export const metadata = {
 		type: "website",
 		images: [
 			{
-				url: "https://spiceislandindonesia.com/images/Spice Island Indonesia Complete Packaging System Mockup.webp",
+				url: "https://www.spiceislandindonesia.com/images/Spice Island Indonesia Complete Packaging System Mockup.webp",
 				width: 600,
 				height: 600,
 				alt: "Indonesian Sambal Gift Set - Complete Collection by Chef Yossie",
@@ -88,7 +88,7 @@ export default function GiftSetPage() {
 			"Complete collection of authentic Indonesian sambal varieties in premium gift packaging. Includes Sambal Oelek, Sambal Bali, and Sambal Goreng with tasting guide and recipe cards.",
 		brand: "Spice Island Indonesia",
 		category: "Gift Sets",
-		image: "https://spiceislandindonesia.com/images/Spice Island Indonesia Complete Packaging System Mockup.webp",
+		image: "https://www.spiceislandindonesia.com/images/Spice Island Indonesia Complete Packaging System Mockup.webp",
 		offers: [
 			{
 				name: "Complete Sambal Gift Set",
@@ -98,7 +98,7 @@ export default function GiftSetPage() {
 				priceCurrency: "GBP",
 				availability: "https://schema.org/InStock",
 				sku: "SII-GIFT-SET-COMPLETE",
-				url: "https://spiceislandindonesia.com/gift-set",
+				url: "https://www.spiceislandindonesia.com/gift-set",
 				priceValidUntil: "2026-12-31",
 				shippingDetails: {
 					"@type": "OfferShippingDetails",

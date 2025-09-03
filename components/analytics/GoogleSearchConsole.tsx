@@ -27,7 +27,7 @@ export const getVerificationInstructions = () => {
 				"Add the NEXT_PUBLIC_GSC_VERIFICATION_CODE environment variable with your verification code",
 			steps: [
 				"Go to Google Search Console (https://search.google.com/search-console)",
-				"Add your property (https://spiceislandindonesia.com)",
+				"Add your property (https://www.spiceislandindonesia.com)",
 				"Choose 'HTML tag' verification method",
 				"Copy the verification code from the meta tag",
 				"Add NEXT_PUBLIC_GSC_VERIFICATION_CODE=your_code to your environment variables",

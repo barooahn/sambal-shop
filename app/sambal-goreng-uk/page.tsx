@@ -34,7 +34,7 @@ export const metadata = {
 		type: "website",
 		images: [
 			{
-				url: "https://spiceislandindonesia.com/images/sambal-goreng.webp",
+				url: "https://www.spiceislandindonesia.com/images/sambal-goreng.webp",
 				width: 400,
 				height: 400,
 				alt: "Authentic Indonesian Sambal Goreng - Sweet & Spicy Fried Chili Paste by Chef Yossie",
@@ -82,7 +82,7 @@ export default function SambalGorengUKPage() {
 			"Traditional Indonesian fried chili paste made with palm sugar, tamarind, and aromatic spices. Slowly cooked by Chef Yossie using ancestral Javanese recipes.",
 		brand: "Spice Island Indonesia",
 		category: "Condiments & Sauces",
-		image: "https://spiceislandindonesia.com/images/sambal-goreng.webp",
+		image: "https://www.spiceislandindonesia.com/images/sambal-goreng.webp",
 		offers: [
 			{
 				name: "Sambal Goreng 185g",
@@ -92,7 +92,7 @@ export default function SambalGorengUKPage() {
 				priceCurrency: "GBP",
 				availability: "https://schema.org/InStock",
 				sku: "SII-SG-185G",
-				url: "https://spiceislandindonesia.com/sambal-goreng-uk",
+				url: "https://www.spiceislandindonesia.com/sambal-goreng-uk",
 				priceValidUntil: "2026-12-31",
 				shippingDetails: {
 					"@type": "OfferShippingDetails",

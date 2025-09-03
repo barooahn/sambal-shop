@@ -39,7 +39,7 @@ export const metadata = {
 		type: "website",
 		images: [
 			{
-				url: "https://spiceislandindonesia.com/images/sambal-oelek-lg.webp",
+				url: "https://www.spiceislandindonesia.com/images/sambal-oelek-lg.webp",
 				width: 400,
 				height: 400,
 				alt: "Authentic Indonesian Sambal Oelek 185g - UK Delivery - Chef Yossie Traditional Recipe",
@@ -145,7 +145,7 @@ export default function SambalOelekUKPage() {
 			description:
 				"UK-based company specializing in authentic Indonesian condiments and spices",
 			properties: {
-				url: "https://spiceislandindonesia.com",
+				url: "https://www.spiceislandindonesia.com",
 				specialty: "Authentic Indonesian sambal and spices",
 				market: "United Kingdom",
 				focus: "Traditional recipes, no preservatives",
@@ -160,7 +160,7 @@ export default function SambalOelekUKPage() {
 			"Traditional Indonesian chili paste made from fresh red chilies, salt, and vinegar. Handcrafted by Chef Yossie using authentic Bandung family recipes.",
 		brand: "Spice Island Indonesia",
 		category: "Condiments & Sauces",
-		image: "https://spiceislandindonesia.com/images/sambal-oelek-lg.webp",
+		image: "https://www.spiceislandindonesia.com/images/sambal-oelek-lg.webp",
 		// Merchant-friendly additions
 		shippingDetails: [
 			{
@@ -248,7 +248,7 @@ export default function SambalOelekUKPage() {
 				priceCurrency: "GBP",
 				availability: "https://schema.org/InStock",
 				sku: "SII-SO-185G",
-				url: "https://spiceislandindonesia.com/sambal-oelek-uk",
+				url: "https://www.spiceislandindonesia.com/sambal-oelek-uk",
 				priceValidUntil: "2026-12-31",
 				shippingDetails: [
 					{
@@ -345,10 +345,6 @@ export default function SambalOelekUKPage() {
 				</div>
 			</div>
 			
-			<FAQSchema
-				faqs={faqData}
-				pageTitle='Sambal Oelek UK - Frequently Asked Questions'
-			/>
 			<ProductSchema
 				name={productData.name}
 				description={productData.description}
@@ -360,9 +356,9 @@ export default function SambalOelekUKPage() {
 				reviews={productData.reviews}
 				additionalProperties={productData.additionalProperties}
 			/>
-			<EntityMarkup
-				entities={entityData}
-				pageTitle='Sambal Oelek UK - Entity Information'
+			<FAQSchema
+				faqs={faqData}
+				pageTitle='Sambal Oelek UK - Frequently Asked Questions'
 			/>
 			{/* Hero Section */}
 

@@ -83,7 +83,7 @@ export default function SpiceIslandsHistoryPage() {
 						height: 60,
 					},
 				}}
-				url='https://spiceislandindonesia.com/blog/spice-islands-history'
+				url='https://www.spiceislandindonesia.com/blog/spice-islands-history'
 				datePublished='2024-02-10'
 				dateModified='2024-02-10'
 				image='/images/blog/spice-islands-history.webp'

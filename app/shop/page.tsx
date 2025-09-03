@@ -31,7 +31,7 @@ export const metadata = {
 		type: "website",
 		images: [
 			{
-				url: "https://spiceislandindonesia.com/images/Spice Island Indonesia Complete Packaging System Mockup.webp",
+				url: "https://www.spiceislandindonesia.com/images/Spice Island Indonesia Complete Packaging System Mockup.webp",
 				width: 600,
 				height: 600,
 				alt: "Shop Authentic Indonesian Sambal Collection by Chef Yossie",
@@ -52,7 +52,7 @@ export default function ShopPage() {
 			"Try-before-you-buy tasting set: Sambal Oelek + Sambal Bali in small jars.",
 		brand: "Spice Island Indonesia",
 		category: "Condiments & Sauces",
-		image: "https://spiceislandindonesia.com/images/optimized/sambal-sample-responsive.webp",
+		image: "https://www.spiceislandindonesia.com/images/optimized/sambal-sample-responsive.webp",
 		offers: [
 			{
 				name: "Sample Pack",
@@ -61,7 +61,7 @@ export default function ShopPage() {
 				price: "4.99",
 				priceCurrency: "GBP",
 				availability: "https://schema.org/PreOrder",
-				url: "https://spiceislandindonesia.com/sample-pack-try-first",
+				url: "https://www.spiceislandindonesia.com/sample-pack-try-first",
 				priceValidUntil: "2026-12-31",
 				shippingDetails: [
 					{

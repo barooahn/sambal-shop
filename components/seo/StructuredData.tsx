@@ -8,14 +8,29 @@ export default function StructuredData({
 	const organizationData = {
 		"@context": "https://schema.org",
 		"@type": "Organization",
+		"@id": "https://www.spiceislandindonesia.com/#organization",
 		name: "Spice Island Indonesia",
-		url: "https://spiceislandindonesia.com",
-		logo: "https://spiceislandindonesia.com/images/optimized/logo-lg.webp",
+		url: "https://www.spiceislandindonesia.com",
+		logo: {
+			"@type": "ImageObject",
+			url: "https://www.spiceislandindonesia.com/images/optimized/logo-lg.webp",
+			width: 600,
+			height: 60
+		},
 		description:
 			"UK's premier authentic sambal UK supplier. Traditional Indonesian chili paste crafted as artisanal hot sauce from the original Spice Islands, delivered nationwide",
 		address: {
 			"@type": "PostalAddress",
+			streetAddress: "175 Redgate",
+			addressLocality: "Ormskirk",
+			postalCode: "L39 3NW",
 			addressCountry: "GB",
+		},
+		foundingDate: "2024",
+		founder: {
+			"@type": "Person",
+			name: "Chef Yossie",
+			nationality: "Indonesian"
 		},
 		sameAs: [
 			"https://www.instagram.com/spiceisland_indonesia",
@@ -25,6 +40,7 @@ export default function StructuredData({
 			"@type": "ContactPoint",
 			contactType: "customer service",
 			availableLanguage: ["English", "Indonesian"],
+			email: "info@spiceislandindonesia.com"
 		},
 	};
 
@@ -39,9 +55,9 @@ export default function StructuredData({
 			name: "Spice Island Indonesia",
 		},
 		image: [
-			"https://spiceislandindonesia.com/images/sambal-oelek-lg.webp",
-			"https://spiceislandindonesia.com/images/sambal-bali.webp",
-			"https://spiceislandindonesia.com/images/Spice Island Indonesia Complete Packaging System Mockup.webp",
+			"https://www.spiceislandindonesia.com/images/sambal-oelek-lg.webp",
+			"https://www.spiceislandindonesia.com/images/sambal-bali.webp",
+			"https://www.spiceislandindonesia.com/images/Spice Island Indonesia Complete Packaging System Mockup.webp",
 		],
 		// Basic shipping and return policy info to improve Merchant eligibility
 		shippingDetails: [
@@ -93,8 +109,8 @@ export default function StructuredData({
 				priceValidUntil: "2025-12-31",
 				availability: "https://schema.org/PreOrder",
 				itemCondition: "https://schema.org/NewCondition",
-				image: "https://spiceislandindonesia.com/images/sambal-oelek-lg.webp",
-				url: "https://spiceislandindonesia.com/sambal-oelek-uk",
+				image: "https://www.spiceislandindonesia.com/images/sambal-oelek-lg.webp",
+				url: "https://www.spiceislandindonesia.com/sambal-oelek-uk",
 				shippingDetails: [
 					{
 						"@type": "OfferShippingDetails",
@@ -178,8 +194,8 @@ export default function StructuredData({
 				priceValidUntil: "2025-12-31",
 				availability: "https://schema.org/PreOrder",
 				itemCondition: "https://schema.org/NewCondition",
-				image: "https://spiceislandindonesia.com/images/sambal-bali.webp",
-				url: "https://spiceislandindonesia.com/sambal-bali-sweet-spicy",
+				image: "https://www.spiceislandindonesia.com/images/sambal-bali.webp",
+				url: "https://www.spiceislandindonesia.com/sambal-bali-sweet-spicy",
 				shippingDetails: [
 					{
 						"@type": "OfferShippingDetails",
@@ -263,8 +279,8 @@ export default function StructuredData({
 				priceValidUntil: "2025-12-31",
 				availability: "https://schema.org/PreOrder",
 				itemCondition: "https://schema.org/NewCondition",
-				image: "https://spiceislandindonesia.com/images/Spice Island Indonesia Complete Packaging System Mockup.webp",
-				url: "https://spiceislandindonesia.com/gift-set-indonesian",
+				image: "https://www.spiceislandindonesia.com/images/Spice Island Indonesia Complete Packaging System Mockup.webp",
+				url: "https://www.spiceislandindonesia.com/gift-set-indonesian",
 				shippingDetails: [
 					{
 						"@type": "OfferShippingDetails",
@@ -429,10 +445,11 @@ export default function StructuredData({
 	const localBusinessData = {
 		"@context": "https://schema.org",
 		"@type": "LocalBusiness",
+		"@id": "https://www.spiceislandindonesia.com/#localbusiness",
 		name: "Spice Island Indonesia",
 		description:
 			"Authentic sambal UK - Traditional Indonesian chili paste crafted as artisanal hot sauce from the original Spice Islands",
-		url: "https://spiceislandindonesia.com",
+		url: "https://www.spiceislandindonesia.com",
 		email: "info@spiceislandindonesia.com", 
 		address: {
 			"@type": "PostalAddress",
@@ -443,19 +460,25 @@ export default function StructuredData({
 		},
 		geo: {
 			"@type": "GeoCoordinates",
-			latitude: "53.562573",
-			longitude: "-2.890138",
+			latitude: 53.562573,
+			longitude: -2.890138,
 		},
 		openingHours: [
 			"Mo-Fr 09:00-17:00", 
 		],
 		priceRange: "££",
 		servesCuisine: "Indonesian",
-		paymentAccepted: "Cash, Credit Card, Debit Card, PayPal",
+		paymentAccepted: ["Credit Card", "Debit Card", "PayPal"],
 		currenciesAccepted: "GBP",
 		areaServed: {
 			"@type": "Country",
 			name: "United Kingdom",
+		},
+		foundingDate: "2024",
+		founder: {
+			"@type": "Person",
+			name: "Chef Yossie",
+			nationality: "Indonesian"
 		},
 		sameAs: [
 			"https://www.instagram.com/spiceisland_indonesia",

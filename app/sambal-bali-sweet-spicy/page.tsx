@@ -40,7 +40,7 @@ export const metadata = {
 		type: "website",
 		images: [
 			{
-				url: "https://spiceislandindonesia.com/images/sambal-oelek-lg.webp",
+				url: "https://www.spiceislandindonesia.com/images/sambal-oelek-lg.webp",
 				width: 400,
 				height: 400,
 				alt: "Authentic Indonesian Sambal Bali 185g jar - Sweet Spicy",
@@ -59,7 +59,7 @@ const productData = {
 		"Traditional Balinese-style sambal with perfect sweet-heat balance and aromatic spices. Handcrafted by Chef Yossie.",
 	brand: "Spice Island Indonesia",
 	category: "Condiments & Sauces",
-	image: "https://spiceislandindonesia.com/images/sambal-bali.webp",
+	image: "https://www.spiceislandindonesia.com/images/sambal-bali.webp",
 	shippingDetails: [
 		{
 			"@type": "OfferShippingDetails",
@@ -149,7 +149,7 @@ const productData = {
 			priceCurrency: "GBP",
 			availability: "https://schema.org/InStock",
 			sku: "SII-SB-185G",
-			url: "https://spiceislandindonesia.com/sambal-bali-sweet-spicy",
+			url: "https://www.spiceislandindonesia.com/sambal-bali-sweet-spicy",
 			priceValidUntil: "2026-12-31",
 			shippingDetails: [
 				{
@@ -283,7 +283,7 @@ export default function SambalBaliSweetSpicyPage() {
 			"Traditional Indonesian sweet-spicy chili paste made with palm sugar, galangal, and aromatic spices. Handcrafted by Chef Yossie using authentic Balinese family recipes.",
 		brand: "Spice Island Indonesia",
 		category: "Condiments & Sauces",
-		image: "https://spiceislandindonesia.com/images/sambal-bali.webp",
+		image: "https://www.spiceislandindonesia.com/images/sambal-bali.webp",
 		offers: [
 			{
 				name: "Sambal Bali 185g",
@@ -293,7 +293,7 @@ export default function SambalBaliSweetSpicyPage() {
 				priceCurrency: "GBP",
 				availability: "https://schema.org/InStock",
 				sku: "SII-SB-185G",
-				url: "https://spiceislandindonesia.com/sambal-bali-sweet-spicy",
+				url: "https://www.spiceislandindonesia.com/sambal-bali-sweet-spicy",
 			},
 		],
 		aggregateRating: {

@@ -51,7 +51,7 @@ const productData = {
 		"Beautifully packaged gift set with Sambal Oelek and Sambal Bali plus recipe cards. Authentic Indonesian flavors by Chef Yossie.",
 	brand: "Spice Island Indonesia",
 	category: "Gift Sets",
-	image: "https://spiceislandindonesia.com/images/Spice Island Indonesia Complete Packaging System Mockup.webp",
+	image: "https://www.spiceislandindonesia.com/images/Spice Island Indonesia Complete Packaging System Mockup.webp",
 	shippingDetails: [
 		{
 			"@type": "OfferShippingDetails",
@@ -141,7 +141,7 @@ const productData = {
 			priceCurrency: "GBP",
 			availability: "https://schema.org/InStock",
 			sku: "SII-GIFT-SET",
-			url: "https://spiceislandindonesia.com/gift-set-indonesian",
+			url: "https://www.spiceislandindonesia.com/gift-set-indonesian",
 			priceValidUntil: "2026-12-31",
 			shippingDetails: [
 				{

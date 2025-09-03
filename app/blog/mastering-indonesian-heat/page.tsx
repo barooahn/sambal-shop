@@ -140,12 +140,12 @@ export default function MasteringIndonesianHeatPage() {
 					name: "Spice Island Indonesia",
 					type: "Organization",
 					logo: {
-						url: "https://spiceislandindonesia.com/images/logo.webp",
+						url: "https://www.spiceislandindonesia.com/images/logo.webp",
 						width: 200,
 						height: 100,
 					},
 				}}
-				url='https://spiceislandindonesia.com/blog/mastering-indonesian-heat'
+				url='https://www.spiceislandindonesia.com/blog/mastering-indonesian-heat'
 				datePublished='2024-01-10'
 				dateModified='2025-01-08'
 				image='/images/blog/indonesian-spice-mastery.webp'

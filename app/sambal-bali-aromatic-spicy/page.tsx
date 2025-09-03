@@ -39,7 +39,7 @@ export const metadata = {
 		type: "website",
 		images: [
 			{
-				url: "https://spiceislandindonesia.com/images/sambal-bali.webp",
+				url: "https://www.spiceislandindonesia.com/images/sambal-bali.webp",
 				width: 400,
 				height: 400,
 				alt: "Authentic Indonesian Sambal Bali 185g - Aromatic Chili Paste with Galangal & Lemongrass by Chef Yossie",
@@ -88,7 +88,7 @@ export default function SambalBaliAromaticSpicyPage() {
 			"Aromatic Indonesian chili paste with galangal, lemongrass, and kaffir lime leaves. Made by Chef Yossie using traditional Balinese recipes for sophisticated heat and complex flavor.",
 		brand: "Spice Island Indonesia",
 		category: "Condiments & Sauces",
-		image: "https://spiceislandindonesia.com/images/sambal-bali.webp",
+		image: "https://www.spiceislandindonesia.com/images/sambal-bali.webp",
 		offers: [
 			{
 				name: "Sambal Bali 185g",
@@ -98,7 +98,7 @@ export default function SambalBaliAromaticSpicyPage() {
 				priceCurrency: "GBP",
 				availability: "https://schema.org/InStock",
 				sku: "SII-SB-185G",
-				url: "https://spiceislandindonesia.com/sambal-bali-aromatic-spicy",
+				url: "https://www.spiceislandindonesia.com/sambal-bali-aromatic-spicy",
 				priceValidUntil: "2026-12-31",
 				shippingDetails: {
 					"@type": "OfferShippingDetails",

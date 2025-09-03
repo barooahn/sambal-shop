@@ -86,10 +86,26 @@ export default function Footer() {
 							</li>
 							<li>
 								<Link
-									href='/shop#gift-set'
+									href='/gift-set'
 									className='text-gold-100 hover:underline underline-offset-4 transition-colors'
 								>
 									Gift Set
+								</Link>
+							</li>
+							<li>
+								<Link
+									href='/gift-set-indonesian'
+									className='text-gold-100 hover:underline underline-offset-4 transition-colors'
+								>
+									Indonesian Gift Set
+								</Link>
+							</li>
+							<li>
+								<Link
+									href='/sambal-bali-sweet-spicy'
+									className='text-gold-100 hover:underline underline-offset-4 transition-colors'
+								>
+									Sambal Bali Sweet & Spicy
 								</Link>
 							</li>
 							<li>
@@ -130,6 +146,22 @@ export default function Footer() {
 									className='text-gold-200 hover:text-gold-100 transition-colors'
 								>
 									Authentic vs Store-Bought
+								</Link>
+							</li>
+							<li>
+								<Link
+									href='/sriracha-alternative'
+									className='text-gold-200 hover:text-gold-100 transition-colors'
+								>
+									Sriracha Alternative
+								</Link>
+							</li>
+							<li>
+								<Link
+									href='/hot-sauce-vs-sambal'
+									className='text-gold-200 hover:text-gold-100 transition-colors'
+								>
+									Hot Sauce vs Sambal
 								</Link>
 							</li>
 							<li>
@@ -212,12 +244,28 @@ export default function Footer() {
 									Sambal vs Hot Sauce
 								</Link>
 							</li>
+							<li>
+								<Link
+									href='/sambal-noodle-sauce'
+									className='text-gold-200 hover:text-gold-100 transition-colors'
+								>
+									Sambal Noodle Sauce
+								</Link>
+							</li>
+							<li>
+								<Link
+									href='/uk-indonesian-food-delivery'
+									className='text-gold-200 hover:text-gold-100 transition-colors'
+								>
+									UK Indonesian Food Delivery
+								</Link>
+							</li>
 						</ul>
 					</div>
 
 					<div>
 						<h4 className='text-xl font-semibold mb-6 text-gold-300 font-brand'>
-							Contact Us
+							Contact & Support
 						</h4>
 						<ul className='space-y-3 font-body'>
 							<li>
@@ -230,10 +278,26 @@ export default function Footer() {
 							</li>
 							<li>
 								<Link
-									href='/contact'
+									href='/feedback'
 									className='text-gold-200 hover:text-gold-100 transition-colors'
 								>
-									Contact Form
+									Leave Feedback
+								</Link>
+							</li>
+							<li>
+								<Link
+									href='/success'
+									className='text-gold-200 hover:text-gold-100 transition-colors'
+								>
+									Order Success
+								</Link>
+							</li>
+							<li>
+								<Link
+									href='/unsubscribe'
+									className='text-gold-200 hover:text-gold-100 transition-colors'
+								>
+									Unsubscribe
 								</Link>
 							</li>
 						</ul>

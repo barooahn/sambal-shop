@@ -168,6 +168,37 @@ export default function RecipesPage() {
 				"Rest for 5 minutes before serving",
 			],
 		},
+		{
+			id: 6,
+			title: "Bakwan (Indonesian Vegetable Fritters)",
+			description:
+				"Crispy Indonesian vegetable fritters perfect with spicy sambal dipping sauce",
+			time: "25 mins",
+			serves: "4",
+			difficulty: "Easy",
+			image: "/images/bakwan-fritters.webp",
+			slug: "bakwan",
+			ingredients: [
+				"1 cup plain flour",
+				"1 egg, beaten",
+				"200ml water",
+				"1 carrot, julienned",
+				"100g cabbage, shredded",
+				"2 spring onions, chopped",
+				"Salt and pepper to taste",
+				"Oil for deep frying",
+				"Sambal Oelek for dipping",
+			],
+			instructions: [
+				"Mix flour, egg, and water to make a smooth batter",
+				"Season with salt and pepper",
+				"Add vegetables and mix well",
+				"Heat oil in a deep pan to 170°C",
+				"Drop spoonfuls of mixture into hot oil",
+				"Fry until golden and crispy, about 3-4 minutes",
+				"Drain on paper towels and serve with sambal",
+			],
+		},
 	];
 
 	return (

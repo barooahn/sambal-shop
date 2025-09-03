@@ -225,6 +225,7 @@ const blogPosts = {
 	},
 	"5-ways-sambal-british-cooking": {
 		title: "5 Ways to Use Indonesian Sambal in British Cooking",
+		displayTitle: "Transform Your British Cooking with Authentic Indonesian Sambal",
 		excerpt: "Transform your favourite British dishes with authentic Indonesian sambal. From Sunday roasts to fish and chips, discover how this traditional chili paste can revolutionize your cooking.",
 		content: `
 		<p>British cuisine is experiencing a spice revolution, and <a href="/sambal-bali-aromatic-spicy" class="text-burgundy-600 hover:text-burgundy-800 underline">Indonesian sambal</a> is leading the charge. This isn't about replacing traditional flavors - it's about enhancing them with the complex heat and depth that only <a href="/shop" class="text-burgundy-600 hover:text-burgundy-800 underline">authentic sambal</a> can provide.</p>
@@ -1038,19 +1039,19 @@ const blogPosts = {
 						name: "Spice Island Indonesia",
 						logo: {
 							"@type": "ImageObject",
-							url: "https://spiceislandindonesia.com/images/logo.webp",
+							url: "https://www.spiceislandindonesia.com/images/logo.webp",
 						},
 					},
 					mainEntityOfPage: {
 						"@type": "WebPage",
-						"@id": "https://spiceislandindonesia.com/blog/indonesian-spice-levels-british-palates",
+						"@id": "https://www.spiceislandindonesia.com/blog/indonesian-spice-levels-british-palates",
 					},
 					wordCount: 3200,
 					keywords:
 						"Indonesian spice levels UK, British palate spice guide UK 2025, sambal heat levels UK families",
 					image: {
 						"@type": "ImageObject",
-						url: "https://spiceislandindonesia.com/images/indonesian-spice-guide-uk.webp",
+						url: "https://www.spiceislandindonesia.com/images/indonesian-spice-guide-uk.webp",
 						width: 1200,
 						height: 630,
 						caption: "Indonesian sambal spice level comparison for British palates showing different heat levels with UK supermarket ingredients and traditional Indonesian spices",
@@ -1062,6 +1063,7 @@ const blogPosts = {
 
 	"indonesian-techniques-british-kitchens": {
 		title: "Indonesian Cooking Techniques UK | Traditional Methods Guide",
+		displayTitle: "Master Indonesian Techniques in Your British Kitchen",
 		excerpt: "Complete guide to authentic Indonesian cooking techniques using standard British kitchen equipment. Master wok techniques, spice paste preparation, traditional timing methods, and equipment adaptations for UK homes. Includes professional chef secrets.",
 		content: `
 		<div class="bg-gradient-to-r from-burgundy-50 to-gold-50 border-l-4 border-burgundy-500 p-6 my-8 rounded-r-lg">
@@ -1690,19 +1692,19 @@ const blogPosts = {
 						name: "Spice Island Indonesia",
 						logo: {
 							"@type": "ImageObject",
-							url: "https://spiceislandindonesia.com/images/logo.webp",
+							url: "https://www.spiceislandindonesia.com/images/logo.webp",
 						},
 					},
 					mainEntityOfPage: {
 						"@type": "WebPage",
-						"@id": "https://spiceislandindonesia.com/blog/indonesian-techniques-british-kitchens",
+						"@id": "https://www.spiceislandindonesia.com/blog/indonesian-techniques-british-kitchens",
 					},
 					wordCount: 3500,
 					keywords:
 						"Indonesian cooking techniques UK, British kitchen Indonesian methods, authentic Indonesian cooking UK",
 					image: {
 						"@type": "ImageObject",
-						url: "https://spiceislandindonesia.com/images/indonesian-techniques-uk-kitchen.webp",
+						url: "https://www.spiceislandindonesia.com/images/indonesian-techniques-uk-kitchen.webp",
 						width: 1200,
 						height: 630,
 						caption: "Split-screen showing traditional Indonesian cooking methods adapted for modern British kitchens with proper equipment and techniques",
@@ -1714,6 +1716,7 @@ const blogPosts = {
 
 	"british-indonesian-fusion-weeknight-recipes": {
 		title: "British-Indonesian Fusion Recipes UK | Quick 30-Minute Meals",
+		displayTitle: "Quick Fusion Recipes: British Comfort Meets Indonesian Heat",
 		excerpt: "Transform your weeknight dinners with 10 quick Indonesian-British fusion recipes. 30 minutes or less using Tesco, ASDA & Sainsbury's ingredients. Perfect for busy UK families discovering Indonesian flavors.",
 		keywords: [
 			"British Indonesian fusion recipes",
@@ -1757,19 +1760,19 @@ const blogPosts = {
 						name: "Spice Island Indonesia",
 						logo: {
 							"@type": "ImageObject",
-							url: "https://spiceislandindonesia.com/logo.webp",
+							url: "https://www.spiceislandindonesia.com/logo.webp",
 						},
 					},
 					mainEntityOfPage: {
 						"@type": "WebPage",
-						"@id": "https://spiceislandindonesia.com/blog/british-indonesian-fusion-weeknight-recipes",
+						"@id": "https://www.spiceislandindonesia.com/blog/british-indonesian-fusion-weeknight-recipes",
 					},
 					wordCount: 3000,
 					keywords:
 						"British Indonesian fusion recipes, quick weeknight meals UK, Indonesian fusion cooking UK 2025",
 					image: {
 						"@type": "ImageObject",
-						url: "https://spiceislandindonesia.com/images/blog/fusion-recipes-guide.webp",
+						url: "https://www.spiceislandindonesia.com/images/blog/fusion-recipes-guide.webp",
 						width: 1200,
 						height: 630,
 						caption: "Overhead view of British-Indonesian fusion family dinner featuring sambal shepherd's pie, Indonesian bangers & mash, and other fusion weeknight recipes using UK supermarket ingredients",
@@ -1790,7 +1793,7 @@ const blogPosts = {
 						"sambal shepherds pie, Indonesian British fusion, comfort food fusion UK",
 					image: {
 						"@type": "ImageObject",
-						url: "https://spiceislandindonesia.com/images/blog/fusion-recipes-guide.webp",
+						url: "https://www.spiceislandindonesia.com/images/blog/fusion-recipes-guide.webp",
 						width: 1200,
 						height: 630,
 						caption: "Sambal Shepherd's Pie with crispy potato topping and spiced Indonesian lamb filling",
@@ -1799,9 +1802,9 @@ const blogPosts = {
 						"@type": "VideoObject",
 						name: "How to Make Sambal Shepherd's Pie - British Indonesian Fusion Recipe",
 						description: "Step-by-step video guide for making authentic sambal shepherd's pie with Indonesian spices",
-						thumbnailUrl: "https://spiceislandindonesia.com/images/blog/fusion-recipes-guide.webp",
-						contentUrl: "https://spiceislandindonesia.com/videos/sambal-shepherds-pie-recipe.mp4",
-						embedUrl: "https://spiceislandindonesia.com/videos/embed/sambal-shepherds-pie-recipe",
+						thumbnailUrl: "https://www.spiceislandindonesia.com/images/blog/fusion-recipes-guide.webp",
+						contentUrl: "https://www.spiceislandindonesia.com/videos/sambal-shepherds-pie-recipe.mp4",
+						embedUrl: "https://www.spiceislandindonesia.com/videos/embed/sambal-shepherds-pie-recipe",
 						uploadDate: "2025-01-15T10:00:00+00:00",
 						duration: "PT8M30S"
 					},
@@ -1835,10 +1838,10 @@ const blogPosts = {
 							"@type": "HowToStep",
 							name: "Prepare potatoes and preheat oven",
 							text: "Preheat oven to 200°C (fan 180°C). Peel and chop potatoes, then boil until tender, about 15 minutes.",
-							url: "https://spiceislandindonesia.com/blog/british-indonesian-fusion-weeknight-recipes#step1",
+							url: "https://www.spiceislandindonesia.com/blog/british-indonesian-fusion-weeknight-recipes#step1",
 							image: {
 								"@type": "ImageObject",
-								url: "https://spiceislandindonesia.com/images/blog/fusion-recipes-guide.webp",
+								url: "https://www.spiceislandindonesia.com/images/blog/fusion-recipes-guide.webp",
 								width: 1200,
 								height: 630
 							}
@@ -1847,10 +1850,10 @@ const blogPosts = {
 							"@type": "HowToStep",
 							name: "Brown the minced lamb",
 							text: "Meanwhile, heat oil in a large pan. Brown the minced lamb over medium-high heat for 5-6 minutes.",
-							url: "https://spiceislandindonesia.com/blog/british-indonesian-fusion-weeknight-recipes#step2",
+							url: "https://www.spiceislandindonesia.com/blog/british-indonesian-fusion-weeknight-recipes#step2",
 							image: {
 								"@type": "ImageObject",
-								url: "https://spiceislandindonesia.com/images/blog/fusion-recipes-guide.webp",
+								url: "https://www.spiceislandindonesia.com/images/blog/fusion-recipes-guide.webp",
 								width: 1200,
 								height: 630
 							}
@@ -1859,10 +1862,10 @@ const blogPosts = {
 							"@type": "HowToStep",
 							name: "Add vegetables and aromatics",
 							text: "Add diced onion, carrots, garlic, and ginger to the lamb. Cook for 5 minutes until vegetables soften.",
-							url: "https://spiceislandindonesia.com/blog/british-indonesian-fusion-weeknight-recipes#step3",
+							url: "https://www.spiceislandindonesia.com/blog/british-indonesian-fusion-weeknight-recipes#step3",
 							image: {
 								"@type": "ImageObject",
-								url: "https://spiceislandindonesia.com/images/blog/fusion-recipes-guide.webp",
+								url: "https://www.spiceislandindonesia.com/images/blog/fusion-recipes-guide.webp",
 								width: 1200,
 								height: 630
 							}
@@ -1871,10 +1874,10 @@ const blogPosts = {
 							"@type": "HowToStep",
 							name: "Add sambal and seasonings",
 							text: "Stir in sambal, tomato paste, and soy sauce. Cook for 2 minutes until fragrant.",
-							url: "https://spiceislandindonesia.com/blog/british-indonesian-fusion-weeknight-recipes#step4",
+							url: "https://www.spiceislandindonesia.com/blog/british-indonesian-fusion-weeknight-recipes#step4",
 							image: {
 								"@type": "ImageObject",
-								url: "https://spiceislandindonesia.com/images/blog/fusion-recipes-guide.webp",
+								url: "https://www.spiceislandindonesia.com/images/blog/fusion-recipes-guide.webp",
 								width: 1200,
 								height: 630
 							}
@@ -1883,10 +1886,10 @@ const blogPosts = {
 							"@type": "HowToStep",
 							name: "Add coconut milk and simmer",
 							text: "Pour in coconut milk and simmer for 8-10 minutes until sauce thickens. Season with salt and pepper.",
-							url: "https://spiceislandindonesia.com/blog/british-indonesian-fusion-weeknight-recipes#step5",
+							url: "https://www.spiceislandindonesia.com/blog/british-indonesian-fusion-weeknight-recipes#step5",
 							image: {
 								"@type": "ImageObject",
-								url: "https://spiceislandindonesia.com/images/blog/fusion-recipes-guide.webp",
+								url: "https://www.spiceislandindonesia.com/images/blog/fusion-recipes-guide.webp",
 								width: 1200,
 								height: 630
 							}
@@ -1895,10 +1898,10 @@ const blogPosts = {
 							"@type": "HowToStep",
 							name: "Prepare mashed potatoes",
 							text: "Drain potatoes and mash with butter and milk until smooth. Season with salt and pepper.",
-							url: "https://spiceislandindonesia.com/blog/british-indonesian-fusion-weeknight-recipes#step6",
+							url: "https://www.spiceislandindonesia.com/blog/british-indonesian-fusion-weeknight-recipes#step6",
 							image: {
 								"@type": "ImageObject",
-								url: "https://spiceislandindonesia.com/images/blog/fusion-recipes-guide.webp",
+								url: "https://www.spiceislandindonesia.com/images/blog/fusion-recipes-guide.webp",
 								width: 1200,
 								height: 630
 							}
@@ -1907,10 +1910,10 @@ const blogPosts = {
 							"@type": "HowToStep",
 							name: "Assemble the shepherd's pie",
 							text: "Transfer lamb mixture to a baking dish. Top with mashed potato and fork to create texture.",
-							url: "https://spiceislandindonesia.com/blog/british-indonesian-fusion-weeknight-recipes#step7",
+							url: "https://www.spiceislandindonesia.com/blog/british-indonesian-fusion-weeknight-recipes#step7",
 							image: {
 								"@type": "ImageObject",
-								url: "https://spiceislandindonesia.com/images/blog/fusion-recipes-guide.webp",
+								url: "https://www.spiceislandindonesia.com/images/blog/fusion-recipes-guide.webp",
 								width: 1200,
 								height: 630
 							}
@@ -1919,10 +1922,10 @@ const blogPosts = {
 							"@type": "HowToStep",
 							name: "Bake and serve",
 							text: "Bake for 20-25 minutes until golden. Garnish with fresh coriander and serve hot.",
-							url: "https://spiceislandindonesia.com/blog/british-indonesian-fusion-weeknight-recipes#step8",
+							url: "https://www.spiceislandindonesia.com/blog/british-indonesian-fusion-weeknight-recipes#step8",
 							image: {
 								"@type": "ImageObject",
-								url: "https://spiceislandindonesia.com/images/blog/fusion-recipes-guide.webp",
+								url: "https://www.spiceislandindonesia.com/images/blog/fusion-recipes-guide.webp",
 								width: 1200,
 								height: 630
 							}
@@ -1958,7 +1961,7 @@ const blogPosts = {
 					category: "Condiments & Sauces",
 					image: {
 						"@type": "ImageObject",
-						url: "https://spiceislandindonesia.com/images/products/sambal-oelek.webp",
+						url: "https://www.spiceislandindonesia.com/images/products/sambal-oelek.webp",
 						width: 800,
 						height: 800
 					},
@@ -1969,7 +1972,7 @@ const blogPosts = {
 						priceValidUntil: "2026-12-31",
 						availability: "https://schema.org/InStock",
 						itemCondition: "https://schema.org/NewCondition",
-						url: "https://spiceislandindonesia.com/sambal-oelek-uk",
+						url: "https://www.spiceislandindonesia.com/sambal-oelek-uk",
 					shippingDetails: {
 						"@type": "OfferShippingDetails",
 						shippingRate: {
@@ -2038,7 +2041,7 @@ const blogPosts = {
 					category: "Condiments & Sauces",
 					image: {
 						"@type": "ImageObject",
-						url: "https://spiceislandindonesia.com/images/products/sambal-bali.webp",
+						url: "https://www.spiceislandindonesia.com/images/products/sambal-bali.webp",
 						width: 800,
 						height: 800
 					},
@@ -2049,7 +2052,7 @@ const blogPosts = {
 						priceValidUntil: "2026-12-31",
 						availability: "https://schema.org/InStock",
 						itemCondition: "https://schema.org/NewCondition",
-						url: "https://spiceislandindonesia.com/sambal-bali-aromatic-spicy",
+						url: "https://www.spiceislandindonesia.com/sambal-bali-aromatic-spicy",
 					shippingDetails: {
 						"@type": "OfferShippingDetails",
 						shippingRate: {
@@ -2524,19 +2527,19 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 				author={{
 					name: post.author,
 					type: "Organization",
-					url: "https://spiceislandindonesia.com/about",
+					url: "https://www.spiceislandindonesia.com/about",
 					worksFor: "Spice Island Indonesia",
 				}}
 				publisher={{
 					name: "Spice Island Indonesia",
 					type: "Organization",
 					logo: {
-						url: "https://spiceislandindonesia.com/images/optimized/logo-lg.webp",
+						url: "https://www.spiceislandindonesia.com/images/optimized/logo-lg.webp",
 						width: 200,
 						height: 60,
 					},
 				}}
-				url={`https://spiceislandindonesia.com/blog/${slug}`}
+				url={`https://www.spiceislandindonesia.com/blog/${slug}`}
 				wordCount={
 					post.readTime ? parseInt(post.readTime) * 200 : 1500
 				}
@@ -2550,7 +2553,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 					"Maluku Islands",
 					"volcanic soil spices",
 				]}
-				mainEntityOfPage={`https://spiceislandindonesia.com/blog/${slug}`}
+				mainEntityOfPage={`https://www.spiceislandindonesia.com/blog/${slug}`}
 			/>
 			{/* Hero Section */}
 			<section className='py-16 bg-gradient-to-br from-burgundy-50 to-gold-50 relative overflow-hidden'>
@@ -2573,7 +2576,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 							{post.category}
 						</Badge>
 						<h1 className='text-4xl sm:text-5xl font-bold text-burgundy-900 mb-6 font-brand leading-tight'>
-							{post.title}
+							{(post as any).displayTitle || post.title}
 						</h1>
 						<div className='flex items-center gap-6 text-neutral-600 font-body'>
 							<div className='flex items-center gap-2'>

@@ -129,6 +129,8 @@ const staticRoutes = [
 	// Info pages
 	{ route: "/about", priority: 0.6, changeFrequency: "monthly" as const },
 	{ route: "/chef", priority: 0.6, changeFrequency: "monthly" as const },
+	{ route: "/products", priority: 0.8, changeFrequency: "weekly" as const },
+	{ route: "/search", priority: 0.5, changeFrequency: "yearly" as const },
 	{
 		route: "/wholesale",
 		priority: 0.5,

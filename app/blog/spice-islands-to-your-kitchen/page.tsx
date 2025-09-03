@@ -153,12 +153,12 @@ export default function SpiceIslandsToYourKitchenPage() {
 					name: "Spice Island Indonesia",
 					type: "Organization",
 					logo: {
-						url: "https://spiceislandindonesia.com/images/logo.webp",
+						url: "https://www.spiceislandindonesia.com/images/logo.webp",
 						width: 200,
 						height: 100,
 					},
 				}}
-				url='https://spiceislandindonesia.com/blog/spice-islands-to-your-kitchen'
+				url='https://www.spiceislandindonesia.com/blog/spice-islands-to-your-kitchen'
 				datePublished='2024-01-05'
 				dateModified='2025-01-08'
 				image='/images/blog/spice-islands-heritage.webp'

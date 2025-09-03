@@ -1,6 +1,7 @@
 export type BlogPostMeta = {
 	id: number;
 	title: string;
+	displayTitle?: string; // Optional different title for H1 display
 	excerpt: string;
 	image: string;
 	category: string;
@@ -73,7 +74,8 @@ export const blogPosts: BlogPostMeta[] = [
 	},
 	{
 		id: 14,
-		title: "Indonesian Cooking Techniques UK | Methods Guide",
+		title: "Indonesian Cooking Techniques UK | Traditional Methods Guide",
+		displayTitle: "Master Indonesian Techniques in Your British Kitchen",
 		excerpt: "Master traditional Indonesian cooking methods using standard British kitchen equipment. Learn authentic techniques that bring out the best flavors in Indonesian cuisine at home.",
 		image: "/images/indonesian-techniques-uk-kitchen.webp",
 		category: "Cooking Guide",
@@ -94,6 +96,7 @@ export const blogPosts: BlogPostMeta[] = [
 	{
 		id: 13,
 		title: "British-Indonesian Fusion Recipes UK | Quick 30-Min Meals",
+		displayTitle: "Quick Fusion Recipes: British Comfort Meets Indonesian Heat",
 		excerpt: "Quick and delicious fusion recipes that blend British comfort food with Indonesian flavors. Perfect weeknight dinners that bring excitement to your family table with authentic sambal.",
 		image: "/images/fusion-recipes-guide.webp",
 		category: "Cooking Tips",
@@ -104,6 +107,7 @@ export const blogPosts: BlogPostMeta[] = [
 	{
 		id: 12,
 		title: "5 Ways to Use Indonesian Sambal in British Cooking",
+		displayTitle: "Transform Your British Cooking with Authentic Indonesian Sambal",
 		excerpt: "Transform your everyday British meals with authentic Indonesian sambal. Discover five creative ways to incorporate this traditional Indonesian condiment into your British kitchen repertoire.",
 		image: "/images/blog/indonesian-british-sambal-fusion-split-screen.webp",
 		category: "Cooking Tips",

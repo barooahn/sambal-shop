@@ -82,12 +82,12 @@ export default function UltimateSambalGuidePage() {
 					name: "Spice Island Indonesia",
 					type: "Organization",
 					logo: {
-						url: "https://spiceislandindonesia.com/images/optimized/logo-lg.webp",
+						url: "https://www.spiceislandindonesia.com/images/optimized/logo-lg.webp",
 						width: 200,
 						height: 60,
 					},
 				}}
-				url='https://spiceislandindonesia.com/blog/ultimate-guide-indonesian-sambal'
+				url='https://www.spiceislandindonesia.com/blog/ultimate-guide-indonesian-sambal'
 				datePublished='2024-02-01'
 				dateModified='2025-01-08'
 				image='/images/blog/ultimate-sambal-guide.webp'

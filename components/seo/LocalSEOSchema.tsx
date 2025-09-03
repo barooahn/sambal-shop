@@ -27,17 +27,29 @@ const LocalSEOSchema: FC<LocalSEOSchemaProps> = ({
 	const schemaData = {
 		"@context": "https://schema.org",
 		"@type": "LocalBusiness",
-		"@id": "https://spiceislandindonesia.com/#localbusiness",
+		"@id": `https://www.spiceislandindonesia.com/${businessName.toLowerCase().replace(/\s+/g, "-")}#localbusiness`,
 		name: businessName,
 		description: description,
-		url: "https://spiceislandindonesia.com",
+		url: "https://www.spiceislandindonesia.com",
 		email: "info@spiceislandindonesia.com",
 		foundingDate: "2024",
 		founder: {
 			"@type": "Person",
 			name: "Chef Yossie",
 			nationality: "Indonesian",
-			expertise: "Traditional Indonesian Cuisine",
+			knowsAbout: "Traditional Indonesian Cuisine",
+		},
+		address: {
+			"@type": "PostalAddress",
+			streetAddress: "175 Redgate",
+			addressLocality: "Ormskirk",
+			postalCode: "L39 3NW",
+			addressCountry: "GB"
+		},
+		geo: {
+			"@type": "GeoCoordinates",
+			latitude: 53.562573,
+			longitude: -2.890138,
 		},
 		areaServed: serviceAreas.map((area) => ({
 			"@type": area.type,
@@ -54,29 +66,28 @@ const LocalSEOSchema: FC<LocalSEOSchemaProps> = ({
 				? `${deliveryRadius} ${deliveryUnit}`
 				: "500 km",
 		},
-		// makesOffer removed to avoid triggering incomplete Merchant listing items on the homepage
 		knowsAbout: specialties,
 		knowsLanguage: languages,
-		// hasOfferCatalog removed on homepage to avoid creating incomplete Product items
 		priceRange: "££",
 		servesCuisine: "Indonesian",
-		paymentAccepted: "Credit Card, PayPal, Bank Transfer",
+		paymentAccepted: ["Credit Card", "PayPal", "Bank Transfer"],
 		currenciesAccepted: "GBP",
+		openingHours: ["Mo-Fr 09:00-17:00"],
 		potentialAction: [
 			{
 				"@type": "OrderAction",
-				target: "https://spiceislandindonesia.com/shop",
+				target: "https://www.spiceislandindonesia.com/shop",
 				deliveryMethod: "https://schema.org/ParcelService",
 			},
 			{
 				"@type": "SearchAction",
-				target: "https://spiceislandindonesia.com/search?q={search_term_string}",
+				target: "https://www.spiceislandindonesia.com/search?q={search_term_string}",
 				"query-input": "required name=search_term_string",
 			},
 		],
 		sameAs: [
 			"https://www.instagram.com/spiceisland_indonesia",
-			"https://www.facebook.com/spiceislandindonesia",
+			"https://www.facebook.com/profile.php?id=61579653961037",
 		],
 	};
 

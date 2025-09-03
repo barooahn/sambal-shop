@@ -171,12 +171,12 @@ export default function SambalBritishClassicsPage() {
 					name: "Spice Island Indonesia",
 					type: "Organization",
 					logo: {
-						url: "https://spiceislandindonesia.com/images/logo.webp",
+						url: "https://www.spiceislandindonesia.com/images/logo.webp",
 						width: 200,
 						height: 100,
 					},
 				}}
-				url='https://spiceislandindonesia.com/blog/sambal-british-classics'
+				url='https://www.spiceislandindonesia.com/blog/sambal-british-classics'
 				datePublished='2024-02-05'
 				dateModified='2025-01-08'
 				image='/images/blog/sambal-british-fusion.webp'

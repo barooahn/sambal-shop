@@ -32,7 +32,7 @@ export const metadata = {
 		type: "website",
 		images: [
 			{
-				url: "https://spiceislandindonesia.com/images/sambal-oelek-lg.webp",
+				url: "https://www.spiceislandindonesia.com/images/sambal-oelek-lg.webp",
 				width: 400,
 				height: 400,
 				alt: "Authentic Indonesian Sambal vs Store-bought comparison",

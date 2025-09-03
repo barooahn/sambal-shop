@@ -180,17 +180,17 @@ export default function SambalChickenStirFryPage() {
 	const breadcrumbItems = [
 		{
 			name: "Home",
-			url: "https://spiceislandindonesia.com",
+			url: "https://www.spiceislandindonesia.com",
 			position: 1,
 		},
 		{
 			name: "Recipes",
-			url: "https://spiceislandindonesia.com/recipes",
+			url: "https://www.spiceislandindonesia.com/recipes",
 			position: 2,
 		},
 		{
 			name: "Sambal Chicken Stir-Fry",
-			url: "https://spiceislandindonesia.com/recipes/sambal-chicken-stir-fry",
+			url: "https://www.spiceislandindonesia.com/recipes/sambal-chicken-stir-fry",
 			position: 3,
 		},
 	];

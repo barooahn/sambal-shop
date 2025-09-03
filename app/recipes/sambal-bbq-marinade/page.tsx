@@ -182,17 +182,17 @@ export default function SambalBBQMarinadePage() {
 	const breadcrumbItems = [
 		{
 			name: "Home",
-			url: "https://spiceislandindonesia.com",
+			url: "https://www.spiceislandindonesia.com",
 			position: 1,
 		},
 		{
 			name: "Recipes",
-			url: "https://spiceislandindonesia.com/recipes",
+			url: "https://www.spiceislandindonesia.com/recipes",
 			position: 2,
 		},
 		{
 			name: "Sambal BBQ Marinade",
-			url: "https://spiceislandindonesia.com/recipes/sambal-bbq-marinade",
+			url: "https://www.spiceislandindonesia.com/recipes/sambal-bbq-marinade",
 			position: 3,
 		},
 	];

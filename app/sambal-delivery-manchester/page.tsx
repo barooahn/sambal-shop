@@ -39,12 +39,12 @@ export default function ManchesterDeliveryPage() {
 	const breadcrumbItems = [
 		{
 			name: "Home",
-			url: "https://spiceislandindonesia.com",
+			url: "https://www.spiceislandindonesia.com",
 			position: 1,
 		},
 		{
 			name: "Manchester Delivery",
-			url: "https://spiceislandindonesia.com/sambal-delivery-manchester",
+			url: "https://www.spiceislandindonesia.com/sambal-delivery-manchester",
 			position: 2,
 		},
 	];

@@ -31,7 +31,7 @@ export const metadata = {
 		type: "website",
 		images: [
 			{
-				url: "https://spiceislandindonesia.com/images/optimized/sambal-sample-responsive.webp",
+				url: "https://www.spiceislandindonesia.com/images/optimized/sambal-sample-responsive.webp",
 				width: 400,
 				height: 400,
 				alt: "Indonesian Sambal Sample Pack - Sambal Goreng 45g jar",

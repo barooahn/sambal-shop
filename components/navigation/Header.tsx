@@ -39,9 +39,14 @@ export default function Header() {
 					description: "Pure chili paste - Coming Soon",
 				},
 				{
-					name: "Sambal Bali",
+					name: "Sambal Bali Aromatic",
 					href: "/sambal-bali-aromatic-spicy",
 					description: "Aromatic spices - Coming Soon",
+				},
+				{
+					name: "Sambal Bali Sweet & Spicy",
+					href: "/sambal-bali-sweet-spicy",
+					description: "Traditional sweet heat",
 				},
 				{
 					name: "Sample Pack",
@@ -52,6 +57,11 @@ export default function Header() {
 					name: "Gift Set",
 					href: "/gift-set",
 					description: "Perfect for food lovers",
+				},
+				{
+					name: "Indonesian Gift Set",
+					href: "/gift-set-indonesian",
+					description: "Complete Indonesian experience",
 				},
 				{
 					name: "View All Products",

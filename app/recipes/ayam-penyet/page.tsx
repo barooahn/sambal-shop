@@ -196,17 +196,17 @@ export default function AyamPenyetPage() {
 	const breadcrumbItems = [
 		{
 			name: "Home",
-			url: "https://spiceislandindonesia.com",
+			url: "https://www.spiceislandindonesia.com",
 			position: 1,
 		},
 		{
 			name: "Recipes",
-			url: "https://spiceislandindonesia.com/recipes",
+			url: "https://www.spiceislandindonesia.com/recipes",
 			position: 2,
 		},
 		{
 			name: "Ayam Penyet",
-			url: "https://spiceislandindonesia.com/recipes/ayam-penyet",
+			url: "https://www.spiceislandindonesia.com/recipes/ayam-penyet",
 			position: 3,
 		},
 	];
@@ -404,16 +404,6 @@ export default function AyamPenyetPage() {
 		<div className='min-h-screen bg-gradient-to-b from-cream-50 to-cream-100'>
 			<RecipeSchema recipe={recipe} />
 			<BreadcrumbSchema items={breadcrumbItems} />
-			<HowToSchema
-				name='How to Make Ayam Penyet (Indonesian Smashed Fried Chicken)'
-				description='Learn to make authentic Indonesian Ayam Penyet with crispy fried chicken, traditional smashing technique, and fiery sambal oelek.'
-				steps={howToSteps}
-				totalTime='PT55M'
-				prepTime='PT30M'
-				cookTime='PT25M'
-				yield='4 servings'
-				category='Indonesian Main Course'
-			/>
 			<FAQSchema
 				faqs={cookingFAQ}
 				pageTitle='Ayam Penyet Cooking - Frequently Asked Questions'
@@ -421,7 +411,7 @@ export default function AyamPenyetPage() {
 
 			<div className='container mx-auto px-4 py-8 pb-16'>
 				{/* Hidden H1 for SEO */}
-				<h1 className='sr-only'>Ayam Penyet Recipe | Indonesian Smashed Fried Chicken</h1>
+				<h1 className='sr-only'>Master Authentic Ayam Penyet: Indonesian Smashed Fried Chicken</h1>
 
 				<RecipeCard recipe={recipe} />
 

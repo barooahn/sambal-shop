@@ -169,12 +169,12 @@ export default function IndonesianCookingGuidePage() {
 					name: "Spice Island Indonesia",
 					type: "Organization",
 					logo: {
-						url: "https://spiceislandindonesia.com/images/logo.webp",
+						url: "https://www.spiceislandindonesia.com/images/logo.webp",
 						width: 200,
 						height: 100,
 					},
 				}}
-				url='https://spiceislandindonesia.com/blog/indonesian-cooking-guide-british-kitchens'
+				url='https://www.spiceislandindonesia.com/blog/indonesian-cooking-guide-british-kitchens'
 				datePublished='2025-01-08'
 				dateModified='2025-01-08'
 				image='/images/blog/indonesian-cooking-guide-hero.webp'

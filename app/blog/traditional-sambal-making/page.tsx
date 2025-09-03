@@ -87,12 +87,12 @@ export default function TraditionalSambalMakingPage() {
 					name: "Spice Island Indonesia",
 					type: "Organization",
 					logo: {
-						url: "https://spiceislandindonesia.com/images/optimized/logo-lg.webp",
+						url: "https://www.spiceislandindonesia.com/images/optimized/logo-lg.webp",
 						width: 200,
 						height: 60,
 					},
 				}}
-				url='https://spiceislandindonesia.com/blog/traditional-sambal-making'
+				url='https://www.spiceislandindonesia.com/blog/traditional-sambal-making'
 				datePublished='2024-01-15'
 				dateModified='2024-01-15'
 				image='/images/blog/traditional-sambal-making.webp'

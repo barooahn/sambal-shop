@@ -199,17 +199,17 @@ export default function BakwanPage() {
 	const breadcrumbItems = [
 		{
 			name: "Home",
-			url: "https://spiceislandindonesia.com",
+			url: "https://www.spiceislandindonesia.com",
 			position: 1,
 		},
 		{
 			name: "Recipes",
-			url: "https://spiceislandindonesia.com/recipes",
+			url: "https://www.spiceislandindonesia.com/recipes",
 			position: 2,
 		},
 		{
 			name: "Bakwan",
-			url: "https://spiceislandindonesia.com/recipes/bakwan",
+			url: "https://www.spiceislandindonesia.com/recipes/bakwan",
 			position: 3,
 		},
 	];

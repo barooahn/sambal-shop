@@ -39,12 +39,12 @@ export default function UKDeliveryPage() {
 	const breadcrumbItems = [
 		{
 			name: "Home",
-			url: "https://spiceislandindonesia.com",
+			url: "https://www.spiceislandindonesia.com",
 			position: 1,
 		},
 		{
 			name: "UK Delivery",
-			url: "https://spiceislandindonesia.com/uk-indonesian-food-delivery",
+			url: "https://www.spiceislandindonesia.com/uk-indonesian-food-delivery",
 			position: 2,
 		},
 	];

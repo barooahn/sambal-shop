@@ -65,7 +65,7 @@ const ProductSchema: FC<ProductSchemaProps> = ({
 			price: "7.49",
 			priceCurrency: "GBP",
 			availability: "https://schema.org/InStock",
-			url: typeof window !== 'undefined' ? window.location.href : `https://spiceislandindonesia.com/${name.toLowerCase().replace(/\s+/g, '-')}`,
+			url: typeof window !== 'undefined' ? window.location.href : `https://www.spiceislandindonesia.com/${name.toLowerCase().replace(/\s+/g, '-')}`,
 			priceValidUntil: "2026-12-31",
 		}
 	];

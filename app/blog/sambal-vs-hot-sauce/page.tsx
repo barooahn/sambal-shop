@@ -168,12 +168,12 @@ export default function SambalVsHotSaucePage() {
 					name: "Spice Island Indonesia",
 					type: "Organization",
 					logo: {
-						url: "https://spiceislandindonesia.com/images/logo.webp",
+						url: "https://www.spiceislandindonesia.com/images/logo.webp",
 						width: 200,
 						height: 100,
 					},
 				}}
-				url='https://spiceislandindonesia.com/blog/sambal-vs-hot-sauce'
+				url='https://www.spiceislandindonesia.com/blog/sambal-vs-hot-sauce'
 				datePublished='2024-01-01'
 				dateModified='2025-01-08'
 				image='/images/blog/sambal-vs-hot-sauce-comparison.webp'
@@ -207,7 +207,7 @@ export default function SambalVsHotSaucePage() {
 							"category": "Indonesian Condiments",
 							"offers": {
 								"@type": "Offer",
-								"url": "https://spiceislandindonesia.com/sambal-bali-aromatic-spicy",
+								"url": "https://www.spiceislandindonesia.com/sambal-bali-aromatic-spicy",
 								"priceCurrency": "GBP",
 								"price": "7.49",
 								"availability": "https://schema.org/InStock",
@@ -236,7 +236,7 @@ export default function SambalVsHotSaucePage() {
 							"category": "Indonesian Condiments",
 							"offers": {
 								"@type": "Offer",
-								"url": "https://spiceislandindonesia.com/sambal-oelek-uk",
+								"url": "https://www.spiceislandindonesia.com/sambal-oelek-uk",
 								"priceCurrency": "GBP",
 								"price": "7.49",
 								"availability": "https://schema.org/InStock",

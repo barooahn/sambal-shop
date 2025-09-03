@@ -187,17 +187,17 @@ export default function LalapaPage() {
 	const breadcrumbItems = [
 		{
 			name: "Home",
-			url: "https://spiceislandindonesia.com",
+			url: "https://www.spiceislandindonesia.com",
 			position: 1,
 		},
 		{
 			name: "Recipes",
-			url: "https://spiceislandindonesia.com/recipes",
+			url: "https://www.spiceislandindonesia.com/recipes",
 			position: 2,
 		},
 		{
 			name: "Lalapan",
-			url: "https://spiceislandindonesia.com/recipes/lalapan",
+			url: "https://www.spiceislandindonesia.com/recipes/lalapan",
 			position: 3,
 		},
 	];
