@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getInternalUrls } from "@/lib/url-utils";
 import Image from "next/image";
 import { Metadata } from "next";
 
@@ -26,6 +27,8 @@ export const metadata: Metadata = {
 };
 
 export default function HotSauceVsSambalPage() {
+	const urls = getInternalUrls();
+
 	return (
 		<div className="min-h-screen bg-gradient-to-b from-cream-50 to-cream-100">
 			{/* Hero Section */}
@@ -395,13 +398,13 @@ export default function HotSauceVsSambalPage() {
 					
 					<div className="flex flex-col sm:flex-row gap-4 justify-center">
 						<Link 
-							href="/sample-pack-try-first"
+							href={urls.samplePack}
 							className="bg-gold-600 hover:bg-gold-700 text-white font-bold py-4 px-8 rounded-lg transition-colors text-lg"
 						>
 							Try Sambal Sample Pack
 						</Link>
 						<Link 
-							href="/sambal-oelek-uk"
+							href={urls.sambalOelek}
 							className="bg-transparent border-2 border-white hover:bg-white hover:text-burgundy-900 text-white font-bold py-4 px-8 rounded-lg transition-colors text-lg"
 						>
 							Shop Traditional Sambal

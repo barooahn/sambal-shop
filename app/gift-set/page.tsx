@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { getInternalUrls } from "@/lib/url-utils";
 import { Button } from "@/components/ui/simple-button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
@@ -53,6 +54,8 @@ export const metadata = {
 };
 
 export default function GiftSetPage() {
+	const urls = getInternalUrls();
+
 	// FAQ data for AI search optimization
 	const faqData = [
 		{
@@ -321,7 +324,7 @@ export default function GiftSetPage() {
 
 							{/* CTA Buttons */}
 							<div className='flex flex-col sm:flex-row gap-4 justify-center lg:justify-start'>
-								<Link href='/shop'>
+								<Link href={urls.shop}>
 									<Button
 										variant='primary'
 										size='lg'
@@ -330,7 +333,7 @@ export default function GiftSetPage() {
 										Order Gift Set - £24.99
 									</Button>
 								</Link>
-								<Link href='/sample-pack-try-first'>
+								<Link href={urls.samplePack}>
 									<Button
 										variant='outline'
 										size='lg'
@@ -700,7 +703,7 @@ export default function GiftSetPage() {
 					</p>
 
 					<div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
-						<Link href='/shop'>
+						<Link href={urls.shop}>
 							<Button
 								variant='primary'
 								size='lg'
@@ -710,7 +713,7 @@ export default function GiftSetPage() {
 								Order Gift Set - £24.99
 							</Button>
 						</Link>
-						<Link href='/sample-pack-try-first'>
+						<Link href={urls.samplePack}>
 							<Button
 								variant='outline'
 								size='lg'

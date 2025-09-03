@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/simple-button";
 import { Badge } from "@/components/ui/badge";
+import { getInternalUrls } from "@/lib/url-utils";
 import dynamic from "next/dynamic";
 
 // Lazy load heavy client components for better performance
@@ -86,6 +87,8 @@ export const metadata: Metadata = {
 };
 
 export default function CommunityPage() {
+	const urls = getInternalUrls();
+
 	return (
 		<>
 			{/* Clean Subtle Background */}
@@ -162,7 +165,7 @@ export default function CommunityPage() {
 								className='bg-burgundy-600 hover:bg-burgundy-700 text-white px-8 py-3'
 							>
 								<a 
-									href='/community/share-story'
+									href={urls.communityShareStory}
 									aria-label="Share your Indonesian cooking story with the community"
 								>
 									<Share2 className='w-5 h-5 mr-2' aria-hidden="true" />
@@ -175,7 +178,7 @@ export default function CommunityPage() {
 								className='border-burgundy-600 text-burgundy-600 hover:bg-burgundy-600 hover:text-white px-8 py-3'
 							>
 								<a 
-									href='/community/quiz'
+									href={urls.communityQuiz}
 									aria-label="Take the Indonesian spice heat level quiz"
 								>
 									<Star className='w-5 h-5 mr-2' aria-hidden="true" />
@@ -333,7 +336,7 @@ export default function CommunityPage() {
 									className='bg-gradient-to-r from-white to-gold-50 text-burgundy-700 hover:from-gold-100 hover:to-gold-200 hover:text-burgundy-800 shadow-lg border border-gold-200'
 								>
 									<a 
-										href='/community/share-story'
+										href={urls.communityShareStory}
 										aria-label="Get started sharing your Indonesian cooking story today"
 									>
 										<Heart className='w-4 h-4 mr-2' aria-hidden="true" />

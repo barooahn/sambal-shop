@@ -26,6 +26,11 @@ import EntityMarkup from "@/components/seo/EntityMarkup";
 import Link from "next/link";
 import HeroSection from "@/components/home/HeroSection";
 import ProductShowcase from "@/components/home/ProductShowcase";
+
+import { getInternalUrls } from '@/lib/url-utils';
+
+// Get all internal URLs using the utility function
+const urls = getInternalUrls();
 import ShippingSection from "@/components/home/ShippingSection";
 import StorySection from "@/components/home/StorySection";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
@@ -520,6 +525,98 @@ export default function Home() {
 						/>
 					</div>
 
+					{/* Popular Recipes Section */}
+					<section className='py-16 bg-gradient-to-br from-cream-50 to-gold-50/30 relative'>
+						<div className='container mx-auto px-4'>
+							<div className='text-center mb-12'>
+								<h2 className='text-3xl md:text-4xl font-bold text-burgundy-900 mb-4'>
+									Popular Indonesian Recipes
+								</h2>
+								<p className='text-xl text-burgundy-700 max-w-3xl mx-auto mb-8'>
+									Discover authentic Indonesian dishes featuring our sambal. 
+									From traditional classics to modern fusion recipes.
+								</p>
+							</div>
+
+							<div className='grid md:grid-cols-3 gap-8 mb-12'>
+								{/* Sambal Fried Rice */}
+								<div className='bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow'>
+									<div className='h-48 bg-gradient-to-br from-burgundy-100 to-gold-100 flex items-center justify-center'>
+										<span className='text-4xl'>🍛</span>
+									</div>
+									<div className='p-6'>
+										<h3 className='text-xl font-bold text-burgundy-900 mb-3'>
+											Sambal Fried Rice
+										</h3>
+										<p className='text-gray-600 mb-6'>
+											Classic Indonesian fried rice with our signature sambal goreng. 
+											A perfect introduction to Indonesian flavors.
+										</p>
+										<Link
+											href={urls.sambalFriedRice}
+											className='inline-block bg-burgundy-600 text-white px-6 py-3 rounded-lg hover:bg-burgundy-700 transition-colors'
+										>
+											View Recipe
+										</Link>
+									</div>
+								</div>
+
+								{/* Sambal BBQ Marinade */}
+								<div className='bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow'>
+									<div className='h-48 bg-gradient-to-br from-red-100 to-amber-100 flex items-center justify-center'>
+										<span className='text-4xl'>🔥</span>
+									</div>
+									<div className='p-6'>
+										<h3 className='text-xl font-bold text-burgundy-900 mb-3'>
+											Sambal BBQ Marinade
+										</h3>
+										<p className='text-gray-600 mb-6'>
+											Transform your BBQ with this Indonesian-inspired marinade. 
+											Perfect for chicken, beef, or vegetables.
+										</p>
+										<Link
+											href={urls.sambalBbqMarinadeRecipe}
+											className='inline-block bg-burgundy-600 text-white px-6 py-3 rounded-lg hover:bg-burgundy-700 transition-colors'
+										>
+											View Recipe
+										</Link>
+									</div>
+								</div>
+
+								{/* Sambal Scrambled Eggs */}
+								<div className='bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow'>
+									<div className='h-48 bg-gradient-to-br from-gold-100 to-amber-100 flex items-center justify-center'>
+										<span className='text-4xl'>🍳</span>
+									</div>
+									<div className='p-6'>
+										<h3 className='text-xl font-bold text-burgundy-900 mb-3'>
+											Sambal Scrambled Eggs
+										</h3>
+										<p className='text-gray-600 mb-6'>
+											Start your day with a spicy kick. Traditional Indonesian breakfast 
+											that's quick and satisfying.
+										</p>
+										<Link
+											href={urls.sambalScrambledEggs}
+											className='inline-block bg-burgundy-600 text-white px-6 py-3 rounded-lg hover:bg-burgundy-700 transition-colors'
+										>
+											View Recipe
+										</Link>
+									</div>
+								</div>
+							</div>
+
+							<div className='text-center'>
+								<Link
+									href={urls.recipes}
+									className='inline-block bg-gradient-to-r from-burgundy-600 to-burgundy-700 text-white px-8 py-3 rounded-lg hover:from-burgundy-700 hover:to-burgundy-800 transition-all duration-200 font-semibold text-lg'
+								>
+									Explore All Recipes
+								</Link>
+							</div>
+						</div>
+					</section>
+
 					{/* Transition Ingredients between Newsletter and Shipping */}
 					<div className='relative '>
 						<FloatingIngredients
@@ -544,6 +641,158 @@ export default function Home() {
 							ingredients={storyIngredients}
 						/>
 					</div>
+
+					{/* Blog Highlights Section */}
+					<section className='py-16 bg-gradient-to-br from-burgundy-50 to-cream-50 relative'>
+						<div className='container mx-auto px-4'>
+							<div className='text-center mb-12'>
+								<h2 className='text-3xl md:text-4xl font-bold text-burgundy-900 mb-4'>
+									Indonesian Food Culture & Education
+								</h2>
+								<p className='text-xl text-burgundy-700 max-w-3xl mx-auto mb-8'>
+									Learn about authentic Indonesian cuisine, sambal traditions, and 
+									cultural insights from our food heritage blog.
+								</p>
+							</div>
+
+							<div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12'>
+								{/* Ultimate Guide to Indonesian Sambal */}
+								<div className='bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow'>
+									<div className='h-48 bg-gradient-to-br from-red-200 to-amber-200 flex items-center justify-center'>
+										<span className='text-4xl'>🌶️</span>
+									</div>
+									<div className='p-6'>
+										<h3 className='text-lg font-bold text-burgundy-900 mb-3'>
+											Ultimate Guide to Indonesian Sambal
+										</h3>
+										<p className='text-gray-600 mb-4 text-sm'>
+											Complete guide to sambal varieties, origins, and authentic preparation methods.
+										</p>
+										<Link
+											href={urls.ultimateGuideSambal}
+											className='inline-block text-burgundy-600 hover:text-burgundy-800 font-semibold text-sm'
+										>
+											Read Article →
+										</Link>
+									</div>
+								</div>
+
+								{/* Sambal vs Hot Sauce */}
+								<div className='bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow'>
+									<div className='h-48 bg-gradient-to-br from-burgundy-200 to-gold-200 flex items-center justify-center'>
+										<span className='text-4xl'>⚖️</span>
+									</div>
+									<div className='p-6'>
+										<h3 className='text-lg font-bold text-burgundy-900 mb-3'>
+											Sambal vs Western Hot Sauce
+										</h3>
+										<p className='text-gray-600 mb-4 text-sm'>
+											Understanding the key differences in ingredients, preparation, and flavor profiles.
+										</p>
+										<Link
+											href={urls.sambalVsHotSauce}
+											className='inline-block text-burgundy-600 hover:text-burgundy-800 font-semibold text-sm'
+										>
+											Read Article →
+										</Link>
+									</div>
+								</div>
+
+								{/* Indonesian Spice Islands History */}
+								<div className='bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow'>
+									<div className='h-48 bg-gradient-to-br from-gold-200 to-amber-200 flex items-center justify-center'>
+										<span className='text-4xl'>🏝️</span>
+									</div>
+									<div className='p-6'>
+										<h3 className='text-lg font-bold text-burgundy-900 mb-3'>
+											Spice Islands Heritage
+										</h3>
+										<p className='text-gray-600 mb-4 text-sm'>
+											Journey through the Maluku Islands and discover how volcanic soil creates unique flavors.
+										</p>
+										<Link
+											href={urls.spiceIslandsHistory}
+											className='inline-block text-burgundy-600 hover:text-burgundy-800 font-semibold text-sm'
+										>
+											Read Article →
+										</Link>
+									</div>
+								</div>
+
+								{/* Indonesian Cooking for British Kitchens */}
+								<div className='bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow'>
+									<div className='h-48 bg-gradient-to-br from-green-200 to-gold-200 flex items-center justify-center'>
+										<span className='text-4xl'>🍽️</span>
+									</div>
+									<div className='p-6'>
+										<h3 className='text-lg font-bold text-burgundy-900 mb-3'>
+											Indonesian Cooking for British Kitchens
+										</h3>
+										<p className='text-gray-600 mb-4 text-sm'>
+											Practical guide to adapting traditional Indonesian recipes for UK ingredients and equipment.
+										</p>
+										<Link
+											href={urls.indonesianCookingGuide}
+											className='inline-block text-burgundy-600 hover:text-burgundy-800 font-semibold text-sm'
+										>
+											Read Article →
+										</Link>
+									</div>
+								</div>
+
+								{/* Authentic vs Store Bought */}
+								<div className='bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow'>
+									<div className='h-48 bg-gradient-to-br from-purple-200 to-burgundy-200 flex items-center justify-center'>
+										<span className='text-4xl'>🔍</span>
+									</div>
+									<div className='p-6'>
+										<h3 className='text-lg font-bold text-burgundy-900 mb-3'>
+											Authentic vs Store-Bought Sambal
+										</h3>
+										<p className='text-gray-600 mb-4 text-sm'>
+											Learn to identify authentic sambal and why traditional methods make all the difference.
+										</p>
+										<Link
+											href={urls.authenticVsStoreBought}
+											className='inline-block text-burgundy-600 hover:text-burgundy-800 font-semibold text-sm'
+										>
+											Read Article →
+										</Link>
+									</div>
+								</div>
+
+								{/* Indonesian Food Culture Context */}
+								<div className='bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow'>
+									<div className='h-48 bg-gradient-to-br from-orange-200 to-red-200 flex items-center justify-center'>
+										<span className='text-4xl'>🇮🇩</span>
+									</div>
+									<div className='p-6'>
+										<h3 className='text-lg font-bold text-burgundy-900 mb-3'>
+											Indonesian Food Culture & Context
+										</h3>
+										<p className='text-gray-600 mb-4 text-sm'>
+											Understanding the cultural significance of sambal in Indonesian daily life and traditions.
+										</p>
+										<Link
+											href={urls.indonesianFoodCulture}
+											className='inline-block text-burgundy-600 hover:text-burgundy-800 font-semibold text-sm'
+										>
+											Read Article →
+										</Link>
+									</div>
+								</div>
+							</div>
+
+							<div className='text-center'>
+								<Link
+									href={urls.blog}
+									className='inline-block bg-gradient-to-r from-burgundy-600 to-burgundy-700 text-white px-8 py-3 rounded-lg hover:from-burgundy-700 hover:to-burgundy-800 transition-all duration-200 font-semibold text-lg'
+								>
+									Explore All Articles
+								</Link>
+							</div>
+						</div>
+					</section>
 
 					{/* Community Section */}
 					<section className='py-16 bg-gradient-to-br from-burgundy-50 to-gold-50 relative'>
@@ -577,7 +826,7 @@ export default function Home() {
 										rewards!
 									</p>
 									<Link
-										href='/community/share-story'
+										href={urls.communityShareStory}
 										className='inline-block bg-burgundy-600 text-white px-6 py-3 rounded-lg hover:bg-burgundy-700 transition-colors'
 									>
 										Share Now
@@ -600,7 +849,7 @@ export default function Home() {
 										flavors.
 									</p>
 									<Link
-										href='/community/quiz'
+										href={urls.communityQuiz}
 										className='inline-block bg-gold-600 text-white px-6 py-3 rounded-lg hover:bg-gold-700 transition-colors'
 									>
 										Take Quiz
@@ -623,7 +872,7 @@ export default function Home() {
 										community.
 									</p>
 									<Link
-										href='/community'
+										href={urls.community}
 										className='inline-block bg-burgundy-600 text-white px-6 py-3 rounded-lg hover:bg-burgundy-700 transition-colors'
 									>
 										Explore Community
@@ -643,7 +892,7 @@ export default function Home() {
 										content!
 									</p>
 									<Link
-										href='/community'
+										href={urls.community}
 										className='inline-block bg-white text-burgundy-700 px-6 py-2 rounded-lg hover:bg-gold-50 transition-colors font-semibold'
 									>
 										Get Started
@@ -703,7 +952,7 @@ export default function Home() {
 										],
 										actionLink: {
 											text: "Try Authentic Sambal Oelek",
-											href: "/sambal-oelek-uk",
+											href: urls.sambalOelek,
 										},
 										category:
 											"Flavor Enhancement",
@@ -720,7 +969,7 @@ export default function Home() {
 										],
 										actionLink: {
 											text: "Start with Sambal Bali",
-											href: "/sambal-bali-aromatic-spicy",
+											href: urls.sambalBali,
 										},
 										category: "Beginner-Friendly",
 									},
@@ -736,7 +985,7 @@ export default function Home() {
 										],
 										actionLink: {
 											text: "Order Authentic Sambal",
-											href: "/sample-pack-try-first",
+											href: urls.samplePack,
 										},
 										category: "Authenticity",
 									},
@@ -752,7 +1001,7 @@ export default function Home() {
 										],
 										actionLink: {
 											text: "Explore Recipe Ideas",
-											href: "/recipes",
+											href: urls.recipes,
 										},
 										category:
 											"Cooking Enhancement",
@@ -821,7 +1070,7 @@ export default function Home() {
 																		Try
 																		our{" "}
 																		<Link
-																			href='/sample-pack-try-first'
+																			href={urls.samplePack}
 																			className='text-burgundy-600 hover:text-burgundy-800 underline font-semibold'
 																		>
 																			sample

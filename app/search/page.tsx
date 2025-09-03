@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/simple-button";
 import { Card, CardContent } from "@/components/ui/card";
 import OptimizedImage from "@/components/optimization/OptimizedImage";
 import Link from "next/link";
+import { getInternalUrls } from "@/lib/url-utils";
 
 interface SearchResult {
 	id: string;
@@ -43,6 +44,7 @@ function SearchPageContent() {
 	const [selectedCategory, setSelectedCategory] = useState("all");
 	const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
 	const [total, setTotal] = useState(0);
+	const urls = getInternalUrls();
 
 	const categories = [
 		{ value: "all", label: "All", count: 0 },
@@ -305,17 +307,17 @@ function SearchPageContent() {
 									browse our categories
 								</p>
 								<div className='flex flex-wrap gap-2 justify-center'>
-									<Link href='/shop'>
+									<Link href={urls.shop}>
 										<Button variant='outline'>
 											Browse Products
 										</Button>
 									</Link>
-									<Link href='/recipes'>
+									<Link href={urls.recipes}>
 										<Button variant='outline'>
 											View Recipes
 										</Button>
 									</Link>
-									<Link href='/blog'>
+									<Link href={urls.blog}>
 										<Button variant='outline'>
 											Read Articles
 										</Button>

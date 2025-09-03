@@ -25,6 +25,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
       },
     ],
-    sitemap: 'https://www.spiceislandindonesia.com/sitemap.xml',
+    sitemap: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/sitemap.xml`,
   }
 }

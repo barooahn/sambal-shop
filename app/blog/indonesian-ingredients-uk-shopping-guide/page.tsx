@@ -3,6 +3,7 @@ const excerpt =
 	"Complete shopping guide for Indonesian ingredients in the UK. Find authentic sambal, spices, and pantry essentials at supermarkets, Asian shops, and online stores with money-saving tips.";
 
 import Link from "next/link";
+import { getInternalUrls } from "@/lib/url-utils";
 import Image from "next/image";
 import {
 	ArrowLeft,
@@ -32,6 +33,8 @@ export const metadata: Metadata = {
 };
 
 export default function IndonesianIngredientsUKPage() {
+	const urls = getInternalUrls();
+
 	const ukSupermarkets = [
 		{
 			name: "Tesco",
@@ -188,7 +191,7 @@ export default function IndonesianIngredientsUKPage() {
 				<div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>
 					<div className='mb-8'>
 						<Link
-							href='/blog/indonesian-cooking-guide-british-kitchens'
+							href={urls.indonesianCookingGuide}
 							className='inline-flex items-center gap-2 text-burgundy-600 hover:text-burgundy-800 font-medium mb-4'
 						>
 							<ArrowLeft className='w-4 h-4' />
@@ -504,7 +507,7 @@ export default function IndonesianIngredientsUKPage() {
 					{/* Navigation */}
 					<div className='flex flex-col sm:flex-row gap-4 pt-8 border-t border-gold-200'>
 						<Link
-							href='/blog/indonesian-spice-levels-british-palates'
+							href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/blog/indonesian-spice-levels-british-palates`}
 							className='flex-1 bg-white border border-gold-200 rounded-lg p-6 hover:shadow-md transition-shadow'
 						>
 							<div className='flex items-center justify-between'>
@@ -521,7 +524,7 @@ export default function IndonesianIngredientsUKPage() {
 						</Link>
 
 						<Link
-							href='/blog/indonesian-cooking-guide-british-kitchens'
+							href={urls.indonesianCookingGuide}
 							className='flex-1 bg-white border border-gold-200 rounded-lg p-6 hover:shadow-md transition-shadow'
 						>
 							<div className='flex items-center justify-between'>

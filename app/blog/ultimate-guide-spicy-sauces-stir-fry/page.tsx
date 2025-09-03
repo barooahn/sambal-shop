@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { getInternalUrls } from "@/lib/url-utils";
 import StructuredData from "@/components/seo/StructuredData";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import FAQSchema from "@/components/seo/FAQSchema";
@@ -65,6 +66,8 @@ const faqData = [
 ];
 
 export default function UltimateGuideSpicySaucesStirFry() {
+	const urls = getInternalUrls();
+
 	return (
 		<div className="min-h-screen bg-gradient-to-b from-cream-50 to-cream-100">
 			<BreadcrumbSchema items={breadcrumbItems} />
@@ -247,7 +250,7 @@ export default function UltimateGuideSpicySaucesStirFry() {
 							</div>
 							<div className="mt-4 text-center">
 								<Link 
-									href="/sambal-oelek-uk"
+									href={urls.sambalOelek}
 									className="inline-flex items-center gap-2 bg-gold-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gold-700 transition-colors font-body"
 								>
 									Get Professional-Grade Sambal Oelek £7.49
@@ -617,13 +620,13 @@ export default function UltimateGuideSpicySaucesStirFry() {
 								</div>
 								<div className="flex flex-col gap-3">
 									<Link 
-										href="/sample-pack-try-first"
+										href={urls.samplePack}
 										className="bg-gold-600 hover:bg-gold-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
 									>
 										Get Starter Pack - £14.99
 									</Link>
 									<Link 
-										href="/sambal-oelek-uk"
+										href={urls.sambalOelek}
 										className="bg-burgundy-600 hover:bg-burgundy-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
 									>
 										Just Sambal Oelek - £7.49
@@ -663,7 +666,7 @@ export default function UltimateGuideSpicySaucesStirFry() {
 						</h2>
 						<div className="grid md:grid-cols-2 gap-6">
 							<Link 
-								href="/blog/5-asian-hot-sauces-beat-sriracha"
+								href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/blog/5-asian-hot-sauces-beat-sriracha`}
 								className="bg-white p-6 rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow"
 							>
 								<h3 className="text-lg font-semibold text-burgundy-800 mb-2 font-brand">
@@ -674,7 +677,7 @@ export default function UltimateGuideSpicySaucesStirFry() {
 								</p>
 							</Link>
 							<Link 
-								href="/blog/sambal-vs-sriracha"
+								href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/blog/sambal-vs-sriracha`}
 								className="bg-white p-6 rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow"
 							>
 								<h3 className="text-lg font-semibold text-burgundy-800 mb-2 font-brand">

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getInternalUrls } from "@/lib/url-utils";
 import Image from "next/image";
 import { Metadata } from "next";
 
@@ -26,6 +27,8 @@ export const metadata: Metadata = {
 };
 
 export default function SrirachaAlternativePage() {
+	const urls = getInternalUrls();
+
 	return (
 		<div className="min-h-screen bg-gradient-to-b from-cream-50 to-cream-100">
 			{/* Hero Section */}
@@ -50,7 +53,7 @@ export default function SrirachaAlternativePage() {
 					
 					<div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
 						<Link 
-							href="/sample-pack-try-first"
+							href={urls.samplePack}
 							className="bg-burgundy-600 hover:bg-burgundy-700 text-white font-bold py-4 px-8 rounded-lg transition-colors text-lg"
 						>
 							Try Authentic Alternative
@@ -288,7 +291,7 @@ export default function SrirachaAlternativePage() {
 								<p>• Sweet & savory</p>
 								<p>• Great with grilled meats</p>
 							</div>
-							<Link href="/shop" className="block w-full bg-green-600 hover:bg-green-700 text-white text-center py-2 rounded transition-colors">
+							<Link href={urls.shop} className="block w-full bg-green-600 hover:bg-green-700 text-white text-center py-2 rounded transition-colors">
 								Try Sambal Kecap
 							</Link>
 						</div>
@@ -304,7 +307,7 @@ export default function SrirachaAlternativePage() {
 								<p>• Pure chili flavor</p>
 								<p>• Most versatile</p>
 							</div>
-							<Link href="/sambal-oelek-uk" className="block w-full bg-gold-600 hover:bg-gold-700 text-white text-center py-2 rounded transition-colors">
+							<Link href={urls.sambalOelek} className="block w-full bg-gold-600 hover:bg-gold-700 text-white text-center py-2 rounded transition-colors">
 								Try Sambal Oelek
 							</Link>
 						</div>
@@ -320,7 +323,7 @@ export default function SrirachaAlternativePage() {
 								<p>• Galangal & lemongrass</p>
 								<p>• Restaurant quality</p>
 							</div>
-							<Link href="/sambal-bali-aromatic-spicy" className="block w-full bg-burgundy-600 hover:bg-burgundy-700 text-white text-center py-2 rounded transition-colors">
+							<Link href={urls.sambalBali} className="block w-full bg-burgundy-600 hover:bg-burgundy-700 text-white text-center py-2 rounded transition-colors">
 								Try Sambal Bali
 							</Link>
 						</div>
@@ -345,13 +348,13 @@ export default function SrirachaAlternativePage() {
 					
 					<div className="flex flex-col sm:flex-row gap-4 justify-center">
 						<Link 
-							href="/sample-pack-try-first"
+							href={urls.samplePack}
 							className="bg-gold-600 hover:bg-gold-700 text-white font-bold py-4 px-8 rounded-lg transition-colors text-lg"
 						>
 							Try Sample Pack - Free Delivery
 						</Link>
 						<Link 
-							href="/shop"
+							href={urls.shop}
 							className="bg-transparent border-2 border-white hover:bg-white hover:text-burgundy-900 text-white font-bold py-4 px-8 rounded-lg transition-colors text-lg"
 						>
 							Shop All Varieties

@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/simple-button";
 import { ChefHat, Heart, Award, MapPin, Users, Clock } from "@/components/ui/icons";
 import Link from "next/link";
+import { getInternalUrls } from "@/lib/url-utils";
 
 export const metadata = {
 	title: "Meet Chef Yossie | Bandung-Born Indonesian Chef",
@@ -15,6 +16,8 @@ export const metadata = {
 };
 
 export default function ChefPage() {
+	const urls = getInternalUrls();
+
 	return (
 		<>
 			{/* Clean Subtle Background */}
@@ -72,7 +75,7 @@ export default function ChefPage() {
 								</div>
 							</div>
 
-							<Link href='/shop'>
+							<Link href={urls.shop}>
 								<Button
 									variant='primary'
 									size='lg'
@@ -313,7 +316,7 @@ export default function ChefPage() {
 						recipes
 					</p>
 					<div className='flex flex-col sm:flex-row gap-4 justify-center'>
-						<Link href='/shop'>
+						<Link href={urls.shop}>
 							<Button
 								variant='primary'
 								size='lg'
@@ -322,7 +325,7 @@ export default function ChefPage() {
 								Shop Chef Yossie&apos;s Sambal
 							</Button>
 						</Link>
-						<Link href='/recipes'>
+						<Link href={urls.recipes}>
 							<Button
 								variant='outline'
 								size='lg'

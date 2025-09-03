@@ -4,6 +4,7 @@ const excerpt =
 
 import Image from "next/image";
 import Link from "next/link";
+import { getInternalUrls } from "@/lib/url-utils";
 import {
 	Clock,
 	Users,
@@ -155,6 +156,8 @@ const fusionRecipes = [
 ];
 
 export default function SambalBritishClassicsPage() {
+	const urls = getInternalUrls();
+
 	return (
 		<>
 			{/* Structured Data */}
@@ -616,14 +619,14 @@ export default function SambalBritishClassicsPage() {
 						</p>
 						<div className='flex flex-col sm:flex-row gap-4 justify-center'>
 							<Link
-								href='/sample-pack-try-first'
+								href={urls.samplePack}
 								className='inline-flex items-center justify-center gap-2 bg-white text-burgundy-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors'
 							>
 								<Flame className='w-5 h-5' />
 								Try Authentic Sambal First
 							</Link>
 							<Link
-								href='/blog/indonesian-cooking-guide-british-kitchens'
+								href={urls.indonesianCookingGuide}
 								className='inline-flex items-center justify-center gap-2 border border-white text-white hover:bg-white hover:text-burgundy-600 px-6 py-3 rounded-lg font-semibold transition-colors'
 							>
 								<ArrowRight className='w-5 h-5' />
@@ -641,7 +644,7 @@ export default function SambalBritishClassicsPage() {
 
 					<div className='grid md:grid-cols-2 gap-6'>
 						<Link
-							href='/blog/ultimate-guide-indonesian-sambal'
+							href={urls.ultimateGuideSambal}
 							className='bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow'
 						>
 							<h3 className='text-lg font-semibold text-gray-900 mb-2'>
@@ -658,7 +661,7 @@ export default function SambalBritishClassicsPage() {
 						</Link>
 
 						<Link
-							href='/blog/indonesian-spice-levels-british-palates'
+							href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/blog/indonesian-spice-levels-british-palates`}
 							className='bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow'
 						>
 							<h3 className='text-lg font-semibold text-gray-900 mb-2'>

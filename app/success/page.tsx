@@ -12,9 +12,11 @@ import {
 import { Button } from "@/components/ui/simple-button";
 import { CheckCircle, Package, ArrowRight, Home } from "@/components/ui/icons";
 import Link from "next/link";
+import { getInternalUrls } from "@/lib/url-utils";
 import { trackPurchase } from "@/components/analytics/GoogleAnalytics";
 
 function SuccessPageContent() {
+	const urls = getInternalUrls();
 	const searchParams = useSearchParams();
 	const router = useRouter();
 	const sessionId = searchParams.get("session_id");
@@ -181,13 +183,13 @@ function SuccessPageContent() {
 						</div>
 
 						<div className='flex flex-col sm:flex-row gap-4 pt-6'>
-							<Link href='/dashboard' className='flex-1'>
+							<Link href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/dashboard`} className='flex-1'>
 								<Button className='w-full bg-green-600 hover:bg-green-700 text-white'>
 									<ArrowRight className='w-4 h-4 mr-2' />
 									View Order History
 								</Button>
 							</Link>
-							<Link href='/shop' className='flex-1'>
+							<Link href={urls.shop} className='flex-1'>
 								<Button
 									variant='outline'
 									className='w-full'
@@ -195,7 +197,7 @@ function SuccessPageContent() {
 									Continue Shopping
 								</Button>
 							</Link>
-							<Link href='/' className='flex-1'>
+							<Link href={urls.home} className='flex-1'>
 								<Button
 									variant='outline'
 									className='w-full'

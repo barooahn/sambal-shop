@@ -21,6 +21,7 @@ import {
 	ShoppingBag,
 } from "@/components/ui/icons";
 import Link from "next/link";
+import { getInternalUrls } from "@/lib/url-utils";
 
 interface Order {
 	order_id: number | null;
@@ -57,6 +58,8 @@ interface Subscription {
 }
 
 export default function DashboardPage() {
+	const urls = getInternalUrls();
+
 	const [user, setUser] = useState<any>(null);
 	const [orders, setOrders] = useState<Order[]>([]);
 	const [subscription, setSubscription] = useState<Subscription | null>(
@@ -277,7 +280,7 @@ export default function DashboardPage() {
 										<Package className='w-5 h-5 mr-2 text-red-600' />
 										Order History
 									</div>
-									<Link href='/shop'>
+									<Link href={urls.shop}>
 										<Button
 											variant='outline'
 											size='sm'
@@ -305,7 +308,7 @@ export default function DashboardPage() {
 											sambal to see your orders
 											here.
 										</p>
-										<Link href='/shop'>
+										<Link href={urls.shop}>
 											<Button className='bg-red-600 hover:bg-red-700'>
 												<ShoppingBag className='w-4 h-4 mr-2' />
 												Start Shopping

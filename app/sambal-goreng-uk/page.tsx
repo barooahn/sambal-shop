@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { getInternalUrls } from "@/lib/url-utils";
 import { Button } from "@/components/ui/simple-button";
 import { Badge } from "@/components/ui/badge";
 import FAQSchema from "@/components/seo/FAQSchema";
@@ -47,6 +48,8 @@ export const metadata = {
 };
 
 export default function SambalGorengUKPage() {
+	const urls = getInternalUrls();
+
 	// FAQ data for AI search optimization
 	const faqData = [
 		{
@@ -196,7 +199,7 @@ export default function SambalGorengUKPage() {
 			{/* Floating Try First Banner */}
 			<div className='fixed top-26 right-4 z-50 hidden lg:block'>
 				<div className='bg-neutral-900 text-white px-4 py-3 rounded-lg shadow-2xl border border-white/20 backdrop-blur-sm transform hover:scale-105 transition-all duration-300 max-w-xs'>
-					<Link href='/sample-pack-try-first' className='block'>
+					<Link href={urls.samplePack} className='block'>
 						<div className='flex items-center space-x-3'>
 							<div className='text-2xl'>🎯</div>
 							<div>
@@ -244,7 +247,7 @@ export default function SambalGorengUKPage() {
 							£8.99 • Free £20+ shipping
 						</p>
 					</div>
-					<Link href='/shop'>
+					<Link href={urls.shop}>
 						<Button
 							size='sm'
 							className='bg-orange-600 text-white hover:bg-orange-500'
@@ -361,7 +364,7 @@ export default function SambalGorengUKPage() {
 
 							{/* CTA Buttons */}
 							<div className='flex flex-col sm:flex-row gap-3 justify-center lg:justify-start'>
-								<Link href='/shop'>
+								<Link href={urls.shop}>
 									<Button
 										variant='primary'
 										size='lg'
@@ -371,7 +374,7 @@ export default function SambalGorengUKPage() {
 										£8.99
 									</Button>
 								</Link>
-								<Link href='/shop'>
+								<Link href={urls.shop}>
 									<Button
 										variant='outline'
 										size='lg'
@@ -1016,7 +1019,7 @@ export default function SambalGorengUKPage() {
 									</li>
 								</ul>
 								<div className='mt-6'>
-									<Link href='/recipes/sambal-fried-rice'>
+									<Link href={urls.sambalFriedRice}>
 										<Button
 											variant='primary'
 											size='sm'
@@ -1120,7 +1123,7 @@ export default function SambalGorengUKPage() {
 					</p>
 
 					<div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
-						<Link href='/shop'>
+						<Link href={urls.shop}>
 							<Button
 								variant='primary'
 								size='lg'
@@ -1129,7 +1132,7 @@ export default function SambalGorengUKPage() {
 								Order Sambal Goreng - £8.99
 							</Button>
 						</Link>
-						<Link href='/sample-pack-try-first'>
+						<Link href={urls.samplePack}>
 							<Button
 								variant='outline'
 								size='lg'

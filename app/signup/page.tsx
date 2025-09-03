@@ -1,5 +1,6 @@
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
+import { getInternalUrls } from '@/lib/url-utils';
 
 export const metadata = {
 	title: "Sign Up | Spice Island Indonesia",
@@ -31,6 +32,8 @@ const SignupForm = dynamic(() => import('@/components/auth/signup-form').then(mo
 });
 
 export default function SignupPage() {
+	const urls = getInternalUrls();
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-cream-50 to-cream-100">
       {/* SEO Content Section */}
@@ -100,17 +103,17 @@ export default function SignupPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl font-bold text-burgundy-900 mb-8 text-center">Popular with New Members</h2>
           <div className="grid md:grid-cols-3 gap-6">
-            <Link href="/blog/spicy-food-beginners-guide" className="block bg-cream-50 rounded-lg p-6 border border-gold-200 hover:border-gold-300 transition-colors">
+            <Link href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/blog/spicy-food-beginners-guide`} className="block bg-cream-50 rounded-lg p-6 border border-gold-200 hover:border-gold-300 transition-colors">
               <h3 className="font-semibold text-burgundy-900 mb-2">Beginner's Guide to Spicy Food</h3>
               <p className="text-sm text-neutral-600">Learn how to build heat tolerance safely</p>
             </Link>
             
-            <Link href="/blog/ultimate-guide-indonesian-sambal" className="block bg-cream-50 rounded-lg p-6 border border-gold-200 hover:border-gold-300 transition-colors">
+            <Link href={urls.ultimateGuideSambal} className="block bg-cream-50 rounded-lg p-6 border border-gold-200 hover:border-gold-300 transition-colors">
               <h3 className="font-semibold text-burgundy-900 mb-2">Ultimate Sambal Guide</h3>
               <p className="text-sm text-neutral-600">Everything about Indonesian chili pastes</p>
             </Link>
             
-            <a href="/recipes/sambal-fried-rice" className="block bg-cream-50 rounded-lg p-6 border border-gold-200 hover:border-gold-300 transition-colors">
+            <a href={urls.sambalFriedRice} className="block bg-cream-50 rounded-lg p-6 border border-gold-200 hover:border-gold-300 transition-colors">
               <h3 className="font-semibold text-burgundy-900 mb-2">Sambal Fried Rice Recipe</h3>
               <p className="text-sm text-neutral-600">Chef Yossie's signature dish tutorial</p>
             </a>

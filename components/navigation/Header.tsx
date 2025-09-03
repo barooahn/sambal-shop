@@ -9,6 +9,7 @@ import { Menu, X, ShoppingCart, User, LogOut, ChevronDown } from "@/components/u
 import { useAuth } from "@/hooks/use-auth";
 import OptimizedImage from "@/components/optimization/OptimizedImage";
 import SearchButton from "@/components/search/SearchButton";
+import { getInternalUrls } from "@/lib/url-utils";
 
 export default function Header() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,61 +21,62 @@ export default function Header() {
 	);
 	const router = useRouter();
 	const SALES_ENABLED = process.env.NEXT_PUBLIC_SALES_ENABLED === "true";
+	const urls = getInternalUrls();
 
 	const navigation = [
 		{
 			name: "Products",
-			href: "/shop",
+			href: urls.shop,
 			hasDropdown: true,
 			dropdown: [
 				{
 					name: "Sambal Goreng",
-					href: "/sambal-goreng-uk",
+					href: urls.sambalGoreng,
 					description:
 						"Sweet & spicy with traditional fried method",
 				},
 				{
 					name: "Sambal Oelek",
-					href: "/sambal-oelek-uk",
+					href: urls.sambalOelek,
 					description: "Pure chili paste - Coming Soon",
 				},
 				{
 					name: "Sambal Bali Aromatic",
-					href: "/sambal-bali-aromatic-spicy",
+					href: urls.sambalBali,
 					description: "Aromatic spices - Coming Soon",
 				},
 				{
 					name: "Sambal Bali Sweet & Spicy",
-					href: "/sambal-bali-sweet-spicy",
+					href: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/sambal-bali-sweet-spicy`,
 					description: "Traditional sweet heat",
 				},
 				{
 					name: "Sample Pack",
-					href: "/sample-pack-try-first",
+					href: urls.samplePack,
 					description: "Try before you buy",
 				},
 				{
 					name: "Gift Set",
-					href: "/gift-set",
+					href: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/gift-set`,
 					description: "Perfect for food lovers",
 				},
 				{
 					name: "Indonesian Gift Set",
-					href: "/gift-set-indonesian",
+					href: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/gift-set-indonesian`,
 					description: "Complete Indonesian experience",
 				},
 				{
 					name: "View All Products",
-					href: "/products",
+					href: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/products`,
 					description: "See our complete range",
 				},
 			],
 		},
-		{ name: "Recipes", href: "/recipes" },
-		{ name: "Community", href: "/community" },
-		{ name: "Blog", href: "/blog" },
-		{ name: "About", href: "/about" },
-		{ name: "Wholesale", href: "/wholesale" },
+		{ name: "Recipes", href: urls.recipes },
+		{ name: "Community", href: urls.community },
+		{ name: "Blog", href: urls.blog },
+		{ name: "About", href: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/about` },
+		{ name: "Wholesale", href: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/wholesale` },
 	];
 
 	// Auth is now handled by useAuth hook
@@ -147,7 +149,7 @@ export default function Header() {
 				<div className='flex justify-between items-center py-1'>
 					{/* Enhanced Logo with Indonesian Cultural Elements */}
 					<Link
-						href='/'
+						href={urls.home}
 						aria-label='Go to homepage'
 						className='flex items-center space-x-3 group min-h-[44px] min-w-[44px]'
 					>
@@ -434,7 +436,7 @@ export default function Header() {
 												{/* Call to Action */}
 												<div className='border-t border-gold-200 pt-4 mt-4'>
 													<Link
-														href='/products'
+														href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/products`}
 														className='block w-full'
 														onClick={() =>
 															setIsProductsOpen(
@@ -479,7 +481,7 @@ export default function Header() {
 						<SearchButton />
 						{user ? (
 							<div className='flex items-center space-x-4'>
-								<Link href='/dashboard'>
+								<Link href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/dashboard`}>
 									<Button
 										variant='outline'
 										size='sm'
@@ -505,7 +507,7 @@ export default function Header() {
 							</div>
 						) : (
 							<div className='flex items-center space-x-3'>
-								<Link href='/login'>
+								<Link href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/login`}>
 									<Button
 										variant='outline'
 										size='sm'
@@ -514,7 +516,7 @@ export default function Header() {
 										Sign In
 									</Button>
 								</Link>
-								<Link href='/sambal-goreng-uk'>
+								<Link href={urls.sambalGoreng}>
 									<Button
 										variant='primary'
 										size='default'
@@ -572,7 +574,7 @@ export default function Header() {
 						<div className='px-2 pt-2 pb-3 space-y-1 bg-white border-t border-gold-200'>
 							{/* Search Link */}
 							<Link
-								href='/search'
+								href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/search`}
 								className='block px-3 py-2 text-burgundy-800 hover:text-burgundy-600 hover:bg-burgundy-50 rounded-md font-medium font-body transition-colors duration-200'
 								onClick={() => setIsMenuOpen(false)}
 							>
@@ -637,7 +639,7 @@ export default function Header() {
 							<div className='pt-4 pb-2 space-y-2'>
 								{user ? (
 									<>
-										<Link href='/dashboard'>
+										<Link href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/dashboard`}>
 											<Button
 												variant='outline'
 												className='w-full flex items-center justify-center space-x-2'
@@ -669,7 +671,7 @@ export default function Header() {
 									</>
 								) : (
 									<>
-										<Link href='/login'>
+										<Link href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/login`}>
 											<Button
 												variant='outline'
 												className='w-full'
@@ -682,7 +684,7 @@ export default function Header() {
 												Sign In
 											</Button>
 										</Link>
-										<Link href='/sambal-goreng-uk'>
+										<Link href={urls.sambalGoreng}>
 											<Button
 												variant='primary'
 												size='lg'

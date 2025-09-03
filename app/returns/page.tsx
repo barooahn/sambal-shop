@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getInternalUrls } from "@/lib/url-utils";
 import { Shield, Package, Mail, RefreshCw } from "@/components/ui/icons";
 
 export const metadata = {
@@ -11,6 +12,8 @@ export const metadata = {
 };
 
 export default function ReturnsPage() {
+	const urls = getInternalUrls();
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-cream-50 to-cream-100">
       {/* Hero */}
@@ -76,7 +79,7 @@ export default function ReturnsPage() {
           </div>
 
           <div className="rounded-sm bg-cream-50 p-4 border border-gold-200 text-neutral-700">
-            Free UK shipping over £20 with Royal Mail 48 Tracked (2–3 business days). See our <Link href="/shipping" className="underline">Shipping Information</Link>.
+            Free UK shipping over £20 with Royal Mail 48 Tracked (2–3 business days). See our <Link href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/shipping`} className="underline">Shipping Information</Link>.
           </div>
         </div>
       </section>

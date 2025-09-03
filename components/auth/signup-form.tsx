@@ -9,6 +9,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { supabase } from '@/lib/supabase';
 import { Loader2 } from 'lucide-react';
+import { getInternalUrls } from "@/lib/url-utils";
 
 export function SignupForm() {
   const [email, setEmail] = useState('');
@@ -18,6 +19,7 @@ export function SignupForm() {
   const [error, setError] = useState('');
   const [success, setSuccess] = useState(false);
   const router = useRouter();
+  const urls = getInternalUrls();
 
   const handleSignup = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -41,7 +43,7 @@ export function SignupForm() {
         email,
         password,
         options: {
-          emailRedirectTo: `${window.location.origin}/dashboard`,
+          emailRedirectTo: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/dashboard`,
         },
       });
 
@@ -50,7 +52,7 @@ export function SignupForm() {
       } else {
         setSuccess(true);
         // Since email confirmation is disabled, redirect to dashboard
-        router.push('/dashboard');
+        router.push(`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/dashboard`);
       }
     } catch (err) {
       setError('An unexpected error occurred');
@@ -72,7 +74,7 @@ export function SignupForm() {
               Your account has been created successfully. You can now start shopping for authentic Indonesian sambal.
             </p>
             <Button 
-              onClick={() => router.push('/dashboard')}
+              onClick={() => router.push(`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/dashboard`)}
               className="bg-red-600 hover:bg-red-700"
             >
               Go to Dashboard
@@ -164,7 +166,7 @@ export function SignupForm() {
           <div className="mt-6 text-center">
             <p className="text-sm text-gray-600">
               Already have an account?{' '}
-              <Link href="/login" className="text-red-600 hover:text-red-700 font-medium">
+              <Link href={urls.login} className="text-red-600 hover:text-red-700 font-medium">
                 Sign in
               </Link>
             </p>

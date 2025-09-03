@@ -25,6 +25,7 @@ import {
 	Timer,
 } from "@/components/ui/icons";
 import TrustIndicators from "@/components/ui/TrustIndicators";
+import { getInternalUrls } from "@/lib/url-utils";
 
 export const metadata = {
 	title: "Authentic Sambal Oelek UK | Premium Indonesian Chili Paste",
@@ -52,6 +53,8 @@ export const metadata = {
 };
 
 export default function SambalOelekUKPage() {
+	const urls = getInternalUrls();
+	
 	// FAQ data for AI search optimization
 	const faqData = [
 		{
@@ -332,7 +335,7 @@ export default function SambalOelekUKPage() {
 			{/* Floating Try First Banner */}
 			<div className='fixed top-20 right-4 z-50 hidden lg:block'>
 				<div className='bg-gradient-to-r from-amber-500 via-orange-600 to-red-600 text-white px-4 py-3 rounded-lg shadow-2xl border border-white/20 backdrop-blur-sm transform hover:scale-105 transition-all duration-300 max-w-xs'>
-					<Link href='/sample-pack-try-first' className='block'>
+					<Link href={urls.samplePack} className='block'>
 						<div className='flex items-center space-x-3'>
 							<div className='text-2xl'>🎯</div>
 							<div>
@@ -373,7 +376,7 @@ export default function SambalOelekUKPage() {
 							£7.49 • Free £20+ shipping
 						</p>
 					</div>
-					<Link href='/shop'>
+					<Link href={urls.shop}>
 						<Button
 							size='sm'
 							className='bg-gold-600 text-burgundy-900 hover:bg-gold-500'
@@ -487,7 +490,7 @@ export default function SambalOelekUKPage() {
 
 							{/* CTA Buttons */}
 							<div className='flex flex-col sm:flex-row gap-3 justify-center lg:justify-start'>
-								<Link href='/shop'>
+								<Link href={urls.shop}>
 									<Button
 										variant='primary'
 										size='lg'
@@ -496,7 +499,7 @@ export default function SambalOelekUKPage() {
 										Order Sambal Oelek Now - £7.49
 									</Button>
 								</Link>
-								<Link href='/shop'>
+								<Link href={urls.shop}>
 									<Button
 										variant='outline'
 										size='lg'
@@ -1034,7 +1037,7 @@ export default function SambalOelekUKPage() {
 									</li>
 								</ul>
 								<div className='mt-6'>
-									<Link href='/recipes/sambal-fried-rice'>
+									<Link href={urls.sambalFriedRice}>
 										<Button
 											variant='primary'
 											size='sm'
@@ -1145,7 +1148,7 @@ export default function SambalOelekUKPage() {
 								</div>
 							</div>
 
-							<Link href='/chef'>
+							<Link href={urls.chef}>
 								<Button
 									variant='primary'
 									size='lg'
@@ -1175,7 +1178,7 @@ export default function SambalOelekUKPage() {
 					</p>
 
 					<div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
-						<Link href='/shop'>
+						<Link href={urls.shop}>
 							<Button
 								variant='primary'
 								size='lg'
@@ -1184,7 +1187,7 @@ export default function SambalOelekUKPage() {
 								Order Sambal Oelek - £7.49
 							</Button>
 						</Link>
-						<Link href='/shop'>
+						<Link href={urls.shop}>
 							<Button
 								variant='outline'
 								size='lg'
@@ -1516,14 +1519,14 @@ export default function SambalOelekUKPage() {
 									teaspoon in recipes and adjust to
 									taste. It&apos;s perfect for{" "}
 									<Link
-										href='/recipes/sambal-fried-rice'
+										href={urls.sambalFriedRice}
 										className='text-burgundy-600 hover:text-burgundy-800 underline'
 									>
 										fried rice
 									</Link>
 									,
 									<Link
-										href='/recipes/sambal-scrambled-eggs'
+										href={urls.sambalScrambledEggs}
 										className='text-burgundy-600 hover:text-burgundy-800 underline'
 									>
 										{" "}
@@ -1595,7 +1598,7 @@ export default function SambalOelekUKPage() {
 									We offer free UK delivery on orders
 									over £20, and you can
 									<Link
-										href='/sample-pack-try-first'
+										href={urls.samplePack}
 										className='text-burgundy-600 hover:text-burgundy-800 underline'
 									>
 										{" "}

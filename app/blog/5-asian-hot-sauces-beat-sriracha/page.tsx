@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { getInternalUrls } from "@/lib/url-utils";
 import StructuredData from "@/components/seo/StructuredData";
 import BreadcrumbSchema from "@/components/seo/BreadcrumbSchema";
 import FAQSchema from "@/components/seo/FAQSchema";
@@ -65,6 +66,8 @@ const faqData = [
 ];
 
 export default function FiveAsianHotSaucesBeatSriracha() {
+	const urls = getInternalUrls();
+
 	return (
 		<div className="min-h-screen bg-gradient-to-b from-cream-50 to-cream-100">
 			<BreadcrumbSchema items={breadcrumbItems} />
@@ -173,7 +176,7 @@ export default function FiveAsianHotSaucesBeatSriracha() {
 
 							<div className="text-center">
 								<Link 
-									href="/sambal-oelek-uk"
+									href={urls.sambalOelek}
 									className="inline-flex items-center gap-2 bg-burgundy-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-burgundy-700 transition-colors font-body"
 								>
 									Try Authentic Sambal Oelek - £7.49
@@ -232,7 +235,7 @@ export default function FiveAsianHotSaucesBeatSriracha() {
 
 							<div className="text-center">
 								<Link 
-									href="/sambal-bali-aromatic-spicy"
+									href={urls.sambalBali}
 									className="inline-flex items-center gap-2 bg-gold-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gold-700 transition-colors font-body"
 								>
 									Try Sambal Bali - £7.49
@@ -410,13 +413,13 @@ export default function FiveAsianHotSaucesBeatSriracha() {
 						</p>
 						<div className="grid md:grid-cols-2 gap-4">
 							<Link 
-								href="/sambal-oelek-uk"
+								href={urls.sambalOelek}
 								className="bg-white text-burgundy-600 px-6 py-3 rounded-lg font-semibold text-center hover:bg-cream-50 transition-colors font-body"
 							>
 								Try Pure Heat - Sambal Oelek £7.49
 							</Link>
 							<Link 
-								href="/sambal-bali-aromatic-spicy"
+								href={urls.sambalBali}
 								className="bg-gold-500 text-white px-6 py-3 rounded-lg font-semibold text-center hover:bg-gold-600 transition-colors font-body"
 							>
 								Try Complex Heat - Sambal Bali £7.49
@@ -454,7 +457,7 @@ export default function FiveAsianHotSaucesBeatSriracha() {
 						</h2>
 						<div className="grid md:grid-cols-2 gap-6">
 							<Link 
-								href="/sambal-vs-sriracha"
+								href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/sambal-vs-sriracha`}
 								className="bg-white p-6 rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow"
 							>
 								<h3 className="text-lg font-semibold text-burgundy-800 mb-2 font-brand">
@@ -465,7 +468,7 @@ export default function FiveAsianHotSaucesBeatSriracha() {
 								</p>
 							</Link>
 							<Link 
-								href="/best-asian-hot-sauce"
+								href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/best-asian-hot-sauce`}
 								className="bg-white p-6 rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow"
 							>
 								<h3 className="text-lg font-semibold text-burgundy-800 mb-2 font-brand">

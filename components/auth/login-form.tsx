@@ -9,6 +9,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { supabase } from '@/lib/supabase';
 import { Loader2 } from 'lucide-react';
+import { getInternalUrls } from "@/lib/url-utils";
 
 export function LoginForm() {
   const [email, setEmail] = useState('');
@@ -16,6 +17,7 @@ export function LoginForm() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const router = useRouter();
+  const urls = getInternalUrls();
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -31,7 +33,7 @@ export function LoginForm() {
       if (error) {
         setError(error.message);
       } else {
-        router.push('/dashboard');
+        router.push(`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/dashboard`);
       }
     } catch (err) {
       setError('An unexpected error occurred');
@@ -104,7 +106,7 @@ export function LoginForm() {
           <div className="mt-6 text-center">
             <p className="text-sm text-gray-600">
               Don&apos;t have an account?{' '}
-              <Link href="/signup" className="text-red-600 hover:text-red-700 font-medium">
+              <Link href={urls.signup} className="text-red-600 hover:text-red-700 font-medium">
                 Sign up
               </Link>
             </p>

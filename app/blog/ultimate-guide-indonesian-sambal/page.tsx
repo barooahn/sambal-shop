@@ -4,6 +4,7 @@ const excerpt =
 
 import Image from "next/image";
 import Link from "next/link";
+import { getInternalUrls } from "@/lib/url-utils";
 import ArticleSchema from "@/components/seo/ArticleSchema";
 import FAQSchema from "@/components/seo/FAQSchema";
 
@@ -68,6 +69,8 @@ const faqData = [
 ];
 
 export default function UltimateSambalGuidePage() {
+	const urls = getInternalUrls();
+
 	return (
 		<>
 			{/* Structured Data */}
@@ -1027,7 +1030,7 @@ export default function UltimateSambalGuidePage() {
 
 					<div className='grid md:grid-cols-3 gap-6'>
 						<Link
-							href='/blog/spice-islands-to-your-kitchen'
+							href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/blog/spice-islands-to-your-kitchen`}
 							className='bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow'
 						>
 							<h3 className='text-lg font-semibold text-gray-900 mb-2'>
@@ -1044,7 +1047,7 @@ export default function UltimateSambalGuidePage() {
 						</Link>
 
 						<Link
-							href='/blog/sambal-vs-hot-sauce'
+							href={urls.sambalVsHotSauce}
 							className='bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow'
 						>
 							<h3 className='text-lg font-semibold text-gray-900 mb-2'>
@@ -1061,7 +1064,7 @@ export default function UltimateSambalGuidePage() {
 						</Link>
 
 						<Link
-							href='/blog/traditional-sambal-making'
+							href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/blog/traditional-sambal-making`}
 							className='bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow'
 						>
 							<h3 className='text-lg font-semibold text-gray-900 mb-2'>
@@ -1081,7 +1084,7 @@ export default function UltimateSambalGuidePage() {
 				{/* CTA */}
 				<section className='text-center'>
 					<Link
-						href='/shop'
+						href={urls.shop}
 						className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-burgundy-900 to-burgundy-800 text-gold-200 font-bold rounded-full hover:shadow-lg transition-all duration-300 border border-gold-600/30'
 					>
 						Order Authentic Sambal

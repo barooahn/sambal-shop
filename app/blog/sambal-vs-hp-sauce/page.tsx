@@ -4,6 +4,7 @@ const excerpt =
 
 import Image from "next/image";
 import Link from "next/link";
+import { getInternalUrls } from "@/lib/url-utils";
 import {
 	Clock,
 	Users,
@@ -68,6 +69,8 @@ const faqData = [
 ];
 
 export default function SambalVsHPSaucePage() {
+	const urls = getInternalUrls();
+
 	return (
 		<>
 			{/* Structured Data */}
@@ -713,7 +716,7 @@ export default function SambalVsHPSaucePage() {
 
 					<div className='mt-8 text-center'>
 						<Link
-							href='/recipes'
+							href={urls.recipes}
 							className='inline-flex items-center gap-2 bg-burgundy-600 hover:bg-burgundy-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors'
 						>
 							<ChefHat className='w-5 h-5' />
@@ -813,14 +816,14 @@ export default function SambalVsHPSaucePage() {
 						</p>
 						<div className='flex flex-col sm:flex-row gap-4 justify-center'>
 							<Link
-								href='/sample-pack-try-first'
+								href={urls.samplePack}
 								className='inline-flex items-center justify-center gap-2 bg-burgundy-600 hover:bg-burgundy-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors'
 							>
 								<Flame className='w-5 h-5' />
 								Try Sample Pack First
 							</Link>
 							<Link
-								href='/sambal-oelek-uk'
+								href={urls.sambalOelek}
 								className='inline-flex items-center justify-center gap-2 border border-burgundy-600 text-burgundy-600 hover:bg-burgundy-50 px-6 py-3 rounded-lg font-semibold transition-colors'
 							>
 								<ChefHat className='w-5 h-5' />
@@ -861,7 +864,7 @@ export default function SambalVsHPSaucePage() {
 					<ul className='grid sm:grid-cols-2 gap-4 max-w-3xl mx-auto'>
 						<li>
 							<Link
-								href='/blog/spice-islands-to-your-kitchen'
+								href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/blog/spice-islands-to-your-kitchen`}
 								className='text-burgundy-600 hover:text-burgundy-800 underline'
 							>
 								Our Journey from the Spice Islands to
@@ -870,7 +873,7 @@ export default function SambalVsHPSaucePage() {
 						</li>
 						<li>
 							<Link
-								href='/blog/sambal-vs-hot-sauce'
+								href={urls.sambalVsHotSauce}
 								className='text-burgundy-600 hover:text-burgundy-800 underline'
 							>
 								Sambal vs Hot Sauce: Understanding the

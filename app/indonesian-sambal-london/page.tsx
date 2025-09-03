@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { getInternalUrls } from "@/lib/url-utils";
 import { Button } from "@/components/ui/simple-button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
@@ -44,6 +45,8 @@ export const metadata = {
 };
 
 export default function IndonesianSambalLondonPage() {
+	const urls = getInternalUrls();
+
 	return (
 		<div className='min-h-screen bg-gradient-to-br from-cream-50 to-cream-100'>
 			{/* Hero Section */}
@@ -96,7 +99,7 @@ export default function IndonesianSambalLondonPage() {
 							</div>
 
 							<div className='flex flex-col sm:flex-row gap-4 justify-center lg:justify-start'>
-								<Link href='/shop'>
+								<Link href={urls.shop}>
 									<Button
 										variant='primary'
 										size='lg'
@@ -105,7 +108,7 @@ export default function IndonesianSambalLondonPage() {
 										Order London Delivery - £7.49
 									</Button>
 								</Link>
-								<Link href='/sample-pack-try-first'>
+								<Link href={urls.samplePack}>
 									<Button
 										variant='outline'
 										size='lg'
@@ -549,7 +552,7 @@ export default function IndonesianSambalLondonPage() {
 					</div>
 
 					<div className='flex flex-col sm:flex-row gap-4 justify-center'>
-						<Link href='/shop'>
+						<Link href={urls.shop}>
 							<Button
 								variant='primary'
 								size='lg'
@@ -558,7 +561,7 @@ export default function IndonesianSambalLondonPage() {
 								Order London Delivery - £7.49
 							</Button>
 						</Link>
-						<Link href='/sample-pack-try-first'>
+						<Link href={urls.samplePack}>
 							<Button
 								variant='outline'
 								size='lg'

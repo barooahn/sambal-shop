@@ -4,6 +4,7 @@ const excerpt =
 
 import Image from "next/image";
 import Link from "next/link";
+import { getInternalUrls } from "@/lib/url-utils";
 import {
 	Clock,
 	Users,
@@ -73,6 +74,8 @@ const faqData = [
 ];
 
 export default function TraditionalSambalMakingPage() {
+	const urls = getInternalUrls();
+
 	return (
 		<>
 			{/* Structured Data */}
@@ -622,14 +625,14 @@ export default function TraditionalSambalMakingPage() {
 						</p>
 						<div className='flex flex-col sm:flex-row gap-4 justify-center'>
 							<Link
-								href='/sample-pack-try-first'
+								href={urls.samplePack}
 								className='inline-flex items-center justify-center gap-2 bg-burgundy-600 hover:bg-burgundy-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors'
 							>
 								<Flame className='w-5 h-5' />
 								Try Authentic Sambal First
 							</Link>
 							<Link
-								href='/blog/ultimate-guide-indonesian-sambal'
+								href={urls.ultimateGuideSambal}
 								className='inline-flex items-center justify-center gap-2 border border-burgundy-600 text-burgundy-600 hover:bg-burgundy-50 px-6 py-3 rounded-lg font-semibold transition-colors'
 							>
 								<Star className='w-5 h-5' />
@@ -646,7 +649,7 @@ export default function TraditionalSambalMakingPage() {
 					</h2>
 					<div className='grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto'>
 						<Link
-							href='/blog/spice-islands-history'
+							href={urls.spiceIslandsHistory}
 							className='bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow'
 						>
 							<h3 className='text-lg font-semibold text-gray-900 mb-2'>
@@ -660,7 +663,7 @@ export default function TraditionalSambalMakingPage() {
 							</div>
 						</Link>
 						<Link
-							href='/blog/indonesian-cooking-guide-british-kitchens'
+							href={urls.indonesianCookingGuide}
 							className='bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow'
 						>
 							<h3 className='text-lg font-semibold text-gray-900 mb-2'>

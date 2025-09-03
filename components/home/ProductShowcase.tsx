@@ -3,8 +3,11 @@ import Link from "next/link";
 import { Button } from "@/components/ui/simple-button";
 import { ChefHat, Award, Leaf, Truck, CheckCircle, Flame, Gift, Zap } from "@/components/ui/icons";
 import TrustIndicators, { SecurityBadges } from "@/components/ui/TrustIndicators";
+import { getInternalUrls } from "@/lib/url-utils";
 
 export default function ProductShowcase() {
+	const urls = getInternalUrls();
+	
 	return (
 		<section className='relative overflow-hidden'>
 			<div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -75,7 +78,7 @@ export default function ProductShowcase() {
 								£7.49
 							</div>
 							<Link
-								href='/sambal-goreng-uk'
+								href={urls.sambalGoreng}
 								className='text-sm text-burgundy-700 hover:text-burgundy-900 font-medium underline decoration-gold-600 hover:decoration-burgundy-900 transition-colors'
 							>
 								Learn about Sambal Goreng →
@@ -115,7 +118,7 @@ export default function ProductShowcase() {
 								Pure, fiery <span className='text-red-700 font-medium'>cabai rawit</span> (bird's eye chili) paste - the sacred foundation
 								of Indonesian cooking. Handcrafted using traditional stone <em className='text-stone-700 font-medium'>cobek</em> (mortar), perfect for{" "}
 								<Link
-									href='/sambal-for-stir-fry'
+									href={urls.sambalStirFry}
 									className='text-burgundy-700 hover:text-burgundy-900 font-semibold underline decoration-gold-600 hover:decoration-burgundy-900 transition-colors'
 								>
 									authentic stir-fries
@@ -139,7 +142,7 @@ export default function ProductShowcase() {
 								£7.49
 							</div>
 							<Link
-								href='/sambal-oelek-uk'
+								href={urls.sambalOelek}
 								className='text-sm text-burgundy-700 hover:text-burgundy-900 font-medium underline decoration-gold-600 hover:decoration-burgundy-900 transition-colors'
 							>
 								Learn about authentic sambal oelek →
@@ -176,7 +179,7 @@ export default function ProductShowcase() {
 								Sweet and aromatic with <span className='text-amber-700 font-medium'>lengkuas</span> (galangal), <span className='text-green-700 font-medium'>serai</span> (lemongrass) and sacred
 								<span className='text-orange-700 font-medium'> daun jeruk</span> (kaffir lime leaves). A perfect balance from Bali's spice gardens that complements{" "}
 								<Link
-									href='/sambal-bbq-marinade'
+									href={urls.sambalBbqMarinade}
 									className='text-burgundy-700 hover:text-burgundy-900 font-semibold underline decoration-gold-600 hover:decoration-burgundy-900 transition-colors'
 								>
 									grilled meats
@@ -354,7 +357,7 @@ export default function ProductShowcase() {
 								</div>
 								
 								<div className='flex flex-col sm:flex-row gap-4 justify-center items-center max-w-lg mx-auto'>
-									<Link href='/sample-pack-try-first' className='w-full sm:w-auto'>
+									<Link href={urls.samplePack} className='w-full sm:w-auto'>
 										<Button 
 											variant='outline'
 											size='lg' 
@@ -363,7 +366,7 @@ export default function ProductShowcase() {
 											🎯 Order Sample Pack - £4.99
 										</Button>
 									</Link>
-									<Link href='/products' className='text-burgundy-700 hover:text-burgundy-900 transition-colors text-sm underline decoration-gold-600 hover:decoration-burgundy-900 font-medium'>
+									<Link href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/products`} className='text-burgundy-700 hover:text-burgundy-900 transition-colors text-sm underline decoration-gold-600 hover:decoration-burgundy-900 font-medium'>
 										Compare all products →
 									</Link>
 								</div>

@@ -11,6 +11,7 @@ import {
 	Bell,
 } from "@/components/ui/icons";
 import Link from "next/link";
+import { getInternalUrls } from "@/lib/url-utils";
 import { Button } from "@/components/ui/simple-button";
 import { Badge } from "@/components/ui/badge";
 import NewsletterSection from "@/components/home/NewsletterSection";
@@ -44,6 +45,8 @@ export const metadata = {
 };
 
 export default function ShopPage() {
+	const urls = getInternalUrls();
+
 	const SALES_ENABLED = process.env.NEXT_PUBLIC_SALES_ENABLED === "true";
 
 	const samplePackSchema = {
@@ -440,7 +443,7 @@ export default function ShopPage() {
 												{product.id ===
 													"sample-pack" &&
 													SALES_ENABLED && (
-														<Link href='/sample-pack-try-first'>
+														<Link href={urls.samplePack}>
 															<Button className='w-full bg-burgundy-600 hover:bg-burgundy-700 text-white font-semibold py-3'>
 																<Star className='w-4 h-4 mr-2' />
 																Try
@@ -512,7 +515,7 @@ export default function ShopPage() {
 							</p>
 
 							<div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
-								<Link href='/sample-pack-try-first'>
+								<Link href={urls.samplePack}>
 									<Button
 										variant='primary'
 										size='lg'
@@ -521,7 +524,7 @@ export default function ShopPage() {
 										🌶️ Try Sample Pack First
 									</Button>
 								</Link>
-								<Link href='/products'>
+								<Link href={urls.shop}>
 									<Button
 										variant='outline'
 										size='lg'

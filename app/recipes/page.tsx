@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/simple-button";
 import { Clock, Users, ChefHat, Heart } from "@/components/ui/icons";
+import { getInternalUrls } from "@/lib/url-utils";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -19,6 +20,8 @@ export const metadata: Metadata = {
 };
 
 export default function RecipesPage() {
+	const urls = getInternalUrls();
+	
 	const recipes = [
 		{
 			id: 1,
@@ -284,7 +287,7 @@ export default function RecipesPage() {
 										</div>
 									</div>
 
-									<Link href={`/recipes/${recipe.slug}`}>
+									<Link href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/recipes/${recipe.slug}`}>
 										<Button className='w-full bg-burgundy-900 hover:bg-burgundy-800 text-gold-300 font-elegant'>
 											View Full Recipe
 										</Button>

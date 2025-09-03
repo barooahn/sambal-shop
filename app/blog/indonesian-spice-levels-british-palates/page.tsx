@@ -4,6 +4,7 @@ const excerpt =
 
 import Image from "next/image";
 import Link from "next/link";
+import { getInternalUrls } from "@/lib/url-utils";
 import {
 	Clock,
 	Users,
@@ -63,6 +64,8 @@ const faqData = [
 ];
 
 export default function IndonesianSpiceLevelsPage() {
+	const urls = getInternalUrls();
+
 	return (
 		<>
 			{/* Structured Data */}
@@ -106,7 +109,7 @@ export default function IndonesianSpiceLevelsPage() {
 				<nav className='mb-8'>
 					<div className='flex items-center gap-2 text-sm text-gray-600'>
 						<Link
-							href='/blog/indonesian-cooking-guide-british-kitchens'
+							href={urls.indonesianCookingGuide}
 							className='hover:text-burgundy-600'
 						>
 							Indonesian Cooking Guide
@@ -639,14 +642,14 @@ export default function IndonesianSpiceLevelsPage() {
 						</p>
 						<div className='flex flex-col sm:flex-row gap-4'>
 							<Link
-								href='/blog/indonesian-ingredients-uk-shopping-guide'
+								href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/blog/indonesian-ingredients-uk-shopping-guide`}
 								className='inline-flex items-center justify-center gap-2 bg-white text-burgundy-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors'
 							>
 								<ArrowRight className='w-5 h-5' />
 								Part 2: UK Shopping Guide
 							</Link>
 							<Link
-								href='/sample-pack-try-first'
+								href={urls.samplePack}
 								className='inline-flex items-center justify-center gap-2 border border-white text-white hover:bg-white hover:text-burgundy-600 px-6 py-3 rounded-lg font-semibold transition-colors'
 							>
 								<Flame className='w-5 h-5' />

@@ -3,6 +3,7 @@
 import SafeImage from "@/components/optimization/SafeImage";
 
 import React, { useState, useEffect } from "react";
+import { getInternalUrls } from "@/lib/url-utils";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/simple-button";
 import { Badge } from "@/components/ui/badge";
@@ -84,6 +85,7 @@ export default function CommunityFeed() {
 		null
 	);
 	const [filterFusionType, setFilterFusionType] = useState<string>("");
+	const urls = getInternalUrls();
 
 	useEffect(() => {
 		loadStories();
@@ -140,7 +142,7 @@ export default function CommunityFeed() {
 	const handleShare = async (storyId: number) => {
 		try {
 			await navigator.clipboard.writeText(
-				`${window.location.origin}/community/story/${storyId}`
+				`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/community/story/${storyId}`
 			);
 
 			// Record share interaction
@@ -286,7 +288,7 @@ export default function CommunityFeed() {
 								asChild
 								className='bg-burgundy-600 hover:bg-burgundy-700'
 							>
-								<a href='/community/share-story'>
+								<a href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/community/share-story`}>
 									Share Your Story
 								</a>
 							</Button>

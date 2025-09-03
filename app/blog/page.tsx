@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { getInternalUrls } from "@/lib/url-utils";
 import Image from "next/image";
 import { useState, useMemo } from "react";
 import {
@@ -23,6 +24,8 @@ const getUniqueCategories = () => {
 };
 
 export default function BlogPage() {
+	const urls = getInternalUrls();
+
 	const [activeCategory, setActiveCategory] = useState("All");
 	const categories = getUniqueCategories();
 
@@ -315,7 +318,7 @@ export default function BlogPage() {
 							</CardHeader>
 							<CardContent>
 								<Link
-									href='/#newsletter-signup'
+									href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/#newsletter-signup`}
 									className='inline-flex items-center px-8 py-4 bg-burgundy-900 text-gold-200 font-bold rounded-full hover:shadow-lg transition-all duration-300 border border-gold-600/30 font-elegant'
 								>
 									Subscribe to Our Newsletter

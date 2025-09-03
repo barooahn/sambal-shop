@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getInternalUrls } from "@/lib/url-utils";
 import Image from "next/image";
 import { Metadata } from "next";
 
@@ -26,6 +27,8 @@ export const metadata: Metadata = {
 };
 
 export default function BestAsianHotSaucePage() {
+	const urls = getInternalUrls();
+
 	return (
 		<div className="min-h-screen bg-gradient-to-b from-cream-50 to-cream-100">
 			{/* Hero Section */}
@@ -359,7 +362,7 @@ export default function BestAsianHotSaucePage() {
 							<div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white text-2xl">🏆</div>
 							<h3 className="text-xl font-bold text-green-800 mb-3">Winner: Indonesian Sambal</h3>
 							<p className="text-green-700 mb-4">Made by Chef Yossie using traditional Bandung recipes</p>
-							<Link href="/sample-pack-try-first" className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg inline-block transition-colors">
+							<Link href={urls.samplePack} className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg inline-block transition-colors">
 								Try Sample Pack
 							</Link>
 						</div>
@@ -397,13 +400,13 @@ export default function BestAsianHotSaucePage() {
 					
 					<div className="flex flex-col sm:flex-row gap-4 justify-center">
 						<Link 
-							href="/sample-pack-try-first"
+							href={urls.samplePack}
 							className="bg-gold-600 hover:bg-gold-700 text-white font-bold py-4 px-8 rounded-lg transition-colors text-lg"
 						>
 							Try Award-Winning Sambal
 						</Link>
 						<Link 
-							href="/sambal-oelek-uk"
+							href={urls.sambalOelek}
 							className="bg-transparent border-2 border-white hover:bg-white hover:text-burgundy-900 text-white font-bold py-4 px-8 rounded-lg transition-colors text-lg"
 						>
 							Shop Sambal Oelek

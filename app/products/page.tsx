@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { products } from "@/src/stripe-config";
 import ProductComparison from "@/components/ui/ProductComparison";
 import { Star, Flame, Sparkles, Zap, CheckCircle } from "@/components/ui/icons";
+import { getInternalUrls } from "@/lib/url-utils";
 import NewsletterSection from "@/components/home/NewsletterSection";
 
 export const metadata: Metadata = {
@@ -25,6 +26,8 @@ export const metadata: Metadata = {
 };
 
 export default function ProductsPage() {
+	const urls = getInternalUrls();
+
 	// Enhanced product data for comparison
 	const comparisonProducts = [
 		{
@@ -192,7 +195,7 @@ export default function ProductsPage() {
 							</p>
 							<div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
 								<a 
-									href="/sample-pack-try-first" 
+									href={urls.samplePack} 
 									className="inline-flex items-center bg-gradient-to-r from-amber-500 via-orange-500 to-red-500 hover:from-amber-400 hover:via-orange-400 hover:to-red-400 text-white font-bold py-4 px-8 rounded-xl shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 border border-white/20"
 								>
 									<span className="text-2xl mr-3">🎯</span>
@@ -297,7 +300,7 @@ export default function ProductsPage() {
 									<span className="text-2xl">🌱</span>
 								</div>
 								<h4 className="font-semibold text-burgundy-900 mb-2 font-brand">New to Spicy Food?</h4>
-								<p className="text-neutral-600 font-body">Start with our <a href="/sample-pack-try-first" className="text-burgundy-600 hover:text-burgundy-800 font-semibold underline">Sample Pack</a> to try different heat levels safely</p>
+								<p className="text-neutral-600 font-body">Start with our <a href={urls.samplePack} className="text-burgundy-600 hover:text-burgundy-800 font-semibold underline">Sample Pack</a> to try different heat levels safely</p>
 							</div>
 							<div className="text-center p-4 bg-white/60 rounded-xl border border-gold-200/50">
 								<div className="mb-3">

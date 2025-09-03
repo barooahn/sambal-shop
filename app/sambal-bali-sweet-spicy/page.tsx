@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { getInternalUrls } from "@/lib/url-utils";
 import { Button } from "@/components/ui/simple-button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
@@ -190,6 +191,8 @@ const productData = {
 };
 
 export default function SambalBaliSweetSpicyPage() {
+	const urls = getInternalUrls();
+
 	// FAQ data for AI search optimization
 	const faqData = [
 		{
@@ -430,7 +433,7 @@ export default function SambalBaliSweetSpicyPage() {
 							</div>
 
 							<div className='flex flex-col sm:flex-row gap-3 justify-center lg:justify-start'>
-								<Link href='/shop'>
+								<Link href={urls.shop}>
 									<Button
 										variant='primary'
 										size='lg'
@@ -439,7 +442,7 @@ export default function SambalBaliSweetSpicyPage() {
 										Order Sambal Bali - £7.49
 									</Button>
 								</Link>
-								<Link href='/sample-pack-try-first'>
+								<Link href={urls.samplePack}>
 									<Button
 										variant='outline'
 										size='lg'
@@ -578,7 +581,7 @@ export default function SambalBaliSweetSpicyPage() {
 							</p>
 
 							<div className='flex flex-col sm:flex-row gap-4'>
-								<Link href='/chef'>
+								<Link href={urls.chef}>
 									<Button
 										variant='primary'
 										size='lg'
@@ -587,7 +590,7 @@ export default function SambalBaliSweetSpicyPage() {
 										Meet Chef Yossie
 									</Button>
 								</Link>
-								<Link href='/shop'>
+								<Link href={urls.shop}>
 									<Button
 										variant='outline'
 										size='lg'
@@ -1042,7 +1045,7 @@ export default function SambalBaliSweetSpicyPage() {
 									<li>• Cucumber & red onion to serve</li>
 								</ul>
 								<div className='mt-6'>
-									<Link href='/recipes/balinese-chicken-satay'>
+									<Link href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/recipes/balinese-chicken-satay`}>
 										<Button
 											variant='primary'
 											size='sm'
@@ -1148,7 +1151,7 @@ export default function SambalBaliSweetSpicyPage() {
 								</div>
 							</div>
 
-							<Link href='/chef'>
+							<Link href={urls.chef}>
 								<Button
 									variant='primary'
 									size='lg'
@@ -1353,7 +1356,7 @@ export default function SambalBaliSweetSpicyPage() {
 					</p>
 
 					<div className='flex flex-col sm:flex-row gap-4 justify-center'>
-						<Link href='/shop'>
+						<Link href={urls.shop}>
 							<Button
 								variant='primary'
 								size='lg'
@@ -1362,7 +1365,7 @@ export default function SambalBaliSweetSpicyPage() {
 								Order Sambal Bali - £7.49
 							</Button>
 						</Link>
-						<Link href='/sample-pack-try-first'>
+						<Link href={urls.samplePack}>
 							<Button
 								variant='outline'
 								size='lg'

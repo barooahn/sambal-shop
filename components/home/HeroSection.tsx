@@ -4,10 +4,12 @@ import Image from "next/image";
 
 import { ChefHat, Award, Star, Package, Heart } from "@/components/ui/icons";
 import WaitlistButton from "./WaitlistButton";
+import { getInternalUrls } from "@/lib/url-utils";
 
 // Removed skeleton to prevent layout shifts
 
 export default function HeroSection() {
+	const urls = getInternalUrls();
 	// Remove image loading state to prevent layout shift
 	// const [imageLoaded, setImageLoaded] = useState(false);
 
@@ -198,7 +200,7 @@ export default function HeroSection() {
 										);
 									} catch {}
 									window.location.href =
-										"/sample-pack-try-first";
+										urls.samplePack;
 								}}
 								className='group relative overflow-hidden bg-gradient-to-r from-burgundy-900 via-burgundy-800 to-burgundy-900 hover:from-burgundy-800 hover:via-burgundy-700 hover:to-burgundy-800 text-cream-50 font-bold text-xl py-5 px-10 rounded-xl shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300 border-2 border-gold-600/40 hover:border-gold-500/60 w-full min-h-[56px]'
 							>

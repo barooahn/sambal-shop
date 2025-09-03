@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { getInternalUrls } from "@/lib/url-utils";
 import { Button } from "@/components/ui/simple-button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
@@ -52,6 +53,8 @@ export const metadata = {
 };
 
 export default function SambalBaliAromaticSpicyPage() {
+	const urls = getInternalUrls();
+
 	// FAQ data for AI search optimization
 	const faqData = [
 		{
@@ -340,7 +343,7 @@ export default function SambalBaliAromaticSpicyPage() {
 
 							{/* CTA Buttons */}
 							<div className='flex flex-col sm:flex-row gap-3 justify-center lg:justify-start'>
-								<Link href='/shop'>
+								<Link href={urls.shop}>
 									<Button
 										variant='primary'
 										size='lg'
@@ -349,7 +352,7 @@ export default function SambalBaliAromaticSpicyPage() {
 										Order Sambal Bali Now - £8.49
 									</Button>
 								</Link>
-								<Link href='/shop'>
+								<Link href={urls.shop}>
 									<Button
 										variant='outline'
 										size='lg'

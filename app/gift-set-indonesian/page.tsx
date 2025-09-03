@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { getInternalUrls } from "@/lib/url-utils";
 import { Button } from "@/components/ui/simple-button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
@@ -182,6 +183,8 @@ const productData = {
 };
 
 export default function GiftSetIndonesianPage() {
+	const urls = getInternalUrls();
+
 	return (
 		<div className='min-h-screen bg-coconut-50'>
 			{/* Hero Section */}
@@ -277,7 +280,7 @@ export default function GiftSetIndonesianPage() {
 							</div>
 
 							<div className='flex flex-col sm:flex-row gap-4 justify-center lg:justify-start'>
-								<Link href='/shop'>
+								<Link href={urls.shop}>
 									<Button
 										variant='primary'
 										size='lg'
@@ -286,7 +289,7 @@ export default function GiftSetIndonesianPage() {
 										Order Gift Set - £19.99
 									</Button>
 								</Link>
-								<Link href='/sample-pack-try-first'>
+								<Link href={urls.samplePack}>
 									<Button
 										variant='outline'
 										size='lg'
@@ -587,7 +590,7 @@ export default function GiftSetIndonesianPage() {
 							</ul>
 
 							<div className='flex flex-col sm:flex-row gap-4'>
-								<Link href='/shop'>
+								<Link href={urls.shop}>
 									<Button
 										variant='primary'
 										size='lg'
@@ -596,7 +599,7 @@ export default function GiftSetIndonesianPage() {
 										Order Gift Set - £19.99
 									</Button>
 								</Link>
-								<Link href='/chef'>
+								<Link href={urls.chef}>
 									<Button
 										variant='outline'
 										size='lg'
@@ -672,7 +675,7 @@ export default function GiftSetIndonesianPage() {
 					</p>
 
 					<div className='flex flex-col sm:flex-row gap-4 justify-center'>
-						<Link href='/shop'>
+						<Link href={urls.shop}>
 							<Button
 								variant='primary'
 								size='lg'
@@ -681,7 +684,7 @@ export default function GiftSetIndonesianPage() {
 								Order Gift Set - £19.99
 							</Button>
 						</Link>
-						<Link href='/sample-pack-try-first'>
+						<Link href={urls.samplePack}>
 							<Button
 								variant='outline'
 								size='lg'

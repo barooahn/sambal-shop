@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import { getInternalUrls } from "@/lib/url-utils";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/simple-button";
@@ -35,6 +36,8 @@ export const metadata: Metadata = {
 };
 
 export default function ManchesterDeliveryPage() {
+	const urls = getInternalUrls();
+
 	// Breadcrumb data
 	const breadcrumbItems = [
 		{
@@ -172,7 +175,7 @@ export default function ManchesterDeliveryPage() {
 							<BreadcrumbList>
 								<BreadcrumbItem>
 									<BreadcrumbLink
-										href='/'
+										href={urls.home}
 										className='text-gold-200 hover:text-gold-100'
 									>
 										Home
@@ -237,7 +240,7 @@ export default function ManchesterDeliveryPage() {
 								size='lg'
 								className='bg-gold-600 hover:bg-gold-700 text-white font-bold px-8 py-4 text-lg'
 							>
-								<Link href='/shop'>
+								<Link href={urls.shop}>
 									Order Now - Manchester Delivery
 								</Link>
 							</Button>
@@ -247,7 +250,7 @@ export default function ManchesterDeliveryPage() {
 								size='lg'
 								className='border-gold-300 text-gold-200 hover:bg-gold-600 hover:text-white px-8 py-4 text-lg'
 							>
-								<Link href='/sample-pack-try-first'>
+								<Link href={urls.samplePack}>
 									Try Sample Pack First
 								</Link>
 							</Button>

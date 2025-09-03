@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { getInternalUrls } from "@/lib/url-utils";
 import { Button } from "@/components/ui/simple-button";
 import { Heart, Award, Leaf, ChefHat } from "@/components/ui/icons";
 import type { Metadata } from "next";
@@ -19,6 +20,8 @@ export const metadata: Metadata = {
 };
 
 export default function AboutPage() {
+	const urls = getInternalUrls();
+
 	return (
 		<>
 			{/* Clean Subtle Background */}
@@ -244,7 +247,7 @@ export default function AboutPage() {
 								</p>
 							</div>
 							<div className='mt-8'>
-								<Link href="/sample-pack-try-first">
+								<Link href={urls.samplePack}>
 									<Button
 										variant='primary'
 										size='lg'
@@ -338,7 +341,7 @@ export default function AboutPage() {
 						the magic of authentic sambal
 					</p>
 					<div className='flex flex-col sm:flex-row gap-4 justify-center'>
-						<Link href="/shop">
+						<Link href={urls.shop}>
 							<Button
 								variant='primary'
 								size='lg'
@@ -347,7 +350,7 @@ export default function AboutPage() {
 								Shop Now
 							</Button>
 						</Link>
-						<Link href="/contact">
+						<Link href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/contact`}>
 							<Button
 								variant='primary'
 								size='lg'

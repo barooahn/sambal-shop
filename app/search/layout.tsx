@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { getInternalUrls } from "@/lib/url-utils";
 
 export const metadata: Metadata = {
 	title: "Search Indonesian Recipes & Products | Spice Island Indonesia",
@@ -20,6 +21,8 @@ export default function SearchLayout({
 }: {
 	children: React.ReactNode;
 }) {
+	const urls = getInternalUrls();
+	
 	return (
 		<div className="min-h-screen bg-gradient-to-br from-cream-50 to-cream-100">
 			{/* SEO Content Header */}
@@ -70,30 +73,30 @@ export default function SearchLayout({
 							<div>
 								<h3 className="font-semibold text-burgundy-900 mb-3">Beginner-Friendly</h3>
 								<ul className="space-y-2 text-sm text-neutral-600">
-									<li>• <a href="/recipes/sambal-fried-rice" className="hover:text-burgundy-600">Sambal Fried Rice (Nasi Goreng)</a></li>
-									<li>• <a href="/recipes/sambal-scrambled-eggs" className="hover:text-burgundy-600">Sambal Scrambled Eggs</a></li>
-									<li>• <a href="/recipes/sambal-chicken-stir-fry" className="hover:text-burgundy-600">Sambal Chicken Stir-Fry</a></li>
-									<li>• <Link href="/blog/spicy-food-beginners-guide" className="hover:text-burgundy-600">Spicy Food Guide for Beginners</Link></li>
+									<li>• <a href={urls.recipes + '/sambal-fried-rice'} className="hover:text-burgundy-600">Sambal Fried Rice (Nasi Goreng)</a></li>
+									<li>• <a href={urls.recipes + '/sambal-scrambled-eggs'} className="hover:text-burgundy-600">Sambal Scrambled Eggs</a></li>
+									<li>• <a href={urls.recipes + '/sambal-chicken-stir-fry'} className="hover:text-burgundy-600">Sambal Chicken Stir-Fry</a></li>
+									<li>• <Link href={urls.blog + '/spicy-food-beginners-guide'} className="hover:text-burgundy-600">Spicy Food Guide for Beginners</Link></li>
 								</ul>
 							</div>
 							
 							<div>
 								<h3 className="font-semibold text-burgundy-900 mb-3">Traditional Favorites</h3>
 								<ul className="space-y-2 text-sm text-neutral-600">
-									<li>• <a href="/recipes/ayam-penyet" className="hover:text-burgundy-600">Ayam Penyet (Smashed Chicken)</a></li>
-									<li>• <a href="/recipes/ikan-bakar" className="hover:text-burgundy-600">Ikan Bakar (Grilled Fish)</a></li>
-									<li>• <a href="/recipes/lalapan" className="hover:text-burgundy-600">Lalapan (Fresh Vegetable Salad)</a></li>
-									<li>• <a href="/recipes/sambal-noodle-soup" className="hover:text-burgundy-600">Sambal Noodle Soup</a></li>
+									<li>• <a href={urls.recipes + '/ayam-penyet'} className="hover:text-burgundy-600">Ayam Penyet (Smashed Chicken)</a></li>
+									<li>• <a href={urls.recipes + '/ikan-bakar'} className="hover:text-burgundy-600">Ikan Bakar (Grilled Fish)</a></li>
+									<li>• <a href={urls.recipes + '/lalapan'} className="hover:text-burgundy-600">Lalapan (Fresh Vegetable Salad)</a></li>
+									<li>• <a href={urls.recipes + '/sambal-noodle-soup'} className="hover:text-burgundy-600">Sambal Noodle Soup</a></li>
 								</ul>
 							</div>
 							
 							<div>
 								<h3 className="font-semibold text-burgundy-900 mb-3">Product Guides</h3>
 								<ul className="space-y-2 text-sm text-neutral-600">
-									<li>• <a href="/products" className="hover:text-burgundy-600">Compare All Sambal Varieties</a></li>
-									<li>• <a href="/sambal-oelek-uk" className="hover:text-burgundy-600">Sambal Oelek (Pure Heat)</a></li>
-									<li>• <a href="/sambal-bali-aromatic-spicy" className="hover:text-burgundy-600">Sambal Bali (Aromatic)</a></li>
-									<li>• <a href="/sambal-goreng-uk" className="hover:text-burgundy-600">Sambal Goreng (Sweet & Spicy)</a></li>
+									<li>• <a href={urls.shop} className="hover:text-burgundy-600">Compare All Sambal Varieties</a></li>
+									<li>• <a href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/sambal-oelek-uk`} className="hover:text-burgundy-600">Sambal Oelek (Pure Heat)</a></li>
+									<li>• <a href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/sambal-bali-aromatic-spicy`} className="hover:text-burgundy-600">Sambal Bali (Aromatic)</a></li>
+									<li>• <a href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/sambal-goreng-uk`} className="hover:text-burgundy-600">Sambal Goreng (Sweet & Spicy)</a></li>
 								</ul>
 							</div>
 						</div>

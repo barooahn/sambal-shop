@@ -13,6 +13,7 @@ import { Button } from "@/components/ui/simple-button";
 import { Input } from "@/components/ui/input";
 import { unsubscribeFromNewsletter } from "@/lib/actions";
 import Link from "next/link";
+import { getInternalUrls } from "@/lib/url-utils";
 
 function UnsubscribeForm() {
 	const searchParams = useSearchParams();
@@ -22,6 +23,7 @@ function UnsubscribeForm() {
 		success: boolean;
 		message: string;
 	} | null>(null);
+	const urls = getInternalUrls();
 
 	useEffect(() => {
 		const emailParam = searchParams.get("email");
@@ -131,7 +133,7 @@ function UnsubscribeForm() {
 								</Button>
 							)}
 
-							<Link href='/' className='block'>
+							<Link href={urls.home} className='block'>
 								<Button
 									variant='outline'
 									className='w-full'
@@ -148,6 +150,8 @@ function UnsubscribeForm() {
 }
 
 export default function UnsubscribePage() {
+	const urls = getInternalUrls();
+	
 	return (
 		<div className="min-h-screen bg-gradient-to-br from-cream-50 to-cream-100">
 			{/* SEO Content Header */}
@@ -259,25 +263,25 @@ export default function UnsubscribePage() {
 					</div>
 					
 					<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-						<Link href="/blog/ultimate-guide-indonesian-sambal" className="block bg-cream-50 rounded-lg p-6 border border-gold-200 hover:border-gold-300 transition-colors text-center">
+						<Link href={urls.blog + '/ultimate-guide-indonesian-sambal'} className="block bg-cream-50 rounded-lg p-6 border border-gold-200 hover:border-gold-300 transition-colors text-center">
 							<div className="text-2xl mb-2">📚</div>
 							<h3 className="font-semibold text-burgundy-900 mb-2">Complete Sambal Guide</h3>
 							<p className="text-xs text-neutral-600">Everything about Indonesian chili pastes</p>
 						</Link>
 						
-						<Link href="/recipes/sambal-fried-rice" className="block bg-cream-50 rounded-lg p-6 border border-gold-200 hover:border-gold-300 transition-colors text-center">
+						<Link href={urls.recipes + '/sambal-fried-rice'} className="block bg-cream-50 rounded-lg p-6 border border-gold-200 hover:border-gold-300 transition-colors text-center">
 							<div className="text-2xl mb-2">🍚</div>
 							<h3 className="font-semibold text-burgundy-900 mb-2">Sambal Fried Rice</h3>
 							<p className="text-xs text-neutral-600">Chef Yossie's signature recipe</p>
 						</Link>
 						
-						<Link href="/blog/spicy-food-beginners-guide" className="block bg-cream-50 rounded-lg p-6 border border-gold-200 hover:border-gold-300 transition-colors text-center">
+						<Link href={urls.blog + '/spicy-food-beginners-guide'} className="block bg-cream-50 rounded-lg p-6 border border-gold-200 hover:border-gold-300 transition-colors text-center">
 							<div className="text-2xl mb-2">🌶️</div>
 							<h3 className="font-semibold text-burgundy-900 mb-2">Spicy Food Guide</h3>
 							<p className="text-xs text-neutral-600">Safe way to build heat tolerance</p>
 						</Link>
 						
-						<Link href="/products" className="block bg-cream-50 rounded-lg p-6 border border-gold-200 hover:border-gold-300 transition-colors text-center">
+						<Link href={urls.shop} className="block bg-cream-50 rounded-lg p-6 border border-gold-200 hover:border-gold-300 transition-colors text-center">
 							<div className="text-2xl mb-2">🛒</div>
 							<h3 className="font-semibold text-burgundy-900 mb-2">Browse Products</h3>
 							<p className="text-xs text-neutral-600">Authentic sambal collection</p>

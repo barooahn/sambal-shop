@@ -4,6 +4,7 @@ const excerpt =
 
 import Image from "next/image";
 import Link from "next/link";
+import { getInternalUrls } from "@/lib/url-utils";
 import ArticleSchema from "@/components/seo/ArticleSchema";
 import FAQSchema from "@/components/seo/FAQSchema";
 
@@ -64,6 +65,8 @@ const faqData = [
 ];
 
 export default function SpiceIslandsHistoryPage() {
+	const urls = getInternalUrls();
+
 	return (
 		<>
 			{/* Structured Data */}
@@ -691,7 +694,7 @@ export default function SpiceIslandsHistoryPage() {
 
 					<div className='grid md:grid-cols-2 gap-6'>
 						<Link
-							href='/blog/ultimate-guide-indonesian-sambal'
+							href={urls.ultimateGuideSambal}
 							className='bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow'
 						>
 							<h3 className='text-lg font-semibold text-gray-900 mb-2'>
@@ -708,7 +711,7 @@ export default function SpiceIslandsHistoryPage() {
 						</Link>
 
 						<Link
-							href='/blog/spice-islands-to-your-kitchen'
+							href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/blog/spice-islands-to-your-kitchen`}
 							className='bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow'
 						>
 							<h3 className='text-lg font-semibold text-gray-900 mb-2'>
@@ -730,7 +733,7 @@ export default function SpiceIslandsHistoryPage() {
 				{/* CTA */}
 				<section className='text-center'>
 					<Link
-						href='/shop'
+						href={urls.shop}
 						className='inline-flex items-center px-8 py-4 bg-gradient-to-r from-burgundy-900 to-burgundy-800 text-gold-200 font-bold rounded-full hover:shadow-lg transition-all duration-300 border border-gold-600/30'
 					>
 						Shop Authentic Sambal

@@ -4,6 +4,7 @@ const excerpt =
 
 import Image from "next/image";
 import Link from "next/link";
+import { getInternalUrls } from "@/lib/url-utils";
 import {
 	Clock,
 	Users,
@@ -64,6 +65,8 @@ const faqData = [
 ];
 
 export default function IndonesianFoodCulturePage() {
+	const urls = getInternalUrls();
+
 	return (
 		<>
 			{/* Structured Data */}
@@ -107,7 +110,7 @@ export default function IndonesianFoodCulturePage() {
 				<nav className='mb-8'>
 					<div className='flex items-center gap-2 text-sm text-gray-600'>
 						<Link
-							href='/blog/indonesian-cooking-guide-british-kitchens'
+							href={urls.indonesianCookingGuide}
 							className='hover:text-burgundy-600'
 						>
 							Indonesian Cooking Guide
@@ -648,14 +651,14 @@ export default function IndonesianFoodCulturePage() {
 						</p>
 						<div className='flex flex-col sm:flex-row gap-4'>
 							<Link
-								href='/blog/indonesian-cooking-guide-british-kitchens'
+								href={urls.indonesianCookingGuide}
 								className='inline-flex items-center justify-center gap-2 bg-white text-burgundy-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors'
 							>
 								<BookOpen className='w-5 h-5' />
 								Complete Cooking Guide
 							</Link>
 							<Link
-								href='/sample-pack-try-first'
+								href={urls.samplePack}
 								className='inline-flex items-center justify-center gap-2 border border-white text-white hover:bg-white hover:text-burgundy-600 px-6 py-3 rounded-lg font-semibold transition-colors'
 							>
 								<Heart className='w-5 h-5' />
@@ -668,7 +671,7 @@ export default function IndonesianFoodCulturePage() {
 				{/* Navigation */}
 				<div className='flex flex-col sm:flex-row gap-4 pt-8 border-t border-gray-200'>
 					<Link
-						href='/blog/british-indonesian-fusion-weeknight-recipes'
+						href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/blog/british-indonesian-fusion-weeknight-recipes`}
 						className='flex-1 bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow'
 					>
 						<div className='flex items-center justify-between'>
@@ -685,7 +688,7 @@ export default function IndonesianFoodCulturePage() {
 					</Link>
 
 					<Link
-						href='/blog'
+						href={urls.blog}
 						className='flex-1 bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow'
 					>
 						<div className='flex items-center justify-between'>

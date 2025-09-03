@@ -2,8 +2,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/simple-button";
 import { Star, Heart } from "@/components/ui/icons";
+import { getInternalUrls } from "@/lib/url-utils";
 
 export default function StorySection() {
+	const urls = getInternalUrls();
+	
 	return (
 		<section className='py-24 relative overflow-hidden'>
 			<div className='absolute top-0 left-0 w-72 h-72 bg-burgundy-200/20 rounded-full -translate-x-36 -translate-y-36 blur-3xl animate-luxury-spin'></div>
@@ -45,7 +48,7 @@ export default function StorySection() {
 							<p>
 								Chef Yossie&apos;s journey begins in{" "}
 								<Link
-									href='/chef'
+									href={urls.chef}
 									className='text-burgundy-700 hover:text-burgundy-900 font-semibold underline decoration-gold-600 hover:decoration-burgundy-900 transition-colors'
 								>
 									Bandung, West Java
@@ -55,7 +58,7 @@ export default function StorySection() {
 								bustling catering kitchen. Here she
 								learned to prepare{" "}
 								<Link
-									href='/recipes'
+									href={urls.recipes}
 									className='text-burgundy-700 hover:text-burgundy-900 font-semibold underline decoration-gold-600 hover:decoration-burgundy-900 transition-colors'
 								>
 									traditional recipes
@@ -67,7 +70,7 @@ export default function StorySection() {
 							<p>
 								Her signature{" "}
 								<Link
-									href='/sambal-oelek-uk'
+									href={urls.sambalOelek}
 									className='text-burgundy-700 hover:text-burgundy-900 font-semibold underline decoration-gold-600 hover:decoration-burgundy-900 transition-colors'
 								>
 									authentic sambal oelek
@@ -78,7 +81,7 @@ export default function StorySection() {
 								no shortcuts or preservatives. Perfect
 								for{" "}
 								<Link
-									href='/sambal-for-stir-fry'
+									href={urls.sambalStirFry}
 									className='text-burgundy-700 hover:text-burgundy-900 font-semibold underline decoration-gold-600 hover:decoration-burgundy-900 transition-colors'
 								>
 									stir-frying
@@ -93,7 +96,7 @@ export default function StorySection() {
 								with the precision learned in commercial
 								kitchens.{" "}
 								<Link
-									href='/shop'
+									href={urls.shop}
 									className='text-burgundy-700 hover:text-burgundy-900 font-semibold underline decoration-gold-600 hover:decoration-burgundy-900 transition-colors'
 								>
 									Each jar is handcrafted
@@ -114,7 +117,7 @@ export default function StorySection() {
 						</div>
 
 						<div className='flex flex-wrap gap-4 mb-8'>
-							<Link href='/recipes'>
+							<Link href={urls.recipes}>
 								<Button
 									variant='primary'
 									size='lg'
@@ -123,7 +126,7 @@ export default function StorySection() {
 									Heritage Recipes
 								</Button>
 							</Link>
-							<Link href='/about'>
+							<Link href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/about`}>
 								<Button
 									variant='primary'
 									size='lg'
@@ -141,7 +144,7 @@ export default function StorySection() {
 							</Button>
 						</div>
 
-						<Link href='/about'>
+						<Link href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/about`}>
 							<Button
 								variant='primary'
 								size='lg'
