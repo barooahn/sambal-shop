@@ -59,7 +59,7 @@ export async function POST(request: NextRequest) {
       // Send to multiple test recipients
       const testSubscribers = [
         { email: 'barooahn@gmail.com', firstName: 'John' },
-        { email: 'test@spiceislandindonesia.com', firstName: 'Test User' },
+        { email: 'info@spiceislandindonesia.com', firstName: 'Test User' },
         // Add more test emails if needed
       ];
 

@@ -73,7 +73,7 @@ const getAbandonedCartEmail1Html = (cartData) => `
       </div>
       
       <p style="font-size: 16px; line-height: 1.6; color: #44403c; margin: 30px 0 0 0;">
-        Questions? Reply to this email or contact us at hello@spiceislandindonesia.com
+        Questions? Reply to this email or contact us at info@spiceislandindonesia.com
       </p>
       
       <p style="font-size: 16px; line-height: 1.6; color: #44403c; margin: 20px 0 0 0;">
@@ -84,7 +84,7 @@ const getAbandonedCartEmail1Html = (cartData) => `
     
     <!-- Footer -->
     <div style="background: #f5f4f2; padding: 20px 30px; text-align: center; font-size: 12px; color: #78716c;">
-      <p style="margin: 0 0 10px 0;">Questions? Contact hello@spiceislandindonesia.com</p>
+      <p style="margin: 0 0 10px 0;">Questions? Contact info@spiceislandindonesia.com</p>
       <p style="margin: 0;">
         <a href="https://www.spiceislandindonesia.com/unsubscribe?email=${cartData.email}" style="color: #78716c;">Unsubscribe from cart reminders</a>
       </p>
@@ -163,7 +163,7 @@ const getAbandonedCartEmail2Html = (cartData) => `
       </div>
       
       <p style="font-size: 16px; line-height: 1.6; color: #44403c; margin: 30px 0 0 0;">
-        Still have questions? Our team is here to help at hello@spiceislandindonesia.com
+        Still have questions? Our team is here to help at info@spiceislandindonesia.com
       </p>
       
       <p style="font-size: 16px; line-height: 1.6; color: #44403c; margin: 20px 0 0 0;">
@@ -174,7 +174,7 @@ const getAbandonedCartEmail2Html = (cartData) => `
     
     <!-- Footer -->
     <div style="background: #f5f4f2; padding: 20px 30px; text-align: center; font-size: 12px; color: #78716c;">
-      <p style="margin: 0 0 10px 0;">Questions? Contact hello@spiceislandindonesia.com</p>
+      <p style="margin: 0 0 10px 0;">Questions? Contact info@spiceislandindonesia.com</p>
       <p style="margin: 0;">
         <a href="https://www.spiceislandindonesia.com/unsubscribe?email=${cartData.email}" style="color: #78716c;">Unsubscribe from cart reminders</a>
       </p>
@@ -268,7 +268,7 @@ const getAbandonedCartEmail3Html = (cartData) => `
     
     <!-- Footer -->
     <div style="background: #f5f4f2; padding: 20px 30px; text-align: center; font-size: 12px; color: #78716c;">
-      <p style="margin: 0 0 10px 0;">Questions? Contact hello@spiceislandindonesia.com</p>
+      <p style="margin: 0 0 10px 0;">Questions? Contact info@spiceislandindonesia.com</p>
       <p style="margin: 0;">
         <a href="https://www.spiceislandindonesia.com/unsubscribe?email=${cartData.email}" style="color: #78716c;">Unsubscribe from cart reminders</a>
       </p>

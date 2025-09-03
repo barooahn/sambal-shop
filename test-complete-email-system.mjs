@@ -161,7 +161,7 @@ const getOrderConfirmationHtml = (orderData) => `
       
       <p style="font-size: 16px; line-height: 1.6; color: #44403c; margin: 30px 0 0 0;">
         Questions about your order? We're here to help!<br>
-        Email us at support@spiceislandindonesia.com
+        Email us at info@spiceislandindonesia.com
       </p>
       
       <p style="font-size: 16px; line-height: 1.6; color: #44403c; margin: 20px 0 0 0;">
@@ -172,7 +172,7 @@ const getOrderConfirmationHtml = (orderData) => `
     
     <!-- Footer -->
     <div style="background: #f5f4f2; padding: 20px 30px; text-align: center; font-size: 12px; color: #78716c;">
-      <p style="margin: 0 0 10px 0;">Need help? Contact support@spiceislandindonesia.com</p>
+      <p style="margin: 0 0 10px 0;">Need help? Contact info@spiceislandindonesia.com</p>
       <p style="margin: 0;">Spice Island Indonesia | Authentic Indonesian Flavors</p>
     </div>
     
@@ -270,7 +270,7 @@ const getAbandonedCartHtml = (cartData, emailNumber = 1) => {
       <p style="font-size: 16px; line-height: 1.6; color: #44403c; margin: 30px 0 0 0;">
         ${emailNumber === 3 ? 
           'This is our final reminder. Don\'t miss out on these authentic Indonesian flavors!' :
-          'Questions? Reply to this email or contact us at hello@spiceislandindonesia.com'
+          'Questions? Reply to this email or contact us at info@spiceislandindonesia.com'
         }
       </p>
       
@@ -282,7 +282,7 @@ const getAbandonedCartHtml = (cartData, emailNumber = 1) => {
     
     <!-- Footer -->
     <div style="background: #f5f4f2; padding: 20px 30px; text-align: center; font-size: 12px; color: #78716c;">
-      <p style="margin: 0 0 10px 0;">Questions? Contact hello@spiceislandindonesia.com</p>
+      <p style="margin: 0 0 10px 0;">Questions? Contact info@spiceislandindonesia.com</p>
       <p style="margin: 0;">
         <a href="https://www.spiceislandindonesia.com/unsubscribe?email=${cartData.email}" style="color: #78716c;">Unsubscribe from cart reminders</a>
       </p>

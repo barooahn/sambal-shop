@@ -120,7 +120,7 @@ const getReviewRequestEmailHtml = (reviewData) => `
       </div>
       
       <p style="font-size: 16px; line-height: 1.6; color: #44403c; margin: 30px 0 0 0;">
-        Questions about your order or need help with anything? We're here to support you at hello@spiceislandindonesia.com
+        Questions about your order or need help with anything? We're here to support you at info@spiceislandindonesia.com
       </p>
       
       <p style="font-size: 16px; line-height: 1.6; color: #44403c; margin: 20px 0 0 0;">
@@ -190,7 +190,7 @@ const getReviewFollowUpEmailHtml = (reviewData) => `
         <div style="background: #fee2e2; border: 2px solid #dc2626; border-radius: 6px; padding: 20px;">
           <h4 style="color: #b91c1c; margin: 0 0 10px 0;">😟 Not satisfied?</h4>
           <p style="margin: 0 0 15px 0; color: #44403c;">We're sorry to hear that! Please reach out to us directly so we can make things right.</p>
-          <a href="mailto:hello@spiceislandindonesia.com?subject=Order Issue - Need Help" style="background: #dc2626; color: white; padding: 12px 20px; text-decoration: none; border-radius: 4px; font-weight: bold; display: inline-block;">
+          <a href="mailto:info@spiceislandindonesia.com?subject=Order Issue - Need Help" style="background: #dc2626; color: white; padding: 12px 20px; text-decoration: none; border-radius: 4px; font-weight: bold; display: inline-block;">
             Contact Customer Support
           </a>
         </div>
