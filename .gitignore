@@ -52,6 +52,14 @@ settings.local.json
 
 # Lighthouse performance reports
 lighthouse-reports/
+lighthouse-report.html
+
+# Test and development files
+test-*.mjs
+test-*.js
+
+# Supabase temporary files
+supabase/.temp/
 
 # Playwright MCP directory
 .playwright-mcp/
