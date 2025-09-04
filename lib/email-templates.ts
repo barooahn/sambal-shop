@@ -1602,3 +1602,498 @@ export const getNewProductEmailHtml = (data: EmailTemplateData) => {
     contentHtml
   );
 };
+
+// Spice School Educational Email Template
+export const getSpiceSchoolEmailHtml = (data: any) => {
+  const { lesson, firstName = '', progressPercentage = 0 } = data;
+  const name = firstName || 'Fellow Spice Enthusiast';
+  
+  const contentHtml = `
+    <div class="progress-bar" style="background: #f3f4f6; border-radius: 10px; height: 8px; margin: 20px 0; overflow: hidden;">
+      <div style="background: linear-gradient(90deg, #d4af37 0%, #7f1d2b 100%); height: 100%; width: ${progressPercentage}%; border-radius: 10px; transition: width 0.3s ease;"></div>
+    </div>
+    
+    <div style="background: #fef9f1; border: 2px solid #d4af37; border-radius: 8px; padding: 20px; margin: 25px 0; text-align: center;">
+      <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 24px; color: #7f1d2b; margin: 0 0 10px 0;">
+        📚 Spice School Progress: ${progressPercentage}%
+      </h3>
+      <p style="margin: 0; color: #57534e; font-size: 14px;">
+        Lesson ${lesson.lessonNumber} of 12 • ${lesson.difficulty} Level
+      </p>
+    </div>
+
+    <h2 class="greeting">
+      Hello ${name}!
+    </h2>
+    
+    <p class="intro-text">
+      Welcome to Lesson ${lesson.lessonNumber} of Indonesian Spice School! Today we're exploring <strong>${lesson.title}</strong> - an essential skill for mastering authentic Indonesian cooking.
+    </p>
+
+    <div class="discount-section" style="background: linear-gradient(135deg, #7f1d2b 0%, #962838 100%); color: white; border: none; padding: 30px;">
+      <div class="discount-content">
+        <h3 style="color: #d4af37; font-size: 22px; margin: 0 0 15px 0;">
+          🎯 Today's Learning Goals
+        </h3>
+        <ul style="text-align: left; color: #fef9f1; margin: 0; padding-left: 20px;">
+          ${lesson.topics.map((topic: string) => `<li style="margin: 8px 0;">${topic}</li>`).join('')}
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="benefits-title">
+      🔥 Essential Techniques You'll Master:
+    </h3>
+    
+    <ul class="benefits-list">
+      ${lesson.practicalTips.map((tip: string) => `<li>${tip}</li>`).join('')}
+    </ul>
+
+    ${lesson.culturalContext ? `
+    <div style="background: linear-gradient(135deg, #fef9f1 0%, #fdf2e1 100%); border-left: 4px solid #d4af37; padding: 25px; margin: 30px 0; border-radius: 0 8px 8px 0;">
+      <h4 style="color: #7f1d2b; margin: 0 0 15px 0; display: flex; align-items: center;">
+        <span style="margin-right: 10px;">🏛️</span>
+        Cultural Context
+      </h4>
+      <p style="margin: 0; color: #57534e; font-style: italic; line-height: 1.6;">
+        ${lesson.culturalContext}
+      </p>
+    </div>
+    ` : ''}
+
+    ${lesson.recommendedProducts && lesson.recommendedProducts.length > 0 ? `
+    <div style="background: #f9fafb; border: 2px solid #e5e7eb; border-radius: 8px; padding: 25px; margin: 30px 0;">
+      <h4 style="color: #7f1d2b; margin: 0 0 15px 0; display: flex; align-items: center;">
+        <span style="margin-right: 10px;">🛍️</span>
+        Perfect Practice Products
+      </h4>
+      <p style="margin: 0 0 15px 0; color: #6b7280;">
+        Apply today's lesson with these recommended sambals:
+      </p>
+      <ul style="margin: 0; color: #374151; padding-left: 20px;">
+        ${lesson.recommendedProducts.map((product: string) => `<li style="margin: 5px 0;">${product}</li>`).join('')}
+      </ul>
+      <div style="text-align: center; margin: 20px 0 0 0;">
+        <a href="https://www.spiceislandindonesia.com/shop" class="cta-button" style="font-size: 16px; padding: 12px 24px;">
+          Shop Sambal Collection
+        </a>
+      </div>
+    </div>
+    ` : ''}
+
+    <div style="background: #7f1d2b; color: white; padding: 25px; border-radius: 8px; margin: 30px 0; text-align: center;">
+      <h4 style="color: #d4af37; margin: 0 0 15px 0;">📝 Your Homework</h4>
+      <p style="margin: 0 0 15px 0; opacity: 0.9;">
+        Try one technique from today's lesson and share your experience! Reply to this email or tag us on social media with your creation.
+      </p>
+      <p style="margin: 0; font-size: 14px; opacity: 0.8;">
+        Next lesson arrives in 2 weeks: <strong>Lesson ${lesson.lessonNumber + 1}</strong>
+      </p>
+    </div>
+
+    <p class="closing-text">
+      Remember, mastering Indonesian spices is a journey of discovery. Each lesson builds on the previous one, so take your time to practice these techniques before moving forward.
+    </p>
+    
+    <p class="closing-text">
+      Questions about today's lesson? Simply reply to this email - I read every response personally!
+    </p>
+    
+    <p class="closing-text">
+      Keep exploring those authentic Indonesian flavors,<br>
+      <strong>Chef Yossie</strong><br>
+      <em>Your Indonesian Spice School Instructor</em>
+    </p>
+  `;
+  
+  return getBaseEmailTemplate(
+    data,
+    lesson.title,
+    `Lesson ${lesson.lessonNumber}: ${lesson.difficulty} Level Indonesian Spice Education`,
+    contentHtml
+  );
+};
+
+// Win-back Email Templates
+
+// Win-back Email 1: "We miss you" + what's new
+export const getWinBackEmail1Html = (data: any) => {
+  const { firstName = '', monthsInactive, lastPurchaseDate, favoriteProduct, customerSince } = data;
+  const name = firstName || 'Valued Customer';
+  
+  const timeAway = monthsInactive < 12 
+    ? `${monthsInactive} months` 
+    : `over ${Math.floor(monthsInactive / 12)} year${Math.floor(monthsInactive / 12) > 1 ? 's' : ''}`;
+  
+  const contentHtml = `
+    <h2 class="greeting">
+      We Miss You, ${name}!
+    </h2>
+    
+    <p class="intro-text">
+      It's been ${timeAway} since your last order${lastPurchaseDate ? ` on ${lastPurchaseDate.toLocaleDateString()}` : ''}, and we've been thinking about you. Your taste for authentic Indonesian flavors made such an impression on us!
+    </p>
+
+    ${favoriteProduct ? `
+    <div style="background: #fef9f1; border: 2px solid #d4af37; border-radius: 8px; padding: 25px; margin: 30px 0; text-align: center;">
+      <h3 style="color: #7f1d2b; margin: 0 0 15px 0;">
+        🌶️ Remember Your Favorite?
+      </h3>
+      <p style="margin: 0; color: #57534e; font-size: 16px;">
+        You loved our <strong>${favoriteProduct}</strong> - and it's been waiting for you!
+      </p>
+    </div>
+    ` : ''}
+
+    <h3 class="benefits-title">
+      🎉 Here's What You've Missed:
+    </h3>
+    
+    <ul class="benefits-list">
+      <li><strong>New Sambal Varieties:</strong> We've expanded our collection with regional specialties</li>
+      <li><strong>Improved Recipes:</strong> Even more authentic flavors based on customer feedback</li>
+      <li><strong>UK Ingredient Guides:</strong> New resources for cooking Indonesian at home</li>
+      <li><strong>Community Stories:</strong> Amazing customer creations and recipe adaptations</li>
+      <li><strong>Seasonal Collections:</strong> Limited edition sambals for special occasions</li>
+    </ul>
+
+    <div style="background: linear-gradient(135deg, #7f1d2b 0%, #962838 100%); color: white; padding: 30px; border-radius: 8px; margin: 30px 0; text-align: center;">
+      <h3 style="color: #d4af37; margin: 0 0 15px 0;">
+        👨‍🍳 A Personal Message from Chef Yossie
+      </h3>
+      <p style="margin: 0; opacity: 0.9; font-style: italic;">
+        "${name}, your appreciation for authentic Indonesian cuisine inspired me to keep perfecting our sambals. I'd love to share what we've been working on - flavors that I think will surprise and delight you all over again."
+      </p>
+    </div>
+
+    <div style="text-align: center; margin: 40px 0;">
+      <a href="https://www.spiceislandindonesia.com/shop" class="cta-button">
+        See What's New
+      </a>
+    </div>
+
+    <p class="closing-text">
+      No pressure - we're just happy to reconnect. Whether you decide to explore our new offerings or not, you'll always be part of our Spice Island Indonesia family.
+    </p>
+    
+    <p class="closing-text">
+      Warmest regards,<br>
+      <strong>Chef Yossie & The Team</strong><br>
+      <em>Spice Island Indonesia</em>
+    </p>
+  `;
+  
+  return getBaseEmailTemplate(
+    data,
+    "We Miss You!",
+    "See what's new at Spice Island Indonesia",
+    contentHtml
+  );
+};
+
+// Win-back Email 2: Exclusive comeback discount
+export const getWinBackEmail2Html = (data: any) => {
+  const { firstName = '', totalPurchases, totalSpent, favoriteProduct } = data;
+  const name = firstName || 'Friend';
+  
+  const loyaltyMessage = totalPurchases && totalPurchases > 1 
+    ? `As one of our repeat customers (${totalPurchases} orders!)` 
+    : 'As a valued member of our community';
+  
+  const contentHtml = `
+    <h2 class="greeting">
+      Your Exclusive Welcome Back Gift!
+    </h2>
+    
+    <p class="intro-text">
+      ${loyaltyMessage}, you deserve something special. We've prepared an exclusive comeback offer just for you.
+    </p>
+
+    <div class="discount-section">
+      <div class="discount-content">
+        <h3 class="discount-title">Welcome Back Gift</h3>
+        <p class="discount-description">Enjoy <strong>20% off everything</strong> - our biggest discount ever!</p>
+        <div class="discount-code">WELCOME20</div>
+        <p class="discount-validity">Valid for 14 days • Free UK delivery included</p>
+      </div>
+    </div>
+
+    ${totalSpent ? `
+    <div style="background: #f9fafb; border: 2px solid #e5e7eb; border-radius: 8px; padding: 25px; margin: 30px 0; text-align: center;">
+      <h4 style="color: #7f1d2b; margin: 0 0 10px 0;">🏆 Your Loyalty Rewards</h4>
+      <p style="margin: 0; color: #6b7280;">
+        You've invested <strong>£${totalSpent.toFixed(2)}</strong> in authentic Indonesian cuisine with us. This 20% discount is our way of saying thank you for being such a dedicated customer.
+      </p>
+    </div>
+    ` : ''}
+
+    <h3 class="benefits-title">
+      🛍️ Perfect Time to Stock Up:
+    </h3>
+    
+    <ul class="benefits-list">
+      <li><strong>Complete Your Collection:</strong> Try the sambals you haven't experienced yet</li>
+      <li><strong>Stock Your Pantry:</strong> Save on bulk orders with 20% off</li>
+      <li><strong>Gift to Friends:</strong> Share authentic Indonesian flavors at a great price</li>
+      <li><strong>New Seasonal Varieties:</strong> Limited-time flavors now available</li>
+    </ul>
+
+    ${favoriteProduct ? `
+    <div style="background: linear-gradient(135deg, #fef9f1 0%, #fdf2e1 100%); border-left: 4px solid #d4af37; padding: 25px; margin: 30px 0; border-radius: 0 8px 8px 0;">
+      <h4 style="color: #7f1d2b; margin: 0 0 15px 0;">
+        💡 Recommendation Just for You
+      </h4>
+      <p style="margin: 0; color: #57534e;">
+        Since you loved <strong>${favoriteProduct}</strong>, we think you'd enjoy pairing it with our complementary varieties. The 20% discount makes it perfect timing to explore!
+      </p>
+    </div>
+    ` : ''}
+
+    <div style="text-align: center; margin: 40px 0;">
+      <a href="https://www.spiceislandindonesia.com/shop?discount=WELCOME20" class="cta-button">
+        Shop with 20% Off
+      </a>
+    </div>
+
+    <div style="background: #7f1d2b; color: white; padding: 25px; border-radius: 8px; margin: 30px 0; text-align: center;">
+      <h4 style="color: #d4af37; margin: 0 0 15px 0;">⏰ Limited Time Only</h4>
+      <p style="margin: 0; opacity: 0.9;">
+        This exclusive 20% discount expires in 14 days. We wanted to give you first access before anyone else!
+      </p>
+    </div>
+
+    <p class="closing-text">
+      This offer is our personal invitation back to the authentic Indonesian flavors you enjoyed. No strings attached - just genuine appreciation for your past support.
+    </p>
+    
+    <p class="closing-text">
+      Hope to welcome you back soon,<br>
+      <strong>The Spice Island Indonesia Team</strong>
+    </p>
+  `;
+  
+  return getBaseEmailTemplate(
+    data,
+    "Your Exclusive 20% Off Gift",
+    "Welcome back with our biggest discount ever",
+    contentHtml
+  );
+};
+
+// Win-back Email 3: Feedback request + final incentive
+export const getWinBackEmail3Html = (data: any) => {
+  const { firstName = '', monthsInactive } = data;
+  const name = firstName || 'Friend';
+  
+  const contentHtml = `
+    <h2 class="greeting">
+      Before You Go... Help Us Improve
+    </h2>
+    
+    <p class="intro-text">
+      We've reached out a couple of times because we genuinely value your experience with Indonesian cuisine. If our sambals aren't the right fit anymore, we completely understand - but would you help us learn why?
+    </p>
+
+    <div style="background: #f9fafb; border: 2px solid #e5e7eb; border-radius: 8px; padding: 25px; margin: 30px 0;">
+      <h3 style="color: #7f1d2b; margin: 0 0 20px 0; text-align: center;">
+        📝 2-Minute Feedback Survey
+      </h3>
+      <p style="margin: 0 0 20px 0; color: #6b7280; text-align: center;">
+        Your honest feedback helps us improve for future customers who love Indonesian food as much as you do.
+      </p>
+      
+      <div style="text-align: center;">
+        <a href="https://www.spiceislandindonesia.com/feedback?customer=${encodeURIComponent(data.email || '')}" 
+           style="display: inline-block; background: #7f1d2b; color: white; text-decoration: none; padding: 12px 24px; border-radius: 4px; font-weight: 600; margin-bottom: 15px;">
+          Share Your Feedback
+        </a>
+      </div>
+      
+      <p style="margin: 0; color: #9ca3af; font-size: 14px; text-align: center;">
+        Tell us what we could do better, what you'd like to see, or why you moved on
+      </p>
+    </div>
+
+    <div class="discount-section" style="background: linear-gradient(135deg, #059669 0%, #10b981 100%);">
+      <div class="discount-content">
+        <h3 style="color: white; margin: 0 0 15px 0;">Final Thank You Gift</h3>
+        <p style="color: #d1fae5; margin: 0 0 20px 0;">Complete the survey and get <strong>25% off</strong> if you ever want to try us again</p>
+        <div style="font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 700; color: white; letter-spacing: 3px; padding: 15px; background: rgba(0,0,0,0.2); border: 1px dashed white; border-radius: 4px; display: inline-block;">
+          FEEDBACK25
+        </div>
+        <p style="color: #d1fae5; margin: 15px 0 0 0; font-size: 14px;">Valid forever • No expiry date</p>
+      </div>
+    </div>
+
+    <h3 class="benefits-title">
+      🤝 What We've Learned from Others:
+    </h3>
+    
+    <ul class="benefits-list">
+      <li><strong>Heat Levels:</strong> Some prefer milder options (we're working on it!)</li>
+      <li><strong>Packaging Sizes:</strong> Different household sizes need different portions</li>
+      <li><strong>Recipe Ideas:</strong> More UK-specific cooking suggestions needed</li>
+      <li><strong>Ingredient Lists:</strong> Clearer allergy and dietary information</li>
+    </ul>
+
+    <div style="background: linear-gradient(135deg, #fef9f1 0%, #fdf2e1 100%); border-left: 4px solid #d4af37; padding: 25px; margin: 30px 0; border-radius: 0 8px 8px 0;">
+      <h4 style="color: #7f1d2b; margin: 0 0 15px 0;">
+        💭 Your Voice Matters
+      </h4>
+      <p style="margin: 0; color: #57534e; font-style: italic;">
+        Whether you tell us we're too spicy, not authentic enough, or simply that your tastes have changed - every piece of feedback helps us serve future customers better. We genuinely appreciate your honesty.
+      </p>
+    </div>
+
+    <p class="closing-text">
+      If Indonesian cuisine isn't for you anymore, that's completely fine. But if there's anything we can do better, please let us know. Either way, thank you for giving us a chance.
+    </p>
+    
+    <p class="closing-text">
+      With gratitude and respect,<br>
+      <strong>Chef Yossie & The Spice Island Indonesia Team</strong>
+    </p>
+  `;
+  
+  return getBaseEmailTemplate(
+    data,
+    "Help Us Improve",
+    "Your feedback matters + final 25% off gift",
+    contentHtml
+  );
+};
+
+// Birthday Email Template
+export function getBirthdayEmailHtml(data: EmailTemplateData): string {
+  const contentHtml = `
+    <div class="hero-section" style="background: linear-gradient(135deg, #7f1d2b 0%, #b52d3c 100%); text-align: center; padding: 40px 30px; color: white;">
+      <h1 style="font-family: 'Cormorant Garamond', serif; font-size: 36px; margin: 0 0 15px 0;">
+        🎉 Selamat Ulang Tahun!
+      </h1>
+      <h2 style="font-size: 24px; margin: 0 0 20px 0; font-weight: 600;">
+        Happy Birthday, ${data.firstName || 'Friend'}!
+      </h2>
+      <p style="font-size: 18px; margin: 0; opacity: 0.95;">
+        Wishing you a year filled with spice, flavor, and joy
+      </p>
+    </div>
+
+    <div class="content-section">
+      <p style="font-size: 18px; color: #7f1d2b; font-weight: 600; margin-bottom: 25px;">
+        Another year of amazing flavors awaits! 🌶️
+      </p>
+
+      <p>
+        Birthdays are special occasions that deserve to be celebrated with bold, authentic flavors. As you mark another year of life's journey, we want to add some Indonesian spice to your celebration!
+      </p>
+
+      <div class="discount-section" style="background: linear-gradient(135deg, #d4af37 0%, #f59e0b 100%);">
+        <div class="discount-content">
+          <h3 style="color: white; margin: 0 0 15px 0;">Your Birthday Gift</h3>
+          <p style="color: #fef3c7; margin: 0 0 20px 0;">Celebrate with <strong>30% off</strong> your next order</p>
+          <div style="font-family: 'Cormorant Garamond', serif; font-size: 32px; font-weight: 700; color: white; letter-spacing: 4px; padding: 20px; background: rgba(0,0,0,0.2); border: 2px dashed white; border-radius: 8px; display: inline-block;">
+            BIRTHDAY30
+          </div>
+          <p style="color: #fef3c7; margin: 15px 0 0 0; font-size: 14px;">Valid for 30 days • Use as many times as you like</p>
+        </div>
+      </div>
+
+      <div style="background: linear-gradient(135deg, #fef9f1 0%, #fdf2e1 100%); border-left: 4px solid #d4af37; padding: 25px; margin: 30px 0; border-radius: 0 8px 8px 0;">
+        <h4 style="color: #7f1d2b; margin: 0 0 15px 0;">
+          🎂 Birthday Recipe Inspiration
+        </h4>
+        <p style="margin: 0; color: #57534e;">
+          Why not celebrate with some Indonesian-inspired birthday dishes? Our sambal makes an amazing addition to birthday BBQs, special nasi goreng, or even spicy birthday breakfast eggs!
+        </p>
+      </div>
+
+      <p class="closing-text">
+        May this new year of your life be filled with wonderful discoveries, amazing flavors, and all the joy that authentic Indonesian cuisine can bring to your table.
+      </p>
+      
+      <p class="closing-text">
+        With warmest birthday wishes,<br>
+        <strong>Chef Yossie & The Spice Island Indonesia Team</strong>
+      </p>
+    </div>
+  `;
+  
+  return getBaseEmailTemplate(
+    data,
+    "Happy Birthday!",
+    "Your special birthday gift from Spice Island Indonesia",
+    contentHtml
+  );
+};
+
+// Customer Anniversary Email Template
+export function getCustomerAnniversaryEmailHtml(data: EmailTemplateData & { anniversaryYear: number }): string {
+  const contentHtml = `
+    <div class="hero-section" style="background: linear-gradient(135deg, #7f1d2b 0%, #b52d3c 100%); text-align: center; padding: 40px 30px; color: white;">
+      <h1 style="font-family: 'Cormorant Garamond', serif; font-size: 36px; margin: 0 0 15px 0;">
+        🎊 ${data.anniversaryYear} Year${data.anniversaryYear > 1 ? 's' : ''} Together!
+      </h1>
+      <h2 style="font-size: 24px; margin: 0 0 20px 0; font-weight: 600;">
+        Thank you for ${data.anniversaryYear} year${data.anniversaryYear > 1 ? 's' : ''} of flavor, ${data.firstName || 'Friend'}!
+      </h2>
+      <p style="font-size: 18px; margin: 0; opacity: 0.95;">
+        Celebrating your journey with authentic Indonesian cuisine
+      </p>
+    </div>
+
+    <div class="content-section">
+      <p style="font-size: 18px; color: #7f1d2b; font-weight: 600; margin-bottom: 25px;">
+        Time flies when you're enjoying amazing sambal! 🌶️
+      </p>
+
+      <p>
+        ${data.anniversaryYear === 1 
+          ? "It's been exactly one year since you first discovered the authentic taste of Indonesian sambal with us. What a delicious journey it's been!"
+          : `For ${data.anniversaryYear} wonderful years, you've been part of our Spice Island Indonesia family. From your first taste of our sambal to today, thank you for making authentic Indonesian flavors part of your culinary story.`
+        }
+      </p>
+
+      <div class="discount-section" style="background: linear-gradient(135deg, #d4af37 0%, #f59e0b 100%);">
+        <div class="discount-content">
+          <h3 style="color: white; margin: 0 0 15px 0;">Anniversary Celebration</h3>
+          <p style="color: #fef3c7; margin: 0 0 20px 0;">Enjoy <strong>${data.anniversaryYear === 1 ? '25%' : '30%'} off</strong> to celebrate ${data.anniversaryYear} year${data.anniversaryYear > 1 ? 's' : ''} together</p>
+          <div style="font-family: 'Cormorant Garamond', serif; font-size: 30px; font-weight: 700; color: white; letter-spacing: 3px; padding: 18px; background: rgba(0,0,0,0.2); border: 2px dashed white; border-radius: 6px; display: inline-block;">
+            ${data.anniversaryYear === 1 ? 'YEAR1THANKS' : `YEAR${data.anniversaryYear}JOY`}
+          </div>
+          <p style="color: #fef3c7; margin: 15px 0 0 0; font-size: 14px;">Valid for 60 days • Perfect for stocking up on favorites</p>
+        </div>
+      </div>
+
+      <div style="background: linear-gradient(135deg, #fef9f1 0%, #fdf2e1 100%); border-left: 4px solid #d4af37; padding: 25px; margin: 30px 0; border-radius: 0 8px 8px 0;">
+        <h4 style="color: #7f1d2b; margin: 0 0 15px 0;">
+          🍽️ ${data.anniversaryYear === 1 ? 'Your First Year Favorites' : 'Anniversary Recipe Ideas'}
+        </h4>
+        <p style="margin: 0; color: #57534e;">
+          ${data.anniversaryYear === 1
+            ? "Have you tried all our sambal varieties yet? This discount is perfect for exploring new flavors or stocking up on your discovered favorites."
+            : "After all these years together, you probably have your favorite ways to use our sambal. Why not try something new for your anniversary? Our sambal pairs beautifully with seasonal ingredients and special occasion dishes."
+          }
+        </p>
+      </div>
+
+      <p class="closing-text">
+        ${data.anniversaryYear === 1
+          ? "Here's to many more years of bringing the authentic taste of Indonesia to your kitchen. Thank you for choosing quality and authenticity."
+          : `${data.anniversaryYear} years of shared meals, discovered flavors, and authentic Indonesian cuisine. Thank you for being such an important part of our story.`
+        }
+      </p>
+      
+      <p class="closing-text">
+        With deep appreciation and warmest regards,<br>
+        <strong>Chef Yossie & The Spice Island Indonesia Team</strong>
+      </p>
+    </div>
+  `;
+  
+  return getBaseEmailTemplate(
+    data,
+    `${data.anniversaryYear} Year Anniversary!`,
+    `Celebrating ${data.anniversaryYear} year${data.anniversaryYear > 1 ? 's' : ''} of flavor together`,
+    contentHtml
+  );
+};
