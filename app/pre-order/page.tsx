@@ -200,9 +200,6 @@ export default function PreOrderPage() {
             <div>
               <PreOrderForm 
                 product={featuredProduct}
-                onSuccess={(preorderId) => {
-                  console.log("Pre-order successful:", preorderId);
-                }}
               />
             </div>
           </div>

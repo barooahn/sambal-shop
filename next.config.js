@@ -82,7 +82,7 @@ const nextConfig = {
 			'@supabase/supabase-js',
 			'sonner'
 		],
-		optimizeCss: true, // Enable CSS optimization
+		// optimizeCss: true, // Disabled due to missing 'critters' dependency
 	},
 	
 	// External packages for server components (moved from experimental)
