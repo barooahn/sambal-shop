@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Instagram, Facebook } from "@/components/ui/icons";
 import TrackedExternalLink from "@/components/analytics/TrackedExternalLink";
 import { getInternalUrls } from "@/lib/url-utils";
+import CookieSettingsLink from "@/components/consent/CookieSettingsLink";
 
 export default function Footer() {
 	const urls = getInternalUrls();
@@ -88,7 +89,11 @@ export default function Footer() {
 							</li>
 							<li>
 								<Link
-									href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/gift-set`}
+									href={`${
+										process.env
+											.NEXT_PUBLIC_SITE_URL ||
+										"https://www.spiceislandindonesia.com"
+									}/gift-set`}
 									className='text-gold-100 hover:underline underline-offset-4 transition-colors'
 								>
 									Gift Set
@@ -96,7 +101,11 @@ export default function Footer() {
 							</li>
 							<li>
 								<Link
-									href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/gift-set-indonesian`}
+									href={`${
+										process.env
+											.NEXT_PUBLIC_SITE_URL ||
+										"https://www.spiceislandindonesia.com"
+									}/gift-set-indonesian`}
 									className='text-gold-100 hover:underline underline-offset-4 transition-colors'
 								>
 									Indonesian Gift Set
@@ -104,7 +113,11 @@ export default function Footer() {
 							</li>
 							<li>
 								<Link
-									href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/sambal-bali-sweet-spicy`}
+									href={`${
+										process.env
+											.NEXT_PUBLIC_SITE_URL ||
+										"https://www.spiceislandindonesia.com"
+									}/sambal-bali-sweet-spicy`}
 									className='text-gold-100 hover:underline underline-offset-4 transition-colors'
 								>
 									Sambal Bali Sweet & Spicy
@@ -136,7 +149,11 @@ export default function Footer() {
 							</li>
 							<li>
 								<Link
-									href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/about`}
+									href={`${
+										process.env
+											.NEXT_PUBLIC_SITE_URL ||
+										"https://www.spiceislandindonesia.com"
+									}/about`}
 									className='text-gold-200 hover:text-gold-100 transition-colors'
 								>
 									Our Story
@@ -152,7 +169,11 @@ export default function Footer() {
 							</li>
 							<li>
 								<Link
-									href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/sriracha-alternative`}
+									href={`${
+										process.env
+											.NEXT_PUBLIC_SITE_URL ||
+										"https://www.spiceislandindonesia.com"
+									}/sriracha-alternative`}
 									className='text-gold-200 hover:text-gold-100 transition-colors'
 								>
 									Sriracha Alternative
@@ -160,7 +181,11 @@ export default function Footer() {
 							</li>
 							<li>
 								<Link
-									href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/hot-sauce-vs-sambal`}
+									href={`${
+										process.env
+											.NEXT_PUBLIC_SITE_URL ||
+										"https://www.spiceislandindonesia.com"
+									}/hot-sauce-vs-sambal`}
 									className='text-gold-200 hover:text-gold-100 transition-colors'
 								>
 									Hot Sauce vs Sambal
@@ -168,7 +193,11 @@ export default function Footer() {
 							</li>
 							<li>
 								<Link
-									href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/indonesian-sambal-london`}
+									href={`${
+										process.env
+											.NEXT_PUBLIC_SITE_URL ||
+										"https://www.spiceislandindonesia.com"
+									}/indonesian-sambal-london`}
 									className='text-gold-200 hover:text-gold-100 transition-colors'
 								>
 									Indonesian Sambal in London
@@ -176,7 +205,11 @@ export default function Footer() {
 							</li>
 							<li>
 								<Link
-									href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/wholesale`}
+									href={`${
+										process.env
+											.NEXT_PUBLIC_SITE_URL ||
+										"https://www.spiceislandindonesia.com"
+									}/wholesale`}
 									className='text-gold-200 hover:text-gold-100 transition-colors'
 								>
 									Wholesale
@@ -192,7 +225,11 @@ export default function Footer() {
 						<ul className='space-y-3 font-body'>
 							<li>
 								<Link
-									href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/indonesian-sambal-london`}
+									href={`${
+										process.env
+											.NEXT_PUBLIC_SITE_URL ||
+										"https://www.spiceislandindonesia.com"
+									}/indonesian-sambal-london`}
 									className='text-gold-200 hover:text-gold-100 transition-colors'
 								>
 									London Delivery
@@ -200,7 +237,11 @@ export default function Footer() {
 							</li>
 							<li>
 								<Link
-									href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/sambal-delivery-manchester`}
+									href={`${
+										process.env
+											.NEXT_PUBLIC_SITE_URL ||
+										"https://www.spiceislandindonesia.com"
+									}/sambal-delivery-manchester`}
 									className='text-gold-200 hover:text-gold-100 transition-colors'
 								>
 									Manchester Delivery
@@ -232,7 +273,11 @@ export default function Footer() {
 							</li>
 							<li>
 								<Link
-									href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/sambal-eggs-breakfast`}
+									href={`${
+										process.env
+											.NEXT_PUBLIC_SITE_URL ||
+										"https://www.spiceislandindonesia.com"
+									}/sambal-eggs-breakfast`}
 									className='text-gold-200 hover:text-gold-100 transition-colors'
 								>
 									Sambal Eggs Breakfast
@@ -248,7 +293,11 @@ export default function Footer() {
 							</li>
 							<li>
 								<Link
-									href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/sambal-noodle-sauce`}
+									href={`${
+										process.env
+											.NEXT_PUBLIC_SITE_URL ||
+										"https://www.spiceislandindonesia.com"
+									}/sambal-noodle-sauce`}
 									className='text-gold-200 hover:text-gold-100 transition-colors'
 								>
 									Sambal Noodle Sauce
@@ -256,7 +305,11 @@ export default function Footer() {
 							</li>
 							<li>
 								<Link
-									href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/uk-indonesian-food-delivery`}
+									href={`${
+										process.env
+											.NEXT_PUBLIC_SITE_URL ||
+										"https://www.spiceislandindonesia.com"
+									}/uk-indonesian-food-delivery`}
 									className='text-gold-200 hover:text-gold-100 transition-colors'
 								>
 									UK Indonesian Food Delivery
@@ -272,7 +325,11 @@ export default function Footer() {
 						<ul className='space-y-3 font-body'>
 							<li>
 								<Link
-									href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/contact`}
+									href={`${
+										process.env
+											.NEXT_PUBLIC_SITE_URL ||
+										"https://www.spiceislandindonesia.com"
+									}/contact`}
 									className='text-gold-200 hover:text-gold-100 transition-colors'
 								>
 									Get In Touch
@@ -280,7 +337,11 @@ export default function Footer() {
 							</li>
 							<li>
 								<Link
-									href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/feedback`}
+									href={`${
+										process.env
+											.NEXT_PUBLIC_SITE_URL ||
+										"https://www.spiceislandindonesia.com"
+									}/feedback`}
 									className='text-gold-200 hover:text-gold-100 transition-colors'
 								>
 									Leave Feedback
@@ -288,7 +349,11 @@ export default function Footer() {
 							</li>
 							<li>
 								<Link
-									href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/success`}
+									href={`${
+										process.env
+											.NEXT_PUBLIC_SITE_URL ||
+										"https://www.spiceislandindonesia.com"
+									}/success`}
 									className='text-gold-200 hover:text-gold-100 transition-colors'
 								>
 									Order Success
@@ -296,7 +361,11 @@ export default function Footer() {
 							</li>
 							<li>
 								<Link
-									href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/unsubscribe`}
+									href={`${
+										process.env
+											.NEXT_PUBLIC_SITE_URL ||
+										"https://www.spiceislandindonesia.com"
+									}/unsubscribe`}
 									className='text-gold-200 hover:text-gold-100 transition-colors'
 								>
 									Unsubscribe
@@ -333,29 +402,45 @@ export default function Footer() {
 						</div>
 						<div className='flex space-x-6 text-gold-300 text-sm font-body'>
 							<Link
-								href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/privacy`}
+								href={`${
+									process.env.NEXT_PUBLIC_SITE_URL ||
+									"https://www.spiceislandindonesia.com"
+								}/privacy`}
 								className='hover:text-gold-100 transition-colors'
 							>
 								Privacy Policy
 							</Link>
 							<Link
-								href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/terms`}
+								href={`${
+									process.env.NEXT_PUBLIC_SITE_URL ||
+									"https://www.spiceislandindonesia.com"
+								}/terms`}
 								className='hover:text-gold-100 transition-colors'
 							>
 								Terms of Service
 							</Link>
 							<Link
-								href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/shipping`}
+								href={`${
+									process.env.NEXT_PUBLIC_SITE_URL ||
+									"https://www.spiceislandindonesia.com"
+								}/shipping`}
 								className='hover:text-gold-100 transition-colors'
 							>
 								Shipping Info
 							</Link>
 							<Link
-								href={`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.spiceislandindonesia.com'}/returns`}
+								href={`${
+									process.env.NEXT_PUBLIC_SITE_URL ||
+									"https://www.spiceislandindonesia.com"
+								}/returns`}
 								className='hover:text-gold-100 transition-colors'
 							>
 								Returns Policy
 							</Link>
+							{/* Cookie settings opens the consent banner/modal */}
+							<CookieSettingsLink className='hover:text-gold-100 transition-colors underline underline-offset-4'>
+								Cookie settings
+							</CookieSettingsLink>
 						</div>
 					</div>
 				</div>

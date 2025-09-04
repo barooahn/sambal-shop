@@ -1,9 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import {
-	Inter,
-	Playfair_Display,
-} from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
 // Cormorant_Garamond and Great_Vibes moved to page-level imports to reduce global bundle
 import Header from "@/components/navigation/Header";
 import ThirdPartyScripts from "@/components/optimization/ThirdPartyScripts";
@@ -48,15 +45,20 @@ const Toaster = dynamic(
 );
 
 // Dynamically import PageViewTracker to reduce initial bundle
-const PageViewTracker = dynamic(() => import("@/components/analytics/PageViewTracker"), {
-	loading: () => null,
-});
+const PageViewTracker = dynamic(
+	() => import("@/components/analytics/PageViewTracker"),
+	{
+		loading: () => null,
+	}
+);
 
 import PerformanceOptimizer, {
 	criticalCSS,
 	criticalImages,
 } from "@/components/optimization/PerformanceOptimizer";
 import ServiceWorkerRegistration from "@/components/optimization/ServiceWorkerRegistration";
+import { ConsentProvider } from "@/components/consent/ConsentProvider";
+import CookieBanner from "@/components/consent/CookieBanner";
 
 const inter = Inter({
 	subsets: ["latin"],
@@ -278,40 +280,46 @@ export default function RootLayout({
 			<body
 				className={`${inter.variable} ${playfair.variable} ${inter.className} bg-coconut-50`}
 			>
-				<ThirdPartyScripts
-					measurementId={
-						process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
-					}
-				/>
-				{/* Track SPA navigations in GA4 */}
-				{process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ? (
-					<Suspense fallback={null}>
-						<PageViewTracker />
-					</Suspense>
-				) : null}
-				<WebVitals />
-				{/* ServiceWorkerRegistration disabled for testing */}
+				{/* GDPR Consent Provider & Banner */}
+				{/* Wrap body content to provide consent context */}
+				<ConsentProvider>
+					<ThirdPartyScripts
+						measurementId={
+							process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
+						}
+					/>
+					{/* Track SPA navigations in GA4 only when GA is enabled. The component will no-op if gtag is absent. */}
+					{process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ? (
+						<Suspense fallback={null}>
+							<PageViewTracker />
+						</Suspense>
+					) : null}
+					<WebVitals />
+					{/* ServiceWorkerRegistration disabled for testing */}
 
-				{/* Skip to main content for keyboard navigation */}
-				<a
-					href='#main-content'
-					className='sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-white focus:text-gray-900 focus:rounded focus:shadow-lg focus:underline'
-				>
-					Skip to main content
-				</a>
+					{/* Skip to main content for keyboard navigation */}
+					<a
+						href='#main-content'
+						className='sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-white focus:text-gray-900 focus:rounded focus:shadow-lg focus:underline'
+					>
+						Skip to main content
+					</a>
 
-				<Header />
-				<Breadcrumb />
-				<main
-					id='main-content'
-					role='main'
-					className='min-h-screen mb-16'
-				>
-					{children}
-				</main>
-				<Footer />
-				<UKExitIntentPopup />
-				<Toaster />
+					<Header />
+					<Breadcrumb />
+					<main
+						id='main-content'
+						role='main'
+						className='min-h-screen mb-16'
+					>
+						{children}
+					</main>
+					<Footer />
+					<UKExitIntentPopup />
+					<Toaster />
+					{/* Cookie banner renders conditionally */}
+					<CookieBanner />
+				</ConsentProvider>
 			</body>
 		</html>
 	);
