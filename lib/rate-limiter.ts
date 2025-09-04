@@ -27,6 +27,11 @@ const RATE_LIMITS = {
     windowMs: 60 * 60 * 1000, // 1 hour
     maxRequests: 10, // requests per window
   },
+  // Pre-order submissions
+  preorder: {
+    windowMs: 60 * 60 * 1000, // 1 hour
+    maxRequests: 5, // requests per window
+  },
   // Feedback submission
   feedback: {
     windowMs: 60 * 60 * 1000, // 1 hour

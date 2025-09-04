@@ -11,12 +11,13 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import GlassCard from "@/components/ui/GlassCard";
-import { Flame, Leaf, Star, ShoppingCart, Loader2, Bell } from "@/components/ui/icons";
+import { Flame, Leaf, Star, ShoppingCart, Loader2, Bell, Calendar, Gift } from "@/components/ui/icons";
 import SpiceHeatIndicator, {
 	HeatLevelBadge,
 } from "@/components/ui/SpiceHeatIndicator";
 import { Product } from "@/src/stripe-config";
 import { toast } from "sonner";
+import Link from "next/link";
 
 interface ProductCardProps {
 	product: Product;
@@ -25,8 +26,10 @@ interface ProductCardProps {
 export function ProductCard({ product }: ProductCardProps) {
 	const [loading, setLoading] = useState(false);
 	const [joining, setJoining] = useState(false);
+	const [showPreOrder, setShowPreOrder] = useState(false);
 
 	const SALES_ENABLED = process.env.NEXT_PUBLIC_SALES_ENABLED === "true";
+	const PRE_ORDER_ENABLED = true; // Pre-orders are now available
 
 	const handlePurchase = async () => {
 		// For static export, redirect to external checkout or show message
@@ -189,6 +192,45 @@ export function ProductCard({ product }: ProductCardProps) {
 							</>
 						)}
 					</Button>
+				) : PRE_ORDER_ENABLED ? (
+					<div className="space-y-3 mt-6">
+						{/* Pre-order banner */}
+						<div className="bg-gradient-to-r from-amber-500 to-orange-600 text-white p-3 rounded-lg text-center">
+							<div className="flex items-center justify-center space-x-2 mb-1">
+								<Gift className="w-4 h-4" />
+								<span className="font-bold text-sm">PRE-ORDER NOW AVAILABLE</span>
+							</div>
+							<p className="text-xs opacity-90">Save £0.50 • No payment until January 2025</p>
+						</div>
+						
+						{/* Pre-order button */}
+						<Link href="/pre-order">
+							<Button className='w-full bg-gradient-to-r from-burgundy-600 to-burgundy-700 hover:from-burgundy-700 hover:to-burgundy-800 text-white font-semibold py-3'>
+								<Calendar className='w-4 h-4 mr-2' />
+								Pre-Order - £{(parseFloat(product.price.replace('£', '')) - 0.50).toFixed(2)}
+							</Button>
+						</Link>
+						
+						{/* Alternative waitlist option */}
+						<Button
+							onClick={handleJoinWaitlist}
+							disabled={joining}
+							variant="outline"
+							className='w-full border-amber-600 text-amber-700 hover:bg-amber-50 font-semibold py-2'
+						>
+							{joining ? (
+								<>
+									<Loader2 className='w-4 h-4 mr-2 animate-spin' />
+									Joining...
+								</>
+							) : (
+								<>
+									<Bell className='w-4 h-4 mr-2' />
+									Or Join Regular Waitlist
+								</>
+							)}
+						</Button>
+					</div>
 				) : (
 					<Button
 						onClick={handleJoinWaitlist}

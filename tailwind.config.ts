@@ -32,10 +32,10 @@ module.exports = {
 		extend: {
 			// Fonts matching your product labels
 			fontFamily: {
-				brand: ["Playfair Display", "serif"], // For main branding
-				elegant: ["Cormorant Garamond", "serif"], // For elegant headings
-				script: ["Dancing Script", "cursive"], // For script text like on labels
-				body: ["Inter", "sans-serif"], // Clean body text
+				brand: ["var(--font-playfair)", "Playfair Display", "serif"], // For main branding
+				elegant: ["var(--font-cormorant)", "Cormorant Garamond", "serif"], // For elegant headings
+				script: ["var(--font-dancing-script)", "Dancing Script", "cursive"], // For script text like on labels
+				body: ["var(--font-inter)", "Inter", "sans-serif"], // Clean body text
 			},
 
 			// Colors matching your product design

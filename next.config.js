@@ -74,9 +74,19 @@ const nextConfig = {
 	},
 	// Performance optimizations for bundle splitting
 	experimental: {
-		optimizePackageImports: ['lucide-react', '@radix-ui/react-icons', 'next'],
-		optimizeCss: false,
+		optimizePackageImports: [
+			'lucide-react', 
+			'@radix-ui/react-icons', 
+			'next',
+			'react-hook-form',
+			'@supabase/supabase-js',
+			'sonner'
+		],
+		optimizeCss: true, // Enable CSS optimization
 	},
+	
+	// External packages for server components (moved from experimental)
+	serverExternalPackages: [],
 	
 	// Modern JavaScript targets to reduce polyfills and bundle size
 	compiler: {
@@ -104,6 +114,22 @@ const nextConfig = {
 							name: 'framework',
 							priority: 40,
 							enforce: true,
+						},
+						// UI Libraries
+						ui: {
+							test: /[\\/]node_modules[\\/](@radix-ui|@tailwindcss|lucide-react)[\\/]/,
+							name: 'ui',
+							priority: 30,
+							enforce: true,
+							reuseExistingChunk: true,
+						},
+						// Analytics and tracking
+						analytics: {
+							test: /[\\/]node_modules[\\/](@supabase|gtag|analytics)[\\/]/,
+							name: 'analytics',
+							priority: 25,
+							enforce: true,
+							reuseExistingChunk: true,
 						},
 						// Large libraries
 						vendor: {

@@ -24,6 +24,7 @@ import FAQSchema from "@/components/seo/FAQSchema";
 import VoiceSearchSchema from "@/components/seo/VoiceSearchSchema";
 import EntityMarkup from "@/components/seo/EntityMarkup";
 import Link from "next/link";
+import Image from "next/image";
 import HeroSection from "@/components/home/HeroSection";
 import ProductShowcase from "@/components/home/ProductShowcase";
 
@@ -42,6 +43,7 @@ import TrustIndicators, {
 	DeliveryGuarantee,
 } from "@/components/ui/TrustIndicators";
 import { Waves, Triangle } from "@/components/ui/icons";
+import PreOrderBanner from "@/components/ui/PreOrderBanner";
 
 // Ingredient configurations for different sections
 const heroIngredients = [
@@ -498,6 +500,9 @@ export default function Home() {
 						}))}
 					/>
 
+					{/* Pre-Order Banner */}
+					<PreOrderBanner compact dismissible className="sticky top-0 z-50" />
+					
 					{/* Hero Section */}
 					<div className='relative'>
 						<HeroSection />
@@ -541,8 +546,15 @@ export default function Home() {
 							<div className='grid md:grid-cols-3 gap-8 mb-12'>
 								{/* Sambal Fried Rice */}
 								<div className='bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow'>
-									<div className='h-48 bg-gradient-to-br from-burgundy-100 to-gold-100 flex items-center justify-center'>
-										<span className='text-4xl'>🍛</span>
+									<div className='h-48 relative overflow-hidden'>
+										<Image
+											src="/images/optimized/sambal-fried-rice-lg.webp"
+											alt="Indonesian Sambal Fried Rice - Traditional nasi goreng with sambal goreng"
+											width={400}
+											height={192}
+											className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+											loading="lazy"
+										/>
 									</div>
 									<div className='p-6'>
 										<h3 className='text-xl font-bold text-burgundy-900 mb-3'>
@@ -563,8 +575,15 @@ export default function Home() {
 
 								{/* Sambal BBQ Marinade */}
 								<div className='bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow'>
-									<div className='h-48 bg-gradient-to-br from-red-100 to-amber-100 flex items-center justify-center'>
-										<span className='text-4xl'>🔥</span>
+									<div className='h-48 relative overflow-hidden'>
+										<Image
+											src="/images/optimized/sambal-bbq-marinade-lg.webp"
+											alt="Sambal BBQ Marinade - Indonesian spicy marinade for grilled chicken and vegetables"
+											width={400}
+											height={192}
+											className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+											loading="lazy"
+										/>
 									</div>
 									<div className='p-6'>
 										<h3 className='text-xl font-bold text-burgundy-900 mb-3'>
@@ -585,8 +604,15 @@ export default function Home() {
 
 								{/* Sambal Scrambled Eggs */}
 								<div className='bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow'>
-									<div className='h-48 bg-gradient-to-br from-gold-100 to-amber-100 flex items-center justify-center'>
-										<span className='text-4xl'>🍳</span>
+									<div className='h-48 relative overflow-hidden'>
+										<Image
+											src="/images/optimized/sambal-scrambled-eggs-lg.webp"
+											alt="Indonesian Sambal Scrambled Eggs - Spicy breakfast dish with traditional sambal"
+											width={400}
+											height={192}
+											className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+											loading="lazy"
+										/>
 									</div>
 									<div className='p-6'>
 										<h3 className='text-xl font-bold text-burgundy-900 mb-3'>
@@ -658,8 +684,15 @@ export default function Home() {
 							<div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12'>
 								{/* Ultimate Guide to Indonesian Sambal */}
 								<div className='bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow'>
-									<div className='h-48 bg-gradient-to-br from-red-200 to-amber-200 flex items-center justify-center'>
-										<span className='text-4xl'>🌶️</span>
+									<div className='h-48 relative overflow-hidden'>
+										<Image
+											src="/images/optimized/ultimate-sambal-guide-lg.webp"
+											alt="Ultimate Guide to Indonesian Sambal - Complete overview of authentic sambal varieties"
+											width={400}
+											height={192}
+											className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+											loading="lazy"
+										/>
 									</div>
 									<div className='p-6'>
 										<h3 className='text-lg font-bold text-burgundy-900 mb-3'>
@@ -679,8 +712,15 @@ export default function Home() {
 
 								{/* Sambal vs Hot Sauce */}
 								<div className='bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow'>
-									<div className='h-48 bg-gradient-to-br from-burgundy-200 to-gold-200 flex items-center justify-center'>
-										<span className='text-4xl'>⚖️</span>
+									<div className='h-48 relative overflow-hidden'>
+										<Image
+											src="/images/optimized/indonesian-spice-mastery-lg.webp"
+											alt="Sambal vs Western Hot Sauce - Comparing Indonesian sambal with Western condiments"
+											width={400}
+											height={192}
+											className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+											loading="lazy"
+										/>
 									</div>
 									<div className='p-6'>
 										<h3 className='text-lg font-bold text-burgundy-900 mb-3'>
@@ -700,8 +740,15 @@ export default function Home() {
 
 								{/* Indonesian Spice Islands History */}
 								<div className='bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow'>
-									<div className='h-48 bg-gradient-to-br from-gold-200 to-amber-200 flex items-center justify-center'>
-										<span className='text-4xl'>🏝️</span>
+									<div className='h-48 relative overflow-hidden'>
+										<Image
+											src="/images/optimized/spice-islands-heritage-lg.webp"
+											alt="Indonesian Spice Islands Heritage - Maluku Islands volcanic soil and traditional spice cultivation"
+											width={400}
+											height={192}
+											className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+											loading="lazy"
+										/>
 									</div>
 									<div className='p-6'>
 										<h3 className='text-lg font-bold text-burgundy-900 mb-3'>
@@ -721,8 +768,15 @@ export default function Home() {
 
 								{/* Indonesian Cooking for British Kitchens */}
 								<div className='bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow'>
-									<div className='h-48 bg-gradient-to-br from-green-200 to-gold-200 flex items-center justify-center'>
-										<span className='text-4xl'>🍽️</span>
+									<div className='h-48 relative overflow-hidden'>
+										<Image
+											src="/images/optimized/indonesian-techniques-uk-kitchen-lg.webp"
+											alt="Indonesian Cooking for British Kitchens - Adapting traditional Indonesian recipes for UK kitchens"
+											width={400}
+											height={192}
+											className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+											loading="lazy"
+										/>
 									</div>
 									<div className='p-6'>
 										<h3 className='text-lg font-bold text-burgundy-900 mb-3'>
@@ -742,8 +796,15 @@ export default function Home() {
 
 								{/* Authentic vs Store Bought */}
 								<div className='bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow'>
-									<div className='h-48 bg-gradient-to-br from-purple-200 to-burgundy-200 flex items-center justify-center'>
-										<span className='text-4xl'>🔍</span>
+									<div className='h-48 relative overflow-hidden'>
+										<Image
+											src="/images/optimized/traditional-sambal-making-lg.webp"
+											alt="Authentic vs Store-Bought Sambal - Traditional sambal making methods and quality comparison"
+											width={400}
+											height={192}
+											className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+											loading="lazy"
+										/>
 									</div>
 									<div className='p-6'>
 										<h3 className='text-lg font-bold text-burgundy-900 mb-3'>
@@ -763,8 +824,15 @@ export default function Home() {
 
 								{/* Indonesian Food Culture Context */}
 								<div className='bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow'>
-									<div className='h-48 bg-gradient-to-br from-orange-200 to-red-200 flex items-center justify-center'>
-										<span className='text-4xl'>🇮🇩</span>
+									<div className='h-48 relative overflow-hidden'>
+										<Image
+											src="/images/optimized/indonesian_vista-lg.webp"
+											alt="Indonesian Food Culture & Context - Cultural significance of sambal in Indonesian daily life and traditions"
+											width={400}
+											height={192}
+											className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+											loading="lazy"
+										/>
 									</div>
 									<div className='p-6'>
 										<h3 className='text-lg font-bold text-burgundy-900 mb-3'>

@@ -1,7 +1,6 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
-// Cormorant_Garamond and Great_Vibes moved to page-level imports to reduce global bundle
+import { Inter, Playfair_Display, Cormorant_Garamond, Dancing_Script } from "next/font/google";
 import Header from "@/components/navigation/Header";
 import ThirdPartyScripts from "@/components/optimization/ThirdPartyScripts";
 import dynamic from "next/dynamic";
@@ -59,6 +58,7 @@ import PerformanceOptimizer, {
 import ServiceWorkerRegistration from "@/components/optimization/ServiceWorkerRegistration";
 import { ConsentProvider } from "@/components/consent/ConsentProvider";
 import CookieBanner from "@/components/consent/CookieBanner";
+import { ErrorBoundary } from "@/components/shared/ErrorBoundary";
 
 const inter = Inter({
 	subsets: ["latin"],
@@ -71,12 +71,25 @@ const playfair = Playfair_Display({
 	subsets: ["latin"],
 	variable: "--font-playfair",
 	display: "swap",
-	weight: ["400", "700"], // Reduced to only necessary weights
+	weight: ["400", "700"],
 	preload: false,
 });
 
-// Cormorant and Great Vibes fonts moved to page-level imports to reduce global bundle
-// Only load these fonts on pages that actually use them
+const cormorant = Cormorant_Garamond({
+	subsets: ["latin"],
+	variable: "--font-cormorant",
+	display: "swap",
+	weight: ["400", "600", "700"],
+	preload: false,
+});
+
+const dancingScript = Dancing_Script({
+	subsets: ["latin"],
+	variable: "--font-dancing-script",
+	display: "swap",
+	weight: ["400", "700"],
+	preload: false,
+});
 
 export const metadata: Metadata = {
 	metadataBase: new URL("https://www.spiceislandindonesia.com"),
@@ -278,7 +291,7 @@ export default function RootLayout({
 				/>
 			</head>
 			<body
-				className={`${inter.variable} ${playfair.variable} ${inter.className} bg-coconut-50`}
+				className={`${inter.variable} ${playfair.variable} ${cormorant.variable} ${dancingScript.variable} ${inter.className} bg-coconut-50`}
 			>
 				{/* GDPR Consent Provider & Banner */}
 				{/* Wrap body content to provide consent context */}
@@ -305,16 +318,27 @@ export default function RootLayout({
 						Skip to main content
 					</a>
 
-					<Header />
-					<Breadcrumb />
+					<ErrorBoundary>
+						<Header />
+					</ErrorBoundary>
+					
+					<ErrorBoundary>
+						<Breadcrumb />
+					</ErrorBoundary>
+					
 					<main
 						id='main-content'
 						role='main'
 						className='min-h-screen mb-16'
 					>
-						{children}
+						<ErrorBoundary>
+							{children}
+						</ErrorBoundary>
 					</main>
-					<Footer />
+					
+					<ErrorBoundary>
+						<Footer />
+					</ErrorBoundary>
 					<UKExitIntentPopup />
 					<Toaster />
 					{/* Cookie banner renders conditionally */}

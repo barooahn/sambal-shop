@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Bash(yarn:*)",
+      "Bash(npm:*)",
+      "Bash(npx:*)",
+      "Bash(node:*)",
+      "Bash(git:*)",
+      "Bash(gh:*)",
+      "Bash(supabase:*)",
+      "Bash(tsc:*)",
+      "Bash(ls:*)",
+      "Bash(pwd)",
+      "Bash(cd:*)",
+      "Bash(find:*)",
+      "Bash(grep:*)",
+      "Bash(curl:*)",
+      "Bash(echo:*)",
+      "Bash(identify:*)",
+      "Read(/C:\\Users\\thinb\\Desktop\\Sambal\\**)",
+      "Edit(/C:\\Users\\thinb\\Desktop\\Sambal\\**)",
+      "Write(/C:\\Users\\thinb\\Desktop\\Sambal\\**)",
+      "MultiEdit(/C:\\Users\\thinb\\Desktop\\Sambal\\**)",
+      "Glob(/C:\\Users\\thinb\\Desktop\\Sambal\\**)",
+      "Grep(/C:\\Users\\thinb\\Desktop\\Sambal\\**)",
+      "mcp__playwright__browser_*",
+      "mcp__supabase__list_*",
+      "mcp__supabase__get_*",
+      "mcp__supabase__search_docs",
+      "mcp__supabase__generate_typescript_types",
+      "WebFetch(domain:anthropic.com)",
+      "WebFetch(domain:nextjs.org)",
+      "WebFetch(domain:supabase.com)",
+      "WebFetch(domain:stripe.com)",
+      "WebFetch(domain:tailwindcss.com)",
+      "mcp__ref-tools__*"
+    ],
+    "ask": [
+      "Bash(sudo:*)",
+      "Bash(rm -rf:*)",
+      "Write(*/package.json)",
+      "Edit(*/package.json)",
+      "Write(*/.env*)",
+      "Edit(*/.env*)",
+      "mcp__supabase__execute_sql",
+      "mcp__supabase__apply_migration",
+      "mcp__supabase__create_project"
+    ],
+    "deny": [
+      "Read(/Users/*/.*)",
+      "Read(C:\\Users\\*\\.*)",
+      "Read(*/id_rsa*)",
+      "Read(*/.ssh/*)"
+    ],
+    "defaultMode": "acceptEdits",
+    "additionalDirectories": [
+      "C:\\Users\\thinb\\Desktop\\Sambal"
+    ]
+  },
+  "includeCoAuthoredBy": true,
+  "cleanupPeriodDays": 30,
+  "enableAllProjectMcpServers": true
+}
