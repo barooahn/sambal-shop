@@ -139,7 +139,6 @@ export default function SambalOelekUKPage() {
 				"Indonesian chef from Bandung specializing in traditional sambal recipes",
 			properties: {
 				jobTitle: "Traditional Indonesian Chef",
-				worksFor: "Spice Island Indonesia",
 				expertise: "Traditional sambal making, Indonesian cuisine",
 				origin: "Bandung, Indonesia",
 			},
@@ -151,9 +150,8 @@ export default function SambalOelekUKPage() {
 				"UK-based company specializing in authentic Indonesian condiments and spices",
 			properties: {
 				url: "https://www.spiceislandindonesia.com",
-				specialty: "Authentic Indonesian sambal and spices",
-				market: "United Kingdom",
-				focus: "Traditional recipes, no preservatives",
+				foundingDate: "2024",
+				addressCountry: "United Kingdom",
 			},
 		},
 	];
@@ -322,7 +320,8 @@ export default function SambalOelekUKPage() {
 				location: "Birmingham",
 			},
 		],
-		additionalProperties: {
+		// Additional product information (not part of schema)
+		productInfo: {
 			spiceLevel: "Hot (15,000-30,000 SHU)",
 			ingredients: ["Red Chilies", "Salt", "Vinegar"],
 			dietaryInfo: ["Gluten-Free", "Vegan", "No Preservatives"],

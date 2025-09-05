@@ -73,8 +73,6 @@ const HowToSchema: FC<HowToSchemaProps> = ({
 		"prepTime": prepTime,
 		"performTime": cookTime,
 		"yield": recipeYield,
-		"category": category,
-		"difficulty": difficulty,
 		"supply": (supplies || defaultSupplies).map(supply => ({
 			"@type": "HowToSupply",
 			"name": supply.name,

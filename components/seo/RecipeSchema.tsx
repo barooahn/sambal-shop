@@ -130,12 +130,7 @@ export default function RecipeSchema({ recipe }: RecipeSchemaProps) {
 			fatContent: recipe.nutrition?.fat,
 			sodiumContent: recipe.nutrition?.sodium,
 		} : undefined,
-		// Enhanced schema properties
-		...(recipe.cuisineType && {
-			cuisineType: recipe.cuisineType,
-			culturalContext:
-				recipe.culturalOrigin || "Indonesian Traditional Cuisine",
-		}),
+		// Valid Recipe schema properties only
 		...(recipe.cookingMethods &&
 			recipe.cookingMethods.length > 0 && {
 				cookingMethod: recipe.cookingMethods.map((method) => ({
@@ -153,18 +148,6 @@ export default function RecipeSchema({ recipe }: RecipeSchemaProps) {
 					requiredQuantity: eq.required ? 1 : 0,
 				})),
 			}),
-		...(recipe.skillLevel && {
-			skillLevel: recipe.skillLevel,
-			difficulty: recipe.difficulty,
-		}),
-		...(recipe.spiceLevel && {
-			spiceLevel: recipe.spiceLevel,
-			additionalProperty: {
-				"@type": "PropertyValue",
-				name: "Heat Level",
-				value: recipe.spiceLevel,
-			},
-		}),
 		...(recipe.dietaryRestrictions &&
 			recipe.dietaryRestrictions.length > 0 && {
 				suitableForDiet: recipe.dietaryRestrictions.map(

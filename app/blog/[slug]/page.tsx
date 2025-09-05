@@ -1028,7 +1028,7 @@ const blogPosts = {
 						"@type": "Person",
 						name: "Chef Yossie",
 						jobTitle: "Indonesian Chef",
-						worksFor: {
+						affiliation: {
 							"@type": "Organization",
 							name: "Spice Island Indonesia",
 						},
@@ -1681,7 +1681,7 @@ const blogPosts = {
 						"@type": "Person",
 						name: "Chef Yossie",
 						jobTitle: "Indonesian Chef",
-						worksFor: {
+						affiliation: {
 							"@type": "Organization",
 							name: "Spice Island Indonesia",
 						},
@@ -1749,7 +1749,7 @@ const blogPosts = {
 						"@type": "Person",
 						name: "Chef Yossie",
 						jobTitle: "Indonesian Chef",
-						worksFor: {
+						affiliation: {
 							"@type": "Organization",
 							name: "Spice Island Indonesia",
 						},
@@ -1813,7 +1813,7 @@ const blogPosts = {
 						"@type": "Person",
 						name: "Chef Yossie",
 						jobTitle: "Indonesian Chef",
-						worksFor: {
+						affiliation: {
 							"@type": "Organization",
 							name: "Spice Island Indonesia",
 						},
@@ -2529,7 +2529,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 					name: post.author,
 					type: "Organization",
 					url: "https://www.spiceislandindonesia.com/about",
-					worksFor: "Spice Island Indonesia",
 				}}
 				publisher={{
 					name: "Spice Island Indonesia",

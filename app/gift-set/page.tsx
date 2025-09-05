@@ -177,7 +177,8 @@ export default function GiftSetPage() {
 				location: "London",
 			},
 		],
-		additionalProperties: {
+		// Additional product information (not part of schema)
+		productInfo: {
 			contents: [
 				"Sambal Oelek 185g",
 				"Sambal Bali 185g",
@@ -216,7 +217,6 @@ export default function GiftSetPage() {
 				offers={productData.offers}
 				aggregateRating={productData.aggregateRating}
 				reviews={productData.reviews}
-				additionalProperties={productData.additionalProperties}
 			/>
 
 			{/* Hero Section */}

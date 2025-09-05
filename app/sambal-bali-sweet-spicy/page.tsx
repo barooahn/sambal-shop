@@ -236,11 +236,6 @@ export default function SambalBaliSweetSpicyPage() {
 				category: "Indonesian Condiment",
 				brand: "Spice Island Indonesia",
 				manufacturer: "Chef Yossie",
-				origin: "Bali, Indonesia",
-				spiceLevel: "Medium-Hot",
-				scovilleRating: "8000-12000",
-				ingredients: ["Red Chilies", "Palm Sugar", "Galangal", "Lemongrass", "Shallots", "Garlic", "Candlenuts"],
-				dietaryInfo: ["Gluten-Free", "Vegan", "No Preservatives"],
 			},
 		},
 		{
@@ -331,7 +326,8 @@ export default function SambalBaliSweetSpicyPage() {
 				location: "Birmingham",
 			},
 		],
-		additionalProperties: {
+		// Additional product information (not part of schema)
+		productInfo: {
 			spiceLevel: "Medium-Hot (8,000-12,000 SHU)",
 			ingredients: ["Red Chilies", "Palm Sugar", "Galangal", "Lemongrass", "Shallots", "Garlic", "Candlenuts"],
 			dietaryInfo: ["Gluten-Free", "Vegan", "No Preservatives"],
@@ -355,7 +351,6 @@ export default function SambalBaliSweetSpicyPage() {
 				offers={productData.offers}
 				aggregateRating={productData.aggregateRating}
 				reviews={productData.reviews}
-				additionalProperties={productData.additionalProperties}
 			/>
 			<EntityMarkup
 				entities={entityData}

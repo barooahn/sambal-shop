@@ -172,7 +172,8 @@ export default function SambalGorengUKPage() {
 				location: "Birmingham",
 			},
 		],
-		additionalProperties: {
+		// Additional product information (not part of schema)
+		productInfo: {
 			spiceLevel: "Medium (8,000-15,000 SHU)",
 			ingredients: [
 				"Red Chilies",

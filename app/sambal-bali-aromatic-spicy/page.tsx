@@ -178,7 +178,8 @@ export default function SambalBaliAromaticSpicyPage() {
 				location: "Manchester",
 			},
 		],
-		additionalProperties: {
+		// Additional product information (not part of schema)
+		productInfo: {
 			spiceLevel: "Medium-Hot (10,000-18,000 SHU)",
 			ingredients: [
 				"Red Chilies",
