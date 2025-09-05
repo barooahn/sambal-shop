@@ -361,7 +361,7 @@ export default function ProductShowcase() {
 										<Button 
 											variant='outline'
 											size='lg' 
-											className='w-full'
+											className='w-full font-elegant border-stone-300 text-stone-700 hover:bg-stone-300 hover:text-stone-900'
 										>
 											🎯 Order Sample Pack - £4.99
 										</Button>

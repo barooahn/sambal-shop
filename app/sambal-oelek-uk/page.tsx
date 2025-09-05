@@ -56,7 +56,7 @@ export const metadata = {
 
 export default function SambalOelekUKPage() {
 	const urls = getInternalUrls();
-	
+
 	// FAQ data for AI search optimization
 	const faqData = [
 		{
@@ -285,7 +285,7 @@ export default function SambalOelekUKPage() {
 					returnShippingFeesAmount: {
 						"@type": "MonetaryAmount",
 						currency: "GBP",
-						value: "3.49"
+						value: "3.49",
 					},
 				},
 			},
@@ -341,17 +341,23 @@ export default function SambalOelekUKPage() {
 						<div className='flex items-center space-x-3'>
 							<div className='text-2xl'>🎯</div>
 							<div>
-								<div className='font-bold text-sm'>Too Hot? Try First!</div>
-								<div className='text-xs opacity-90'>Sample Pack £4.99</div>
-								<div className='text-xs opacity-75'>Risk-free tasting</div>
+								<div className='font-bold text-sm'>
+									Too Hot? Try First!
+								</div>
+								<div className='text-xs opacity-90'>
+									Sample Pack £4.99
+								</div>
+								<div className='text-xs opacity-75'>
+									Risk-free tasting
+								</div>
 							</div>
 						</div>
 					</Link>
 				</div>
 			</div>
-			
+
 			<DynamicProductSchema
-				productId="prod_SqMc4jVjxfr7xF"
+				productId='prod_SqMc4jVjxfr7xF'
 				fallbackData={{
 					name: productData.name,
 					description: productData.description,
@@ -366,13 +372,13 @@ export default function SambalOelekUKPage() {
 						shippingRate: {
 							"@type": "MonetaryAmount",
 							currency: "GBP",
-							value: "3.49"
+							value: "3.49",
 						},
 						shippingDestination: {
 							"@type": "DefinedRegion",
-							addressCountry: "GB"
-						}
-					}
+							addressCountry: "GB",
+						},
+					},
 				}}
 			/>
 			<FAQSchema
@@ -389,11 +395,12 @@ export default function SambalOelekUKPage() {
 							Sambal Oelek
 						</p>
 						<p className='text-neutral-600'>
-							<LiveProductPrice 
-								productId="prod_SqMc4jVjxfr7xF" 
-								fallbackPrice="£7.49" 
-								className="inline"
-							/> • Free £20+ shipping
+							<LiveProductPrice
+								productId='prod_SqMc4jVjxfr7xF'
+								fallbackPrice='£7.49'
+								className='inline'
+							/>{" "}
+							• Free £20+ shipping
 						</p>
 					</div>
 					<Link href={urls.shop}>
@@ -516,10 +523,11 @@ export default function SambalOelekUKPage() {
 										size='lg'
 										className='font-elegant text-lg px-6 py-3 bg-red-600 hover:bg-red-700'
 									>
-										Order Sambal Oelek Now - <LiveProductPrice 
-											productId="prod_SqMc4jVjxfr7xF" 
-											fallbackPrice="£7.49" 
-											className="inline"
+										Order Sambal Oelek Now -{" "}
+										<LiveProductPrice
+											productId='prod_SqMc4jVjxfr7xF'
+											fallbackPrice='£7.49'
+											className='inline'
 											showLoading={false}
 										/>
 									</Button>
@@ -1209,10 +1217,11 @@ export default function SambalOelekUKPage() {
 								size='lg'
 								className='font-elegant text-lg px-8 py-4 bg-red-600 hover:bg-red-700'
 							>
-								Order Sambal Oelek - <LiveProductPrice 
-									productId="prod_SqMc4jVjxfr7xF" 
-									fallbackPrice="£7.49" 
-									className="inline"
+								Order Sambal Oelek -{" "}
+								<LiveProductPrice
+									productId='prod_SqMc4jVjxfr7xF'
+									fallbackPrice='£7.49'
+									className='inline'
 									showLoading={false}
 								/>
 							</Button>
@@ -1556,7 +1565,9 @@ export default function SambalOelekUKPage() {
 									</Link>
 									,
 									<Link
-										href={urls.sambalScrambledEggs}
+										href={
+											urls.sambalScrambledEggs
+										}
 										className='text-burgundy-600 hover:text-burgundy-800 underline'
 									>
 										{" "}
@@ -1652,19 +1663,29 @@ export default function SambalOelekUKPage() {
 									traditional Indonesian recipes make
 								</p>
 								<div className='flex flex-col sm:flex-row gap-4 justify-center'>
-									<Button
-										size='lg'
-										className='bg-white text-stone-600 hover:bg-gray-100'
-									>
-										Order Sambal Oelek Now
-									</Button>
-									<Button
-										variant='outline'
-										size='lg'
-										className='border-stone-300 text-stone-100 hover:bg-stone-100 hover:text-stone-800'
-									>
-										Try Sample Pack First
-									</Button>
+									<Link href={urls.shop}>
+										<Button
+											variant='primary'
+											size='lg'
+											className='font-elegant text-lg px-8 py-4 bg-red-600 hover:bg-red-700'
+										>
+											Order Sambal Oelek - <LiveProductPrice 
+												productId="prod_SqMc4jVjxfr7xF" 
+												fallbackPrice="£7.49" 
+												className="inline"
+												showLoading={false}
+											/>
+										</Button>
+									</Link>
+									<Link href={urls.samplePack}>
+										<Button
+											variant='outline'
+											size='lg'
+											className='font-elegant border-stone-300 text-stone-700 hover:bg-stone-300 hover:text-stone-900 text-lg px-8 py-4'
+										>
+											Try Sample Pack - £2.99
+										</Button>
+									</Link>
 								</div>
 							</div>
 						</div>
@@ -1680,10 +1701,14 @@ export default function SambalOelekUKPage() {
 							Shop with Confidence
 						</h3>
 						<p className='text-neutral-600 font-body'>
-							Your satisfaction and security are our top priorities
+							Your satisfaction and security are our top
+							priorities
 						</p>
 					</div>
-					<TrustIndicators layout="compact" className="justify-center" />
+					<TrustIndicators
+						layout='compact'
+						className='justify-center'
+					/>
 				</div>
 			</section>
 

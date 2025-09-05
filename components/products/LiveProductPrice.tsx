@@ -23,10 +23,10 @@ export default function LiveProductPrice({
   // Show loading state
   if (loading && showLoading) {
     return (
-      <div className={`flex items-center gap-2 ${className}`}>
+      <span className={`inline-flex items-center gap-2 ${className}`}>
         <Loader2 className="w-4 h-4 animate-spin" />
         <span className="text-sm opacity-75">Loading price...</span>
-      </div>
+      </span>
     );
   }
 
@@ -44,7 +44,7 @@ export default function LiveProductPrice({
 
   // Show fallback price with error indicator
   return (
-    <div className={`flex items-center gap-2 ${className}`}>
+    <span className={`inline-flex items-center gap-2 ${className}`}>
       <span>{fallbackPrice}</span>
       {error && (
         <span 
@@ -54,7 +54,7 @@ export default function LiveProductPrice({
           (Static)
         </span>
       )}
-    </div>
+    </span>
   );
 }
 
