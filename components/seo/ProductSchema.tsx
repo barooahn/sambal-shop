@@ -35,7 +35,7 @@ interface ProductSchemaProps {
 		worstRating: number;
 	};
 	reviews?: ProductReview[];
-	additionalProperties?: Record<string, any>;
+	additionalProperties?: any;
 }
 
 const ProductSchema: FC<ProductSchemaProps> = ({
@@ -47,7 +47,7 @@ const ProductSchema: FC<ProductSchemaProps> = ({
 	offers = [],
 	aggregateRating,
 	reviews = [],
-	additionalProperties = {},
+	additionalProperties,
 }) => {
 	// Default aggregate rating if none provided
 	const defaultAggregateRating = {
@@ -131,7 +131,6 @@ const ProductSchema: FC<ProductSchemaProps> = ({
 			"@type": "Organization",
 			name: brand,
 		},
-		...additionalProperties,
 	};
 
 	return (

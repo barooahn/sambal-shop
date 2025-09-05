@@ -1,0 +1,56 @@
+# Spice Island Indonesia - LLM Information
+
+## Project Overview
+Spice Island Indonesia is an authentic Indonesian sambal company bringing traditional Indonesian flavors to the UK market. We specialize in handcrafted, premium sambals made with authentic Indonesian ingredients and time-honored recipes.
+
+## Products
+- Sambal Oelek: Traditional chili paste with garlic and salt
+- Sambal Bali (Aromatic Spicy): Complex blend with shallots, lemongrass, and galangal
+- Sambal Bali (Sweet Spicy): Balanced heat with palm sugar and tamarind
+- Sambal Goreng: Rich, savory sambal with peanuts and anchovies
+- Gift Sets: Curated collections for sambal enthusiasts
+
+## Key Information
+- **Founded**: Bringing authentic Indonesian cuisine to British kitchens
+- **Location**: UK-based with Indonesian heritage
+- **Mission**: Educating UK consumers about Indonesian culinary culture through authentic sambals
+- **Values**: Authenticity, quality, cultural education, sustainability
+
+## Website Sections
+- Product pages with detailed descriptions and cultural context
+- Educational blog about Indonesian cuisine and cooking techniques
+- Recipes showing how to integrate sambals into both Indonesian and British dishes
+- Cultural stories about Indonesian food traditions
+- Cooking guides and serving suggestions
+
+## Target Audience
+- Food enthusiasts interested in authentic international cuisine
+- Home cooks looking to expand their flavor profiles
+- People with Indonesian heritage living in the UK
+- Restaurants and food service professionals
+- Gift buyers seeking unique culinary experiences
+
+## Technical Stack
+- Next.js 15 with TypeScript
+- React 18 for dynamic components
+- Tailwind CSS for styling
+- Supabase for backend services
+- Stripe for payment processing
+
+## Content Focus
+- Cultural authenticity in Indonesian cuisine
+- Educational content about sambal varieties and uses
+- Recipe development bridging Indonesian and British cooking
+- Premium quality ingredients and traditional preparation methods
+- Sustainable and ethical sourcing practices
+
+## SEO Keywords
+Primary: sambal, Indonesian food UK, authentic sambal, chili paste, Indonesian condiments
+Secondary: spicy Indonesian sauce, traditional sambal recipe, Indonesian cooking, Asian condiments UK, authentic Indonesian ingredients
+
+## Brand Personality
+- Authentic and knowledgeable about Indonesian culture
+- Educational and informative
+- Premium quality focused
+- Passionate about food and cultural exchange
+- Welcoming to newcomers to Indonesian cuisine
