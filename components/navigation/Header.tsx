@@ -201,7 +201,7 @@ export default function Header() {
 											handleMouseLeave
 										}
 									>
-										<button className='flex items-center space-x-1.5 text-burgundy-900 hover:text-burgundy-600 font-elegant text-base tracking-wide transition-colors duration-200 py-3 px-3 rounded-lg hover:bg-gradient-to-r hover:from-burgundy-50 hover:to-gold-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-burgundy-600 focus-visible:ring-offset-2'>
+										<button className='flex items-center space-x-1.5 text-burgundy-900 hover:text-burgundy-600 text-base tracking-wide transition-colors duration-200 py-3 px-3 rounded-lg hover:bg-gradient-to-r hover:from-burgundy-50 hover:to-gold-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-burgundy-600 focus-visible:ring-offset-2'>
 											<span className='tracking-wide'>
 												{item.name}
 											</span>
@@ -467,7 +467,7 @@ export default function Header() {
 												item.name
 											)
 										}
-										className='text-burgundy-900 hover:text-burgundy-600 font-elegant text-base tracking-wide transition-all duration-200 py-3 px-3 rounded-lg hover:bg-gradient-to-r hover:from-burgundy-50 hover:to-gold-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-burgundy-600 focus-visible:ring-offset-2'
+										className='text-burgundy-900 hover:text-burgundy-600 text-base tracking-wide transition-all duration-200 py-3 px-3 rounded-lg hover:bg-gradient-to-r hover:from-burgundy-50 hover:to-gold-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-burgundy-600 focus-visible:ring-offset-2'
 									>
 										{item.name}
 									</Link>

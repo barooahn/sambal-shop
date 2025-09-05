@@ -28,6 +28,10 @@ yarn-error.log*
 .env
 .env*.local
 
+# Google Service Account Keys (NEVER commit these!)
+google-service-account-key.json
+*service-account*.json
+
 # vercel
 .vercel
 
