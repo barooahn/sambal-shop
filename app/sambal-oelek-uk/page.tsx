@@ -1661,7 +1661,7 @@ export default function SambalOelekUKPage() {
 									<Button
 										variant='outline'
 										size='lg'
-										className='border-white text-white hover:bg-white hover:text-stone-600'
+										className='border-stone-300 text-stone-100 hover:bg-stone-100 hover:text-stone-800'
 									>
 										Try Sample Pack First
 									</Button>
