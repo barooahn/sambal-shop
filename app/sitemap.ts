@@ -169,6 +169,7 @@ const blogPosts = [
 	{ slug: "spicy-food-beginners-guide", date: "2025-08-15" },
 	{ slug: "5-asian-hot-sauces-beat-sriracha", date: "2025-08-21" },
 	{ slug: "ultimate-guide-spicy-sauces-stir-fry", date: "2025-08-21" },
+	{ slug: "sambal-pairing-guide-british-meals", date: "2025-09-05" },
 ];
 
 // Recipe pages (add new ones here as they&apos;re created)
@@ -204,7 +205,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
 			"5-asian-hot-sauces-beat-sriracha",
 			"sambal-vs-sriracha", 
 			"ultimate-guide-indonesian-sambal",
-			"sambal-vs-hp-sauce"
+			"sambal-vs-hp-sauce",
+			"sambal-pairing-guide-british-meals"
 		].includes(slug);
 		
 		routes.push({
