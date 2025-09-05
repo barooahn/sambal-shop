@@ -13,6 +13,16 @@ export type BlogPostMeta = {
 export const blogPosts: BlogPostMeta[] = [
 	// Newest articles first
 	{
+		id: 21,
+		title: "The Complete Sambal Pairing Guide: Transform Your Favourite British Meals",
+		excerpt: "Discover how to perfectly pair authentic Indonesian sambal with British classics. From Sunday roast to fish and chips, unlock flavor combinations that will revolutionize your dining experience.",
+		image: "/images/optimized/sambal-pairing-british-meals-guide-lg.webp",
+		category: "Cooking Guide",
+		readTime: "18 min read",
+		publishDate: "2025-09-05",
+		slug: "sambal-pairing-guide-british-meals",
+	},
+	{
 		id: 20,
 		title: "The Ultimate Guide to Spicy Sauces for Stir Fry",
 		excerpt: "Master the art of stir fry with the perfect spicy sauces. From sambal to chili oil, discover how to balance heat, flavor, and texture for authentic Asian cooking at home.",

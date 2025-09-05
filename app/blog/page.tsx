@@ -29,7 +29,7 @@ export default function BlogPage() {
 	const [activeCategory, setActiveCategory] = useState("All");
 	const categories = getUniqueCategories();
 
-	// Filter posts based on active category and sort oldest first
+	// Filter posts based on active category and sort newest first
 	const filteredPosts = useMemo(() => {
 		const posts =
 			activeCategory === "All"
@@ -38,11 +38,11 @@ export default function BlogPage() {
 						(post) => post.category === activeCategory
 				  );
 
-		// Always sort by publishDate ascending (oldest first)
+		// Always sort by publishDate descending (newest first)
 		return [...posts].sort(
 			(a, b) =>
-				new Date(a.publishDate).getTime() -
-				new Date(b.publishDate).getTime()
+				new Date(b.publishDate).getTime() -
+				new Date(a.publishDate).getTime()
 		);
 	}, [activeCategory]);
 
