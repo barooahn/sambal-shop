@@ -46,7 +46,7 @@ export default function Footer() {
 								<Instagram className='w-6 h-6' />
 							</TrackedExternalLink>
 							<TrackedExternalLink
-								href='https://www.facebook.com/profile.php?id=61579653961037'
+								href='https://www.facebook.com/spiceislandindonesia'
 								linkText='Facebook'
 								target='_blank'
 								rel='noopener noreferrer'

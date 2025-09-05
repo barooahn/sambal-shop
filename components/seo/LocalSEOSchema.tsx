@@ -87,7 +87,7 @@ const LocalSEOSchema: FC<LocalSEOSchemaProps> = ({
 		],
 		sameAs: [
 			"https://www.instagram.com/spiceisland_indonesia",
-			"https://www.facebook.com/profile.php?id=61579653961037",
+			"https://www.facebook.com/spiceislandindonesia",
 		],
 	};
 
