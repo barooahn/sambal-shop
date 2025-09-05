@@ -21,6 +21,8 @@ import {
 	Shield,
 } from "@/components/ui/icons";
 import TrustIndicators from "@/components/ui/TrustIndicators";
+import LiveProductPrice from "@/components/products/LiveProductPrice";
+import DynamicProductSchema from "@/components/products/DynamicProductSchema";
 
 export const metadata = {
 	title: "Sambal Goreng UK | Traditional Sweet & Spicy Chili",
@@ -222,16 +224,19 @@ export default function SambalGorengUKPage() {
 				faqs={faqData}
 				pageTitle='Sambal Goreng UK - Frequently Asked Questions'
 			/>
-			<ProductSchema
-				name={productData.name}
-				description={productData.description}
-				brand={productData.brand}
-				category={productData.category}
-				image={productData.image}
-				offers={productData.offers}
-				aggregateRating={productData.aggregateRating}
-				reviews={productData.reviews}
-				additionalProperties={productData.additionalProperties}
+			<DynamicProductSchema
+				productId="prod_SqMXLUlQlnvRCw"
+				fallbackData={{
+					name: productData.name,
+					description: productData.description,
+					price: "8.99",
+					priceCurrency: "GBP",
+					availability: "https://schema.org/InStock",
+					sku: "SII-SG-185G",
+					url: "https://www.spiceislandindonesia.com/sambal-goreng-uk",
+					priceValidUntil: "2026-12-31",
+					shippingDetails: productData.offers[0].shippingDetails
+				}}
 			/>
 
 			{/* Hero Section */}
@@ -244,7 +249,11 @@ export default function SambalGorengUKPage() {
 							Sambal Goreng
 						</p>
 						<p className='text-neutral-600'>
-							£8.99 • Free £20+ shipping
+							<LiveProductPrice 
+								productId="prod_SqMXLUlQlnvRCw" 
+								fallbackPrice="£8.99" 
+								className="inline"
+							/> • Free £20+ shipping
 						</p>
 					</div>
 					<Link href={urls.shop}>
@@ -370,15 +379,19 @@ export default function SambalGorengUKPage() {
 										size='lg'
 										className='font-elegant text-lg px-6 py-3 bg-red-600 hover:bg-red-700'
 									>
-										Order Sambal Goreng Now -
-										£8.99
+										Order Sambal Goreng Now - <LiveProductPrice 
+											productId="prod_SqMXLUlQlnvRCw" 
+											fallbackPrice="£8.99" 
+											className="inline"
+											showLoading={false}
+										/>
 									</Button>
 								</Link>
 								<Link href={urls.shop}>
 									<Button
 										variant='outline'
 										size='lg'
-										className='font-elegant border-amber-300 text-amber-300 hover:bg-amber-300 hover:text-stone-900 text-lg px-6 py-3'
+										className='font-elegant border-stone-300 text-stone-700 hover:bg-stone-300 hover:text-stone-900 text-lg px-6 py-3'
 									>
 										Try Sample First - £3.49
 									</Button>
@@ -1129,14 +1142,19 @@ export default function SambalGorengUKPage() {
 								size='lg'
 								className='font-elegant text-lg px-8 py-4 bg-red-600 hover:bg-red-700'
 							>
-								Order Sambal Goreng - £8.99
+								Order Sambal Goreng - <LiveProductPrice 
+									productId="prod_SqMXLUlQlnvRCw" 
+									fallbackPrice="£8.99" 
+									className="inline"
+									showLoading={false}
+								/>
 							</Button>
 						</Link>
 						<Link href={urls.samplePack}>
 							<Button
 								variant='outline'
 								size='lg'
-								className='font-elegant border-amber-300 text-amber-300 hover:bg-amber-300 hover:text-stone-900 text-lg px-8 py-4'
+								className='font-elegant border-stone-300 text-stone-700 hover:bg-stone-300 hover:text-stone-900 text-lg px-8 py-4'
 							>
 								Try Sample Pack - £3.49
 							</Button>

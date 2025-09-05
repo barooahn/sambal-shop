@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import Stripe from 'stripe';
 import { sendOrderConfirmationEmail } from '@/lib/email';
+import { handleStripeProductPriceUpdate } from '@/lib/google-merchant-sync';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
   apiVersion: '2025-07-30.basil',
@@ -123,6 +124,31 @@ export async function POST(req: NextRequest) {
       console.log('❌ Payment failed:', paymentIntent.id);
       
       // Handle failed payments - could send failure notification emails
+    }
+
+    // Handle price.updated event - sync to Google Merchant Center
+    else if (event.type === 'price.updated') {
+      console.log('💰 Price updated, syncing to Google Merchant Center...');
+      
+      try {
+        // Handle the price update asynchronously (non-blocking)
+        handleStripeProductPriceUpdate(event).catch((error) => {
+          console.error('❌ Failed to sync price to Google Merchant:', error);
+        });
+        
+        console.log('✅ Price sync to Google Merchant initiated');
+      } catch (error) {
+        console.error('❌ Error initiating price sync:', error);
+      }
+    }
+
+    // Handle product.updated event - could also trigger sync if needed
+    else if (event.type === 'product.updated') {
+      const product = event.data.object as Stripe.Product;
+      console.log(`📦 Product updated: ${product.id} - ${product.name}`);
+      
+      // Could add additional logic here if needed
+      // e.g., sync product details to Google Merchant
     }
 
     // Log other events for debugging

@@ -132,7 +132,7 @@ export default function PreOrderBanner({
               <Button 
                 variant="outline" 
                 size="lg"
-                className="border-amber-300 text-amber-300 hover:bg-amber-300 hover:text-burgundy-900 py-4 px-8 font-semibold"
+                className="border-stone-300 text-stone-700 hover:bg-stone-300 hover:text-burgundy-900 py-4 px-8 font-semibold"
               >
                 <Star className="w-5 h-5 mr-2" />
                 Or Try Sample Pack First

@@ -26,6 +26,8 @@ import {
 	Timer,
 	Sparkles,
 } from "@/components/ui/icons";
+import LiveProductPrice from "@/components/products/LiveProductPrice";
+import DynamicProductSchema from "@/components/products/DynamicProductSchema";
 
 export const metadata = {
 	title: "Sambal Bali UK | Aromatic Indonesian Chili Paste",
@@ -209,16 +211,19 @@ export default function SambalBaliAromaticSpicyPage() {
 				faqs={faqData}
 				pageTitle='Sambal Bali Aromatic Spicy - Frequently Asked Questions'
 			/>
-			<ProductSchema
-				name={productData.name}
-				description={productData.description}
-				brand={productData.brand}
-				category={productData.category}
-				image={productData.image}
-				offers={productData.offers}
-				aggregateRating={productData.aggregateRating}
-				reviews={productData.reviews}
-				additionalProperties={productData.additionalProperties}
+			<DynamicProductSchema
+				productId="prod_SqMbub2ongdTXd"
+				fallbackData={{
+					name: productData.name,
+					description: productData.description,
+					price: "8.49",
+					priceCurrency: "GBP",
+					availability: "https://schema.org/InStock",
+					sku: "SII-SB-200G",
+					url: "https://www.spiceislandindonesia.com/sambal-bali-aromatic-spicy",
+					priceValidUntil: "2026-12-31",
+					shippingDetails: productData.offers[0].shippingDetails
+				}}
 			/>
 
 			{/* Hero Section */}
@@ -349,7 +354,12 @@ export default function SambalBaliAromaticSpicyPage() {
 										size='lg'
 										className='font-elegant text-lg px-6 py-3 bg-red-600 hover:bg-red-700 text-white'
 									>
-										Order Sambal Bali Now - £8.49
+										Order Sambal Bali Now - <LiveProductPrice 
+											productId="prod_SqMbub2ongdTXd" 
+											fallbackPrice="£8.49" 
+											className="inline"
+											showLoading={false}
+										/>
 									</Button>
 								</Link>
 								<Link href={urls.shop}>
