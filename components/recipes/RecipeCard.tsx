@@ -74,8 +74,7 @@ export default function RecipeCard({
 
 	return (
 		<>
-			{/* Recipe Schema for SEO */}
-			<RecipeSchema recipe={recipe} />
+			{/* Removed duplicate RecipeSchema to prevent multiple AggregateRating errors */}
 
 			<GlassCard
 				variant='subtle'
